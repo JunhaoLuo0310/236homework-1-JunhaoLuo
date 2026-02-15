@@ -1,12 +1,10 @@
 /* assets/pacman.js
-   Valentine’s Pac-Man 💘 — robust across Chrome/Safari
-   Core features:
+   Valentine’s Pac-Man 💘 — stable on Chrome + Safari
    - Maze + pellets
-   - 3 lives + game over + win
-   - Ghosts chase Pac-Man
-   - Rose 🌹 power-up spawns periodically
-   - While powered, Pac-Man auto-shoots hearts 💕 in facing direction
-   - Hearts eliminate ghosts (ghost respawns after short delay)
+   - Ghosts chase player
+   - 3 lives, win/lose states
+   - Rose 🌹 spawns; powered state auto-shoots hearts 💕
+   - Hearts remove ghosts temporarily
 */
 
 const canvas = document.getElementById("game");
@@ -24,7 +22,7 @@ canvas.style.outline = "none";
 window.addEventListener("load", () => canvas.focus());
 canvas.addEventListener("click", () => canvas.focus());
 
-const TILE = 24; // pixels
+const TILE = 24;
 const COLS = Math.floor(canvas.width / TILE);
 const ROWS = Math.floor(canvas.height / TILE);
 
@@ -38,20 +36,24 @@ const DIRS = {
 function clamp(n, lo, hi) {
   return Math.max(lo, Math.min(hi, n));
 }
-
 function randInt(lo, hi) {
   return Math.floor(Math.random() * (hi - lo + 1)) + lo;
 }
-
 function keyFor(x, y) {
   return `${x},${y}`;
+}
+function opposite(dir) {
+  if (dir === "left") return "right";
+  if (dir === "right") return "left";
+  if (dir === "up") return "down";
+  return "up";
 }
 
 /*
 Legend:
-# = wall
-. = pellet
-(space) = empty
+# wall
+. pellet
+space empty
 */
 const MAP_STR = [
   "############################",
@@ -79,63 +81,17 @@ const MAP_STR = [
   "############################",
 ];
 
-// Fit map to canvas grid
 const MAP = MAP_STR.map((row) => row.padEnd(COLS, " ").slice(0, COLS));
 
 function wallAt(x, y) {
   if (y < 0 || y >= MAP.length || x < 0 || x >= MAP[0].length) return true;
   return MAP[y][x] === "#";
 }
-
 function canMoveTile(x, y) {
   return !wallAt(x, y);
 }
 
-function nextTile(x, y, dir) {
-  const d = DIRS[dir];
-  return { nx: x + d.dx, ny: y + d.dy };
-}
-
-function canMoveFrom(x, y, dir) {
-  const { nx, ny } = nextTile(x, y, dir);
-  return canMoveTile(nx, ny);
-}
-
-// Compute smooth draw position from (x,y,prog,dir)
-function calcPxPy(entity) {
-  const d = DIRS[entity.dir];
-  return { px: entity.x + d.dx * entity.prog, py: entity.y + d.dy * entity.prog };
-}
-
-// Deterministic tile-based movement without float “center drift”
-function stepTileMovement(entity, dt, decideDirAtCenter) {
-  if (entity.prog === 0) {
-    if (decideDirAtCenter) decideDirAtCenter(entity);
-    if (!canMoveFrom(entity.x, entity.y, entity.dir)) return;
-  }
-
-  entity.prog += entity.speed * dt;
-
-  // Step across tile boundaries safely
-  while (entity.prog >= 1) {
-    const { nx, ny } = nextTile(entity.x, entity.y, entity.dir);
-    if (!canMoveTile(nx, ny)) {
-      entity.prog = 0;
-      return;
-    }
-    entity.x = nx;
-    entity.y = ny;
-    entity.prog -= 1;
-
-    // If we landed exactly at a center, allow direction change
-    if (entity.prog === 0 && decideDirAtCenter) {
-      decideDirAtCenter(entity);
-      if (!canMoveFrom(entity.x, entity.y, entity.dir)) return;
-    }
-  }
-}
-
-// ---------- Game state ----------
+// ---------- state ----------
 let pellets = new Set();
 let player;
 let ghosts;
@@ -146,15 +102,16 @@ let lives;
 let gameOver;
 let win;
 
-// ---------- Entities ----------
+// ---------- entities ----------
 function makePlayer() {
   return {
     x: 1,
     y: 1,
-    prog: 0,
+    px: 1,
+    py: 1,
     dir: "right",
     nextDir: "right",
-    speed: 4.8, // tiles/sec (adjust)
+    speed: 4.8, // tiles/sec
     powerUntil: 0,
     shootEveryMs: 180,
     lastShotAt: 0,
@@ -166,9 +123,10 @@ function makeGhost(x, y, name) {
     name,
     x,
     y,
-    prog: 0,
+    px: x,
+    py: y,
     dir: "left",
-    speed: 4.2, // tiles/sec (adjust)
+    speed: 4.2, // tiles/sec
     deadUntil: 0,
     homeX: x,
     homeY: y,
@@ -184,6 +142,13 @@ function resetPellets() {
   }
 }
 
+function syncHud() {
+  scoreEl.textContent = String(score);
+  livesEl.textContent = String(lives);
+  pelletsEl.textContent = String(pellets.size);
+  powerEl.textContent = performance.now() < player.powerUntil ? "ON" : "OFF";
+}
+
 function resetGame() {
   resetPellets();
 
@@ -191,6 +156,8 @@ function resetGame() {
   if (wallAt(player.x, player.y)) {
     player.x = 2;
     player.y = 1;
+    player.px = 2;
+    player.py = 1;
   }
 
   ghosts = [
@@ -201,12 +168,7 @@ function resetGame() {
   ];
 
   hearts = [];
-  rose = {
-    active: false,
-    x: 0,
-    y: 0,
-    nextSpawnAt: performance.now() + 2500,
-  };
+  rose = { active: false, x: 0, y: 0, nextSpawnAt: performance.now() + 2500 };
 
   score = 0;
   lives = 3;
@@ -216,65 +178,71 @@ function resetGame() {
   syncHud();
 }
 
-function syncHud() {
-  scoreEl.textContent = String(score);
-  livesEl.textContent = String(lives);
-  pelletsEl.textContent = String(pellets.size);
-  powerEl.textContent = performance.now() < player.powerUntil ? "ON" : "OFF";
+// ---------- robust movement (no “exact center” dependence) ----------
+const CENTER_EPS = 0.14; // bigger tolerance fixes Chrome drift
+
+function snapIfNearCenter(entity) {
+  const tx = Math.round(entity.px);
+  const ty = Math.round(entity.py);
+  const near = Math.abs(entity.px - tx) < CENTER_EPS && Math.abs(entity.py - ty) < CENTER_EPS;
+  if (!near) return false;
+
+  entity.px = tx;
+  entity.py = ty;
+  entity.x = tx;
+  entity.y = ty;
+  return true;
 }
 
-// ---------- Input ----------
-document.addEventListener(
-  "keydown",
-  (e) => {
-    if (!player) return;
-
-    const k = e.key;
-
-    if (k === "ArrowLeft" || k === "a" || k === "A") player.nextDir = "left";
-    if (k === "ArrowRight" || k === "d" || k === "D") player.nextDir = "right";
-    if (k === "ArrowUp" || k === "w" || k === "W") player.nextDir = "up";
-    if (k === "ArrowDown" || k === "s" || k === "S") player.nextDir = "down";
-
-    if (k === "r" || k === "R") resetGame();
-
-    if (k.startsWith("Arrow")) e.preventDefault();
-  },
-  { capture: true }
-);
-
-restartBtn.addEventListener("click", () => resetGame());
-
-// ---------- Ghost AI ----------
-function opposite(dir) {
-  if (dir === "left") return "right";
-  if (dir === "right") return "left";
-  if (dir === "up") return "down";
-  return "up";
+function canAdvance(entity, dir) {
+  const d = DIRS[dir];
+  return canMoveTile(entity.x + d.dx, entity.y + d.dy);
 }
 
-function ghostChooseDir(g) {
-  const options = ["left", "right", "up", "down"].filter((dir) => canMoveFrom(g.x, g.y, dir));
-  if (options.length === 0) return g.dir;
+function tryTurnAtCenter(entity, dir) {
+  if (!dir) return false;
+  if (canAdvance(entity, dir)) {
+    entity.dir = dir;
+    return true;
+  }
+  return false;
+}
 
-  const avoid = opposite(g.dir);
-  let best = null;
-  let bestDist = Infinity;
+function stepTileMovement(entity, dt) {
+  const sp = entity.speed * dt; // tiles/frame
+  const d = DIRS[entity.dir];
 
-  for (const dir of options) {
-    if (options.length > 1 && dir === avoid) continue;
-    const { nx, ny } = nextTile(g.x, g.y, dir);
-    const dist = Math.abs(nx - player.x) + Math.abs(ny - player.y);
-    if (dist < bestDist) {
-      bestDist = dist;
-      best = dir;
-    }
+  // If near center, snap and prevent moving into walls
+  if (snapIfNearCenter(entity)) {
+    if (!canAdvance(entity, entity.dir)) return;
   }
 
-  return best || options[randInt(0, options.length - 1)];
+  entity.px += d.dx * sp;
+  entity.py += d.dy * sp;
+
+  // If we crossed a tile boundary (or overshot), snap forward safely
+  // Use while to handle lag spikes
+  while (true) {
+    const tx = Math.round(entity.px);
+    const ty = Math.round(entity.py);
+    const close = Math.abs(entity.px - tx) < CENTER_EPS && Math.abs(entity.py - ty) < CENTER_EPS;
+    if (!close) break;
+
+    // snap
+    entity.px = tx;
+    entity.py = ty;
+    entity.x = tx;
+    entity.y = ty;
+
+    // stop if next is blocked
+    if (!canAdvance(entity, entity.dir)) break;
+
+    // If we didn't overshoot by more than ~1 tile, exit
+    if (sp < 1) break;
+  }
 }
 
-// ---------- Rose + Hearts ----------
+// ---------- gameplay ----------
 function spawnRose(now) {
   for (let tries = 0; tries < 250; tries++) {
     const x = randInt(1, MAP[0].length - 2);
@@ -295,9 +263,9 @@ function spawnHeart(x, y, dir) {
   hearts.push({
     x: x + 0.5,
     y: y + 0.5,
-    vx: d.dx * 14.0, // tiles/sec
+    vx: d.dx * 14.0,
     vy: d.dy * 14.0,
-    ttl: 1.25, // sec
+    ttl: 1.25,
     alive: true,
   });
 }
@@ -320,15 +288,17 @@ function updateHearts(dt, now) {
 
     for (const g of ghosts) {
       if (now < g.deadUntil) continue;
-      const gp = calcPxPy(g);
-      const gx = gp.px + 0.5;
-      const gy = gp.py + 0.5;
+
+      const gx = g.px + 0.5;
+      const gy = g.py + 0.5;
+
       if (Math.abs(h.x - gx) < 0.45 && Math.abs(h.y - gy) < 0.45) {
         h.alive = false;
         g.deadUntil = now + 2200;
         g.x = g.homeX;
         g.y = g.homeY;
-        g.prog = 0;
+        g.px = g.homeX;
+        g.py = g.homeY;
         score += 200;
         break;
       }
@@ -338,7 +308,29 @@ function updateHearts(dt, now) {
   hearts = hearts.filter((h) => h.alive);
 }
 
-// ---------- Collisions ----------
+function ghostChooseDir(g) {
+  const options = ["left", "right", "up", "down"].filter((dir) => canAdvance(g, dir));
+  if (options.length === 0) return g.dir;
+
+  const avoid = opposite(g.dir);
+  let best = null;
+  let bestDist = Infinity;
+
+  for (const dir of options) {
+    if (options.length > 1 && dir === avoid) continue;
+    const d = DIRS[dir];
+    const nx = g.x + d.dx;
+    const ny = g.y + d.dy;
+    const dist = Math.abs(nx - player.x) + Math.abs(ny - player.y);
+    if (dist < bestDist) {
+      bestDist = dist;
+      best = dir;
+    }
+  }
+
+  return best || options[randInt(0, options.length - 1)];
+}
+
 function loseLife() {
   lives -= 1;
   if (lives <= 0) {
@@ -347,10 +339,10 @@ function loseLife() {
     return;
   }
 
-  // reset positions (keep pellets + score)
   player.x = 1;
   player.y = 1;
-  player.prog = 0;
+  player.px = 1;
+  player.py = 1;
   player.dir = "right";
   player.nextDir = "right";
   player.powerUntil = 0;
@@ -360,30 +352,27 @@ function loseLife() {
   for (const g of ghosts) {
     g.x = g.homeX;
     g.y = g.homeY;
-    g.prog = 0;
+    g.px = g.homeX;
+    g.py = g.homeY;
     g.deadUntil = now + 800;
   }
 }
 
-// ---------- Updates ----------
 function playerUpdate(now, dt) {
-  stepTileMovement(player, dt, (p) => {
-    if (p.nextDir && canMoveFrom(p.x, p.y, p.nextDir)) {
-      p.dir = p.nextDir;
-      return;
+  // At centers, apply nextDir first for responsiveness
+  const snapped = snapIfNearCenter(player);
+  if (snapped) {
+    if (player.nextDir && player.nextDir !== player.dir) {
+      tryTurnAtCenter(player, player.nextDir);
     }
-    if (!canMoveFrom(p.x, p.y, p.dir)) {
+    // If current direction blocked, try any available direction
+    if (!canAdvance(player, player.dir)) {
       for (const dir of ["left", "right", "up", "down"]) {
-        if (canMoveFrom(p.x, p.y, dir)) {
-          p.dir = dir;
-          break;
-        }
+        if (tryTurnAtCenter(player, dir)) break;
       }
     }
-  });
 
-  // Eat pellet when player is at center
-  if (player.prog === 0) {
+    // Pellet eat on center snap (robust)
     const k = keyFor(player.x, player.y);
     if (pellets.has(k)) {
       pellets.delete(k);
@@ -393,15 +382,18 @@ function playerUpdate(now, dt) {
         gameOver = true;
       }
     }
+
+    // Rose pickup
+    if (rose.active && player.x === rose.x && player.y === rose.y) {
+      rose.active = false;
+      player.powerUntil = now + 5200;
+      player.lastShotAt = 0;
+      score += 50;
+    }
   }
 
-  // Rose pickup (only at centers)
-  if (rose.active && player.prog === 0 && player.x === rose.x && player.y === rose.y) {
-    rose.active = false;
-    player.powerUntil = now + 5200;
-    player.lastShotAt = 0;
-    score += 50;
-  }
+  // Move
+  stepTileMovement(player, dt);
 
   // Auto-shoot hearts while powered
   if (now < player.powerUntil) {
@@ -411,7 +403,7 @@ function playerUpdate(now, dt) {
     }
   }
 
-  // Spawn rose sometimes
+  // Rose spawn
   if (!rose.active && now >= rose.nextSpawnAt && !gameOver) {
     spawnRose(now);
   }
@@ -421,29 +413,28 @@ function ghostsUpdate(now, dt) {
   for (const g of ghosts) {
     if (now < g.deadUntil) continue;
 
-    stepTileMovement(g, dt, (gg) => {
-      gg.dir = ghostChooseDir(gg);
-    });
+    // Snap-to-center first; then pick dir at intersections (fixes Chrome freezing)
+    const snapped = snapIfNearCenter(g);
+    if (snapped) {
+      g.dir = ghostChooseDir(g);
+    }
+
+    stepTileMovement(g, dt);
   }
 
-  // Collision check using smooth positions (works mid-tile)
+  // Collision check with tolerance (works mid-tile)
   if (gameOver) return;
 
-  const pp = calcPxPy(player);
   for (const g of ghosts) {
     if (now < g.deadUntil) continue;
-    const gp = calcPxPy(g);
-
-    const dx = (pp.px - gp.px);
-    const dy = (pp.py - gp.py);
-    if (Math.abs(dx) < 0.35 && Math.abs(dy) < 0.35) {
+    if (Math.abs(player.px - g.px) < 0.35 && Math.abs(player.py - g.py) < 0.35) {
       loseLife();
       break;
     }
   }
 }
 
-// ---------- Drawing ----------
+// ---------- draw ----------
 function drawHeart(x, y, s) {
   ctx.save();
   ctx.translate(x, y);
@@ -592,16 +583,14 @@ function draw() {
   const now = performance.now();
   for (const g of ghosts) {
     if (now < g.deadUntil) continue;
-    const gp = calcPxPy(g);
-    const gx = gp.px * TILE + TILE / 2;
-    const gy = gp.py * TILE + TILE / 2;
-    drawGhost(gx, gy, g.name);
+    const cx = g.px * TILE + TILE / 2;
+    const cy = g.py * TILE + TILE / 2;
+    drawGhost(cx, cy, g.name);
   }
 
   // player
-  const pp = calcPxPy(player);
-  const pcx = pp.px * TILE + TILE / 2;
-  const pcy = pp.py * TILE + TILE / 2;
+  const pcx = player.px * TILE + TILE / 2;
+  const pcy = player.py * TILE + TILE / 2;
   drawPacman(pcx, pcy, now < player.powerUntil, player.dir);
 
   // overlay
@@ -621,7 +610,29 @@ function draw() {
   }
 }
 
-// ---------- Main loop ----------
+// ---------- input ----------
+document.addEventListener(
+  "keydown",
+  (e) => {
+    if (!player) return;
+
+    const k = e.key;
+
+    if (k === "ArrowLeft" || k === "a" || k === "A") player.nextDir = "left";
+    if (k === "ArrowRight" || k === "d" || k === "D") player.nextDir = "right";
+    if (k === "ArrowUp" || k === "w" || k === "W") player.nextDir = "up";
+    if (k === "ArrowDown" || k === "s" || k === "S") player.nextDir = "down";
+
+    if (k === "r" || k === "R") resetGame();
+
+    if (k.startsWith("Arrow")) e.preventDefault();
+  },
+  { capture: true }
+);
+
+restartBtn.addEventListener("click", () => resetGame());
+
+// ---------- loop ----------
 let last = performance.now();
 function loop(now) {
   const dt = clamp((now - last) / 1000, 0, 0.05);
@@ -640,4 +651,5 @@ function loop(now) {
 
 resetGame();
 requestAnimationFrame(loop);
+
 

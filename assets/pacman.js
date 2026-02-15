@@ -9,6 +9,10 @@
 
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
+canvas.tabIndex = 0;
+canvas.style.outline = "none";
+canvas.addEventListener("click", () => canvas.focus());
+window.addEventListener("load", () => canvas.focus());
 
 const scoreEl = document.getElementById("score");
 const livesEl = document.getElementById("lives");
@@ -626,6 +630,9 @@ window.addEventListener("keydown", (e) => {
   const k = e.key.toLowerCase();
   keys.add(k);
 
+  // If something loads slowly or resets, don't crash input handling
+  if (!player) return;
+
   if (k === "arrowleft" || k === "a") player.nextDir = "left";
   if (k === "arrowright" || k === "d") player.nextDir = "right";
   if (k === "arrowup" || k === "w") player.nextDir = "up";
@@ -633,7 +640,6 @@ window.addEventListener("keydown", (e) => {
 
   if (k === "r") resetGame();
 
-  // prevent scroll on arrows
   if (k.startsWith("arrow")) e.preventDefault();
 });
 

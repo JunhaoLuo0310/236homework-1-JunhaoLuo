@@ -107,7 +107,7 @@ function makePlayer() {
     py: 1,
     dir: "right",
     nextDir: "right",
-    speed: 6.5, // tiles per second
+    speed: 4.8, // tiles per second
     alive: true,
     powerUntil: 0,
     shootEveryMs: 160,
@@ -123,7 +123,7 @@ function makeGhost(x, y, name) {
     px: x,
     py: y,
     dir: "left",
-    speed: 5.7,
+    speed: 4.2,
     deadUntil: 0,
     homeX: x,
     homeY: y,

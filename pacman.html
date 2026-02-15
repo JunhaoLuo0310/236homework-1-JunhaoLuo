@@ -94,16 +94,17 @@
         <div class="game-wrap">
           <div class="hud">
             <div class="hud-left">
-              <strong id="score">0</strong>
-              <strong id="lives">3</strong>
-              <strong id="pellets">0</strong>
-              <strong id="power">OFF</strong>
-              <button id="restart">Restart</button>
+              <span class="pill">Score: <strong id="score">0</strong></span>
+              <span class="pill">Lives: <strong id="lives">3</strong></span>
+              <span class="pill">Pellets left: <strong id="pellets">0</strong></span>
+              <span class="pill">Power: <strong id="power">OFF</strong></span>
             </div>
+            <div class="hud-right">
+              <button class="btn" id="restart">Restart</button>
             </div>
           </div>
 
-          <canvas id="game" width="672" height="480"></canvas>
+          <canvas id="game" width="672" height="480" aria-label="Pac-Man game canvas"></canvas>
 
           <div class="help">
             Controls:
@@ -117,3 +118,4 @@
     <script src="assets/pacman.js"></script>
   </body>
 </html>
+

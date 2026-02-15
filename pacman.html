@@ -5,6 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Valentine’s Pac-Man 💘</title>
     <link rel="stylesheet" href="assets/style.css" />
+    <style>
+      .game-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 18px 0 30px;
+      }
+      .hud {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.03);
+        padding: 10px 12px;
+      }
+      .hud-left {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        align-items: center;
+      }
+      .pill {
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 6px 10px;
+        color: var(--muted);
+        background: rgba(0, 0, 0, 0.15);
+        font-size: 14px;
+      }
+      .btn {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 8px 12px;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        cursor: pointer;
+      }
+      .btn:hover {
+        border-color: rgba(122, 162, 255, 0.6);
+      }
+      canvas {
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: rgba(0, 0, 0, 0.25);
+        box-shadow: var(--shadow);
+      }
+      .help {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .kbd {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+          "Courier New", monospace;
+        border: 1px solid var(--border);
+        border-bottom-width: 2px;
+        border-radius: 8px;
+        padding: 2px 6px;
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.03);
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -17,9 +83,38 @@
       </div>
     </header>
 
-    <main class="container section">
-      <h1>Valentine’s Pac-Man 💘</h1>
-      <p class="muted">Game page placeholder. We’ll implement this in Problem 2.</p>
+    <main class="container">
+      <section class="section">
+        <h1>Valentine’s Pac-Man 💘</h1>
+        <p class="muted">
+          Eat all pellets to win. Avoid ghosts. Roses 🌹 spawn randomly — grab one to auto-shoot
+          hearts 💕 that eliminate ghosts for a few seconds.
+        </p>
+
+        <div class="game-wrap">
+          <div class="hud">
+            <div class="hud-left">
+              <span class="pill">Score: <strong id="score">0</strong></span>
+              <span class="pill">Lives: <strong id="lives">3</strong></span>
+              <span class="pill">Pellets left: <strong id="pellets">0</strong></span>
+              <span class="pill">Power: <strong id="power">OFF</strong></span>
+            </div>
+            <div class="hud-right">
+              <button class="btn" id="restart">Restart</button>
+            </div>
+          </div>
+
+          <canvas id="game" width="672" height="480" aria-label="Pac-Man game canvas"></canvas>
+
+          <div class="help">
+            Controls:
+            <span class="kbd">Arrow Keys</span> or <span class="kbd">WASD</span> to move ·
+            <span class="kbd">R</span> to restart.
+          </div>
+        </div>
+      </section>
     </main>
+
+    <script src="assets/pacman.js"></script>
   </body>
 </html>

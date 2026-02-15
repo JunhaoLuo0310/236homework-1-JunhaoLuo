@@ -238,6 +238,9 @@ function stepTileMovement(entity, dt) {
   }
 }
 
+
+
+
 function playerUpdate(now, dt) {
   // allow turning at tile centers
   const atCenter = Math.abs(player.px - player.x) < 0.001 && Math.abs(player.py - player.y) < 0.001;
@@ -386,6 +389,7 @@ function ghostChooseDir(g) {
 function ghostsUpdate(now, dt) {
   for (const g of ghosts) {
     if (now < g.deadUntil) {
+      // keep ghost "at home" while dead
       g.x = g.homeX;
       g.y = g.homeY;
       g.px = g.homeX;
@@ -393,23 +397,16 @@ function ghostsUpdate(now, dt) {
       continue;
     }
 
-    // --- NEW: snap-to-center with a wider tolerance (fixes Mac freeze) ---
-    const cx = Math.round(g.px);
-    const cy = Math.round(g.py);
-    const atCenter = Math.abs(g.px - cx) < 0.12 && Math.abs(g.py - cy) < 0.12;
-
+    const atCenter = Math.abs(g.px - g.x) < 0.001 && Math.abs(g.py - g.y) < 0.001;
     if (atCenter) {
-      g.px = cx;
-      g.py = cy;
-      g.x = cx;
-      g.y = cy;
       g.dir = ghostChooseDir(g);
     }
-    // ---------------------------------------------------------------
-
     stepTileMovement(g, dt);
 
+    // collision with player (tile-based)
     if (!gameOver && g.x === player.x && g.y === player.y) {
+      // if player is powered, still die by touch? requirement says hearts eliminate ghosts, not pacman invincible.
+      // So touching ghost costs a life even if powered.
       loseLife();
       break;
     }

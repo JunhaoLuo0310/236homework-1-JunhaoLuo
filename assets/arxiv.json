@@ -1,0 +1,295 @@
+{
+  "generated_at_utc": "2026-02-15T22:40:54.051499Z",
+  "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
+  "count": 15,
+  "papers": [
+    {
+      "title": "Disentangling Ambiguity from Instability in Large Language Models: A Clinical Text-to-SQL Case Study",
+      "authors": [
+        "Angelo Ziletti",
+        "Leonardo D'Ambrosi"
+      ],
+      "abstract": "Deploying large language models for clinical Text-to-SQL requires distinguishing two qualitatively different causes of output diversity: (i) input ambiguity that should trigger clarification, and (ii) model instability that should trigger human review. We propose CLUES, a framework that models Text-to-SQL as a two-stage process (interpretations --> answers) and decomposes semantic uncertainty into an ambiguity score and an instability score. The instability score is computed via the Schur complement of a bipartite semantic graph matrix. Across AmbigQA/SituatedQA (gold interpretations) and a clinical Text-to-SQL benchmark (known interpretations), CLUES improves failure prediction over state-of-the-art Kernel Language Entropy. In deployment settings, it remains competitive while providing a diagnostic decomposition unavailable from a single score. The resulting uncertainty regimes map to targeted interventions - query refinement for ambiguity, model improvement for instability. The high-ambiguity/high-instability regime contains 51% of errors while covering 25% of queries, enabling efficient triage.",
+      "pdf_url": "https://arxiv.org/pdf/2602.12015v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.12015v1",
+      "published": "2026-02-12T14:46:20Z",
+      "updated": "2026-02-12T14:46:20Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Can Local Vision-Language Models improve Activity Recognition over Vision Transformers? -- Case Study on Newborn Resuscitation",
+      "authors": [
+        "Enrico Guerriero",
+        "Kjersti Engan",
+        "\u00d8yvind Meinich-Bache"
+      ],
+      "abstract": "Accurate documentation of newborn resuscitation is essential for quality improvement and adherence to clinical guidelines, yet remains underutilized in practice. Previous work using 3D-CNNs and Vision Transformers (ViT) has shown promising results in detecting key activities from newborn resuscitation videos, but also highlighted the challenges in recognizing such fine-grained activities. This work investigates the potential of generative AI (GenAI) methods to improve activity recognition from such videos. Specifically, we explore the use of local vision-language models (VLMs), combined with large language models (LLMs), and compare them to a supervised TimeSFormer baseline. Using a simulated dataset comprising 13.26 hours of newborn resuscitation videos, we evaluate several zero-shot VLM-based strategies and fine-tuned VLMs with classification heads, including Low-Rank Adaptation (LoRA). Our results suggest that small (local) VLMs struggle with hallucinations, but when fine-tuned with LoRA, the results reach F1 score at 0.91, surpassing the TimeSformer results of 0.70.",
+      "pdf_url": "https://arxiv.org/pdf/2602.12002v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.12002v1",
+      "published": "2026-02-12T14:31:10Z",
+      "updated": "2026-02-12T14:31:10Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Automatic Simplification of Common Vulnerabilities and Exposures Descriptions",
+      "authors": [
+        "Varpu Vehom\u00e4ki",
+        "Kimmo K. Kaski"
+      ],
+      "abstract": "Understanding cyber security is increasingly important for individuals and organizations. However, a lot of information related to cyber security can be difficult to understand to those not familiar with the topic. In this study, we focus on investigating how large language models (LLMs) could be utilized in automatic text simplification (ATS) of Common Vulnerability and Exposure (CVE) descriptions. Automatic text simplification has been studied in several contexts, such as medical, scientific, and news texts, but it has not yet been studied to simplify texts in the rapidly changing and complex domain of cyber security. We created a baseline for cyber security ATS and a test dataset of 40 CVE descriptions, evaluated by two groups of cyber security experts in two survey rounds. We have found that while out-of-the box LLMs can make the text appear simpler, they struggle with meaning preservation. Code and data are available at https://version.aalto.fi/gitlab/vehomav1/simplification\\_nmi.",
+      "pdf_url": "https://arxiv.org/pdf/2602.11982v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.11982v1",
+      "published": "2026-02-12T14:12:58Z",
+      "updated": "2026-02-12T14:12:58Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Are Two LLMs Better Than One? A Student-Teacher Dual-Head LLMs Architecture for Pharmaceutical Content Optimization",
+      "authors": [
+        "Suyash Mishra",
+        "Qiang Li",
+        "Anubhav Girdhar"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly used to create content in regulated domains such as pharmaceuticals, where outputs must be scientifically accurate and legally compliant. Manual quality control (QC) is slow, error prone, and can become a publication bottleneck. We introduce LRBTC, a modular LLM and vision language model (VLM) driven QC architecture covering Language, Regulatory, Brand, Technical, and Content Structure checks. LRBTC combines a Student-Teacher dual model architecture, human in the loop (HITL) workflow with waterfall rule filtering to enable scalable, verifiable content validation and optimization. On AIReg-Bench, our approach achieves 83.0% F1 and 97.5% recall, reducing missed violations by 5x compared with Gemini 2.5 Pro. On CSpelling, it improves mean accuracy by 26.7%. Error analysis further reveals that while current models are strong at detecting misspellings (92.5 recall), they fail to identify complex medical grammatical (25.0 recall) and punctuation (41.7 recall) errors, highlighting a key area for future work. This work provides a practical, plug and play solution for reliable, transparent quality control of content in high stakes, compliance critical industries. We also provide access to our Demo under MIT Licenses.",
+      "pdf_url": "https://arxiv.org/pdf/2602.11957v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.11957v1",
+      "published": "2026-02-12T13:53:29Z",
+      "updated": "2026-02-12T13:53:29Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Who Does What? Archetypes of Roles Assigned to LLMs During Human-AI Decision-Making",
+      "authors": [
+        "Shreya Chappidi",
+        "Jatinder Singh",
+        "Andra V. Krauze"
+      ],
+      "abstract": "LLMs are increasingly supporting decision-making across high-stakes domains, requiring critical reflection on the socio-technical factors that shape how humans and LLMs are assigned roles and interact during human-in-the-loop decision-making. This paper introduces the concept of human-LLM archetypes -- defined as re-curring socio-technical interaction patterns that structure the roles of humans and LLMs in collaborative decision-making. We describe 17 human-LLM archetypes derived from a scoping literature review and thematic analysis of 113 LLM-supported decision-making papers. Then, we evaluate these diverse archetypes across real-world clinical diagnostic cases to examine the potential effects of adopting distinct human-LLM archetypes on LLM outputs and decision outcomes. Finally, we present relevant tradeoffs and design choices across human-LLM archetypes, including decision control, social hierarchies, cognitive forcing strategies, and information requirements. Through our analysis, we show that selection of human-LLM interaction archetype can influence LLM outputs and decisions, bringing important risks and considerations for the designers of human-AI decision-making systems",
+      "pdf_url": "https://arxiv.org/pdf/2602.11924v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.11924v1",
+      "published": "2026-02-12T13:23:04Z",
+      "updated": "2026-02-12T13:23:04Z",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Quark Medical Alignment: A Holistic Multi-Dimensional Alignment and Collaborative Optimization Paradigm",
+      "authors": [
+        "Tianxiang Xu",
+        "Jiayi Liu",
+        "Yixuan Tong",
+        "Jialu Xu",
+        "Yunqing Wei",
+        "Kaiwen Feng",
+        "PanPan Hou",
+        "Kangping Yin",
+        "Jiyuan Hu",
+        "Hao Zhou",
+        "Zhenxin Ma",
+        "Jian Xu",
+        "Guanjun Jiang"
+      ],
+      "abstract": "While reinforcement learning for large language model alignment has progressed rapidly in recent years, transferring these paradigms to high-stakes medical question answering reveals a fundamental paradigm mismatch. Reinforcement Learning from Human Feedback relies on preference annotations that are prohibitively expensive and often fail to reflect the absolute correctness of medical facts. Reinforcement Learning from Verifiable Rewards lacks effective automatic verifiers and struggles to handle complex clinical contexts. Meanwhile, medical alignment requires the simultaneous optimization of correctness, safety, and compliance, yet multi-objective heterogeneous reward signals are prone to scale mismatch and optimization conflicts.To address these challenges, we propose a robust medical alignment paradigm. We first construct a holistic multi-dimensional medical alignment matrix that decomposes alignment objectives into four categories: fundamental capabilities, expert knowledge, online feedback, and format specifications. Within each category, we establish a closed loop of where observable metrics inform attributable diagnosis, which in turn drives optimizable rewards, thereby providing fine-grained, high-resolution supervision signals for subsequent iterative optimization. To resolve gradient domination and optimization instability problem caused by heterogeneous signals, we further propose a unified optimization mechanism. This mechanism employs Reference-Frozen Normalization to align reward scales and implements a Tri-Factor Adaptive Dynamic Weighting strategy to achieve collaborative optimization that is weakness-oriented, risk-prioritized, and redundancy-reducing. Experimental results demonstrate the effectiveness of our proposed paradigm in real-world medical scenario evaluations, establishing a new paradigm for complex alignment in vertical domains.",
+      "pdf_url": "https://arxiv.org/pdf/2602.11661v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.11661v1",
+      "published": "2026-02-12T07:26:23Z",
+      "updated": "2026-02-12T07:26:23Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ADRD-Bench: A Preliminary LLM Benchmark for Alzheimer's Disease and Related Dementias",
+      "authors": [
+        "Guangxin Zhao",
+        "Jiahao Zheng",
+        "Malaz Boustani",
+        "Jarek Nabrzyski",
+        "Meng Jiang",
+        "Yiyu Shi",
+        "Zhi Zheng"
+      ],
+      "abstract": "Large language models (LLMs) have shown great potential for healthcare applications. However, existing evaluation benchmarks provide minimal coverage of Alzheimer's Disease and Related Dementias (ADRD). To address this gap, we introduce ADRD-Bench, the first ADRD-specific benchmark dataset designed for rigorous evaluation of LLMs. ADRD-Bench has two components: 1) ADRD Unified QA, a synthesis of 1,352 questions consolidated from seven established medical benchmarks, providing a unified assessment of clinical knowledge; and 2) ADRD Caregiving QA, a novel set of 149 questions derived from the Aging Brain Care (ABC) program, a widely used, evidence-based brain health management program. Guided by a program with national expertise in comprehensive ADRD care, this new set was designed to mitigate the lack of practical caregiving context in existing benchmarks. We evaluated 33 state-of-the-art LLMs on the proposed ADRD-Bench. Results showed that the accuracy of open-weight general models ranged from 0.63 to 0.93 (mean: 0.78; std: 0.09). The accuracy of open-weight medical models ranged from 0.48 to 0.93 (mean: 0.82; std: 0.13). The accuracy of closed-source general models ranged from 0.83 to 0.91 (mean: 0.89; std: 0.03). While top-tier models achieved high accuracies (>0.9), case studies revealed that inconsistent reasoning quality and stability limit their reliability, highlighting a critical need for domain-specific improvement to enhance LLMs' knowledge and reasoning grounded in daily caregiving data. The entire dataset is available at https://github.com/IIRL-ND/ADRD-Bench.",
+      "pdf_url": "https://arxiv.org/pdf/2602.11460v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.11460v1",
+      "published": "2026-02-12T00:38:21Z",
+      "updated": "2026-02-12T00:38:21Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Advancing AI Trustworthiness Through Patient Simulation: Risk Assessment of Conversational Agents for Antidepressant Selection",
+      "authors": [
+        "Md Tanvir Rouf Shawon",
+        "Mohammad Sabik Irbaz",
+        "Hadeel R. A. Elyazori",
+        "Keerti Reddy Resapu",
+        "Yili Lin",
+        "Vladimir Franzuela Cardenas",
+        "Farrokh Alemi",
+        "Kevin Lybarger"
+      ],
+      "abstract": "Objective: This paper introduces a patient simulator designed to enable scalable, automated evaluation of healthcare conversational agents. The simulator generates realistic, controllable patient interactions that systematically vary across medical, linguistic, and behavioral dimensions, allowing annotators and an independent AI judge to assess agent performance, identify hallucinations and inaccuracies, and characterize risk patterns across diverse patient populations. Methods: The simulator is grounded in the NIST AI Risk Management Framework and integrates three profile components reflecting different dimensions of patient variation: (1) medical profiles constructed from electronic health records in the All of Us Research Program; (2) linguistic profiles modeling variation in health literacy and condition-specific communication patterns; and (3) behavioral profiles representing empirically observed interaction patterns, including cooperation, distraction, and adversarial engagement. We evaluated the simulator's effectiveness in identifying errors in an AI decision aid for antidepressant selection. Results: We generated 500 conversations between the patient simulator and the AI decision aid across systematic combinations of five linguistic and three behavioral profiles. Human annotators assessed 1,787 medical concepts across 100 conversations, achieving high agreement (F1=0.94, \\k{appa}=0.73), and the LLM judge achieved comparable agreement with human annotators (F1=0.94, \\k{appa}=0.78; paired bootstrap p=0.21). The simulator revealed a monotonic degradation in AI decision aid performance across the health literacy spectrum: rank-one concept retrieval accuracy increased from 47.9% for limited health literacy to 69.1% for functional and 81.6% for proficient.",
+      "pdf_url": "https://arxiv.org/pdf/2602.11391v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.11391v1",
+      "published": "2026-02-11T21:53:18Z",
+      "updated": "2026-02-11T21:53:18Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Reinforced Curriculum Pre-Alignment for Domain-Adaptive VLMs",
+      "authors": [
+        "Yuming Yan",
+        "Shuo Yang",
+        "Kai Tang",
+        "Sihong Chen",
+        "Yang Zhang",
+        "Ke Xu",
+        "Dan Hu",
+        "Qun Yu",
+        "Pengfei Hu",
+        "Edith C. H. Ngai"
+      ],
+      "abstract": "Vision-Language Models (VLMs) demonstrate remarkable general-purpose capabilities but often fall short in specialized domains such as medical imaging or geometric problem-solving. Supervised Fine-Tuning (SFT) can enhance performance within a target domain, but it typically causes catastrophic forgetting, limiting its generalization. The central challenge, therefore, is to adapt VLMs to new domains while preserving their general-purpose capabilities. Continual pretraining is effective for expanding knowledge in Large Language Models (LLMs), but it is less feasible for VLMs due to prohibitive computational costs and the unavailability of pretraining data for most open-source models. This necessitates efficient post-training adaptation methods. Reinforcement learning (RL)-based approaches such as Group Relative Policy Optimization (GRPO) have shown promise in preserving general abilities, yet they often fail in domain adaptation scenarios where the model initially lacks sufficient domain knowledge, leading to optimization collapse. To bridge this gap, we propose Reinforced Curriculum Pre-Alignment (RCPA), a novel post-training paradigm that introduces a curriculum-aware progressive modulation mechanism. In the early phase, RCPA applies partial output constraints to safely expose the model to new domain concepts. As the model's domain familiarity increases, training gradually transitions to full generation optimization, refining responses and aligning them with domain-specific preferences. This staged adaptation balances domain knowledge acquisition with the preservation of general multimodal capabilities. Extensive experiments across specialized domains and general benchmarks validate the effectiveness of RCPA, establishing a practical pathway toward building high-performing and domain-adaptive VLMs.",
+      "pdf_url": "https://arxiv.org/pdf/2602.10740v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.10740v1",
+      "published": "2026-02-11T11:04:37Z",
+      "updated": "2026-02-11T11:04:37Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Improving Medical Visual Reinforcement Fine-Tuning via Perception and Reasoning Augmentation",
+      "authors": [
+        "Guangjing Yang",
+        "ZhangYuan Yu",
+        "Ziyuan Qin",
+        "Xinyuan Song",
+        "Huahui Yi",
+        "Qingbo Kang",
+        "Jun Gao",
+        "Yiyue Li",
+        "Chenlin Du",
+        "Qicheng Lao"
+      ],
+      "abstract": "While recent advances in Reinforcement Fine-Tuning (RFT) have shown that rule-based reward schemes can enable effective post-training for large language models, their extension to cross-modal, vision-centric domains remains largely underexplored. This limitation is especially pronounced in the medical imaging domain, where effective performance requires both robust visual perception and structured reasoning. In this work, we address this gap by proposing VRFT-Aug, a visual reinforcement fine-tuning framework tailored for the medical domain. VRFT-Aug introduces a series of training strategies designed to augment both perception and reasoning, including prior knowledge injection, perception-driven policy refinement, medically informed reward shaping, and behavioral imitation. Together, these methods aim to stabilize and improve the RFT process.\n  Through extensive experiments across multiple medical datasets, we show that our approaches consistently outperform both standard supervised fine-tuning and RFT baselines. Moreover, we provide empirically grounded insights and practical training heuristics that can be generalized to other medical image tasks. We hope this work contributes actionable guidance and fresh inspiration for the ongoing effort to develop reliable, reasoning-capable models for high-stakes medical applications.",
+      "pdf_url": "https://arxiv.org/pdf/2602.10619v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.10619v1",
+      "published": "2026-02-11T08:10:26Z",
+      "updated": "2026-02-11T08:10:26Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Contrastive Learning for Multi Label ECG Classification with Jaccard Score Based Sigmoid Loss",
+      "authors": [
+        "Junichiro Takahashi",
+        "Masataka Sato",
+        "Satoshi Kodeta",
+        "Norihiko Takeda"
+      ],
+      "abstract": "Recent advances in large language models (LLMs) have enabled the development of multimodal medical AI. While models such as MedGemini achieve high accuracy on VQA tasks like USMLE MM, their performance on ECG based tasks remains limited, and some models, such as MedGemma, do not support ECG data at all. Interpreting ECGs is inherently challenging, and diagnostic accuracy can vary depending on the interpreter's experience. Although echocardiography provides rich diagnostic information, it requires specialized equipment and personnel, limiting its availability. In this study, we focus on constructing a robust ECG encoder for multimodal pretraining using real world hospital data. We employ SigLIP, a CLIP based model with a sigmoid based loss function enabling multi label prediction, and introduce a modified loss function tailored to the multi label nature of ECG data. Experiments demonstrate that incorporating medical knowledge in the language model and applying the modified loss significantly improve multi label ECG classification. To further enhance performance, we increase the embedding dimensionality and apply random cropping to mitigate data drift. Finally, per label analysis reveals which ECG findings are easier or harder to predict. Our study provides a foundational framework for developing medical models that utilize ECG data.",
+      "pdf_url": "https://arxiv.org/pdf/2602.10553v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.10553v1",
+      "published": "2026-02-11T05:58:34Z",
+      "updated": "2026-02-11T05:58:34Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Bridging the Compression-Precision Paradox: A Hybrid Architecture for Clinical EEG Report Generation with Guaranteed Measurement Accuracy",
+      "authors": [
+        "Wuyang Zhang",
+        "Zhen Luo",
+        "Chuqiao Gu",
+        "Jianming Ma",
+        "Yebo Cao",
+        "Wangming Yuan",
+        "Yinzhi Jin"
+      ],
+      "abstract": "Automated EEG monitoring requires clinician-level precision for seizure detection and reporting. Clinical EEG recordings exceed LLM context windows, requiring extreme compression (400:1+ ratios) that destroys fine-grained temporal precision. A 0.5 Hz error distinguishes absence epilepsy from Lennox-Gastaut syndrome. LLMs lack inherent time-series comprehension and rely on statistical associations from compressed representations. This dual limitation causes systems to hallucinate clinically incorrect measurement values.\n  We separate measurement extraction from text generation. Our hybrid architecture computes exact clinical values via signal processing before compression, employs a cross-modal bridge for EEG-to-language translation, and uses parameter-efficient fine-tuning with constrained decoding around frozen slots. Multirate sampling maintains long-range context while preserving event-level precision. Evaluation on TUH and CHB-MIT datasets achieves 60% fewer false alarms, 50% faster detection, and sub-clinical measurement precision. This is the first system guaranteeing clinical measurement accuracy in automated EEG reports.",
+      "pdf_url": "https://arxiv.org/pdf/2602.10544v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.10544v1",
+      "published": "2026-02-11T05:36:14Z",
+      "updated": "2026-02-11T05:36:14Z",
+      "categories": [
+        "cs.LG",
+        "math.NA"
+      ]
+    },
+    {
+      "title": "LiveMedBench: A Contamination-Free Medical Benchmark for LLMs with Automated Rubric Evaluation",
+      "authors": [
+        "Zhiling Yan",
+        "Dingjie Song",
+        "Zhe Fang",
+        "Yisheng Ji",
+        "Xiang Li",
+        "Quanzheng Li",
+        "Lichao Sun"
+      ],
+      "abstract": "The deployment of Large Language Models (LLMs) in high-stakes clinical settings demands rigorous and reliable evaluation. However, existing medical benchmarks remain static, suffering from two critical limitations: (1) data contamination, where test sets inadvertently leak into training corpora, leading to inflated performance estimates; and (2) temporal misalignment, failing to capture the rapid evolution of medical knowledge. Furthermore, current evaluation metrics for open-ended clinical reasoning often rely on either shallow lexical overlap (e.g., ROUGE) or subjective LLM-as-a-Judge scoring, both inadequate for verifying clinical correctness. To bridge these gaps, we introduce LiveMedBench, a continuously updated, contamination-free, and rubric-based benchmark that weekly harvests real-world clinical cases from online medical communities, ensuring strict temporal separation from model training data. We propose a Multi-Agent Clinical Curation Framework that filters raw data noise and validates clinical integrity against evidence-based medical principles. For evaluation, we develop an Automated Rubric-based Evaluation Framework that decomposes physician responses into granular, case-specific criteria, achieving substantially stronger alignment with expert physicians than LLM-as-a-Judge. To date, LiveMedBench comprises 2,756 real-world cases spanning 38 medical specialties and multiple languages, paired with 16,702 unique evaluation criteria. Extensive evaluation of 38 LLMs reveals that even the best-performing model achieves only 39.2%, and 84% of models exhibit performance degradation on post-cutoff cases, confirming pervasive data contamination risks. Error analysis further identifies contextual application-not factual knowledge-as the dominant bottleneck, with 35-48% of failures stemming from the inability to tailor medical knowledge to patient-specific constraints.",
+      "pdf_url": "https://arxiv.org/pdf/2602.10367v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.10367v1",
+      "published": "2026-02-10T23:38:25Z",
+      "updated": "2026-02-10T23:38:25Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Identifying Evidence-Based Nudges in Biomedical Literature with Large Language Models",
+      "authors": [
+        "Jaydeep Chauhan",
+        "Mark Seidman",
+        "Pezhman Raeisian Parvari",
+        "Zhi Zheng",
+        "Zina Ben-Miled",
+        "Cristina Barboi",
+        "Andrew Gonzalez",
+        "Malaz Boustani"
+      ],
+      "abstract": "We present a scalable, AI-powered system that identifies and extracts evidence-based behavioral nudges from unstructured biomedical literature. Nudges are subtle, non-coercive interventions that influence behavior without limiting choice, showing strong impact on health outcomes like medication adherence. However, identifying these interventions from PubMed's 8 million+ articles is a bottleneck. Our system uses a novel multi-stage pipeline: first, hybrid filtering (keywords, TF-IDF, cosine similarity, and a \"nudge-term bonus\") reduces the corpus to about 81,000 candidates. Second, we use OpenScholar (quantized LLaMA 3.1 8B) to classify papers and extract structured fields like nudge type and target behavior in a single pass, validated against a JSON schema.\n  We evaluated four configurations on a labeled test set (N=197). The best setup (Title/Abstract/Intro) achieved a 67.0% F1 score and 72.0% recall, ideal for discovery. A high-precision variant using self-consistency (7 randomized passes) achieved 100% precision with 12% recall, demonstrating a tunable trade-off for high-trust use cases. This system is being integrated into Agile Nudge+, a real-world platform, to ground LLM-generated interventions in peer-reviewed evidence. This work demonstrates interpretable, domain-specific retrieval pipelines for evidence synthesis and personalized healthcare.",
+      "pdf_url": "https://arxiv.org/pdf/2602.10345v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.10345v1",
+      "published": "2026-02-10T22:36:07Z",
+      "updated": "2026-02-10T22:36:07Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Why do we do astrophysics?",
+      "authors": [
+        "David W. Hogg"
+      ],
+      "abstract": "At time of writing, large language models (LLMs) are beginning to obtain the ability to design, execute, write up, and referee scientific projects on the data-science side of astrophysics. What implications does this have for our profession? In this white paper, I list - and argue for - a set of facts or \"points of agreement\" about what astrophysics is, or should be; these include considerations of novelty, people-centrism, trust, and (the lack of) clinical value. I then list and discuss every possible benefit that astrophysics can be seen as bringing to us, and to science, and to universities, and to the world; these include considerations of love, weaponry, and personal (and personnel) development. I conclude with a discussion of two possible (extreme and bad) policy recommendations related to the use of LLMs in astrophysics, dubbed \"let-them-cook\" and \"ban-and-punish.\" I argue strongly against both of these; it is not going to be easy to develop or adopt good moderate policies.",
+      "pdf_url": "https://arxiv.org/pdf/2602.10181v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.10181v1",
+      "published": "2026-02-10T19:00:00Z",
+      "updated": "2026-02-10T19:00:00Z",
+      "categories": [
+        "astro-ph.IM",
+        "physics.hist-ph"
+      ]
+    }
+  ]
+}

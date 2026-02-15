@@ -24,10 +24,10 @@ def fetch_arxiv_papers():
     # ArXiv OpenAPI endpoint
     base_url = "http://export.arxiv.org/api/query"
     
-    # Build search query: CS/Stats papers on LLM/RAG
+    # Build search query: LLM/RAG papers in biostatistics/medical/clinical
     search_query = (
-        '(cat:cs.CL OR cat:cs.LG OR cat:stat.ML) AND '
-        'all:(RAG OR "large language model" OR LLM)'
+        '("large language model" OR LLM OR RAG) AND '
+        '(biostatistics OR medical OR clinical)'
     )
     
     # Parameters for API request

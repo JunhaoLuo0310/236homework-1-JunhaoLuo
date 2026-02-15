@@ -194,40 +194,47 @@ function tryTurn(entity, dir) {
 }
 
 function stepTileMovement(entity, dt) {
-  // smooth movement from (px,py) towards (x,y) with dir
-  const sp = entity.speed * dt; // tiles this frame
+  const sp = entity.speed * dt; // tiles per frame
   const d = DIRS[entity.dir];
 
-  // Try to move: entity is on grid, move continuously
+  const EPS = 0.08; // tolerance to treat as "at center"
+
+  // If we're near the center of a tile, snap to it and validate next tile.
+  const cx = Math.round(entity.px);
+  const cy = Math.round(entity.py);
+  const nearCenter = Math.abs(entity.px - cx) < EPS && Math.abs(entity.py - cy) < EPS;
+
+  if (nearCenter) {
+    entity.px = cx;
+    entity.py = cy;
+    entity.x = cx;
+    entity.y = cy;
+
+    const nx = entity.x + d.dx;
+    const ny = entity.y + d.dy;
+    if (!canMoveTile(nx, ny)) return;
+  }
+
+  // Move smoothly
   entity.px += d.dx * sp;
   entity.py += d.dy * sp;
 
-  // When crossing into next tile boundary, snap and advance tile coords
-  while (true) {
-    // Determine the tile we are currently in based on px/py
-    const tx = Math.round(entity.px);
-    const ty = Math.round(entity.py);
-
-    // Snap when close enough
-    const close = Math.abs(entity.px - tx) < 0.14 && Math.abs(entity.py - ty) < 0.14;
-    if (!close) break;
-
-    entity.px = tx;
-    entity.py = ty;
-    entity.x = tx;
-    entity.y = ty;
-
-    // Determine next tile based on current dir
-    const nx = entity.x + d.dx;
-    const ny = entity.y + d.dy;
-
-    if (!canMoveTile(nx, ny)) {
-      // stop at center
-      break;
-    }
-
-    // continue loop only if we might snap multiple tiles in one frame (rare)
-    if (sp < 1) break;
+  // Snap when crossing into the next tile (handle overshoot with while)
+  while (d.dx > 0 && entity.px >= entity.x + 1) {
+    entity.x += 1;
+    entity.px = entity.x;
+  }
+  while (d.dx < 0 && entity.px <= entity.x - 1) {
+    entity.x -= 1;
+    entity.px = entity.x;
+  }
+  while (d.dy > 0 && entity.py >= entity.y + 1) {
+    entity.y += 1;
+    entity.py = entity.y;
+  }
+  while (d.dy < 0 && entity.py <= entity.y - 1) {
+    entity.y -= 1;
+    entity.py = entity.y;
   }
 }
 
@@ -379,7 +386,6 @@ function ghostChooseDir(g) {
 function ghostsUpdate(now, dt) {
   for (const g of ghosts) {
     if (now < g.deadUntil) {
-      // keep ghost "at home" while dead
       g.x = g.homeX;
       g.y = g.homeY;
       g.px = g.homeX;
@@ -387,16 +393,23 @@ function ghostsUpdate(now, dt) {
       continue;
     }
 
-    const atCenter = Math.abs(g.px - g.x) < 0.14 && Math.abs(g.py - g.y) < 0.14;
+    // --- NEW: snap-to-center with a wider tolerance (fixes Mac freeze) ---
+    const cx = Math.round(g.px);
+    const cy = Math.round(g.py);
+    const atCenter = Math.abs(g.px - cx) < 0.12 && Math.abs(g.py - cy) < 0.12;
+
     if (atCenter) {
+      g.px = cx;
+      g.py = cy;
+      g.x = cx;
+      g.y = cy;
       g.dir = ghostChooseDir(g);
     }
+    // ---------------------------------------------------------------
+
     stepTileMovement(g, dt);
 
-    // collision with player (tile-based)
     if (!gameOver && g.x === player.x && g.y === player.y) {
-      // if player is powered, still die by touch? requirement says hearts eliminate ghosts, not pacman invincible.
-      // So touching ghost costs a life even if powered.
       loseLife();
       break;
     }

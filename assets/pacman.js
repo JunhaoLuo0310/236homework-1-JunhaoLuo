@@ -197,19 +197,11 @@ function stepTileMovement(entity, dt) {
   const sp = entity.speed * dt; // tiles per frame
   const d = DIRS[entity.dir];
 
-  const EPS = 0.08; // tolerance to treat as "at center"
+  // If we're exactly at the center of a tile and the next tile is blocked, don't move.
+  const atCenter =
+    Math.abs(entity.px - entity.x) < 1e-6 && Math.abs(entity.py - entity.y) < 1e-6;
 
-  // If we're near the center of a tile, snap to it and validate next tile.
-  const cx = Math.round(entity.px);
-  const cy = Math.round(entity.py);
-  const nearCenter = Math.abs(entity.px - cx) < EPS && Math.abs(entity.py - cy) < EPS;
-
-  if (nearCenter) {
-    entity.px = cx;
-    entity.py = cy;
-    entity.x = cx;
-    entity.y = cy;
-
+  if (atCenter) {
     const nx = entity.x + d.dx;
     const ny = entity.y + d.dy;
     if (!canMoveTile(nx, ny)) return;
@@ -219,25 +211,23 @@ function stepTileMovement(entity, dt) {
   entity.px += d.dx * sp;
   entity.py += d.dy * sp;
 
-  // Snap when crossing into the next tile (handle overshoot with while)
-  while (d.dx > 0 && entity.px >= entity.x + 1) {
+  // When we cross into the next tile, snap to its center (this avoids Math.round issues)
+  if (d.dx > 0 && entity.px >= entity.x + 1) {
     entity.x += 1;
     entity.px = entity.x;
-  }
-  while (d.dx < 0 && entity.px <= entity.x - 1) {
+  } else if (d.dx < 0 && entity.px <= entity.x - 1) {
     entity.x -= 1;
     entity.px = entity.x;
   }
-  while (d.dy > 0 && entity.py >= entity.y + 1) {
+
+  if (d.dy > 0 && entity.py >= entity.y + 1) {
     entity.y += 1;
     entity.py = entity.y;
-  }
-  while (d.dy < 0 && entity.py <= entity.y - 1) {
+  } else if (d.dy < 0 && entity.py <= entity.y - 1) {
     entity.y -= 1;
     entity.py = entity.y;
   }
 }
-
 
 
 

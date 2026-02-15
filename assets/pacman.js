@@ -209,7 +209,7 @@ function stepTileMovement(entity, dt) {
     const ty = Math.round(entity.py);
 
     // Snap when close enough
-    const close = Math.abs(entity.px - tx) < 0.08 && Math.abs(entity.py - ty) < 0.08;
+    const close = Math.abs(entity.px - tx) < 0.14 && Math.abs(entity.py - ty) < 0.14;
     if (!close) break;
 
     entity.px = tx;
@@ -387,7 +387,7 @@ function ghostsUpdate(now, dt) {
       continue;
     }
 
-    const atCenter = Math.abs(g.px - g.x) < 0.001 && Math.abs(g.py - g.y) < 0.001;
+    const atCenter = Math.abs(g.px - g.x) < 0.14 && Math.abs(g.py - g.y) < 0.14;
     if (atCenter) {
       g.dir = ghostChooseDir(g);
     }

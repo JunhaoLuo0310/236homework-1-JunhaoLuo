@@ -287,4 +287,369 @@ function playerUpdate(now, dt) {
 
 function spawnRose(now) {
   // choose random empty tile not wall, not player, not ghost, not too close to walls
-  for (let tries = 0; tries < 200; tri
+  for (let tries = 0; tries < 200; tries++) {
+    const x = randInt(1, MAP[0].length - 2);
+    const y = randInt(1, MAP.length - 2);
+    if (wallAt(x, y)) continue;
+    if (x === player.x && y === player.y) continue;
+    if (ghosts.some((g) => g.x === x && g.y === y && now >= g.deadUntil)) continue;
+    // prefer spots with pellets or open
+    rose.active = true;
+    rose.x = x;
+    rose.y = y;
+    break;
+  }
+  rose.nextSpawnAt = now + randInt(6000, 12000);
+}
+
+function spawnHeart(x, y, dir) {
+  const d = DIRS[dir];
+  hearts.push({
+    x: x + 0.5,
+    y: y + 0.5,
+    vx: d.dx * 14.0, // tiles/s
+    vy: d.dy * 14.0,
+    alive: true,
+    ttl: 1.3, // seconds
+  });
+}
+
+function updateHearts(dt, now) {
+  for (const h of hearts) {
+    if (!h.alive) continue;
+    h.x += h.vx * dt;
+    h.y += h.vy * dt;
+    h.ttl -= dt;
+
+    const tx = Math.floor(h.x);
+    const ty = Math.floor(h.y);
+
+    // wall collision
+    if (wallAt(tx, ty) || h.ttl <= 0) {
+      h.alive = false;
+      continue;
+    }
+
+    // ghost hit
+    for (const g of ghosts) {
+      if (now < g.deadUntil) continue;
+      const gx = g.x + 0.5;
+      const gy = g.y + 0.5;
+      if (Math.abs(h.x - gx) < 0.45 && Math.abs(h.y - gy) < 0.45) {
+        h.alive = false;
+        g.deadUntil = now + 2200;
+        score += 200;
+        break;
+      }
+    }
+  }
+
+  // cleanup
+  hearts = hearts.filter((h) => h.alive);
+}
+
+function ghostChooseDir(g) {
+  // Greedy chase toward player: pick a direction that reduces Manhattan distance, avoid reversing if possible.
+  const options = ["left", "right", "up", "down"].filter((dir) => {
+    const d = DIRS[dir];
+    return canMoveTile(g.x + d.dx, g.y + d.dy);
+  });
+
+  if (options.length === 0) return g.dir;
+
+  const avoid = opposite(g.dir);
+  let best = null;
+  let bestDist = Infinity;
+
+  for (const dir of options) {
+    if (options.length > 1 && dir === avoid) continue;
+    const d = DIRS[dir];
+    const nx = g.x + d.dx;
+    const ny = g.y + d.dy;
+    const dist = Math.abs(nx - player.x) + Math.abs(ny - player.y);
+    if (dist < bestDist) {
+      bestDist = dist;
+      best = dir;
+    }
+  }
+
+  return best || options[randInt(0, options.length - 1)];
+}
+
+function ghostsUpdate(now, dt) {
+  for (const g of ghosts) {
+    if (now < g.deadUntil) {
+      // keep ghost "at home" while dead
+      g.x = g.homeX;
+      g.y = g.homeY;
+      g.px = g.homeX;
+      g.py = g.homeY;
+      continue;
+    }
+
+    const atCenter = Math.abs(g.px - g.x) < 0.001 && Math.abs(g.py - g.y) < 0.001;
+    if (atCenter) {
+      g.dir = ghostChooseDir(g);
+    }
+    stepTileMovement(g, dt);
+
+    // collision with player (tile-based)
+    if (!gameOver && g.x === player.x && g.y === player.y) {
+      // if player is powered, still die by touch? requirement says hearts eliminate ghosts, not pacman invincible.
+      // So touching ghost costs a life even if powered.
+      loseLife();
+      break;
+    }
+  }
+}
+
+function loseLife() {
+  lives -= 1;
+  if (lives <= 0) {
+    gameOver = true;
+    win = false;
+  } else {
+    // reset positions but keep pellets/score
+    player.x = 1;
+    player.y = 1;
+    player.px = player.x;
+    player.py = player.y;
+    player.dir = "right";
+    player.nextDir = "right";
+    player.powerUntil = 0;
+    hearts = [];
+    for (const g of ghosts) {
+      g.x = g.homeX;
+      g.y = g.homeY;
+      g.px = g.homeX;
+      g.py = g.homeY;
+      g.deadUntil = performance.now() + 800;
+    }
+  }
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // background grid / walls
+  for (let y = 0; y < MAP.length; y++) {
+    for (let x = 0; x < MAP[0].length; x++) {
+      const px = x * TILE;
+      const py = y * TILE;
+
+      if (MAP[y][x] === "#") {
+        ctx.fillStyle = "rgba(122, 162, 255, 0.25)";
+        ctx.fillRect(px, py, TILE, TILE);
+        ctx.strokeStyle = "rgba(122, 162, 255, 0.35)";
+        ctx.strokeRect(px + 0.5, py + 0.5, TILE - 1, TILE - 1);
+      } else {
+        // subtle floor
+        ctx.fillStyle = "rgba(255,255,255,0.02)";
+        ctx.fillRect(px, py, TILE, TILE);
+      }
+    }
+  }
+
+  // pellets
+  ctx.fillStyle = "rgba(233, 236, 241, 0.85)";
+  for (const k of pellets) {
+    const [x, y] = k.split(",").map(Number);
+    const cx = x * TILE + TILE / 2;
+    const cy = y * TILE + TILE / 2;
+    ctx.beginPath();
+    ctx.arc(cx, cy, 3.2, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // rose
+  if (rose.active) {
+    const cx = rose.x * TILE + TILE / 2;
+    const cy = rose.y * TILE + TILE / 2;
+    // simple rose icon: circle + petals
+    ctx.fillStyle = "rgba(255, 120, 170, 0.95)";
+    ctx.beginPath();
+    ctx.arc(cx, cy, 6.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.strokeStyle = "rgba(255, 190, 220, 0.9)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(cx - 6, cy);
+    ctx.lineTo(cx + 6, cy);
+    ctx.moveTo(cx, cy - 6);
+    ctx.lineTo(cx, cy + 6);
+    ctx.stroke();
+
+    // stem
+    ctx.strokeStyle = "rgba(110, 220, 150, 0.9)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy + 7);
+    ctx.lineTo(cx, cy + 12);
+    ctx.stroke();
+  }
+
+  // hearts projectiles
+  for (const h of hearts) {
+    const cx = h.x * TILE;
+    const cy = h.y * TILE;
+    drawHeart(cx, cy, 6);
+  }
+
+  // ghosts
+  const now = performance.now();
+  for (const g of ghosts) {
+    if (now < g.deadUntil) continue;
+    const cx = g.px * TILE + TILE / 2;
+    const cy = g.py * TILE + TILE / 2;
+    drawGhost(cx, cy, g.name);
+  }
+
+  // player
+  const pcx = player.px * TILE + TILE / 2;
+  const pcy = player.py * TILE + TILE / 2;
+  drawPacman(pcx, pcy, now < player.powerUntil, player.dir);
+
+  // overlay text
+  if (gameOver) {
+    ctx.fillStyle = "rgba(0,0,0,0.55)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "rgba(233,236,241,0.95)";
+    ctx.font = "bold 34px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial";
+    ctx.textAlign = "center";
+    ctx.fillText(win ? "YOU WIN 💘" : "GAME OVER", canvas.width / 2, canvas.height / 2 - 10);
+
+    ctx.font = "16px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial";
+    ctx.fillStyle = "rgba(233,236,241,0.85)";
+    ctx.fillText("Press R or click Restart", canvas.width / 2, canvas.height / 2 + 24);
+    ctx.textAlign = "start";
+  }
+}
+
+function drawPacman(x, y, powered, dir) {
+  const r = 10;
+  const t = performance.now() / 120;
+  const mouth = 0.35 + 0.15 * Math.abs(Math.sin(t));
+
+  ctx.fillStyle = powered ? "rgba(255, 230, 120, 0.98)" : "rgba(255, 210, 80, 0.98)";
+  ctx.beginPath();
+
+  let start = 0;
+  let end = Math.PI * 2;
+
+  if (dir === "right") {
+    start = mouth;
+    end = Math.PI * 2 - mouth;
+  } else if (dir === "left") {
+    start = Math.PI + mouth;
+    end = Math.PI - mouth;
+  } else if (dir === "up") {
+    start = -Math.PI / 2 + mouth;
+    end = -Math.PI / 2 - mouth;
+  } else if (dir === "down") {
+    start = Math.PI / 2 + mouth;
+    end = Math.PI / 2 - mouth;
+  }
+
+  ctx.moveTo(x, y);
+  ctx.arc(x, y, r, start, end, false);
+  ctx.closePath();
+  ctx.fill();
+
+  // eye
+  ctx.fillStyle = "rgba(0,0,0,0.65)";
+  ctx.beginPath();
+  ctx.arc(x + (dir === "left" ? -2 : 2), y - 4, 1.8, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function drawGhost(x, y, name) {
+  const r = 10;
+  ctx.fillStyle = "rgba(255, 110, 160, 0.9)";
+  ctx.beginPath();
+  ctx.arc(x, y, r, Math.PI, 0);
+  ctx.lineTo(x + r, y + r);
+  ctx.lineTo(x + r * 0.5, y + r * 0.65);
+  ctx.lineTo(x, y + r);
+  ctx.lineTo(x - r * 0.5, y + r * 0.65);
+  ctx.lineTo(x - r, y + r);
+  ctx.closePath();
+  ctx.fill();
+
+  // eyes
+  ctx.fillStyle = "rgba(255,255,255,0.95)";
+  ctx.beginPath();
+  ctx.arc(x - 4, y - 2, 3, 0, Math.PI * 2);
+  ctx.arc(x + 4, y - 2, 3, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = "rgba(0,0,0,0.65)";
+  ctx.beginPath();
+  ctx.arc(x - 4, y - 2, 1.3, 0, Math.PI * 2);
+  ctx.arc(x + 4, y - 2, 1.3, 0, Math.PI * 2);
+  ctx.fill();
+
+  // tiny label (optional, cute)
+  ctx.font = "10px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial";
+  ctx.fillStyle = "rgba(233,236,241,0.7)";
+  ctx.textAlign = "center";
+  ctx.fillText(name, x, y + 22);
+  ctx.textAlign = "start";
+}
+
+function drawHeart(x, y, s) {
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.fillStyle = "rgba(255, 120, 170, 0.95)";
+  ctx.beginPath();
+  ctx.moveTo(0, 0);
+  ctx.bezierCurveTo(-s, -s, -s * 1.4, s * 0.6, 0, s * 1.4);
+  ctx.bezierCurveTo(s * 1.4, s * 0.6, s, -s, 0, 0);
+  ctx.fill();
+  ctx.restore();
+}
+
+// input handling
+const keys = new Set();
+window.addEventListener("keydown", (e) => {
+  const k = e.key.toLowerCase();
+  keys.add(k);
+
+  if (k === "arrowleft" || k === "a") player.nextDir = "left";
+  if (k === "arrowright" || k === "d") player.nextDir = "right";
+  if (k === "arrowup" || k === "w") player.nextDir = "up";
+  if (k === "arrowdown" || k === "s") player.nextDir = "down";
+
+  if (k === "r") resetGame();
+
+  // prevent scroll on arrows
+  if (k.startsWith("arrow")) e.preventDefault();
+});
+
+window.addEventListener("keyup", (e) => {
+  keys.delete(e.key.toLowerCase());
+});
+
+restartBtn.addEventListener("click", () => resetGame());
+
+// main loop
+let last = performance.now();
+function loop(now) {
+  const dt = clamp((now - last) / 1000, 0, 0.05);
+  last = now;
+
+  if (!gameOver) {
+    playerUpdate(now, dt);
+    ghostsUpdate(now, dt);
+    updateHearts(dt, now);
+  }
+
+  syncHud();
+  draw();
+
+  requestAnimationFrame(loop);
+}
+
+resetGame();
+requestAnimationFrame(loop);

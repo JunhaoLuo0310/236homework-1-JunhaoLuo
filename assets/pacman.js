@@ -194,38 +194,40 @@ function tryTurn(entity, dir) {
 }
 
 function stepTileMovement(entity, dt) {
-  const sp = entity.speed * dt; // tiles per frame
+  // smooth movement from (px,py) towards (x,y) with dir
+  const sp = entity.speed * dt; // tiles this frame
   const d = DIRS[entity.dir];
 
-  // If we're exactly at the center of a tile and the next tile is blocked, don't move.
-  const atCenter =
-    Math.abs(entity.px - entity.x) < 1e-6 && Math.abs(entity.py - entity.y) < 1e-6;
-
-  if (atCenter) {
-    const nx = entity.x + d.dx;
-    const ny = entity.y + d.dy;
-    if (!canMoveTile(nx, ny)) return;
-  }
-
-  // Move smoothly
+  // Try to move: entity is on grid, move continuously
   entity.px += d.dx * sp;
   entity.py += d.dy * sp;
 
-  // When we cross into the next tile, snap to its center (this avoids Math.round issues)
-  if (d.dx > 0 && entity.px >= entity.x + 1) {
-    entity.x += 1;
-    entity.px = entity.x;
-  } else if (d.dx < 0 && entity.px <= entity.x - 1) {
-    entity.x -= 1;
-    entity.px = entity.x;
-  }
+  // When crossing into next tile boundary, snap and advance tile coords
+  while (true) {
+    // Determine the tile we are currently in based on px/py
+    const tx = Math.round(entity.px);
+    const ty = Math.round(entity.py);
 
-  if (d.dy > 0 && entity.py >= entity.y + 1) {
-    entity.y += 1;
-    entity.py = entity.y;
-  } else if (d.dy < 0 && entity.py <= entity.y - 1) {
-    entity.y -= 1;
-    entity.py = entity.y;
+    // Snap when close enough
+    const close = Math.abs(entity.px - tx) < 0.08 && Math.abs(entity.py - ty) < 0.08;
+    if (!close) break;
+
+    entity.px = tx;
+    entity.py = ty;
+    entity.x = tx;
+    entity.y = ty;
+
+    // Determine next tile based on current dir
+    const nx = entity.x + d.dx;
+    const ny = entity.y + d.dy;
+
+    if (!canMoveTile(nx, ny)) {
+      // stop at center
+      break;
+    }
+
+    // continue loop only if we might snap multiple tiles in one frame (rare)
+    if (sp < 1) break;
   }
 }
 

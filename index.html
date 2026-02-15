@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Junhao’s Coding Blog</title>
+    <meta
+      name="description"
+      content="Junhao’s coding blog — BST236 Homework 1 website."
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="./">Junhao’s Coding Blog</a>
+
+        <nav class="nav">
+          <a href="./">Home</a>
+          <a href="./pacman.html">Pac-Man 💘</a>
+          <a href="./arxiv.html">arXiv Feed</a>
+          <a href="#posts">Posts</a>
+          <a href="#about">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Welcome 👋</h1>
+        <p>
+          This is my BST236 Homework 1 site. It will grow into a small coding
+          blog with interactive projects and an auto-updating arXiv feed.
+        </p>
+
+        <div class="cards">
+          <a class="card" href="./pacman.html">
+            <h2>Valentine’s Pac-Man 💘</h2>
+            <p>Play a themed Pac-Man with rose power-ups and heart projectiles.</p>
+            <span class="card-cta">Open →</span>
+          </a>
+
+          <a class="card" href="./arxiv.html">
+            <h2>arXiv Paper Feed</h2>
+            <p>Latest papers for my chosen keywords, refreshed daily by GitHub Actions.</p>
+            <span class="card-cta">Open →</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="posts" class="section">
+        <h2>Posts</h2>
+        <p class="muted">
+          Coming soon. This section is intentionally expandable for future assignments.
+        </p>
+
+        <div class="post-list">
+          <article class="post">
+            <h3>Homework 1: Code with AI</h3>
+            <p class="muted">
+              Building a GitHub Pages site, a Pac-Man mini-game, and an auto-updating arXiv feed.
+            </p>
+          </article>
+
+          <article class="post">
+            <h3>Notes</h3>
+            <p class="muted">
+              I’ll add tutorials and short writeups here over the semester.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <h2>About</h2>
+        <p>
+          Hi, I’m Junhao. I’m using this site to practice “coding with AI” workflows,
+          from planning and prompting to shipping with CI.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span class="muted">© <span id="year"></span> Junhao Luo</span>
+        <span class="muted">Hosted on GitHub Pages</span>
+      </div>
+    </footer>
+
+    <script src="assets/site.js"></script>
+  </body>
+</html>

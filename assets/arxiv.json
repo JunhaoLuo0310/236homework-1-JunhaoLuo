@@ -1,8 +1,64 @@
 {
-  "generated_at_utc": "2026-02-15T22:40:54.051499Z",
+  "generated_at_utc": "2026-02-16T02:44:23.119467Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "MentalBench: A Benchmark for Evaluating Psychiatric Diagnostic Capability of Large Language Models",
+      "authors": [
+        "Hoyun Song",
+        "Migyeong Kang",
+        "Jisu Shin",
+        "Jihyun Kim",
+        "Chanbi Park",
+        "Hangyeol Yoo",
+        "Jihyun An",
+        "Alice Oh",
+        "Jinyoung Han",
+        "KyungTae Lim"
+      ],
+      "abstract": "We introduce MentalBench, a benchmark for evaluating psychiatric diagnostic decision-making in large language models (LLMs). Existing mental health benchmarks largely rely on social media data, limiting their ability to assess DSM-grounded diagnostic judgments. At the core of MentalBench is MentalKG, a psychiatrist-built and validated knowledge graph encoding DSM-5 diagnostic criteria and differential diagnostic rules for 23 psychiatric disorders. Using MentalKG as a golden-standard logical backbone, we generate 24,750 synthetic clinical cases that systematically vary in information completeness and diagnostic complexity, enabling low-noise and interpretable evaluation. Our experiments show that while state-of-the-art LLMs perform well on structured queries probing DSM-5 knowledge, they struggle to calibrate confidence in diagnostic decision-making when distinguishing between clinically overlapping disorders. These findings reveal evaluation gaps not captured by existing benchmarks.",
+      "pdf_url": "https://arxiv.org/pdf/2602.12871v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.12871v1",
+      "published": "2026-02-13T12:21:33Z",
+      "updated": "2026-02-13T12:21:33Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "TRACE: Temporal Reasoning via Agentic Context Evolution for Streaming Electronic Health Records (EHRs)",
+      "authors": [
+        "Zhan Qu",
+        "Michael F\u00e4rber"
+      ],
+      "abstract": "Large Language Models (LLMs) encode extensive medical knowledge but struggle to apply it reliably to longitudinal patient trajectories, where evolving clinical states, irregular timing, and heterogeneous events degrade performance over time. Existing adaptation strategies rely on fine-tuning or retrieval-based augmentation, which introduce computational overhead, privacy constraints, or instability under long contexts. We introduce TRACE (Temporal Reasoning via Agentic Context Evolution), a framework that enables temporal clinical reasoning with frozen LLMs by explicitly structuring and maintaining context rather than extending context windows or updating parameters. TRACE operates over a dual-memory architecture consisting of a static Global Protocol encoding institutional clinical rules and a dynamic Individual Protocol tracking patient-specific state. Four agentic components, Router, Reasoner, Auditor, and Steward, coordinate over this structured memory to support temporal inference and state evolution. The framework maintains bounded inference cost via structured state compression and selectively audits safety-critical clinical decisions. Evaluated on longitudinal clinical event streams from MIMIC-IV, TRACE significantly improves next-event prediction accuracy, protocol adherence, and clinical safety over long-context and retrieval-augmented baselines, while producing interpretable and auditable reasoning traces.",
+      "pdf_url": "https://arxiv.org/pdf/2602.12833v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.12833v1",
+      "published": "2026-02-13T11:39:19Z",
+      "updated": "2026-02-13T11:39:19Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "GRAIL: Geometry-Aware Retrieval-Augmented Inference with LLMs over Hyperbolic Representations of Patient Trajectories",
+      "authors": [
+        "Zhan Qu",
+        "Michael F\u00e4rber"
+      ],
+      "abstract": "Predicting future clinical events from longitudinal electronic health records (EHRs) is challenging due to sparse multi-type clinical events, hierarchical medical vocabularies, and the tendency of large language models (LLMs) to hallucinate when reasoning over long structured histories. We study next-visit event prediction, which aims to forecast a patient's upcoming clinical events based on prior visits. We propose GRAIL, a framework that models longitudinal EHRs using structured geometric representations and structure-aware retrieval. GRAIL constructs a unified clinical graph by combining deterministic coding-system hierarchies with data-driven temporal associations across event types, embeds this graph in hyperbolic space, and summarizes each visit as a probabilistic Central Event that denoises sparse observations. At inference time, GRAIL retrieves a structured set of clinically plausible future events aligned with hierarchical and temporal progression, and optionally refines their ranking using an LLM as a constrained inference-time reranker. Experiments on MIMIC-IV show that GRAIL consistently improves multi-type next-visit prediction and yields more hierarchy-consistent forecasts.",
+      "pdf_url": "https://arxiv.org/pdf/2602.12828v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.12828v1",
+      "published": "2026-02-13T11:30:37Z",
+      "updated": "2026-02-13T11:30:37Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Disentangling Ambiguity from Instability in Large Language Models: A Clinical Text-to-SQL Case Study",
       "authors": [
@@ -233,62 +289,6 @@
       "categories": [
         "cs.LG",
         "math.NA"
-      ]
-    },
-    {
-      "title": "LiveMedBench: A Contamination-Free Medical Benchmark for LLMs with Automated Rubric Evaluation",
-      "authors": [
-        "Zhiling Yan",
-        "Dingjie Song",
-        "Zhe Fang",
-        "Yisheng Ji",
-        "Xiang Li",
-        "Quanzheng Li",
-        "Lichao Sun"
-      ],
-      "abstract": "The deployment of Large Language Models (LLMs) in high-stakes clinical settings demands rigorous and reliable evaluation. However, existing medical benchmarks remain static, suffering from two critical limitations: (1) data contamination, where test sets inadvertently leak into training corpora, leading to inflated performance estimates; and (2) temporal misalignment, failing to capture the rapid evolution of medical knowledge. Furthermore, current evaluation metrics for open-ended clinical reasoning often rely on either shallow lexical overlap (e.g., ROUGE) or subjective LLM-as-a-Judge scoring, both inadequate for verifying clinical correctness. To bridge these gaps, we introduce LiveMedBench, a continuously updated, contamination-free, and rubric-based benchmark that weekly harvests real-world clinical cases from online medical communities, ensuring strict temporal separation from model training data. We propose a Multi-Agent Clinical Curation Framework that filters raw data noise and validates clinical integrity against evidence-based medical principles. For evaluation, we develop an Automated Rubric-based Evaluation Framework that decomposes physician responses into granular, case-specific criteria, achieving substantially stronger alignment with expert physicians than LLM-as-a-Judge. To date, LiveMedBench comprises 2,756 real-world cases spanning 38 medical specialties and multiple languages, paired with 16,702 unique evaluation criteria. Extensive evaluation of 38 LLMs reveals that even the best-performing model achieves only 39.2%, and 84% of models exhibit performance degradation on post-cutoff cases, confirming pervasive data contamination risks. Error analysis further identifies contextual application-not factual knowledge-as the dominant bottleneck, with 35-48% of failures stemming from the inability to tailor medical knowledge to patient-specific constraints.",
-      "pdf_url": "https://arxiv.org/pdf/2602.10367v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.10367v1",
-      "published": "2026-02-10T23:38:25Z",
-      "updated": "2026-02-10T23:38:25Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Identifying Evidence-Based Nudges in Biomedical Literature with Large Language Models",
-      "authors": [
-        "Jaydeep Chauhan",
-        "Mark Seidman",
-        "Pezhman Raeisian Parvari",
-        "Zhi Zheng",
-        "Zina Ben-Miled",
-        "Cristina Barboi",
-        "Andrew Gonzalez",
-        "Malaz Boustani"
-      ],
-      "abstract": "We present a scalable, AI-powered system that identifies and extracts evidence-based behavioral nudges from unstructured biomedical literature. Nudges are subtle, non-coercive interventions that influence behavior without limiting choice, showing strong impact on health outcomes like medication adherence. However, identifying these interventions from PubMed's 8 million+ articles is a bottleneck. Our system uses a novel multi-stage pipeline: first, hybrid filtering (keywords, TF-IDF, cosine similarity, and a \"nudge-term bonus\") reduces the corpus to about 81,000 candidates. Second, we use OpenScholar (quantized LLaMA 3.1 8B) to classify papers and extract structured fields like nudge type and target behavior in a single pass, validated against a JSON schema.\n  We evaluated four configurations on a labeled test set (N=197). The best setup (Title/Abstract/Intro) achieved a 67.0% F1 score and 72.0% recall, ideal for discovery. A high-precision variant using self-consistency (7 randomized passes) achieved 100% precision with 12% recall, demonstrating a tunable trade-off for high-trust use cases. This system is being integrated into Agile Nudge+, a real-world platform, to ground LLM-generated interventions in peer-reviewed evidence. This work demonstrates interpretable, domain-specific retrieval pipelines for evidence synthesis and personalized healthcare.",
-      "pdf_url": "https://arxiv.org/pdf/2602.10345v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.10345v1",
-      "published": "2026-02-10T22:36:07Z",
-      "updated": "2026-02-10T22:36:07Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Why do we do astrophysics?",
-      "authors": [
-        "David W. Hogg"
-      ],
-      "abstract": "At time of writing, large language models (LLMs) are beginning to obtain the ability to design, execute, write up, and referee scientific projects on the data-science side of astrophysics. What implications does this have for our profession? In this white paper, I list - and argue for - a set of facts or \"points of agreement\" about what astrophysics is, or should be; these include considerations of novelty, people-centrism, trust, and (the lack of) clinical value. I then list and discuss every possible benefit that astrophysics can be seen as bringing to us, and to science, and to universities, and to the world; these include considerations of love, weaponry, and personal (and personnel) development. I conclude with a discussion of two possible (extreme and bad) policy recommendations related to the use of LLMs in astrophysics, dubbed \"let-them-cook\" and \"ban-and-punish.\" I argue strongly against both of these; it is not going to be easy to develop or adopt good moderate policies.",
-      "pdf_url": "https://arxiv.org/pdf/2602.10181v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.10181v1",
-      "published": "2026-02-10T19:00:00Z",
-      "updated": "2026-02-10T19:00:00Z",
-      "categories": [
-        "astro-ph.IM",
-        "physics.hist-ph"
       ]
     }
   ]

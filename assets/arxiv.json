@@ -1,8 +1,125 @@
 {
-  "generated_at_utc": "2026-02-16T02:44:23.119467Z",
+  "generated_at_utc": "2026-02-17T02:40:42.372273Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Explainable Interictal Epileptiform Discharge Detection Method Based on Scalp EEG and Retrieval-Augmented Generation",
+      "authors": [
+        "Yu Zhu",
+        "Jiayang Guo",
+        "Jun Jiang",
+        "Peipei Gu",
+        "Xin Shu",
+        "Duo Chen"
+      ],
+      "abstract": "The detection of interictal epileptiform discharge (IED) is crucial for the diagnosis of epilepsy, but automated methods often lack interpretability. This study proposes IED-RAG, an explainable multimodal framework for joint IED detection and report generation. Our approach employs a dual-encoder to extract electrophysiological and semantic features, aligned via contrastive learning in a shared EEG-text embedding space. During inference, clinically relevant EEG-text pairs are retrieved from a vector database as explicit evidence to condition a large language model (LLM) for the generation of evidence-based reports. Evaluated on a private dataset from Wuhan Children's Hospital and the public TUH EEG Events Corpus (TUEV), the framework achieved balanced accuracies of 89.17\\% and 71.38\\%, with BLEU scores of 89.61\\% and 64.14\\%, respectively. The results demonstrate that retrieval of explicit evidence enhances both diagnostic performance and clinical interpretability compared to standard black-box methods.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14170v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.14170v1",
+      "published": "2026-02-15T14:51:26Z",
+      "updated": "2026-02-15T14:51:26Z",
+      "categories": [
+        "eess.SP"
+      ]
+    },
+    {
+      "title": "Process-Supervised Multi-Agent Reinforcement Learning for Reliable Clinical Reasoning",
+      "authors": [
+        "Chaeeun Lee",
+        "T. Michael Yates",
+        "Pasquale Minervini",
+        "T. Ian Simpson"
+      ],
+      "abstract": "Clinical decision-making requires nuanced reasoning over heterogeneous evidence and traceable justifications. While recent LLM multi-agent systems (MAS) show promise, they largely optimise for outcome accuracy while overlooking process-grounded reasoning aligned with clinical standards. One critical real-world case of this is gene-disease validity curation, where experts must determine whether a gene is causally implicated in a disease by synthesising diverse biomedical evidence. We introduce an agent-as-tool reinforcement learning framework for this task with two objectives: (i) process-level supervision to ensure reasoning follows valid clinical pathways, and (ii) efficient coordination via a hierarchical multi-agent system. Our evaluation on the ClinGen dataset shows that with outcome-only rewards, MAS with a GRPO-trained Qwen3-4B supervisor agent substantially improves final outcome accuracy from 0.195 with a base model supervisor to 0.732, but results in poor process alignment (0.392 F1). Conversely, with process + outcome rewards, MAS with GRPO-trained supervisor achieves higher outcome accuracy (0.750) while significantly improving process fidelity to 0.520 F1. Our code is available at https://github.com/chaeeunlee-io/GeneDiseaseCurationAgents.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14160v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.14160v1",
+      "published": "2026-02-15T14:21:21Z",
+      "updated": "2026-02-15T14:21:21Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "A Multi-Agent Framework for Medical AI: Leveraging Fine-Tuned GPT, LLaMA, and DeepSeek R1 for Evidence-Based and Bias-Aware Clinical Query Processing",
+      "authors": [
+        "Naeimeh Nourmohammadi",
+        "Md Meem Hossain",
+        "The Anh Han",
+        "Safina Showkat Ara",
+        "Zia Ush Shamszaman"
+      ],
+      "abstract": "Large language models (LLMs) show promise for healthcare question answering, but clinical use is limited by weak verification, insufficient evidence grounding, and unreliable confidence signalling. We propose a multi-agent medical QA framework that combines complementary LLMs with evidence retrieval, uncertainty estimation, and bias checks to improve answer reliability. Our approach has two phases. First, we fine-tune three representative LLM families (GPT, LLaMA, and DeepSeek R1) on MedQuAD-derived medical QA data (20k+ question-answer pairs across multiple NIH domains) and benchmark generation quality. DeepSeek R1 achieves the strongest scores (ROUGE-1 0.536 +- 0.04; ROUGE-2 0.226 +-0.03; BLEU 0.098 -+ 0.018) and substantially outperforms the specialised biomedical baseline BioGPT in zero-shot evaluation. Second, we implement a modular multi-agent pipeline in which a Clinical Reasoning agent (fine-tuned LLaMA) produces structured explanations, an Evidence Retrieval agent queries PubMed to ground responses in recent literature, and a Refinement agent (DeepSeek R1) improves clarity and factual consistency; an optional human validation path is triggered for high-risk or high-uncertainty cases. Safety mechanisms include Monte Carlo dropout and perplexity-based uncertainty scoring, plus lexical and sentiment-based bias detection supported by LIME/SHAP-based analyses. In evaluation, the full system achieves 87% accuracy with relevance around 0.80, and evidence augmentation reduces uncertainty (perplexity 4.13) compared to base responses, with mean end-to-end latency of 36.5 seconds under the reported configuration. Overall, the results indicate that agent specialisation and verification layers can mitigate key single-model limitations and provide a practical, extensible design for evidence-based and bias-aware medical AI.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14158v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.14158v1",
+      "published": "2026-02-15T14:17:27Z",
+      "updated": "2026-02-15T14:17:27Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "Chain-of-Thought Reasoning with Large Language Models for Clinical Alzheimer's Disease Assessment and Diagnosis",
+      "authors": [
+        "Tongze Zhang",
+        "Jun-En Ding",
+        "Melik Ozolcer",
+        "Fang-Ming Hung",
+        "Albert Chih-Chieh Yang",
+        "Feng Liu",
+        "Yi-Rou Ji",
+        "Sang Won Bae"
+      ],
+      "abstract": "Alzheimer's disease (AD) has become a prevalent neurodegenerative disease worldwide. Traditional diagnosis still relies heavily on medical imaging and clinical assessment by physicians, which is often time-consuming and resource-intensive in terms of both human expertise and healthcare resources. In recent years, large language models (LLMs) have been increasingly applied to the medical field using electronic health records (EHRs), yet their application in Alzheimer's disease assessment remains limited, particularly given that AD involves complex multifactorial etiologies that are difficult to observe directly through imaging modalities. In this work, we propose leveraging LLMs to perform Chain-of-Thought (CoT) reasoning on patients' clinical EHRs. Unlike direct fine-tuning of LLMs on EHR data for AD classification, our approach utilizes LLM-generated CoT reasoning paths to provide the model with explicit diagnostic rationale for AD assessment, followed by structured CoT-based predictions. This pipeline not only enhances the model's ability to diagnose intrinsically complex factors but also improves the interpretability of the prediction process across different stages of AD progression. Experimental results demonstrate that the proposed CoT-based diagnostic framework significantly enhances stability and diagnostic performance across multiple CDR grading tasks, achieving up to a 15% improvement in F1 score compared to the zero-shot baseline method.",
+      "pdf_url": "https://arxiv.org/pdf/2602.13979v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.13979v1",
+      "published": "2026-02-15T03:56:24Z",
+      "updated": "2026-02-15T03:56:24Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "NeuroMambaLLM: Dynamic Graph Learning of fMRI Functional Connectivity in Autistic Brains Using Mamba and Language Model Reasoning",
+      "authors": [
+        "Yasaman Torabi",
+        "Parsa Razmara",
+        "Hamed Ajorlou",
+        "Bardia Baraeinejad"
+      ],
+      "abstract": "Large Language Models (LLMs) have demonstrated strong semantic reasoning across multimodal domains. However, their integration with graph-based models of brain connectivity remains limited. In addition, most existing fMRI analysis methods rely on static Functional Connectivity (FC) representations, which obscure transient neural dynamics critical for neurodevelopmental disorders such as autism. Recent state-space approaches, including Mamba, model temporal structure efficiently, but are typically used as standalone feature extractors without explicit high-level reasoning. We propose NeuroMambaLLM, an end-to-end framework that integrates dynamic latent graph learning and selective state-space temporal modelling with LLMs. The proposed method learns the functional connectivity dynamically from raw Blood-Oxygen-Level-Dependent (BOLD) time series, replacing fixed correlation graphs with adaptive latent connectivity while suppressing motion-related artifacts and capturing long-range temporal dependencies. The resulting dynamic brain representations are projected into the embedding space of an LLM model, where the base language model remains frozen and lightweight low-rank adaptation (LoRA) modules are trained for parameter-efficient alignment. This design enables the LLM to perform both diagnostic classification and language-based reasoning, allowing it to analyze dynamic fMRI patterns and generate clinically meaningful textual reports.",
+      "pdf_url": "https://arxiv.org/pdf/2602.13770v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.13770v1",
+      "published": "2026-02-14T13:32:59Z",
+      "updated": "2026-02-14T13:32:59Z",
+      "categories": [
+        "eess.IV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "LLM-Confidence Reranker: A Training-Free Approach for Enhancing Retrieval-Augmented Generation Systems",
+      "authors": [
+        "Zhipeng Song",
+        "Xiangyu Kong",
+        "Xinrui Bao",
+        "Yizhi Zhou",
+        "Jiulong Jiao",
+        "Sitong Liu",
+        "Yuhang Zhou",
+        "Heng Qi"
+      ],
+      "abstract": "Large language models (LLMs) have revolutionized natural language processing, yet hallucinations in knowledge-intensive tasks remain a critical challenge. Retrieval-augmented generation (RAG) addresses this by integrating external knowledge, but its efficacy depends on accurate document retrieval and ranking. Although existing rerankers demonstrate effectiveness, they frequently necessitate specialized training, impose substantial computational expenses, and fail to fully exploit the semantic capabilities of LLMs, particularly their inherent confidence signals. We propose the LLM-Confidence Reranker (LCR), a training-free, plug-and-play algorithm that enhances reranking in RAG systems by leveraging black-box LLM confidence derived from Maximum Semantic Cluster Proportion (MSCP). LCR employs a two-stage process: confidence assessment via multinomial sampling and clustering, followed by binning and multi-level sorting based on query and document confidence thresholds. This approach prioritizes relevant documents while preserving original rankings for high-confidence queries, ensuring robustness. Evaluated on BEIR and TREC benchmarks with BM25 and Contriever retrievers, LCR--using only 7--9B-parameter pre-trained LLMs--consistently improves NDCG@5 by up to 20.6% across pre-trained LLM and fine-tuned Transformer rerankers, without degradation. Ablation studies validate the hypothesis that LLM confidence positively correlates with document relevance, elucidating LCR's mechanism. LCR offers computational efficiency, parallelism for scalability, and broad compatibility, mitigating hallucinations in applications like medical diagnosis.",
+      "pdf_url": "https://arxiv.org/pdf/2602.13571v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.13571v1",
+      "published": "2026-02-14T03:12:05Z",
+      "updated": "2026-02-14T03:12:05Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "MentalBench: A Benchmark for Evaluating Psychiatric Diagnostic Capability of Large Language Models",
       "authors": [
@@ -162,133 +279,6 @@
       "updated": "2026-02-12T07:26:23Z",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "ADRD-Bench: A Preliminary LLM Benchmark for Alzheimer's Disease and Related Dementias",
-      "authors": [
-        "Guangxin Zhao",
-        "Jiahao Zheng",
-        "Malaz Boustani",
-        "Jarek Nabrzyski",
-        "Meng Jiang",
-        "Yiyu Shi",
-        "Zhi Zheng"
-      ],
-      "abstract": "Large language models (LLMs) have shown great potential for healthcare applications. However, existing evaluation benchmarks provide minimal coverage of Alzheimer's Disease and Related Dementias (ADRD). To address this gap, we introduce ADRD-Bench, the first ADRD-specific benchmark dataset designed for rigorous evaluation of LLMs. ADRD-Bench has two components: 1) ADRD Unified QA, a synthesis of 1,352 questions consolidated from seven established medical benchmarks, providing a unified assessment of clinical knowledge; and 2) ADRD Caregiving QA, a novel set of 149 questions derived from the Aging Brain Care (ABC) program, a widely used, evidence-based brain health management program. Guided by a program with national expertise in comprehensive ADRD care, this new set was designed to mitigate the lack of practical caregiving context in existing benchmarks. We evaluated 33 state-of-the-art LLMs on the proposed ADRD-Bench. Results showed that the accuracy of open-weight general models ranged from 0.63 to 0.93 (mean: 0.78; std: 0.09). The accuracy of open-weight medical models ranged from 0.48 to 0.93 (mean: 0.82; std: 0.13). The accuracy of closed-source general models ranged from 0.83 to 0.91 (mean: 0.89; std: 0.03). While top-tier models achieved high accuracies (>0.9), case studies revealed that inconsistent reasoning quality and stability limit their reliability, highlighting a critical need for domain-specific improvement to enhance LLMs' knowledge and reasoning grounded in daily caregiving data. The entire dataset is available at https://github.com/IIRL-ND/ADRD-Bench.",
-      "pdf_url": "https://arxiv.org/pdf/2602.11460v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.11460v1",
-      "published": "2026-02-12T00:38:21Z",
-      "updated": "2026-02-12T00:38:21Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Advancing AI Trustworthiness Through Patient Simulation: Risk Assessment of Conversational Agents for Antidepressant Selection",
-      "authors": [
-        "Md Tanvir Rouf Shawon",
-        "Mohammad Sabik Irbaz",
-        "Hadeel R. A. Elyazori",
-        "Keerti Reddy Resapu",
-        "Yili Lin",
-        "Vladimir Franzuela Cardenas",
-        "Farrokh Alemi",
-        "Kevin Lybarger"
-      ],
-      "abstract": "Objective: This paper introduces a patient simulator designed to enable scalable, automated evaluation of healthcare conversational agents. The simulator generates realistic, controllable patient interactions that systematically vary across medical, linguistic, and behavioral dimensions, allowing annotators and an independent AI judge to assess agent performance, identify hallucinations and inaccuracies, and characterize risk patterns across diverse patient populations. Methods: The simulator is grounded in the NIST AI Risk Management Framework and integrates three profile components reflecting different dimensions of patient variation: (1) medical profiles constructed from electronic health records in the All of Us Research Program; (2) linguistic profiles modeling variation in health literacy and condition-specific communication patterns; and (3) behavioral profiles representing empirically observed interaction patterns, including cooperation, distraction, and adversarial engagement. We evaluated the simulator's effectiveness in identifying errors in an AI decision aid for antidepressant selection. Results: We generated 500 conversations between the patient simulator and the AI decision aid across systematic combinations of five linguistic and three behavioral profiles. Human annotators assessed 1,787 medical concepts across 100 conversations, achieving high agreement (F1=0.94, \\k{appa}=0.73), and the LLM judge achieved comparable agreement with human annotators (F1=0.94, \\k{appa}=0.78; paired bootstrap p=0.21). The simulator revealed a monotonic degradation in AI decision aid performance across the health literacy spectrum: rank-one concept retrieval accuracy increased from 47.9% for limited health literacy to 69.1% for functional and 81.6% for proficient.",
-      "pdf_url": "https://arxiv.org/pdf/2602.11391v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.11391v1",
-      "published": "2026-02-11T21:53:18Z",
-      "updated": "2026-02-11T21:53:18Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Reinforced Curriculum Pre-Alignment for Domain-Adaptive VLMs",
-      "authors": [
-        "Yuming Yan",
-        "Shuo Yang",
-        "Kai Tang",
-        "Sihong Chen",
-        "Yang Zhang",
-        "Ke Xu",
-        "Dan Hu",
-        "Qun Yu",
-        "Pengfei Hu",
-        "Edith C. H. Ngai"
-      ],
-      "abstract": "Vision-Language Models (VLMs) demonstrate remarkable general-purpose capabilities but often fall short in specialized domains such as medical imaging or geometric problem-solving. Supervised Fine-Tuning (SFT) can enhance performance within a target domain, but it typically causes catastrophic forgetting, limiting its generalization. The central challenge, therefore, is to adapt VLMs to new domains while preserving their general-purpose capabilities. Continual pretraining is effective for expanding knowledge in Large Language Models (LLMs), but it is less feasible for VLMs due to prohibitive computational costs and the unavailability of pretraining data for most open-source models. This necessitates efficient post-training adaptation methods. Reinforcement learning (RL)-based approaches such as Group Relative Policy Optimization (GRPO) have shown promise in preserving general abilities, yet they often fail in domain adaptation scenarios where the model initially lacks sufficient domain knowledge, leading to optimization collapse. To bridge this gap, we propose Reinforced Curriculum Pre-Alignment (RCPA), a novel post-training paradigm that introduces a curriculum-aware progressive modulation mechanism. In the early phase, RCPA applies partial output constraints to safely expose the model to new domain concepts. As the model's domain familiarity increases, training gradually transitions to full generation optimization, refining responses and aligning them with domain-specific preferences. This staged adaptation balances domain knowledge acquisition with the preservation of general multimodal capabilities. Extensive experiments across specialized domains and general benchmarks validate the effectiveness of RCPA, establishing a practical pathway toward building high-performing and domain-adaptive VLMs.",
-      "pdf_url": "https://arxiv.org/pdf/2602.10740v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.10740v1",
-      "published": "2026-02-11T11:04:37Z",
-      "updated": "2026-02-11T11:04:37Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Improving Medical Visual Reinforcement Fine-Tuning via Perception and Reasoning Augmentation",
-      "authors": [
-        "Guangjing Yang",
-        "ZhangYuan Yu",
-        "Ziyuan Qin",
-        "Xinyuan Song",
-        "Huahui Yi",
-        "Qingbo Kang",
-        "Jun Gao",
-        "Yiyue Li",
-        "Chenlin Du",
-        "Qicheng Lao"
-      ],
-      "abstract": "While recent advances in Reinforcement Fine-Tuning (RFT) have shown that rule-based reward schemes can enable effective post-training for large language models, their extension to cross-modal, vision-centric domains remains largely underexplored. This limitation is especially pronounced in the medical imaging domain, where effective performance requires both robust visual perception and structured reasoning. In this work, we address this gap by proposing VRFT-Aug, a visual reinforcement fine-tuning framework tailored for the medical domain. VRFT-Aug introduces a series of training strategies designed to augment both perception and reasoning, including prior knowledge injection, perception-driven policy refinement, medically informed reward shaping, and behavioral imitation. Together, these methods aim to stabilize and improve the RFT process.\n  Through extensive experiments across multiple medical datasets, we show that our approaches consistently outperform both standard supervised fine-tuning and RFT baselines. Moreover, we provide empirically grounded insights and practical training heuristics that can be generalized to other medical image tasks. We hope this work contributes actionable guidance and fresh inspiration for the ongoing effort to develop reliable, reasoning-capable models for high-stakes medical applications.",
-      "pdf_url": "https://arxiv.org/pdf/2602.10619v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.10619v1",
-      "published": "2026-02-11T08:10:26Z",
-      "updated": "2026-02-11T08:10:26Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Contrastive Learning for Multi Label ECG Classification with Jaccard Score Based Sigmoid Loss",
-      "authors": [
-        "Junichiro Takahashi",
-        "Masataka Sato",
-        "Satoshi Kodeta",
-        "Norihiko Takeda"
-      ],
-      "abstract": "Recent advances in large language models (LLMs) have enabled the development of multimodal medical AI. While models such as MedGemini achieve high accuracy on VQA tasks like USMLE MM, their performance on ECG based tasks remains limited, and some models, such as MedGemma, do not support ECG data at all. Interpreting ECGs is inherently challenging, and diagnostic accuracy can vary depending on the interpreter's experience. Although echocardiography provides rich diagnostic information, it requires specialized equipment and personnel, limiting its availability. In this study, we focus on constructing a robust ECG encoder for multimodal pretraining using real world hospital data. We employ SigLIP, a CLIP based model with a sigmoid based loss function enabling multi label prediction, and introduce a modified loss function tailored to the multi label nature of ECG data. Experiments demonstrate that incorporating medical knowledge in the language model and applying the modified loss significantly improve multi label ECG classification. To further enhance performance, we increase the embedding dimensionality and apply random cropping to mitigate data drift. Finally, per label analysis reveals which ECG findings are easier or harder to predict. Our study provides a foundational framework for developing medical models that utilize ECG data.",
-      "pdf_url": "https://arxiv.org/pdf/2602.10553v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.10553v1",
-      "published": "2026-02-11T05:58:34Z",
-      "updated": "2026-02-11T05:58:34Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Bridging the Compression-Precision Paradox: A Hybrid Architecture for Clinical EEG Report Generation with Guaranteed Measurement Accuracy",
-      "authors": [
-        "Wuyang Zhang",
-        "Zhen Luo",
-        "Chuqiao Gu",
-        "Jianming Ma",
-        "Yebo Cao",
-        "Wangming Yuan",
-        "Yinzhi Jin"
-      ],
-      "abstract": "Automated EEG monitoring requires clinician-level precision for seizure detection and reporting. Clinical EEG recordings exceed LLM context windows, requiring extreme compression (400:1+ ratios) that destroys fine-grained temporal precision. A 0.5 Hz error distinguishes absence epilepsy from Lennox-Gastaut syndrome. LLMs lack inherent time-series comprehension and rely on statistical associations from compressed representations. This dual limitation causes systems to hallucinate clinically incorrect measurement values.\n  We separate measurement extraction from text generation. Our hybrid architecture computes exact clinical values via signal processing before compression, employs a cross-modal bridge for EEG-to-language translation, and uses parameter-efficient fine-tuning with constrained decoding around frozen slots. Multirate sampling maintains long-range context while preserving event-level precision. Evaluation on TUH and CHB-MIT datasets achieves 60% fewer false alarms, 50% faster detection, and sub-clinical measurement precision. This is the first system guaranteeing clinical measurement accuracy in automated EEG reports.",
-      "pdf_url": "https://arxiv.org/pdf/2602.10544v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.10544v1",
-      "published": "2026-02-11T05:36:14Z",
-      "updated": "2026-02-11T05:36:14Z",
-      "categories": [
-        "cs.LG",
-        "math.NA"
       ]
     }
   ]

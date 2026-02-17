@@ -34,7 +34,6 @@ Create a homepage for a coding blog website hosted on GitHub Pages. The design s
 ### How I used ChatGPT (Problem 1)
 I used ChatGPT to draft the structure and content of the homepage and to resolve early GitHub Pages setup issues. In particular:
 - I asked for a homepage layout that can scale as a “coding blog hub” (navigation + expandable sections).
-- I asked how to create/edit `README.md` and add files in GitHub when my new repo initially appeared to have no files after forking.
 - I debugged an early “blank page” issue on GitHub Pages by verifying which branch/folder Pages was serving and ensuring the correct entry file (e.g., `index.html`) existed in the published location.
 
 ### Files touched (Problem 1)

@@ -1,8 +1,175 @@
 {
-  "generated_at_utc": "2026-02-17T02:40:42.372273Z",
+  "generated_at_utc": "2026-02-18T02:44:10.392293Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "CAMEL: An ECG Language Model for Forecasting Cardiac Events",
+      "authors": [
+        "Neelay Velingker",
+        "Alaia Solko-Breslin",
+        "Mayank Keoliya",
+        "Seewon Choi",
+        "Jiayi Xin",
+        "Anika Marathe",
+        "Alireza Oraii",
+        "Rajat Deo",
+        "Sameed Khatana",
+        "Rajeev Alur",
+        "Mayur Naik",
+        "Eric Wong"
+      ],
+      "abstract": "Electrocardiograms (ECG) are electrical recordings of the heart that are critical for diagnosing cardiovascular conditions. ECG language models (ELMs) have recently emerged as a promising framework for ECG classification accompanied by report generation. However, current models cannot forecast future cardiac events despite the immense clinical value for planning earlier intervention. To address this gap, we propose CAMEL, the first ELM that is capable of inference over longer signal durations which enables its forecasting capability. Our key insight is a specialized ECG encoder which enables cross-understanding of ECG signals with text. We train CAMEL using established LLM training procedures, combining LoRA adaptation with a curriculum learning pipeline. Our curriculum includes ECG classification, metrics calculations, and multi-turn conversations to elicit reasoning. CAMEL demonstrates strong zero-shot performance across 6 tasks and 9 datasets, including ECGForecastBench, a new benchmark that we introduce for forecasting arrhythmias. CAMEL is on par with or surpasses ELMs and fully supervised baselines both in- and out-of-distribution, achieving SOTA results on ECGBench (+7.0% absolute average gain) as well as ECGForecastBench (+12.4% over fully supervised models and +21.1% over zero-shot ELMs).",
+      "pdf_url": "https://arxiv.org/pdf/2602.15677v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.15677v1",
+      "published": "2026-02-17T16:02:52Z",
+      "updated": "2026-02-17T16:02:52Z",
+      "categories": [
+        "cs.LG",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "LLM-to-Speech: A Synthetic Data Pipeline for Training Dialectal Text-to-Speech Models",
+      "authors": [
+        "Ahmed Khaled Khamis",
+        "Hesham Ali"
+      ],
+      "abstract": "Despite the advances in neural text to speech (TTS), many Arabic dialectal varieties remain marginally addressed, with most resources concentrated on Modern Spoken Arabic (MSA) and Gulf dialects, leaving Egyptian Arabic -- the most widely understood Arabic dialect -- severely under-resourced. We address this gap by introducing NileTTS: 38 hours of transcribed speech from two speakers across diverse domains including medical, sales, and general conversations. We construct this dataset using a novel synthetic pipeline: large language models (LLM) generate Egyptian Arabic content, which is then converted to natural speech using audio synthesis tools, followed by automatic transcription and speaker diarization with manual quality verification. We fine-tune XTTS v2, a state-of-the-art multilingual TTS model, on our dataset and evaluate against the baseline model trained on other Arabic dialects. Our contributions include: (1) the first publicly available Egyptian Arabic TTS dataset, (2) a reproducible synthetic data generation pipeline for dialectal TTS, and (3) an open-source fine-tuned model. All resources are released to advance Egyptian Arabic speech synthesis research.",
+      "pdf_url": "https://arxiv.org/pdf/2602.15675v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.15675v1",
+      "published": "2026-02-17T15:58:27Z",
+      "updated": "2026-02-17T15:58:27Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Concept-Enhanced Multimodal RAG: Towards Interpretable and Accurate Radiology Report Generation",
+      "authors": [
+        "Marco Salm\u00e8",
+        "Federico Siciliano",
+        "Fabrizio Silvestri",
+        "Paolo Soda",
+        "Rosa Sicilia",
+        "Valerio Guarrasi"
+      ],
+      "abstract": "Radiology Report Generation (RRG) through Vision-Language Models (VLMs) promises to reduce documentation burden, improve reporting consistency, and accelerate clinical workflows. However, their clinical adoption remains limited by the lack of interpretability and the tendency to hallucinate findings misaligned with imaging evidence. Existing research typically treats interpretability and accuracy as separate objectives, with concept-based explainability techniques focusing primarily on transparency, while Retrieval-Augmented Generation (RAG) methods targeting factual grounding through external retrieval. We present Concept-Enhanced Multimodal RAG (CEMRAG), a unified framework that decomposes visual representations into interpretable clinical concepts and integrates them with multimodal RAG. This approach exploits enriched contextual prompts for RRG, improving both interpretability and factual accuracy. Experiments on MIMIC-CXR and IU X-Ray across multiple VLM architectures, training regimes, and retrieval configurations demonstrate consistent improvements over both conventional RAG and concept-only baselines on clinical accuracy metrics and standard NLP measures. These results challenge the assumed trade-off between interpretability and performance, showing that transparent visual concepts can enhance rather than compromise diagnostic accuracy in medical VLMs. Our modular design decomposes interpretability into visual transparency and structured language model conditioning, providing a principled pathway toward clinically trustworthy AI-assisted radiology.",
+      "pdf_url": "https://arxiv.org/pdf/2602.15650v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.15650v1",
+      "published": "2026-02-17T15:18:07Z",
+      "updated": "2026-02-17T15:18:07Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Towards Expectation Detection in Language: A Case Study on Treatment Expectations in Reddit",
+      "authors": [
+        "Aswathy Velutharambath",
+        "Amelie W\u00fchrl"
+      ],
+      "abstract": "Patients' expectations towards their treatment have a substantial effect on the treatments' success. While primarily studied in clinical settings, online patient platforms like medical subreddits may hold complementary insights: treatment expectations that patients feel unnecessary or uncomfortable to share elsewhere. Despite this, no studies examine what type of expectations users discuss online and how they express them. Presumably this is because expectations have not been studied in natural language processing (NLP) before. Therefore, we introduce the task of Expectation Detection, arguing that expectations are relevant for many applications, including opinion mining and product design. Subsequently, we present a case study for the medical domain, where expectations are particularly crucial to extract. We contribute RedHOTExpect, a corpus of Reddit posts (4.5K posts) to study expectations in this context. We use a large language model (LLM) to silver-label the data and validate its quality manually (label accuracy ~78%). Based on this, we analyze which linguistic patterns characterize expectations and explore what patients expect and why. We find that optimism and proactive framing are more pronounced in posts about physical or treatment-related illnesses compared to mental-health contexts, and that in our dataset, patients mostly discuss benefits rather than negative outcomes. The RedHOTExpect corpus can be obtained from https://www.ims.uni-stuttgart.de/data/RedHOTExpect",
+      "pdf_url": "https://arxiv.org/pdf/2602.15504v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.15504v1",
+      "published": "2026-02-17T11:21:40Z",
+      "updated": "2026-02-17T11:21:40Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Improving LLM Reliability through Hybrid Abstention and Adaptive Detection",
+      "authors": [
+        "Ankit Sharma",
+        "Nachiket Tapas",
+        "Jyotiprakash Patra"
+      ],
+      "abstract": "Large Language Models (LLMs) deployed in production environments face a fundamental safety-utility trade-off either a strict filtering mechanisms prevent harmful outputs but often block benign queries or a relaxed controls risk unsafe content generation. Conventional guardrails based on static rules or fixed confidence thresholds are typically context-insensitive and computationally expensive, resulting in high latency and degraded user experience. To address these limitations, we introduce an adaptive abstention system that dynamically adjusts safety thresholds based on real-time contextual signals such as domain and user history. The proposed framework integrates a multi-dimensional detection architecture composed of five parallel detectors, combined through a hierarchical cascade mechanism to optimize both speed and precision. The cascade design reduces unnecessary computation by progressively filtering queries, achieving substantial latency improvements compared to non-cascaded models and external guardrail systems. Extensive evaluation on mixed and domain-specific workloads demonstrates significant reductions in false positives, particularly in sensitive domains such as medical advice and creative writing. The system maintains high safety precision and near-perfect recall under strict operating modes. Overall, our context-aware abstention framework effectively balances safety and utility while preserving performance, offering a scalable solution for reliable LLM deployment.",
+      "pdf_url": "https://arxiv.org/pdf/2602.15391v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.15391v1",
+      "published": "2026-02-17T07:00:09Z",
+      "updated": "2026-02-17T07:00:09Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Arbor: A Framework for Reliable Navigation of Critical Conversation Flows",
+      "authors": [
+        "Lu\u00eds Silva",
+        "Diogo Gon\u00e7alves",
+        "Catarina Farinha",
+        "Clara Matos",
+        "Lu\u00eds Ungaro"
+      ],
+      "abstract": "Large language models struggle to maintain strict adherence to structured workflows in high-stakes domains such as healthcare triage. Monolithic approaches that encode entire decision structures within a single prompt are prone to instruction-following degradation as prompt length increases, including lost-in-the-middle effects and context window overflow. To address this gap, we present Arbor, a framework that decomposes decision tree navigation into specialized, node-level tasks. Decision trees are standardized into an edge-list representation and stored for dynamic retrieval. At runtime, a directed acyclic graph (DAG)-based orchestration mechanism iteratively retrieves only the outgoing edges of the current node, evaluates valid transitions via a dedicated LLM call, and delegates response generation to a separate inference step. The framework is agnostic to the underlying decision logic and model provider. Evaluated against single-prompt baselines across 10 foundation models using annotated turns from real clinical triage conversations. Arbor improves mean turn accuracy by 29.4 percentage points, reduces per-turn latency by 57.1%, and achieves an average 14.4x reduction in per-turn cost. These results indicate that architectural decomposition reduces dependence on intrinsic model capability, enabling smaller models to match or exceed larger models operating under single-prompt baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14643v2",
+      "arxiv_url": "https://arxiv.org/abs/2602.14643v2",
+      "published": "2026-02-16T11:09:02Z",
+      "updated": "2026-02-17T16:44:27Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Assessing Large Language Models for Medical QA: Zero-Shot and LLM-as-a-Judge Evaluation",
+      "authors": [
+        "Shefayat E Shams Adib",
+        "Ahmed Alfey Sani",
+        "Ekramul Alam Esham",
+        "Ajwad Abrar",
+        "Tareque Mohmud Chowdhury"
+      ],
+      "abstract": "Recently, Large Language Models (LLMs) have gained significant traction in medical domain, especially in developing a QA systems to Medical QA systems for enhancing access to healthcare in low-resourced settings. This paper compares five LLMs deployed between April 2024 and August 2025 for medical QA, using the iCliniq dataset, containing 38,000 medical questions and answers of diverse specialties. Our models include Llama-3-8B-Instruct, Llama 3.2 3B, Llama 3.3 70B Instruct, Llama-4-Maverick-17B-128E-Instruct, and GPT-5-mini. We are using a zero-shot evaluation methodology and using BLEU and ROUGE metrics to evaluate performance without specialized fine-tuning. Our results show that larger models like Llama 3.3 70B Instruct outperform smaller models, consistent with observed scaling benefits in clinical tasks. It is notable that, Llama-4-Maverick-17B exhibited more competitive results, thus highlighting evasion efficiency trade-offs relevant for practical deployment. These findings align with advancements in LLM capabilities toward professional-level medical reasoning and reflect the increasing feasibility of LLM-supported QA systems in the real clinical environments. This benchmark aims to serve as a standardized setting for future study to minimize model size, computational resources and to maximize clinical utility in medical NLP applications.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14564v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.14564v1",
+      "published": "2026-02-16T08:53:23Z",
+      "updated": "2026-02-16T08:53:23Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Differentially Private Retrieval-Augmented Generation",
+      "authors": [
+        "Tingting Tang",
+        "James Flemings",
+        "Yongqin Wang",
+        "Murali Annavaram"
+      ],
+      "abstract": "Retrieval-augmented generation (RAG) is a widely used framework for reducing hallucinations in large language models (LLMs) on domain-specific tasks by retrieving relevant documents from a database to support accurate responses. However, when the database contains sensitive corpora, such as medical records or legal documents, RAG poses serious privacy risks by potentially exposing private information through its outputs. Prior work has demonstrated that one can practically craft adversarial prompts that force an LLM to regurgitate the augmented contexts. A promising direction is to integrate differential privacy (DP), a privacy notion that offers strong formal guarantees, into RAG systems. However, naively applying DP mechanisms into existing systems often leads to significant utility degradation. Particularly for RAG systems, DP can reduce the usefulness of the augmented contexts leading to increase risk of hallucination from the LLMs. Motivated by these challenges, we present DP-KSA, a novel privacy-preserving RAG algorithm that integrates DP using the propose-test-release paradigm. DP-KSA follows from a key observation that most question-answering (QA) queries can be sufficiently answered with a few keywords. Hence, DP-KSA first obtains an ensemble of relevant contexts, each of which will be used to generate a response from an LLM. We utilize these responses to obtain the most frequent keywords in a differentially private manner. Lastly, the keywords are augmented into the prompt for the final output. This approach effectively compresses the semantic space while preserving both utility and privacy. We formally show that DP-KSA provides formal DP guarantees on the generated output with respect to the RAG database. We evaluate DP-KSA on two QA benchmarks using three instruction-tuned LLMs, and our empirical results demonstrate that DP-KSA achieves a strong privacy-utility tradeoff.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14374v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.14374v1",
+      "published": "2026-02-16T00:52:57Z",
+      "updated": "2026-02-16T00:52:57Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "DeepFusion: Accelerating MoE Training via Federated Knowledge Distillation from Heterogeneous Edge Devices",
+      "authors": [
+        "Songyuan Li",
+        "Jia Hu",
+        "Ahmed M. Abdelmoniem",
+        "Geyong Min",
+        "Haojun Huang",
+        "Jiwei Huang"
+      ],
+      "abstract": "Recent Mixture-of-Experts (MoE)-based large language models (LLMs) such as Qwen-MoE and DeepSeek-MoE are transforming generative AI in natural language processing. However, these models require vast and diverse training data. Federated learning (FL) addresses this challenge by leveraging private data from heterogeneous edge devices for privacy-preserving MoE training. Nonetheless, traditional FL approaches require devices to host local MoE models, which is impractical for resource-constrained devices due to large model sizes. To address this, we propose DeepFusion, the first scalable federated MoE training framework that enables the fusion of heterogeneous on-device LLM knowledge via federated knowledge distillation, yielding a knowledge-abundant global MoE model. Specifically, DeepFusion features each device to independently configure and train an on-device LLM tailored to its own needs and hardware limitations. Furthermore, we propose a novel View-Aligned Attention (VAA) module that integrates multi-stage feature representations from the global MoE model to construct a predictive perspective aligned with on-device LLMs, thereby enabling effective cross-architecture knowledge distillation. By explicitly aligning predictive perspectives, VAA resolves the view-mismatch problem in traditional federated knowledge distillation, which arises from heterogeneity in model architectures and prediction behaviors between on-device LLMs and the global MoE model. Experiments with industry-level MoE models (Qwen-MoE and DeepSeek-MoE) and real-world datasets (medical and finance) demonstrate that DeepFusion achieves performance close to centralized MoE training. Compared with key federated MoE baselines, DeepFusion reduces communication costs by up to 71% and improves token perplexity by up to 5.28%.",
+      "pdf_url": "https://arxiv.org/pdf/2602.14301v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.14301v1",
+      "published": "2026-02-15T20:25:50Z",
+      "updated": "2026-02-15T20:25:50Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.MA"
+      ]
+    },
     {
       "title": "Explainable Interictal Epileptiform Discharge Detection Method Based on Scalp EEG and Retrieval-Augmented Generation",
       "authors": [
@@ -117,167 +284,6 @@
       "updated": "2026-02-14T03:12:05Z",
       "categories": [
         "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MentalBench: A Benchmark for Evaluating Psychiatric Diagnostic Capability of Large Language Models",
-      "authors": [
-        "Hoyun Song",
-        "Migyeong Kang",
-        "Jisu Shin",
-        "Jihyun Kim",
-        "Chanbi Park",
-        "Hangyeol Yoo",
-        "Jihyun An",
-        "Alice Oh",
-        "Jinyoung Han",
-        "KyungTae Lim"
-      ],
-      "abstract": "We introduce MentalBench, a benchmark for evaluating psychiatric diagnostic decision-making in large language models (LLMs). Existing mental health benchmarks largely rely on social media data, limiting their ability to assess DSM-grounded diagnostic judgments. At the core of MentalBench is MentalKG, a psychiatrist-built and validated knowledge graph encoding DSM-5 diagnostic criteria and differential diagnostic rules for 23 psychiatric disorders. Using MentalKG as a golden-standard logical backbone, we generate 24,750 synthetic clinical cases that systematically vary in information completeness and diagnostic complexity, enabling low-noise and interpretable evaluation. Our experiments show that while state-of-the-art LLMs perform well on structured queries probing DSM-5 knowledge, they struggle to calibrate confidence in diagnostic decision-making when distinguishing between clinically overlapping disorders. These findings reveal evaluation gaps not captured by existing benchmarks.",
-      "pdf_url": "https://arxiv.org/pdf/2602.12871v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.12871v1",
-      "published": "2026-02-13T12:21:33Z",
-      "updated": "2026-02-13T12:21:33Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "TRACE: Temporal Reasoning via Agentic Context Evolution for Streaming Electronic Health Records (EHRs)",
-      "authors": [
-        "Zhan Qu",
-        "Michael F\u00e4rber"
-      ],
-      "abstract": "Large Language Models (LLMs) encode extensive medical knowledge but struggle to apply it reliably to longitudinal patient trajectories, where evolving clinical states, irregular timing, and heterogeneous events degrade performance over time. Existing adaptation strategies rely on fine-tuning or retrieval-based augmentation, which introduce computational overhead, privacy constraints, or instability under long contexts. We introduce TRACE (Temporal Reasoning via Agentic Context Evolution), a framework that enables temporal clinical reasoning with frozen LLMs by explicitly structuring and maintaining context rather than extending context windows or updating parameters. TRACE operates over a dual-memory architecture consisting of a static Global Protocol encoding institutional clinical rules and a dynamic Individual Protocol tracking patient-specific state. Four agentic components, Router, Reasoner, Auditor, and Steward, coordinate over this structured memory to support temporal inference and state evolution. The framework maintains bounded inference cost via structured state compression and selectively audits safety-critical clinical decisions. Evaluated on longitudinal clinical event streams from MIMIC-IV, TRACE significantly improves next-event prediction accuracy, protocol adherence, and clinical safety over long-context and retrieval-augmented baselines, while producing interpretable and auditable reasoning traces.",
-      "pdf_url": "https://arxiv.org/pdf/2602.12833v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.12833v1",
-      "published": "2026-02-13T11:39:19Z",
-      "updated": "2026-02-13T11:39:19Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "GRAIL: Geometry-Aware Retrieval-Augmented Inference with LLMs over Hyperbolic Representations of Patient Trajectories",
-      "authors": [
-        "Zhan Qu",
-        "Michael F\u00e4rber"
-      ],
-      "abstract": "Predicting future clinical events from longitudinal electronic health records (EHRs) is challenging due to sparse multi-type clinical events, hierarchical medical vocabularies, and the tendency of large language models (LLMs) to hallucinate when reasoning over long structured histories. We study next-visit event prediction, which aims to forecast a patient's upcoming clinical events based on prior visits. We propose GRAIL, a framework that models longitudinal EHRs using structured geometric representations and structure-aware retrieval. GRAIL constructs a unified clinical graph by combining deterministic coding-system hierarchies with data-driven temporal associations across event types, embeds this graph in hyperbolic space, and summarizes each visit as a probabilistic Central Event that denoises sparse observations. At inference time, GRAIL retrieves a structured set of clinically plausible future events aligned with hierarchical and temporal progression, and optionally refines their ranking using an LLM as a constrained inference-time reranker. Experiments on MIMIC-IV show that GRAIL consistently improves multi-type next-visit prediction and yields more hierarchy-consistent forecasts.",
-      "pdf_url": "https://arxiv.org/pdf/2602.12828v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.12828v1",
-      "published": "2026-02-13T11:30:37Z",
-      "updated": "2026-02-13T11:30:37Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Disentangling Ambiguity from Instability in Large Language Models: A Clinical Text-to-SQL Case Study",
-      "authors": [
-        "Angelo Ziletti",
-        "Leonardo D'Ambrosi"
-      ],
-      "abstract": "Deploying large language models for clinical Text-to-SQL requires distinguishing two qualitatively different causes of output diversity: (i) input ambiguity that should trigger clarification, and (ii) model instability that should trigger human review. We propose CLUES, a framework that models Text-to-SQL as a two-stage process (interpretations --> answers) and decomposes semantic uncertainty into an ambiguity score and an instability score. The instability score is computed via the Schur complement of a bipartite semantic graph matrix. Across AmbigQA/SituatedQA (gold interpretations) and a clinical Text-to-SQL benchmark (known interpretations), CLUES improves failure prediction over state-of-the-art Kernel Language Entropy. In deployment settings, it remains competitive while providing a diagnostic decomposition unavailable from a single score. The resulting uncertainty regimes map to targeted interventions - query refinement for ambiguity, model improvement for instability. The high-ambiguity/high-instability regime contains 51% of errors while covering 25% of queries, enabling efficient triage.",
-      "pdf_url": "https://arxiv.org/pdf/2602.12015v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.12015v1",
-      "published": "2026-02-12T14:46:20Z",
-      "updated": "2026-02-12T14:46:20Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Can Local Vision-Language Models improve Activity Recognition over Vision Transformers? -- Case Study on Newborn Resuscitation",
-      "authors": [
-        "Enrico Guerriero",
-        "Kjersti Engan",
-        "\u00d8yvind Meinich-Bache"
-      ],
-      "abstract": "Accurate documentation of newborn resuscitation is essential for quality improvement and adherence to clinical guidelines, yet remains underutilized in practice. Previous work using 3D-CNNs and Vision Transformers (ViT) has shown promising results in detecting key activities from newborn resuscitation videos, but also highlighted the challenges in recognizing such fine-grained activities. This work investigates the potential of generative AI (GenAI) methods to improve activity recognition from such videos. Specifically, we explore the use of local vision-language models (VLMs), combined with large language models (LLMs), and compare them to a supervised TimeSFormer baseline. Using a simulated dataset comprising 13.26 hours of newborn resuscitation videos, we evaluate several zero-shot VLM-based strategies and fine-tuned VLMs with classification heads, including Low-Rank Adaptation (LoRA). Our results suggest that small (local) VLMs struggle with hallucinations, but when fine-tuned with LoRA, the results reach F1 score at 0.91, surpassing the TimeSformer results of 0.70.",
-      "pdf_url": "https://arxiv.org/pdf/2602.12002v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.12002v1",
-      "published": "2026-02-12T14:31:10Z",
-      "updated": "2026-02-12T14:31:10Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Automatic Simplification of Common Vulnerabilities and Exposures Descriptions",
-      "authors": [
-        "Varpu Vehom\u00e4ki",
-        "Kimmo K. Kaski"
-      ],
-      "abstract": "Understanding cyber security is increasingly important for individuals and organizations. However, a lot of information related to cyber security can be difficult to understand to those not familiar with the topic. In this study, we focus on investigating how large language models (LLMs) could be utilized in automatic text simplification (ATS) of Common Vulnerability and Exposure (CVE) descriptions. Automatic text simplification has been studied in several contexts, such as medical, scientific, and news texts, but it has not yet been studied to simplify texts in the rapidly changing and complex domain of cyber security. We created a baseline for cyber security ATS and a test dataset of 40 CVE descriptions, evaluated by two groups of cyber security experts in two survey rounds. We have found that while out-of-the box LLMs can make the text appear simpler, they struggle with meaning preservation. Code and data are available at https://version.aalto.fi/gitlab/vehomav1/simplification\\_nmi.",
-      "pdf_url": "https://arxiv.org/pdf/2602.11982v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.11982v1",
-      "published": "2026-02-12T14:12:58Z",
-      "updated": "2026-02-12T14:12:58Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Are Two LLMs Better Than One? A Student-Teacher Dual-Head LLMs Architecture for Pharmaceutical Content Optimization",
-      "authors": [
-        "Suyash Mishra",
-        "Qiang Li",
-        "Anubhav Girdhar"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly used to create content in regulated domains such as pharmaceuticals, where outputs must be scientifically accurate and legally compliant. Manual quality control (QC) is slow, error prone, and can become a publication bottleneck. We introduce LRBTC, a modular LLM and vision language model (VLM) driven QC architecture covering Language, Regulatory, Brand, Technical, and Content Structure checks. LRBTC combines a Student-Teacher dual model architecture, human in the loop (HITL) workflow with waterfall rule filtering to enable scalable, verifiable content validation and optimization. On AIReg-Bench, our approach achieves 83.0% F1 and 97.5% recall, reducing missed violations by 5x compared with Gemini 2.5 Pro. On CSpelling, it improves mean accuracy by 26.7%. Error analysis further reveals that while current models are strong at detecting misspellings (92.5 recall), they fail to identify complex medical grammatical (25.0 recall) and punctuation (41.7 recall) errors, highlighting a key area for future work. This work provides a practical, plug and play solution for reliable, transparent quality control of content in high stakes, compliance critical industries. We also provide access to our Demo under MIT Licenses.",
-      "pdf_url": "https://arxiv.org/pdf/2602.11957v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.11957v1",
-      "published": "2026-02-12T13:53:29Z",
-      "updated": "2026-02-12T13:53:29Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Who Does What? Archetypes of Roles Assigned to LLMs During Human-AI Decision-Making",
-      "authors": [
-        "Shreya Chappidi",
-        "Jatinder Singh",
-        "Andra V. Krauze"
-      ],
-      "abstract": "LLMs are increasingly supporting decision-making across high-stakes domains, requiring critical reflection on the socio-technical factors that shape how humans and LLMs are assigned roles and interact during human-in-the-loop decision-making. This paper introduces the concept of human-LLM archetypes -- defined as re-curring socio-technical interaction patterns that structure the roles of humans and LLMs in collaborative decision-making. We describe 17 human-LLM archetypes derived from a scoping literature review and thematic analysis of 113 LLM-supported decision-making papers. Then, we evaluate these diverse archetypes across real-world clinical diagnostic cases to examine the potential effects of adopting distinct human-LLM archetypes on LLM outputs and decision outcomes. Finally, we present relevant tradeoffs and design choices across human-LLM archetypes, including decision control, social hierarchies, cognitive forcing strategies, and information requirements. Through our analysis, we show that selection of human-LLM interaction archetype can influence LLM outputs and decisions, bringing important risks and considerations for the designers of human-AI decision-making systems",
-      "pdf_url": "https://arxiv.org/pdf/2602.11924v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.11924v1",
-      "published": "2026-02-12T13:23:04Z",
-      "updated": "2026-02-12T13:23:04Z",
-      "categories": [
-        "cs.HC",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Quark Medical Alignment: A Holistic Multi-Dimensional Alignment and Collaborative Optimization Paradigm",
-      "authors": [
-        "Tianxiang Xu",
-        "Jiayi Liu",
-        "Yixuan Tong",
-        "Jialu Xu",
-        "Yunqing Wei",
-        "Kaiwen Feng",
-        "PanPan Hou",
-        "Kangping Yin",
-        "Jiyuan Hu",
-        "Hao Zhou",
-        "Zhenxin Ma",
-        "Jian Xu",
-        "Guanjun Jiang"
-      ],
-      "abstract": "While reinforcement learning for large language model alignment has progressed rapidly in recent years, transferring these paradigms to high-stakes medical question answering reveals a fundamental paradigm mismatch. Reinforcement Learning from Human Feedback relies on preference annotations that are prohibitively expensive and often fail to reflect the absolute correctness of medical facts. Reinforcement Learning from Verifiable Rewards lacks effective automatic verifiers and struggles to handle complex clinical contexts. Meanwhile, medical alignment requires the simultaneous optimization of correctness, safety, and compliance, yet multi-objective heterogeneous reward signals are prone to scale mismatch and optimization conflicts.To address these challenges, we propose a robust medical alignment paradigm. We first construct a holistic multi-dimensional medical alignment matrix that decomposes alignment objectives into four categories: fundamental capabilities, expert knowledge, online feedback, and format specifications. Within each category, we establish a closed loop of where observable metrics inform attributable diagnosis, which in turn drives optimizable rewards, thereby providing fine-grained, high-resolution supervision signals for subsequent iterative optimization. To resolve gradient domination and optimization instability problem caused by heterogeneous signals, we further propose a unified optimization mechanism. This mechanism employs Reference-Frozen Normalization to align reward scales and implements a Tri-Factor Adaptive Dynamic Weighting strategy to achieve collaborative optimization that is weakness-oriented, risk-prioritized, and redundancy-reducing. Experimental results demonstrate the effectiveness of our proposed paradigm in real-world medical scenario evaluations, establishing a new paradigm for complex alignment in vertical domains.",
-      "pdf_url": "https://arxiv.org/pdf/2602.11661v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.11661v1",
-      "published": "2026-02-12T07:26:23Z",
-      "updated": "2026-02-12T07:26:23Z",
-      "categories": [
         "cs.AI"
       ]
     }

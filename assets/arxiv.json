@@ -1,8 +1,77 @@
 {
-  "generated_at_utc": "2026-02-19T02:43:24.513829Z",
+  "generated_at_utc": "2026-02-20T02:37:45.055657Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Multi-Round Human-AI Collaboration with User-Specified Requirements",
+      "authors": [
+        "Sima Noorani",
+        "Shayan Kiyani",
+        "Hamed Hassani",
+        "George Pappas"
+      ],
+      "abstract": "As humans increasingly rely on multiround conversational AI for high stakes decisions, principled frameworks are needed to ensure such interactions reliably improve decision quality. We adopt a human centric view governed by two principles: counterfactual harm, ensuring the AI does not undermine human strengths, and complementarity, ensuring it adds value where the human is prone to err. We formalize these concepts via user defined rules, allowing users to specify exactly what harm and complementarity mean for their specific task. We then introduce an online, distribution free algorithm with finite sample guarantees that enforces the user-specified constraints over the collaboration dynamics. We evaluate our framework across two interactive settings: LLM simulated collaboration on a medical diagnostic task and a human crowdsourcing study on a pictorial reasoning task. We show that our online procedure maintains prescribed counterfactual harm and complementarity violation rates even under nonstationary interaction dynamics. Moreover, tightening or loosening these constraints produces predictable shifts in downstream human accuracy, confirming that the two principles serve as practical levers for steering multi-round collaboration toward better decision quality without the need to model or constrain human behavior.",
+      "pdf_url": "https://arxiv.org/pdf/2602.17646v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.17646v1",
+      "published": "2026-02-19T18:54:34Z",
+      "updated": "2026-02-19T18:54:34Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Bridging the Domain Divide: Supervised vs. Zero-Shot Clinical Section Segmentation from MIMIC-III to Obstetrics",
+      "authors": [
+        "Baris Karacan",
+        "Barbara Di Eugenio",
+        "Patrick Thornton"
+      ],
+      "abstract": "Clinical free-text notes contain vital patient information. They are structured into labelled sections; recognizing these sections has been shown to support clinical decision-making and downstream NLP tasks. In this paper, we advance clinical section segmentation through three key contributions. First, we curate a new de-identified, section-labeled obstetrics notes dataset, to supplement the medical domains covered in public corpora such as MIMIC-III, on which most existing segmentation approaches are trained. Second, we systematically evaluate transformer-based supervised models for section segmentation on a curated subset of MIMIC-III (in-domain), and on the new obstetrics dataset (out-of-domain). Third, we conduct the first head-to-head comparison of supervised models for medical section segmentation with zero-shot large language models. Our results show that while supervised models perform strongly in-domain, their performance drops substantially out-of-domain. In contrast, zero-shot models demonstrate robust out-of-domain adaptability once hallucinated section headers are corrected. These findings underscore the importance of developing domain-specific clinical resources and highlight zero-shot segmentation as a promising direction for applying healthcare NLP beyond well-studied corpora, as long as hallucinations are appropriately managed.",
+      "pdf_url": "https://arxiv.org/pdf/2602.17513v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.17513v1",
+      "published": "2026-02-19T16:25:07Z",
+      "updated": "2026-02-19T16:25:07Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Small LLMs for Medical NLP: a Systematic Analysis of Few-Shot, Constraint Decoding, Fine-Tuning and Continual Pre-Training in Italian",
+      "authors": [
+        "Pietro Ferrazzi",
+        "Mattia Franzin",
+        "Alberto Lavelli",
+        "Bernardo Magnini"
+      ],
+      "abstract": "Large Language Models (LLMs) consistently excel in diverse medical Natural Language Processing (NLP) tasks, yet their substantial computational requirements often limit deployment in real-world healthcare settings. In this work, we investigate whether \"small\" LLMs (around one billion parameters) can effectively perform medical tasks while maintaining competitive accuracy. We evaluate models from three major families-Llama-3, Gemma-3, and Qwen3-across 20 clinical NLP tasks among Named Entity Recognition, Relation Extraction, Case Report Form Filling, Question Answering, and Argument Mining. We systematically compare a range of adaptation strategies, both at inference time (few-shot prompting, constraint decoding) and at training time (supervised fine-tuning, continual pretraining). Fine-tuning emerges as the most effective approach, while the combination of few-shot prompting and constraint decoding offers strong lower-resource alternatives. Our results show that small LLMs can match or even surpass larger baselines, with our best configuration based on Qwen3-1.7B achieving an average score +9.2 points higher than Qwen3-32B. We release a comprehensive collection of all the publicly available Italian medical datasets for NLP tasks, together with our top-performing models. Furthermore, we release an Italian dataset of 126M words from the Emergency Department of an Italian Hospital, and 175M words from various sources that we used for continual pre-training.",
+      "pdf_url": "https://arxiv.org/pdf/2602.17475v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.17475v1",
+      "published": "2026-02-19T15:38:46Z",
+      "updated": "2026-02-19T15:38:46Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "MedClarify: An information-seeking AI agent for medical diagnosis with case-specific follow-up questions",
+      "authors": [
+        "Hui Min Wong",
+        "Philip Heesen",
+        "Pascal Janetzky",
+        "Martin Bendszus",
+        "Stefan Feuerriegel"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly used for diagnostic tasks in medicine. In clinical practice, the correct diagnosis can rarely be immediately inferred from the initial patient presentation alone. Rather, reaching a diagnosis often involves systematic history taking, during which clinicians reason over multiple potential conditions through iterative questioning to resolve uncertainty. This process requires considering differential diagnoses and actively excluding emergencies that demand immediate intervention. Yet, the ability of medical LLMs to generate informative follow-up questions and thus reason over differential diagnoses remains underexplored. Here, we introduce MedClarify, an AI agent for information-seeking that can generate follow-up questions for iterative reasoning to support diagnostic decision-making. Specifically, MedClarify computes a list of candidate diagnoses analogous to a differential diagnosis, and then proactively generates follow-up questions aimed at reducing diagnostic uncertainty. By selecting the question with the highest expected information gain, MedClarify enables targeted, uncertainty-aware reasoning to improve diagnostic performance. In our experiments, we first demonstrate the limitations of current LLMs in medical reasoning, which often yield multiple, similarly likely diagnoses, especially when patient cases are incomplete or relevant information for diagnosis is missing. We then show that our information-theoretic reasoning approach can generate effective follow-up questioning and thereby reduces diagnostic errors by ~27 percentage points (p.p.) compared to a standard single-shot LLM baseline. Altogether, MedClarify offers a path to improve medical LLMs through agentic information-seeking and to thus promote effective dialogues with medical LLMs that reflect the iterative and uncertain nature of real-world clinical reasoning.",
+      "pdf_url": "https://arxiv.org/pdf/2602.17308v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.17308v1",
+      "published": "2026-02-19T12:19:12Z",
+      "updated": "2026-02-19T12:19:12Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Lyapunov Spectral Analysis of Speech Embedding Trajectories in Psychosis",
       "authors": [
@@ -26,6 +95,29 @@
       ]
     },
     {
+      "title": "LiveClin: A Live Clinical Benchmark without Leakage",
+      "authors": [
+        "Xidong Wang",
+        "Shuqi Guo",
+        "Yue Shen",
+        "Junying Chen",
+        "Jian Wang",
+        "Jinjie Gu",
+        "Ping Zhang",
+        "Lei Liu",
+        "Benyou Wang"
+      ],
+      "abstract": "The reliability of medical LLM evaluation is critically undermined by data contamination and knowledge obsolescence, leading to inflated scores on static benchmarks. To address these challenges, we introduce LiveClin, a live benchmark designed for approximating real-world clinical practice. Built from contemporary, peer-reviewed case reports and updated biannually, LiveClin ensures clinical currency and resists data contamination. Using a verified AI-human workflow involving 239 physicians, we transform authentic patient cases into complex, multimodal evaluation scenarios that span the entire clinical pathway. The benchmark currently comprises 1,407 case reports and 6,605 questions. Our evaluation of 26 models on LiveClin reveals the profound difficulty of these real-world scenarios, with the top-performing model achieving a Case Accuracy of just 35.7%. In benchmarking against human experts, Chief Physicians achieved the highest accuracy, followed closely by Attending Physicians, with both surpassing most models. LiveClin thus provides a continuously evolving, clinically grounded framework to guide the development of medical LLMs towards closing this gap and achieving greater reliability and real-world utility. Our data and code are publicly available at https://github.com/AQ-MedAI/LiveClin.",
+      "pdf_url": "https://arxiv.org/pdf/2602.16747v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.16747v1",
+      "published": "2026-02-18T03:59:46Z",
+      "updated": "2026-02-18T03:59:46Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
       "title": "Multi-Objective Alignment of Language Models for Personalized Psychotherapy",
       "authors": [
         "Mehrab Beikzadeh",
@@ -42,7 +134,8 @@
       "published": "2026-02-17T22:08:14Z",
       "updated": "2026-02-17T22:08:14Z",
       "categories": [
-        "cs.LG"
+        "cs.LG",
+        "cs.CL"
       ]
     },
     {
@@ -185,10 +278,10 @@
         "Li Liu"
       ],
       "abstract": "Deep learning-based respiratory auscultation is currently hindered by two fundamental challenges: (i) inherent information loss, as converting signals into spectrograms discards transient acoustic events and clinical context; (ii) limited data availability, exacerbated by severe class imbalance. To bridge these gaps, we present Resp-Agent, an autonomous multimodal system orchestrated by a novel Active Adversarial Curriculum Agent (Thinker-A$^2$CA). Unlike static pipelines, Thinker-A$^2$CA serves as a central controller that actively identifies diagnostic weaknesses and schedules targeted synthesis in a closed loop. To address the representation gap, we introduce a Modality-Weaving Diagnoser that weaves EHR data with audio tokens via Strategic Global Attention and sparse audio anchors, capturing both long-range clinical context and millisecond-level transients. To address the data gap, we design a Flow Matching Generator that adapts a text-only Large Language Model (LLM) via modality injection, decoupling pathological content from acoustic style to synthesize hard-to-diagnose samples. As a foundation for these efforts, we introduce Resp-229k, a benchmark corpus of 229k recordings paired with LLM-distilled clinical narratives. Extensive experiments demonstrate that Resp-Agent consistently outperforms prior approaches across diverse evaluation settings, improving diagnostic robustness under data scarcity and long-tailed class imbalance. Our code and data are available at https://github.com/zpforlove/Resp-Agent.",
-      "pdf_url": "https://arxiv.org/pdf/2602.15909v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.15909v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.15909v2",
+      "arxiv_url": "https://arxiv.org/abs/2602.15909v2",
       "published": "2026-02-16T14:48:24Z",
-      "updated": "2026-02-16T14:48:24Z",
+      "updated": "2026-02-19T13:22:10Z",
       "categories": [
         "eess.AS",
         "cs.AI",
@@ -196,101 +289,6 @@
         "cs.HC",
         "cs.MA",
         "cs.SD"
-      ]
-    },
-    {
-      "title": "Arbor: A Framework for Reliable Navigation of Critical Conversation Flows",
-      "authors": [
-        "Lu\u00eds Silva",
-        "Diogo Gon\u00e7alves",
-        "Catarina Farinha",
-        "Clara Matos",
-        "Lu\u00eds Ungaro"
-      ],
-      "abstract": "Large language models struggle to maintain strict adherence to structured workflows in high-stakes domains such as healthcare triage. Monolithic approaches that encode entire decision structures within a single prompt are prone to instruction-following degradation as prompt length increases, including lost-in-the-middle effects and context window overflow. To address this gap, we present Arbor, a framework that decomposes decision tree navigation into specialized, node-level tasks. Decision trees are standardized into an edge-list representation and stored for dynamic retrieval. At runtime, a directed acyclic graph (DAG)-based orchestration mechanism iteratively retrieves only the outgoing edges of the current node, evaluates valid transitions via a dedicated LLM call, and delegates response generation to a separate inference step. The framework is agnostic to the underlying decision logic and model provider. Evaluated against single-prompt baselines across 10 foundation models using annotated turns from real clinical triage conversations. Arbor improves mean turn accuracy by 29.4 percentage points, reduces per-turn latency by 57.1%, and achieves an average 14.4x reduction in per-turn cost. These results indicate that architectural decomposition reduces dependence on intrinsic model capability, enabling smaller models to match or exceed larger models operating under single-prompt baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14643v2",
-      "arxiv_url": "https://arxiv.org/abs/2602.14643v2",
-      "published": "2026-02-16T11:09:02Z",
-      "updated": "2026-02-17T16:44:27Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Assessing Large Language Models for Medical QA: Zero-Shot and LLM-as-a-Judge Evaluation",
-      "authors": [
-        "Shefayat E Shams Adib",
-        "Ahmed Alfey Sani",
-        "Ekramul Alam Esham",
-        "Ajwad Abrar",
-        "Tareque Mohmud Chowdhury"
-      ],
-      "abstract": "Recently, Large Language Models (LLMs) have gained significant traction in medical domain, especially in developing a QA systems to Medical QA systems for enhancing access to healthcare in low-resourced settings. This paper compares five LLMs deployed between April 2024 and August 2025 for medical QA, using the iCliniq dataset, containing 38,000 medical questions and answers of diverse specialties. Our models include Llama-3-8B-Instruct, Llama 3.2 3B, Llama 3.3 70B Instruct, Llama-4-Maverick-17B-128E-Instruct, and GPT-5-mini. We are using a zero-shot evaluation methodology and using BLEU and ROUGE metrics to evaluate performance without specialized fine-tuning. Our results show that larger models like Llama 3.3 70B Instruct outperform smaller models, consistent with observed scaling benefits in clinical tasks. It is notable that, Llama-4-Maverick-17B exhibited more competitive results, thus highlighting evasion efficiency trade-offs relevant for practical deployment. These findings align with advancements in LLM capabilities toward professional-level medical reasoning and reflect the increasing feasibility of LLM-supported QA systems in the real clinical environments. This benchmark aims to serve as a standardized setting for future study to minimize model size, computational resources and to maximize clinical utility in medical NLP applications.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14564v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.14564v1",
-      "published": "2026-02-16T08:53:23Z",
-      "updated": "2026-02-16T08:53:23Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Differentially Private Retrieval-Augmented Generation",
-      "authors": [
-        "Tingting Tang",
-        "James Flemings",
-        "Yongqin Wang",
-        "Murali Annavaram"
-      ],
-      "abstract": "Retrieval-augmented generation (RAG) is a widely used framework for reducing hallucinations in large language models (LLMs) on domain-specific tasks by retrieving relevant documents from a database to support accurate responses. However, when the database contains sensitive corpora, such as medical records or legal documents, RAG poses serious privacy risks by potentially exposing private information through its outputs. Prior work has demonstrated that one can practically craft adversarial prompts that force an LLM to regurgitate the augmented contexts. A promising direction is to integrate differential privacy (DP), a privacy notion that offers strong formal guarantees, into RAG systems. However, naively applying DP mechanisms into existing systems often leads to significant utility degradation. Particularly for RAG systems, DP can reduce the usefulness of the augmented contexts leading to increase risk of hallucination from the LLMs. Motivated by these challenges, we present DP-KSA, a novel privacy-preserving RAG algorithm that integrates DP using the propose-test-release paradigm. DP-KSA follows from a key observation that most question-answering (QA) queries can be sufficiently answered with a few keywords. Hence, DP-KSA first obtains an ensemble of relevant contexts, each of which will be used to generate a response from an LLM. We utilize these responses to obtain the most frequent keywords in a differentially private manner. Lastly, the keywords are augmented into the prompt for the final output. This approach effectively compresses the semantic space while preserving both utility and privacy. We formally show that DP-KSA provides formal DP guarantees on the generated output with respect to the RAG database. We evaluate DP-KSA on two QA benchmarks using three instruction-tuned LLMs, and our empirical results demonstrate that DP-KSA achieves a strong privacy-utility tradeoff.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14374v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.14374v1",
-      "published": "2026-02-16T00:52:57Z",
-      "updated": "2026-02-16T00:52:57Z",
-      "categories": [
-        "cs.CR",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "DeepFusion: Accelerating MoE Training via Federated Knowledge Distillation from Heterogeneous Edge Devices",
-      "authors": [
-        "Songyuan Li",
-        "Jia Hu",
-        "Ahmed M. Abdelmoniem",
-        "Geyong Min",
-        "Haojun Huang",
-        "Jiwei Huang"
-      ],
-      "abstract": "Recent Mixture-of-Experts (MoE)-based large language models (LLMs) such as Qwen-MoE and DeepSeek-MoE are transforming generative AI in natural language processing. However, these models require vast and diverse training data. Federated learning (FL) addresses this challenge by leveraging private data from heterogeneous edge devices for privacy-preserving MoE training. Nonetheless, traditional FL approaches require devices to host local MoE models, which is impractical for resource-constrained devices due to large model sizes. To address this, we propose DeepFusion, the first scalable federated MoE training framework that enables the fusion of heterogeneous on-device LLM knowledge via federated knowledge distillation, yielding a knowledge-abundant global MoE model. Specifically, DeepFusion features each device to independently configure and train an on-device LLM tailored to its own needs and hardware limitations. Furthermore, we propose a novel View-Aligned Attention (VAA) module that integrates multi-stage feature representations from the global MoE model to construct a predictive perspective aligned with on-device LLMs, thereby enabling effective cross-architecture knowledge distillation. By explicitly aligning predictive perspectives, VAA resolves the view-mismatch problem in traditional federated knowledge distillation, which arises from heterogeneity in model architectures and prediction behaviors between on-device LLMs and the global MoE model. Experiments with industry-level MoE models (Qwen-MoE and DeepSeek-MoE) and real-world datasets (medical and finance) demonstrate that DeepFusion achieves performance close to centralized MoE training. Compared with key federated MoE baselines, DeepFusion reduces communication costs by up to 71% and improves token perplexity by up to 5.28%.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14301v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.14301v1",
-      "published": "2026-02-15T20:25:50Z",
-      "updated": "2026-02-15T20:25:50Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "Explainable Interictal Epileptiform Discharge Detection Method Based on Scalp EEG and Retrieval-Augmented Generation",
-      "authors": [
-        "Yu Zhu",
-        "Jiayang Guo",
-        "Jun Jiang",
-        "Peipei Gu",
-        "Xin Shu",
-        "Duo Chen"
-      ],
-      "abstract": "The detection of interictal epileptiform discharge (IED) is crucial for the diagnosis of epilepsy, but automated methods often lack interpretability. This study proposes IED-RAG, an explainable multimodal framework for joint IED detection and report generation. Our approach employs a dual-encoder to extract electrophysiological and semantic features, aligned via contrastive learning in a shared EEG-text embedding space. During inference, clinically relevant EEG-text pairs are retrieved from a vector database as explicit evidence to condition a large language model (LLM) for the generation of evidence-based reports. Evaluated on a private dataset from Wuhan Children's Hospital and the public TUH EEG Events Corpus (TUEV), the framework achieved balanced accuracies of 89.17\\% and 71.38\\%, with BLEU scores of 89.61\\% and 64.14\\%, respectively. The results demonstrate that retrieval of explicit evidence enhances both diagnostic performance and clinical interpretability compared to standard black-box methods.",
-      "pdf_url": "https://arxiv.org/pdf/2602.14170v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.14170v1",
-      "published": "2026-02-15T14:51:26Z",
-      "updated": "2026-02-15T14:51:26Z",
-      "categories": [
-        "eess.SP"
       ]
     }
   ]

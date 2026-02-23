@@ -1,8 +1,51 @@
 {
-  "generated_at_utc": "2026-02-22T02:44:02.507799Z",
+  "generated_at_utc": "2026-02-23T02:44:23.066636Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "3DMedAgent: Unified Perception-to-Understanding for 3D Medical Analysis",
+      "authors": [
+        "Ziyue Wang",
+        "Linghan Cai",
+        "Chang Han Low",
+        "Haofeng Liu",
+        "Junde Wu",
+        "Jingyu Wang",
+        "Rui Wang",
+        "Lei Song",
+        "Jiang Bian",
+        "Jingjing Fu",
+        "Yueming Jin"
+      ],
+      "abstract": "3D CT analysis spans a continuum from low-level perception to high-level clinical understanding. Existing 3D-oriented analysis methods adopt either isolated task-specific modeling or task-agnostic end-to-end paradigms to produce one-hop outputs, impeding the systematic accumulation of perceptual evidence for downstream reasoning. In parallel, recent multimodal large language models (MLLMs) exhibit improved visual perception and can integrate visual and textual information effectively, yet their predominantly 2D-oriented designs fundamentally limit their ability to perceive and analyze volumetric medical data. To bridge this gap, we propose 3DMedAgent, a unified agent that enables 2D MLLMs to perform general 3D CT analysis without 3D-specific fine-tuning. 3DMedAgent coordinates heterogeneous visual and textual tools through a flexible MLLM agent, progressively decomposing complex 3D analysis into tractable subtasks that transition from global to regional views, from 3D volumes to informative 2D slices, and from visual evidence to structured textual representations. Central to this design, 3DMedAgent maintains a long-term structured memory that aggregates intermediate tool outputs and supports query-adaptive, evidence-driven multi-step reasoning. We further introduce the DeepChestVQA benchmark for evaluating unified perception-to-understanding capabilities in 3D thoracic imaging. Experiments across over 40 tasks demonstrate that 3DMedAgent consistently outperforms general, medical, and 3D-specific MLLMs, highlighting a scalable path toward general-purpose 3D clinical assistants.Code and data are available at \\href{https://github.com/jinlab-imvr/3DMedAgent}{https://github.com/jinlab-imvr/3DMedAgent}.",
+      "pdf_url": "https://arxiv.org/pdf/2602.18064v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.18064v1",
+      "published": "2026-02-20T08:31:26Z",
+      "updated": "2026-02-20T08:31:26Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "CUICurate: A GraphRAG-based Framework for Automated Clinical Concept Curation for NLP applications",
+      "authors": [
+        "Victoria Blake",
+        "Mathew Miller",
+        "Jamie Novak",
+        "Sze-yuan Ooi",
+        "Blanca Gallego"
+      ],
+      "abstract": "Background: Clinical named entity recognition tools commonly map free text to Unified Medical Language System (UMLS) Concept Unique Identifiers (CUIs). For many downstream tasks, however, the clinically meaningful unit is not a single CUI but a concept set comprising related synonyms, subtypes, and supertypes. Constructing such concept sets is labour-intensive, inconsistently performed, and poorly supported by existing tools, particularly for NLP pipelines that operate directly on UMLS CUIs. Methods We present CUICurate, a Graph-based retrieval-augmented generation (GraphRAG) framework for automated UMLS concept set curation. A UMLS knowledge graph (KG) was constructed and embedded for semantic retrieval. For each target concept, candidate CUIs were retrieved from the KG, followed by large language model (LLM) filtering and classification steps comparing two LLMs (GPT-5 and GPT-5-mini). The framework was evaluated on five lexically heterogeneous clinical concepts against a manually curated benchmark and gold-standard concept sets. Results Across all concepts, CUICurate produced substantially larger and more complete concept sets than the manual benchmarks whilst matching human precision. Comparisons between the two LLMs found that GPT-5-mini achieved higher recall during filtering, while GPT-5 produced classifications that more closely aligned with clinician judgements. Outputs were stable across repeated runs and computationally inexpensive. Conclusions CUICurate offers a scalable and reproducible approach to support UMLS concept set curation that substantially reduces manual effort. By integrating graph-based retrieval with LLM reasoning, the framework produces focused candidate concept sets that can be adapted to clinical NLP pipelines for different phenotyping and analytic requirements.",
+      "pdf_url": "https://arxiv.org/pdf/2602.17949v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.17949v1",
+      "published": "2026-02-20T03:00:13Z",
+      "updated": "2026-02-20T03:00:13Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Multi-Round Human-AI Collaboration with User-Specified Requirements",
       "authors": [
@@ -251,44 +294,6 @@
       "updated": "2026-02-17T11:21:40Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Improving LLM Reliability through Hybrid Abstention and Adaptive Detection",
-      "authors": [
-        "Ankit Sharma",
-        "Nachiket Tapas",
-        "Jyotiprakash Patra"
-      ],
-      "abstract": "Large Language Models (LLMs) deployed in production environments face a fundamental safety-utility trade-off either a strict filtering mechanisms prevent harmful outputs but often block benign queries or a relaxed controls risk unsafe content generation. Conventional guardrails based on static rules or fixed confidence thresholds are typically context-insensitive and computationally expensive, resulting in high latency and degraded user experience. To address these limitations, we introduce an adaptive abstention system that dynamically adjusts safety thresholds based on real-time contextual signals such as domain and user history. The proposed framework integrates a multi-dimensional detection architecture composed of five parallel detectors, combined through a hierarchical cascade mechanism to optimize both speed and precision. The cascade design reduces unnecessary computation by progressively filtering queries, achieving substantial latency improvements compared to non-cascaded models and external guardrail systems. Extensive evaluation on mixed and domain-specific workloads demonstrates significant reductions in false positives, particularly in sensitive domains such as medical advice and creative writing. The system maintains high safety precision and near-perfect recall under strict operating modes. Overall, our context-aware abstention framework effectively balances safety and utility while preserving performance, offering a scalable solution for reliable LLM deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2602.15391v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.15391v1",
-      "published": "2026-02-17T07:00:09Z",
-      "updated": "2026-02-17T07:00:09Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Resp-Agent: An Agent-Based System for Multimodal Respiratory Sound Generation and Disease Diagnosis",
-      "authors": [
-        "Pengfei Zhang",
-        "Tianxin Xie",
-        "Minghao Yang",
-        "Li Liu"
-      ],
-      "abstract": "Deep learning-based respiratory auscultation is currently hindered by two fundamental challenges: (i) inherent information loss, as converting signals into spectrograms discards transient acoustic events and clinical context; (ii) limited data availability, exacerbated by severe class imbalance. To bridge these gaps, we present Resp-Agent, an autonomous multimodal system orchestrated by a novel Active Adversarial Curriculum Agent (Thinker-A$^2$CA). Unlike static pipelines, Thinker-A$^2$CA serves as a central controller that actively identifies diagnostic weaknesses and schedules targeted synthesis in a closed loop. To address the representation gap, we introduce a Modality-Weaving Diagnoser that weaves EHR data with audio tokens via Strategic Global Attention and sparse audio anchors, capturing both long-range clinical context and millisecond-level transients. To address the data gap, we design a Flow Matching Generator that adapts a text-only Large Language Model (LLM) via modality injection, decoupling pathological content from acoustic style to synthesize hard-to-diagnose samples. As a foundation for these efforts, we introduce Resp-229k, a benchmark corpus of 229k recordings paired with LLM-distilled clinical narratives. Extensive experiments demonstrate that Resp-Agent consistently outperforms prior approaches across diverse evaluation settings, improving diagnostic robustness under data scarcity and long-tailed class imbalance. Our code and data are available at https://github.com/zpforlove/Resp-Agent.",
-      "pdf_url": "https://arxiv.org/pdf/2602.15909v2",
-      "arxiv_url": "https://arxiv.org/abs/2602.15909v2",
-      "published": "2026-02-16T14:48:24Z",
-      "updated": "2026-02-19T13:22:10Z",
-      "categories": [
-        "eess.AS",
-        "cs.AI",
-        "cs.DB",
-        "cs.HC",
-        "cs.MA",
-        "cs.SD"
       ]
     }
   ]

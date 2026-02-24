@@ -1,8 +1,91 @@
 {
-  "generated_at_utc": "2026-02-23T02:44:23.066636Z",
+  "generated_at_utc": "2026-02-24T02:41:41.253331Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "EvalSense: A Framework for Domain-Specific LLM (Meta-)Evaluation",
+      "authors": [
+        "Adam Dejl",
+        "Jonathan Pearson"
+      ],
+      "abstract": "Robust and comprehensive evaluation of large language models (LLMs) is essential for identifying effective LLM system configurations and mitigating risks associated with deploying LLMs in sensitive domains. However, traditional statistical metrics are poorly suited to open-ended generation tasks, leading to growing reliance on LLM-based evaluation methods. These methods, while often more flexible, introduce additional complexity: they depend on carefully chosen models, prompts, parameters, and evaluation strategies, making the evaluation process prone to misconfiguration and bias. In this work, we present EvalSense, a flexible, extensible framework for constructing domain-specific evaluation suites for LLMs. EvalSense provides out-of-the-box support for a broad range of model providers and evaluation strategies, and assists users in selecting and deploying suitable evaluation methods for their specific use-cases. This is achieved through two unique components: (1) an interactive guide aiding users in evaluation method selection and (2) automated meta-evaluation tools that assess the reliability of different evaluation approaches using perturbed data. We demonstrate the effectiveness of EvalSense in a case study involving the generation of clinical notes from unstructured doctor-patient dialogues, using a popular open dataset. All code, documentation, and assets associated with EvalSense are open-source and publicly available at https://github.com/nhsengland/evalsense.",
+      "pdf_url": "https://arxiv.org/pdf/2602.18823v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.18823v1",
+      "published": "2026-02-21T12:50:43Z",
+      "updated": "2026-02-21T12:50:43Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "NutriOrion: A Hierarchical Multi-Agent Framework for Personalized Nutrition Intervention Grounded in Clinical Guidelines",
+      "authors": [
+        "Junwei Wu",
+        "Runze Yan",
+        "Hanqi Luo",
+        "Darren Liu",
+        "Minxiao Wang",
+        "Kimberly L. Townsend",
+        "Lydia S. Hartwig",
+        "Derek Milketinas",
+        "Xiao Hu",
+        "Carl Yang"
+      ],
+      "abstract": "Personalized nutrition intervention for patients with multimorbidity is critical for improving health outcomes, yet remains challenging because it requires the simultaneous integration of heterogeneous clinical conditions, medications, and dietary guidelines. Single-agent large language models (LLMs) often suffer from context overload and attention dilution when processing such high-dimensional patient profiles. We introduce NutriOrion, a hierarchical multi-agent framework with a parallel-then-sequential reasoning topology. NutriOrion decomposes nutrition planning into specialized domain agents with isolated contexts to mitigate anchoring bias, followed by a conditional refinement stage. The framework includes a multi-objective prioritization algorithm to resolve conflicting dietary requirements and a safety constraint mechanism that injects pharmacological contraindications as hard negative constraints during synthesis, ensuring clinical validity by construction rather than post-hoc filtering. For clinical interoperability, NutriOrion maps synthesized insights into the ADIME standard and FHIR R4 resources. Evaluated on 330 stroke patients with multimorbidity, NutriOrion outperforms multiple baselines, including GPT-4.1 and alternative multi-agent architectures. It achieves a 12.1 percent drug-food interaction violation rate, demonstrates strong personalization with negative correlations (-0.26 to -0.35) between patient biomarkers and recommended risk nutrients, and yields clinically meaningful dietary improvements, including a 167 percent increase in fiber and a 27 percent increase in potassium, alongside reductions in sodium (9 percent) and sugars (12 percent).",
+      "pdf_url": "https://arxiv.org/pdf/2602.18650v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.18650v1",
+      "published": "2026-02-20T22:55:29Z",
+      "updated": "2026-02-20T22:55:29Z",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Project Hermes: A Model-Agnostic Validation Layer for Wearable Health Prediction Systems",
+      "authors": [
+        "Richik Chakraborty"
+      ],
+      "abstract": "The deployment of wearable-based health prediction systems has accelerated rapidly, yet these systems face a fundamental challenge: they generate alerts under substantial uncertainty without principled mechanisms for user-specific validation. While large language models (LLMs) have been increasingly applied to healthcare tasks, existing work focuses predominantly on diagnosis generation and risk prediction rather than post-prediction validation of detected signals. We introduce Project Hermes, a model-agnostic validation layer that treats signal confirmation as a sequential decision problem. Hermes operates downstream of arbitrary upstream predictors, using LLM-generated contextual queries to elicit targeted user feedback and performing Bayesian confidence updates to distinguish true positives from false alarms. In a 60-day longitudinal case study of migraine prediction, Hermes achieved a 34% reduction in false positive rate (from 61.7% to 12.5%) while maintaining 89% sensitivity, with mean lead time of 4.2 hours before symptom onset. Critically, Hermes does not perform diagnosis or make novel predictions; it validates whether signals detected by upstream models are clinically meaningful for specific individuals at specific times. This work establishes validation as a first-class computational problem distinct from prediction, with implications for trustworthy deployment of consumer health AI systems.",
+      "pdf_url": "https://arxiv.org/pdf/2602.18643v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.18643v1",
+      "published": "2026-02-20T22:31:26Z",
+      "updated": "2026-02-20T22:31:26Z",
+      "categories": [
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "DP-RFT: Learning to Generate Synthetic Text via Differentially Private Reinforcement Fine-Tuning",
+      "authors": [
+        "Fangyuan Xu",
+        "Sihao Chen",
+        "Zinan Lin",
+        "Taiwei Shi",
+        "Sydney Graham",
+        "Pei Zhou",
+        "Mengting Wan",
+        "Alex Stein",
+        "Virginia Estellers",
+        "Charles Chen",
+        "Morris Sharp",
+        "Richard Speyer",
+        "Tadas Baltrusaitis",
+        "Jennifer Neville",
+        "Eunsol Choi",
+        "Longqi Yang"
+      ],
+      "abstract": "Differentially private (DP) synthetic data generation plays a pivotal role in developing large language models (LLMs) on private data, where data owners cannot provide eyes-on access to individual examples. Generating DP synthetic data typically involves a difficult trade-off. On one hand, DP finetuning methods train an LLM as a synthetic data generator with formal privacy guarantees, yet it still requires the raw content of private examples for model training. However, methods that avoid direct exposure to private data are bounded by an off-the-shelf, un-finetuned model, whose outputs often lack domain fidelity. Can we train an LLM to generate high-quality synthetic text without eyes-on access to individual private examples? In this work, we introduce Differentially Private Reinforcement Fine-Tuning (DP-RFT), an online reinforcement learning algorithm for synthetic data generation with LLMs. DP-RFT leverages DP-protected nearest-neighbor votes from an eyes-off private corpus as a reward signal for on-policy synthetic samples generated by an LLM. The LLM iteratively learns to generate synthetic data to maximize the expected DP votes through Proximal Policy Optimization (PPO). We evaluate DP-RFT for long-form and domain-specific synthetic data generation, such as news articles, meeting transcripts, and medical article abstracts. Our experiments show that DP-RFT closes the gap between private evolution and DP finetuning methods in terms of the fidelity and downstream utility of the generated synthetic data, while respecting the private data boundary.",
+      "pdf_url": "https://arxiv.org/pdf/2602.18633v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.18633v1",
+      "published": "2026-02-20T22:03:56Z",
+      "updated": "2026-02-20T22:03:56Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "3DMedAgent: Unified Perception-to-Understanding for 3D Medical Analysis",
       "authors": [
@@ -219,81 +302,6 @@
       "updated": "2026-02-17T20:55:00Z",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "CAMEL: An ECG Language Model for Forecasting Cardiac Events",
-      "authors": [
-        "Neelay Velingker",
-        "Alaia Solko-Breslin",
-        "Mayank Keoliya",
-        "Seewon Choi",
-        "Jiayi Xin",
-        "Anika Marathe",
-        "Alireza Oraii",
-        "Rajat Deo",
-        "Sameed Khatana",
-        "Rajeev Alur",
-        "Mayur Naik",
-        "Eric Wong"
-      ],
-      "abstract": "Electrocardiograms (ECG) are electrical recordings of the heart that are critical for diagnosing cardiovascular conditions. ECG language models (ELMs) have recently emerged as a promising framework for ECG classification accompanied by report generation. However, current models cannot forecast future cardiac events despite the immense clinical value for planning earlier intervention. To address this gap, we propose CAMEL, the first ELM that is capable of inference over longer signal durations which enables its forecasting capability. Our key insight is a specialized ECG encoder which enables cross-understanding of ECG signals with text. We train CAMEL using established LLM training procedures, combining LoRA adaptation with a curriculum learning pipeline. Our curriculum includes ECG classification, metrics calculations, and multi-turn conversations to elicit reasoning. CAMEL demonstrates strong zero-shot performance across 6 tasks and 9 datasets, including ECGForecastBench, a new benchmark that we introduce for forecasting arrhythmias. CAMEL is on par with or surpasses ELMs and fully supervised baselines both in- and out-of-distribution, achieving SOTA results on ECGBench (+7.0% absolute average gain) as well as ECGForecastBench (+12.4% over fully supervised models and +21.1% over zero-shot ELMs).",
-      "pdf_url": "https://arxiv.org/pdf/2602.15677v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.15677v1",
-      "published": "2026-02-17T16:02:52Z",
-      "updated": "2026-02-17T16:02:52Z",
-      "categories": [
-        "cs.LG",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "LLM-to-Speech: A Synthetic Data Pipeline for Training Dialectal Text-to-Speech Models",
-      "authors": [
-        "Ahmed Khaled Khamis",
-        "Hesham Ali"
-      ],
-      "abstract": "Despite the advances in neural text to speech (TTS), many Arabic dialectal varieties remain marginally addressed, with most resources concentrated on Modern Spoken Arabic (MSA) and Gulf dialects, leaving Egyptian Arabic -- the most widely understood Arabic dialect -- severely under-resourced. We address this gap by introducing NileTTS: 38 hours of transcribed speech from two speakers across diverse domains including medical, sales, and general conversations. We construct this dataset using a novel synthetic pipeline: large language models (LLM) generate Egyptian Arabic content, which is then converted to natural speech using audio synthesis tools, followed by automatic transcription and speaker diarization with manual quality verification. We fine-tune XTTS v2, a state-of-the-art multilingual TTS model, on our dataset and evaluate against the baseline model trained on other Arabic dialects. Our contributions include: (1) the first publicly available Egyptian Arabic TTS dataset, (2) a reproducible synthetic data generation pipeline for dialectal TTS, and (3) an open-source fine-tuned model. All resources are released to advance Egyptian Arabic speech synthesis research.",
-      "pdf_url": "https://arxiv.org/pdf/2602.15675v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.15675v1",
-      "published": "2026-02-17T15:58:27Z",
-      "updated": "2026-02-17T15:58:27Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Concept-Enhanced Multimodal RAG: Towards Interpretable and Accurate Radiology Report Generation",
-      "authors": [
-        "Marco Salm\u00e8",
-        "Federico Siciliano",
-        "Fabrizio Silvestri",
-        "Paolo Soda",
-        "Rosa Sicilia",
-        "Valerio Guarrasi"
-      ],
-      "abstract": "Radiology Report Generation (RRG) through Vision-Language Models (VLMs) promises to reduce documentation burden, improve reporting consistency, and accelerate clinical workflows. However, their clinical adoption remains limited by the lack of interpretability and the tendency to hallucinate findings misaligned with imaging evidence. Existing research typically treats interpretability and accuracy as separate objectives, with concept-based explainability techniques focusing primarily on transparency, while Retrieval-Augmented Generation (RAG) methods targeting factual grounding through external retrieval. We present Concept-Enhanced Multimodal RAG (CEMRAG), a unified framework that decomposes visual representations into interpretable clinical concepts and integrates them with multimodal RAG. This approach exploits enriched contextual prompts for RRG, improving both interpretability and factual accuracy. Experiments on MIMIC-CXR and IU X-Ray across multiple VLM architectures, training regimes, and retrieval configurations demonstrate consistent improvements over both conventional RAG and concept-only baselines on clinical accuracy metrics and standard NLP measures. These results challenge the assumed trade-off between interpretability and performance, showing that transparent visual concepts can enhance rather than compromise diagnostic accuracy in medical VLMs. Our modular design decomposes interpretability into visual transparency and structured language model conditioning, providing a principled pathway toward clinically trustworthy AI-assisted radiology.",
-      "pdf_url": "https://arxiv.org/pdf/2602.15650v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.15650v1",
-      "published": "2026-02-17T15:18:07Z",
-      "updated": "2026-02-17T15:18:07Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Towards Expectation Detection in Language: A Case Study on Treatment Expectations in Reddit",
-      "authors": [
-        "Aswathy Velutharambath",
-        "Amelie W\u00fchrl"
-      ],
-      "abstract": "Patients' expectations towards their treatment have a substantial effect on the treatments' success. While primarily studied in clinical settings, online patient platforms like medical subreddits may hold complementary insights: treatment expectations that patients feel unnecessary or uncomfortable to share elsewhere. Despite this, no studies examine what type of expectations users discuss online and how they express them. Presumably this is because expectations have not been studied in natural language processing (NLP) before. Therefore, we introduce the task of Expectation Detection, arguing that expectations are relevant for many applications, including opinion mining and product design. Subsequently, we present a case study for the medical domain, where expectations are particularly crucial to extract. We contribute RedHOTExpect, a corpus of Reddit posts (4.5K posts) to study expectations in this context. We use a large language model (LLM) to silver-label the data and validate its quality manually (label accuracy ~78%). Based on this, we analyze which linguistic patterns characterize expectations and explore what patients expect and why. We find that optimism and proactive framing are more pronounced in posts about physical or treatment-related illnesses compared to mental-health contexts, and that in our dataset, patients mostly discuss benefits rather than negative outcomes. The RedHOTExpect corpus can be obtained from https://www.ims.uni-stuttgart.de/data/RedHOTExpect",
-      "pdf_url": "https://arxiv.org/pdf/2602.15504v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.15504v1",
-      "published": "2026-02-17T11:21:40Z",
-      "updated": "2026-02-17T11:21:40Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

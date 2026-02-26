@@ -1,8 +1,88 @@
 {
-  "generated_at_utc": "2026-02-25T02:42:12.144457Z",
+  "generated_at_utc": "2026-02-26T02:37:36.336380Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "MEDSYN: Benchmarking Multi-EviDence SYNthesis in Complex Clinical Cases for Multimodal Large Language Models",
+      "authors": [
+        "Boqi Chen",
+        "Xudong Liu",
+        "Jiachuan Peng",
+        "Marianne Frey-Marti",
+        "Bang Zheng",
+        "Kyle Lam",
+        "Lin Li",
+        "Jianing Qiu"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) have shown great potential in medical applications, yet existing benchmarks inadequately capture real-world clinical complexity. We introduce MEDSYN, a multilingual, multimodal benchmark of highly complex clinical cases with up to 7 distinct visual clinical evidence (CE) types per case. Mirroring clinical workflow, we evaluate 18 MLLMs on differential diagnosis (DDx) generation and final diagnosis (FDx) selection. While top models often match or even outperform human experts on DDx generation, all MLLMs exhibit a much larger DDx--FDx performance gap compared to expert clinicians, indicating a failure mode in synthesis of heterogeneous CE types. Ablations attribute this failure to (i) overreliance on less discriminative textual CE ($\\it{e.g.}$, medical history) and (ii) a cross-modal CE utilization gap. We introduce Evidence Sensitivity to quantify the latter and show that a smaller gap correlates with higher diagnostic accuracy. Finally, we demonstrate how it can be used to guide interventions to improve model performance. We will open-source our benchmark and code.",
+      "pdf_url": "https://arxiv.org/pdf/2602.21950v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.21950v1",
+      "published": "2026-02-25T14:33:33Z",
+      "updated": "2026-02-25T14:33:33Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Therapist-Robot-Patient Physical Interaction is Worth a Thousand Words: Enabling Intuitive Therapist Guidance via Remote Haptic Control",
+      "authors": [
+        "Beatrice Luciani",
+        "Alex van den Berg",
+        "Matti Lang",
+        "Alexandre L. Ratschat",
+        "Laura Marchal-Crespo"
+      ],
+      "abstract": "Robotic systems can enhance the amount and repeatability of physically guided motor training. Yet their real-world adoption is limited, partly due to non-intuitive trainer/therapist-trainee/patient interactions. To address this gap, we present a haptic teleoperation system for trainers to remotely guide and monitor the movements of a trainee wearing an arm exoskeleton. The trainer can physically interact with the exoskeleton through a commercial handheld haptic device via virtual contact points at the exoskeleton's elbow and wrist, allowing intuitive guidance. Thirty-two participants tested the system in a trainer-trainee paradigm, comparing our haptic demonstration system with conventional visual demonstration in guiding trainees in executing arm poses. Quantitative analyses showed that haptic demonstration significantly reduced movement completion time and improved smoothness, while speech analysis using large language models for automated transcription and categorization of verbal commands revealed fewer verbal instructions. The haptic demonstration did not result in higher reported mental and physical effort by trainers compared to the visual demonstration, while trainers reported greater competence and trainees lower physical demand. These findings support the feasibility of our proposed interface for effective remote human-robot physical interaction. Future work should assess its usability and efficacy for clinical populations in restoring clinicians' sense of agency during robot-assisted therapy.",
+      "pdf_url": "https://arxiv.org/pdf/2602.21783v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.21783v1",
+      "published": "2026-02-25T11:04:49Z",
+      "updated": "2026-02-25T11:04:49Z",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Multi-dimensional Assessment and Explainable Feedback for Counselor Responses to Client Resistance in Text-based Counseling with LLMs",
+      "authors": [
+        "Anqi Li",
+        "Ruihan Wang",
+        "Zhaoming Chen",
+        "Yuqian Chen",
+        "Yu Lu",
+        "Yi Zhu",
+        "Yuan Xie",
+        "Zhenzhong Lan"
+      ],
+      "abstract": "Effectively addressing client resistance is a sophisticated clinical skill in psychological counseling, yet practitioners often lack timely and scalable supervisory feedback to refine their approaches. Although current NLP research has examined overall counseling quality and general therapeutic skills, it fails to provide granular evaluations of high-stakes moments where clients exhibit resistance. In this work, we present a comprehensive pipeline for the multi-dimensional evaluation of human counselors' interventions specifically targeting client resistance in text-based therapy. We introduce a theory-driven framework that decomposes counselor responses into four distinct communication mechanisms. Leveraging this framework, we curate and share an expert-annotated dataset of real-world counseling excerpts, pairing counselor-client interactions with professional ratings and explanatory rationales. Using this data, we perform full-parameter instruction tuning on a Llama-3.1-8B-Instruct backbone to model fine-grained evaluative judgments of response quality and generate explanations underlying. Experimental results show that our approach can effectively distinguish the quality of different communication mechanisms (77-81% F1), substantially outperforming GPT-4o and Claude-3.5-Sonnet (45-59% F1). Moreover, the model produces high-quality explanations that closely align with expert references and receive near-ceiling ratings from human experts (2.8-2.9/3.0). A controlled experiment with 43 counselors further confirms that receiving these AI-generated feedback significantly improves counselors' ability to respond effectively to client resistance.",
+      "pdf_url": "https://arxiv.org/pdf/2602.21638v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.21638v1",
+      "published": "2026-02-25T07:05:05Z",
+      "updated": "2026-02-25T07:05:05Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "XMorph: Explainable Brain Tumor Analysis Via LLM-Assisted Hybrid Deep Intelligence",
+      "authors": [
+        "Sepehr Salem Ghahfarokhi",
+        "M. Moein Esfahani",
+        "Raj Sunderraman",
+        "Vince Calhoun",
+        "Mohammed Alser"
+      ],
+      "abstract": "Deep learning has significantly advanced automated brain tumor diagnosis, yet clinical adoption remains limited by interpretability and computational constraints. Conventional models often act as opaque ''black boxes'' and fail to quantify the complex, irregular tumor boundaries that characterize malignant growth. To address these challenges, we present XMorph, an explainable and computationally efficient framework for fine-grained classification of three prominent brain tumor types: glioma, meningioma, and pituitary tumors. We propose an Information-Weighted Boundary Normalization (IWBN) mechanism that emphasizes diagnostically relevant boundary regions alongside nonlinear chaotic and clinically validated features, enabling a richer morphological representation of tumor growth. A dual-channel explainable AI module combines GradCAM++ visual cues with LLM-generated textual rationales, translating model reasoning into clinically interpretable insights. The proposed framework achieves a classification accuracy of 96.0%, demonstrating that explainability and high performance can co-exist in AI-based medical imaging systems. The source code and materials for XMorph are all publicly available at: https://github.com/ALSER-Lab/XMorph.",
+      "pdf_url": "https://arxiv.org/pdf/2602.21178v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.21178v1",
+      "published": "2026-02-24T18:28:08Z",
+      "updated": "2026-02-24T18:28:08Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "OptiLeak: Efficient Prompt Reconstruction via Reinforcement Learning in Multi-tenant LLM Services",
       "authors": [
@@ -226,85 +306,6 @@
       "updated": "2026-02-23T01:43:32Z",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Personalized Prediction of Perceived Message Effectiveness Using Large Language Model Based Digital Twins",
-      "authors": [
-        "Jasmin Han",
-        "Janardan Devkota",
-        "Joseph Waring",
-        "Amanda Luken",
-        "Felix Naughton",
-        "Roger Vilardaga",
-        "Jonathan Bricker",
-        "Carl Latkin",
-        "Meghan Moran",
-        "Yiqun Chen",
-        "Johannes Thrul"
-      ],
-      "abstract": "Perceived message effectiveness (PME) by potential intervention end-users is important for selecting and optimizing personalized smoking cessation intervention messages for mobile health (mHealth) platform delivery. This study evaluates whether large language models (LLMs) can accurately predict PME for smoking cessation messages.\n  We evaluated multiple models for predicting PME across three domains: content quality, coping support, and quitting support. The dataset comprised 3010 message ratings (5-point Likert scale) from 301 young adult smokers. We compared (1) supervised learning models trained on labeled data, (2) zero and few-shot LLMs prompted without task-specific fine-tuning, and (3) LLM-based digital twins that incorporate individual characteristics and prior PME histories to generate personalized predictions. Model performance was assessed on three held-out messages per participant using accuracy, Cohen's kappa, and F1.\n  LLM-based digital twins outperformed zero and few-shot LLMs (12 percentage points on average) and supervised baselines (13 percentage points), achieving accuracies of 0.49 (content), 0.45 (coping), and 0.49 (quitting), with directional accuracies of 0.75, 0.66, and 0.70 on a simplified 3-point scale. Digital twin predictions showed greater dispersion across rating categories, indicating improved sensitivity to individual differences.\n  Integrating personal profiles with LLMs captures person-specific differences in PME and outperforms supervised and zero and few-shot approaches. Improved PME prediction may enable more tailored intervention content in mHealth. LLM-based digital twins show potential for supporting personalization of mobile smoking cessation and other health behavior change interventions.",
-      "pdf_url": "https://arxiv.org/pdf/2602.19403v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.19403v1",
-      "published": "2026-02-23T00:32:23Z",
-      "updated": "2026-02-23T00:32:23Z",
-      "categories": [
-        "cs.CL",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "EvalSense: A Framework for Domain-Specific LLM (Meta-)Evaluation",
-      "authors": [
-        "Adam Dejl",
-        "Jonathan Pearson"
-      ],
-      "abstract": "Robust and comprehensive evaluation of large language models (LLMs) is essential for identifying effective LLM system configurations and mitigating risks associated with deploying LLMs in sensitive domains. However, traditional statistical metrics are poorly suited to open-ended generation tasks, leading to growing reliance on LLM-based evaluation methods. These methods, while often more flexible, introduce additional complexity: they depend on carefully chosen models, prompts, parameters, and evaluation strategies, making the evaluation process prone to misconfiguration and bias. In this work, we present EvalSense, a flexible, extensible framework for constructing domain-specific evaluation suites for LLMs. EvalSense provides out-of-the-box support for a broad range of model providers and evaluation strategies, and assists users in selecting and deploying suitable evaluation methods for their specific use-cases. This is achieved through two unique components: (1) an interactive guide aiding users in evaluation method selection and (2) automated meta-evaluation tools that assess the reliability of different evaluation approaches using perturbed data. We demonstrate the effectiveness of EvalSense in a case study involving the generation of clinical notes from unstructured doctor-patient dialogues, using a popular open dataset. All code, documentation, and assets associated with EvalSense are open-source and publicly available at https://github.com/nhsengland/evalsense.",
-      "pdf_url": "https://arxiv.org/pdf/2602.18823v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.18823v1",
-      "published": "2026-02-21T12:50:43Z",
-      "updated": "2026-02-21T12:50:43Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "NutriOrion: A Hierarchical Multi-Agent Framework for Personalized Nutrition Intervention Grounded in Clinical Guidelines",
-      "authors": [
-        "Junwei Wu",
-        "Runze Yan",
-        "Hanqi Luo",
-        "Darren Liu",
-        "Minxiao Wang",
-        "Kimberly L. Townsend",
-        "Lydia S. Hartwig",
-        "Derek Milketinas",
-        "Xiao Hu",
-        "Carl Yang"
-      ],
-      "abstract": "Personalized nutrition intervention for patients with multimorbidity is critical for improving health outcomes, yet remains challenging because it requires the simultaneous integration of heterogeneous clinical conditions, medications, and dietary guidelines. Single-agent large language models (LLMs) often suffer from context overload and attention dilution when processing such high-dimensional patient profiles. We introduce NutriOrion, a hierarchical multi-agent framework with a parallel-then-sequential reasoning topology. NutriOrion decomposes nutrition planning into specialized domain agents with isolated contexts to mitigate anchoring bias, followed by a conditional refinement stage. The framework includes a multi-objective prioritization algorithm to resolve conflicting dietary requirements and a safety constraint mechanism that injects pharmacological contraindications as hard negative constraints during synthesis, ensuring clinical validity by construction rather than post-hoc filtering. For clinical interoperability, NutriOrion maps synthesized insights into the ADIME standard and FHIR R4 resources. Evaluated on 330 stroke patients with multimorbidity, NutriOrion outperforms multiple baselines, including GPT-4.1 and alternative multi-agent architectures. It achieves a 12.1 percent drug-food interaction violation rate, demonstrates strong personalization with negative correlations (-0.26 to -0.35) between patient biomarkers and recommended risk nutrients, and yields clinically meaningful dietary improvements, including a 167 percent increase in fiber and a 27 percent increase in potassium, alongside reductions in sodium (9 percent) and sugars (12 percent).",
-      "pdf_url": "https://arxiv.org/pdf/2602.18650v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.18650v1",
-      "published": "2026-02-20T22:55:29Z",
-      "updated": "2026-02-20T22:55:29Z",
-      "categories": [
-        "cs.MA",
-        "cs.AI",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Project Hermes: A Model-Agnostic Validation Layer for Wearable Health Prediction Systems",
-      "authors": [
-        "Richik Chakraborty"
-      ],
-      "abstract": "The deployment of wearable-based health prediction systems has accelerated rapidly, yet these systems face a fundamental challenge: they generate alerts under substantial uncertainty without principled mechanisms for user-specific validation. While large language models (LLMs) have been increasingly applied to healthcare tasks, existing work focuses predominantly on diagnosis generation and risk prediction rather than post-prediction validation of detected signals. We introduce Project Hermes, a model-agnostic validation layer that treats signal confirmation as a sequential decision problem. Hermes operates downstream of arbitrary upstream predictors, using LLM-generated contextual queries to elicit targeted user feedback and performing Bayesian confidence updates to distinguish true positives from false alarms. In a 60-day longitudinal case study of migraine prediction, Hermes achieved a 34% reduction in false positive rate (from 61.7% to 12.5%) while maintaining 89% sensitivity, with mean lead time of 4.2 hours before symptom onset. Critically, Hermes does not perform diagnosis or make novel predictions; it validates whether signals detected by upstream models are clinically meaningful for specific individuals at specific times. This work establishes validation as a first-class computational problem distinct from prediction, with implications for trustworthy deployment of consumer health AI systems.",
-      "pdf_url": "https://arxiv.org/pdf/2602.18643v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.18643v1",
-      "published": "2026-02-20T22:31:26Z",
-      "updated": "2026-02-20T22:31:26Z",
-      "categories": [
-        "q-bio.QM"
       ]
     }
   ]

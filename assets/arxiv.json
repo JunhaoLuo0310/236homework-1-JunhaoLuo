@@ -1,8 +1,65 @@
 {
-  "generated_at_utc": "2026-02-27T02:36:02.927781Z",
+  "generated_at_utc": "2026-02-28T02:25:55.222409Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "MediX-R1: Open Ended Medical Reinforcement Learning",
+      "authors": [
+        "Sahal Shaji Mullappilly",
+        "Mohammed Irfan Kurpath",
+        "Omair Mohamed",
+        "Mohamed Zidan",
+        "Fahad Khan",
+        "Salman Khan",
+        "Rao Anwer",
+        "Hisham Cholakkal"
+      ],
+      "abstract": "We introduce MediX-R1, an open-ended Reinforcement Learning (RL) framework for medical multimodal large language models (MLLMs) that enables clinically grounded, free-form answers beyond multiple-choice formats. MediX-R1 fine-tunes a baseline vision-language backbone with Group Based RL and a composite reward tailored for medical reasoning: an LLM-based accuracy reward that judges semantic correctness with a strict YES/NO decision, a medical embedding-based semantic reward to capture paraphrases and terminology variants, and lightweight format and modality rewards that enforce interpretable reasoning and modality recognition. This multi-signal design provides stable, informative feedback for open-ended outputs where traditional verifiable or MCQ-only rewards fall short. To measure progress, we propose a unified evaluation framework for both text-only and image+text tasks that uses a Reference-based LLM-as-judge in place of brittle string-overlap metrics, capturing semantic correctness, reasoning, and contextual alignment. Despite using only $\\sim51$K instruction examples, MediX-R1 achieves excellent results across standard medical LLM (text-only) and VLM (image + text) benchmarks, outperforming strong open-source baselines and delivering particularly large gains on open-ended clinical tasks. Our results demonstrate that open-ended RL with comprehensive reward signals and LLM-based evaluation is a practical path toward reliable medical reasoning in multimodal models. Our trained models, curated datasets and source code are available at https://medix.cvmbzuai.com",
+      "pdf_url": "https://arxiv.org/pdf/2602.23363v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23363v1",
+      "published": "2026-02-26T18:59:46Z",
+      "updated": "2026-02-26T18:59:46Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "PRIMA: Pre-training with Risk-integrated Image-Metadata Alignment for Medical Diagnosis via LLM",
+      "authors": [
+        "Yiqing Wang",
+        "Chunming He",
+        "Ming-Chen Lu",
+        "Mercy Pawar",
+        "Leslie Niziol",
+        "Maria Woodward",
+        "Sina Farsiu"
+      ],
+      "abstract": "Medical diagnosis requires the effective synthesis of visual manifestations and clinical metadata. However, existing methods often treat metadata as isolated tags, failing to exploit the rich semantic knowledge embedded in clinical descriptions. We propose PRIMA (Pre-training with Risk-integrated Image-Metadata Alignment), a framework that integrates domain-specific knowledge into multi-modal representation learning. We first curate an expert corpus of risk-disease correlations via Retrieval-Augmented Generation (RAG) to refine Clinical ModernBERT, embedding diagnostic priors into the text encoder. To bridge the modality gap, we introduce a dual-encoder pre-training strategy utilizing DINOv3 and our refined BERT, optimized by a suite of four complementary loss functions. These losses are designed to capture multi-granular semantic alignment and handle the ambiguity of clinical correlations through soft labels. Finally, we leverage Qwen-3 to fuse these aligned features for precise disease classification. Extensive experiments demonstrate that PRIMA effectively harmonizes pixel-level features with abstract clinical expertise, significantly outperforming other state-of-the-art methods. Notably, our framework achieves superior robustness without the need for massive data collection or exhaustive computational resources. Our code will be made public upon acceptance.",
+      "pdf_url": "https://arxiv.org/pdf/2602.23297v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23297v1",
+      "published": "2026-02-26T18:07:52Z",
+      "updated": "2026-02-26T18:07:52Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "CXReasonAgent: Evidence-Grounded Diagnostic Reasoning Agent for Chest X-rays",
+      "authors": [
+        "Hyungyung Lee",
+        "Hangyul Yoon",
+        "Edward Choi"
+      ],
+      "abstract": "Chest X-ray plays a central role in thoracic diagnosis, and its interpretation inherently requires multi-step, evidence-grounded reasoning. However, large vision-language models (LVLMs) often generate plausible responses that are not faithfully grounded in diagnostic evidence and provide limited visual evidence for verification, while also requiring costly retraining to support new diagnostic tasks, limiting their reliability and adaptability in clinical settings. To address these limitations, we present CXReasonAgent, a diagnostic agent that integrates a large language model (LLM) with clinically grounded diagnostic tools to perform evidence-grounded diagnostic reasoning using image-derived diagnostic and visual evidence. To evaluate these capabilities, we introduce CXReasonDial, a multi-turn dialogue benchmark with 1,946 dialogues across 12 diagnostic tasks, and show that CXReasonAgent produces faithfully grounded responses, enabling more reliable and verifiable diagnostic reasoning than LVLMs. These findings highlight the importance of integrating clinically grounded diagnostic tools, particularly in safety-critical clinical settings.",
+      "pdf_url": "https://arxiv.org/pdf/2602.23276v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23276v1",
+      "published": "2026-02-26T17:51:21Z",
+      "updated": "2026-02-26T17:51:21Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Agency and Architectural Limits: Why Optimization-Based Systems Cannot Be Norm-Responsive",
       "authors": [
@@ -215,68 +272,6 @@
         "cs.CL",
         "cs.HC",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "MEDSYN: Benchmarking Multi-EviDence SYNthesis in Complex Clinical Cases for Multimodal Large Language Models",
-      "authors": [
-        "Boqi Chen",
-        "Xudong Liu",
-        "Jiachuan Peng",
-        "Marianne Frey-Marti",
-        "Bang Zheng",
-        "Kyle Lam",
-        "Lin Li",
-        "Jianing Qiu"
-      ],
-      "abstract": "Multimodal large language models (MLLMs) have shown great potential in medical applications, yet existing benchmarks inadequately capture real-world clinical complexity. We introduce MEDSYN, a multilingual, multimodal benchmark of highly complex clinical cases with up to 7 distinct visual clinical evidence (CE) types per case. Mirroring clinical workflow, we evaluate 18 MLLMs on differential diagnosis (DDx) generation and final diagnosis (FDx) selection. While top models often match or even outperform human experts on DDx generation, all MLLMs exhibit a much larger DDx--FDx performance gap compared to expert clinicians, indicating a failure mode in synthesis of heterogeneous CE types. Ablations attribute this failure to (i) overreliance on less discriminative textual CE ($\\it{e.g.}$, medical history) and (ii) a cross-modal CE utilization gap. We introduce Evidence Sensitivity to quantify the latter and show that a smaller gap correlates with higher diagnostic accuracy. Finally, we demonstrate how it can be used to guide interventions to improve model performance. We will open-source our benchmark and code.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21950v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.21950v1",
-      "published": "2026-02-25T14:33:33Z",
-      "updated": "2026-02-25T14:33:33Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Therapist-Robot-Patient Physical Interaction is Worth a Thousand Words: Enabling Intuitive Therapist Guidance via Remote Haptic Control",
-      "authors": [
-        "Beatrice Luciani",
-        "Alex van den Berg",
-        "Matti Lang",
-        "Alexandre L. Ratschat",
-        "Laura Marchal-Crespo"
-      ],
-      "abstract": "Robotic systems can enhance the amount and repeatability of physically guided motor training. Yet their real-world adoption is limited, partly due to non-intuitive trainer/therapist-trainee/patient interactions. To address this gap, we present a haptic teleoperation system for trainers to remotely guide and monitor the movements of a trainee wearing an arm exoskeleton. The trainer can physically interact with the exoskeleton through a commercial handheld haptic device via virtual contact points at the exoskeleton's elbow and wrist, allowing intuitive guidance. Thirty-two participants tested the system in a trainer-trainee paradigm, comparing our haptic demonstration system with conventional visual demonstration in guiding trainees in executing arm poses. Quantitative analyses showed that haptic demonstration significantly reduced movement completion time and improved smoothness, while speech analysis using large language models for automated transcription and categorization of verbal commands revealed fewer verbal instructions. The haptic demonstration did not result in higher reported mental and physical effort by trainers compared to the visual demonstration, while trainers reported greater competence and trainees lower physical demand. These findings support the feasibility of our proposed interface for effective remote human-robot physical interaction. Future work should assess its usability and efficacy for clinical populations in restoring clinicians' sense of agency during robot-assisted therapy.",
-      "pdf_url": "https://arxiv.org/pdf/2602.21783v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.21783v1",
-      "published": "2026-02-25T11:04:49Z",
-      "updated": "2026-02-25T11:04:49Z",
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Integrating Machine Learning Ensembles and Large Language Models for Heart Disease Prediction Using Voting Fusion",
-      "authors": [
-        "Md. Tahsin Amin",
-        "Tanim Ahmmod",
-        "Zannatul Ferdus",
-        "Talukder Naemul Hasan Naem",
-        "Ehsanul Ferdous",
-        "Arpita Bhattacharjee",
-        "Ishmam Ahmed Solaiman",
-        "Nahiyan Bin Noor"
-      ],
-      "abstract": "Cardiovascular disease is the primary cause of death globally, necessitating early identification, precise risk classification, and dependable decision-support technologies. The advent of large language models (LLMs) provides new zero-shot and few-shot reasoning capabilities, even though machine learning (ML) algorithms, especially ensemble approaches like Random Forest, XGBoost, LightGBM, and CatBoost, are excellent at modeling complex, non-linear patient data and routinely beat logistic regression. This research predicts cardiovascular disease using a merged dataset of 1,190 patient records, comparing traditional machine learning models (95.78% accuracy, ROC-AUC 0.96) with open-source large language models via OpenRouter APIs. Finally, a hybrid fusion of the ML ensemble and LLM reasoning under Gemini 2.5 Flash achieved the best results (96.62% accuracy, 0.97 AUC), showing that LLMs (78.9 % accuracy) work best when combined with ML models rather than used alone. Results show that ML ensembles achieved the highest performance (95.78% accuracy, ROC-AUC 0.96), while LLMs performed moderately in zero-shot (78.9%) and slightly better in few-shot (72.6%) settings. The proposed hybrid method enhanced the strength in uncertain situations, illustrating that ensemble ML is considered the best structured tabular prediction case, but it can be integrated with hybrid ML-LLM systems to provide a minor increase and open the way to more reliable clinical decision-support tools.",
-      "pdf_url": "https://arxiv.org/pdf/2602.22280v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.22280v1",
-      "published": "2026-02-25T10:53:57Z",
-      "updated": "2026-02-25T10:53:57Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
       ]
     }
   ]

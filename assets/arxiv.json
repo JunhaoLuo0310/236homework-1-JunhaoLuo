@@ -1,8 +1,65 @@
 {
-  "generated_at_utc": "2026-03-01T02:51:15.064215Z",
+  "generated_at_utc": "2026-03-02T02:39:15.707076Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Suppressing Prior-Comparison Hallucinations in Radiology Report Generation via Semantically Decoupled Latent Steering",
+      "authors": [
+        "Ao Li",
+        "Rui Liu",
+        "Mingjie Li",
+        "Sheng Liu",
+        "Lei Wang",
+        "Xiaodan Liang",
+        "Lina Yao",
+        "Xiaojun Chang",
+        "Lei Xing"
+      ],
+      "abstract": "Automated radiology report generation using vision-language models (VLMs) is limited by the risk of prior-comparison hallucination, where the model generates historical findings unsupported by the current study. We address this challenge with a training-free, inference-time control framework termed Semantically Decoupled Latent Steering (SDLS). Unlike generic activation steering, which often suffers from semantic entanglement, our approach constructs a semantic-free intervention vector via large language model (LLM)-driven semantic decomposition followed by $QR$-based orthogonalization. This orthogonalization step is critical. It leverages geometric constraints to filter out the clinical semantics often entangled in standard principal component analysis (PCA) directions, ensuring that the steering vector targets only the ``historical comparison\" axis. We validate our method on the BiomedGPT foundation model, demonstrating that it overcomes the trade-off between hallucination suppression and clinical accuracy. Extensive experiments on MIMIC-CXR, and zero-shot transfer evaluation on CheXpert Plus and IU-Xray, demonstrate the robustness of our approach. Quantitative evaluations on MIMIC-CXR show that our approach significantly reduces the probability of historical hallucinations (FilBERT score decreases from 0.2373 to 0.1889) and improves clinical label fidelity (CheXpert macro-F1 increases from 0.2242 to 0.3208). Supplementary evaluations confirm that the structural integrity of the clinical narrative is maintained.",
+      "pdf_url": "https://arxiv.org/pdf/2602.23676v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23676v1",
+      "published": "2026-02-27T04:49:01Z",
+      "updated": "2026-02-27T04:49:01Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Automated Extraction of Unstructured Post-SBRT Toxicity Data from Radiology Reports Using Large Language Models",
+      "authors": [
+        "Justin Pijanowski",
+        "Yakout Mezgueldi",
+        "Alan Lee",
+        "Drew Moghanaki",
+        "Ricky R. Savjani",
+        "James Lamb"
+      ],
+      "abstract": "We evaluated the viability of using a Large Language Model (LLM) to extract patient-specific specific toxicity and progression outcomes from unstructured radiology reports. We retrospectively extracted 160 follow-up CT and PET/CT electronic medical record notes for patients treated with lung stereotactic body radiotherapy (SBRT) at our institution from January 2017 through December 2023. Using the Llama 3.3-70-B-Instruct LLM, we engineered prompts to extract four clinical endpoints from each radiology report: locoregional progression, distant progression, radiation-induced fibrosis, and radiation-induced rib fractures. Progression endpoints were classified as yes, no, or maybe, while fibrosis and rib fractures were binary (yes or no). Ground truth labels were defined using two-grader consensus for the 60-note training set, used for prompt development, and a three-grader majority vote for the 100-note test set. LLM performance was evaluated using sensitivity, specificity, and accuracy. As detailed by our evaluation metrics, the strong performance of our methods demonstrates the viability of using prompt-engineered LLMs to extract radiation-toxicities and progression classification from radiology reports.",
+      "pdf_url": "https://arxiv.org/pdf/2602.23492v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23492v1",
+      "published": "2026-02-26T20:54:29Z",
+      "updated": "2026-02-26T20:54:29Z",
+      "categories": [
+        "physics.med-ph"
+      ]
+    },
+    {
+      "title": "FHIRPath-QA: Executable Question Answering over FHIR Electronic Health Records",
+      "authors": [
+        "Michael Frew",
+        "Nishit Bheda",
+        "Bryan Tripp"
+      ],
+      "abstract": "Though patients are increasingly granted digital access to their electronic health records (EHRs), existing interfaces may not support precise, trustworthy answers to patient-specific questions. Large language models (LLM) show promise in clinical question answering (QA), but retrieval-based approaches are computationally inefficient, prone to hallucination, and difficult to deploy over real-life EHRs. In this work, we introduce FHIRPath-QA, the first open dataset and benchmark for patient-specific QA that includes open-standard FHIRPath queries over real-world clinical data. We propose a text-to-FHIRPath QA paradigm that shifts reasoning from free-text generation to FHIRPath query synthesis, significantly reducing LLM usage. Built on MIMIC-IV on FHIR Demo, the dataset pairs over 14k natural language questions in patient and clinician phrasing with validated FHIRPath queries and answers. Further, we demonstrate that state-of-the-art LLMs struggle to deal with ambiguity in patient language and perform poorly in FHIRPath query synthesis. However, they benefit strongly from supervised fine-tuning. Our results highlight that text-to-FHIRPath synthesis has the potential to serve as a practical foundation for safe, efficient, and interoperable consumer health applications, and our dataset and benchmark serve as a starting point for future research on the topic. The full dataset and generation code is available at: https://github.com/mooshifrew/fhirpath-qa.",
+      "pdf_url": "https://arxiv.org/pdf/2602.23479v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23479v1",
+      "published": "2026-02-26T20:14:21Z",
+      "updated": "2026-02-26T20:14:21Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "MediX-R1: Open Ended Medical Reinforcement Learning",
       "authors": [
@@ -214,64 +271,6 @@
       "categories": [
         "cs.AI",
         "cs.DB"
-      ]
-    },
-    {
-      "title": "TabDLM: Free-Form Tabular Data Generation via Joint Numerical-Language Diffusion",
-      "authors": [
-        "Donghong Cai",
-        "Jiarui Feng",
-        "Yanbo Wang",
-        "Da Zheng",
-        "Yixin Chen",
-        "Muhan Zhang"
-      ],
-      "abstract": "Synthetic tabular data generation has attracted growing attention due to its importance for data augmentation, foundation models, and privacy. However, real-world tabular datasets increasingly contain free-form text fields (e.g., reviews or clinical notes) alongside structured numerical and categorical attributes. Generating such heterogeneous tables with joint modeling of different modalities remains challenging. Existing approaches broadly fall into two categories: diffusion-based methods and LLM-based methods. Diffusion models can capture complex dependencies over numerical and categorical features in continuous or discrete spaces, but extending them to open-ended text is nontrivial and often leads to degraded text quality. In contrast, LLM-based generators naturally produce fluent text, yet their discrete tokenization can distort precise or wide-range numerical values, hindering accurate modeling of both numbers and language. In this work, we propose TabDLM, a unified framework for free-form tabular data generation via a joint numerical--language diffusion model built on masked diffusion language models (MDLMs). TabDLM models textual and categorical features through masked diffusion, while modeling numerical features with a continuous diffusion process through learned specialized numeric tokens embedding; bidirectional attention then captures cross-modality interactions within a single model. Extensive experiments on diverse benchmarks demonstrate the effectiveness of TabDLM compared to strong diffusion- and LLM-based baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2602.22586v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.22586v1",
-      "published": "2026-02-26T03:41:49Z",
-      "updated": "2026-02-26T03:41:49Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Importance of Prompt Optimisation for Error Detection in Medical Notes Using Language Models",
-      "authors": [
-        "Craig Myles",
-        "Patrick Schrempf",
-        "David Harris-Birtill"
-      ],
-      "abstract": "Errors in medical text can cause delays or even result in incorrect treatment for patients. Recently, language models have shown promise in their ability to automatically detect errors in medical text, an ability that has the opportunity to significantly benefit healthcare systems. In this paper, we explore the importance of prompt optimisation for small and large language models when applied to the task of error detection. We perform rigorous experiments and analysis across frontier language models and open-source language models. We show that automatic prompt optimisation with Genetic-Pareto (GEPA) improves error detection over the baseline accuracy performance from 0.669 to 0.785 with GPT-5 and 0.578 to 0.690 with Qwen3-32B, approaching the performance of medical doctors and achieving state-of-the-art performance on the MEDEC benchmark dataset. Code available on GitHub: https://github.com/CraigMyles/clinical-note-error-detection",
-      "pdf_url": "https://arxiv.org/pdf/2602.22483v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.22483v1",
-      "published": "2026-02-25T23:46:49Z",
-      "updated": "2026-02-25T23:46:49Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Dynamic Personality Adaptation in Large Language Models via State Machines",
-      "authors": [
-        "Leon Pielage",
-        "Ole H\u00e4tscher",
-        "Mitja Back",
-        "Bernhard Marschall",
-        "Benjamin Risse"
-      ],
-      "abstract": "The inability of Large Language Models (LLMs) to modulate their personality expression in response to evolving dialogue dynamics hinders their performance in complex, interactive contexts. We propose a model-agnostic framework for dynamic personality simulation that employs state machines to represent latent personality states, where transition probabilities are dynamically adapted to the conversational context. Part of our architecture is a modular pipeline for continuous personality scoring that evaluates dialogues along latent axes while remaining agnostic to the specific personality models, their dimensions, transition mechanisms, or LLMs used. These scores function as dynamic state variables that systematically reconfigure the system prompt, steering behavioral alignment throughout the interaction.We evaluate this framework by operationalizing the Interpersonal Circumplex (IPC) in a medical education setting. Results demonstrate that the system successfully adapts its personality state to user inputs, but also influences user behavior, thereby facilitating de-escalation training. Notably, the scoring pipeline maintains comparable precision even when utilizing lightweight, fine-tuned classifiers instead of large-scale LLMs. This work demonstrates the feasibility of modular, personality-adaptive architectures for education, customer support, and broader human-computer interaction.",
-      "pdf_url": "https://arxiv.org/pdf/2602.22157v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.22157v1",
-      "published": "2026-02-25T18:05:11Z",
-      "updated": "2026-02-25T18:05:11Z",
-      "categories": [
-        "cs.CL",
-        "cs.HC",
-        "cs.LG"
       ]
     }
   ]

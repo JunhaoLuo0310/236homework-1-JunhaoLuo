@@ -1,8 +1,117 @@
 {
-  "generated_at_utc": "2026-03-02T02:39:15.707076Z",
+  "generated_at_utc": "2026-03-03T02:41:56.973280Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Structure Matters: Evaluating Multi-Agents Orchestration in Generative Therapeutic Chatbots",
+      "authors": [
+        "Sina Elahimanesh",
+        "Mohammadali Mohammadkhani",
+        "Sara Zahedi Movahed",
+        "Mohammadmahdi Abootorabi",
+        "Shayan Salehi",
+        "Abbas Edalat"
+      ],
+      "abstract": "While large language models (LLMs) excel at open-ended dialogue, effective psychotherapy requires structured progression and adherence to clinical protocols, making the design of psychotherapist chatbots challenging. We investigate how different LLM-based designs shape perceived therapeutic dialogue in a chatbot grounded in the Self-Attachment Technique (SAT), a novel self-administered psychotherapy rooted in attachment theory. We compare three architectural variants: (1) a multi-agent system utilizing finite state machine aligned with therapeutic stages and a shared long-term memory, (2) a single-agent using identical knowledge-base and the same prompts, and (3) an unguided LLM. In an eight-day randomized controlled trial (RCT) with N=66 Farsi-speaking participants, balanced across the three chatbots, the multi-agent system is perceived as significantly more natural and human-like than the other variants and achieves higher ratings across most other metrics. These findings demonstrate that for therapeutic AI, architectural orchestration is as critical as prompt engineering in fostering natural, engaging dialogue.",
+      "pdf_url": "https://arxiv.org/pdf/2603.00774v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.00774v1",
+      "published": "2026-02-28T18:39:19Z",
+      "updated": "2026-02-28T18:39:19Z",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "MED-COPILOT: A Medical Assistant Powered by GraphRAG and Similar Patient Case Retrieval",
+      "authors": [
+        "Shuheng Chen",
+        "Namratha Patil",
+        "Haonan Pan",
+        "Angel Hsing-Chi Hwang",
+        "Yao Du",
+        "Ruishan Liu",
+        "Jieyu Zhao"
+      ],
+      "abstract": "Clinical decision-making requires synthesizing heterogeneous evidence, including patient histories, clinical guidelines, and trajectories of comparable cases. While large language models (LLMs) offer strong reasoning capabilities, they remain prone to hallucinations and struggle to integrate long, structured medical documents. We present MED-COPILOT, an interactive clinical decision-support system designed for clinicians and medical trainees, which combines guideline-grounded GraphRAG retrieval with hybrid semantic-keyword similar-patient retrieval to support transparent and evidence-aware clinical reasoning. The system builds a structured knowledge graph from WHO and NICE guidelines, applies community-level summarization for efficient retrieval, and maintains a 36,000-case similar-patient database derived from SOAP-normalized MIMIC-IV notes and Synthea-generated records.\n  We evaluate our framework on clinical note completion and medical question answering, and demonstrate that it consistently outperforms parametric LLM baselines and standard RAG, improving both generation fidelity and clinical reasoning accuracy. The full system is available at https://huggingface.co/spaces/Cryo3978/Med_GraphRAG , enabling users to inspect retrieved evidence, visualize token-level similarity contributions, and conduct guided follow-up analysis. Our results demonstrate a practical and interpretable approach to integrating structured guideline knowledge with patient-level analogical evidence for clinical LLMs.",
+      "pdf_url": "https://arxiv.org/pdf/2603.00460v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.00460v1",
+      "published": "2026-02-28T04:32:03Z",
+      "updated": "2026-02-28T04:32:03Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LLM-Bootstrapped Targeted Finding Guidance for Factual MLLM-based Medical Report Generation",
+      "authors": [
+        "Cunyuan Yang",
+        "Dejuan Song",
+        "Xiaotao Pang",
+        "Qianqian Shen",
+        "Wenjie Nie",
+        "Yifan Huang",
+        "Lei Wu",
+        "Wei Han",
+        "Haishuai Wang",
+        "Jiajun Bu"
+      ],
+      "abstract": "The automatic generation of medical reports utilizing Multimodal Large Language Models (MLLMs) frequently encounters challenges related to factual instability, which may manifest as the omission of findings or the incorporation of inaccurate information, thereby constraining their applicability in clinical settings. Current methodologies typically produce reports based directly on image features, which inherently lack a definitive factual basis. In response to this limitation, we introduce Fact-Flow, an innovative framework that separates the process of visual fact identification from the generation of reports. This is achieved by initially predicting clinical findings from the image, which subsequently directs the MLLM to produce a report that is factually precise. A pivotal advancement of our approach is a pipeline that leverages a Large Language Model (LLM) to autonomously create a dataset of labeled medical findings, effectively eliminating the need for expensive manual annotation. Extensive experimental evaluations conducted on two disease-focused medical datasets validate the efficacy of our method, demonstrating a significant enhancement in factual accuracy compared to state-of-the-art models, while concurrently preserving high standards of text quality.",
+      "pdf_url": "https://arxiv.org/pdf/2603.00426v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.00426v1",
+      "published": "2026-02-28T02:50:20Z",
+      "updated": "2026-02-28T02:50:20Z",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "When Metrics Disagree: Automatic Similarity vs. LLM-as-a-Judge for Clinical Dialogue Evaluation",
+      "authors": [
+        "Bian Sun",
+        "Zhenjian Wang",
+        "Orvill de la Torre",
+        "Zirui Wang"
+      ],
+      "abstract": "This paper details the baseline model selection, fine-tuning process, evaluation methods, and the implications of deploying more accurate LLMs in healthcare settings. As large language models (LLMs) are increasingly employed to address diverse problems, including medical queries, concerns about their reliability have surfaced. A recent study by Long Island University highlighted that LLMs often perform poorly in medical contexts, potentially leading to harmful misguidance for users. To address this, our research focuses on fine-tuning the Llama 2 7B, a transformer-based, decoder-only model, using transcripts from real patient-doctor interactions. Our objective was to enhance the model's accuracy and precision in responding to medical queries. We fine-tuned the model using a supervised approach, emphasizing domain-specific nuances captured in the training data. In the best scenario, the model results should be reviewed and evaluated by real medical experts. Due to resource constraints, the performance of the fine-tuned model was evaluated using text similarity metrics. The fine-tuned model demonstrated significant improvements across all key dimensions except GPT-4's evaluation. The evaluations of ChatGPT4 are quite different from the quantitative results; here, we not only suggest, but also propose that the result should be evaluated by human medical experts.",
+      "pdf_url": "https://arxiv.org/pdf/2603.00314v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.00314v1",
+      "published": "2026-02-27T21:09:43Z",
+      "updated": "2026-02-27T21:09:43Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "How Well Do Multimodal Models Reason on ECG Signals?",
+      "authors": [
+        "Maxwell A. Xu",
+        "Harish Haresumadram",
+        "Catherine W. Liu",
+        "Patrick Langer",
+        "Jathurshan Pradeepkumar",
+        "Wanting Mao",
+        "Sunita J. Ferns",
+        "Aradhana Verma",
+        "Jimeng Sun",
+        "Paul Schmiedmayer",
+        "Xin Liu",
+        "Daniel McDuff",
+        "Emily B. Fox",
+        "James M. Rehg"
+      ],
+      "abstract": "While multimodal large language models offer a promising solution to the \"black box\" nature of health AI by generating interpretable reasoning traces, verifying the validity of these traces remains a critical challenge. Existing evaluation methods are either unscalable, relying on manual clinician review, or superficial, utilizing proxy metrics (e.g. QA) that fail to capture the semantic correctness of clinical logic. In this work, we introduce a reproducible framework for evaluating reasoning in ECG signals. We propose decomposing reasoning into two distinct, components: (i) Perception, the accurate identification of patterns within the raw signal, and (ii) Deduction, the logical application of domain knowledge to those patterns. To evaluate Perception, we employ an agentic framework that generates code to empirically verify the temporal structures described in the reasoning trace. To evaluate Deduction, we measure the alignment of the model's logic against a structured database of established clinical criteria in a retrieval-based approach. This dual-verification method enables the scalable assessment of \"true\" reasoning capabilities.",
+      "pdf_url": "https://arxiv.org/pdf/2603.00312v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.00312v1",
+      "published": "2026-02-27T21:04:12Z",
+      "updated": "2026-02-27T21:04:12Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Suppressing Prior-Comparison Hallucinations in Radiology Report Generation via Semantically Decoupled Latent Steering",
       "authors": [
@@ -179,98 +288,6 @@
       "updated": "2026-02-26T14:49:11Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Managing Uncertainty in LLM-based Multi-Agent System Operation",
-      "authors": [
-        "Man Zhang",
-        "Tao Yue",
-        "Yihua He"
-      ],
-      "abstract": "Applying LLM-based multi-agent software systems in safety-critical domains such as lifespan echocardiography introduces system-level risks that cannot be addressed by improving model accuracy alone. During system operation, beyond individual LLM behavior, uncertainty propagates through agent coordination, data pipelines, human-in-the-loop interaction, and runtime control logic. Yet existing work largely treats uncertainty at the model level rather than as a first-class software engineering concern. This paper approaches uncertainty from both system-level and runtime perspectives. We first differentiate epistemological and ontological uncertainties in the context of LLM-based multi-agent software system operation. Building on this foundation, we propose a lifecycle-based uncertainty management framework comprising four mechanisms: representation, identification, evolution, and adaptation. The uncertainty lifecycle governs how uncertainties emerge, transform, and are mitigated across architectural layers and execution phases, enabling structured runtime governance and controlled adaptation. We demonstrate the feasibility of the framework using a real-world LLM-based multi-agent echocardiographic software system developed in clinical collaboration, showing improved reliability and diagnosability in diagnostic reasoning. The proposed approach generalizes to other safety-critical LLM-based multi-agent software systems, supporting principled operational control and runtime assurance beyond model-centric methods.",
-      "pdf_url": "https://arxiv.org/pdf/2602.23005v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.23005v1",
-      "published": "2026-02-26T13:49:16Z",
-      "updated": "2026-02-26T13:49:16Z",
-      "categories": [
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "Modeling Expert AI Diagnostic Alignment via Immutable Inference Snapshots",
-      "authors": [
-        "Dimitrios P. Panagoulias",
-        "Evangelia-Aikaterini Tsichrintzi",
-        "Georgios Savvidis",
-        "Evridiki Tsoureli-Nikita"
-      ],
-      "abstract": "Human-in-the-loop validation is essential in safety-critical clinical AI, yet the transition between initial model inference and expert correction is rarely analyzed as a structured signal. We introduce a diagnostic alignment framework in which the AI-generated image based report is preserved as an immutable inference state and systematically compared with the physician-validated outcome. The inference pipeline integrates a vision-enabled large language model, BERT- based medical entity extraction, and a Sequential Language Model Inference (SLMI) step to enforce domain-consistent refinement prior to expert review. Evaluation on 21 dermatological cases (21 complete AI physician pairs) em- ployed a four-level concordance framework comprising exact primary match rate (PMR), semantic similarity-adjusted rate (AMR), cross-category alignment, and Comprehensive Concordance Rate (CCR). Exact agreement reached 71.4% and remained unchanged under semantic similarity (t = 0.60), while structured cross-category and differential overlap analysis yielded 100% comprehensive concordance (95% CI: [83.9%, 100%]). No cases demonstrated complete diagnostic divergence. These findings show that binary lexical evaluation substantially un- derestimates clinically meaningful alignment. Modeling expert validation as a structured transformation enables signal-aware quantification of correction dynamics and supports traceable, human aligned evaluation of image based clinical decision support systems.",
-      "pdf_url": "https://arxiv.org/pdf/2602.22973v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.22973v1",
-      "published": "2026-02-26T13:11:58Z",
-      "updated": "2026-02-26T13:11:58Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Can Agents Distinguish Visually Hard-to-Separate Diseases in a Zero-Shot Setting? A Pilot Study",
-      "authors": [
-        "Zihao Zhao",
-        "Frederik Hauke",
-        "Juliana De Castilhos",
-        "Sven Nebelung",
-        "Daniel Truhn"
-      ],
-      "abstract": "The rapid progress of multimodal large language models (MLLMs) has led to increasing interest in agent-based systems. While most prior work in medical imaging concentrates on automating routine clinical workflows, we study an underexplored yet clinically significant setting: distinguishing visually hard-to-separate diseases in a zero-shot setting. We benchmark representative agents on two imaging-only proxy diagnostic tasks, (1) melanoma vs. atypical nevus and (2) pulmonary edema vs. pneumonia, where visual features are highly confounded despite substantial differences in clinical management. We introduce a multi-agent framework based on contrastive adjudication. Experimental results show improved diagnostic performance (an 11-percentage-point gain in accuracy on dermoscopy data) and reduced unsupported claims on qualitative samples, although overall performance remains insufficient for clinical deployment. We acknowledge the inherent uncertainty in human annotations and the absence of clinical context, which further limit the translation to real-world settings. Within this controlled setting, this pilot study provides preliminary insights into zero-shot agent performance in visually confounded scenarios.",
-      "pdf_url": "https://arxiv.org/pdf/2602.22959v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.22959v1",
-      "published": "2026-02-26T12:53:50Z",
-      "updated": "2026-02-26T12:53:50Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "TCM-DiffRAG: Personalized Syndrome Differentiation Reasoning Method for Traditional Chinese Medicine based on Knowledge Graph and Chain of Thought",
-      "authors": [
-        "Jianmin Li",
-        "Ying Chang",
-        "Su-Kit Tang",
-        "Yujia Liu",
-        "Yanwen Wang",
-        "Shuyuan Lin",
-        "Binkai Ou"
-      ],
-      "abstract": "Background: Retrieval augmented generation (RAG) technology can empower large language models (LLMs) to generate more accurate, professional, and timely responses without fine tuning. However, due to the complex reasoning processes and substantial individual differences involved in traditional Chinese medicine (TCM) clinical diagnosis and treatment, traditional RAG methods often exhibit poor performance in this domain. Objective: To address the limitations of conventional RAG approaches in TCM applications, this study aims to develop an improved RAG framework tailored to the characteristics of TCM reasoning. Methods: We developed TCM-DiffRAG, an innovative RAG framework that integrates knowledge graphs (KG) with chains of thought (CoT). TCM-DiffRAG was evaluated on three distinctive TCM test datasets. Results: The experimental results demonstrated that TCM-DiffRAG achieved significant performance improvements over native LLMs. For example, the qwen-plus model achieved scores of 0.927, 0.361, and 0.038, which were significantly enhanced to 0.952, 0.788, and 0.356 with TCM-DiffRAG. The improvements were even more pronounced for non-Chinese LLMs. Additionally, TCM-DiffRAG outperformed directly supervised fine-tuned (SFT) LLMs and other benchmark RAG methods. Conclusions: TCM-DiffRAG shows that integrating structured TCM knowledge graphs with Chain of Thought based reasoning substantially improves performance in individualized diagnostic tasks. The joint use of universal and personalized knowledge graphs enables effective alignment between general knowledge and clinical reasoning. These results highlight the potential of reasoning-aware RAG frameworks for advancing LLM applications in traditional Chinese medicine.",
-      "pdf_url": "https://arxiv.org/pdf/2602.22828v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.22828v1",
-      "published": "2026-02-26T10:11:15Z",
-      "updated": "2026-02-26T10:11:15Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "ClinDet-Bench: Beyond Abstention, Evaluating Judgment Determinability of LLMs in Clinical Decision-Making",
-      "authors": [
-        "Yusuke Watanabe",
-        "Yohei Kobashi",
-        "Takeshi Kojima",
-        "Yusuke Iwasawa",
-        "Yasushi Okuno",
-        "Yutaka Matsuo"
-      ],
-      "abstract": "Clinical decisions are often required under incomplete information. Clinical experts must identify whether available information is sufficient for judgment, as both premature conclusion and unnecessary abstention can compromise patient safety. To evaluate this capability of large language models (LLMs), we developed ClinDet-Bench, a benchmark based on clinical scoring systems that decomposes incomplete-information scenarios into determinable and undeterminable conditions. Identifying determinability requires considering all hypotheses about missing information, including unlikely ones, and verifying whether the conclusion holds across them. We find that recent LLMs fail to identify determinability under incomplete information, producing both premature judgments and excessive abstention, despite correctly explaining the underlying scoring knowledge and performing well under complete information. These findings suggest that existing benchmarks are insufficient to evaluate the safety of LLMs in clinical settings. ClinDet-Bench provides a framework for evaluating determinability recognition, leading to appropriate abstention, with potential applicability to medicine and other high-stakes domains, and is publicly available.",
-      "pdf_url": "https://arxiv.org/pdf/2602.22771v1",
-      "arxiv_url": "https://arxiv.org/abs/2602.22771v1",
-      "published": "2026-02-26T09:03:41Z",
-      "updated": "2026-02-26T09:03:41Z",
-      "categories": [
-        "cs.AI",
-        "cs.DB"
       ]
     }
   ]

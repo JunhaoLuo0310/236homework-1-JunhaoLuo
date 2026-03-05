@@ -1,8 +1,121 @@
 {
-  "generated_at_utc": "2026-03-04T02:34:04.422475Z",
+  "generated_at_utc": "2026-03-05T02:37:16.117689Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Who Judges the Judge? Evaluating LLM-as-a-Judge for French Medical open-ended QA",
+      "authors": [
+        "Ikram Belmadani",
+        "Oumaima El Khettari",
+        "Pac\u00f4me Constant dit Beaufils",
+        "Richard Dufour",
+        "Benoit Favre"
+      ],
+      "abstract": "Automatic evaluation of medical open-ended question answering (OEQA) remains challenging due to the need for expert annotations. We evaluate whether large language models (LLMs) can act as judges of semantic equivalence in French medical OEQA, comparing closed-access, general-purpose, and biomedical domain-adapted models. Our results show that LLM-based judgments are strongly influenced by the model that generated the answer, with agreement varying substantially across generators. Domain-adapted and large general-purpose models achieve the highest alignment with expert annotations. We further show that lightweight adaptation of a compact model using supervised fine-tuning (SFT) and Group Relative Policy Optimization (GRPO) substantially improves performance and reduces generator sensitivity, even with limited data. Overall, our findings highlight the need for generator-aware evaluation and suggest that carefully adapted small models can support scalable evaluation in low-resource medical settings.",
+      "pdf_url": "https://arxiv.org/pdf/2603.04033v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.04033v1",
+      "published": "2026-03-04T13:12:30Z",
+      "updated": "2026-03-04T13:12:30Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Coupling Local Context and Global Semantic Prototypes via a Hierarchical Architecture for Rhetorical Roles Labeling",
+      "authors": [
+        "Anas Belfathi",
+        "Nicolas Hernandez",
+        "Laura Monceaux",
+        "Warren Bonnard",
+        "Mary Catherine Lavissiere",
+        "Christine Jacquin",
+        "Richard Dufour"
+      ],
+      "abstract": "Rhetorical Role Labeling (RRL) identifies the functional role of each sentence in a document, a key task for discourse understanding in domains such as law and medicine. While hierarchical models capture local dependencies effectively, they are limited in modeling global, corpus-level features. To address this limitation, we propose two prototype-based methods that integrate local context with global representations. Prototype-Based Regularization (PBR) learns soft prototypes through a distance-based auxiliary loss to structure the latent space, while Prototype-Conditioned Modulation (PCM) constructs corpus-level prototypes and injects them during training and inference. Given the scarcity of RRL resources, we introduce SCOTUS-Law, the first dataset of U.S. Supreme Court opinions annotated with rhetorical roles at three levels of granularity: category, rhetorical function, and step. Experiments on legal, medical, and scientific benchmarks show consistent improvements over strong baselines, with 4 Macro-F1 gains on low-frequency roles. We further analyze the implications in the era of Large Language Models and complement our findings with expert evaluation.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03856v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.03856v1",
+      "published": "2026-03-04T09:05:24Z",
+      "updated": "2026-03-04T09:05:24Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Benchmarking Motivational Interviewing Competence of Large Language Models",
+      "authors": [
+        "Aishwariya Jha",
+        "Prakrithi Shivaprakash",
+        "Lekhansh Shukla",
+        "Animesh Mukherjee",
+        "Prabhat Chand",
+        "Pratima Murthy"
+      ],
+      "abstract": "Motivational interviewing (MI) promotes behavioural change in substance use disorders. Its fidelity is measured using the Motivational Interviewing Treatment Integrity (MITI) framework. While large language models (LLMs) can potentially generate MI-consistent therapist responses, their competence using MITI is not well-researched, especially in real world clinical transcripts. We aim to benchmark MI competence of proprietary and open-source models compared to human therapists in real-world transcripts and assess distinguishability from human therapists. Methods: We shortlisted 3 proprietary and 7 open-source LLMs from LMArena, evaluated performance using MITI 4.2 framework on two datasets (96 handcrafted model transcripts, 34 real-world clinical transcripts). We generated parallel LLM-therapist utterances iteratively for each transcript while keeping client responses static, and ranked performance using a composite ranking system with MITI components and verbosity. We conducted a distinguishability experiment with two independent psychiatrists to identify human-vs-LLM responses. Results: All 10 tested LLMs had fair (MITI global scores >3.5) to good (MITI global scores >4) competence across MITI measures, and three best-performing models (gemma-3-27b-it, gemini-2.5-pro, grok-3) were tested on real-world transcripts. All showed good competence, with LLMs outperforming human-expert in Complex Reflection percentage (39% vs 96%) and Reflection-Question ratio (1.2 vs >2.8). In the distinguishability experiment, psychiatrists identified LLM responses with only 56% accuracy, with d-prime: 0.17 and 0.25 for gemini-2.5-pro and gemma-3-27b-it respectively. Conclusion: LLMs can achieve good MI proficiency in real-world clinical transcripts using MITI framework. These findings suggest that even open-source LLMs are viable candidates for expanding MI counselling sessions in low-resource settings.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03846v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.03846v1",
+      "published": "2026-03-04T08:56:37Z",
+      "updated": "2026-03-04T08:56:37Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "MIND: Unified Inquiry and Diagnosis RL with Criteria Grounded Clinical Supports for Psychiatric Consultation",
+      "authors": [
+        "Guoyi Li",
+        "Shihao Xu",
+        "Jiatong Ma",
+        "Yunyun Han",
+        "Jianhua Chen",
+        "Yafeng Deng"
+      ],
+      "abstract": "Large language models (LLMs) have advanced medical dialogue systems, yet psychiatric consultation poses substantially higher demands due to subjective ambiguity and comorbidity complexity: an agent must continuously extract psychopathological cues from incomplete and inconsistent patient reports in multi-turn interactions and perform rigorous differential diagnostic reasoning. However, existing methods face two fundamental challenges. First, without criteria-grounded clinical supports, they are prone to unsupported clinical assertions when symptoms are atypical or underspecified. Second, in multi-turn interactions, they struggle to mitigate inquiry drift (off-topic or low-yield questioning) and optimize questioning strategies. To address these challenges, we propose MIND, a unified inquiry--diagnosis reinforcement learning framework for psychiatric consultation. Specifically, we build a Criteria-Grounded Psychiatric Reasoning Bank (PRB) that summarizes dialogue context into clinical retrieval states, retrieves semantically similar reference consultations, and distills reusable criteria-grounded clinical supports to guide criteria-aligned inquiry and reasoning. Building on this foundation, MIND enforces explicit clinical reasoning with rubric-based process rewards to provide fine-grained supervision over intermediate decision steps, and incorporates a value-aware trajectory rectification mechanism to jointly improve information acquisition and diagnostic decision-making across turns. Extensive experiments demonstrate that MIND consistently outperforms strong baselines in diagnostic accuracy, empathetic interaction quality, interpretability, and generalization.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03677v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.03677v1",
+      "published": "2026-03-04T03:05:38Z",
+      "updated": "2026-03-04T03:05:38Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "RAG-X: Systematic Diagnosis of Retrieval-Augmented Generation for Medical Question Answering",
+      "authors": [
+        "Aswini Sivakumar",
+        "Vijayan Sugumaran",
+        "Yao Qiang"
+      ],
+      "abstract": "Automated question-answering (QA) systems increasingly rely on retrieval-augmented generation (RAG) to ground large language models (LLMs) in authoritative medical knowledge, ensuring clinical accuracy and patient safety in Artificial Intelligence (AI) applications for healthcare. Despite progress in RAG evaluation, current benchmarks focus only on simple multiple-choice QA tasks and employ metrics that poorly capture the semantic precision required for complex QA tasks. These approaches fail to diagnose whether an error stems from faulty retrieval or flawed generation, limiting developers from performing targeted improvement. To address this gap, we propose RAG-X, a diagnostic framework that evaluates the retriever and generator independently across a triad of QA tasks: information extraction, short-answer generation, and multiple-choice question (MCQ) answering. RAG-X introduces Context Utilization Efficiency (CUE) metrics to disaggregate system success into interpretable quadrants, isolating verified grounding from deceptive accuracy. Our experiments reveal an ``Accuracy Fallacy\", where a 14\\% gap separates perceived system success from evidence-based grounding. By surfacing hidden failure modes, RAG-X offers the diagnostic transparency needed for safe and verifiable clinical RAG systems.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03541v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.03541v1",
+      "published": "2026-03-03T21:55:42Z",
+      "updated": "2026-03-03T21:55:42Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "The PARLO Dementia Corpus: A German Multi-Center Resource for Alzheimer's Disease",
+      "authors": [
+        "Franziska Braun",
+        "Christopher Witzl",
+        "Florian H\u00f6nig",
+        "Elmar N\u00f6th",
+        "Tobias Bocklet",
+        "Korbinian Riedhammer"
+      ],
+      "abstract": "Early and accessible detection of Alzheimer's disease (AD) remains a major challenge, as current diagnostic methods often rely on costly and invasive biomarkers. Speech and language analysis has emerged as a promising non-invasive and scalable approach to detecting cognitive impairment, but research in this area is hindered by the lack of publicly available datasets, especially for languages other than English. This paper introduces the PARLO Dementia Corpus (PDC), a new multi-center, clinically validated German resource for AD collected across nine academic memory clinics in Germany. The dataset comprises speech recordings from individuals with AD-related mild cognitive impairment and mild to moderate dementia, as well as cognitively healthy controls. Speech was elicited using a standardized test battery of eight neuropsychological tasks, including confrontation naming, verbal fluency, word repetition, picture description, story reading, and recall tasks. In addition to audio recordings, the dataset includes manually verified transcriptions and detailed demographic, clinical, and biomarker metadata. Baseline experiments on ASR benchmarking, automated test evaluation, and LLM-based classification illustrate the feasibility of automatic, speech-based cognitive assessment and highlight the diagnostic value of recall-driven speech production. The PDC thus establishes the first publicly available German benchmark for multi-modal and cross-lingual research on neurodegenerative diseases.",
+      "pdf_url": "https://arxiv.org/pdf/2603.03471v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.03471v1",
+      "published": "2026-03-03T19:31:59Z",
+      "updated": "2026-03-03T19:31:59Z",
+      "categories": [
+        "eess.AS"
+      ]
+    },
     {
       "title": "PrivMedChat: End-to-End Differentially Private RLHF for Medical Dialogue Systems",
       "authors": [
@@ -198,120 +311,6 @@
       "updated": "2026-03-02T00:50:39Z",
       "categories": [
         "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Linking Knowledge to Care: Knowledge Graph-Augmented Medical Follow-Up Question Generation",
-      "authors": [
-        "Liwen Sun",
-        "Xiang Yu",
-        "Ming Tan",
-        "Zhuohao Chen",
-        "Anqi Cheng",
-        "Ashutosh Joshi",
-        "Chenyan Xiong"
-      ],
-      "abstract": "Clinical diagnosis is time-consuming, requiring intensive interactions between patients and medical professionals. While large language models (LLMs) could ease the pre-diagnostic workload, their limited domain knowledge hinders effective medical question generation. We introduce a Knowledge Graph-augmented LLM with active in-context learning to generate relevant and important follow-up questions, KG-Followup, serving as a critical module for the pre-diagnostic assessment. The structured medical domain knowledge graph serves as a seamless patch-up to provide professional domain expertise upon which the LLM can reason. Experiments demonstrate that KG-Followup outperforms state-of-the-art methods by 5% - 8% on relevant benchmarks in recall.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01252v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.01252v1",
-      "published": "2026-03-01T20:13:09Z",
-      "updated": "2026-03-01T20:13:09Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "TARSE: Test-Time Adaptation via Retrieval of Skills and Experience for Reasoning Agents",
-      "authors": [
-        "Junda Wang",
-        "Zonghai Tao",
-        "Hansi Zeng",
-        "Zhichao Yang",
-        "Hamed Zamani",
-        "Hong Yu"
-      ],
-      "abstract": "Complex clinical decision making often fails not because a model lacks facts, but because it cannot reliably select and apply the right procedural knowledge and the right prior example at the right reasoning step. We frame clinical question answering as an agent problem with two explicit, retrievable resources: skills, reusable clinical procedures such as guidelines, protocols, and pharmacologic mechanisms; and experience, verified reasoning trajectories from previously solved cases (e.g., chain-of-thought solutions and their step-level decompositions). At test time, the agent retrieves both relevant skills and experiences from curated libraries and performs lightweight test-time adaptation to align the language model's intermediate reasoning with clinically valid logic. Concretely, we build (i) a skills library from guideline-style documents organized as executable decision rules, (ii) an experience library of exemplar clinical reasoning chains indexed by step-level transitions, and (iii) a step-aware retriever that selects the most useful skill and experience items for the current case. We then adapt the model on the retrieved items to reduce instance-step misalignment and to prevent reasoning from drifting toward unsupported shortcuts. Experiments on medical question-answering benchmarks show consistent gains over strong medical RAG baselines and prompting-only reasoning methods. Our results suggest that explicitly separating and retrieving clinical skills and experience, and then aligning the model at test time, is a practical approach to more reliable medical agents.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01241v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.01241v1",
-      "published": "2026-03-01T19:31:23Z",
-      "updated": "2026-03-01T19:31:23Z",
-      "categories": [
-        "cs.IR",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Contextual Invertible World Models: A Neuro-Symbolic Agentic Framework for Colorectal Cancer Drug Response",
-      "authors": [
-        "Christopher Baker",
-        "Karen Rafferty",
-        "Hui Wang"
-      ],
-      "abstract": "Precision oncology is currently limited by the small-N, large-P paradox, where high-dimensional genomic data is abundant, but high-quality drug response samples are often sparse. While deep learning models achieve high predictive accuracy, they remain black boxes that fail to provide the causal mechanisms required for clinical decision-making. We present a Neuro-Symbolic Agentic Framework that bridges this gap by integrating a quantitative machine learning World Model with an LLM-based agentic reasoning layer. Our system utilises a forensic data pipeline built on the Sanger GDSC dataset (N=83), achieving a robust predictive correlation (r=0.504) and a significant performance gain through the explicit modelling of clinical context, specifically Microsatellite Instability (MSI) status. We introduce the concept of Inverse Reasoning, where the agentic layer performs in silico CRISPR perturbations to predict how specific genomic edits, such as APC or TP53 repair, alter drug sensitivity. By distinguishing between therapeutic opportunity and contextual resistance, and validating these findings against human clinical data (p=0.023), our framework provides a transparent, biologically grounded path towards explainable AI in cancer research.",
-      "pdf_url": "https://arxiv.org/pdf/2603.02274v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.02274v1",
-      "published": "2026-03-01T16:15:58Z",
-      "updated": "2026-03-01T16:15:58Z",
-      "categories": [
-        "q-bio.QM",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "RAG-RUSS: A Retrieval-Augmented Robotic Ultrasound for Autonomous Carotid Examination",
-      "authors": [
-        "Dianye Huang",
-        "Ziping Cong",
-        "Nassir Navab",
-        "Zhongliang Jiang"
-      ],
-      "abstract": "Robotic ultrasound (US) has recently attracted increasing attention as a means to overcome the limitations of conventional US examinations, such as the strong operator dependence. However, the decision-making process of existing methods is often either rule-based or relies on end-to-end learning models that operate as black boxes. This has been seen as a main limit for clinical acceptance and raises safety concerns for widespread adoption in routine practice. To tackle this challenge, we introduce the RAG-RUSS, an interpretable framework capable of performing a full carotid examination in accordance with the clinical workflow while explicitly explaining both the current stage and the next planned action. Furthermore, given the scarcity of medical data, we incorporate retrieval-augmented generation to enhance generalization and reduce dependence on large-scale training datasets. The method was trained on data acquired from 28 volunteers, while an additional four volumetric scans recorded from previously unseen volunteers were reserved for testing. The results demonstrate that the method can explain the current scanning stage and autonomously plan probe motions to complete the carotid examination, encompassing both transverse and longitudinal planes.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01153v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.01153v1",
-      "published": "2026-03-01T15:37:44Z",
-      "updated": "2026-03-01T15:37:44Z",
-      "categories": [
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "FCN-LLM: Empower LLM for Brain Functional Connectivity Network Understanding via Graph-level Multi-task Instruction Tuning",
-      "authors": [
-        "Xingcan Hu",
-        "Wei Wang",
-        "Li Xiao"
-      ],
-      "abstract": "Large Language Models have achieved remarkable success in language understanding and reasoning, and their multimodal extensions enable comprehension of images, video, and audio. Inspired by this, foundation models for brain functional connectivity networks derived from resting-state fMRI have shown promise in clinical tasks. However, existing methods do not align FCNs with the text modality, limiting the ability of LLMs to directly understand FCNs. To address this, we propose FCN-LLM, a framework that enables LLMs to understand FCNs through graph-level, multi-task instruction tuning. Our approach employs a multi-scale FCN encoder capturing brain-region, functional subnetwork, and whole-brain features, projecting them into the semantic space of LLM. We design multi-paradigm instruction tasks covering 19 subject-specific attributes across demographics, phenotypes, and psychiatric conditions. A multi-stage learning strategy first aligns FCN embeddings with the LLM and then jointly fine-tunes the entire model to capture high-level semantic information. Experiments on a large-scale, multi-site FCN database show that FCN-LLM achieves strong zero-shot generalization on unseen datasets, outperforming conventional supervised and foundation models. This work introduces a new paradigm for integrating brain functional networks with LLMs, offering a flexible and interpretable framework for neuroscience.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01135v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.01135v1",
-      "published": "2026-03-01T14:33:08Z",
-      "updated": "2026-03-01T14:33:08Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MedCollab: Causal-Driven Multi-Agent Collaboration for Full-Cycle Clinical Diagnosis via IBIS-Structured Argumentation",
-      "authors": [
-        "Yuqi Zhan",
-        "Xinyue Wu",
-        "Tianyu Lin",
-        "Yutong Bao",
-        "Xiaoyu Wang",
-        "Weihao Cheng",
-        "Huangwei Chen",
-        "Feiwei Qin",
-        "Zhu Zhu"
-      ],
-      "abstract": "Large language models (LLMs) have shown promise in healthcare applications, however, their use in clinical practice is still limited by diagnostic hallucinations and insufficiently interpretable reasoning. We present MedCollab, a novel multi-agent framework that emulates the hierarchical consultation workflow of modern hospitals to autonomously navigate the full-cycle diagnostic process. The framework incorporates a dynamic specialist recruitment mechanism that adaptively assembles clinical and examination agents according to patient-specific symptoms and examination results. To ensure the rigor of clinical work, we adopt a structured Issue-Based Information System (IBIS) argumentation protocol that requires agents to provide ``Positions'' backed by traceable evidence from medical knowledge and clinical data. Furthermore, the framework constructs a Hierarchical Disease Causal Chain that transforms flattened diagnostic predictions into a structured model of pathological progression through explicit logical operators. A multi-round Consensus Mechanism iteratively filters low-quality reasoning through logic auditing and weighted voting. Evaluated on real-world clinical datasets, MedCollab significantly outperforms pure LLMs and medical multi-agent systems in Accuracy and RaTEScore, demonstrating a marked reduction in medical hallucinations. These findings indicate that MedCollab provides an extensible, transparent, and clinically compliant approach to medical decision-making.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01131v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.01131v1",
-      "published": "2026-03-01T14:25:58Z",
-      "updated": "2026-03-01T14:25:58Z",
-      "categories": [
-        "cs.MA",
         "cs.AI"
       ]
     }

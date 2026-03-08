@@ -1,8 +1,111 @@
 {
-  "generated_at_utc": "2026-03-05T02:37:16.117689Z",
+  "generated_at_utc": "2026-03-08T02:41:14.807570Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Med-V1: Small Language Models for Zero-shot and Scalable Biomedical Evidence Attribution",
+      "authors": [
+        "Qiao Jin",
+        "Yin Fang",
+        "Lauren He",
+        "Yifan Yang",
+        "Guangzhi Xiong",
+        "Zhizheng Wang",
+        "Nicholas Wan",
+        "Joey Chan",
+        "Donald C. Comeau",
+        "Robert Leaman",
+        "Charalampos S. Floudas",
+        "Aidong Zhang",
+        "Michael F. Chiang",
+        "Yifan Peng",
+        "Zhiyong Lu"
+      ],
+      "abstract": "Assessing whether an article supports an assertion is essential for hallucination detection and claim verification. While large language models (LLMs) have the potential to automate this task, achieving strong performance requires frontier models such as GPT-5 that are prohibitively expensive to deploy at scale. To efficiently perform biomedical evidence attribution, we present Med-V1, a family of small language models with only three billion parameters. Trained on high-quality synthetic data newly developed in this study, Med-V1 substantially outperforms (+27.0% to +71.3%) its base models on five biomedical benchmarks unified into a verification format. Despite its smaller size, Med-V1 performs comparably to frontier LLMs such as GPT-5, along with high-quality explanations for its predictions. We use Med-V1 to conduct a first-of-its-kind use case study that quantifies hallucinations in LLM-generated answers under different citation instructions. Results show that the format instruction strongly affects citation validity and hallucination, with GPT-5 generating more claims but exhibiting hallucination rates similar to GPT-4o. Additionally, we present a second use case showing that Med-V1 can automatically identify high-stakes evidence misattributions in clinical practice guidelines, revealing potentially negative public health impacts that are otherwise challenging to identify at scale. Overall, Med-V1 provides an efficient and accurate lightweight alternative to frontier LLMs for practical and real-world applications in biomedical evidence attribution and verification tasks. Med-V1 is available at https://github.com/ncbi-nlp/Med-V1.",
+      "pdf_url": "https://arxiv.org/pdf/2603.05308v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.05308v1",
+      "published": "2026-03-05T15:48:43Z",
+      "updated": "2026-03-05T15:48:43Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "MedCoRAG: Interpretable Hepatology Diagnosis via Hybrid Evidence Retrieval and Multispecialty Consensus",
+      "authors": [
+        "Zheng Li",
+        "Jiayi Xu",
+        "Zhikai Hu",
+        "Hechang Chen",
+        "Lele Cong",
+        "Yunyun Wang",
+        "Shuchao Pang"
+      ],
+      "abstract": "Diagnosing hepatic diseases accurately and interpretably is critical, yet it remains challenging in real-world clinical settings. Existing AI approaches for clinical diagnosis often lack transparency, structured reasoning, and deployability. Recent efforts have leveraged large language models (LLMs), retrieval-augmented generation (RAG), and multi-agent collaboration. However, these approaches typically retrieve evidence from a single source and fail to support iterative, role-specialized deliberation grounded in structured clinical data. To address this, we propose MedCoRAG (i.e., Medical Collaborative RAG), an end-to-end framework that generates diagnostic hypotheses from standardized abnormal findings and constructs a patient-specific evidence package by jointly retrieving and pruning UMLS knowledge graph paths and clinical guidelines. It then performs Multi-Agent Collaborative Reasoning: a Router Agent dynamically dispatches Specialist Agents based on case complexity; these agents iteratively reason over the evidence and trigger targeted re-retrievals when needed, while a Generalist Agent synthesizes all deliberations into a traceable consensus diagnosis that emulates multidisciplinary consultation. Experimental results on hepatic disease cases from MIMIC-IV show that MedCoRAG outperforms existing methods and closed-source models in both diagnostic performance and reasoning interpretability.",
+      "pdf_url": "https://arxiv.org/pdf/2603.05129v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.05129v1",
+      "published": "2026-03-05T12:58:45Z",
+      "updated": "2026-03-05T12:58:45Z",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "BioLLMAgent: A Hybrid Framework with Enhanced Structural Interpretability for Simulating Human Decision-Making in Computational Psychiatry",
+      "authors": [
+        "Zuo Fei",
+        "Kezhi Wang",
+        "Xiaomin Chen",
+        "Yizhou Huang"
+      ],
+      "abstract": "Computational psychiatry faces a fundamental trade-off: traditional reinforcement learning (RL) models offer interpretability but lack behavioral realism, while large language model (LLM) agents generate realistic behaviors but lack structural interpretability. We introduce BioLLMAgent, a novel hybrid framework that combines validated cognitive models with the generative capabilities of LLMs. The framework comprises three core components: (i) an Internal RL Engine for experience-driven value learning; (ii) an External LLM Shell for high-level cognitive strategies and therapeutic interventions; and (iii) a Decision Fusion Mechanism for integrating components via weighted utility. Comprehensive experiments on the Iowa Gambling Task (IGT) across six clinical and healthy datasets demonstrate that BioLLMAgent accurately reproduces human behavioral patterns while maintaining excellent parameter identifiability (correlations $>0.67$). Furthermore, the framework successfully simulates cognitive behavioral therapy (CBT) principles and reveals, through multi-agent dynamics, that community-wide educational interventions may outperform individual treatments. Validated across reward-punishment learning and temporal discounting tasks, BioLLMAgent provides a structurally interpretable \"computational sandbox\" for testing mechanistic hypotheses and intervention strategies in psychiatric research.",
+      "pdf_url": "https://arxiv.org/pdf/2603.05016v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.05016v1",
+      "published": "2026-03-05T10:04:24Z",
+      "updated": "2026-03-05T10:04:24Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "CONE: Embeddings for Complex Numerical Data Preserving Unit and Variable Semantics",
+      "authors": [
+        "Gyanendra Shrestha",
+        "Anna Pyayt",
+        "Michael Gubanov"
+      ],
+      "abstract": "Large pre-trained models (LMs) and Large Language Models (LLMs) are typically effective at capturing language semantics and contextual relationships. However, these models encounter challenges in maintaining optimal performance on tasks involving numbers. Blindly treating numerical or structured data as terms is inadequate -- their semantics must be well understood and encoded by the models. In this paper, we propose CONE, a hybrid transformer encoder pre-trained model that encodes numbers, ranges, and gaussians into an embedding vector space preserving distance. We introduce a novel composite embedding construction algorithm that integrates numerical values, ranges or gaussians together with their associated units and attribute names to precisely capture their intricate semantics. We conduct extensive experimental evaluation on large-scale datasets across diverse domains (web, medical, finance, and government) that justifies CONE's strong numerical reasoning capabilities, achieving an F1 score of 87.28% on DROP, a remarkable improvement of up to 9.37% in F1 over state-of-the-art (SOTA) baselines, and outperforming major SOTA models with a significant Recall@10 gain of up to 25%.",
+      "pdf_url": "https://arxiv.org/pdf/2603.04741v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.04741v1",
+      "published": "2026-03-05T02:26:36Z",
+      "updated": "2026-03-05T02:26:36Z",
+      "categories": [
+        "cs.AI",
+        "cs.DB",
+        "cs.IR",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "A Multi-Agent Framework for Interpreting Multivariate Physiological Time Series",
+      "authors": [
+        "Davide Gabrielli",
+        "Paola Velardi",
+        "Stefano Faralli",
+        "Bardh Prenkaj"
+      ],
+      "abstract": "Continuous physiological monitoring is central to emergency care, yet deploying trustworthy AI is challenging. While LLMs can translate complex physiological signals into clinical narratives, it is unclear how agentic systems perform relative to zero-shot inference. To address these questions, we present Vivaldi, a role-structured multi-agent system that explains multivariate physiological time series. Due to regulatory constraints that preclude live deployment, we instantiate Vivaldi in a controlled, clinical pilot to a small, highly qualified cohort of emergency medicine experts, whose evaluations reveal a context-dependent picture that contrasts with prevailing assumptions that agentic reasoning uniformly improves performance. Our experiments show that agentic pipelines substantially benefit non-thinking and medically fine-tuned models, improving expert-rated explanation justification and relevance by +6.9 and +9.7 points, respectively. Contrarily, for thinking models, agentic orchestration often degrades explanation quality, including a 14-point drop in relevance, while improving diagnostic precision (ESI F1 +3.6). We also find that explicit tool-based computation is decisive for codifiable clinical metrics, whereas subjective targets, such as pain scores and length of stay, show limited or inconsistent changes. Expert evaluation further indicates that gains in clinical utility depend on visualization conventions, with medically specialized models achieving the most favorable trade-offs between utility and clarity. Together, these findings show that the value of agentic AI lies in the selective externalization of computation and structure rather than in maximal reasoning complexity, and highlight concrete design trade-offs and learned lessons, broadly applicable to explainable AI in safety-critical healthcare settings.",
+      "pdf_url": "https://arxiv.org/pdf/2603.04142v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.04142v1",
+      "published": "2026-03-04T14:55:46Z",
+      "updated": "2026-03-04T14:55:46Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Who Judges the Judge? Evaluating LLM-as-a-Judge for French Medical open-ended QA",
       "authors": [
@@ -108,10 +211,10 @@
         "Korbinian Riedhammer"
       ],
       "abstract": "Early and accessible detection of Alzheimer's disease (AD) remains a major challenge, as current diagnostic methods often rely on costly and invasive biomarkers. Speech and language analysis has emerged as a promising non-invasive and scalable approach to detecting cognitive impairment, but research in this area is hindered by the lack of publicly available datasets, especially for languages other than English. This paper introduces the PARLO Dementia Corpus (PDC), a new multi-center, clinically validated German resource for AD collected across nine academic memory clinics in Germany. The dataset comprises speech recordings from individuals with AD-related mild cognitive impairment and mild to moderate dementia, as well as cognitively healthy controls. Speech was elicited using a standardized test battery of eight neuropsychological tasks, including confrontation naming, verbal fluency, word repetition, picture description, story reading, and recall tasks. In addition to audio recordings, the dataset includes manually verified transcriptions and detailed demographic, clinical, and biomarker metadata. Baseline experiments on ASR benchmarking, automated test evaluation, and LLM-based classification illustrate the feasibility of automatic, speech-based cognitive assessment and highlight the diagnostic value of recall-driven speech production. The PDC thus establishes the first publicly available German benchmark for multi-modal and cross-lingual research on neurodegenerative diseases.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03471v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.03471v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.03471v2",
+      "arxiv_url": "https://arxiv.org/abs/2603.03471v2",
       "published": "2026-03-03T19:31:59Z",
-      "updated": "2026-03-03T19:31:59Z",
+      "updated": "2026-03-05T08:35:16Z",
       "categories": [
         "eess.AS"
       ]
@@ -194,124 +297,6 @@
       "updated": "2026-03-03T04:45:44Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "OpenRad: a Curated Repository of Open-access AI models for Radiology",
-      "authors": [
-        "Konstantinos Vrettos",
-        "Galini Papadaki",
-        "Emmanouil Brilakis",
-        "Matthaios Triantafyllou",
-        "Dimitrios Leventis",
-        "Despina Staraki",
-        "Maria Mavroforou",
-        "Eleftherios Tzanis",
-        "Konstantina Giouroukou",
-        "Michail E. Klontzas"
-      ],
-      "abstract": "The rapid developments in artificial intelligence (AI) research in radiology have produced numerous models that are scattered across various platforms and sources, limiting discoverability, reproducibility and clinical translation. Herein, OpenRad was created, a curated, standardized, open-access repository that aggregates radiology AI models and providing details such as the availability of pretrained weights and interactive applications. Retrospective analysis of peer reviewed literature and preprints indexed in PubMed, arXiv and Scopus was performed until Dec 2025 (n = 5239 records). Model records were generated using a locally hosted LLM (gpt-oss:120b), based on the RSNA AI Roadmap JSON schema, and manually verified by ten expert reviewers. Stability of LLM outputs was assessed on 225 randomly selected papers using text similarity metrics. A total of 1694 articles were included after review. Included models span all imaging modalities (CT, MRI, X-ray, US) and radiology subspecialties. Automated extraction demonstrated high stability for structured fields (Levenshtein ratio > 90%), with 78.5% of record edits being characterized as minor during expert review. Statistical analysis of the repository revealed CNN and transformer architectures as dominant, while MRI was the most commonly used modality (in 621 neuroradiology AI models). Research output was mostly concentrated in China and the United States. The OpenRad web interface enables model discovery via keyword search and filters for modality, subspecialty, intended use, verification status and demo availability, alongside live statistics. The community can contribute new models through a dedicated portal. OpenRad contains approx. 1700 open access, curated radiology AI models with standardized metadata, supplemented with analysis of code repositories, thereby creating a comprehensive, searchable resource for the radiology community.",
-      "pdf_url": "https://arxiv.org/pdf/2603.02062v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.02062v1",
-      "published": "2026-03-02T16:51:24Z",
-      "updated": "2026-03-02T16:51:24Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Learning Domain-Aware Task Prompt Representations for Multi-Domain All-in-One Image Restoration",
-      "authors": [
-        "Guanglu Dong",
-        "Chunlei Li",
-        "Chao Ren",
-        "Jingliang Hu",
-        "Yilei Shi",
-        "Xiao Xiang Zhu",
-        "Lichao Mou"
-      ],
-      "abstract": "Recently, significant breakthroughs have been made in all-in-one image restoration (AiOIR), which can handle multiple restoration tasks with a single model. However, existing methods typically focus on a specific image domain, such as natural scene, medical imaging, or remote sensing. In this work, we aim to extend AiOIR to multiple domains and propose the first multi-domain all-in-one image restoration method, DATPRL-IR, based on our proposed Domain-Aware Task Prompt Representation Learning. Specifically, we first construct a task prompt pool containing multiple task prompts, in which task-related knowledge is implicitly encoded. For each input image, the model adaptively selects the most relevant task prompts and composes them into an instance-level task representation via a prompt composition mechanism (PCM). Furthermore, to endow the model with domain awareness, we introduce another domain prompt pool and distill domain priors from multimodal large language models into the domain prompts. PCM is utilized to combine the adaptively selected domain prompts into a domain representation for each input image. Finally, the two representations are fused to form a domain-aware task prompt representation which can make full use of both specific and shared knowledge across tasks and domains to guide the subsequent restoration process. Extensive experiments demonstrate that our DATPRL-IR significantly outperforms existing SOTA image restoration methods, while exhibiting strong generalization capabilities. Code is available at https://github.com/GuangluDong0728/DATPRL-IR.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01725v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.01725v1",
-      "published": "2026-03-02T10:50:11Z",
-      "updated": "2026-03-02T10:50:11Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Benchmarking LLM Summaries of Multimodal Clinical Time Series for Remote Monitoring",
-      "authors": [
-        "Aditya Shukla",
-        "Yining Yuan",
-        "Ben Tamo",
-        "Yifei Wang",
-        "Micky Nnamdi",
-        "Shaun Tan",
-        "Jieru Li",
-        "Benoit Marteau",
-        "Brad Willingham",
-        "May Wang"
-      ],
-      "abstract": "Large language models (LLMs) can generate fluent clinical summaries of remote therapeutic monitoring time series. However, it remains unclear whether these narratives faithfully capture clinically significant events, such as sustained abnormalities. Existing evaluation metrics primarily focus on semantic similarity and linguistic quality, leaving event-level correctness largely unmeasured.\n  To address this gap, we introduce an event-based evaluation framework for multimodal time-series summarization using the Technology-Integrated Health Management (TIHM)-1.5 dementia monitoring dataset. Clinically grounded daily events are derived through rule-based abnormal thresholds and temporal persistence criteria. Model-generated summaries are then aligned with these structured facts.\n  Our evaluation protocol measures abnormality recall, duration recall, measurement coverage, and hallucinated event mentions. We benchmark three approaches: zero-shot prompting, statistical prompting, and a vision-based pipeline that uses rendered time-series visualizations. The results reveal a striking decoupling between conventional metrics and clinical event fidelity. Models that achieve high semantic similarity scores often exhibit near-zero abnormality recall. In contrast, the vision-based approach demonstrates the strongest event alignment, achieving 45.7% abnormality recall and 100% duration recall.\n  These findings underscore the importance of event-aware evaluation to ensure reliable clinical time-series summarization.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01557v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.01557v1",
-      "published": "2026-03-02T07:33:11Z",
-      "updated": "2026-03-02T07:33:11Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "ProtRLSearch: A Multi-Round Multimodal Protein Search Agent with Large Language Models Trained via Reinforcement Learning",
-      "authors": [
-        "Congying Liu",
-        "Taihao Li",
-        "Ming Huang",
-        "Xingyuan Wei",
-        "Peipei Liu",
-        "Yiqing Shen",
-        "Yanxu Mao",
-        "Tiehan Cui"
-      ],
-      "abstract": "Protein analysis tasks arising in healthcare settings often require accurate reasoning under protein sequence constraints, involving tasks such as functional interpretation of disease-related variants, protein-level analysis for clinical research, and similar scenarios. To address such tasks, search agents are introduced to search protein-related information, providing support for disease-related variant analysis and protein function reasoning in protein-centric inference. However, such search agents are mostly limited to single-round, text-only modality search, which prevents the protein sequence modality from being incorporated as a multimodal input into the search decision-making process. Meanwhile, their reliance on reinforcement learning (RL) supervision that focuses solely on the final answer results in a lack of search process constraints, making deviations in keyword selection and reasoning directions difficult to identify and correct in a timely manner. To address these limitations, we propose ProtRLSearch, a multi-round protein search agent trained with multi-dimensional reward based RL, which jointly leverages protein sequence and text as multimodal inputs during real-time search to produce high quality reports. To evaluate the ability of models to integrate protein sequence information and text-based multimodal inputs in realistic protein query settings, we construct ProtMCQs, a benchmark of 3,000 multiple choice questions (MCQs) organized into three difficulty levels. The benchmark evaluates protein query tasks that range from sequence constrained reasoning about protein function and phenotype changes to comprehensive protein reasoning that integrates multi-dimensional sequence features with signal pathways and regulatory networks.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01464v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.01464v1",
-      "published": "2026-03-02T05:25:41Z",
-      "updated": "2026-03-02T05:25:41Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "PanCanBench: A Comprehensive Benchmark for Evaluating Large Language Models in Pancreatic Oncology",
-      "authors": [
-        "Yimin Zhao",
-        "Sheela R. Damle",
-        "Simone E. Dekker",
-        "Scott Geng",
-        "Karly Williams Silva",
-        "Jesse J Hubbard",
-        "Manuel F Fernandez",
-        "Fatima Zelada-Arenas",
-        "Alejandra Alvarez",
-        "Brianne Flores",
-        "Alexis Rodriguez",
-        "Stephen Salerno",
-        "Carrie Wright",
-        "Zihao Wang",
-        "Pang Wei Koh",
-        "Jeffrey T. Leek"
-      ],
-      "abstract": "Large language models (LLMs) have achieved expert-level performance on standardized examinations, yet multiple-choice accuracy poorly reflects real-world clinical utility and safety. As patients and clinicians increasingly use LLMs for guidance on complex conditions such as pancreatic cancer, evaluation must extend beyond general medical knowledge. Existing frameworks, such as HealthBench, rely on simulated queries and lack disease-specific depth. Moreover, high rubric-based scores do not ensure factual correctness, underscoring the need to assess hallucinations. We developed a human-in-the-loop pipeline to create expert rubrics for de-identified patient questions from the Pancreatic Cancer Action Network (PanCAN). The resulting benchmark, PanCanBench, includes 3,130 question-specific criteria across 282 authentic patient questions. We evaluated 22 proprietary and open-source LLMs using an LLM-as-a-judge framework, measuring clinical completeness, factual accuracy, and web-search integration. Models showed substantial variation in rubric-based completeness, with scores ranging from 46.5% to 82.3%. Factual errors were common, with hallucination rates (the percentages of responses containing at least one factual error) ranging from 6.0% for Gemini-2.5 Pro and GPT-4o to 53.8% for Llama-3.1-8B. Importantly, newer reasoning-optimized models did not consistently improve factuality: although o3 achieved the highest rubric score, it produced inaccuracies more frequently than other GPT-family models. Web-search integration did not inherently guarantee better responses. The average score changed from 66.8% to 63.9% for Gemini-2.5 Pro and from 73.8% to 72.8% for GPT-5 when web search was enabled. Synthetic AI-generated rubrics inflated absolute scores by 17.9 points on average while generally maintaining similar relative ranking.",
-      "pdf_url": "https://arxiv.org/pdf/2603.01343v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.01343v1",
-      "published": "2026-03-02T00:50:39Z",
-      "updated": "2026-03-02T00:50:39Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]

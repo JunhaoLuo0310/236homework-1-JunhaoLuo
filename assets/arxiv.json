@@ -1,8 +1,201 @@
 {
-  "generated_at_utc": "2026-03-08T02:41:14.807570Z",
+  "generated_at_utc": "2026-03-09T02:43:09.983955Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "RAMoEA-QA: Hierarchical Specialization for Robust Respiratory Audio Question Answering",
+      "authors": [
+        "Gaia A. Bertolino",
+        "Yuwei Zhang",
+        "Tong Xia",
+        "Domenico Talia",
+        "Cecilia Mascolo"
+      ],
+      "abstract": "Conversational generative AI is rapidly entering healthcare, where general-purpose models must integrate heterogeneous patient signals and support diverse interaction styles while producing clinically meaningful outputs. In respiratory care, non-invasive audio, such as recordings captured via mobile microphones, enables scalable screening and longitudinal monitoring, but the heterogeneity challenge is particularly acute: recordings vary widely across devices, environments, and acquisition protocols, and questions span multiple intents and question formats. Existing biomedical audio-language QA systems are typically monolithic, without any specialization mechanisms for tackling diverse respiratory corpora and query intents. They are also only validated in limited settings, leaving it unclear how reliably they handle the shifts encountered in real-world settings.\n  To address these limitations, we introduce RAMoEA-QA, a hierarchically routed generative model for respiratory audio question answering that unifies multiple question types and supports both discrete and continuous targets within a single multimodal system. RAMoEA-QA applies two-stage conditional specialization: an Audio Mixture-of-Experts routes each recording to a suitable pre-trained audio encoder, and a Language Mixture-of-Adapters selects a LoRA adapter on a shared frozen LLM to match the query intent and answer format. By specializing both acoustic representations and generation behaviour per example, RAMoEA-QA consistently outperforms strong baselines and routing ablations with minimal parameter overhead, improving in-domain test accuracy to 0.72 (vs. 0.61 and 0.67 for state-of-the-art baselines) and exhibiting the strongest generalization for diagnosis under domain, modality, and task shifts.",
+      "pdf_url": "https://arxiv.org/pdf/2603.06542v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.06542v1",
+      "published": "2026-03-06T18:29:15Z",
+      "updated": "2026-03-06T18:29:15Z",
+      "categories": [
+        "cs.SD",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Doctor or Patient? Synergizing Diarization and ASR for Code-Switched Hinglish Medical Conditions Extraction",
+      "authors": [
+        "S\u00e9verin Baroudi",
+        "Yanis Labrak",
+        "Shashi Kumar",
+        "Joonas Kalda",
+        "Sergio Burdisso",
+        "Pawel Cyrta",
+        "Juan Ignacio Alvarez-Trejos",
+        "Petr Motlicek",
+        "Herv\u00e9 Bredin",
+        "Ricard Marxer"
+      ],
+      "abstract": "Extracting patient medical conditions from code-switched clinical spoken dialogues is challenging due to rapid turn-taking and highly overlapped speech. We present a robust system evaluated on the DISPLACE-M dataset of real-world Hinglish medical conversations. We propose an End-to-End Neural Diarization with Vector Clustering approach (EEND-VC) to accurately resolve dense and speaker overlaps in Doctor-Patient Conversations (DoPaCo). For transcription, we adapt a Qwen3 ASR model via domain-specific fine-tuning, Devanagari script normalization, and dialogue-level LLM error correction, achieving an 18.59% tcpWER. We benchmark open and proprietary LLMs on medical condition extraction, comparing our text-based cascade system against a multimodal End-to-End (E2E) audio framework. While proprietary E2E models set the performance ceiling, our open cascaded architecture is highly competitive, as it achieved first place out of 25 participants in the DISPLACE-M challenge. All implementations are publicly released.",
+      "pdf_url": "https://arxiv.org/pdf/2603.06373v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.06373v1",
+      "published": "2026-03-06T15:24:52Z",
+      "updated": "2026-03-06T15:24:52Z",
+      "categories": [
+        "eess.AS"
+      ]
+    },
+    {
+      "title": "Agentic retrieval-augmented reasoning reshapes collective reliability under model variability in radiology question answering",
+      "authors": [
+        "Mina Farajiamiri",
+        "Jeta Sopa",
+        "Saba Afza",
+        "Lisa Adams",
+        "Felix Barajas Ordonez",
+        "Tri-Thien Nguyen",
+        "Mahshad Lotfinia",
+        "Sebastian Wind",
+        "Keno Bressem",
+        "Sven Nebelung",
+        "Daniel Truhn",
+        "Soroosh Tayebi Arasteh"
+      ],
+      "abstract": "Agentic retrieval-augmented reasoning pipelines are increasingly used to structure how large language models (LLMs) incorporate external evidence in clinical decision support. These systems iteratively retrieve curated domain knowledge and synthesize it into structured reports before answer selection. Although such pipelines can improve performance, their impact on reliability under model variability remains unclear. In real-world deployment, heterogeneous models may align, diverge, or synchronize errors in ways not captured by accuracy. We evaluated 34 LLMs on 169 expert-curated publicly available radiology questions, comparing zero-shot inference with a radiology-specific multi-step agentic retrieval condition in which all models received identical structured evidence reports derived from curated radiology knowledge. Agentic inference reduced inter-model decision dispersion (median entropy 0.48 vs. 0.13) and increased robustness of correctness across models (mean 0.74 vs. 0.81). Majority consensus also increased overall (P<0.001). Consensus strength and robust correctness remained correlated under both strategies (\\r{ho}=0.88 for zero-shot; \\r{ho}=0.87 for agentic), although high agreement did not guarantee correctness. Response verbosity showed no meaningful association with correctness. Among 572 incorrect outputs, 72% were associated with moderate or high clinically assessed severity, although inter-rater agreement was low (\\k{appa}=0.02). Agentic retrieval therefore was associated with more concentrated decision distributions, stronger consensus, and higher cross-model robustness of correctness. These findings suggest that evaluating agentic systems through accuracy or agreement alone may not always be sufficient, and that complementary analyses of stability, cross-model robustness, and potential clinical impact are needed to characterize reliability under model variability.",
+      "pdf_url": "https://arxiv.org/pdf/2603.06271v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.06271v1",
+      "published": "2026-03-06T13:31:54Z",
+      "updated": "2026-03-06T13:31:54Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "CRIMSON: A Clinically-Grounded LLM-Based Metric for Generative Radiology Report Evaluation",
+      "authors": [
+        "Mohammed Baharoon",
+        "Thibault Heintz",
+        "Siavash Raissi",
+        "Mahmoud Alabbad",
+        "Mona Alhammad",
+        "Hassan AlOmaish",
+        "Sung Eun Kim",
+        "Oishi Banerjee",
+        "Pranav Rajpurkar"
+      ],
+      "abstract": "We introduce CRIMSON, a clinically grounded evaluation framework for chest X-ray report generation that assesses reports based on diagnostic correctness, contextual relevance, and patient safety. Unlike prior metrics, CRIMSON incorporates full clinical context, including patient age, indication, and guideline-based decision rules, and prevents normal or clinically insignificant findings from exerting disproportionate influence on the overall score. The framework categorizes errors into a comprehensive taxonomy covering false findings, missing findings, and eight attribute-level errors (e.g., location, severity, measurement, and diagnostic overinterpretation). Each finding is assigned a clinical significance level (urgent, actionable non-urgent, non-actionable, or expected/benign), based on a guideline developed in collaboration with attending cardiothoracic radiologists, enabling severity-aware weighting that prioritizes clinically consequential mistakes over benign discrepancies. CRIMSON is validated through strong alignment with clinically significant error counts annotated by six board-certified radiologists in ReXVal (Kendalls tau = 0.61-0.71; Pearsons r = 0.71-0.84), and through two additional benchmarks that we introduce. In RadJudge, a targeted suite of clinically challenging pass-fail scenarios, CRIMSON shows consistent agreement with expert judgment. In RadPref, a larger radiologist preference benchmark of over 100 pairwise cases with structured error categorization, severity modeling, and 1-5 overall quality ratings from three cardiothoracic radiologists, CRIMSON achieves the strongest alignment with radiologist preferences. We release the metric, the evaluation benchmarks, RadJudge and RadPref, and a fine-tuned MedGemma model to enable reproducible evaluation of report generation, all available at https://github.com/rajpurkarlab/CRIMSON.",
+      "pdf_url": "https://arxiv.org/pdf/2603.06183v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.06183v1",
+      "published": "2026-03-06T11:43:42Z",
+      "updated": "2026-03-06T11:43:42Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "CORE-Seg: Reasoning-Driven Segmentation for Complex Lesions via Reinforcement Learning",
+      "authors": [
+        "Yuxin Xie",
+        "Yuming Chen",
+        "Yishan Yang",
+        "Yi Zhou",
+        "Tao Zhou",
+        "Zhen Zhao",
+        "Jiacheng Liu",
+        "Huazhu Fu"
+      ],
+      "abstract": "Medical image segmentation is undergoing a paradigm shift from conventional visual pattern matching to cognitive reasoning analysis. Although Multimodal Large Language Models (MLLMs) have shown promise in integrating linguistic and visual knowledge, significant gaps remain: existing general MLLMs possess broad common sense but lack the specialized visual reasoning required for complex lesions, whereas traditional segmentation models excel at pixel-level segmentation but lack logical interpretability. In this paper, we introduce ComLesion-14K, the first diverse Chain-of-Thought (CoT) benchmark for reasoning-driven complex lesion segmentation. To accomplish this task, we propose CORE-Seg, an end-to-end framework integrating reasoning with segmentation through a Semantic-Guided Prompt Adapter. We design a progressive training strategy from SFT to GRPO, equipped with an adaptive dual-granularity reward mechanism to mitigate reward sparsity. Our Method achieves state-of-the-art results with a mean Dice of 37.06\\% (14.89\\% higher than the second-best baseline), while reducing the failure rate to 18.42\\%. Project Page: https://xyxl024.github.io/CORE-Seg.github.io/",
+      "pdf_url": "https://arxiv.org/pdf/2603.05911v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.05911v1",
+      "published": "2026-03-06T04:58:55Z",
+      "updated": "2026-03-06T04:58:55Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "InfoGatherer: Principled Information Seeking via Evidence Retrieval and Strategic Questioning",
+      "authors": [
+        "Maksym Taranukhin",
+        "Shuyue Stella Li",
+        "Evangelos Milios",
+        "Geoff Pleiss",
+        "Yulia Tsvetkov",
+        "Vered Shwartz"
+      ],
+      "abstract": "LLMs are increasingly deployed in high-stakes domains such as medical triage and legal assistance, often as document-grounded QA systems in which a user provides a description, relevant sources are retrieved, and an LLM generates a prediction. In practice, initial user queries are often underspecified, and a single retrieval pass is insufficient for reliable decision-making, leading to incorrect and overly confident answers. While follow-up questioning can elicit missing information, existing methods typically depend on implicit, unstructured confidence signals from the LLM, making it difficult to determine what remains unknown, what information matters most, and when to stop asking questions. We propose InfoGatherer, a framework that gathers missing information from two complementary sources: retrieved domain documents and targeted follow-up questions to the user. InfoGatherer models uncertainty using Dempster-Shafer belief assignments over a structured evidential network, enabling principled fusion of incomplete and potentially contradictory evidence from both sources without prematurely collapsing to a definitive answer. Across legal and medical tasks, InfoGatherer outperforms strong baselines while requiring fewer turns. By grounding uncertainty in formal evidential theory rather than heuristic LLM signals, InfoGatherer moves towards trustworthy, interpretable decision support in domains where reliability is critical.",
+      "pdf_url": "https://arxiv.org/pdf/2603.05909v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.05909v1",
+      "published": "2026-03-06T04:55:03Z",
+      "updated": "2026-03-06T04:55:03Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Evolving Medical Imaging Agents via Experience-driven Self-skill Discovery",
+      "authors": [
+        "Lin Fan",
+        "Pengyu Dai",
+        "Zhipeng Deng",
+        "Haolin Wang",
+        "Xun Gong",
+        "Yefeng Zheng",
+        "Yafei Ou"
+      ],
+      "abstract": "Clinical image interpretation is inherently multi-step and tool-centric: clinicians iteratively combine visual evidence with patient context, quantify findings, and refine their decisions through a sequence of specialized procedures. While LLM-based agents promise to orchestrate such heterogeneous medical tools, existing systems treat tool sets and invocation strategies as static after deployment. This design is brittle under real-world domain shifts, across tasks, and evolving diagnostic requirements, where predefined tool chains frequently degrade and demand costly manual re-design. We propose MACRO, a self-evolving, experience-augmented medical agent that shifts from static tool composition to experience-driven tool discovery. From verified execution trajectories, the agent autonomously identifies recurring effective multi-step tool sequences, synthesizes them into reusable composite tools, and registers these as new high-level primitives that continuously expand its behavioral repertoire. A lightweight image-feature memory grounds tool selection in a visual-clinical context, while a GRPO-like training loop reinforces reliable invocation of discovered composites, enabling closed-loop self-improvement with minimal supervision. Extensive experiments across diverse medical imaging datasets and tasks demonstrate that autonomous composite tool discovery consistently improves multi-step orchestration accuracy and cross-domain generalization over strong baselines and recent state-of-the-art agentic methods, bridging the gap between brittle static tool use and adaptive, context-aware clinical AI assistance. Code will be available upon acceptance.",
+      "pdf_url": "https://arxiv.org/pdf/2603.05860v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.05860v1",
+      "published": "2026-03-06T03:34:47Z",
+      "updated": "2026-03-06T03:34:47Z",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "PVminerLLM: Structured Extraction of Patient Voice from Patient-Generated Text using Large Language Models",
+      "authors": [
+        "Samah Fodeh",
+        "Linhai Ma",
+        "Ganesh Puthiaraju",
+        "Srivani Talakokkul",
+        "Afshan Khan",
+        "Ashley Hagaman",
+        "Sarah Lowe",
+        "Aimee Roundtree"
+      ],
+      "abstract": "Motivation: Patient-generated text contains critical information about patients' lived experiences, social circumstances, and engagement in care, including factors that strongly influence adherence, care coordination, and health equity. However, these patient voice signals are rarely available in structured form, limiting their use in patient-centered outcomes research and clinical quality improvement. Reliable extraction of such information is therefore essential for understanding and addressing non-clinical drivers of health outcomes at scale.\n  Results: We introduce PVminer, a benchmark for structured extraction of patient voice, and propose PVminerLLM, a supervised fine-tuned large language model tailored to this task. Across multiple datasets and model sizes, PVminerLLM substantially outperforms prompt-based baselines, achieving up to 83.82% F1 for Code prediction, 80.74% F1 for Sub-code prediction, and 87.03% F1 for evidence Span extraction. Notably, strong performance is achieved even with smaller models, demonstrating that reliable patient voice extraction is feasible without extreme model scale. These results enable scalable analysis of social and experiential signals embedded in patient-generated text.\n  Availability and Implementation: Code, evaluation scripts, and trained LLMs will be released publicly. Annotated datasets will be made available upon request for research use.\n  Keywords: Large Language Models, Supervised Fine-Tuning, Medical Annotation, Patient-Generated Text, Clinical NLP",
+      "pdf_url": "https://arxiv.org/pdf/2603.05776v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.05776v1",
+      "published": "2026-03-06T00:16:05Z",
+      "updated": "2026-03-06T00:16:05Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Vision-Language System using Open-Source LLMs for Gestures in Medical Interpreter Robots",
+      "authors": [
+        "Thanh-Tung Ngo",
+        "Emma Murphy",
+        "Robert J. Ross"
+      ],
+      "abstract": "Effective communication is vital in healthcare, especially across language barriers, where non-verbal cues and gestures are critical. This paper presents a privacy-preserving vision-language framework for medical interpreter robots that detects specific speech acts (consent and instruction) and generates corresponding robotic gestures. Built on locally deployed open-source models, the system utilizes a Large Language Model (LLM) with few-shot prompting for intent detection. We also introduce a novel dataset of clinical conversations annotated for speech acts and paired with gesture clips. Our identification module achieved 0.90 accuracy, 0.93 weighted precision, and a 0.91 weighted F1-Score. Our approach significantly improves computational efficiency and, in user studies, outperforms the speech-gesture generation baseline in human-likeness while maintaining comparable appropriateness.",
+      "pdf_url": "https://arxiv.org/pdf/2603.05751v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.05751v1",
+      "published": "2026-03-05T23:21:39Z",
+      "updated": "2026-03-05T23:21:39Z",
+      "categories": [
+        "cs.RO",
+        "cs.HC"
+      ]
+    },
     {
       "title": "Med-V1: Small Language Models for Zero-shot and Scalable Biomedical Evidence Attribution",
       "authors": [
@@ -30,6 +223,24 @@
       "categories": [
         "cs.CL",
         "cs.AI"
+      ]
+    },
+    {
+      "title": "CBR-to-SQL: Rethinking Retrieval-based Text-to-SQL using Case-based Reasoning in the Healthcare Domain",
+      "authors": [
+        "Hung Nguyen",
+        "Hans Moen",
+        "Pekka Marttinen"
+      ],
+      "abstract": "Extracting insights from Electronic Health Record (EHR) databases often requires SQL expertise, creating a barrier for healthcare decision-making and research. While a promising approach is to use Large Language Models (LLMs) to translate natural language questions to SQL via Retrieval-Augmented Generation (RAG), adapting this approach to the medical domain is non-trivial. Standard RAG relies on single-step retrieval from a static pool of examples, which struggles with the variability and noise of medical terminology and jargon. This often leads to anti-patterns such as expanding the task demonstration pool to improve coverage, which in turn introduces noise and scalability problems. To address this, we introduce CBR-to-SQL, a framework inspired by Case-Based Reasoning (CBR). It represents question-SQL pairs as reusable, abstract case templates and utilizes a two-stage retrieval process that first captures logical structure and then resolves relevant entities. Evaluated on MIMICSQL, CBR-to-SQL achieves state-of-the-art logical form accuracy and competitive execution accuracy. More importantly, it demonstrates higher sample efficiency and robustness than standard RAG approaches, particularly under data scarcity and retrieval perturbations.",
+      "pdf_url": "https://arxiv.org/pdf/2603.05569v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.05569v1",
+      "published": "2026-03-05T14:43:14Z",
+      "updated": "2026-03-05T14:43:14Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
       ]
     },
     {
@@ -104,199 +315,6 @@
       "updated": "2026-03-04T14:55:46Z",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Who Judges the Judge? Evaluating LLM-as-a-Judge for French Medical open-ended QA",
-      "authors": [
-        "Ikram Belmadani",
-        "Oumaima El Khettari",
-        "Pac\u00f4me Constant dit Beaufils",
-        "Richard Dufour",
-        "Benoit Favre"
-      ],
-      "abstract": "Automatic evaluation of medical open-ended question answering (OEQA) remains challenging due to the need for expert annotations. We evaluate whether large language models (LLMs) can act as judges of semantic equivalence in French medical OEQA, comparing closed-access, general-purpose, and biomedical domain-adapted models. Our results show that LLM-based judgments are strongly influenced by the model that generated the answer, with agreement varying substantially across generators. Domain-adapted and large general-purpose models achieve the highest alignment with expert annotations. We further show that lightweight adaptation of a compact model using supervised fine-tuning (SFT) and Group Relative Policy Optimization (GRPO) substantially improves performance and reduces generator sensitivity, even with limited data. Overall, our findings highlight the need for generator-aware evaluation and suggest that carefully adapted small models can support scalable evaluation in low-resource medical settings.",
-      "pdf_url": "https://arxiv.org/pdf/2603.04033v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.04033v1",
-      "published": "2026-03-04T13:12:30Z",
-      "updated": "2026-03-04T13:12:30Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Coupling Local Context and Global Semantic Prototypes via a Hierarchical Architecture for Rhetorical Roles Labeling",
-      "authors": [
-        "Anas Belfathi",
-        "Nicolas Hernandez",
-        "Laura Monceaux",
-        "Warren Bonnard",
-        "Mary Catherine Lavissiere",
-        "Christine Jacquin",
-        "Richard Dufour"
-      ],
-      "abstract": "Rhetorical Role Labeling (RRL) identifies the functional role of each sentence in a document, a key task for discourse understanding in domains such as law and medicine. While hierarchical models capture local dependencies effectively, they are limited in modeling global, corpus-level features. To address this limitation, we propose two prototype-based methods that integrate local context with global representations. Prototype-Based Regularization (PBR) learns soft prototypes through a distance-based auxiliary loss to structure the latent space, while Prototype-Conditioned Modulation (PCM) constructs corpus-level prototypes and injects them during training and inference. Given the scarcity of RRL resources, we introduce SCOTUS-Law, the first dataset of U.S. Supreme Court opinions annotated with rhetorical roles at three levels of granularity: category, rhetorical function, and step. Experiments on legal, medical, and scientific benchmarks show consistent improvements over strong baselines, with 4 Macro-F1 gains on low-frequency roles. We further analyze the implications in the era of Large Language Models and complement our findings with expert evaluation.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03856v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.03856v1",
-      "published": "2026-03-04T09:05:24Z",
-      "updated": "2026-03-04T09:05:24Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Benchmarking Motivational Interviewing Competence of Large Language Models",
-      "authors": [
-        "Aishwariya Jha",
-        "Prakrithi Shivaprakash",
-        "Lekhansh Shukla",
-        "Animesh Mukherjee",
-        "Prabhat Chand",
-        "Pratima Murthy"
-      ],
-      "abstract": "Motivational interviewing (MI) promotes behavioural change in substance use disorders. Its fidelity is measured using the Motivational Interviewing Treatment Integrity (MITI) framework. While large language models (LLMs) can potentially generate MI-consistent therapist responses, their competence using MITI is not well-researched, especially in real world clinical transcripts. We aim to benchmark MI competence of proprietary and open-source models compared to human therapists in real-world transcripts and assess distinguishability from human therapists. Methods: We shortlisted 3 proprietary and 7 open-source LLMs from LMArena, evaluated performance using MITI 4.2 framework on two datasets (96 handcrafted model transcripts, 34 real-world clinical transcripts). We generated parallel LLM-therapist utterances iteratively for each transcript while keeping client responses static, and ranked performance using a composite ranking system with MITI components and verbosity. We conducted a distinguishability experiment with two independent psychiatrists to identify human-vs-LLM responses. Results: All 10 tested LLMs had fair (MITI global scores >3.5) to good (MITI global scores >4) competence across MITI measures, and three best-performing models (gemma-3-27b-it, gemini-2.5-pro, grok-3) were tested on real-world transcripts. All showed good competence, with LLMs outperforming human-expert in Complex Reflection percentage (39% vs 96%) and Reflection-Question ratio (1.2 vs >2.8). In the distinguishability experiment, psychiatrists identified LLM responses with only 56% accuracy, with d-prime: 0.17 and 0.25 for gemini-2.5-pro and gemma-3-27b-it respectively. Conclusion: LLMs can achieve good MI proficiency in real-world clinical transcripts using MITI framework. These findings suggest that even open-source LLMs are viable candidates for expanding MI counselling sessions in low-resource settings.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03846v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.03846v1",
-      "published": "2026-03-04T08:56:37Z",
-      "updated": "2026-03-04T08:56:37Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "MIND: Unified Inquiry and Diagnosis RL with Criteria Grounded Clinical Supports for Psychiatric Consultation",
-      "authors": [
-        "Guoyi Li",
-        "Shihao Xu",
-        "Jiatong Ma",
-        "Yunyun Han",
-        "Jianhua Chen",
-        "Yafeng Deng"
-      ],
-      "abstract": "Large language models (LLMs) have advanced medical dialogue systems, yet psychiatric consultation poses substantially higher demands due to subjective ambiguity and comorbidity complexity: an agent must continuously extract psychopathological cues from incomplete and inconsistent patient reports in multi-turn interactions and perform rigorous differential diagnostic reasoning. However, existing methods face two fundamental challenges. First, without criteria-grounded clinical supports, they are prone to unsupported clinical assertions when symptoms are atypical or underspecified. Second, in multi-turn interactions, they struggle to mitigate inquiry drift (off-topic or low-yield questioning) and optimize questioning strategies. To address these challenges, we propose MIND, a unified inquiry--diagnosis reinforcement learning framework for psychiatric consultation. Specifically, we build a Criteria-Grounded Psychiatric Reasoning Bank (PRB) that summarizes dialogue context into clinical retrieval states, retrieves semantically similar reference consultations, and distills reusable criteria-grounded clinical supports to guide criteria-aligned inquiry and reasoning. Building on this foundation, MIND enforces explicit clinical reasoning with rubric-based process rewards to provide fine-grained supervision over intermediate decision steps, and incorporates a value-aware trajectory rectification mechanism to jointly improve information acquisition and diagnostic decision-making across turns. Extensive experiments demonstrate that MIND consistently outperforms strong baselines in diagnostic accuracy, empathetic interaction quality, interpretability, and generalization.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03677v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.03677v1",
-      "published": "2026-03-04T03:05:38Z",
-      "updated": "2026-03-04T03:05:38Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "RAG-X: Systematic Diagnosis of Retrieval-Augmented Generation for Medical Question Answering",
-      "authors": [
-        "Aswini Sivakumar",
-        "Vijayan Sugumaran",
-        "Yao Qiang"
-      ],
-      "abstract": "Automated question-answering (QA) systems increasingly rely on retrieval-augmented generation (RAG) to ground large language models (LLMs) in authoritative medical knowledge, ensuring clinical accuracy and patient safety in Artificial Intelligence (AI) applications for healthcare. Despite progress in RAG evaluation, current benchmarks focus only on simple multiple-choice QA tasks and employ metrics that poorly capture the semantic precision required for complex QA tasks. These approaches fail to diagnose whether an error stems from faulty retrieval or flawed generation, limiting developers from performing targeted improvement. To address this gap, we propose RAG-X, a diagnostic framework that evaluates the retriever and generator independently across a triad of QA tasks: information extraction, short-answer generation, and multiple-choice question (MCQ) answering. RAG-X introduces Context Utilization Efficiency (CUE) metrics to disaggregate system success into interpretable quadrants, isolating verified grounding from deceptive accuracy. Our experiments reveal an ``Accuracy Fallacy\", where a 14\\% gap separates perceived system success from evidence-based grounding. By surfacing hidden failure modes, RAG-X offers the diagnostic transparency needed for safe and verifiable clinical RAG systems.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03541v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.03541v1",
-      "published": "2026-03-03T21:55:42Z",
-      "updated": "2026-03-03T21:55:42Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "The PARLO Dementia Corpus: A German Multi-Center Resource for Alzheimer's Disease",
-      "authors": [
-        "Franziska Braun",
-        "Christopher Witzl",
-        "Florian H\u00f6nig",
-        "Elmar N\u00f6th",
-        "Tobias Bocklet",
-        "Korbinian Riedhammer"
-      ],
-      "abstract": "Early and accessible detection of Alzheimer's disease (AD) remains a major challenge, as current diagnostic methods often rely on costly and invasive biomarkers. Speech and language analysis has emerged as a promising non-invasive and scalable approach to detecting cognitive impairment, but research in this area is hindered by the lack of publicly available datasets, especially for languages other than English. This paper introduces the PARLO Dementia Corpus (PDC), a new multi-center, clinically validated German resource for AD collected across nine academic memory clinics in Germany. The dataset comprises speech recordings from individuals with AD-related mild cognitive impairment and mild to moderate dementia, as well as cognitively healthy controls. Speech was elicited using a standardized test battery of eight neuropsychological tasks, including confrontation naming, verbal fluency, word repetition, picture description, story reading, and recall tasks. In addition to audio recordings, the dataset includes manually verified transcriptions and detailed demographic, clinical, and biomarker metadata. Baseline experiments on ASR benchmarking, automated test evaluation, and LLM-based classification illustrate the feasibility of automatic, speech-based cognitive assessment and highlight the diagnostic value of recall-driven speech production. The PDC thus establishes the first publicly available German benchmark for multi-modal and cross-lingual research on neurodegenerative diseases.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03471v2",
-      "arxiv_url": "https://arxiv.org/abs/2603.03471v2",
-      "published": "2026-03-03T19:31:59Z",
-      "updated": "2026-03-05T08:35:16Z",
-      "categories": [
-        "eess.AS"
-      ]
-    },
-    {
-      "title": "PrivMedChat: End-to-End Differentially Private RLHF for Medical Dialogue Systems",
-      "authors": [
-        "Sudip Bhujel"
-      ],
-      "abstract": "Large language models are increasingly used for patient-facing medical assistance and clinical decision support, but adapting them to clinical dialogue often requires supervision derived from doctor-patient conversations that may contain sensitive information. Conventional supervised fine-tuning and reinforcement learning from human feedback (RLHF) can amplify memorization risks, enabling empirical membership inference and extraction of rare training-set content. We present PrivMedChat, an end-to-end framework for differentially private RLHF (DP-RLHF) for medical dialogue. Our design enforces differential privacy at every training stage that directly accesses dialogue-derived supervision: (i) Differential Private Stochastic Gradient Descent (DP-SGD) for medical SFT and (ii) DP-SGD for reward model learning from preference pairs. To limit additional privacy expenditure during alignment, we apply DP-SGD to the PPO actor and critic when operating on dialogue-derived prompts, while the reward model remains fixed after DP training.\n  We also introduce an annotation-free preference construction strategy that pairs physician responses with filtered non-expert generations to produce scalable preference data without clinician labeling. Experiments on medical dialogue benchmarks show that PrivMedChat at $\\varepsilon=7$ achieves the highest ROUGE-L of 0.156 among all DP models, reduces clinical hallucinations to 1.4% and harmful advice to 0.4%, and obtains the highest overall score of 2.86 in a 3-model LLM-jury evaluation, while producing membership-inference signals that are near chance (AUC 0.510-0.555). We open-source our code at https://github.com/sudip-bhujel/privmedchat.",
-      "pdf_url": "https://arxiv.org/pdf/2603.03054v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.03054v1",
-      "published": "2026-03-03T14:53:20Z",
-      "updated": "2026-03-03T14:53:20Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Guideline-Grounded Evidence Accumulation for High-Stakes Agent Verification",
-      "authors": [
-        "Yichi Zhang",
-        "Nabeel Seedat",
-        "Yinpeng Dong",
-        "Peng Cui",
-        "Jun Zhu",
-        "Mihaela van de Schaar"
-      ],
-      "abstract": "As LLM-powered agents have been used for high-stakes decision-making, such as clinical diagnosis, it becomes critical to develop reliable verification of their decisions to facilitate trustworthy deployment. Yet, existing verifiers usually underperform owing to a lack of domain knowledge and limited calibration. To address this, we establish GLEAN, an agent verification framework with Guideline-grounded Evidence Accumulation that compiles expert-curated protocols into trajectory-informed, well-calibrated correctness signals. GLEAN evaluates the step-wise alignment with domain guidelines and aggregates multi-guideline ratings into surrogate features, which are accumulated along the trajectory and calibrated into correctness probabilities using Bayesian logistic regression. Moreover, the estimated uncertainty triggers active verification, which selectively collects additional evidence for uncertain cases via expanding guideline coverage and performing differential checks. We empirically validate GLEAN with agentic clinical diagnosis across three diseases from the MIMIC-IV dataset, surpassing the best baseline by 12% in AUROC and 50% in Brier score reduction, which confirms the effectiveness in both discrimination and calibration. In addition, the expert study with clinicians recognizes GLEAN's utility in practice.",
-      "pdf_url": "https://arxiv.org/pdf/2603.02798v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.02798v1",
-      "published": "2026-03-03T09:36:43Z",
-      "updated": "2026-03-03T09:36:43Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "ExpGuard: LLM Content Moderation in Specialized Domains",
-      "authors": [
-        "Minseok Choi",
-        "Dongjin Kim",
-        "Seungbin Yang",
-        "Subin Kim",
-        "Youngjun Kwak",
-        "Juyoung Oh",
-        "Jaegul Choo",
-        "Jungmin Son"
-      ],
-      "abstract": "With the growing deployment of large language models (LLMs) in real-world applications, establishing robust safety guardrails to moderate their inputs and outputs has become essential to ensure adherence to safety policies. Current guardrail models predominantly address general human-LLM interactions, rendering LLMs vulnerable to harmful and adversarial content within domain-specific contexts, particularly those rich in technical jargon and specialized concepts. To address this limitation, we introduce ExpGuard, a robust and specialized guardrail model designed to protect against harmful prompts and responses across financial, medical, and legal domains. In addition, we present ExpGuardMix, a meticulously curated dataset comprising 58,928 labeled prompts paired with corresponding refusal and compliant responses, from these specific sectors. This dataset is divided into two subsets: ExpGuardTrain, for model training, and ExpGuardTest, a high-quality test set annotated by domain experts to evaluate model robustness against technical and domain-specific content. Comprehensive evaluations conducted on ExpGuardTest and eight established public benchmarks reveal that ExpGuard delivers competitive performance across the board while demonstrating exceptional resilience to domain-specific adversarial attacks, surpassing state-of-the-art models such as WildGuard by up to 8.9% in prompt classification and 15.3% in response classification. To encourage further research and development, we open-source our code, data, and model, enabling adaptation to additional domains and supporting the creation of increasingly robust guardrail models.",
-      "pdf_url": "https://arxiv.org/pdf/2603.02588v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.02588v1",
-      "published": "2026-03-03T04:09:49Z",
-      "updated": "2026-03-03T04:09:49Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "ClinConsensus: A Consensus-Based Benchmark for Evaluating Chinese Medical LLMs across Difficulty Levels",
-      "authors": [
-        "Xiang Zheng",
-        "Han Li",
-        "Wenjie Luo",
-        "Weiqi Zhai",
-        "Yiyuan Li",
-        "Chuanmiao Yan",
-        "Tianyi Tang",
-        "Yubo Ma",
-        "Kexin Yang",
-        "Dayiheng Liu",
-        "Hu Wei",
-        "Bing Zhao"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly applied to health management, showing promise across disease prevention, clinical decision-making, and long-term care. However, existing medical benchmarks remain largely static and task-isolated, failing to capture the openness, longitudinal structure, and safety-critical complexity of real-world clinical workflows. We introduce ClinConsensus, a Chinese medical benchmark curated, validated, and quality-controlled by clinical experts. ClinConsensus comprises 2500 open-ended cases spanning the full continuum of care--from prevention and intervention to long-term follow-up--covering 36 medical specialties, 12 common clinical task types, and progressively increasing levels of complexity. To enable reliable evaluation of such complex scenarios, we adopt a rubric-based grading protocol and propose the Clinically Applicable Consistency Score (CACS@k). We further introduce a dual-judge evaluation framework, combining a high-capability LLM-as-judge with a distilled, locally deployable judge model trained via supervised fine-tuning, enabling scalable and reproducible evaluation aligned with physician judgment. Using ClinConsensus, we conduct a comprehensive assessment of several leading LLMs and reveal substantial heterogeneity across task themes, care stages, and medical specialties. While top-performing models achieve comparable overall scores, they differ markedly in reasoning, evidence use, and longitudinal follow-up capabilities, and clinically actionable treatment planning remains a key bottleneck. We release ClinConsensus as an extensible benchmark to support the development and evaluation of medical LLMs that are robust, clinically grounded, and ready for real-world deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2603.02097v2",
-      "arxiv_url": "https://arxiv.org/abs/2603.02097v2",
-      "published": "2026-03-02T17:17:18Z",
-      "updated": "2026-03-03T04:45:44Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

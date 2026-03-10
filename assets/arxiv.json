@@ -1,8 +1,214 @@
 {
-  "generated_at_utc": "2026-03-09T02:43:09.983955Z",
+  "generated_at_utc": "2026-03-10T02:33:34.231207Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "RexDrug: Reliable Multi-Drug Combination Extraction through Reasoning-Enhanced LLMs",
+      "authors": [
+        "Zhijun Wang",
+        "Ling Luo",
+        "Dinghao Pan",
+        "Huan Zhuang",
+        "Lejing Yu",
+        "Yuanyuan Sun",
+        "Hongfei Lin"
+      ],
+      "abstract": "Automated Drug Combination Extraction (DCE) from large-scale biomedical literature is crucial for advancing precision medicine and pharmacological research. However, existing relation extraction methods primarily focus on binary interactions and struggle to model variable-length n-ary drug combinations, where complex compatibility logic and distributed evidence need to be considered. To address these limitations, we propose RexDrug, an end-to-end reasoning-enhanced relation extraction framework for n-ary drug combination extraction based on large language models. RexDrug adopts a two-stage training strategy. First, a multi-agent collaborative mechanism is utilized to automatically generate high-quality expert-like reasoning traces for supervised fine-tuning. Second, reinforcement learning with a multi-dimensional reward function specifically tailored for DCE is applied to further refine reasoning quality and extraction accuracy. Extensive experiments on the DrugComb dataset show that RexDrug consistently outperforms state-of-the-art baselines for n-ary extraction. Additional evaluation on the DDI13 corpus confirms its generalizability to binary drugdrug interaction tasks. Human expert assessment and automatic reasoning metrics further indicates that RexDrug produces coherent medical reasoning while accurately identifying complex therapeutic regimens. These results establish RexDrug as a scalable and reliable solution for complex biomedical relation extraction from unstructured text. The source code and data are available at https://github.com/DUTIR-BioNLP/RexDrug",
+      "pdf_url": "https://arxiv.org/pdf/2603.08166v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.08166v1",
+      "published": "2026-03-09T09:47:25Z",
+      "updated": "2026-03-09T09:47:25Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "MedQ-Deg: A Multidimensional Benchmark for Evaluating MLLMs Across Medical Image Quality Degradations",
+      "authors": [
+        "Jiyao Liu",
+        "Junzhi Ning",
+        "Chenglong Ma",
+        "Wanying Qu",
+        "Jianghan Shen",
+        "Siqi Luo",
+        "Jinjie Wei",
+        "Jin Ye",
+        "Pengze Li",
+        "Tianbin Li",
+        "Jiashi Lin",
+        "Hongming Shan",
+        "Xinzhe Luo",
+        "Xiaohong Liu",
+        "Lihao Liu",
+        "Junjun He",
+        "Ningsheng Xu"
+      ],
+      "abstract": "Despite impressive performance on standard benchmarks, multimodal large language models (MLLMs) face critical challenges in real-world clinical environments where medical images inevitably suffer various quality degradations. Existing benchmarks exhibit two key limitations: (1) absence of large-scale, multidimensional assessment across medical image quality gradients and (2) no systematic confidence calibration analysis. To address these gaps, we present MedQ-Deg, a comprehensive benchmark for evaluating medical MLLMs under image quality degradations. MedQ-Deg provides multi-dimensional evaluation spanning 18 distinct degradation types, 30 fine-grained capability dimensions, and 7 imaging modalities, with 24,894 question-answer pairs. Each degradation is implemented at 3 severity degrees, calibrated by expert radiologists. We further introduce Calibration Shift metric, which quantifies the gap between a model's perceived confidence and actual performance to assess metacognitive reliability under degradation. Our comprehensive evaluation of 40 mainstream MLLMs reveals several critical findings: (1) overall model performance degrades systematically as degradation severity increases, (2) models universally exhibit the AI Dunning-Kruger Effect, maintaining inappropriately high confidence despite severe accuracy collapse, and (3) models display markedly differentiated behavioral patterns across capability dimensions, imaging modalities, and degradation types. We hope MedQ-Deg drives progress toward medical MLLMs that are robust and trustworthy in real clinical practice.",
+      "pdf_url": "https://arxiv.org/pdf/2603.07769v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.07769v1",
+      "published": "2026-03-08T19:11:21Z",
+      "updated": "2026-03-08T19:11:21Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Where Do LLM-based Systems Break? A System-Level Security Framework for Risk Assessment and Treatment",
+      "authors": [
+        "Neha Nagaraja",
+        "Hayretdin Bahsi"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly integrated into safety-critical workflows, yet existing security analyses remain fragmented and often isolate model behavior from the broader system context. This work introduces a goal-driven risk assessment framework for LLM-powered systems that combines system modeling with Attack-Defense Trees (ADTrees) and Common Vulnerability Scoring System (CVSS)-based exploitability scoring to support structured, comparable analysis. We demonstrate the framework through a healthcare case study, modeling multi-step attack paths targeting intervention in medical procedures, leakage of electronic health record (EHR) data, and disruption of service availability. Our analysis indicates that threats spanning (i) conventional cyber, (ii) adversarial ML, and (iii) conversational attacks that manipulate prompts or context often consolidate into a small number of dominant paths and shared system choke points, enabling targeted defenses to yield meaningful reductions in path exploitability. By systematically comparing defense portfolios, we align these risks with established vulnerability management practices and provide a domain-agnostic workflow applicable to other LLM-enabled critical systems.",
+      "pdf_url": "https://arxiv.org/pdf/2603.07460v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.07460v1",
+      "published": "2026-03-08T04:30:27Z",
+      "updated": "2026-03-08T04:30:27Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Med-Evo: Test-time Self-evolution for Medical Multimodal Large Language Models",
+      "authors": [
+        "Dunyuan Xu",
+        "Xikai Yang",
+        "Juzheng Miao",
+        "Yaoqian Li",
+        "Jinpeng Li",
+        "Pheng-Ann Heng"
+      ],
+      "abstract": "Medical Multimodal Large Language Models (MLLMs) have demonstrated remarkable capabilities across diverse healthcare tasks. However, current post-training strategies, such as supervised fine-tuning and reinforcement learning, heavily depend on substantial annotated data while overlooking the potential of unlabeled test data for model enhancement. This limitation becomes particularly pronounced in medical domains, where acquiring extensive labeled medical data is difficult due to the strict data sensitivity and annotation complexity. Moreover, leveraging test data poses challenges in generating reliable supervision signals from unlabeled samples and maintaining stable self-evolution. To address these limitations, we propose Med-Evo, the first self-evolution framework for medical MLLMs that utilizes label-free reinforcement learning to promote model performance without requiring additional labeled data. Our framework introduces two key innovations: $1)$ Feature-driven Pseudo Labeling (FPL) that identifies semantic centroids from all heterogeneous candidate responses to select pseudo labels in each rollout, and $2)$ Hard-Soft Reward (HSR) that combines exact match with token-level assessment and semantic similarity to provide hierarchical reward. Experiments on three medical VQA benchmarks and two base MLLMs show clear advantages of our approach over SOTA methods, with significant improvements of 10.43\\% accuracy and 4.68\\% recall on the SLAKE dataset using Qwen2.5-VL, showing the effectiveness of our method.",
+      "pdf_url": "https://arxiv.org/pdf/2603.07443v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.07443v1",
+      "published": "2026-03-08T03:38:24Z",
+      "updated": "2026-03-08T03:38:24Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Taiwan Safety Benchmark and Breeze Guard: Toward Trustworthy AI for Taiwanese Mandarin",
+      "authors": [
+        "Po-Chun Hsu",
+        "Meng-Hsi Chen",
+        "Tsu Ling Chao",
+        "Chia Tien Han",
+        "Da-shan Shiu"
+      ],
+      "abstract": "Global safety models exhibit strong performance across widely used benchmarks, yet their training data rarely captures the cultural and linguistic nuances of Taiwanese Mandarin. This limitation results in systematic blind spots when interpreting region-specific risks such as localized financial scams, culturally embedded hate speech, and misinformation patterns. To address these gaps, we introduce TS-Bench (Taiwan Safety Benchmark), a standardized evaluation suite for assessing safety performance in Taiwanese Mandarin. TS-Bench contains 400 human-curated prompts spanning critical domains including financial fraud, medical misinformation, social discrimination, and political manipulation. In parallel, we present Breeze Guard, an 8B safety model derived from Breeze 2, our previously released general-purpose Taiwanese Mandarin LLM with strong cultural grounding from its original pre-training corpus. Breeze Guard is obtained through supervised fine-tuning on a large-scale, human-verified synthesized dataset targeting Taiwan-specific harms. Our central hypothesis is that effective safety detection requires the cultural grounding already present in the base model; safety fine-tuning alone is insufficient to introduce new socio linguistic knowledge from scratch. Empirically, Breeze Guard significantly outperforms the leading 8B general-purpose safety model, Granite Guardian 3.3, on TS-Bench (+0.17 overall F1), with particularly large gains in high-context categories such as scam (+0.66 F1) and financial malpractice (+0.43 F1). While the model shows slightly lower performance on English-centric benchmarks (ToxicChat, AegisSafetyTest), this tradeoff is expected for a regionally specialized safety model optimized for Taiwanese Mandarin. Together, Breeze Guard and TS-Bench establish a new foundation for trustworthy AI deployment in Taiwan.",
+      "pdf_url": "https://arxiv.org/pdf/2603.07286v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.07286v1",
+      "published": "2026-03-07T17:13:07Z",
+      "updated": "2026-03-07T17:13:07Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Deep Expert Injection for Anchoring Retinal VLMs with Domain-Specific Knowledge",
+      "authors": [
+        "Shuai Lu",
+        "Meng Wang",
+        "Jia Guo",
+        "Jiawei Du",
+        "Bo Liu",
+        "Shengzhu Yang",
+        "Weihang Zhang",
+        "Huazhu Fu",
+        "Huiqi Li"
+      ],
+      "abstract": "Large Vision Language Models (LVLMs) show immense potential for automated ophthalmic diagnosis. However, their clinical deployment is severely hindered by lacking domain-specific knowledge. In this work, we identify two structural deficiencies hindering reliable medical reasoning: 1) the Perception Gap, where general-purpose visual encoders fail to resolve fine-grained pathological cues (e.g., microaneurysms); and 2) the Reasoning Gap, where sparse visual evidence is progressively overridden by massive language priors in deeper transformer layers, leading to ungrounded hallucinations. To bridge these gaps, we propose EyExIn, a data-efficient framework designed to anchor retinal VLMs with expert knowledge via a Deep Expert Injection mechanism. Our architecture employs an Expert-Aware Dual-Stream encoding strategy that decouples visual representation into a general stream for anatomical context and a specialized expert stream for pathological semantics. To ensure high-fidelity integration, we design a Semantic-Adaptive Gated Fusion module, which dynamically amplifies subtle lesion signals while filtering irrelevant background noise. Furthermore, we introduce Adaptive Deep Expert Injection to embed persistent \"Vision Anchors\" by integrating fused visual features as residual biases directly into intermediate LLM layers. This mechanism creates a visual shortcut that forces the reasoning stack to remain strictly grounded in visual evidence. Extensive experiments across four benchmarks demonstrate that our model consistently outperforms massive proprietary systems. EyExIn significantly enhances domain-specific knowledge embedding and achieves state-of-the-art precision in ophthalmic visual question answering, advancing the development of trustworthy ophthalmic AI.",
+      "pdf_url": "https://arxiv.org/pdf/2603.07131v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.07131v1",
+      "published": "2026-03-07T09:43:49Z",
+      "updated": "2026-03-07T09:43:49Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "NuNext: Reframing Nucleus Detection as Next-Point Detection",
+      "authors": [
+        "Zhongyi Shui",
+        "Honglin Li",
+        "Xiaozhong Ji",
+        "Ye Zhang",
+        "Zijiang Yang",
+        "Chenglu Zhu",
+        "Yuxuan Sun",
+        "Kai Yao",
+        "Conghui He",
+        "Cheng Tan"
+      ],
+      "abstract": "Nucleus detection in histopathology is pivotal for a wide range of clinical applications. Existing approaches either regress nuclear proxy maps that require complex post-processing, or employ dense anchors or queries that introduce severe foreground-background imbalance. In this work, we reformulate nucleus detection as next-point prediction, wherein a multimodal large language model is developed to directly output foreground nucleus centroids from the input image. The model is trained in two stages. In the supervised learning stage, we propose spatial-aware soft supervision to relax strict centroid matching and a chain-of-visual-thought strategy to incorporate visual priors that facilitate coordinate prediction. In the reinforcement fine-tuning stage, we design distribution matching reward, low-variance group filtering, and fine-grained advantage shaping to further improve the model's detection quality. Extensive experiments on nine widely used benchmarks demonstrate the superiority of our method. Code will be released soon.",
+      "pdf_url": "https://arxiv.org/pdf/2603.07098v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.07098v1",
+      "published": "2026-03-07T08:17:35Z",
+      "updated": "2026-03-07T08:17:35Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "A Dynamic Self-Evolving Extraction System",
+      "authors": [
+        "Moin Amin-Naseri",
+        "Hannah Kim",
+        "Estevam Hruschka"
+      ],
+      "abstract": "The extraction of structured information from raw text is a fundamental component of many NLP applications, including document retrieval, ranking, and relevance estimation. High-quality extractions often require domain-specific accuracy, up-to-date understanding of specialized taxonomies, and the ability to incorporate emerging jargon and rare outliers. In many domains--such as medical, legal, and HR--the extraction model must also adapt to shifting terminology and benefit from explicit reasoning over structured knowledge. We propose DySECT, a Dynamic Self-Evolving Extraction and Curation Toolkit, which continually improves as it is used. The system incrementally populates a versatile, self-expanding knowledge base (KB) with triples extracted by the LLM. The KB further enriches itself through the integration of probabilistic knowledge and graph-based reasoning, gradually accumulating domain concepts and relationships. The enriched KB then feeds back into the LLM extractor via prompt tuning, sampling of relevant few-shot examples, or fine-tuning using KB-derived synthetic data. As a result, the system forms a symbiotic closed-loop cycle in which extraction continuously improves knowledge, and knowledge continuously improves extraction.",
+      "pdf_url": "https://arxiv.org/pdf/2603.06915v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.06915v1",
+      "published": "2026-03-06T22:26:35Z",
+      "updated": "2026-03-06T22:26:35Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "MedInjection-FR: Exploring the Role of Native, Synthetic, and Translated Data in Biomedical Instruction Tuning",
+      "authors": [
+        "Ikram Belmadani",
+        "Oumaima El Khettari",
+        "Pac\u00f4me Constant dit Beaufils",
+        "Benoit Favre",
+        "Richard Dufour"
+      ],
+      "abstract": "Instruction tuning has become essential for adapting large language models (LLMs) to follow domain-specific prompts. Yet, in specialized fields such as medicine, the scarcity of high-quality French instruction data limits effective supervision. To address this gap, we introduce MedInjection-FR, a large-scale French biomedical instruction dataset comprising 571K instruction-response pairs drawn from three complementary sources: native, synthetic, and translated data. We design a controlled experimental framework to systematically assess how data provenance affects instruction tuning, using Qwen-4B-Instruct fine-tuned across seven configurations combining these sources. Results show that native data yield the strongest performance, while mixed setups, particularly native and translated, provide complementary benefits. Synthetic data alone remains less effective but contributes positively when balanced with native supervision. Evaluation on open-ended QA combines automatic metrics, LLM-as-a-judge assessment, and human expert review; although LLM-based judgments correlate best with human ratings, they show sensitivity to verbosity. These findings highlight that data authenticity and diversity jointly shape downstream adaptation and that heterogeneous supervision can mitigate the scarcity of native French medical instructions.",
+      "pdf_url": "https://arxiv.org/pdf/2603.06905v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.06905v1",
+      "published": "2026-03-06T21:47:50Z",
+      "updated": "2026-03-06T21:47:50Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Empowering Locally Deployable Medical Agent via State Enhanced Logical Skills for FHIR-based Clinical Tasks",
+      "authors": [
+        "Wanrong Yang",
+        "Zhengliang Liu",
+        "Yuan Li",
+        "Bingjie Yan",
+        "Lingfang Li",
+        "Mingguang He",
+        "Dominik Wojtczak",
+        "Yalin Zheng",
+        "Danli Shi"
+      ],
+      "abstract": "While Large Language Models demonstrate immense potential as proactive Medical Agents, their real-world deployment is severely bottlenecked by data scarcity under privacy constraints. To overcome this, we propose State-Enhanced Logical-Skill Memory (SELSM), a training-free framework that distills simulated clinical trajectories into entity-agnostic operational rules within an abstract skill space. During inference, a Query-Anchored Two-Stage Retrieval mechanism dynamically fetches these entity-agnostic logical priors to guide the agent's step-by-step reasoning, effectively resolving the state polysemy problem. Evaluated on MedAgentBench -- the only authoritative high-fidelity virtual EHR sandbox benchmarked with real clinical data -- SELSM substantially elevates the zero-shot capabilities of locally deployable foundation models (30B--32B parameters). Notably, on the Qwen3-30B-A3B backbone, our framework completely eliminates task chain breakdowns to achieve a 100\\% completion rate, boosting the overall success rate by an absolute 22.67\\% and significantly outperforming existing memory-augmented baselines. This study demonstrates that equipping models with a dynamically updatable, state-enhanced cognitive scaffold is a privacy-preserving and computationally efficient pathway for local adaptation of AI agents to clinical information systems. While currently validated on FHIR-based EHR interactions as an initial step, the entity-agnostic design of SELSM provides a principled foundation toward broader clinical deployment.",
+      "pdf_url": "https://arxiv.org/pdf/2603.06902v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.06902v1",
+      "published": "2026-03-06T21:42:14Z",
+      "updated": "2026-03-06T21:42:14Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "RAMoEA-QA: Hierarchical Specialization for Robust Respiratory Audio Question Answering",
       "authors": [
@@ -115,206 +321,6 @@
       "categories": [
         "cs.CV",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "InfoGatherer: Principled Information Seeking via Evidence Retrieval and Strategic Questioning",
-      "authors": [
-        "Maksym Taranukhin",
-        "Shuyue Stella Li",
-        "Evangelos Milios",
-        "Geoff Pleiss",
-        "Yulia Tsvetkov",
-        "Vered Shwartz"
-      ],
-      "abstract": "LLMs are increasingly deployed in high-stakes domains such as medical triage and legal assistance, often as document-grounded QA systems in which a user provides a description, relevant sources are retrieved, and an LLM generates a prediction. In practice, initial user queries are often underspecified, and a single retrieval pass is insufficient for reliable decision-making, leading to incorrect and overly confident answers. While follow-up questioning can elicit missing information, existing methods typically depend on implicit, unstructured confidence signals from the LLM, making it difficult to determine what remains unknown, what information matters most, and when to stop asking questions. We propose InfoGatherer, a framework that gathers missing information from two complementary sources: retrieved domain documents and targeted follow-up questions to the user. InfoGatherer models uncertainty using Dempster-Shafer belief assignments over a structured evidential network, enabling principled fusion of incomplete and potentially contradictory evidence from both sources without prematurely collapsing to a definitive answer. Across legal and medical tasks, InfoGatherer outperforms strong baselines while requiring fewer turns. By grounding uncertainty in formal evidential theory rather than heuristic LLM signals, InfoGatherer moves towards trustworthy, interpretable decision support in domains where reliability is critical.",
-      "pdf_url": "https://arxiv.org/pdf/2603.05909v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.05909v1",
-      "published": "2026-03-06T04:55:03Z",
-      "updated": "2026-03-06T04:55:03Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Evolving Medical Imaging Agents via Experience-driven Self-skill Discovery",
-      "authors": [
-        "Lin Fan",
-        "Pengyu Dai",
-        "Zhipeng Deng",
-        "Haolin Wang",
-        "Xun Gong",
-        "Yefeng Zheng",
-        "Yafei Ou"
-      ],
-      "abstract": "Clinical image interpretation is inherently multi-step and tool-centric: clinicians iteratively combine visual evidence with patient context, quantify findings, and refine their decisions through a sequence of specialized procedures. While LLM-based agents promise to orchestrate such heterogeneous medical tools, existing systems treat tool sets and invocation strategies as static after deployment. This design is brittle under real-world domain shifts, across tasks, and evolving diagnostic requirements, where predefined tool chains frequently degrade and demand costly manual re-design. We propose MACRO, a self-evolving, experience-augmented medical agent that shifts from static tool composition to experience-driven tool discovery. From verified execution trajectories, the agent autonomously identifies recurring effective multi-step tool sequences, synthesizes them into reusable composite tools, and registers these as new high-level primitives that continuously expand its behavioral repertoire. A lightweight image-feature memory grounds tool selection in a visual-clinical context, while a GRPO-like training loop reinforces reliable invocation of discovered composites, enabling closed-loop self-improvement with minimal supervision. Extensive experiments across diverse medical imaging datasets and tasks demonstrate that autonomous composite tool discovery consistently improves multi-step orchestration accuracy and cross-domain generalization over strong baselines and recent state-of-the-art agentic methods, bridging the gap between brittle static tool use and adaptive, context-aware clinical AI assistance. Code will be available upon acceptance.",
-      "pdf_url": "https://arxiv.org/pdf/2603.05860v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.05860v1",
-      "published": "2026-03-06T03:34:47Z",
-      "updated": "2026-03-06T03:34:47Z",
-      "categories": [
-        "cs.AI",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "PVminerLLM: Structured Extraction of Patient Voice from Patient-Generated Text using Large Language Models",
-      "authors": [
-        "Samah Fodeh",
-        "Linhai Ma",
-        "Ganesh Puthiaraju",
-        "Srivani Talakokkul",
-        "Afshan Khan",
-        "Ashley Hagaman",
-        "Sarah Lowe",
-        "Aimee Roundtree"
-      ],
-      "abstract": "Motivation: Patient-generated text contains critical information about patients' lived experiences, social circumstances, and engagement in care, including factors that strongly influence adherence, care coordination, and health equity. However, these patient voice signals are rarely available in structured form, limiting their use in patient-centered outcomes research and clinical quality improvement. Reliable extraction of such information is therefore essential for understanding and addressing non-clinical drivers of health outcomes at scale.\n  Results: We introduce PVminer, a benchmark for structured extraction of patient voice, and propose PVminerLLM, a supervised fine-tuned large language model tailored to this task. Across multiple datasets and model sizes, PVminerLLM substantially outperforms prompt-based baselines, achieving up to 83.82% F1 for Code prediction, 80.74% F1 for Sub-code prediction, and 87.03% F1 for evidence Span extraction. Notably, strong performance is achieved even with smaller models, demonstrating that reliable patient voice extraction is feasible without extreme model scale. These results enable scalable analysis of social and experiential signals embedded in patient-generated text.\n  Availability and Implementation: Code, evaluation scripts, and trained LLMs will be released publicly. Annotated datasets will be made available upon request for research use.\n  Keywords: Large Language Models, Supervised Fine-Tuning, Medical Annotation, Patient-Generated Text, Clinical NLP",
-      "pdf_url": "https://arxiv.org/pdf/2603.05776v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.05776v1",
-      "published": "2026-03-06T00:16:05Z",
-      "updated": "2026-03-06T00:16:05Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Vision-Language System using Open-Source LLMs for Gestures in Medical Interpreter Robots",
-      "authors": [
-        "Thanh-Tung Ngo",
-        "Emma Murphy",
-        "Robert J. Ross"
-      ],
-      "abstract": "Effective communication is vital in healthcare, especially across language barriers, where non-verbal cues and gestures are critical. This paper presents a privacy-preserving vision-language framework for medical interpreter robots that detects specific speech acts (consent and instruction) and generates corresponding robotic gestures. Built on locally deployed open-source models, the system utilizes a Large Language Model (LLM) with few-shot prompting for intent detection. We also introduce a novel dataset of clinical conversations annotated for speech acts and paired with gesture clips. Our identification module achieved 0.90 accuracy, 0.93 weighted precision, and a 0.91 weighted F1-Score. Our approach significantly improves computational efficiency and, in user studies, outperforms the speech-gesture generation baseline in human-likeness while maintaining comparable appropriateness.",
-      "pdf_url": "https://arxiv.org/pdf/2603.05751v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.05751v1",
-      "published": "2026-03-05T23:21:39Z",
-      "updated": "2026-03-05T23:21:39Z",
-      "categories": [
-        "cs.RO",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Med-V1: Small Language Models for Zero-shot and Scalable Biomedical Evidence Attribution",
-      "authors": [
-        "Qiao Jin",
-        "Yin Fang",
-        "Lauren He",
-        "Yifan Yang",
-        "Guangzhi Xiong",
-        "Zhizheng Wang",
-        "Nicholas Wan",
-        "Joey Chan",
-        "Donald C. Comeau",
-        "Robert Leaman",
-        "Charalampos S. Floudas",
-        "Aidong Zhang",
-        "Michael F. Chiang",
-        "Yifan Peng",
-        "Zhiyong Lu"
-      ],
-      "abstract": "Assessing whether an article supports an assertion is essential for hallucination detection and claim verification. While large language models (LLMs) have the potential to automate this task, achieving strong performance requires frontier models such as GPT-5 that are prohibitively expensive to deploy at scale. To efficiently perform biomedical evidence attribution, we present Med-V1, a family of small language models with only three billion parameters. Trained on high-quality synthetic data newly developed in this study, Med-V1 substantially outperforms (+27.0% to +71.3%) its base models on five biomedical benchmarks unified into a verification format. Despite its smaller size, Med-V1 performs comparably to frontier LLMs such as GPT-5, along with high-quality explanations for its predictions. We use Med-V1 to conduct a first-of-its-kind use case study that quantifies hallucinations in LLM-generated answers under different citation instructions. Results show that the format instruction strongly affects citation validity and hallucination, with GPT-5 generating more claims but exhibiting hallucination rates similar to GPT-4o. Additionally, we present a second use case showing that Med-V1 can automatically identify high-stakes evidence misattributions in clinical practice guidelines, revealing potentially negative public health impacts that are otherwise challenging to identify at scale. Overall, Med-V1 provides an efficient and accurate lightweight alternative to frontier LLMs for practical and real-world applications in biomedical evidence attribution and verification tasks. Med-V1 is available at https://github.com/ncbi-nlp/Med-V1.",
-      "pdf_url": "https://arxiv.org/pdf/2603.05308v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.05308v1",
-      "published": "2026-03-05T15:48:43Z",
-      "updated": "2026-03-05T15:48:43Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CBR-to-SQL: Rethinking Retrieval-based Text-to-SQL using Case-based Reasoning in the Healthcare Domain",
-      "authors": [
-        "Hung Nguyen",
-        "Hans Moen",
-        "Pekka Marttinen"
-      ],
-      "abstract": "Extracting insights from Electronic Health Record (EHR) databases often requires SQL expertise, creating a barrier for healthcare decision-making and research. While a promising approach is to use Large Language Models (LLMs) to translate natural language questions to SQL via Retrieval-Augmented Generation (RAG), adapting this approach to the medical domain is non-trivial. Standard RAG relies on single-step retrieval from a static pool of examples, which struggles with the variability and noise of medical terminology and jargon. This often leads to anti-patterns such as expanding the task demonstration pool to improve coverage, which in turn introduces noise and scalability problems. To address this, we introduce CBR-to-SQL, a framework inspired by Case-Based Reasoning (CBR). It represents question-SQL pairs as reusable, abstract case templates and utilizes a two-stage retrieval process that first captures logical structure and then resolves relevant entities. Evaluated on MIMICSQL, CBR-to-SQL achieves state-of-the-art logical form accuracy and competitive execution accuracy. More importantly, it demonstrates higher sample efficiency and robustness than standard RAG approaches, particularly under data scarcity and retrieval perturbations.",
-      "pdf_url": "https://arxiv.org/pdf/2603.05569v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.05569v1",
-      "published": "2026-03-05T14:43:14Z",
-      "updated": "2026-03-05T14:43:14Z",
-      "categories": [
-        "cs.IR",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "MedCoRAG: Interpretable Hepatology Diagnosis via Hybrid Evidence Retrieval and Multispecialty Consensus",
-      "authors": [
-        "Zheng Li",
-        "Jiayi Xu",
-        "Zhikai Hu",
-        "Hechang Chen",
-        "Lele Cong",
-        "Yunyun Wang",
-        "Shuchao Pang"
-      ],
-      "abstract": "Diagnosing hepatic diseases accurately and interpretably is critical, yet it remains challenging in real-world clinical settings. Existing AI approaches for clinical diagnosis often lack transparency, structured reasoning, and deployability. Recent efforts have leveraged large language models (LLMs), retrieval-augmented generation (RAG), and multi-agent collaboration. However, these approaches typically retrieve evidence from a single source and fail to support iterative, role-specialized deliberation grounded in structured clinical data. To address this, we propose MedCoRAG (i.e., Medical Collaborative RAG), an end-to-end framework that generates diagnostic hypotheses from standardized abnormal findings and constructs a patient-specific evidence package by jointly retrieving and pruning UMLS knowledge graph paths and clinical guidelines. It then performs Multi-Agent Collaborative Reasoning: a Router Agent dynamically dispatches Specialist Agents based on case complexity; these agents iteratively reason over the evidence and trigger targeted re-retrievals when needed, while a Generalist Agent synthesizes all deliberations into a traceable consensus diagnosis that emulates multidisciplinary consultation. Experimental results on hepatic disease cases from MIMIC-IV show that MedCoRAG outperforms existing methods and closed-source models in both diagnostic performance and reasoning interpretability.",
-      "pdf_url": "https://arxiv.org/pdf/2603.05129v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.05129v1",
-      "published": "2026-03-05T12:58:45Z",
-      "updated": "2026-03-05T12:58:45Z",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "BioLLMAgent: A Hybrid Framework with Enhanced Structural Interpretability for Simulating Human Decision-Making in Computational Psychiatry",
-      "authors": [
-        "Zuo Fei",
-        "Kezhi Wang",
-        "Xiaomin Chen",
-        "Yizhou Huang"
-      ],
-      "abstract": "Computational psychiatry faces a fundamental trade-off: traditional reinforcement learning (RL) models offer interpretability but lack behavioral realism, while large language model (LLM) agents generate realistic behaviors but lack structural interpretability. We introduce BioLLMAgent, a novel hybrid framework that combines validated cognitive models with the generative capabilities of LLMs. The framework comprises three core components: (i) an Internal RL Engine for experience-driven value learning; (ii) an External LLM Shell for high-level cognitive strategies and therapeutic interventions; and (iii) a Decision Fusion Mechanism for integrating components via weighted utility. Comprehensive experiments on the Iowa Gambling Task (IGT) across six clinical and healthy datasets demonstrate that BioLLMAgent accurately reproduces human behavioral patterns while maintaining excellent parameter identifiability (correlations $>0.67$). Furthermore, the framework successfully simulates cognitive behavioral therapy (CBT) principles and reveals, through multi-agent dynamics, that community-wide educational interventions may outperform individual treatments. Validated across reward-punishment learning and temporal discounting tasks, BioLLMAgent provides a structurally interpretable \"computational sandbox\" for testing mechanistic hypotheses and intervention strategies in psychiatric research.",
-      "pdf_url": "https://arxiv.org/pdf/2603.05016v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.05016v1",
-      "published": "2026-03-05T10:04:24Z",
-      "updated": "2026-03-05T10:04:24Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CONE: Embeddings for Complex Numerical Data Preserving Unit and Variable Semantics",
-      "authors": [
-        "Gyanendra Shrestha",
-        "Anna Pyayt",
-        "Michael Gubanov"
-      ],
-      "abstract": "Large pre-trained models (LMs) and Large Language Models (LLMs) are typically effective at capturing language semantics and contextual relationships. However, these models encounter challenges in maintaining optimal performance on tasks involving numbers. Blindly treating numerical or structured data as terms is inadequate -- their semantics must be well understood and encoded by the models. In this paper, we propose CONE, a hybrid transformer encoder pre-trained model that encodes numbers, ranges, and gaussians into an embedding vector space preserving distance. We introduce a novel composite embedding construction algorithm that integrates numerical values, ranges or gaussians together with their associated units and attribute names to precisely capture their intricate semantics. We conduct extensive experimental evaluation on large-scale datasets across diverse domains (web, medical, finance, and government) that justifies CONE's strong numerical reasoning capabilities, achieving an F1 score of 87.28% on DROP, a remarkable improvement of up to 9.37% in F1 over state-of-the-art (SOTA) baselines, and outperforming major SOTA models with a significant Recall@10 gain of up to 25%.",
-      "pdf_url": "https://arxiv.org/pdf/2603.04741v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.04741v1",
-      "published": "2026-03-05T02:26:36Z",
-      "updated": "2026-03-05T02:26:36Z",
-      "categories": [
-        "cs.AI",
-        "cs.DB",
-        "cs.IR",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "A Multi-Agent Framework for Interpreting Multivariate Physiological Time Series",
-      "authors": [
-        "Davide Gabrielli",
-        "Paola Velardi",
-        "Stefano Faralli",
-        "Bardh Prenkaj"
-      ],
-      "abstract": "Continuous physiological monitoring is central to emergency care, yet deploying trustworthy AI is challenging. While LLMs can translate complex physiological signals into clinical narratives, it is unclear how agentic systems perform relative to zero-shot inference. To address these questions, we present Vivaldi, a role-structured multi-agent system that explains multivariate physiological time series. Due to regulatory constraints that preclude live deployment, we instantiate Vivaldi in a controlled, clinical pilot to a small, highly qualified cohort of emergency medicine experts, whose evaluations reveal a context-dependent picture that contrasts with prevailing assumptions that agentic reasoning uniformly improves performance. Our experiments show that agentic pipelines substantially benefit non-thinking and medically fine-tuned models, improving expert-rated explanation justification and relevance by +6.9 and +9.7 points, respectively. Contrarily, for thinking models, agentic orchestration often degrades explanation quality, including a 14-point drop in relevance, while improving diagnostic precision (ESI F1 +3.6). We also find that explicit tool-based computation is decisive for codifiable clinical metrics, whereas subjective targets, such as pain scores and length of stay, show limited or inconsistent changes. Expert evaluation further indicates that gains in clinical utility depend on visualization conventions, with medically specialized models achieving the most favorable trade-offs between utility and clarity. Together, these findings show that the value of agentic AI lies in the selective externalization of computation and structure rather than in maximal reasoning complexity, and highlight concrete design trade-offs and learned lessons, broadly applicable to explainable AI in safety-critical healthcare settings.",
-      "pdf_url": "https://arxiv.org/pdf/2603.04142v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.04142v1",
-      "published": "2026-03-04T14:55:46Z",
-      "updated": "2026-03-04T14:55:46Z",
-      "categories": [
-        "cs.LG"
       ]
     }
   ]

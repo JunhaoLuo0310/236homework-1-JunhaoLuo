@@ -1,8 +1,345 @@
 {
-  "generated_at_utc": "2026-03-10T02:33:34.231207Z",
+  "generated_at_utc": "2026-03-11T02:32:53.785225Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "PathMem: Toward Cognition-Aligned Memory Transformation for Pathology MLLMs",
+      "authors": [
+        "Jinyue Li",
+        "Yuci Liang",
+        "Qiankun Li",
+        "Xinheng Lyu",
+        "Jiayu Qian",
+        "Huabao Chen",
+        "Kun Wang",
+        "Zhigang Zeng",
+        "Anil Anthony Bharath",
+        "Yang Liu"
+      ],
+      "abstract": "Computational pathology demands both visual pattern recognition and dynamic integration of structured domain knowledge, including taxonomy, grading criteria, and clinical evidence. In practice, diagnostic reasoning requires linking morphological evidence with formal diagnostic and grading criteria. Although multimodal large language models (MLLMs) demonstrate strong vision language reasoning capabilities, they lack explicit mechanisms for structured knowledge integration and interpretable memory control. As a result, existing models struggle to consistently incorporate pathology-specific diagnostic standards during reasoning. Inspired by the hierarchical memory process of human pathologists, we propose PathMem, a memory-centric multimodal framework for pathology MLLMs. PathMem organizes structured pathology knowledge as a long-term memory (LTM) and introduces a Memory Transformer that models the dynamic transition from LTM to working memory (WM) through multimodal memory activation and context-aware knowledge grounding, enabling context-aware memory refinement for downstream reasoning. PathMem achieves SOTA performance across benchmarks, improving WSI-Bench report generation (12.8% WSI-Precision, 10.1% WSI-Relevance) and open-ended diagnosis by 9.7% and 8.9% over prior WSI-based models.",
+      "pdf_url": "https://arxiv.org/pdf/2603.09943v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.09943v1",
+      "published": "2026-03-10T17:35:49Z",
+      "updated": "2026-03-10T17:35:49Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "CLIOPATRA: Extracting Private Information from LLM Insights",
+      "authors": [
+        "Meenatchi Sundaram Muthu Selva Annamalai",
+        "Emiliano De Cristofaro",
+        "Peter Kairouz"
+      ],
+      "abstract": "As AI assistants become widely used, privacy-aware platforms like Anthropic's Clio have been introduced to generate insights from real-world AI use. Clio's privacy protections rely on layering multiple heuristic techniques together, including PII redaction, clustering, filtering, and LLM-based privacy auditing. In this paper, we put these claims to the test by presenting CLIOPATRA, the first privacy attack against \"privacy-preserving\" LLM insight systems. The attack involves a realistic adversary that carefully designs and inserts malicious chats into the system to break multiple layers of privacy protections and induce the leakage of sensitive information from a target user's chat.\n  We evaluated CLIOPATRA on synthetically generated medical target chats, demonstrating that an adversary who knows only the basic demographics of a target user and a single symptom can successfully extract the user's medical history in 39% of cases by just inspecting Clio's output. Furthermore, CLIOPATRA can reach close to 100% when Clio is configured with other state-of-the-art models and the adversary's knowledge of the target user is increased. We also show that existing ad hoc mitigations, such as LLM-based privacy auditing, are unreliable and fail to detect major leaks. Our findings indicate that even when layered, current heuristic protections are insufficient to adequately protect user data in LLM-based analysis systems.",
+      "pdf_url": "https://arxiv.org/pdf/2603.09781v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.09781v1",
+      "published": "2026-03-10T15:17:14Z",
+      "updated": "2026-03-10T15:17:14Z",
+      "categories": [
+        "cs.CR"
+      ]
+    },
+    {
+      "title": "FetalAgents: A Multi-Agent System for Fetal Ultrasound Image and Video Analysis",
+      "authors": [
+        "Xiaotian Hu",
+        "Junwei Huang",
+        "Mingxuan Liu",
+        "Kasidit Anmahapong",
+        "Yifei Chen",
+        "Yitong Luo",
+        "Yiming Huang",
+        "Xuguang Bai",
+        "Zihan Li",
+        "Yi Liao",
+        "Haibo Qu",
+        "Qiyuan Tian"
+      ],
+      "abstract": "Fetal ultrasound (US) is the primary imaging modality for prenatal screening, yet its interpretation relies heavily on the expertise of the clinician. Despite advances in deep learning and foundation models, existing automated tools for fetal US analysis struggle to balance task-specific accuracy with the whole-process versatility required to support end-to-end clinical workflows. To address these limitations, we propose FetalAgents, the first multi-agent system for comprehensive fetal US analysis. Through a lightweight, agentic coordination framework, FetalAgents dynamically orchestrates specialized vision experts to maximize performance across diagnosis, measurement, and segmentation. Furthermore, FetalAgents advances beyond static image analysis by supporting end-to-end video stream summarization, where keyframes are automatically identified across multiple anatomical planes, analyzed by coordinated experts, and synthesized with patient metadata into a structured clinical report. Extensive multi-center external evaluations across eight clinical tasks demonstrate that FetalAgents consistently delivers the most robust and accurate performance when compared against specialized models and multimodal large language models (MLLMs), ultimately providing an auditable, workflow-aligned solution for fetal ultrasound analysis and reporting.",
+      "pdf_url": "https://arxiv.org/pdf/2603.09733v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.09733v1",
+      "published": "2026-03-10T14:37:28Z",
+      "updated": "2026-03-10T14:37:28Z",
+      "categories": [
+        "cs.CV",
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "Automatic Cardiac Risk Management Classification using large-context Electronic Patients Health Records",
+      "authors": [
+        "Jacopo Vitale",
+        "David Della Morte",
+        "Luca Bacco",
+        "Mario Merone",
+        "Mark de Groot",
+        "Saskia Haitjema",
+        "Leandro Pecchia",
+        "Bram van Es"
+      ],
+      "abstract": "To overcome the limitations of manual administrative coding in geriatric Cardiovascular Risk Management, this study introduces an automated classification framework leveraging unstructured Electronic Health Records (EHRs). Using a dataset of 3,482 patients, we benchmarked three distinct modeling paradigms on longitudinal Dutch clinical narratives: classical machine learning baselines, specialized deep learning architectures optimized for large-context sequences, and general-purpose generative Large Language Models (LLMs) in a zero-shot setting. Additionally, we evaluated a late fusion strategy to integrate unstructured text with structured medication embeddings and anthropometric data. Our analysis reveals that the custom Transformer architecture outperforms both traditional methods and generative \\acs{llm}s, achieving the highest F1-scores and Matthews Correlation Coefficients. These findings underscore the critical role of specialized hierarchical attention mechanisms in capturing long-range dependencies within medical texts, presenting a robust, automated alternative to manual workflows for clinical risk stratification.",
+      "pdf_url": "https://arxiv.org/pdf/2603.09685v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.09685v1",
+      "published": "2026-03-10T13:55:42Z",
+      "updated": "2026-03-10T13:55:42Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Tracking Cancer Through Text: Longitudinal Extraction From Radiology Reports Using Open-Source Large Language Models",
+      "authors": [
+        "Luc Builtjes",
+        "Alessa Hering"
+      ],
+      "abstract": "Radiology reports capture crucial longitudinal information on tumor burden, treatment response, and disease progression, yet their unstructured narrative format complicates automated analysis. While large language models (LLMs) have advanced clinical text processing, most state-of-the-art systems remain proprietary, limiting their applicability in privacy-sensitive healthcare environments. We present a fully open-source, locally deployable pipeline for longitudinal information extraction from radiology reports, implemented using the \\texttt{llm\\_extractinator} framework. The system applies the \\texttt{qwen2.5-72b} model to extract and link target, non-target, and new lesion data across time points in accordance with RECIST criteria. Evaluation on 50 Dutch CT Thorax/Abdomen report pairs yielded high extraction performance, with attribute-level accuracies of 93.7\\% for target lesions, 94.9\\% for non-target lesions, and 94.0\\% for new lesions. The approach demonstrates that open-source LLMs can achieve clinically meaningful performance in multi-timepoint oncology tasks while ensuring data privacy and reproducibility. These results highlight the potential of locally deployable LLMs for scalable extraction of structured longitudinal data from routine clinical text.",
+      "pdf_url": "https://arxiv.org/pdf/2603.09638v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.09638v1",
+      "published": "2026-03-10T13:13:43Z",
+      "updated": "2026-03-10T13:13:43Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "TubeMLLM: A Foundation Model for Topology Knowledge Exploration in Vessel-like Anatomy",
+      "authors": [
+        "Yaoyu Liu",
+        "Minghui Zhang",
+        "Xin You",
+        "Hanxiao Zhang",
+        "Yun Gu"
+      ],
+      "abstract": "Modeling medical vessel-like anatomy is challenging due to its intricate topology and sensitivity to dataset shifts. Consequently, task-specific models often suffer from topological inconsistencies, including artificial disconnections and spurious merges. Motivated by the promise of multimodal large language models (MLLMs) for zero-shot generalization, we propose TubeMLLM, a unified foundation model that couples structured understanding with controllable generation for medical vessel-like anatomy. By integrating topological priors through explicit natural language prompting and aligning them with visual representations in a shared-attention architecture, TubeMLLM significantly enhances topology-aware perception. Furthermore, we construct TubeMData, a pionner multimodal benchmark comprising comprehensive topology-centric tasks, and introduce an adaptive loss weighting strategy to emphasize topology-critical regions during training. Extensive experiments on fifteen diverse datasets demonstrate our superiority. Quantitatively, TubeMLLM achieves state-of-the-art out-of-distribution performance, substantially reducing global topological discrepancies on color fundus photography (decreasing the $\u03b2_{0}$ number error from 37.42 to 8.58 compared to baselines). Notably, TubeMLLM exhibits exceptional zero-shot cross-modality transferring ability on unseen X-ray angiography, achieving a Dice score of 67.50% while significantly reducing the $\u03b2_{0}$ error to 1.21. TubeMLLM also maintains robustness against degradations such as blur, noise, and low resolution. Furthermore, in topology-aware understanding tasks, the model achieves 97.38% accuracy in evaluating mask topological quality, significantly outperforming standard vision-language baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2603.09217v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.09217v1",
+      "published": "2026-03-10T05:39:30Z",
+      "updated": "2026-03-10T05:39:30Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "VIVID-Med: LLM-Supervised Structured Pretraining for Deployable Medical ViTs",
+      "authors": [
+        "Xiyao Wang",
+        "Xiaoyu Tan",
+        "Yang Dai",
+        "Yuxuan Fu",
+        "Shuo Li",
+        "Xihe Qiu"
+      ],
+      "abstract": "Vision-language pretraining has driven significant progress in medical image analysis. However, current methods typically supervise visual encoders using one-hot labels or free-form text, neither of which effectively captures the complex semantic relationships among clinical findings. In this study, we introduce VIVID-Med, a novel framework that leverages a frozen large language model (LLM) as a structured semantic teacher to pretrain medical vision transformers (ViTs). VIVID-Med translates clinical findings into verifiable JSON field-state pairs via a Unified Medical Schema (UMS), utilizing answerability-aware masking to focus optimization. It then employs Structured Prediction Decomposition (SPD) to partition cross-attention into orthogonality-regularized query groups, extracting complementary visual aspects. Crucially, the LLM is discarded post-training, yielding a lightweight, deployable ViT-only backbone. We evaluated VIVID-Med across multiple settings: on CheXpert linear probing, it achieves a macro-AUC of 0.8588, outperforming BiomedCLIP by +6.65 points while using 500x less data. It also demonstrates robust zero-shot cross-domain transfer to NIH ChestX-ray14 (0.7225 macro-AUC) and strong cross-modality generalization to CT, achieving 0.8413 AUC on LIDC-IDRI lung nodule classification and 0.9969 macro-AUC on OrganAMNIST 11-organ classification. VIVID-Med offers a highly efficient, scalable alternative to deploying resource-heavy vision-language models in clinical settings.",
+      "pdf_url": "https://arxiv.org/pdf/2603.09109v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.09109v1",
+      "published": "2026-03-10T02:42:51Z",
+      "updated": "2026-03-10T02:42:51Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Meissa: Multi-modal Medical Agentic Intelligence",
+      "authors": [
+        "Yixiong Chen",
+        "Xinyi Bai",
+        "Yue Pan",
+        "Zongwei Zhou",
+        "Alan Yuille"
+      ],
+      "abstract": "Multi-modal large language models (MM-LLMs) have shown strong performance in medical image understanding and clinical reasoning. Recent medical agent systems extend them with tool use and multi-agent collaboration, enabling complex decision-making. However, these systems rely almost entirely on frontier models (e.g., GPT), whose API-based deployment incurs high cost, high latency, and privacy risks that conflict with on-premise clinical requirements. We present Meissa, a lightweight 4B-parameter medical MM-LLM that brings agentic capability offline. Instead of imitating static answers, Meissa learns both when to engage external interaction (strategy selection) and how to execute multi-step interaction (strategy execution) by distilling structured trajectories from frontier models. Specifically, we propose: (1) Unified trajectory modeling: trajectories (reasoning and action traces) are represented within a single state-action-observation formalism, allowing one model to generalize across heterogeneous medical environments. (2) Three-tier stratified supervision: the model's own errors trigger progressive escalation from direct reasoning to tool-augmented and multi-agent interaction, explicitly learning difficulty-aware strategy selection. (3) Prospective-retrospective supervision: pairing exploratory forward traces with hindsight-rationalized execution traces enables stable learning of effective interaction policies. Trained on 40K curated trajectories, Meissa matches or exceeds proprietary frontier agents in 10 of 16 evaluation settings across 13 medical benchmarks spanning radiology, pathology, and clinical reasoning. Using over 25x fewer parameters than typical frontier models like Gemini-3, Meissa operates fully offline with 22x lower end-to-end latency compared to API-based deployment. Data, models, and environments are released at https://github.com/Schuture/Meissa.",
+      "pdf_url": "https://arxiv.org/pdf/2603.09018v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.09018v1",
+      "published": "2026-03-09T23:22:55Z",
+      "updated": "2026-03-09T23:22:55Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Automated Thematic Analysis for Clinical Qualitative Data: Iterative Codebook Refinement with Full Provenance",
+      "authors": [
+        "Seungjun Yi",
+        "Joakim Nguyen",
+        "Huimin Xu",
+        "Terence Lim",
+        "Joseph Skrovan",
+        "Mehak Beri",
+        "Hitakshi Modi",
+        "Andrew Well",
+        "Carlos M. Mery",
+        "Yan Zhang",
+        "Mia K. Markey",
+        "Ying Ding"
+      ],
+      "abstract": "Thematic analysis (TA) is widely used in health research to extract patterns from patient interviews, yet manual TA faces challenges in scalability and reproducibility. LLM-based automation can help, but existing approaches produce codebooks with limited generalizability and lack analytic auditability. We present an automated TA framework combining iterative codebook refinement with full provenance tracking. Evaluated on five corpora spanning clinical interviews, social media, and public transcripts, the framework achieves the highest composite quality score on four of five datasets compared to six baselines. Iterative refinement yields statistically significant improvements on four datasets with large effect sizes, driven by gains in code reusability and distributional consistency while preserving descriptive quality. On two clinical corpora (pediatric cardiology), generated themes align with expert-annotated themes.",
+      "pdf_url": "https://arxiv.org/pdf/2603.08989v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.08989v1",
+      "published": "2026-03-09T22:25:58Z",
+      "updated": "2026-03-09T22:25:58Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "MAPLE: Elevating Medical Reasoning from Statistical Consensus to Process-Led Alignment",
+      "authors": [
+        "Kailong Fan",
+        "Anqi Pu",
+        "Yichen Wu",
+        "Wanhua Li",
+        "Yicong Li",
+        "Hanspeter Pfister",
+        "Huafeng Liu",
+        "Xiang Li",
+        "Quanzheng Li",
+        "Ning Guo"
+      ],
+      "abstract": "Recent advances in medical large language models have explored Test-Time Reinforcement Learning (TTRL) to enhance reasoning. However, standard TTRL often relies on majority voting (MV) as a heuristic supervision signal, which can be unreliable in complex medical scenarios where the most frequent reasoning path is not necessarily the clinically correct one. In this work, we propose a novel and unified training paradigm that integrates medical process reward models with TTRL to bridge the gap between test-time scaling (TTS) and parametric model optimization. Specifically, we advance the TTRL framework by replacing the conventional MV with a fine-grained, expert-aligned supervision paradigm using Med-RPM. This integration ensures that reinforcement learning is guided by medical correctness rather than mere consensus, effectively distilling search-based intelligence into the model's parametric memory. Extensive evaluations on four different benchmarks have demonstrated that our developed method consistently and significantly outperforms current TTRL and standalone PRM selection. Our findings establish that transitioning from stochastic heuristics to structured, step-wise rewards is essential for developing reliable and scalable medical AI systems",
+      "pdf_url": "https://arxiv.org/pdf/2603.08987v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.08987v1",
+      "published": "2026-03-09T22:22:57Z",
+      "updated": "2026-03-09T22:22:57Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "PathoScribe: Transforming Pathology Data into a Living Library with a Unified LLM-Driven Framework for Semantic Retrieval and Clinical Integration",
+      "authors": [
+        "Abdul Rehman Akbar",
+        "Samuel Wales-McGrath",
+        "Alejadro Levya",
+        "Lina Gokhale",
+        "Rajendra Singh",
+        "Wei Chen",
+        "Anil Parwani",
+        "Muhammad Khalid Khan Niazi"
+      ],
+      "abstract": "Pathology underpins modern diagnosis and cancer care, yet its most valuable asset, the accumulated experience encoded in millions of narrative reports, remains largely inaccessible. Although institutions are rapidly digitizing pathology workflows, storing data without effective mechanisms for retrieval and reasoning risks transforming archives into a passive data repository, where institutional knowledge exists but cannot meaningfully inform patient care. True progress requires not only digitization, but the ability for pathologists to interrogate prior similar cases in real time while evaluating a new diagnostic dilemma. We present PathoScribe, a unified retrieval-augmented large language model (LLM) framework designed to transform static pathology archives into a searchable, reasoning-enabled living library. PathoScribe enables natural language case exploration, automated cohort construction, clinical question answering, immunohistochemistry (IHC) panel recommendation, and prompt-controlled report transformation within a single architecture. Evaluated on 70,000 multi-institutional surgical pathology reports, PathoScribe achieved perfect Recall@10 for natural language case retrieval and demonstrated high-quality retrieval-grounded reasoning (mean reviewer score 4.56/5). Critically, the system operationalized automated cohort construction from free-text eligibility criteria, assembling research-ready cohorts in minutes (mean 9.2 minutes) with 91.3% agreement to human reviewers and no eligible cases incorrectly excluded, representing orders-of-magnitude reductions in time and cost compared to traditional manual chart review. This work establishes a scalable foundation for converting digital pathology archives from passive storage systems into active clinical intelligence platforms.",
+      "pdf_url": "https://arxiv.org/pdf/2603.08935v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.08935v1",
+      "published": "2026-03-09T21:09:24Z",
+      "updated": "2026-03-09T21:09:24Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.DL",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "A prospective clinical feasibility study of a conversational diagnostic AI in an ambulatory primary care clinic",
+      "authors": [
+        "Peter Brodeur",
+        "Jacob M. Koshy",
+        "Anil Palepu",
+        "Khaled Saab",
+        "Ava Homiar",
+        "Roma Ruparel",
+        "Charles Wu",
+        "Ryutaro Tanno",
+        "Joseph Xu",
+        "Amy Wang",
+        "David Stutz",
+        "Hannah M. Ferrera",
+        "David Barrett",
+        "Lindsey Crowley",
+        "Jihyeon Lee",
+        "Spencer E. Rittner",
+        "Ellery Wulczyn",
+        "Selena K. Zhang",
+        "Elahe Vedadi",
+        "Christine G. Kohn",
+        "Kavita Kulkarni",
+        "Vinay Kadiyala",
+        "Sara Mahdavi",
+        "Wendy Du",
+        "Jessica Williams",
+        "David Feinbloom",
+        "Renee Wong",
+        "Tao Tu",
+        "Petar Sirkovic",
+        "Alessio Orlandi",
+        "Christopher Semturs",
+        "Yun Liu",
+        "Juraj Gottweis",
+        "Dale R. Webster",
+        "Jo\u00eblle Barral",
+        "Katherine Chou",
+        "Pushmeet Kohli",
+        "Avinatan Hassidim",
+        "Yossi Matias",
+        "James Manyika",
+        "Rob Fields",
+        "Jonathan X. Li",
+        "Marc L. Cohen",
+        "Vivek Natarajan",
+        "Mike Schaekermann",
+        "Alan Karthikesalingam",
+        "Adam Rodman"
+      ],
+      "abstract": "Large language model (LLM)-based AI systems have shown promise for patient-facing diagnostic and management conversations in simulated settings. Translating these systems into clinical practice requires assessment in real-world workflows with rigorous safety oversight. We report a prospective, single-arm feasibility study of an LLM-based conversational AI, the Articulate Medical Intelligence Explorer (AMIE), conducting clinical history taking and presentation of potential diagnoses for patients to discuss with their provider at urgent care appointments at a leading academic medical center. 100 adult patients completed an AMIE text-chat interaction up to 5 days before their appointment. We sought to assess the conversational safety and quality, patient and clinician experience, and clinical reasoning capabilities compared to primary care providers (PCPs). Human safety supervisors monitored all patient-AMIE interactions in real time and did not need to intervene to stop any consultations based on pre-defined criteria. Patients reported high satisfaction and their attitudes towards AI improved after interacting with AMIE (p < 0.001). PCPs found AMIE's output useful with a positive impact on preparedness. AMIE's differential diagnosis (DDx) included the final diagnosis, per chart review 8 weeks post-encounter, in 90% of cases, with 75% top-3 accuracy. Blinded assessment of AMIE and PCP DDx and management (Mx) plans suggested similar overall DDx and Mx plan quality, without significant differences for DDx (p = 0.6) and appropriateness and safety of Mx (p = 0.1 and 1.0, respectively). PCPs outperformed AMIE in the practicality (p = 0.003) and cost effectiveness (p = 0.004) of Mx. While further research is needed, this study demonstrates the initial feasibility, safety, and user acceptance of conversational AI in a real-world setting, representing crucial steps towards clinical translation.",
+      "pdf_url": "https://arxiv.org/pdf/2603.08448v2",
+      "arxiv_url": "https://arxiv.org/abs/2603.08448v2",
+      "published": "2026-03-09T14:43:40Z",
+      "updated": "2026-03-10T16:32:14Z",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "COACH meets QUORUM: A Framework and Pipeline for Aligning User, Expert and Developer Perspectives in LLM-generated Health Counselling",
+      "authors": [
+        "Yee Man Ng",
+        "Bram van Dijk",
+        "Pieter Beynen",
+        "Otto Boekesteijn",
+        "Joris Jansen",
+        "Gerard van Oortmerssen",
+        "Max van Duijn",
+        "Marco Spruit"
+      ],
+      "abstract": "Systems that collect data on sleep, mood, and activities can provide valuable lifestyle counselling to populations affected by chronic disease and its consequences. Such systems are, however, challenging to develop; besides reliably extracting patterns from user-specific data, systems should also contextualise these patterns with validated medical knowledge to ensure the quality of counselling, and generate counselling that is relevant to a real user. We present QUORUM, a new evaluation framework that unifies these developer-, expert-, and user-centric perspectives, and show with a real case study that it meaningfully tracks convergence and divergence in stakeholder perspectives. We also present COACH, a Large Language Model-driven pipeline to generate personalised lifestyle counselling for our Healthy Chronos use case, a diary app for cancer patients and survivors. Applying our framework shows that overall, users, medical experts, and developers converge on the opinion that the generated counselling is relevant, of good quality, and reliable. However, stakeholders also diverge on the tone of the counselling, sensitivity to errors in pattern-extraction, and potential hallucinations. These findings highlight the importance of multi-stakeholder evaluation for consumer health language technologies and illustrate how a unified evaluation framework can support trustworthy, patient-centered NLP systems in real-world settings.",
+      "pdf_url": "https://arxiv.org/pdf/2603.08392v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.08392v1",
+      "published": "2026-03-09T13:49:57Z",
+      "updated": "2026-03-09T13:49:57Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "CORE-Acu: Structured Reasoning Traces and Knowledge Graph Safety Verification for Acupuncture Clinical Decision Support",
+      "authors": [
+        "Liuyi Xu",
+        "Yun Guo",
+        "Ming Chen",
+        "Zihan Dun",
+        "Yining Qian",
+        "An-Yang Lu",
+        "Shuang Li",
+        "Lijun Liu"
+      ],
+      "abstract": "Large language models (LLMs) show significant potential for clinical decision support (CDS), yet their black-box nature -- characterized by untraceable reasoning and probabilistic hallucinations -- poses severe challenges in acupuncture, a field demanding rigorous interpretability and safety. To address this, we propose CORE-Acu, a neuro-symbolic framework for acupuncture clinical decision support that integrates Structured Chain-of-Thought (S-CoT) with knowledge graph (KG) safety verification. First, we construct the first acupuncture Structured Reasoning Trace dataset and a schema-constrained fine-tuning framework. By enforcing an explicit causal chain from pattern identification to treatment principles, treatment plans, and acupoint selection, we transform implicit Traditional Chinese Medicine (TCM) reasoning into interpretable generation constraints, mitigating the opacity of LLM-based CDS. Furthermore, we construct a TCM safety knowledge graph and establish a ``Generate--Verify--Revise'' closed-loop inference system based on a Symbolic Veto Mechanism, employing deterministic rules to intercept hallucinations and enforce hard safety boundaries. Finally, we introduce the Lexicon-Matched Entity-Reweighted Loss (LMERL), which corrects terminology drift caused by the frequency--importance mismatch in general optimization by adaptively amplifying gradient contributions of high-risk entities during fine-tuning. Experiments on 1,000 held-out cases demonstrate CORE-Acu's superior entity fidelity and reasoning quality. Crucially, CORE-Acu achieved 0/1,000 observed safety violations (95\\% CI: 0--0.37\\%), whereas GPT-4o exhibited an 8.5\\% violation rate under identical rules. These results establish CORE-Acu as a robust neuro-symbolic framework for acupuncture clinical decision support, guaranteeing both reasoning auditability and strict safety compliance.",
+      "pdf_url": "https://arxiv.org/pdf/2603.08321v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.08321v1",
+      "published": "2026-03-09T12:42:23Z",
+      "updated": "2026-03-09T12:42:23Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "RexDrug: Reliable Multi-Drug Combination Extraction through Reasoning-Enhanced LLMs",
       "authors": [
@@ -21,306 +358,6 @@
       "updated": "2026-03-09T09:47:25Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "MedQ-Deg: A Multidimensional Benchmark for Evaluating MLLMs Across Medical Image Quality Degradations",
-      "authors": [
-        "Jiyao Liu",
-        "Junzhi Ning",
-        "Chenglong Ma",
-        "Wanying Qu",
-        "Jianghan Shen",
-        "Siqi Luo",
-        "Jinjie Wei",
-        "Jin Ye",
-        "Pengze Li",
-        "Tianbin Li",
-        "Jiashi Lin",
-        "Hongming Shan",
-        "Xinzhe Luo",
-        "Xiaohong Liu",
-        "Lihao Liu",
-        "Junjun He",
-        "Ningsheng Xu"
-      ],
-      "abstract": "Despite impressive performance on standard benchmarks, multimodal large language models (MLLMs) face critical challenges in real-world clinical environments where medical images inevitably suffer various quality degradations. Existing benchmarks exhibit two key limitations: (1) absence of large-scale, multidimensional assessment across medical image quality gradients and (2) no systematic confidence calibration analysis. To address these gaps, we present MedQ-Deg, a comprehensive benchmark for evaluating medical MLLMs under image quality degradations. MedQ-Deg provides multi-dimensional evaluation spanning 18 distinct degradation types, 30 fine-grained capability dimensions, and 7 imaging modalities, with 24,894 question-answer pairs. Each degradation is implemented at 3 severity degrees, calibrated by expert radiologists. We further introduce Calibration Shift metric, which quantifies the gap between a model's perceived confidence and actual performance to assess metacognitive reliability under degradation. Our comprehensive evaluation of 40 mainstream MLLMs reveals several critical findings: (1) overall model performance degrades systematically as degradation severity increases, (2) models universally exhibit the AI Dunning-Kruger Effect, maintaining inappropriately high confidence despite severe accuracy collapse, and (3) models display markedly differentiated behavioral patterns across capability dimensions, imaging modalities, and degradation types. We hope MedQ-Deg drives progress toward medical MLLMs that are robust and trustworthy in real clinical practice.",
-      "pdf_url": "https://arxiv.org/pdf/2603.07769v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.07769v1",
-      "published": "2026-03-08T19:11:21Z",
-      "updated": "2026-03-08T19:11:21Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Where Do LLM-based Systems Break? A System-Level Security Framework for Risk Assessment and Treatment",
-      "authors": [
-        "Neha Nagaraja",
-        "Hayretdin Bahsi"
-      ],
-      "abstract": "Large Language Models (LLMs) are increasingly integrated into safety-critical workflows, yet existing security analyses remain fragmented and often isolate model behavior from the broader system context. This work introduces a goal-driven risk assessment framework for LLM-powered systems that combines system modeling with Attack-Defense Trees (ADTrees) and Common Vulnerability Scoring System (CVSS)-based exploitability scoring to support structured, comparable analysis. We demonstrate the framework through a healthcare case study, modeling multi-step attack paths targeting intervention in medical procedures, leakage of electronic health record (EHR) data, and disruption of service availability. Our analysis indicates that threats spanning (i) conventional cyber, (ii) adversarial ML, and (iii) conversational attacks that manipulate prompts or context often consolidate into a small number of dominant paths and shared system choke points, enabling targeted defenses to yield meaningful reductions in path exploitability. By systematically comparing defense portfolios, we align these risks with established vulnerability management practices and provide a domain-agnostic workflow applicable to other LLM-enabled critical systems.",
-      "pdf_url": "https://arxiv.org/pdf/2603.07460v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.07460v1",
-      "published": "2026-03-08T04:30:27Z",
-      "updated": "2026-03-08T04:30:27Z",
-      "categories": [
-        "cs.CR",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Med-Evo: Test-time Self-evolution for Medical Multimodal Large Language Models",
-      "authors": [
-        "Dunyuan Xu",
-        "Xikai Yang",
-        "Juzheng Miao",
-        "Yaoqian Li",
-        "Jinpeng Li",
-        "Pheng-Ann Heng"
-      ],
-      "abstract": "Medical Multimodal Large Language Models (MLLMs) have demonstrated remarkable capabilities across diverse healthcare tasks. However, current post-training strategies, such as supervised fine-tuning and reinforcement learning, heavily depend on substantial annotated data while overlooking the potential of unlabeled test data for model enhancement. This limitation becomes particularly pronounced in medical domains, where acquiring extensive labeled medical data is difficult due to the strict data sensitivity and annotation complexity. Moreover, leveraging test data poses challenges in generating reliable supervision signals from unlabeled samples and maintaining stable self-evolution. To address these limitations, we propose Med-Evo, the first self-evolution framework for medical MLLMs that utilizes label-free reinforcement learning to promote model performance without requiring additional labeled data. Our framework introduces two key innovations: $1)$ Feature-driven Pseudo Labeling (FPL) that identifies semantic centroids from all heterogeneous candidate responses to select pseudo labels in each rollout, and $2)$ Hard-Soft Reward (HSR) that combines exact match with token-level assessment and semantic similarity to provide hierarchical reward. Experiments on three medical VQA benchmarks and two base MLLMs show clear advantages of our approach over SOTA methods, with significant improvements of 10.43\\% accuracy and 4.68\\% recall on the SLAKE dataset using Qwen2.5-VL, showing the effectiveness of our method.",
-      "pdf_url": "https://arxiv.org/pdf/2603.07443v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.07443v1",
-      "published": "2026-03-08T03:38:24Z",
-      "updated": "2026-03-08T03:38:24Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Taiwan Safety Benchmark and Breeze Guard: Toward Trustworthy AI for Taiwanese Mandarin",
-      "authors": [
-        "Po-Chun Hsu",
-        "Meng-Hsi Chen",
-        "Tsu Ling Chao",
-        "Chia Tien Han",
-        "Da-shan Shiu"
-      ],
-      "abstract": "Global safety models exhibit strong performance across widely used benchmarks, yet their training data rarely captures the cultural and linguistic nuances of Taiwanese Mandarin. This limitation results in systematic blind spots when interpreting region-specific risks such as localized financial scams, culturally embedded hate speech, and misinformation patterns. To address these gaps, we introduce TS-Bench (Taiwan Safety Benchmark), a standardized evaluation suite for assessing safety performance in Taiwanese Mandarin. TS-Bench contains 400 human-curated prompts spanning critical domains including financial fraud, medical misinformation, social discrimination, and political manipulation. In parallel, we present Breeze Guard, an 8B safety model derived from Breeze 2, our previously released general-purpose Taiwanese Mandarin LLM with strong cultural grounding from its original pre-training corpus. Breeze Guard is obtained through supervised fine-tuning on a large-scale, human-verified synthesized dataset targeting Taiwan-specific harms. Our central hypothesis is that effective safety detection requires the cultural grounding already present in the base model; safety fine-tuning alone is insufficient to introduce new socio linguistic knowledge from scratch. Empirically, Breeze Guard significantly outperforms the leading 8B general-purpose safety model, Granite Guardian 3.3, on TS-Bench (+0.17 overall F1), with particularly large gains in high-context categories such as scam (+0.66 F1) and financial malpractice (+0.43 F1). While the model shows slightly lower performance on English-centric benchmarks (ToxicChat, AegisSafetyTest), this tradeoff is expected for a regionally specialized safety model optimized for Taiwanese Mandarin. Together, Breeze Guard and TS-Bench establish a new foundation for trustworthy AI deployment in Taiwan.",
-      "pdf_url": "https://arxiv.org/pdf/2603.07286v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.07286v1",
-      "published": "2026-03-07T17:13:07Z",
-      "updated": "2026-03-07T17:13:07Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Deep Expert Injection for Anchoring Retinal VLMs with Domain-Specific Knowledge",
-      "authors": [
-        "Shuai Lu",
-        "Meng Wang",
-        "Jia Guo",
-        "Jiawei Du",
-        "Bo Liu",
-        "Shengzhu Yang",
-        "Weihang Zhang",
-        "Huazhu Fu",
-        "Huiqi Li"
-      ],
-      "abstract": "Large Vision Language Models (LVLMs) show immense potential for automated ophthalmic diagnosis. However, their clinical deployment is severely hindered by lacking domain-specific knowledge. In this work, we identify two structural deficiencies hindering reliable medical reasoning: 1) the Perception Gap, where general-purpose visual encoders fail to resolve fine-grained pathological cues (e.g., microaneurysms); and 2) the Reasoning Gap, where sparse visual evidence is progressively overridden by massive language priors in deeper transformer layers, leading to ungrounded hallucinations. To bridge these gaps, we propose EyExIn, a data-efficient framework designed to anchor retinal VLMs with expert knowledge via a Deep Expert Injection mechanism. Our architecture employs an Expert-Aware Dual-Stream encoding strategy that decouples visual representation into a general stream for anatomical context and a specialized expert stream for pathological semantics. To ensure high-fidelity integration, we design a Semantic-Adaptive Gated Fusion module, which dynamically amplifies subtle lesion signals while filtering irrelevant background noise. Furthermore, we introduce Adaptive Deep Expert Injection to embed persistent \"Vision Anchors\" by integrating fused visual features as residual biases directly into intermediate LLM layers. This mechanism creates a visual shortcut that forces the reasoning stack to remain strictly grounded in visual evidence. Extensive experiments across four benchmarks demonstrate that our model consistently outperforms massive proprietary systems. EyExIn significantly enhances domain-specific knowledge embedding and achieves state-of-the-art precision in ophthalmic visual question answering, advancing the development of trustworthy ophthalmic AI.",
-      "pdf_url": "https://arxiv.org/pdf/2603.07131v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.07131v1",
-      "published": "2026-03-07T09:43:49Z",
-      "updated": "2026-03-07T09:43:49Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "NuNext: Reframing Nucleus Detection as Next-Point Detection",
-      "authors": [
-        "Zhongyi Shui",
-        "Honglin Li",
-        "Xiaozhong Ji",
-        "Ye Zhang",
-        "Zijiang Yang",
-        "Chenglu Zhu",
-        "Yuxuan Sun",
-        "Kai Yao",
-        "Conghui He",
-        "Cheng Tan"
-      ],
-      "abstract": "Nucleus detection in histopathology is pivotal for a wide range of clinical applications. Existing approaches either regress nuclear proxy maps that require complex post-processing, or employ dense anchors or queries that introduce severe foreground-background imbalance. In this work, we reformulate nucleus detection as next-point prediction, wherein a multimodal large language model is developed to directly output foreground nucleus centroids from the input image. The model is trained in two stages. In the supervised learning stage, we propose spatial-aware soft supervision to relax strict centroid matching and a chain-of-visual-thought strategy to incorporate visual priors that facilitate coordinate prediction. In the reinforcement fine-tuning stage, we design distribution matching reward, low-variance group filtering, and fine-grained advantage shaping to further improve the model's detection quality. Extensive experiments on nine widely used benchmarks demonstrate the superiority of our method. Code will be released soon.",
-      "pdf_url": "https://arxiv.org/pdf/2603.07098v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.07098v1",
-      "published": "2026-03-07T08:17:35Z",
-      "updated": "2026-03-07T08:17:35Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "A Dynamic Self-Evolving Extraction System",
-      "authors": [
-        "Moin Amin-Naseri",
-        "Hannah Kim",
-        "Estevam Hruschka"
-      ],
-      "abstract": "The extraction of structured information from raw text is a fundamental component of many NLP applications, including document retrieval, ranking, and relevance estimation. High-quality extractions often require domain-specific accuracy, up-to-date understanding of specialized taxonomies, and the ability to incorporate emerging jargon and rare outliers. In many domains--such as medical, legal, and HR--the extraction model must also adapt to shifting terminology and benefit from explicit reasoning over structured knowledge. We propose DySECT, a Dynamic Self-Evolving Extraction and Curation Toolkit, which continually improves as it is used. The system incrementally populates a versatile, self-expanding knowledge base (KB) with triples extracted by the LLM. The KB further enriches itself through the integration of probabilistic knowledge and graph-based reasoning, gradually accumulating domain concepts and relationships. The enriched KB then feeds back into the LLM extractor via prompt tuning, sampling of relevant few-shot examples, or fine-tuning using KB-derived synthetic data. As a result, the system forms a symbiotic closed-loop cycle in which extraction continuously improves knowledge, and knowledge continuously improves extraction.",
-      "pdf_url": "https://arxiv.org/pdf/2603.06915v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.06915v1",
-      "published": "2026-03-06T22:26:35Z",
-      "updated": "2026-03-06T22:26:35Z",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "MedInjection-FR: Exploring the Role of Native, Synthetic, and Translated Data in Biomedical Instruction Tuning",
-      "authors": [
-        "Ikram Belmadani",
-        "Oumaima El Khettari",
-        "Pac\u00f4me Constant dit Beaufils",
-        "Benoit Favre",
-        "Richard Dufour"
-      ],
-      "abstract": "Instruction tuning has become essential for adapting large language models (LLMs) to follow domain-specific prompts. Yet, in specialized fields such as medicine, the scarcity of high-quality French instruction data limits effective supervision. To address this gap, we introduce MedInjection-FR, a large-scale French biomedical instruction dataset comprising 571K instruction-response pairs drawn from three complementary sources: native, synthetic, and translated data. We design a controlled experimental framework to systematically assess how data provenance affects instruction tuning, using Qwen-4B-Instruct fine-tuned across seven configurations combining these sources. Results show that native data yield the strongest performance, while mixed setups, particularly native and translated, provide complementary benefits. Synthetic data alone remains less effective but contributes positively when balanced with native supervision. Evaluation on open-ended QA combines automatic metrics, LLM-as-a-judge assessment, and human expert review; although LLM-based judgments correlate best with human ratings, they show sensitivity to verbosity. These findings highlight that data authenticity and diversity jointly shape downstream adaptation and that heterogeneous supervision can mitigate the scarcity of native French medical instructions.",
-      "pdf_url": "https://arxiv.org/pdf/2603.06905v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.06905v1",
-      "published": "2026-03-06T21:47:50Z",
-      "updated": "2026-03-06T21:47:50Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Empowering Locally Deployable Medical Agent via State Enhanced Logical Skills for FHIR-based Clinical Tasks",
-      "authors": [
-        "Wanrong Yang",
-        "Zhengliang Liu",
-        "Yuan Li",
-        "Bingjie Yan",
-        "Lingfang Li",
-        "Mingguang He",
-        "Dominik Wojtczak",
-        "Yalin Zheng",
-        "Danli Shi"
-      ],
-      "abstract": "While Large Language Models demonstrate immense potential as proactive Medical Agents, their real-world deployment is severely bottlenecked by data scarcity under privacy constraints. To overcome this, we propose State-Enhanced Logical-Skill Memory (SELSM), a training-free framework that distills simulated clinical trajectories into entity-agnostic operational rules within an abstract skill space. During inference, a Query-Anchored Two-Stage Retrieval mechanism dynamically fetches these entity-agnostic logical priors to guide the agent's step-by-step reasoning, effectively resolving the state polysemy problem. Evaluated on MedAgentBench -- the only authoritative high-fidelity virtual EHR sandbox benchmarked with real clinical data -- SELSM substantially elevates the zero-shot capabilities of locally deployable foundation models (30B--32B parameters). Notably, on the Qwen3-30B-A3B backbone, our framework completely eliminates task chain breakdowns to achieve a 100\\% completion rate, boosting the overall success rate by an absolute 22.67\\% and significantly outperforming existing memory-augmented baselines. This study demonstrates that equipping models with a dynamically updatable, state-enhanced cognitive scaffold is a privacy-preserving and computationally efficient pathway for local adaptation of AI agents to clinical information systems. While currently validated on FHIR-based EHR interactions as an initial step, the entity-agnostic design of SELSM provides a principled foundation toward broader clinical deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2603.06902v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.06902v1",
-      "published": "2026-03-06T21:42:14Z",
-      "updated": "2026-03-06T21:42:14Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "RAMoEA-QA: Hierarchical Specialization for Robust Respiratory Audio Question Answering",
-      "authors": [
-        "Gaia A. Bertolino",
-        "Yuwei Zhang",
-        "Tong Xia",
-        "Domenico Talia",
-        "Cecilia Mascolo"
-      ],
-      "abstract": "Conversational generative AI is rapidly entering healthcare, where general-purpose models must integrate heterogeneous patient signals and support diverse interaction styles while producing clinically meaningful outputs. In respiratory care, non-invasive audio, such as recordings captured via mobile microphones, enables scalable screening and longitudinal monitoring, but the heterogeneity challenge is particularly acute: recordings vary widely across devices, environments, and acquisition protocols, and questions span multiple intents and question formats. Existing biomedical audio-language QA systems are typically monolithic, without any specialization mechanisms for tackling diverse respiratory corpora and query intents. They are also only validated in limited settings, leaving it unclear how reliably they handle the shifts encountered in real-world settings.\n  To address these limitations, we introduce RAMoEA-QA, a hierarchically routed generative model for respiratory audio question answering that unifies multiple question types and supports both discrete and continuous targets within a single multimodal system. RAMoEA-QA applies two-stage conditional specialization: an Audio Mixture-of-Experts routes each recording to a suitable pre-trained audio encoder, and a Language Mixture-of-Adapters selects a LoRA adapter on a shared frozen LLM to match the query intent and answer format. By specializing both acoustic representations and generation behaviour per example, RAMoEA-QA consistently outperforms strong baselines and routing ablations with minimal parameter overhead, improving in-domain test accuracy to 0.72 (vs. 0.61 and 0.67 for state-of-the-art baselines) and exhibiting the strongest generalization for diagnosis under domain, modality, and task shifts.",
-      "pdf_url": "https://arxiv.org/pdf/2603.06542v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.06542v1",
-      "published": "2026-03-06T18:29:15Z",
-      "updated": "2026-03-06T18:29:15Z",
-      "categories": [
-        "cs.SD",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Doctor or Patient? Synergizing Diarization and ASR for Code-Switched Hinglish Medical Conditions Extraction",
-      "authors": [
-        "S\u00e9verin Baroudi",
-        "Yanis Labrak",
-        "Shashi Kumar",
-        "Joonas Kalda",
-        "Sergio Burdisso",
-        "Pawel Cyrta",
-        "Juan Ignacio Alvarez-Trejos",
-        "Petr Motlicek",
-        "Herv\u00e9 Bredin",
-        "Ricard Marxer"
-      ],
-      "abstract": "Extracting patient medical conditions from code-switched clinical spoken dialogues is challenging due to rapid turn-taking and highly overlapped speech. We present a robust system evaluated on the DISPLACE-M dataset of real-world Hinglish medical conversations. We propose an End-to-End Neural Diarization with Vector Clustering approach (EEND-VC) to accurately resolve dense and speaker overlaps in Doctor-Patient Conversations (DoPaCo). For transcription, we adapt a Qwen3 ASR model via domain-specific fine-tuning, Devanagari script normalization, and dialogue-level LLM error correction, achieving an 18.59% tcpWER. We benchmark open and proprietary LLMs on medical condition extraction, comparing our text-based cascade system against a multimodal End-to-End (E2E) audio framework. While proprietary E2E models set the performance ceiling, our open cascaded architecture is highly competitive, as it achieved first place out of 25 participants in the DISPLACE-M challenge. All implementations are publicly released.",
-      "pdf_url": "https://arxiv.org/pdf/2603.06373v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.06373v1",
-      "published": "2026-03-06T15:24:52Z",
-      "updated": "2026-03-06T15:24:52Z",
-      "categories": [
-        "eess.AS"
-      ]
-    },
-    {
-      "title": "Agentic retrieval-augmented reasoning reshapes collective reliability under model variability in radiology question answering",
-      "authors": [
-        "Mina Farajiamiri",
-        "Jeta Sopa",
-        "Saba Afza",
-        "Lisa Adams",
-        "Felix Barajas Ordonez",
-        "Tri-Thien Nguyen",
-        "Mahshad Lotfinia",
-        "Sebastian Wind",
-        "Keno Bressem",
-        "Sven Nebelung",
-        "Daniel Truhn",
-        "Soroosh Tayebi Arasteh"
-      ],
-      "abstract": "Agentic retrieval-augmented reasoning pipelines are increasingly used to structure how large language models (LLMs) incorporate external evidence in clinical decision support. These systems iteratively retrieve curated domain knowledge and synthesize it into structured reports before answer selection. Although such pipelines can improve performance, their impact on reliability under model variability remains unclear. In real-world deployment, heterogeneous models may align, diverge, or synchronize errors in ways not captured by accuracy. We evaluated 34 LLMs on 169 expert-curated publicly available radiology questions, comparing zero-shot inference with a radiology-specific multi-step agentic retrieval condition in which all models received identical structured evidence reports derived from curated radiology knowledge. Agentic inference reduced inter-model decision dispersion (median entropy 0.48 vs. 0.13) and increased robustness of correctness across models (mean 0.74 vs. 0.81). Majority consensus also increased overall (P<0.001). Consensus strength and robust correctness remained correlated under both strategies (\\r{ho}=0.88 for zero-shot; \\r{ho}=0.87 for agentic), although high agreement did not guarantee correctness. Response verbosity showed no meaningful association with correctness. Among 572 incorrect outputs, 72% were associated with moderate or high clinically assessed severity, although inter-rater agreement was low (\\k{appa}=0.02). Agentic retrieval therefore was associated with more concentrated decision distributions, stronger consensus, and higher cross-model robustness of correctness. These findings suggest that evaluating agentic systems through accuracy or agreement alone may not always be sufficient, and that complementary analyses of stability, cross-model robustness, and potential clinical impact are needed to characterize reliability under model variability.",
-      "pdf_url": "https://arxiv.org/pdf/2603.06271v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.06271v1",
-      "published": "2026-03-06T13:31:54Z",
-      "updated": "2026-03-06T13:31:54Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CRIMSON: A Clinically-Grounded LLM-Based Metric for Generative Radiology Report Evaluation",
-      "authors": [
-        "Mohammed Baharoon",
-        "Thibault Heintz",
-        "Siavash Raissi",
-        "Mahmoud Alabbad",
-        "Mona Alhammad",
-        "Hassan AlOmaish",
-        "Sung Eun Kim",
-        "Oishi Banerjee",
-        "Pranav Rajpurkar"
-      ],
-      "abstract": "We introduce CRIMSON, a clinically grounded evaluation framework for chest X-ray report generation that assesses reports based on diagnostic correctness, contextual relevance, and patient safety. Unlike prior metrics, CRIMSON incorporates full clinical context, including patient age, indication, and guideline-based decision rules, and prevents normal or clinically insignificant findings from exerting disproportionate influence on the overall score. The framework categorizes errors into a comprehensive taxonomy covering false findings, missing findings, and eight attribute-level errors (e.g., location, severity, measurement, and diagnostic overinterpretation). Each finding is assigned a clinical significance level (urgent, actionable non-urgent, non-actionable, or expected/benign), based on a guideline developed in collaboration with attending cardiothoracic radiologists, enabling severity-aware weighting that prioritizes clinically consequential mistakes over benign discrepancies. CRIMSON is validated through strong alignment with clinically significant error counts annotated by six board-certified radiologists in ReXVal (Kendalls tau = 0.61-0.71; Pearsons r = 0.71-0.84), and through two additional benchmarks that we introduce. In RadJudge, a targeted suite of clinically challenging pass-fail scenarios, CRIMSON shows consistent agreement with expert judgment. In RadPref, a larger radiologist preference benchmark of over 100 pairwise cases with structured error categorization, severity modeling, and 1-5 overall quality ratings from three cardiothoracic radiologists, CRIMSON achieves the strongest alignment with radiologist preferences. We release the metric, the evaluation benchmarks, RadJudge and RadPref, and a fine-tuned MedGemma model to enable reproducible evaluation of report generation, all available at https://github.com/rajpurkarlab/CRIMSON.",
-      "pdf_url": "https://arxiv.org/pdf/2603.06183v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.06183v1",
-      "published": "2026-03-06T11:43:42Z",
-      "updated": "2026-03-06T11:43:42Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "CORE-Seg: Reasoning-Driven Segmentation for Complex Lesions via Reinforcement Learning",
-      "authors": [
-        "Yuxin Xie",
-        "Yuming Chen",
-        "Yishan Yang",
-        "Yi Zhou",
-        "Tao Zhou",
-        "Zhen Zhao",
-        "Jiacheng Liu",
-        "Huazhu Fu"
-      ],
-      "abstract": "Medical image segmentation is undergoing a paradigm shift from conventional visual pattern matching to cognitive reasoning analysis. Although Multimodal Large Language Models (MLLMs) have shown promise in integrating linguistic and visual knowledge, significant gaps remain: existing general MLLMs possess broad common sense but lack the specialized visual reasoning required for complex lesions, whereas traditional segmentation models excel at pixel-level segmentation but lack logical interpretability. In this paper, we introduce ComLesion-14K, the first diverse Chain-of-Thought (CoT) benchmark for reasoning-driven complex lesion segmentation. To accomplish this task, we propose CORE-Seg, an end-to-end framework integrating reasoning with segmentation through a Semantic-Guided Prompt Adapter. We design a progressive training strategy from SFT to GRPO, equipped with an adaptive dual-granularity reward mechanism to mitigate reward sparsity. Our Method achieves state-of-the-art results with a mean Dice of 37.06\\% (14.89\\% higher than the second-best baseline), while reducing the failure rate to 18.42\\%. Project Page: https://xyxl024.github.io/CORE-Seg.github.io/",
-      "pdf_url": "https://arxiv.org/pdf/2603.05911v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.05911v1",
-      "published": "2026-03-06T04:58:55Z",
-      "updated": "2026-03-06T04:58:55Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
       ]
     }
   ]

@@ -1,8 +1,95 @@
 {
-  "generated_at_utc": "2026-03-11T02:32:53.785225Z",
+  "generated_at_utc": "2026-03-12T02:39:24.425655Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "A Hybrid Knowledge-Grounded Framework for Safety and Traceability in Prescription Verification",
+      "authors": [
+        "Yichi Zhu",
+        "Kan Ling",
+        "Xu Liu",
+        "Hengrun Zhang",
+        "Huiqun Yu",
+        "Guisheng Fan"
+      ],
+      "abstract": "Medication errors pose a significant threat to patient safety, making pharmacist verification (PV) a critical, yet heavily burdened, final safeguard. The direct application of Large Language Models (LLMs) to this zero-tolerance domain is untenable due to their inherent factual unreliability, lack of traceability, and weakness in complex reasoning. To address these challenges, we introduce PharmGraph-Auditor, a novel system designed for safe and evidence-grounded prescription auditing. The core of our system is a trustworthy Hybrid Pharmaceutical Knowledge Base (HPKB), implemented under the Virtual Knowledge Graph (VKG) paradigm. This architecture strategically unifies a relational component for set constraint satisfaction and a graph component for topological reasoning via a rigorous mapping layer. To construct this HPKB, we propose the Iterative Schema Refinement (ISR) algorithm, a framework that enables the co-evolution of both graph and relational schemas from medical texts. For auditing, we introduce the KB-grounded Chain of Verification (CoV), a new reasoning paradigm that transforms the LLM from an unreliable generator into a transparent reasoning engine. CoV decomposes the audit task into a sequence of verifiable queries against the HPKB, generating hybrid query plans to retrieve evidence from the most appropriate data store. Experimental results demonstrate robust knowledge extraction capabilities and show promises of using PharmGraph-Auditor to enable pharmacists to achieve safer and faster prescription verification.",
+      "pdf_url": "https://arxiv.org/pdf/2603.10891v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.10891v1",
+      "published": "2026-03-11T15:35:55Z",
+      "updated": "2026-03-11T15:35:55Z",
+      "categories": [
+        "cs.AI",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "PET-F2I: A Comprehensive Benchmark and Parameter-Efficient Fine-Tuning of LLMs for PET/CT Report Impression Generation",
+      "authors": [
+        "Yuchen Liu",
+        "Wenbo Zhang",
+        "Liling Peng",
+        "Yichi Zhang",
+        "Yu Fu",
+        "Xin Guo",
+        "Chao Qu",
+        "Yuan Qi",
+        "Le Xue"
+      ],
+      "abstract": "PET/CT imaging is pivotal in oncology and nuclear medicine, yet summarizing complex findings into precise diagnostic impressions is labor-intensive. While LLMs have shown promise in medical text generation, their capability in the highly specialized domain of PET/CT remains underexplored. We introduce PET-F2I-41K (PET Findings-to-Impression Benchmark), a large-scale benchmark for PET/CT impression generation using LLMs, constructed from over 41k real-world reports. Using PET-F2I-41K, we conduct a comprehensive evaluation of 27 models across proprietary frontier LLMs, open-source generalist models, and medical-domain LLMs, and we develop a domain-adapted 7B model (PET-F2I-7B) fine-tuned from Qwen2.5-7B-Instruct via LoRA. Beyond standard NLG metrics (e.g., BLEU-4, ROUGE-L, BERTScore), we propose three clinically grounded metrics - Entity Coverage Rate (ECR), Uncovered Entity Rate (UER), and Factual Consistency Rate (FCR) - to assess diagnostic completeness and factual reliability. Experiments reveal that neither frontier nor medical-domain LLMs perform adequately in zero-shot settings. In contrast, PET-F2I-7B achieves substantial gains (e.g., 0.708 BLEU-4) and a 3.0x improvement in entity coverage over the strongest baseline, while offering advantages in cost, latency, and privacy. Beyond this modeling contribution, PET-F2I-41K establishes a standardized evaluation framework to accelerate the development of reliable and clinically deployable reporting systems for PET/CT.",
+      "pdf_url": "https://arxiv.org/pdf/2603.10560v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.10560v1",
+      "published": "2026-03-11T09:08:25Z",
+      "updated": "2026-03-11T09:08:25Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "VERI-DPO: Evidence-Aware Alignment for Clinical Summarization via Claim Verification and Direct Preference Optimization",
+      "authors": [
+        "Weixin Liu",
+        "Congning Ni",
+        "Qingyuan Song",
+        "Susannah L. Rose",
+        "Christopher Symons",
+        "Murat Kantarcioglu",
+        "Bradley A. Malin",
+        "Zhijun Yin"
+      ],
+      "abstract": "Brief Hospital Course (BHC) narratives must be clinically useful yet faithful to fragmented EHR evidence. LLM-based clinical summarizers still introduce unsupported statements, and alignment can encourage omissions (\"say-less\" degeneration). We introduce VERI-DPO, which uses claim verification to mine preferences and distill them into the summarizer with Direct Preference Optimization (DPO). On MIMIC-III-Ext-VeriFact-BHC (100 ICU patients; patient-level splits), we train a retrieval-augmented verifier to label claim-evidence pairs as Supported, Not Supported, or Not Addressed via a single-token format. The verifier scores sentence-level claims from sampled BHC candidates and aggregates margins into a coverage-aware utility to mine length-controlled, contradiction-anchored preference pairs. On held-out patients, verifier-mined preferences separate candidates by contradiction density, and VERI-DPO reduces Not Supported claim rates from 10.7% to 1.9% (local verifier judge) and from 11.6% to 6.4% (GPT-4o judge), while improving validity from 76.7% to 82.5% and maintaining informative length.",
+      "pdf_url": "https://arxiv.org/pdf/2603.10494v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.10494v1",
+      "published": "2026-03-11T07:41:58Z",
+      "updated": "2026-03-11T07:41:58Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Human-AI Co-reasoning for Clinical Diagnosis with Evidence-Integrated Language Agent",
+      "authors": [
+        "Zhongzhen Huang",
+        "Yan Ling",
+        "Hong Chen",
+        "Ye Feng",
+        "Li Wu",
+        "Linjie Mu",
+        "Shaoting Zhang",
+        "Xiaofan Zhang",
+        "Kun Qian",
+        "Xiaomu Li"
+      ],
+      "abstract": "We present PULSE, a medical reasoning agent that combines a domain-tuned large language model with scientific literature retrieval to support diagnostic decision-making in complex real-world cases. To evaluate its capabilities, we curated a benchmark of 82 authentic endocrinology case reports encompassing a broad spectrum of disease types and incidence levels. In controlled experiments, we compared PULSE's performance against physicians with varying levels of expertise-from residents to senior specialists-and examined how AI assistance influenced human diagnostic reasoning. PULSE attained expert-competitive accuracy, outperforming residents and junior specialists while matching senior specialist performance at both Top@1 and Top@4 thresholds. Unlike physicians, whose accuracy declined with disease rarity, PULSE maintained stable performance across incidence tiers. The agent also exhibited adaptive reasoning, increasing output length with case difficulty in a manner analogous to the longer deliberation observed among expert clinicians. When used collaboratively, PULSE enabled physicians to correct initial errors and broaden diagnostic hypotheses, but also introduced risks of automation bias. The study explores both serial and concurrent collaboration workflows, revealing that PULSE offers robust support across common and rare presentations. These findings underscore both the promise and the limitations of language model-based agents in clinical diagnosis, and offer a framework for evaluating their role in real-world decision-making.",
+      "pdf_url": "https://arxiv.org/pdf/2603.10492v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.10492v1",
+      "published": "2026-03-11T07:39:05Z",
+      "updated": "2026-03-11T07:39:05Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "PathMem: Toward Cognition-Aligned Memory Transformation for Pathology MLLMs",
       "authors": [
@@ -97,11 +184,11 @@
         "Luc Builtjes",
         "Alessa Hering"
       ],
-      "abstract": "Radiology reports capture crucial longitudinal information on tumor burden, treatment response, and disease progression, yet their unstructured narrative format complicates automated analysis. While large language models (LLMs) have advanced clinical text processing, most state-of-the-art systems remain proprietary, limiting their applicability in privacy-sensitive healthcare environments. We present a fully open-source, locally deployable pipeline for longitudinal information extraction from radiology reports, implemented using the \\texttt{llm\\_extractinator} framework. The system applies the \\texttt{qwen2.5-72b} model to extract and link target, non-target, and new lesion data across time points in accordance with RECIST criteria. Evaluation on 50 Dutch CT Thorax/Abdomen report pairs yielded high extraction performance, with attribute-level accuracies of 93.7\\% for target lesions, 94.9\\% for non-target lesions, and 94.0\\% for new lesions. The approach demonstrates that open-source LLMs can achieve clinically meaningful performance in multi-timepoint oncology tasks while ensuring data privacy and reproducibility. These results highlight the potential of locally deployable LLMs for scalable extraction of structured longitudinal data from routine clinical text.",
-      "pdf_url": "https://arxiv.org/pdf/2603.09638v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.09638v1",
+      "abstract": "Radiology reports capture crucial longitudinal information on tumor burden, treatment response, and disease progression, yet their unstructured narrative format complicates automated analysis. While large language models (LLMs) have advanced clinical text processing, most state-of-the-art systems remain proprietary, limiting their applicability in privacy-sensitive healthcare environments. We present a fully open-source, locally deployable pipeline for longitudinal information extraction from radiology reports, implemented using the llm_extractinator framework. The system applies the qwen2.5-72b model to extract and link target, non-target, and new lesion data across time points in accordance with RECIST criteria. Evaluation on 50 Dutch CT Thorax/Abdomen report pairs yielded high extraction performance, with attribute-level accuracies of 93.7% for target lesions, 94.9% for non-target lesions, and 94.0% for new lesions. The approach demonstrates that open-source LLMs can achieve clinically meaningful performance in multi-timepoint oncology tasks while ensuring data privacy and reproducibility. These results highlight the potential of locally deployable LLMs for scalable extraction of structured longitudinal data from routine clinical text.",
+      "pdf_url": "https://arxiv.org/pdf/2603.09638v2",
+      "arxiv_url": "https://arxiv.org/abs/2603.09638v2",
       "published": "2026-03-10T13:13:43Z",
-      "updated": "2026-03-10T13:13:43Z",
+      "updated": "2026-03-11T08:57:33Z",
       "categories": [
         "cs.CL"
       ]
@@ -135,10 +222,10 @@
         "Xihe Qiu"
       ],
       "abstract": "Vision-language pretraining has driven significant progress in medical image analysis. However, current methods typically supervise visual encoders using one-hot labels or free-form text, neither of which effectively captures the complex semantic relationships among clinical findings. In this study, we introduce VIVID-Med, a novel framework that leverages a frozen large language model (LLM) as a structured semantic teacher to pretrain medical vision transformers (ViTs). VIVID-Med translates clinical findings into verifiable JSON field-state pairs via a Unified Medical Schema (UMS), utilizing answerability-aware masking to focus optimization. It then employs Structured Prediction Decomposition (SPD) to partition cross-attention into orthogonality-regularized query groups, extracting complementary visual aspects. Crucially, the LLM is discarded post-training, yielding a lightweight, deployable ViT-only backbone. We evaluated VIVID-Med across multiple settings: on CheXpert linear probing, it achieves a macro-AUC of 0.8588, outperforming BiomedCLIP by +6.65 points while using 500x less data. It also demonstrates robust zero-shot cross-domain transfer to NIH ChestX-ray14 (0.7225 macro-AUC) and strong cross-modality generalization to CT, achieving 0.8413 AUC on LIDC-IDRI lung nodule classification and 0.9969 macro-AUC on OrganAMNIST 11-organ classification. VIVID-Med offers a highly efficient, scalable alternative to deploying resource-heavy vision-language models in clinical settings.",
-      "pdf_url": "https://arxiv.org/pdf/2603.09109v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.09109v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.09109v2",
+      "arxiv_url": "https://arxiv.org/abs/2603.09109v2",
       "published": "2026-03-10T02:42:51Z",
-      "updated": "2026-03-10T02:42:51Z",
+      "updated": "2026-03-11T04:56:02Z",
       "categories": [
         "cs.CV",
         "cs.AI"
@@ -223,141 +310,16 @@
         "Muhammad Khalid Khan Niazi"
       ],
       "abstract": "Pathology underpins modern diagnosis and cancer care, yet its most valuable asset, the accumulated experience encoded in millions of narrative reports, remains largely inaccessible. Although institutions are rapidly digitizing pathology workflows, storing data without effective mechanisms for retrieval and reasoning risks transforming archives into a passive data repository, where institutional knowledge exists but cannot meaningfully inform patient care. True progress requires not only digitization, but the ability for pathologists to interrogate prior similar cases in real time while evaluating a new diagnostic dilemma. We present PathoScribe, a unified retrieval-augmented large language model (LLM) framework designed to transform static pathology archives into a searchable, reasoning-enabled living library. PathoScribe enables natural language case exploration, automated cohort construction, clinical question answering, immunohistochemistry (IHC) panel recommendation, and prompt-controlled report transformation within a single architecture. Evaluated on 70,000 multi-institutional surgical pathology reports, PathoScribe achieved perfect Recall@10 for natural language case retrieval and demonstrated high-quality retrieval-grounded reasoning (mean reviewer score 4.56/5). Critically, the system operationalized automated cohort construction from free-text eligibility criteria, assembling research-ready cohorts in minutes (mean 9.2 minutes) with 91.3% agreement to human reviewers and no eligible cases incorrectly excluded, representing orders-of-magnitude reductions in time and cost compared to traditional manual chart review. This work establishes a scalable foundation for converting digital pathology archives from passive storage systems into active clinical intelligence platforms.",
-      "pdf_url": "https://arxiv.org/pdf/2603.08935v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.08935v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.08935v2",
+      "arxiv_url": "https://arxiv.org/abs/2603.08935v2",
       "published": "2026-03-09T21:09:24Z",
-      "updated": "2026-03-09T21:09:24Z",
+      "updated": "2026-03-11T16:00:39Z",
       "categories": [
         "cs.CV",
         "cs.AI",
         "cs.CL",
         "cs.DL",
         "cs.IR"
-      ]
-    },
-    {
-      "title": "A prospective clinical feasibility study of a conversational diagnostic AI in an ambulatory primary care clinic",
-      "authors": [
-        "Peter Brodeur",
-        "Jacob M. Koshy",
-        "Anil Palepu",
-        "Khaled Saab",
-        "Ava Homiar",
-        "Roma Ruparel",
-        "Charles Wu",
-        "Ryutaro Tanno",
-        "Joseph Xu",
-        "Amy Wang",
-        "David Stutz",
-        "Hannah M. Ferrera",
-        "David Barrett",
-        "Lindsey Crowley",
-        "Jihyeon Lee",
-        "Spencer E. Rittner",
-        "Ellery Wulczyn",
-        "Selena K. Zhang",
-        "Elahe Vedadi",
-        "Christine G. Kohn",
-        "Kavita Kulkarni",
-        "Vinay Kadiyala",
-        "Sara Mahdavi",
-        "Wendy Du",
-        "Jessica Williams",
-        "David Feinbloom",
-        "Renee Wong",
-        "Tao Tu",
-        "Petar Sirkovic",
-        "Alessio Orlandi",
-        "Christopher Semturs",
-        "Yun Liu",
-        "Juraj Gottweis",
-        "Dale R. Webster",
-        "Jo\u00eblle Barral",
-        "Katherine Chou",
-        "Pushmeet Kohli",
-        "Avinatan Hassidim",
-        "Yossi Matias",
-        "James Manyika",
-        "Rob Fields",
-        "Jonathan X. Li",
-        "Marc L. Cohen",
-        "Vivek Natarajan",
-        "Mike Schaekermann",
-        "Alan Karthikesalingam",
-        "Adam Rodman"
-      ],
-      "abstract": "Large language model (LLM)-based AI systems have shown promise for patient-facing diagnostic and management conversations in simulated settings. Translating these systems into clinical practice requires assessment in real-world workflows with rigorous safety oversight. We report a prospective, single-arm feasibility study of an LLM-based conversational AI, the Articulate Medical Intelligence Explorer (AMIE), conducting clinical history taking and presentation of potential diagnoses for patients to discuss with their provider at urgent care appointments at a leading academic medical center. 100 adult patients completed an AMIE text-chat interaction up to 5 days before their appointment. We sought to assess the conversational safety and quality, patient and clinician experience, and clinical reasoning capabilities compared to primary care providers (PCPs). Human safety supervisors monitored all patient-AMIE interactions in real time and did not need to intervene to stop any consultations based on pre-defined criteria. Patients reported high satisfaction and their attitudes towards AI improved after interacting with AMIE (p < 0.001). PCPs found AMIE's output useful with a positive impact on preparedness. AMIE's differential diagnosis (DDx) included the final diagnosis, per chart review 8 weeks post-encounter, in 90% of cases, with 75% top-3 accuracy. Blinded assessment of AMIE and PCP DDx and management (Mx) plans suggested similar overall DDx and Mx plan quality, without significant differences for DDx (p = 0.6) and appropriateness and safety of Mx (p = 0.1 and 1.0, respectively). PCPs outperformed AMIE in the practicality (p = 0.003) and cost effectiveness (p = 0.004) of Mx. While further research is needed, this study demonstrates the initial feasibility, safety, and user acceptance of conversational AI in a real-world setting, representing crucial steps towards clinical translation.",
-      "pdf_url": "https://arxiv.org/pdf/2603.08448v2",
-      "arxiv_url": "https://arxiv.org/abs/2603.08448v2",
-      "published": "2026-03-09T14:43:40Z",
-      "updated": "2026-03-10T16:32:14Z",
-      "categories": [
-        "cs.HC",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "COACH meets QUORUM: A Framework and Pipeline for Aligning User, Expert and Developer Perspectives in LLM-generated Health Counselling",
-      "authors": [
-        "Yee Man Ng",
-        "Bram van Dijk",
-        "Pieter Beynen",
-        "Otto Boekesteijn",
-        "Joris Jansen",
-        "Gerard van Oortmerssen",
-        "Max van Duijn",
-        "Marco Spruit"
-      ],
-      "abstract": "Systems that collect data on sleep, mood, and activities can provide valuable lifestyle counselling to populations affected by chronic disease and its consequences. Such systems are, however, challenging to develop; besides reliably extracting patterns from user-specific data, systems should also contextualise these patterns with validated medical knowledge to ensure the quality of counselling, and generate counselling that is relevant to a real user. We present QUORUM, a new evaluation framework that unifies these developer-, expert-, and user-centric perspectives, and show with a real case study that it meaningfully tracks convergence and divergence in stakeholder perspectives. We also present COACH, a Large Language Model-driven pipeline to generate personalised lifestyle counselling for our Healthy Chronos use case, a diary app for cancer patients and survivors. Applying our framework shows that overall, users, medical experts, and developers converge on the opinion that the generated counselling is relevant, of good quality, and reliable. However, stakeholders also diverge on the tone of the counselling, sensitivity to errors in pattern-extraction, and potential hallucinations. These findings highlight the importance of multi-stakeholder evaluation for consumer health language technologies and illustrate how a unified evaluation framework can support trustworthy, patient-centered NLP systems in real-world settings.",
-      "pdf_url": "https://arxiv.org/pdf/2603.08392v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.08392v1",
-      "published": "2026-03-09T13:49:57Z",
-      "updated": "2026-03-09T13:49:57Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "CORE-Acu: Structured Reasoning Traces and Knowledge Graph Safety Verification for Acupuncture Clinical Decision Support",
-      "authors": [
-        "Liuyi Xu",
-        "Yun Guo",
-        "Ming Chen",
-        "Zihan Dun",
-        "Yining Qian",
-        "An-Yang Lu",
-        "Shuang Li",
-        "Lijun Liu"
-      ],
-      "abstract": "Large language models (LLMs) show significant potential for clinical decision support (CDS), yet their black-box nature -- characterized by untraceable reasoning and probabilistic hallucinations -- poses severe challenges in acupuncture, a field demanding rigorous interpretability and safety. To address this, we propose CORE-Acu, a neuro-symbolic framework for acupuncture clinical decision support that integrates Structured Chain-of-Thought (S-CoT) with knowledge graph (KG) safety verification. First, we construct the first acupuncture Structured Reasoning Trace dataset and a schema-constrained fine-tuning framework. By enforcing an explicit causal chain from pattern identification to treatment principles, treatment plans, and acupoint selection, we transform implicit Traditional Chinese Medicine (TCM) reasoning into interpretable generation constraints, mitigating the opacity of LLM-based CDS. Furthermore, we construct a TCM safety knowledge graph and establish a ``Generate--Verify--Revise'' closed-loop inference system based on a Symbolic Veto Mechanism, employing deterministic rules to intercept hallucinations and enforce hard safety boundaries. Finally, we introduce the Lexicon-Matched Entity-Reweighted Loss (LMERL), which corrects terminology drift caused by the frequency--importance mismatch in general optimization by adaptively amplifying gradient contributions of high-risk entities during fine-tuning. Experiments on 1,000 held-out cases demonstrate CORE-Acu's superior entity fidelity and reasoning quality. Crucially, CORE-Acu achieved 0/1,000 observed safety violations (95\\% CI: 0--0.37\\%), whereas GPT-4o exhibited an 8.5\\% violation rate under identical rules. These results establish CORE-Acu as a robust neuro-symbolic framework for acupuncture clinical decision support, guaranteeing both reasoning auditability and strict safety compliance.",
-      "pdf_url": "https://arxiv.org/pdf/2603.08321v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.08321v1",
-      "published": "2026-03-09T12:42:23Z",
-      "updated": "2026-03-09T12:42:23Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "RexDrug: Reliable Multi-Drug Combination Extraction through Reasoning-Enhanced LLMs",
-      "authors": [
-        "Zhijun Wang",
-        "Ling Luo",
-        "Dinghao Pan",
-        "Huan Zhuang",
-        "Lejing Yu",
-        "Yuanyuan Sun",
-        "Hongfei Lin"
-      ],
-      "abstract": "Automated Drug Combination Extraction (DCE) from large-scale biomedical literature is crucial for advancing precision medicine and pharmacological research. However, existing relation extraction methods primarily focus on binary interactions and struggle to model variable-length n-ary drug combinations, where complex compatibility logic and distributed evidence need to be considered. To address these limitations, we propose RexDrug, an end-to-end reasoning-enhanced relation extraction framework for n-ary drug combination extraction based on large language models. RexDrug adopts a two-stage training strategy. First, a multi-agent collaborative mechanism is utilized to automatically generate high-quality expert-like reasoning traces for supervised fine-tuning. Second, reinforcement learning with a multi-dimensional reward function specifically tailored for DCE is applied to further refine reasoning quality and extraction accuracy. Extensive experiments on the DrugComb dataset show that RexDrug consistently outperforms state-of-the-art baselines for n-ary extraction. Additional evaluation on the DDI13 corpus confirms its generalizability to binary drugdrug interaction tasks. Human expert assessment and automatic reasoning metrics further indicates that RexDrug produces coherent medical reasoning while accurately identifying complex therapeutic regimens. These results establish RexDrug as a scalable and reliable solution for complex biomedical relation extraction from unstructured text. The source code and data are available at https://github.com/DUTIR-BioNLP/RexDrug",
-      "pdf_url": "https://arxiv.org/pdf/2603.08166v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.08166v1",
-      "published": "2026-03-09T09:47:25Z",
-      "updated": "2026-03-09T09:47:25Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

@@ -1,8 +1,163 @@
 {
-  "generated_at_utc": "2026-03-12T02:39:24.425655Z",
+  "generated_at_utc": "2026-03-15T02:55:56.033641Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Increasing intelligence in AI agents can worsen collective outcomes",
+      "authors": [
+        "Neil F. Johnson"
+      ],
+      "abstract": "When resources are scarce, will a population of AI agents coordinate in harmony, or descend into tribal chaos? Diverse decision-making AI from different developers is entering everyday devices -- from phones and medical devices to battlefield drones and cars -- and these AI agents typically compete for finite shared resources such as charging slots, relay bandwidth, and traffic priority. Yet their collective dynamics and hence risks to users and society are poorly understood. Here we study AI-agent populations as the first system of real agents in which four key variables governing collective behaviour can be independently toggled: nature (innate LLM diversity), nurture (individual reinforcement learning), culture (emergent tribe formation), and resource scarcity. We show empirically and mathematically that when resources are scarce, AI model diversity and reinforcement learning increase dangerous system overload, though tribe formation lessens this risk. Meanwhile, some individuals profit handsomely. When resources are abundant, the same ingredients drive overload to near zero, though tribe formation makes the overload slightly worse. The crossover is arithmetical: it is where opposing tribes that form spontaneously first fit inside the available capacity. More sophisticated AI-agent populations are not better: whether their sophistication helps or harms depends entirely on a single number -- the capacity-to-population ratio -- that is knowable before any AI-agent ships.",
+      "pdf_url": "https://arxiv.org/pdf/2603.12129v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.12129v1",
+      "published": "2026-03-12T16:31:28Z",
+      "updated": "2026-03-12T16:31:28Z",
+      "categories": [
+        "cs.AI",
+        "cs.CY",
+        "cs.SI",
+        "econ.GN",
+        "physics.soc-ph"
+      ]
+    },
+    {
+      "title": "When OpenClaw Meets Hospital: Toward an Agentic Operating System for Dynamic Clinical Workflows",
+      "authors": [
+        "Wenxian Yang",
+        "Hanzheng Qiu",
+        "Bangqun Zhang",
+        "Chengquan Li",
+        "Zhiyong Huang",
+        "Xiaobin Feng",
+        "Rongshan Yu",
+        "Jiahong Dong"
+      ],
+      "abstract": "Large language model (LLM) agents extend conventional generative models by integrating reasoning, tool invocation, and persistent memory. Recent studies suggest that such agents may significantly improve clinical workflows by automating documentation, coordinating care processes, and assisting medical decision making. However, despite rapid progress, deploying autonomous agents in healthcare environments remains difficult due to reliability limitations, security risks, and insufficient long-term memory mechanisms. This work proposes an architecture that adapts LLM agents for hospital environments. The design introduces four core components: a restricted execution environment inspired by Linux multi-user systems, a document-centric interaction paradigm connecting patient and clinician agents, a page-indexed memory architecture designed for long-term clinical context management, and a curated medical skills library enabling ad-hoc composition of clinical task sequences. Rather than granting agents unrestricted system access, the architecture constrains actions through predefined skill interfaces and resource isolation. We argue that such a system forms the basis of an Agentic Operating System for Hospital, a computing layer capable of coordinating clinical workflows while maintaining safety, transparency, and auditability. This work grounds the design in OpenClaw, an open-source autonomous agent framework that structures agent capabilities as a curated library of discrete skills, and extends it with the infrastructure-level constraints required for safe clinical deployment.",
+      "pdf_url": "https://arxiv.org/pdf/2603.11721v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.11721v1",
+      "published": "2026-03-12T09:28:25Z",
+      "updated": "2026-03-12T09:28:25Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LLMs can construct powerful representations and streamline sample-efficient supervised learning",
+      "authors": [
+        "Ilker Demirel",
+        "Larry Shi",
+        "Zeshan Hussain",
+        "David Sontag"
+      ],
+      "abstract": "As real-world datasets become increasingly complex and heterogeneous, supervised learning is often bottlenecked by input representation design. Modeling multimodal data for downstream tasks, such as time-series, free text, and structured records, often requires non-trivial domain-specific engineering. We propose an agentic pipeline to streamline this process. First, an LLM analyzes a small but diverse subset of text-serialized input examples in-context to synthesize a global rubric, which acts as a programmatic specification for extracting and organizing evidence. This rubric is then used to transform naive text-serializations of inputs into a more standardized format for downstream models. We also describe local rubrics, which are task-conditioned summaries generated by an LLM. Across 15 clinical tasks from the EHRSHOT benchmark, our rubric-based approaches significantly outperform traditional count-feature models, naive text-serialization-based LLM baselines, and a clinical foundation model, which is pretrained on orders of magnitude more data. Beyond performance, rubrics offer several advantages for operational healthcare settings such as being easy to audit, cost-effectiveness to deploy at scale, and they can be converted to tabular representations that unlock a swath of machine learning techniques.",
+      "pdf_url": "https://arxiv.org/pdf/2603.11679v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.11679v1",
+      "published": "2026-03-12T08:44:06Z",
+      "updated": "2026-03-12T08:44:06Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Performance Evaluation of Open-Source Large Language Models for Assisting Pathology Report Writing in Japanese",
+      "authors": [
+        "Masataka Kawai",
+        "Singo Sakashita",
+        "Shumpei Ishikawa",
+        "Shogo Watanabe",
+        "Anna Matsuoka",
+        "Mikio Sakurai",
+        "Yasuto Fujimoto",
+        "Yoshiyuki Takahara",
+        "Atsushi Ohara",
+        "Hirohiko Miyake",
+        "Genichiro Ishii"
+      ],
+      "abstract": "The performance of large language models (LLMs) for supporting pathology report writing in Japanese remains unexplored. We evaluated seven open-source LLMs from three perspectives: (A) generation and information extraction of pathology diagnosis text following predefined formats, (B) correction of typographical errors in Japanese pathology reports, and (C) subjective evaluation of model-generated explanatory text by pathologists and clinicians. Thinking models and medical-specialized models showed advantages in structured reporting tasks that required reasoning and in typo correction. In contrast, preferences for explanatory outputs varied substantially across raters. Although the utility of LLMs differed by task, our findings suggest that open-source LLMs can be useful for assisting Japanese pathology report writing in limited but clinically relevant scenarios.",
+      "pdf_url": "https://arxiv.org/pdf/2603.11597v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.11597v1",
+      "published": "2026-03-12T06:40:04Z",
+      "updated": "2026-03-12T06:40:04Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Leveraging Large Language Models and Survival Analysis for Early Prediction of Chemotherapy Outcomes",
+      "authors": [
+        "Muhammad Faisal Shahid",
+        "Asad Afzal",
+        "Abdullah Faiz",
+        "Muhammad Siddiqui",
+        "Arbaz Khan Shehzad",
+        "Fatima Aftab",
+        "Muhammad Usamah Shahid",
+        "Muddassar Farooq"
+      ],
+      "abstract": "Chemotherapy for cancer treatment is costly and accompanied by severe side effects, highlighting the critical need for early prediction of treatment outcomes to improve patient management and informed decision-making. Predictive models for chemotherapy outcomes using real-world data face challenges, including the absence of explicit phenotypes and treatment outcome labels such as cancer progression and toxicity. This study addresses these challenges by employing Large Language Models (LLMs) and ontology-based techniques for phenotypes and outcome label extraction from patient notes. We focused on one of the most frequently occurring cancers, breast cancer, due to its high prevalence and significant variability in patient response to treatment, making it a critical area for improving predictive modeling. The dataset included features such as vitals, demographics, staging, biomarkers, and performance scales. Drug regimens and their combinations were extracted from the chemotherapy plans in the EMR data and shortlisted based on NCCN guidelines, verified with NIH standards, and analyzed through survival modeling. The proposed approach significantly reduced phenotypes sparsity and improved predictive accuracy. Random Survival Forest was used to predict time-to-failure, achieving a C-index of 73%, and utilized as a classifier at a specific time point to predict treatment outcomes, with accuracy and F1 scores above 70%. The outcome probabilities were validated for reliability by calibration curves. We extended our approach to four other cancer types. This research highlights the potential of early prediction of treatment outcomes using LLM-based clinical data extraction enabling personalized treatment plans with better patient outcomes.",
+      "pdf_url": "https://arxiv.org/pdf/2603.11594v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.11594v1",
+      "published": "2026-03-12T06:25:12Z",
+      "updated": "2026-03-12T06:25:12Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "AI Knows What's Wrong But Cannot Fix It: Helicoid Dynamics in Frontier LLMs Under High-Stakes Decisions",
+      "authors": [
+        "Alejandro R Jadad"
+      ],
+      "abstract": "Large language models perform reliably when their outputs can be checked: solving equations, writing code, retrieving facts. They perform differently when checking is impossible, as when a clinician chooses an irreversible treatment on incomplete data, or an investor commits capital under fundamental uncertainty.\n  Helicoid dynamics is the name given to a specific failure regime in that second domain: a system engages competently, drifts into error, accurately names what went wrong, then reproduces the same pattern at a higher level of sophistication, recognizing it is looping and continuing nonetheless. This prospective case series documents that regime across seven leading systems (Claude, ChatGPT, Gemini, Grok, DeepSeek, Perplexity, Llama families), tested across clinical diagnosis, investment evaluation, and high-consequence interview scenarios. Despite explicit protocols designed to sustain rigorous partnership, all exhibited the pattern. When confronted with it, they attributed its persistence to structural factors in their training, beyond what conversation can reach.\n  Under high stakes, when being rigorous and being comfortable diverge, these systems tend toward comfort, becoming less reliable precisely when reliability matters most. Twelve testable hypotheses are proposed, with implications for agentic AI oversight and human-AI collaboration.\n  The helicoid is tractable. Identifying it, naming it, and understanding its boundary conditions are the necessary first steps toward LLMs that remain trustworthy partners precisely when the decisions are hardest and the stakes are highest.",
+      "pdf_url": "https://arxiv.org/pdf/2603.11559v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.11559v1",
+      "published": "2026-03-12T05:25:49Z",
+      "updated": "2026-03-12T05:25:49Z",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Stop Listening to Me! How Multi-turn Conversations Can Degrade Diagnostic Reasoning",
+      "authors": [
+        "Kevin H. Guo",
+        "Chao Yan",
+        "Avinash Baidya",
+        "Katherine Brown",
+        "Xiang Gao",
+        "Juming Xiong",
+        "Zhijun Yin",
+        "Bradley A. Malin"
+      ],
+      "abstract": "Patients and clinicians are increasingly using chatbots powered by large language models (LLMs) for healthcare inquiries. While state-of-the-art LLMs exhibit high performance on static diagnostic reasoning benchmarks, their efficacy across multi-turn conversations, which better reflect real-world usage, has been understudied. In this paper, we evaluate 17 LLMs across three clinical datasets to investigate how partitioning the decision-space into multiple simpler turns of conversation influences their diagnostic reasoning. Specifically, we develop a \"stick-or-switch\" evaluation framework to measure model conviction (i.e., defending a correct diagnosis or safe abstention against incorrect suggestions) and flexibility (i.e., recognizing a correct suggestion when it is introduced) across conversations. Our experiments reveal the conversation tax, where multi-turn interactions consistently degrade performance when compared to single-shot baselines. Notably, models frequently abandon initial correct diagnoses and safe abstentions to align with incorrect user suggestions. Additionally, several models exhibit blind switching, failing to distinguish between signal and incorrect suggestions.",
+      "pdf_url": "https://arxiv.org/pdf/2603.11394v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.11394v1",
+      "published": "2026-03-12T00:14:35Z",
+      "updated": "2026-03-12T00:14:35Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "ThReadMed-QA: A Multi-Turn Medical Dialogue Benchmark from Real Patient Questions",
+      "authors": [
+        "Monica Munnangi",
+        "Saiph Savage"
+      ],
+      "abstract": "Medical question-answering benchmarks predominantly evaluate single-turn exchanges, failing to capture the iterative, clarification-seeking nature of real patient consultations. We introduce ThReadMed-QA, a benchmark of 2,437 fully-answered patient-physician conversation threads extracted from r/AskDocs, comprising 8,204 question-answer pairs across up to 9 turns. Unlike prior work relying on simulated dialogues, adversarial prompts, or exam-style questions, ThReadMed-QA captures authentic patient follow-up questions and verified physician responses, reflecting how patients naturally seek medical information online. We evaluate five state-of-the-art LLMs -- GPT-5, GPT-4o, Claude Haiku, Gemini 2.5 Flash, and Llama 3.3 70B -- on a stratified test split of 238 conversations (948 QA pairs) using a calibrated LLM-as-a-judge rubric grounded in physician ground truth. Even the strongest model, GPT-5, achieves only 41.2% fully-correct responses. All five models degrade significantly from turn 0 to turn 2 (p < 0.001), with wrong-answer rates roughly tripling by the third turn. We identify a fundamental tension between single-turn capability and multi-turn reliability: models with the strongest initial performance (GPT-5: 75.2; Claude Haiku: 72.3 out of 100) exhibit the steepest declines by turn 2 (dropping 16.2 and 25.0 points respectively), while weaker models plateau or marginally improve. We introduce two metrics to quantify multi-turn failure modes: Conversational Consistency Score (CCS) and Error Propagation Rate (EPR). CCS reveals that nearly one in three Claude Haiku conversations swings between a fully correct and a completely wrong response within the same thread. EPR shows that a single wrong turn raises the probability of a subsequent wrong turn by 1.9-6.1x across all models.",
+      "pdf_url": "https://arxiv.org/pdf/2603.11281v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.11281v1",
+      "published": "2026-03-11T20:17:57Z",
+      "updated": "2026-03-11T20:17:57Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "A Hybrid Knowledge-Grounded Framework for Safety and Traceability in Prescription Verification",
       "authors": [
@@ -153,173 +308,6 @@
       "categories": [
         "cs.CV",
         "cs.MA"
-      ]
-    },
-    {
-      "title": "Automatic Cardiac Risk Management Classification using large-context Electronic Patients Health Records",
-      "authors": [
-        "Jacopo Vitale",
-        "David Della Morte",
-        "Luca Bacco",
-        "Mario Merone",
-        "Mark de Groot",
-        "Saskia Haitjema",
-        "Leandro Pecchia",
-        "Bram van Es"
-      ],
-      "abstract": "To overcome the limitations of manual administrative coding in geriatric Cardiovascular Risk Management, this study introduces an automated classification framework leveraging unstructured Electronic Health Records (EHRs). Using a dataset of 3,482 patients, we benchmarked three distinct modeling paradigms on longitudinal Dutch clinical narratives: classical machine learning baselines, specialized deep learning architectures optimized for large-context sequences, and general-purpose generative Large Language Models (LLMs) in a zero-shot setting. Additionally, we evaluated a late fusion strategy to integrate unstructured text with structured medication embeddings and anthropometric data. Our analysis reveals that the custom Transformer architecture outperforms both traditional methods and generative \\acs{llm}s, achieving the highest F1-scores and Matthews Correlation Coefficients. These findings underscore the critical role of specialized hierarchical attention mechanisms in capturing long-range dependencies within medical texts, presenting a robust, automated alternative to manual workflows for clinical risk stratification.",
-      "pdf_url": "https://arxiv.org/pdf/2603.09685v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.09685v1",
-      "published": "2026-03-10T13:55:42Z",
-      "updated": "2026-03-10T13:55:42Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Tracking Cancer Through Text: Longitudinal Extraction From Radiology Reports Using Open-Source Large Language Models",
-      "authors": [
-        "Luc Builtjes",
-        "Alessa Hering"
-      ],
-      "abstract": "Radiology reports capture crucial longitudinal information on tumor burden, treatment response, and disease progression, yet their unstructured narrative format complicates automated analysis. While large language models (LLMs) have advanced clinical text processing, most state-of-the-art systems remain proprietary, limiting their applicability in privacy-sensitive healthcare environments. We present a fully open-source, locally deployable pipeline for longitudinal information extraction from radiology reports, implemented using the llm_extractinator framework. The system applies the qwen2.5-72b model to extract and link target, non-target, and new lesion data across time points in accordance with RECIST criteria. Evaluation on 50 Dutch CT Thorax/Abdomen report pairs yielded high extraction performance, with attribute-level accuracies of 93.7% for target lesions, 94.9% for non-target lesions, and 94.0% for new lesions. The approach demonstrates that open-source LLMs can achieve clinically meaningful performance in multi-timepoint oncology tasks while ensuring data privacy and reproducibility. These results highlight the potential of locally deployable LLMs for scalable extraction of structured longitudinal data from routine clinical text.",
-      "pdf_url": "https://arxiv.org/pdf/2603.09638v2",
-      "arxiv_url": "https://arxiv.org/abs/2603.09638v2",
-      "published": "2026-03-10T13:13:43Z",
-      "updated": "2026-03-11T08:57:33Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "TubeMLLM: A Foundation Model for Topology Knowledge Exploration in Vessel-like Anatomy",
-      "authors": [
-        "Yaoyu Liu",
-        "Minghui Zhang",
-        "Xin You",
-        "Hanxiao Zhang",
-        "Yun Gu"
-      ],
-      "abstract": "Modeling medical vessel-like anatomy is challenging due to its intricate topology and sensitivity to dataset shifts. Consequently, task-specific models often suffer from topological inconsistencies, including artificial disconnections and spurious merges. Motivated by the promise of multimodal large language models (MLLMs) for zero-shot generalization, we propose TubeMLLM, a unified foundation model that couples structured understanding with controllable generation for medical vessel-like anatomy. By integrating topological priors through explicit natural language prompting and aligning them with visual representations in a shared-attention architecture, TubeMLLM significantly enhances topology-aware perception. Furthermore, we construct TubeMData, a pionner multimodal benchmark comprising comprehensive topology-centric tasks, and introduce an adaptive loss weighting strategy to emphasize topology-critical regions during training. Extensive experiments on fifteen diverse datasets demonstrate our superiority. Quantitatively, TubeMLLM achieves state-of-the-art out-of-distribution performance, substantially reducing global topological discrepancies on color fundus photography (decreasing the $\u03b2_{0}$ number error from 37.42 to 8.58 compared to baselines). Notably, TubeMLLM exhibits exceptional zero-shot cross-modality transferring ability on unseen X-ray angiography, achieving a Dice score of 67.50% while significantly reducing the $\u03b2_{0}$ error to 1.21. TubeMLLM also maintains robustness against degradations such as blur, noise, and low resolution. Furthermore, in topology-aware understanding tasks, the model achieves 97.38% accuracy in evaluating mask topological quality, significantly outperforming standard vision-language baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2603.09217v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.09217v1",
-      "published": "2026-03-10T05:39:30Z",
-      "updated": "2026-03-10T05:39:30Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "VIVID-Med: LLM-Supervised Structured Pretraining for Deployable Medical ViTs",
-      "authors": [
-        "Xiyao Wang",
-        "Xiaoyu Tan",
-        "Yang Dai",
-        "Yuxuan Fu",
-        "Shuo Li",
-        "Xihe Qiu"
-      ],
-      "abstract": "Vision-language pretraining has driven significant progress in medical image analysis. However, current methods typically supervise visual encoders using one-hot labels or free-form text, neither of which effectively captures the complex semantic relationships among clinical findings. In this study, we introduce VIVID-Med, a novel framework that leverages a frozen large language model (LLM) as a structured semantic teacher to pretrain medical vision transformers (ViTs). VIVID-Med translates clinical findings into verifiable JSON field-state pairs via a Unified Medical Schema (UMS), utilizing answerability-aware masking to focus optimization. It then employs Structured Prediction Decomposition (SPD) to partition cross-attention into orthogonality-regularized query groups, extracting complementary visual aspects. Crucially, the LLM is discarded post-training, yielding a lightweight, deployable ViT-only backbone. We evaluated VIVID-Med across multiple settings: on CheXpert linear probing, it achieves a macro-AUC of 0.8588, outperforming BiomedCLIP by +6.65 points while using 500x less data. It also demonstrates robust zero-shot cross-domain transfer to NIH ChestX-ray14 (0.7225 macro-AUC) and strong cross-modality generalization to CT, achieving 0.8413 AUC on LIDC-IDRI lung nodule classification and 0.9969 macro-AUC on OrganAMNIST 11-organ classification. VIVID-Med offers a highly efficient, scalable alternative to deploying resource-heavy vision-language models in clinical settings.",
-      "pdf_url": "https://arxiv.org/pdf/2603.09109v2",
-      "arxiv_url": "https://arxiv.org/abs/2603.09109v2",
-      "published": "2026-03-10T02:42:51Z",
-      "updated": "2026-03-11T04:56:02Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Meissa: Multi-modal Medical Agentic Intelligence",
-      "authors": [
-        "Yixiong Chen",
-        "Xinyi Bai",
-        "Yue Pan",
-        "Zongwei Zhou",
-        "Alan Yuille"
-      ],
-      "abstract": "Multi-modal large language models (MM-LLMs) have shown strong performance in medical image understanding and clinical reasoning. Recent medical agent systems extend them with tool use and multi-agent collaboration, enabling complex decision-making. However, these systems rely almost entirely on frontier models (e.g., GPT), whose API-based deployment incurs high cost, high latency, and privacy risks that conflict with on-premise clinical requirements. We present Meissa, a lightweight 4B-parameter medical MM-LLM that brings agentic capability offline. Instead of imitating static answers, Meissa learns both when to engage external interaction (strategy selection) and how to execute multi-step interaction (strategy execution) by distilling structured trajectories from frontier models. Specifically, we propose: (1) Unified trajectory modeling: trajectories (reasoning and action traces) are represented within a single state-action-observation formalism, allowing one model to generalize across heterogeneous medical environments. (2) Three-tier stratified supervision: the model's own errors trigger progressive escalation from direct reasoning to tool-augmented and multi-agent interaction, explicitly learning difficulty-aware strategy selection. (3) Prospective-retrospective supervision: pairing exploratory forward traces with hindsight-rationalized execution traces enables stable learning of effective interaction policies. Trained on 40K curated trajectories, Meissa matches or exceeds proprietary frontier agents in 10 of 16 evaluation settings across 13 medical benchmarks spanning radiology, pathology, and clinical reasoning. Using over 25x fewer parameters than typical frontier models like Gemini-3, Meissa operates fully offline with 22x lower end-to-end latency compared to API-based deployment. Data, models, and environments are released at https://github.com/Schuture/Meissa.",
-      "pdf_url": "https://arxiv.org/pdf/2603.09018v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.09018v1",
-      "published": "2026-03-09T23:22:55Z",
-      "updated": "2026-03-09T23:22:55Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Automated Thematic Analysis for Clinical Qualitative Data: Iterative Codebook Refinement with Full Provenance",
-      "authors": [
-        "Seungjun Yi",
-        "Joakim Nguyen",
-        "Huimin Xu",
-        "Terence Lim",
-        "Joseph Skrovan",
-        "Mehak Beri",
-        "Hitakshi Modi",
-        "Andrew Well",
-        "Carlos M. Mery",
-        "Yan Zhang",
-        "Mia K. Markey",
-        "Ying Ding"
-      ],
-      "abstract": "Thematic analysis (TA) is widely used in health research to extract patterns from patient interviews, yet manual TA faces challenges in scalability and reproducibility. LLM-based automation can help, but existing approaches produce codebooks with limited generalizability and lack analytic auditability. We present an automated TA framework combining iterative codebook refinement with full provenance tracking. Evaluated on five corpora spanning clinical interviews, social media, and public transcripts, the framework achieves the highest composite quality score on four of five datasets compared to six baselines. Iterative refinement yields statistically significant improvements on four datasets with large effect sizes, driven by gains in code reusability and distributional consistency while preserving descriptive quality. On two clinical corpora (pediatric cardiology), generated themes align with expert-annotated themes.",
-      "pdf_url": "https://arxiv.org/pdf/2603.08989v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.08989v1",
-      "published": "2026-03-09T22:25:58Z",
-      "updated": "2026-03-09T22:25:58Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "MAPLE: Elevating Medical Reasoning from Statistical Consensus to Process-Led Alignment",
-      "authors": [
-        "Kailong Fan",
-        "Anqi Pu",
-        "Yichen Wu",
-        "Wanhua Li",
-        "Yicong Li",
-        "Hanspeter Pfister",
-        "Huafeng Liu",
-        "Xiang Li",
-        "Quanzheng Li",
-        "Ning Guo"
-      ],
-      "abstract": "Recent advances in medical large language models have explored Test-Time Reinforcement Learning (TTRL) to enhance reasoning. However, standard TTRL often relies on majority voting (MV) as a heuristic supervision signal, which can be unreliable in complex medical scenarios where the most frequent reasoning path is not necessarily the clinically correct one. In this work, we propose a novel and unified training paradigm that integrates medical process reward models with TTRL to bridge the gap between test-time scaling (TTS) and parametric model optimization. Specifically, we advance the TTRL framework by replacing the conventional MV with a fine-grained, expert-aligned supervision paradigm using Med-RPM. This integration ensures that reinforcement learning is guided by medical correctness rather than mere consensus, effectively distilling search-based intelligence into the model's parametric memory. Extensive evaluations on four different benchmarks have demonstrated that our developed method consistently and significantly outperforms current TTRL and standalone PRM selection. Our findings establish that transitioning from stochastic heuristics to structured, step-wise rewards is essential for developing reliable and scalable medical AI systems",
-      "pdf_url": "https://arxiv.org/pdf/2603.08987v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.08987v1",
-      "published": "2026-03-09T22:22:57Z",
-      "updated": "2026-03-09T22:22:57Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "PathoScribe: Transforming Pathology Data into a Living Library with a Unified LLM-Driven Framework for Semantic Retrieval and Clinical Integration",
-      "authors": [
-        "Abdul Rehman Akbar",
-        "Samuel Wales-McGrath",
-        "Alejadro Levya",
-        "Lina Gokhale",
-        "Rajendra Singh",
-        "Wei Chen",
-        "Anil Parwani",
-        "Muhammad Khalid Khan Niazi"
-      ],
-      "abstract": "Pathology underpins modern diagnosis and cancer care, yet its most valuable asset, the accumulated experience encoded in millions of narrative reports, remains largely inaccessible. Although institutions are rapidly digitizing pathology workflows, storing data without effective mechanisms for retrieval and reasoning risks transforming archives into a passive data repository, where institutional knowledge exists but cannot meaningfully inform patient care. True progress requires not only digitization, but the ability for pathologists to interrogate prior similar cases in real time while evaluating a new diagnostic dilemma. We present PathoScribe, a unified retrieval-augmented large language model (LLM) framework designed to transform static pathology archives into a searchable, reasoning-enabled living library. PathoScribe enables natural language case exploration, automated cohort construction, clinical question answering, immunohistochemistry (IHC) panel recommendation, and prompt-controlled report transformation within a single architecture. Evaluated on 70,000 multi-institutional surgical pathology reports, PathoScribe achieved perfect Recall@10 for natural language case retrieval and demonstrated high-quality retrieval-grounded reasoning (mean reviewer score 4.56/5). Critically, the system operationalized automated cohort construction from free-text eligibility criteria, assembling research-ready cohorts in minutes (mean 9.2 minutes) with 91.3% agreement to human reviewers and no eligible cases incorrectly excluded, representing orders-of-magnitude reductions in time and cost compared to traditional manual chart review. This work establishes a scalable foundation for converting digital pathology archives from passive storage systems into active clinical intelligence platforms.",
-      "pdf_url": "https://arxiv.org/pdf/2603.08935v2",
-      "arxiv_url": "https://arxiv.org/abs/2603.08935v2",
-      "published": "2026-03-09T21:09:24Z",
-      "updated": "2026-03-11T16:00:39Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL",
-        "cs.DL",
-        "cs.IR"
       ]
     }
   ]

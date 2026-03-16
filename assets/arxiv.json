@@ -1,8 +1,107 @@
 {
-  "generated_at_utc": "2026-03-15T02:55:56.033641Z",
+  "generated_at_utc": "2026-03-16T02:56:07.661561Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Developing and evaluating a chatbot to support maternal health care",
+      "authors": [
+        "Smriti Jha",
+        "Vidhi Jain",
+        "Jianyu Xu",
+        "Grace Liu",
+        "Sowmya Ramesh",
+        "Jitender Nagpal",
+        "Gretchen Chapman",
+        "Benjamin Bellows",
+        "Siddhartha Goyal",
+        "Aarti Singh",
+        "Bryan Wilder"
+      ],
+      "abstract": "The ability to provide trustworthy maternal health information using phone-based chatbots can have a significant impact, particularly in low-resource settings where users have low health literacy and limited access to care. However, deploying such systems is technically challenging: user queries are short, underspecified, and code-mixed across languages, answers require regional context-specific grounding, and partial or missing symptom context makes safe routing decisions difficult.\n  We present a chatbot for maternal health in India developed through a partnership between academic researchers, a health tech company, a public health nonprofit, and a hospital. The system combines (1) stage-aware triage, routing high-risk queries to expert templates, (2) hybrid retrieval over curated maternal/newborn guidelines, and (3) evidence-conditioned generation from an LLM. Our core contribution is an evaluation workflow for high-stakes deployment under limited expert supervision. Targeting both component-level and end-to-end testing, we introduce: (i) a labeled triage benchmark (N=150) achieving 86.7% emergency recall, explicitly reporting the missed-emergency vs. over-escalation trade-off; (ii) a synthetic multi-evidence retrieval benchmark (N=100) with chunk-level evidence labels; (iii) LLM-as-judge comparison on real queries (N=781) using clinician-codesigned criteria; and (iv) expert validation. Our findings show that trustworthy medical assistants in multilingual, noisy settings require defense-in-depth design paired with multi-method evaluation, rather than any single model and evaluation method choice.",
+      "pdf_url": "https://arxiv.org/pdf/2603.13168v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.13168v1",
+      "published": "2026-03-13T17:02:05Z",
+      "updated": "2026-03-13T17:02:05Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Generalized Recognition of Basic Surgical Actions Enables Skill Assessment and Vision-Language-Model-based Surgical Planning",
+      "authors": [
+        "Mengya Xu",
+        "Daiyun Shen",
+        "Jie Zhang",
+        "Hon Chi Yip",
+        "Yujia Gao",
+        "Cheng Chen",
+        "Dillan Imans",
+        "Yonghao Long",
+        "Yiru Ye",
+        "Yixiao Liu",
+        "Rongyun Mai",
+        "Kai Chen",
+        "Hongliang Ren",
+        "Yutong Ban",
+        "Guangsuo Wang",
+        "Francis Wong",
+        "Chi-Fai Ng",
+        "Kee Yuan Ngiam",
+        "Russell H. Taylor",
+        "Daguang Xu",
+        "Yueming Jin",
+        "Qi Dou"
+      ],
+      "abstract": "Artificial intelligence, imaging, and large language models have the potential to transform surgical practice, training, and automation. Understanding and modeling of basic surgical actions (BSA), the fundamental unit of operation in any surgery, is important to drive the evolution of this field. In this paper, we present a BSA dataset comprising 10 basic actions across 6 surgical specialties with over 11,000 video clips, which is the largest to date. Based on the BSA dataset, we developed a new foundation model that conducts general-purpose recognition of basic actions. Our approach demonstrates robust cross-specialist performance in experiments validated on datasets from different procedural types and various body parts. Furthermore, we demonstrate downstream applications enabled by the BAS foundation model through surgical skill assessment in prostatectomy using domain-specific knowledge, and action planning in cholecystectomy and nephrectomy using large vision-language models. Multinational surgeons' evaluation of the language model's output of the action planning explainable texts demonstrated clinical relevance. These findings indicate that basic surgical actions can be robustly recognized across scenarios, and an accurate BSA understanding model can essentially facilitate complex applications and speed up the realization of surgical superintelligence.",
+      "pdf_url": "https://arxiv.org/pdf/2603.12787v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.12787v1",
+      "published": "2026-03-13T08:46:25Z",
+      "updated": "2026-03-13T08:46:25Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Shattering the Shortcut: A Topology-Regularized Benchmark for Multi-hop Medical Reasoning in LLMs",
+      "authors": [
+        "Xing Zi",
+        "Xinying Zhou",
+        "Jinghao Xiao",
+        "Catarina Moreira",
+        "Mukesh Prasad"
+      ],
+      "abstract": "While Large Language Models (LLMs) achieve expert-level performance on standard medical benchmarks through single-hop factual recall, they severely struggle with the complex, multi-hop diagnostic reasoning required in real-world clinical settings. A primary obstacle is \"shortcut learning\", where models exploit highly connected, generic hub nodes (e.g., \"inflammation\") in knowledge graphs to bypass authentic micro-pathological cascades. To address this, we introduce ShatterMed-QA, a bilingual benchmark of 10,558 multi-hop clinical questions designed to rigorously evaluate deep diagnostic reasoning. Our framework constructs a topology-regularized medical Knowledge Graph using a novel $k$-Shattering algorithm, which physically prunes generic hubs to explicitly sever logical shortcuts. We synthesize the evaluation vignettes by applying implicit bridge entity masking and topology-driven hard negative sampling, forcing models to navigate biologically plausible distractors without relying on superficial elimination. Comprehensive evaluations of 21 LLMs reveal massive performance degradation on our multi-hop tasks, particularly among domain-specific models. Crucially, restoring the masked evidence via Retrieval-Augmented Generation (RAG) triggers near-universal performance recovery, validating ShatterMed-QA's structural fidelity and proving its efficacy in diagnosing the fundamental reasoning deficits of current medical AI. Explore the dataset, interactive examples, and full leaderboards at our project website: https://shattermed-qa-web.vercel.app/",
+      "pdf_url": "https://arxiv.org/pdf/2603.12458v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.12458v1",
+      "published": "2026-03-12T21:19:54Z",
+      "updated": "2026-03-12T21:19:54Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LLM-Augmented Therapy Normalization and Aspect-Based Sentiment Analysis for Treatment-Resistant Depression on Reddit",
+      "authors": [
+        "Yuxin Zhu",
+        "Sahithi Lakamana",
+        "Masoud Rouhizadeh",
+        "Selen Bozkurt",
+        "Rachel Hershenberg",
+        "Abeed Sarker"
+      ],
+      "abstract": "Treatment-resistant depression (TRD) is a severe form of major depressive disorder in which patients do not achieve remission despite multiple adequate treatment trials. Evidence across pharmacologic options for TRD remains limited, and trials often do not fully capture patient-reported tolerability. Large-scale online peer-support narratives therefore offer a complementary lens on how patients describe and evaluate medications in real-world use. In this study, we curated a corpus of 5,059 Reddit posts explicitly referencing TRD from 3,480 subscribers across 28 mental health-related subreddits from 2010 to 2025. Of these, 3,839 posts mentioned at least one medication, yielding 23,399 mentions of 81 generic-name medications after lexicon-based normalization of brand names, misspellings, and colloquialisms. We developed an aspect-based sentiment classifier by fine-tuning DeBERTa-v3 on the SMM4H 2023 therapy-sentiment Twitter corpus with large language model based data augmentation, achieving a micro-F1 score of 0.800 on the shared-task test set. Applying this classifier to Reddit, we quantified sentiment toward individual medications across three categories: positive, neutral, and negative, and tracked patterns by drug, subscriber, subreddit, and year. Overall, 72.1% of medication mentions were neutral, 14.8% negative, and 13.1% positive. Conventional antidepressants, especially SSRIs and SNRIs, showed consistently higher negative than positive proportions, whereas ketamine and esketamine showed comparatively more favorable sentiment profiles. These findings show that normalized medication extraction combined with aspect-based sentiment analysis can help characterize patient-perceived treatment experiences in TRD-related Reddit discourse, complementing clinical evidence with large-scale patient-generated perspectives.",
+      "pdf_url": "https://arxiv.org/pdf/2603.12343v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.12343v1",
+      "published": "2026-03-12T18:03:43Z",
+      "updated": "2026-03-12T18:03:43Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "Increasing intelligence in AI agents can worsen collective outcomes",
       "authors": [
@@ -220,94 +319,6 @@
       "categories": [
         "cs.CL",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Human-AI Co-reasoning for Clinical Diagnosis with Evidence-Integrated Language Agent",
-      "authors": [
-        "Zhongzhen Huang",
-        "Yan Ling",
-        "Hong Chen",
-        "Ye Feng",
-        "Li Wu",
-        "Linjie Mu",
-        "Shaoting Zhang",
-        "Xiaofan Zhang",
-        "Kun Qian",
-        "Xiaomu Li"
-      ],
-      "abstract": "We present PULSE, a medical reasoning agent that combines a domain-tuned large language model with scientific literature retrieval to support diagnostic decision-making in complex real-world cases. To evaluate its capabilities, we curated a benchmark of 82 authentic endocrinology case reports encompassing a broad spectrum of disease types and incidence levels. In controlled experiments, we compared PULSE's performance against physicians with varying levels of expertise-from residents to senior specialists-and examined how AI assistance influenced human diagnostic reasoning. PULSE attained expert-competitive accuracy, outperforming residents and junior specialists while matching senior specialist performance at both Top@1 and Top@4 thresholds. Unlike physicians, whose accuracy declined with disease rarity, PULSE maintained stable performance across incidence tiers. The agent also exhibited adaptive reasoning, increasing output length with case difficulty in a manner analogous to the longer deliberation observed among expert clinicians. When used collaboratively, PULSE enabled physicians to correct initial errors and broaden diagnostic hypotheses, but also introduced risks of automation bias. The study explores both serial and concurrent collaboration workflows, revealing that PULSE offers robust support across common and rare presentations. These findings underscore both the promise and the limitations of language model-based agents in clinical diagnosis, and offer a framework for evaluating their role in real-world decision-making.",
-      "pdf_url": "https://arxiv.org/pdf/2603.10492v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.10492v1",
-      "published": "2026-03-11T07:39:05Z",
-      "updated": "2026-03-11T07:39:05Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "PathMem: Toward Cognition-Aligned Memory Transformation for Pathology MLLMs",
-      "authors": [
-        "Jinyue Li",
-        "Yuci Liang",
-        "Qiankun Li",
-        "Xinheng Lyu",
-        "Jiayu Qian",
-        "Huabao Chen",
-        "Kun Wang",
-        "Zhigang Zeng",
-        "Anil Anthony Bharath",
-        "Yang Liu"
-      ],
-      "abstract": "Computational pathology demands both visual pattern recognition and dynamic integration of structured domain knowledge, including taxonomy, grading criteria, and clinical evidence. In practice, diagnostic reasoning requires linking morphological evidence with formal diagnostic and grading criteria. Although multimodal large language models (MLLMs) demonstrate strong vision language reasoning capabilities, they lack explicit mechanisms for structured knowledge integration and interpretable memory control. As a result, existing models struggle to consistently incorporate pathology-specific diagnostic standards during reasoning. Inspired by the hierarchical memory process of human pathologists, we propose PathMem, a memory-centric multimodal framework for pathology MLLMs. PathMem organizes structured pathology knowledge as a long-term memory (LTM) and introduces a Memory Transformer that models the dynamic transition from LTM to working memory (WM) through multimodal memory activation and context-aware knowledge grounding, enabling context-aware memory refinement for downstream reasoning. PathMem achieves SOTA performance across benchmarks, improving WSI-Bench report generation (12.8% WSI-Precision, 10.1% WSI-Relevance) and open-ended diagnosis by 9.7% and 8.9% over prior WSI-based models.",
-      "pdf_url": "https://arxiv.org/pdf/2603.09943v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.09943v1",
-      "published": "2026-03-10T17:35:49Z",
-      "updated": "2026-03-10T17:35:49Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CLIOPATRA: Extracting Private Information from LLM Insights",
-      "authors": [
-        "Meenatchi Sundaram Muthu Selva Annamalai",
-        "Emiliano De Cristofaro",
-        "Peter Kairouz"
-      ],
-      "abstract": "As AI assistants become widely used, privacy-aware platforms like Anthropic's Clio have been introduced to generate insights from real-world AI use. Clio's privacy protections rely on layering multiple heuristic techniques together, including PII redaction, clustering, filtering, and LLM-based privacy auditing. In this paper, we put these claims to the test by presenting CLIOPATRA, the first privacy attack against \"privacy-preserving\" LLM insight systems. The attack involves a realistic adversary that carefully designs and inserts malicious chats into the system to break multiple layers of privacy protections and induce the leakage of sensitive information from a target user's chat.\n  We evaluated CLIOPATRA on synthetically generated medical target chats, demonstrating that an adversary who knows only the basic demographics of a target user and a single symptom can successfully extract the user's medical history in 39% of cases by just inspecting Clio's output. Furthermore, CLIOPATRA can reach close to 100% when Clio is configured with other state-of-the-art models and the adversary's knowledge of the target user is increased. We also show that existing ad hoc mitigations, such as LLM-based privacy auditing, are unreliable and fail to detect major leaks. Our findings indicate that even when layered, current heuristic protections are insufficient to adequately protect user data in LLM-based analysis systems.",
-      "pdf_url": "https://arxiv.org/pdf/2603.09781v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.09781v1",
-      "published": "2026-03-10T15:17:14Z",
-      "updated": "2026-03-10T15:17:14Z",
-      "categories": [
-        "cs.CR"
-      ]
-    },
-    {
-      "title": "FetalAgents: A Multi-Agent System for Fetal Ultrasound Image and Video Analysis",
-      "authors": [
-        "Xiaotian Hu",
-        "Junwei Huang",
-        "Mingxuan Liu",
-        "Kasidit Anmahapong",
-        "Yifei Chen",
-        "Yitong Luo",
-        "Yiming Huang",
-        "Xuguang Bai",
-        "Zihan Li",
-        "Yi Liao",
-        "Haibo Qu",
-        "Qiyuan Tian"
-      ],
-      "abstract": "Fetal ultrasound (US) is the primary imaging modality for prenatal screening, yet its interpretation relies heavily on the expertise of the clinician. Despite advances in deep learning and foundation models, existing automated tools for fetal US analysis struggle to balance task-specific accuracy with the whole-process versatility required to support end-to-end clinical workflows. To address these limitations, we propose FetalAgents, the first multi-agent system for comprehensive fetal US analysis. Through a lightweight, agentic coordination framework, FetalAgents dynamically orchestrates specialized vision experts to maximize performance across diagnosis, measurement, and segmentation. Furthermore, FetalAgents advances beyond static image analysis by supporting end-to-end video stream summarization, where keyframes are automatically identified across multiple anatomical planes, analyzed by coordinated experts, and synthesized with patient metadata into a structured clinical report. Extensive multi-center external evaluations across eight clinical tasks demonstrate that FetalAgents consistently delivers the most robust and accurate performance when compared against specialized models and multimodal large language models (MLLMs), ultimately providing an auditable, workflow-aligned solution for fetal ultrasound analysis and reporting.",
-      "pdf_url": "https://arxiv.org/pdf/2603.09733v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.09733v1",
-      "published": "2026-03-10T14:37:28Z",
-      "updated": "2026-03-10T14:37:28Z",
-      "categories": [
-        "cs.CV",
-        "cs.MA"
       ]
     }
   ]

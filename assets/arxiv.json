@@ -1,8 +1,210 @@
 {
-  "generated_at_utc": "2026-03-18T02:45:19.399801Z",
+  "generated_at_utc": "2026-03-19T02:46:56.341133Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity Search",
+      "authors": [
+        "Himadri Samanta"
+      ],
+      "abstract": "Automated radiology report generation has gained increasing attention with the rise of deep learning and large language models. However, fully generative approaches often suffer from hallucinations and lack clinical grounding, limiting their reliability in real-world workflows. In this study, we propose a multimodal retrieval-augmented generation (RAG) system for grounded drafting of chest radiograph impressions. The system combines contrastive image-text embeddings, case-based similarity retrieval, and citation-constrained draft generation to ensure factual alignment with historical radiology reports. A curated subset of the MIMIC-CXR dataset was used to construct a multimodal retrieval database. Image embeddings were generated using CLIP encoders, while textual embeddings were derived from structured impression sections. A fusion similarity framework was implemented using FAISS indexing for scalable nearest-neighbor retrieval. Retrieved cases were used to construct grounded prompts for draft impression generation, with safety mechanisms enforcing citation coverage and confidence-based refusal. Experimental results demonstrate that multimodal fusion significantly improves retrieval performance compared to image-only retrieval, achieving Recall@5 above 0.95 on clinically relevant findings. The grounded drafting pipeline produces interpretable outputs with explicit citation traceability, enabling improved trustworthiness compared to conventional generative approaches. This work highlights the potential of retrieval-augmented multimodal systems for reliable clinical decision support and radiology workflow augmentation",
+      "pdf_url": "https://arxiv.org/pdf/2603.17765v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.17765v1",
+      "published": "2026-03-18T14:25:50Z",
+      "updated": "2026-03-18T14:25:50Z",
+      "categories": [
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Concept-to-Pixel: Prompt-Free Universal Medical Image Segmentation",
+      "authors": [
+        "Haoyun Chen",
+        "Fenghe Tang",
+        "Wenxin Ma",
+        "Shaohua Kevin Zhou"
+      ],
+      "abstract": "Universal medical image segmentation seeks to use a single foundational model to handle diverse tasks across multiple imaging modalities. However, existing approaches often rely heavily on manual visual prompts or retrieved reference images, which limits their automation and robustness. In addition, naive joint training across modalities often fails to address large domain shifts. To address these limitations, we propose Concept-to-Pixel (C2P), a novel prompt-free universal segmentation framework. C2P explicitly separates anatomical knowledge into two components: Geometric and Semantic representations. It leverages Multimodal Large Language Models (MLLMs) to distill abstract, high-level medical concepts into learnable Semantic Tokens and introduces explicitly supervised Geometric Tokens to enforce universal physical and structural constraints. These disentangled tokens interact deeply with image features to generate input-specific dynamic kernels for precise mask prediction. Furthermore, we introduce a Geometry-Aware Inference Consensus mechanism, which utilizes the model's predicted geometric constraints to assess prediction reliability and suppress outliers. Extensive experiments and analysis on a unified benchmark comprising eight diverse datasets across seven modalities demonstrate the significant superiority of our jointly trained approach, compared to universe- or single-model approaches. Remarkably, our unified model demonstrates strong generalization, achieving impressive results not only on zero-shot tasks involving unseen cases but also in cross-modal transfers across similar tasks. Code is available at: https://github.com/Yundi218/Concept-to-Pixel",
+      "pdf_url": "https://arxiv.org/pdf/2603.17746v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.17746v1",
+      "published": "2026-03-18T14:13:22Z",
+      "updated": "2026-03-18T14:13:22Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Predicting Trajectories of Long COVID in Adult Women: The Critical Role of Causal Disentanglement",
+      "authors": [
+        "Jing Wang",
+        "Jie Shen",
+        "Yiming Luo",
+        "Amar Sra",
+        "Qiaomin Xie",
+        "Jeremy C. Weiss"
+      ],
+      "abstract": "Early prediction of Post-Acute Sequelae of SARS-CoV-2 severity is a critical challenge for women's health, particularly given the diagnostic overlap between PASC and common hormonal transitions such as menopause. Identifying and accounting for these confounding factors is essential for accurate long-term trajectory prediction. We conducted a retrospective study of 1,155 women (mean age 61) from the NIH RECOVER dataset. By integrating static clinical profiles with four weeks of longitudinal wearable data (monitoring cardiac activity and sleep), we developed a causal network based on a Large Language Model to predict future PASC scores. Our framework achieved a precision of 86.7\\% in clinical severity prediction. Our causal attribution analysis demonstrate the model's ability to differentiate between active pathology and baseline noise: direct indicators such as breathlessness and malaise reached maximum saliency (1.00), while confounding factors like menopause and diabetes were successfully suppressed with saliency scores below 0.27.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17722v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.17722v1",
+      "published": "2026-03-18T13:42:25Z",
+      "updated": "2026-03-18T13:42:25Z",
+      "categories": [
+        "cs.LG",
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "DiffVP: Differential Visual Semantic Prompting for LLM-Based CT Report Generation",
+      "authors": [
+        "Yuhe Tian",
+        "Kun Zhang",
+        "Haoran Ma",
+        "Rui Yan",
+        "Yingtai Li",
+        "Rongsheng Wang",
+        "Shaohua Kevin Zhou"
+      ],
+      "abstract": "While large language models (LLMs) have advanced CT report generation, existing methods typically encode 3D volumes holistically, failing to distinguish informative cues from redundant anatomical background. Inspired by radiological cognitive subtraction, we propose Differential Visual Prompting (DiffVP), which conditions report generation on explicit, high-level semantic scan-to-reference differences rather than solely on absolute visual features. DiffVP employs a hierarchical difference extractor to capture complementary global and local semantic discrepancies into a shared latent space, along with a difference-to-prompt generator that transforms these signals into learnable visual prefix tokens for LLM conditioning. These difference prompts serve as structured conditioning signals that implicitly suppress invariant anatomy while amplifying diagnostically relevant visual evidence, thereby facilitating accurate report generation without explicit lesion localization. On two large-scale benchmarks, DiffVP consistently outperforms prior methods, improving the average BLEU-1-4 by +10.98 and +4.36, respectively, and further boosts clinical efficacy on RadGenome-ChestCT (F1 score 0.421). All codes will be released at https://github.com/ArielTYH/DiffVP/.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17718v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.17718v1",
+      "published": "2026-03-18T13:38:26Z",
+      "updated": "2026-03-18T13:38:26Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Negation is Not Semantic: Diagnosing Dense Retrieval Failure Modes for Trade-offs in Contradiction-Aware Biomedical QA",
+      "authors": [
+        "Soumya Ranjan Sahoo",
+        "Gagan N.",
+        "Sanand Sasidharan",
+        "Divya Bharti"
+      ],
+      "abstract": "Large Language Models (LLMs) have demonstrated strong capabilities in biomedical question answering, yet their tendency to generate plausible but unverified claims poses serious risks in clinical settings. To mitigate these risks, the TREC 2025 BioGen track mandates grounded answers that explicitly surface contradictory evidence (Task A) and the generation of narrative driven, fully attributed responses (Task B). Addressing the absence of target ground truth, we present a proxy-based development framework using the SciFact dataset to systematically optimize retrieval architectures. Our iterative evaluation revealed a \"Simplicity Paradox\": complex adversarial dense retrieval strategies failed catastrophically at contradiction detection (MRR 0.023) due to Semantic Collapse, where negation signals become indistinguishable in vector space. We further identify a Retrieval Asymmetry: filtering dense embeddings improves contradiction detection but degrades support recall, compromising reliability. We resolve this via a Decoupled Lexical Architecture built on a unified BM25 backbone, balancing semantic support recall (0.810) with precise contradiction surfacing (0.750). This approach achieves the highest Weighted MRR (0.790) on the proxy benchmark while remaining the only viable strategy for scaling to the 30 million document PubMed corpus. For answer generation, we introduce Narrative Aware Reranking and One-Shot In-Context Learning, improving citation coverage from 50% (zero-shot) to 100%. Official TREC results confirm our findings: our system ranks 2nd on Task A contradiction F1 and 3rd out of 50 runs on Task B citation coverage (98.77%), achieving zero citation contradict rate. Our work transforms LLMs from stochastic generators into honest evidence synthesizers, showing that epistemic integrity in biomedical AI requires precision and architectural scalability isolated metric optimization.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17580v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.17580v1",
+      "published": "2026-03-18T10:35:44Z",
+      "updated": "2026-03-18T10:35:44Z",
+      "categories": [
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Agentic Cognitive Profiling: Realigning Automated Alzheimer's Disease Detection with Clinical Construct Validity",
+      "authors": [
+        "Jiawen Kang",
+        "Kun Li",
+        "Dongrui Han",
+        "Jinchao Li",
+        "Junan Li",
+        "Lingwei Meng",
+        "Xixin Wu",
+        "Helen Meng"
+      ],
+      "abstract": "Automated Alzheimer's Disease (AD) screening has predominantly followed the inductive paradigm of pattern recognition, which directly maps the input signal to the outcome label. This paradigm sacrifices construct validity of clinical protocol for statistical shortcuts. This paper proposes Agentic Cognitive Profiling (ACP), an agentic framework that realigns automated screening with clinical protocol logic across multiple cognitive domains. Rather than learning opaque mappings from transcripts to labels, the framework decomposes standardized assessments into atomic cognitive tasks and orchestrates specialized LLM agents to extract verifiable scoring primitives. Central to our design is decoupling semantic understanding from measurement by delegating all quantification to deterministic function calling, thereby mitigating hallucination and restoring construct validity. Unlike popular datasets that typically comprise around a hundred participants under a single task, we evaluate on a clinically-annotated corpus of 402 participants across eight structured cognitive tasks spanning multiple cognitive domains. The framework achieves 90.5% score match rate in task examination and 85.3% accuracy in AD prediction, surpassing popular baselines while generating interpretable cognitive profiles grounded in behavioral evidence. This work demonstrates that construct validity and predictive performance need not be traded off, charting a path toward AD screening systems that explain rather than merely predict.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17392v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.17392v1",
+      "published": "2026-03-18T06:15:35Z",
+      "updated": "2026-03-18T06:15:35Z",
+      "categories": [
+        "cs.MA",
+        "cs.IR",
+        "q-bio.NC"
+      ]
+    },
+    {
+      "title": "PACE-RAG: Patient-Aware Contextual and Evidence-based Policy RAG for Clinical Drug Recommendation",
+      "authors": [
+        "Chaeyoung Huh",
+        "Hyunmin Hwang",
+        "Jung Hwan Shin",
+        "Jinse Park",
+        "Jong Chul Ye"
+      ],
+      "abstract": "Drug recommendation requires a deep understanding of individual patient context, especially for complex conditions like Parkinson's disease. While LLMs possess broad medical knowledge, they fail to capture the subtle nuances of actual prescribing patterns. Existing RAG methods also struggle with these complexities because guideline-based retrieval remains too generic and similar-patient retrieval often replicates majority patterns without accounting for the unique clinical nuances of individual patients. To bridge this gap, we propose PACE-RAG (Patient-Aware Contextual and Evidence-based Policy RAG), a novel framework designed to synthesize individual patient context with the prescribing tendencies of similar cases. By analyzing treatment patterns tailored to specific clinical signals, PACE-RAG identifies optimal prescriptions and generates an explainable clinical summary. Evaluated on a Parkinson's cohort and the MIMIC-IV benchmark using Llama-3.1-8B and Qwen3-8B, PACE-RAG achieved state-of-the-art performance, reaching F1 scores of 80.84% and 47.22%, respectively. These results validate PACE-RAG as a robust, clinically grounded solution for personalized decision support. Our code is available at: https://github.com/ChaeYoungHuh/PACE-RAG.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17356v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.17356v1",
+      "published": "2026-03-18T04:40:53Z",
+      "updated": "2026-03-18T04:40:53Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Deployment and Evaluation of an EHR-integrated, Large Language Model-Powered Tool to Triage Surgical Patients",
+      "authors": [
+        "Jane Wang",
+        "Timothy Keyes",
+        "April S Liang",
+        "Stephen P Ma",
+        "Jason Shen",
+        "Jerry Liu",
+        "Nerissa Ambers",
+        "Abby Pandya",
+        "Rita Pandya",
+        "Jason Hom",
+        "Natasha Steele",
+        "Jonathan H Chen",
+        "Kevin Schulman"
+      ],
+      "abstract": "Surgical co-management (SCM) is an evidence-based model in which hospitalists jointly manage medically complex perioperative patients alongside surgical teams. Despite its clinical and financial value, SCM is limited by the need to manually identify eligible patients. To determine whether SCM triage can be automated, we conducted a prospective, unblinded study at Stanford Health Care in which an LLM-based, electronic health record (EHR)-integrated triage tool (SCM Navigator) provided SCM recommendations followed by physician review.\n  Using pre-operative documentation, structured data, and clinical criteria for perioperative morbidity, SCM Navigator categorized patients as appropriate, not appropriate, or possibly appropriate for SCM. Faculty indicated their clinical judgment and provided free-text feedback when they disagreed. Sensitivity, specificity, positive predictive value, and negative predictive value were measured using physician determinations as a reference. Free-text reasons were thematically categorized, and manual chart review was conducted on all false-negative cases and 30 randomly selected cases from the largest false-positive category. Since deployment, 6,193 cases have been triaged, of which 1,582 (23%) were recommended for hospitalist consultation. SCM Navigator displayed high sensitivity (0.94, 95% CI 0.91-0.96) and moderate specificity (0.74, 95% CI 0.71-0.77). Post-hoc chart review suggested most discrepancies reflect modifiable gaps in clinical criteria, institutional workflow, or physician practice variability rather than LLM misclassification, which accounted for 2 of 19 (11%) false-negative cases. These findings demonstrate that an LLM-powered, EHR-integrated, human-in-the-loop AI system can accurately and safely triage surgical patients for SCM, and that AI-enabled screening tools can augment and potentially automate time-intensive clinical workflows.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17234v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.17234v1",
+      "published": "2026-03-18T00:36:58Z",
+      "updated": "2026-03-18T00:36:58Z",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Tabular LLMs for Interpretable Few-Shot Alzheimer's Disease Prediction with Multimodal Biomedical Data",
+      "authors": [
+        "Sophie Kearney",
+        "Shu Yang",
+        "Zixuan Wen",
+        "Weimin Lyu",
+        "Bojian Hou",
+        "Duy Duong-Tran",
+        "Tianlong Chen",
+        "Jason H. Moore",
+        "Marylyn D. Ritchie",
+        "Chao Chen",
+        "Li Shen"
+      ],
+      "abstract": "Accurate diagnosis of Alzheimer's disease (AD) requires handling tabular biomarker data, yet such data are often small and incomplete, where deep learning models frequently fail to outperform classical methods. Pretrained large language models (LLMs) offer few-shot generalization, structured reasoning, and interpretable outputs, providing a powerful paradigm shift for clinical prediction. We propose TAP-GPT Tabular Alzheimer's Prediction GPT, a domain-adapted tabular LLM framework built on TableGPT2 and fine-tuned for few-shot AD classification using tabular prompts rather than plain texts. We evaluate TAP-GPT across four ADNI-derived datasets, including QT-PAD biomarkers and region-level structural MRI, amyloid PET, and tau PET for binary AD classification. Across multimodal and unimodal settings, TAP-GPT improves upon its backbone models and outperforms traditional machine learning baselines in the few-shot setting while remaining competitive with state-of-the-art general-purpose LLMs. We show that feature selection mitigates degradation in high-dimensional inputs and that TAP-GPT maintains stable performance under simulated and real-world missingness without imputation. Additionally, TAP-GPT produces structured, modality-aware reasoning aligned with established AD biology and shows greater stability under self-reflection, supporting its use in iterative multi-agent systems. To our knowledge, this is the first systematic application of a tabular-specialized LLM to multimodal biomarker-based AD prediction, demonstrating that such pretrained models can effectively address structured clinical prediction tasks and laying the foundation for tabular LLM-driven multi-agent clinical decision-support systems. The source code is publicly available on GitHub: https://github.com/sophie-kearney/TAP-GPT.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17191v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.17191v1",
+      "published": "2026-03-17T22:43:50Z",
+      "updated": "2026-03-17T22:43:50Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Ablation Study of a Fairness Auditing Agentic System for Bias Mitigation in Early-Onset Colorectal Cancer Detection",
+      "authors": [
+        "Amalia Ionescu",
+        "Jose Guadalupe Hernandez",
+        "Jui-Hsuan Chang",
+        "Emily F. Wong",
+        "Paul Wang",
+        "Jason H. Moore",
+        "Tiffani J. Bright"
+      ],
+      "abstract": "Artificial intelligence (AI) is increasingly used in clinical settings, yet limited oversight and domain expertise can allow algorithmic bias and safety risks to persist. This study evaluates whether an agentic AI system can support auditing biomedical machine learning models for fairness in early-onset colorectal cancer (EO-CRC), a condition with documented demographic disparities. We implemented a two-agent architecture consisting of a Domain Expert Agent that synthesizes literature on EO-CRC disparities and a Fairness Consultant Agent that recommends sensitive attributes and fairness metrics for model evaluation. An ablation study compared three Ollama large language models (8B, 20B, and 120B parameters) across three configurations: pretrained LLM-only, Agent without Retrieval-Augmented Generation (RAG), and Agent with RAG. Across models, the Agent with RAG achieved the highest semantic similarity to expert-derived reference statements, particularly for disparity identification, suggesting agentic systems with retrieval may help scale fairness auditing in clinical AI.",
+      "pdf_url": "https://arxiv.org/pdf/2603.17179v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.17179v1",
+      "published": "2026-03-17T22:13:22Z",
+      "updated": "2026-03-17T22:13:22Z",
+      "categories": [
+        "cs.MA"
+      ]
+    },
     {
       "title": "Surg$\u03a3$: A Spectrum of Large-Scale Multimodal Data and Foundation Models for Surgical Intelligence",
       "authors": [
@@ -89,208 +291,29 @@
       ]
     },
     {
-      "title": "PathGLS: Evaluating Pathology Vision-Language Models without Ground Truth through Multi-Dimensional Consistency",
+      "title": "Topology-Guided Biomechanical Profiling: A White-Box Framework for Opportunistic Screening of Spinal Instability on Routine CT",
       "authors": [
-        "Minbing Chen",
-        "Zhu Meng",
-        "Fei Su"
+        "Zanting Ye",
+        "Xuanbin Wu",
+        "Guoqing Zhong",
+        "Shengyuan Liu",
+        "Jiashuai Liu",
+        "Ge Song",
+        "Zhisong Wang",
+        "Jing Hao",
+        "Xiaolong Niu",
+        "Yefeng Zheng",
+        "Yu Zhang",
+        "Lijun Lu"
       ],
-      "abstract": "Vision-Language Models (VLMs) offer significant potential in computational pathology by enabling interpretable image analysis, automated reporting, and scalable decision support. However, their widespread clinical adoption remains limited due to the absence of reliable, automated evaluation metrics capable of identifying subtle failures such as hallucinations. To address this gap, we propose PathGLS, a novel reference-free evaluation framework that assesses pathology VLMs across three dimensions: Grounding (fine-grained visual-text alignment), Logic (entailment graph consistency using Natural Language Inference), and Stability (output variance under adversarial visual-semantic perturbations). PathGLS supports both patch-level and whole-slide image (WSI)-level analysis, yielding a comprehensive trust score. Experiments on Quilt-1M, TCGA, REG2025, PathMMU and TCGA-Sarcoma datasets demonstrate the superiority of PathGLS. Specifically, on the Quilt-1M dataset, PathGLS reveals a steep sensitivity drop of 40.2% for hallucinated reports compared to only 2.1% for BERTScore. Moreover, validation against expert-defined clinical error hierarchies reveals that PathGLS achieves a strong Spearman's rank correlation of $\u03c1=0.71$ ($p < 0.0001$), significantly outperforming Large Language Model (LLM)-based approaches (Gemini 3.0 Pro: $\u03c1=0.39$, $p < 0.0001$). These results establish PathGLS as a robust reference-free metric. By directly quantifying hallucination rates and domain shift robustness, it serves as a reliable criterion for benchmarking VLMs on private clinical datasets and informing safe deployment. Code can be found at: https://github.com/My13ad/PathGLS",
-      "pdf_url": "https://arxiv.org/pdf/2603.16113v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.16113v1",
-      "published": "2026-03-17T04:25:55Z",
-      "updated": "2026-03-17T04:25:55Z",
+      "abstract": "Routine oncologic computed tomography (CT) presents an ideal opportunity for screening spinal instability, yet prophylactic stabilization windows are frequently missed due to the complex geometric reasoning required by the Spinal Instability Neoplastic Score (SINS). Automating SINS is fundamentally hindered by metastatic osteolysis, which induces topological ambiguity that confounds standard segmentation and black-box AI. We propose Topology-Guided Biomechanical Profiling (TGBP), an auditable white-box framework decoupling anatomical perception from structural reasoning. TGBP anchors SINS assessment on two deterministic geometric innovations: (i) canal-referenced partitioning to resolve posterolateral boundary ambiguity, and (ii) context-aware morphometric normalization via covariance-based oriented bounding boxes (OBB) to quantify vertebral collapse. Integrated with auxiliary radiomic and large language model (LLM) modules, TGBP provides an end-to-end, interpretable SINS evaluation. Validated on a multi-center, multi-cancer cohort ($N=482$), TGBP achieved 90.2\\% accuracy in 3-tier stability triage. In a blinded reader study ($N=30$), TGBP significantly outperformed medical oncologists on complex structural features ($\u03ba=0.857$ vs.\\ $0.570$) and prevented compounding errors in Total Score estimation ($\u03ba=0.625$ vs.\\ $0.207$), democratizing expert-level opportunistic screening.",
+      "pdf_url": "https://arxiv.org/pdf/2603.16963v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.16963v1",
+      "published": "2026-03-17T06:34:18Z",
+      "updated": "2026-03-17T06:34:18Z",
       "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "RadAnnotate: Large Language Models for Efficient and Reliable Radiology Report Annotation",
-      "authors": [
-        "Saisha Pradeep Shetty",
-        "Roger Eric Goldman",
-        "Vladimir Filkov"
-      ],
-      "abstract": "Radiology report annotation is essential for clinical NLP, yet manual labeling is slow and costly. We present RadAnnotate, an LLM-based framework that studies retrieval-augmented synthetic reports and confidence-based selective automation to reduce expert effort for labeling in RadGraph. We study RadGraph-style entity labeling (graph nodes) and leave relation extraction (edges) to future work. First, we train entity-specific classifiers on gold-standard reports and characterize their strengths and failure modes across anatomy and observation categories, with uncertain observations hardest to learn. Second, we generate RAG-guided synthetic reports and show that synthetic-only models remain within 1-2 F1 points of gold-trained models, and that synthetic augmentation is especially helpful for uncertain observations in a low-resource setting, improving F1 from 0.61 to 0.70. Finally, by learning entity-specific confidence thresholds, RadAnnotate can automatically annotate 55-90% of reports at 0.86-0.92 entity match score while routing low-confidence cases for expert review.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16002v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.16002v1",
-      "published": "2026-03-16T23:23:23Z",
-      "updated": "2026-03-16T23:23:23Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Data-Local Autonomous LLM-Guided Neural Architecture Search for Multiclass Multimodal Time-Series Classification",
-      "authors": [
-        "Emil Hardarson",
-        "Luka Biedebach",
-        "\u00d3mar Bessi \u00d3marsson",
-        "Teitur Hr\u00f3lfsson",
-        "Anna Sigridur Islind",
-        "Mar\u00eda \u00d3skarsd\u00f3ttir"
-      ],
-      "abstract": "Applying machine learning to sensitive time-series data is often bottlenecked by the iteration loop: Performance depends strongly on preprocessing and architecture, yet training often has to run on-premise under strict data-local constraints. This is a common problem in healthcare and other privacy-constrained domains (e.g., a hospital developing deep learning models on patient EEG). This bottleneck is particularly challenging in multimodal fusion, where sensor modalities must be individually preprocessed and then combined. LLM-guided neural architecture search (NAS) can automate this exploration, but most existing workflows assume cloud execution or access to data-derived artifacts that cannot be exposed.\n  We present a novel data-local, LLM-guided search framework that handles candidate pipelines remotely while executing all training and evaluation locally under a fixed protocol. The controller observes only trial-level summaries, such as pipeline descriptors, metrics, learning-curve statistics, and failure logs, without ever accessing raw samples or intermediate feature representations. Our framework targets multiclass, multimodal learning via one-vs-rest binary experts per class and modality, a lightweight fusion MLP, and joint search over expert architectures and modality-specific preprocessing.\n  We evaluate our method on two regimes: UEA30 (public multivariate time-series classification dataset) and SleepEDFx sleep staging (heterogeneous clinical modalities such as EEG, EOG, and EMG). The results show that the modular baseline model is strong, and the LLM-guided NAS further improves it. Notably, our method finds models that perform within published ranges across most benchmark datasets. Across both settings, our method reduces manual intervention by enabling unattended architecture search while keeping sensitive data on-premise.",
-      "pdf_url": "https://arxiv.org/pdf/2603.15939v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.15939v1",
-      "published": "2026-03-16T21:46:05Z",
-      "updated": "2026-03-16T21:46:05Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Nodule-Aligned Latent Space Learning with LLM-Driven Multimodal Diffusion for Lung Nodule Progression Prediction",
-      "authors": [
-        "James Song",
-        "Yifan Wang",
-        "Chuan Zhou",
-        "Liyue Shen"
-      ],
-      "abstract": "Early diagnosis of lung cancer is challenging due to biological uncertainty and the limited understanding of the biological mechanisms driving nodule progression. To address this, we propose Nodule-Aligned Multimodal (Latent) Diffusion (NAMD), a novel framework that predicts lung nodule progression by generating 1-year follow-up nodule computed tomography images with baseline scans and the patient's and nodule's Electronic Health Record (EHR). NAMD introduces a nodule-aligned latent space, where distances between latents directly correspond to changes in nodule attributes, and utilizes an LLM-driven control mechanism to condition the diffusion backbone on patient data. On the National Lung Screening Trial (NLST) dataset, our method synthesizes follow-up nodule images that achieve an AUROC of 0.805 and an AUPRC of 0.346 for lung nodule malignancy prediction, significantly outperforming both baseline scans and state-of-the-art synthesis methods, while closely approaching the performance of real follow-up scans (AUROC: 0.819, AUPRC: 0.393). These results demonstrate that NAMD captures clinically relevant features of lung nodule progression, facilitating earlier and more accurate diagnosis.",
-      "pdf_url": "https://arxiv.org/pdf/2603.15932v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.15932v1",
-      "published": "2026-03-16T21:22:51Z",
-      "updated": "2026-03-16T21:22:51Z",
-      "categories": [
+        "q-bio.QM",
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Beyond the Embedding Bottleneck: Adaptive Retrieval-Augmented 3D CT Report Generation",
-      "authors": [
-        "Renjie Liang",
-        "Yiling Ma",
-        "Yang Xing",
-        "Zhengkang Fan",
-        "Jinqian Pan",
-        "Chengkun Sun",
-        "Li Li",
-        "Kuang Gong",
-        "Jie Xu"
-      ],
-      "abstract": "Automated radiology report generation from 3D CT volumes often suffers from incomplete pathology coverage. We provide empirical evidence that this limitation stems from a representational bottleneck: contrastive 3D CT embeddings encode discriminative pathology signals, yet exhibit severe dimensional concentration, with as few as 2 effective dimensions out of 512. Corroborating this, scaling the language model yields no measurable improvement, suggesting that the bottleneck lies in the visual representation rather than the generator. This bottleneck limits both generation and retrieval; naive static retrieval fails to improve clinical efficacy and can even degrade performance. We propose \\textbf{AdaRAG-CT}, an adaptive augmentation framework that compensates for this visual bottleneck by introducing supplementary textual information through controlled retrieval and selectively integrating it during generation. On the CT-RATE benchmark, AdaRAG-CT achieves state-of-the-art clinical efficacy, improving Clinical F1 from 0.420 (CT-Agent) to 0.480 (+6 points); ablation studies confirm that both the retrieval and generation components contribute to the improvement. Code is available at https://github.com/renjie-liang/Adaptive-RAG-for-3DCT-Report-Generation.",
-      "pdf_url": "https://arxiv.org/pdf/2603.15822v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.15822v1",
-      "published": "2026-03-16T18:56:14Z",
-      "updated": "2026-03-16T18:56:14Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "From Documents to Spans: Code-Centric Learning for LLM-based ICD Coding",
-      "authors": [
-        "Xu Zhang",
-        "Wenxin Ma",
-        "Chenxu Wu",
-        "Rongsheng Wang",
-        "Kun Zhang",
-        "S. Kevin Zhou"
-      ],
-      "abstract": "ICD coding is a critical yet challenging task in healthcare. Recently, LLM-based methods demonstrate stronger generalization than discriminative methods in ICD coding. However, fine-tuning LLMs for ICD coding faces three major challenges. First, existing public ICD coding datasets provide limited coverage of the ICD code space, restricting a model's ability to generalize to unseen codes. Second, naive fine-tuning diminishes the interpretability of LLMs, as few public datasets contain explicit supporting evidence for assigned codes. Third, ICD coding typically involves long clinical documents, making fine-tuning LLMs computationally expensive. To address these issues, we propose Code-Centric Learning, a training framework that shifts supervision from full clinical documents to scalable, short evidence spans. The key idea of this framework is that span-level learning improves LLMs' ability to perform document-level ICD coding. Our proposed framework consists of a mixed training strategy and code-centric data expansion, which substantially reduces training cost, improves accuracy on unseen ICD codes and preserves interpretability. Under the same LLM backbone, our method substantially outperforms strong baselines. Notably, our method enables small-scale LLMs to achieve performance comparable to much larger proprietary models, demonstrating its effectiveness and potential for fully automated ICD coding.",
-      "pdf_url": "https://arxiv.org/pdf/2603.15270v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.15270v1",
-      "published": "2026-03-16T13:37:01Z",
-      "updated": "2026-03-16T13:37:01Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Open Biomedical Knowledge Graphs at Scale: Construction, Federation, and AI Agent Access with Samyama Graph Database",
-      "authors": [
-        "Madhulatha Mandarapu",
-        "Sandeep Kunkunuru"
-      ],
-      "abstract": "Biomedical knowledge is fragmented across siloed databases -- Reactome for pathways, STRING for protein interactions, ClinicalTrials.gov for study registries, DrugBank for drug vocabularies, DGIdb for drug-gene interactions, SIDER for side effects. We present three open-source biomedical knowledge graphs -- Pathways KG (118,686 nodes, 834,785 edges from 5 sources), Clinical Trials KG (7,774,446 nodes, 26,973,997 edges from 5 sources), and Drug Interactions KG (32,726 nodes, 191,970 edges from 3 sources) -- built on Samyama, a high-performance graph database written in Rust.\n  Our contributions are threefold. First, we describe a reproducible ETL pattern for constructing large-scale KGs from heterogeneous public data sources, with cross-source deduplication, batch loading (Python Cypher and Rust native loaders), and portable snapshot export. Second, we demonstrate cross-KG federation: loading all three snapshots into a single graph tenant enables property-based joins across datasets. Third, we introduce schema-driven MCP server generation for LLM agent access, evaluated on a new BiomedQA benchmark (40 pharmacology questions): domain-specific MCP tools achieve 98% accuracy vs. 0% for text-to-Cypher and 75% for standalone GPT-4o.\n  All data sources are open-license. The combined federated graph (7.9M nodes, 28M edges) loads in approximately 3 minutes on commodity cloud hardware, and cross-KG queries complete in 80ms-4s.",
-      "pdf_url": "https://arxiv.org/pdf/2603.15080v2",
-      "arxiv_url": "https://arxiv.org/abs/2603.15080v2",
-      "published": "2026-03-16T10:36:13Z",
-      "updated": "2026-03-17T12:26:44Z",
-      "categories": [
-        "cs.DB",
-        "cs.AI",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "OpenHospital: A Thing-in-itself Arena for Evolving and Benchmarking LLM-based Collective Intelligence",
-      "authors": [
-        "Peigen Liu",
-        "Rui Ding",
-        "Yuren Mao",
-        "Ziyan Jiang",
-        "Yuxiang Ye",
-        "Yunjun Gao",
-        "Ying Zhang",
-        "Renjie Sun",
-        "Longbin Lai",
-        "Zhengping Qian"
-      ],
-      "abstract": "Large Language Model (LLM)-based Collective Intelligence (CI) presents a promising approach to overcoming the data wall and continuously boosting the capabilities of LLM agents. However, there is currently no dedicated arena for evolving and benchmarking LLM-based CI. To address this gap, we introduce OpenHospital, an interactive arena where physician agents can evolve CI through interactions with patient agents. This arena employs a data-in-agent-self paradigm that rapidly enhances agent capabilities and provides robust evaluation metrics for benchmarking both medical proficiency and system efficiency. Experiments demonstrate the effectiveness of OpenHospital in both fostering and quantifying CI.",
-      "pdf_url": "https://arxiv.org/pdf/2603.14771v2",
-      "arxiv_url": "https://arxiv.org/abs/2603.14771v2",
-      "published": "2026-03-16T03:12:18Z",
-      "updated": "2026-03-17T12:55:38Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Argumentation for Explainable and Globally Contestable Decision Support with LLMs",
-      "authors": [
-        "Adam Dejl",
-        "Matthew Williams",
-        "Francesca Toni"
-      ],
-      "abstract": "Large language models (LLMs) exhibit strong general capabilities, but their deployment in high-stakes domains is hindered by their opacity and unpredictability. Recent work has taken meaningful steps towards addressing these issues by augmenting LLMs with post-hoc reasoning based on computational argumentation, providing faithful explanations and enabling users to contest incorrect decisions. However, this paradigm is limited to pre-defined binary choices and only supports local contestation for specific instances, leaving the underlying decision logic unchanged and prone to repeated mistakes. In this paper, we introduce ArgEval, a framework that shifts from instance-specific reasoning to structured evaluation of general decision options. Rather than mining arguments solely for individual cases, ArgEval systematically maps task-specific decision spaces, builds corresponding option ontologies, and constructs general argumentation frameworks (AFs) for each option. These frameworks can then be instantiated to provide explainable recommendations for specific cases while still supporting global contestability through modification of the shared AFs. We investigate the effectiveness of ArgEval on treatment recommendation for glioblastoma, an aggressive brain tumour, and show that it can produce explainable guidance aligned with clinical practice.",
-      "pdf_url": "https://arxiv.org/pdf/2603.14643v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.14643v1",
-      "published": "2026-03-15T22:37:14Z",
-      "updated": "2026-03-15T22:37:14Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Can Large Language Models Evaluate Grant Proposal Quality? Revisiting the Wenner\u00e5s and Wold Peer Review Data",
-      "authors": [
-        "Ulf Sandstr\u00f6m",
-        "Mike Thelwall"
-      ],
-      "abstract": "Purpose: Despite the importance of peer review for grant funding decisions, academics are often reluctant to conduct it. This can lead to long delays between submission and the final decision as well as the risk of substandard reviews from busy or non-specialist scholars. At least one funder now uses Large Language Models (LLMs) to reduce the reviewing burden but the accuracy of LLMs for scoring grant proposals needs to be assessed. Design/methodology/approach: This article compares scores from a range of medium sized open weights LLMs with peer review scores for a well-researched dataset, the Swedish Medical Council's post-doctoral fellowship applications from 1994. Findings: Whilst the LLM scores correlate moderately between each other (mean Spearman correlation: 0.34), they correlated weakly but positively and mostly statistically significantly with the average expert scores (mean Spearman correlation: 0.22). The highest rank correlation between expert scores and LLMs was 0.33 for Gemma 3 27b based on proposal titles and summaries without their main texts, which is about half (56%) of the correlation between reviewers. Research limitations: The small sample size, old funding call and heterogeneous evaluation criteria all undermine the robustness of the analysis. Practical implications: Despite the ability of LLMs to score grant proposals being quantitatively weaker than that of experts, at least in this special case, they may have role in application triage or tie-breaking. Originality/value: This is the first assessment of the value of LLM scores for funding proposals.",
-      "pdf_url": "https://arxiv.org/pdf/2603.14565v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.14565v1",
-      "published": "2026-03-15T19:34:54Z",
-      "updated": "2026-03-15T19:34:54Z",
-      "categories": [
-        "cs.DL"
-      ]
-    },
-    {
-      "title": "From Scanning Guidelines to Action: A Robotic Ultrasound Agent with LLM-Based Reasoning",
-      "authors": [
-        "Yuan Bi",
-        "Yiping Zhou",
-        "Pei Liu",
-        "Feng Li",
-        "Zhongliang Jiang",
-        "Nassir Navab"
-      ],
-      "abstract": "Robotic ultrasound offers advantages over free-hand scanning, including improved reproducibility and reduced operator dependency. In clinical practice, US acquisition relies heavily on the sonographer's experience and situational judgment. When transferring this process to robotic systems, such expertise is often encoded explicitly through fixed procedures and task-specific models, yielding pipelines that can be difficult to adapt to new scanning tasks. In this work, we propose a unified framework for autonomous robotic US scanning that leverages a LLM-based agent to interpret US scanning guidelines and execute scans by dynamically invoking a set of provided software tools. Instead of encoding fixed scanning procedures, the LLM agent retrieves and reasons over guideline steps from scanning handbooks and adapts its planning decisions based on observations and the current scanning state. This enables the system to handle variable and decision-dependent workflows, such as adjusting scanning strategies, repeating steps, or selecting the appropriate next tool call in response to image quality or anatomical findings. Because the reasoning underlying tool selection is also critical for transparent and trustworthy planning, we further fine tune the LLM agent using a RL based strategy to improve both its reasoning quality and the correctness of tool selection and parameterization, while maintaining robust generalization to unseen guidelines and related tasks. We first validate the approach via verbal execution on 10 US scanning guidelines, assessing reasoning as well as tool selection and parameterization, and showing the benefit of RL fine tuning. We then demonstrate real world feasibility on robotic scanning of the gallbladder, spine, and kidney. Overall, the framework follows diverse guidelines and enables reliable autonomous scanning across multiple anatomical targets within a unified system.",
-      "pdf_url": "https://arxiv.org/pdf/2603.14393v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.14393v1",
-      "published": "2026-03-15T14:18:56Z",
-      "updated": "2026-03-15T14:18:56Z",
-      "categories": [
-        "cs.RO"
       ]
     }
   ]

@@ -1,8 +1,110 @@
 {
-  "generated_at_utc": "2026-03-19T02:46:56.341133Z",
+  "generated_at_utc": "2026-03-20T02:37:44.310284Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "A Dataset and Resources for Identifying Patient Health Literacy Information from Clinical Notes",
+      "authors": [
+        "Madeline Bittner",
+        "Dina Demner-Fushman",
+        "Yasmeen Shabazz",
+        "Davis Bartels",
+        "Dukyong Yoon",
+        "Brad Quitadamo",
+        "Rajiv Menghrajani",
+        "Leo Celi",
+        "Sarvesh Soni"
+      ],
+      "abstract": "Health literacy is a critical determinant of patient outcomes, yet current screening tools are not always feasible and differ considerably in the number of items, question format, and dimensions of health literacy they capture, making documentation in structured electronic health records difficult to achieve. Automated detection from unstructured clinical notes offers a promising alternative, as these notes often contain richer, more contextual health literacy information, but progress has been limited by the lack of annotated resources. We introduce HEALIX, the first publicly available annotated health literacy dataset derived from real clinical notes, curated through a combination of social worker note sampling, keyword-based filtering, and LLM-based active learning. HEALIX contains 589 notes across 9 note types, annotated with three health literacy labels: low, normal, and high. To demonstrate its utility, we benchmarked zero-shot and few-shot prompting strategies across four open source large language models (LLMs).",
+      "pdf_url": "https://arxiv.org/pdf/2603.19082v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.19082v1",
+      "published": "2026-03-19T16:09:40Z",
+      "updated": "2026-03-19T16:09:40Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "CoDA: Exploring Chain-of-Distribution Attacks and Post-Hoc Token-Space Repair for Medical Vision-Language Models",
+      "authors": [
+        "Xiang Chen",
+        "Fangfang Yang",
+        "Chunlei Meng",
+        "Chengyin Hu",
+        "Ang Li",
+        "Yiwei Wei",
+        "Jiahuan Long",
+        "Jiujiang Guo"
+      ],
+      "abstract": "Medical vision--language models (MVLMs) are increasingly used as perceptual backbones in radiology pipelines and as the visual front end of multimodal assistants, yet their reliability under real clinical workflows remains underexplored. Prior robustness evaluations often assume clean, curated inputs or study isolated corruptions, overlooking routine acquisition, reconstruction, display, and delivery operations that preserve clinical readability while shifting image statistics. To address this gap, we propose CoDA, a chain-of-distribution framework that constructs clinically plausible pipeline shifts by composing acquisition-like shading, reconstruction and display remapping, and delivery and export degradations. Under masked structural-similarity constraints, CoDA jointly optimizes stage compositions and parameters to induce failures while preserving visual plausibility. Across brain MRI, chest X-ray, and abdominal CT, CoDA substantially degrades the zero-shot performance of CLIP-style MVLMs, with chained compositions consistently more damaging than any single stage. We also evaluate multimodal large language models (MLLMs) as technical-authenticity auditors of imaging realism and quality rather than pathology. Proprietary multimodal models show degraded auditing reliability and persistent high-confidence errors on CoDA-shifted samples, while the medical-specific MLLMs we test exhibit clear deficiencies in medical image quality auditing. Finally, we introduce a post-hoc repair strategy based on teacher-guided token-space adaptation with patch-level alignment, which improves accuracy on archived CoDA outputs. Overall, our findings characterize a clinically grounded threat surface for MVLM deployment and show that lightweight alignment improves robustness in deployment.",
+      "pdf_url": "https://arxiv.org/pdf/2603.18545v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.18545v1",
+      "published": "2026-03-19T07:00:44Z",
+      "updated": "2026-03-19T07:00:44Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "TARo: Token-level Adaptive Routing for LLM Test-time Alignment",
+      "authors": [
+        "Arushi Rai",
+        "Qiang Zhang",
+        "Hanqing Zeng",
+        "Yunkai Zhang",
+        "Dipesh Tamboli",
+        "Xiangjun Fan",
+        "Zhuokai Zhao"
+      ],
+      "abstract": "Large language models (LLMs) exhibit strong reasoning capabilities but typically require expensive post-training to reach high performance. Recent test-time alignment methods offer a lightweight alternative, but have been explored mainly for preference alignment rather than reasoning. To bridge this gap, we propose, Token-level Adaptive Routing (TARo), which steers frozen LLMs toward structured reasoning entirely at inference time. Specifically, we first train reward models on step-wise mathematical traces to capture fine-grained logical consistency signals, then introduce a learnable token-level router that automatically controls the guidance of the reward model to the base model. Extensive experiments show that TARo significantly improves reasoning performance by up to +22.4% over base model and +8.4% over existing token-level test-time alignment methods, while also boosting out-of-distribution clinical reasoning (MedXpertQA) and instruction following (AlpacaEval). Furthermore, TARo also generalizes from small to large backbones without retraining, extending test-time alignment from preference optimization to robust, cross-domain reasoning.",
+      "pdf_url": "https://arxiv.org/pdf/2603.18411v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.18411v1",
+      "published": "2026-03-19T02:18:40Z",
+      "updated": "2026-03-19T02:18:40Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "The Validity Gap in Health AI Evaluation: A Cross-Sectional Analysis of Benchmark Composition",
+      "authors": [
+        "Alvin Rajkomar",
+        "Pavan Sudarshan",
+        "Angela Lai",
+        "Lily Peng"
+      ],
+      "abstract": "Background: Clinical trials rely on transparent inclusion criteria to ensure generalizability. In contrast, benchmarks validating health-related large language models (LLMs) rarely characterize the \"patient\" or \"query\" populations they contain. Without defined composition, aggregate performance metrics may misrepresent model readiness for clinical use.\n  Methods: We analyzed 18,707 consumer health queries across six public benchmarks using LLMs as automated coding instruments to apply a standardized 16-field taxonomy profiling context, topic, and intent.\n  Results: We identified a structural \"validity gap.\" While benchmarks have evolved from static retrieval to interactive dialogue, clinical composition remains misaligned with real-world needs. Although 42% of the corpus referenced objective data, this was polarized toward wellness-focused wearable signals (17.7%); complex diagnostic inputs remained rare, including laboratory values (5.2%), imaging (3.8%), and raw medical records (0.6%). Safety-critical scenarios were effectively absent: suicide/self-harm queries comprised <0.7% of the corpus and chronic disease management only 5.5%. Benchmarks also neglected vulnerable populations (pediatrics/older adults <11%) and global health needs.\n  Conclusions: Evaluation benchmarks remain misaligned with real-world clinical needs, lacking raw clinical artifacts, adequate representation of vulnerable populations, and longitudinal chronic care scenarios. The field must adopt standardized query profiling--analogous to clinical trial reporting--to align evaluation with the full complexity of clinical practice.",
+      "pdf_url": "https://arxiv.org/pdf/2603.18294v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.18294v1",
+      "published": "2026-03-18T21:31:19Z",
+      "updated": "2026-03-18T21:31:19Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LLM-Augmented Computational Phenotyping of Long Covid",
+      "authors": [
+        "Jing Wang",
+        "Jie Shen",
+        "Amar Sra",
+        "Qiaomin Xie",
+        "Jeremy C Weiss"
+      ],
+      "abstract": "Phenotypic characterization is essential for understanding heterogeneity in chronic diseases and for guiding personalized interventions. Long COVID, a complex and persistent condition, yet its clinical subphenotypes remain poorly understood. In this work, we propose an LLM-augmented computational phenotyping framework ``Grace Cycle'' that iteratively integrates hypothesis generation, evidence extraction, and feature refinement to discover clinically meaningful subgroups from longitudinal patient data. The framework identifies three distinct clinical phenotypes, Protected, Responder, and Refractory, based on 13,511 Long Covid participants. These phenotypes exhibit pronounced separation in peak symptom severity, baseline disease burden, and longitudinal dose-response patterns, with strong statistical support across multiple independent dimensions.\n  This study illustrates how large language models can be integrated into a principled, statistically grounded pipeline for phenotypic screening from complex longitudinal data. Note that the proposed framework is disease-agnostic and offers a general approach for discovering clinically interpretable subphenotypes.",
+      "pdf_url": "https://arxiv.org/pdf/2603.18115v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.18115v1",
+      "published": "2026-03-18T15:02:05Z",
+      "updated": "2026-03-18T15:02:05Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity Search",
       "authors": [
@@ -203,117 +305,6 @@
       "updated": "2026-03-17T22:13:22Z",
       "categories": [
         "cs.MA"
-      ]
-    },
-    {
-      "title": "Surg$\u03a3$: A Spectrum of Large-Scale Multimodal Data and Foundation Models for Surgical Intelligence",
-      "authors": [
-        "Zhitao Zeng",
-        "Mengya Xu",
-        "Jian Jiang",
-        "Pengfei Guo",
-        "Yunqiu Xu",
-        "Zhu Zhuo",
-        "Chang Han Low",
-        "Yufan He",
-        "Dong Yang",
-        "Chenxi Lin",
-        "Yiming Gu",
-        "Jiaxin Guo",
-        "Yutong Ban",
-        "Daguang Xu",
-        "Qi Dou",
-        "Yueming Jin"
-      ],
-      "abstract": "Surgical intelligence has the potential to improve the safety and consistency of surgical care, yet most existing surgical AI frameworks remain task-specific and struggle to generalize across procedures and institutions. Although multimodal foundation models, particularly multimodal large language models, have demonstrated strong cross-task capabilities across various medical domains, their advancement in surgery remains constrained by the lack of large-scale, systematically curated multimodal data. To address this challenge, we introduce Surg$\u03a3$, a spectrum of large-scale multimodal data and foundation models for surgical intelligence. At the core of this framework lies Surg$\u03a3$-DB, a large-scale multimodal data foundation designed to support diverse surgical tasks. Surg$\u03a3$-DB consolidates heterogeneous surgical data sources (including open-source datasets, curated in-house clinical collections and web-source data) into a unified schema, aiming to improve label consistency and data standardization across heterogeneous datasets. Surg$\u03a3$-DB spans 6 clinical specialties and diverse surgical types, providing rich image- and video-level annotations across 18 practical surgical tasks covering understanding, reasoning, planning, and generation, at an unprecedented scale (over 5.98M conversations). Beyond conventional multimodal conversations, Surg$\u03a3$-DB incorporates hierarchical reasoning annotations, providing richer semantic cues to support deeper contextual understanding in complex surgical scenarios. We further provide empirical evidence through recently developed surgical foundation models built upon Surg$\u03a3$-DB, illustrating the practical benefits of large-scale multimodal annotations, unified semantic design, and structured reasoning annotations for improving cross-task generalization and interpretability.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16822v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.16822v1",
-      "published": "2026-03-17T17:27:32Z",
-      "updated": "2026-03-17T17:27:32Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "IOSVLM: A 3D Vision-Language Model for Unified Dental Diagnosis from Intraoral Scans",
-      "authors": [
-        "Huimin Xiong",
-        "Zijie Meng",
-        "Tianxiang Hu",
-        "Chenyi Zhou",
-        "Yang Feng",
-        "Zuozhu Liu"
-      ],
-      "abstract": "3D intraoral scans (IOS) are increasingly adopted in routine dentistry due to abundant geometric evidence, and unified multi-disease diagnosis is desirable for clinical documentation and communication. While recent works introduce dental vision-language models (VLMs) to enable unified diagnosis and report generation on 2D images or multi-view images rendered from IOS, they do not fully leverage native 3D geometry. Such work is necessary and also challenging, due to: (i) heterogeneous scan forms and the complex IOS topology, (ii) multi-disease co-occurrence with class imbalance and fine-grained morphological ambiguity, (iii) limited paired 3D IOS-text data. Thus, we present IOSVLM, an end-to-end 3D VLM that represents scans as point clouds and follows a 3D encoder-projector-LLM design for unified diagnosis and generative visual question-answering (VQA), together with IOSVQA, a large-scale multi-source IOS diagnosis VQA dataset comprising 19,002 cases and 249,055 VQA pairs over 23 oral diseases and heterogeneous scan types. To address the distribution gap between color-free IOS data and color-dependent 3D pre-training, we propose a geometry-to-chromatic proxy that stabilizes fine-grained geometric perception and cross-modal alignment. A two-stage curriculum training strategy further enhances robustness. IOSVLM consistently outperforms strong baselines, achieving gains of at least +9.58% macro accuracy and +1.46% macro F1, indicating the effectiveness of direct 3D geometry modeling for IOS-based diagnosis.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16781v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.16781v1",
-      "published": "2026-03-17T16:57:02Z",
-      "updated": "2026-03-17T16:57:02Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "InViC: Intent-aware Visual Cues for Medical Visual Question Answering",
-      "authors": [
-        "Zhisong Wang",
-        "Ziyang Chen",
-        "Zanting Ye",
-        "Hongze Zhu",
-        "Yefeng Zheng",
-        "Yong Xia"
-      ],
-      "abstract": "Medical visual question answering (Med-VQA) aims to answer clinically relevant questions grounded in medical images. However, existing multimodal large language models (MLLMs) often exhibit shortcut answering, producing plausible responses by exploiting language priors or dataset biases while insufficiently attending to visual evidence. This behavior undermines clinical reliability, especially when subtle imaging findings are decisive. We propose a lightweight plug-in framework, termed Intent-aware Visual Cues (InViC), to explicitly enhance image-based answer generation in medical VQA. InViC introduces a Cue Tokens Extraction (CTE) module that distills dense visual tokens into a compact set of K question-conditioned cue tokens, which serve as structured visual intermediaries injected into the LLM decoder to promote intent-aligned visual evidence. To discourage bypassing of visual information, we further design a two-stage fine-tuning strategy with a cue-bottleneck attention mask. In Stage I, we employ an attention mask to block the LLM's direct view of raw visual features, thereby funneling all visual evidence through the cue pathway. In Stage II, standard causal attention is restored to train the LLM to jointly exploit the visual and cue tokens. We evaluate InViC on three public Med-VQA benchmarks (VQA-RAD, SLAKE, and ImageCLEF VQA-Med 2019) across multiple representative MLLMs. InViC consistently improves over zero-shot inference and standard LoRA fine-tuning, demonstrating that intent-aware visual cues with bottlenecked training is a practical and effective strategy for improving trustworthy Med-VQA.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16372v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.16372v1",
-      "published": "2026-03-17T10:59:48Z",
-      "updated": "2026-03-17T10:59:48Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "A Scoping Review of AI-Driven Digital Interventions in Mental Health Care: Mapping Applications Across Screening, Support, Monitoring, Prevention, and Clinical Education",
-      "authors": [
-        "Yang Ni",
-        "Fanli Jia"
-      ],
-      "abstract": "Artificial intelligence (AI)-enabled digital interventions, including Generative AI (GenAI) and Human-Centered AI (HCAI), are increasingly used to expand access to digital psychiatry and mental health care. This PRISMA-ScR scoping review maps the landscape of AI-driven mental health (mHealth) technologies across five critical phases: pre-treatment (screening/triage), treatment (therapeutic support), post-treatment (remote patient monitoring), clinical education, and population-level prevention. We synthesized 36 empirical studies implemented through early 2024, focusing on Large Language Models (LLMs), machine learning (ML) models, and autonomous conversational agents. Key use cases involve referral triage, empathic communication enhancement, and AI-assisted psychotherapy delivered via chatbots and voice agents. While benefits include reduced wait times and increased patient engagement, we address recurring challenges like algorithmic bias, data privacy, and human-AI collaboration barriers. By introducing a novel four-pillar framework, this review provides a comprehensive roadmap for AI-augmented mental health care, offering actionable insights for researchers, clinicians, and policymakers to develop safe, effective, and equitable digital health interventions.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16204v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.16204v1",
-      "published": "2026-03-17T07:33:29Z",
-      "updated": "2026-03-17T07:33:29Z",
-      "categories": [
-        "cs.CY",
-        "cs.AI",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Topology-Guided Biomechanical Profiling: A White-Box Framework for Opportunistic Screening of Spinal Instability on Routine CT",
-      "authors": [
-        "Zanting Ye",
-        "Xuanbin Wu",
-        "Guoqing Zhong",
-        "Shengyuan Liu",
-        "Jiashuai Liu",
-        "Ge Song",
-        "Zhisong Wang",
-        "Jing Hao",
-        "Xiaolong Niu",
-        "Yefeng Zheng",
-        "Yu Zhang",
-        "Lijun Lu"
-      ],
-      "abstract": "Routine oncologic computed tomography (CT) presents an ideal opportunity for screening spinal instability, yet prophylactic stabilization windows are frequently missed due to the complex geometric reasoning required by the Spinal Instability Neoplastic Score (SINS). Automating SINS is fundamentally hindered by metastatic osteolysis, which induces topological ambiguity that confounds standard segmentation and black-box AI. We propose Topology-Guided Biomechanical Profiling (TGBP), an auditable white-box framework decoupling anatomical perception from structural reasoning. TGBP anchors SINS assessment on two deterministic geometric innovations: (i) canal-referenced partitioning to resolve posterolateral boundary ambiguity, and (ii) context-aware morphometric normalization via covariance-based oriented bounding boxes (OBB) to quantify vertebral collapse. Integrated with auxiliary radiomic and large language model (LLM) modules, TGBP provides an end-to-end, interpretable SINS evaluation. Validated on a multi-center, multi-cancer cohort ($N=482$), TGBP achieved 90.2\\% accuracy in 3-tier stability triage. In a blinded reader study ($N=30$), TGBP significantly outperformed medical oncologists on complex structural features ($\u03ba=0.857$ vs.\\ $0.570$) and prevented compounding errors in Total Score estimation ($\u03ba=0.625$ vs.\\ $0.207$), democratizing expert-level opportunistic screening.",
-      "pdf_url": "https://arxiv.org/pdf/2603.16963v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.16963v1",
-      "published": "2026-03-17T06:34:18Z",
-      "updated": "2026-03-17T06:34:18Z",
-      "categories": [
-        "q-bio.QM",
-        "cs.CV"
       ]
     }
   ]

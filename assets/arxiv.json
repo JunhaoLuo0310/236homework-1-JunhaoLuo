@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-20T02:37:44.310284Z",
+  "generated_at_utc": "2026-03-21T02:31:29.673368Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
@@ -56,7 +56,8 @@
         "Yunkai Zhang",
         "Dipesh Tamboli",
         "Xiangjun Fan",
-        "Zhuokai Zhao"
+        "Zhuokai Zhao",
+        "Lizhu Zhang"
       ],
       "abstract": "Large language models (LLMs) exhibit strong reasoning capabilities but typically require expensive post-training to reach high performance. Recent test-time alignment methods offer a lightweight alternative, but have been explored mainly for preference alignment rather than reasoning. To bridge this gap, we propose, Token-level Adaptive Routing (TARo), which steers frozen LLMs toward structured reasoning entirely at inference time. Specifically, we first train reward models on step-wise mathematical traces to capture fine-grained logical consistency signals, then introduce a learnable token-level router that automatically controls the guidance of the reward model to the base model. Extensive experiments show that TARo significantly improves reasoning performance by up to +22.4% over base model and +8.4% over existing token-level test-time alignment methods, while also boosting out-of-distribution clinical reasoning (MedXpertQA) and instruction following (AlpacaEval). Furthermore, TARo also generalizes from small to large backbones without retraining, extending test-time alignment from preference optimization to robust, cross-domain reasoning.",
       "pdf_url": "https://arxiv.org/pdf/2603.18411v1",

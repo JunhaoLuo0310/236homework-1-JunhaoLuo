@@ -1,8 +1,111 @@
 {
-  "generated_at_utc": "2026-03-22T02:47:40.575173Z",
+  "generated_at_utc": "2026-03-23T02:47:57.215529Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "MedSPOT: A Workflow-Aware Sequential Grounding Benchmark for Clinical GUI",
+      "authors": [
+        "Rozain Shakeel",
+        "Abdul Rahman Mohammad Ali",
+        "Muneeb Mushtaq",
+        "Tausifa Jan Saleem",
+        "Tajamul Ashraf"
+      ],
+      "abstract": "Despite the rapid progress of Multimodal Large Language Models (MLLMs), their ability to perform reliable visual grounding in high-stakes clinical software environments remains underexplored. Existing GUI benchmarks largely focus on isolated, single-step grounding queries, overlooking the sequential, workflow-driven reasoning required in real-world medical interfaces, where tasks evolve across independent steps and dynamic interface states. We introduce MedSPOT, a workflow-aware sequential grounding benchmark for clinical GUI environments. Unlike prior benchmarks that treat grounding as a standalone prediction task, MedSPOT models procedural interaction as a sequence of structured spatial decisions. The benchmark comprises 216 task-driven videos with 597 annotated keyframes, in which each task consists of 2 to 3 interdependent grounding steps within realistic medical workflows. This design captures interface hierarchies, contextual dependencies, and fine-grained spatial precision under evolving conditions. To evaluate procedural robustness, we propose a strict sequential evaluation protocol that terminates task assessment upon the first incorrect grounding prediction, explicitly measuring error propagation in multi-step workflows. We further introduce a comprehensive failure taxonomy, including edge bias, small-target errors, no prediction, near miss, far miss, and toolbar confusion, to enable systematic diagnosis of model behavior in clinical GUI settings. By shifting evaluation from isolated grounding to workflow-aware sequential reasoning, MedSPOT establishes a realistic and safety-critical benchmark for assessing multimodal models in medical software environments. Code and data are available at: https://github.com/Tajamul21/MedSPOT.",
+      "pdf_url": "https://arxiv.org/pdf/2603.19993v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.19993v1",
+      "published": "2026-03-20T14:43:53Z",
+      "updated": "2026-03-20T14:43:53Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "MedQ-Engine: A Closed-Loop Data Engine for Evolving MLLMs in Medical Image Quality Assessment",
+      "authors": [
+        "Jiyao Liu",
+        "Junzhi Ning",
+        "Wanying Qu",
+        "Lihao Liu",
+        "Chenglong Ma",
+        "Junjun He",
+        "Ningsheng Xu"
+      ],
+      "abstract": "Medical image quality assessment (Med-IQA) is a prerequisite for clinical AI deployment, yet multimodal large language models (MLLMs) still fall substantially short of human experts, particularly when required to provide descriptive assessments with clinical reasoning beyond simple quality scores. However, improving them is hindered by the high cost of acquiring descriptive annotations and by the inability of one-time data collection to adapt to the model's evolving weaknesses. To address these challenges, we propose MedQ-Engine, a closed-loop data engine that iteratively evaluates the model to discover failure prototypes via data-driven clustering, explores a million-scale image pool using these prototypes as retrieval anchors with progressive human-in-the-loop annotation, and evolves through quality-assured fine-tuning, forming a self-improving cycle. Models are evaluated on complementary perception and description tasks. An entropy-guided routing mechanism triages annotations to minimize labeling cost. Experiments across five medical imaging modalities show that MedQ-Engine elevates an 8B-parameter model to surpass GPT-4o by over 13% and narrow the gap with human experts to only 4.34%, using only 10K annotations with more than 4x sample efficiency over random sampling.",
+      "pdf_url": "https://arxiv.org/pdf/2603.19863v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.19863v1",
+      "published": "2026-03-20T11:29:13Z",
+      "updated": "2026-03-20T11:29:13Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "FDARxBench: Benchmarking Regulatory and Clinical Reasoning on FDA Generic Drug Assessment",
+      "authors": [
+        "Betty Xiong",
+        "Jillian Fisher",
+        "Benjamin Newman",
+        "Meng Hu",
+        "Shivangi Gupta",
+        "Yejin Choi",
+        "Lanyan Fang",
+        "Russ B Altman"
+      ],
+      "abstract": "We introduce an expert curated, real-world benchmark for evaluating document-grounded question-answering (QA) motivated by generic drug assessment, using the U.S. Food and Drug Administration (FDA) drug label documents. Drug labels contain rich but heterogeneous clinical and regulatory information, making accurate question answering difficult for current language models. In collaboration with FDA regulatory assessors, we introduce FDARxBench, and construct a multi-stage pipeline for generating high-quality, expert curated, QA examples spanning factual, multi-hop, and refusal tasks, and design evaluation protocols to assess both open-book and closed-book reasoning. Experiments across proprietary and open-weight models reveal substantial gaps in factual grounding, long-context retrieval, and safe refusal behavior. While motivated by FDA generic drug assessment needs, this benchmark also provides a substantial foundation for challenging regulatory-grade evaluation of label comprehension. The benchmark is designed to support evaluation of LLM behavior on drug-label questions.",
+      "pdf_url": "https://arxiv.org/pdf/2603.19539v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.19539v1",
+      "published": "2026-03-20T00:33:58Z",
+      "updated": "2026-03-20T00:33:58Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ReXInTheWild: A Unified Benchmark for Medical Photograph Understanding",
+      "authors": [
+        "Oishi Banerjee",
+        "Sung Eun Kim",
+        "Alexandra N. Willauer",
+        "Julius M. Kernbach",
+        "Abeer Rihan Alomaish",
+        "Reema Abdulwahab S. Alghamdi",
+        "Hassan Rayhan Alomaish",
+        "Mohammed Baharoon",
+        "Xiaoman Zhang",
+        "Julian Nicolas Acosta",
+        "Christine Zhou",
+        "Pranav Rajpurkar"
+      ],
+      "abstract": "Everyday photographs taken with ordinary cameras are already widely used in telemedicine and other online health conversations, yet no comprehensive benchmark evaluates whether vision-language models can interpret their medical content. Analyzing these images requires both fine-grained natural image understanding and domain-specific medical reasoning, a combination that challenges both general-purpose and specialized models. We introduce ReXInTheWild, a benchmark of 955 clinician-verified multiple-choice questions spanning seven clinical topics across 484 photographs sourced from the biomedical literature. When evaluated on ReXInTheWild, leading multimodal large language models show substantial performance variation: Gemini-3 achieves 78% accuracy, followed by Claude Opus 4.5 (72%) and GPT-5 (68%), while the medical specialist model MedGemma reaches only 37%. A systematic error analysis also reveals four categories of common errors, ranging from low-level geometric errors to high-level reasoning failures and requiring different mitigation strategies. ReXInTheWild provides a challenging, clinically grounded benchmark at the intersection of natural image understanding and medical reasoning. The dataset is available on HuggingFace.",
+      "pdf_url": "https://arxiv.org/pdf/2603.19517v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.19517v1",
+      "published": "2026-03-19T22:54:28Z",
+      "updated": "2026-03-19T22:54:28Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "LoFi: Location-Aware Fine-Grained Representation Learning for Chest X-ray",
+      "authors": [
+        "Myeongkyun Kang",
+        "Yanting Yang",
+        "Xiaoxiao Li"
+      ],
+      "abstract": "Fine-grained representation learning is crucial for retrieval and phrase grounding in chest X-rays, where clinically relevant findings are often spatially confined. However, the lack of region-level supervision in contrastive models and the limited ability of large vision language models to capture fine-grained representations in external validation lead to suboptimal performance on these tasks. To address these limitations, we propose Location-aware Fine-grained representation learning (LoFi), which jointly optimizes sigmoid, captioning, and location-aware captioning losses using a lightweight large language model. The location-aware captioning loss enables region-level supervision through grounding and dense captioning objectives, thereby facilitating fine-grained representation learning. Building upon these representations, we integrate a fine-grained encoder into retrieval-based in-context learning to enhance chest X-ray grounding across diverse settings. Extensive experiments demonstrate that our method achieves superior retrieval and phrase grounding performance on MIMIC-CXR and PadChest-GR.",
+      "pdf_url": "https://arxiv.org/pdf/2603.19451v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.19451v1",
+      "published": "2026-03-19T20:24:38Z",
+      "updated": "2026-03-19T20:24:38Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "A Dataset and Resources for Identifying Patient Health Literacy Information from Clinical Notes",
       "authors": [
@@ -117,7 +220,9 @@
       "published": "2026-03-18T14:25:50Z",
       "updated": "2026-03-18T14:25:50Z",
       "categories": [
-        "q-bio.QM"
+        "q-bio.QM",
+        "cs.AI",
+        "cs.CV"
       ]
     },
     {
@@ -192,120 +297,6 @@
       "updated": "2026-03-18T10:35:44Z",
       "categories": [
         "cs.IR"
-      ]
-    },
-    {
-      "title": "Agentic Cognitive Profiling: Realigning Automated Alzheimer's Disease Detection with Clinical Construct Validity",
-      "authors": [
-        "Jiawen Kang",
-        "Kun Li",
-        "Dongrui Han",
-        "Jinchao Li",
-        "Junan Li",
-        "Lingwei Meng",
-        "Xixin Wu",
-        "Helen Meng"
-      ],
-      "abstract": "Automated Alzheimer's Disease (AD) screening has predominantly followed the inductive paradigm of pattern recognition, which directly maps the input signal to the outcome label. This paradigm sacrifices construct validity of clinical protocol for statistical shortcuts. This paper proposes Agentic Cognitive Profiling (ACP), an agentic framework that realigns automated screening with clinical protocol logic across multiple cognitive domains. Rather than learning opaque mappings from transcripts to labels, the framework decomposes standardized assessments into atomic cognitive tasks and orchestrates specialized LLM agents to extract verifiable scoring primitives. Central to our design is decoupling semantic understanding from measurement by delegating all quantification to deterministic function calling, thereby mitigating hallucination and restoring construct validity. Unlike popular datasets that typically comprise around a hundred participants under a single task, we evaluate on a clinically-annotated corpus of 402 participants across eight structured cognitive tasks spanning multiple cognitive domains. The framework achieves 90.5% score match rate in task examination and 85.3% accuracy in AD prediction, surpassing popular baselines while generating interpretable cognitive profiles grounded in behavioral evidence. This work demonstrates that construct validity and predictive performance need not be traded off, charting a path toward AD screening systems that explain rather than merely predict.",
-      "pdf_url": "https://arxiv.org/pdf/2603.17392v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.17392v1",
-      "published": "2026-03-18T06:15:35Z",
-      "updated": "2026-03-18T06:15:35Z",
-      "categories": [
-        "cs.MA",
-        "cs.IR",
-        "q-bio.NC"
-      ]
-    },
-    {
-      "title": "PACE-RAG: Patient-Aware Contextual and Evidence-based Policy RAG for Clinical Drug Recommendation",
-      "authors": [
-        "Chaeyoung Huh",
-        "Hyunmin Hwang",
-        "Jung Hwan Shin",
-        "Jinse Park",
-        "Jong Chul Ye"
-      ],
-      "abstract": "Drug recommendation requires a deep understanding of individual patient context, especially for complex conditions like Parkinson's disease. While LLMs possess broad medical knowledge, they fail to capture the subtle nuances of actual prescribing patterns. Existing RAG methods also struggle with these complexities because guideline-based retrieval remains too generic and similar-patient retrieval often replicates majority patterns without accounting for the unique clinical nuances of individual patients. To bridge this gap, we propose PACE-RAG (Patient-Aware Contextual and Evidence-based Policy RAG), a novel framework designed to synthesize individual patient context with the prescribing tendencies of similar cases. By analyzing treatment patterns tailored to specific clinical signals, PACE-RAG identifies optimal prescriptions and generates an explainable clinical summary. Evaluated on a Parkinson's cohort and the MIMIC-IV benchmark using Llama-3.1-8B and Qwen3-8B, PACE-RAG achieved state-of-the-art performance, reaching F1 scores of 80.84% and 47.22%, respectively. These results validate PACE-RAG as a robust, clinically grounded solution for personalized decision support. Our code is available at: https://github.com/ChaeYoungHuh/PACE-RAG.",
-      "pdf_url": "https://arxiv.org/pdf/2603.17356v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.17356v1",
-      "published": "2026-03-18T04:40:53Z",
-      "updated": "2026-03-18T04:40:53Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Deployment and Evaluation of an EHR-integrated, Large Language Model-Powered Tool to Triage Surgical Patients",
-      "authors": [
-        "Jane Wang",
-        "Timothy Keyes",
-        "April S Liang",
-        "Stephen P Ma",
-        "Jason Shen",
-        "Jerry Liu",
-        "Nerissa Ambers",
-        "Abby Pandya",
-        "Rita Pandya",
-        "Jason Hom",
-        "Natasha Steele",
-        "Jonathan H Chen",
-        "Kevin Schulman"
-      ],
-      "abstract": "Surgical co-management (SCM) is an evidence-based model in which hospitalists jointly manage medically complex perioperative patients alongside surgical teams. Despite its clinical and financial value, SCM is limited by the need to manually identify eligible patients. To determine whether SCM triage can be automated, we conducted a prospective, unblinded study at Stanford Health Care in which an LLM-based, electronic health record (EHR)-integrated triage tool (SCM Navigator) provided SCM recommendations followed by physician review.\n  Using pre-operative documentation, structured data, and clinical criteria for perioperative morbidity, SCM Navigator categorized patients as appropriate, not appropriate, or possibly appropriate for SCM. Faculty indicated their clinical judgment and provided free-text feedback when they disagreed. Sensitivity, specificity, positive predictive value, and negative predictive value were measured using physician determinations as a reference. Free-text reasons were thematically categorized, and manual chart review was conducted on all false-negative cases and 30 randomly selected cases from the largest false-positive category. Since deployment, 6,193 cases have been triaged, of which 1,582 (23%) were recommended for hospitalist consultation. SCM Navigator displayed high sensitivity (0.94, 95% CI 0.91-0.96) and moderate specificity (0.74, 95% CI 0.71-0.77). Post-hoc chart review suggested most discrepancies reflect modifiable gaps in clinical criteria, institutional workflow, or physician practice variability rather than LLM misclassification, which accounted for 2 of 19 (11%) false-negative cases. These findings demonstrate that an LLM-powered, EHR-integrated, human-in-the-loop AI system can accurately and safely triage surgical patients for SCM, and that AI-enabled screening tools can augment and potentially automate time-intensive clinical workflows.",
-      "pdf_url": "https://arxiv.org/pdf/2603.17234v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.17234v1",
-      "published": "2026-03-18T00:36:58Z",
-      "updated": "2026-03-18T00:36:58Z",
-      "categories": [
-        "cs.CY",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Tabular LLMs for Interpretable Few-Shot Alzheimer's Disease Prediction with Multimodal Biomedical Data",
-      "authors": [
-        "Sophie Kearney",
-        "Shu Yang",
-        "Zixuan Wen",
-        "Weimin Lyu",
-        "Bojian Hou",
-        "Duy Duong-Tran",
-        "Tianlong Chen",
-        "Jason H. Moore",
-        "Marylyn D. Ritchie",
-        "Chao Chen",
-        "Li Shen"
-      ],
-      "abstract": "Accurate diagnosis of Alzheimer's disease (AD) requires handling tabular biomarker data, yet such data are often small and incomplete, where deep learning models frequently fail to outperform classical methods. Pretrained large language models (LLMs) offer few-shot generalization, structured reasoning, and interpretable outputs, providing a powerful paradigm shift for clinical prediction. We propose TAP-GPT Tabular Alzheimer's Prediction GPT, a domain-adapted tabular LLM framework built on TableGPT2 and fine-tuned for few-shot AD classification using tabular prompts rather than plain texts. We evaluate TAP-GPT across four ADNI-derived datasets, including QT-PAD biomarkers and region-level structural MRI, amyloid PET, and tau PET for binary AD classification. Across multimodal and unimodal settings, TAP-GPT improves upon its backbone models and outperforms traditional machine learning baselines in the few-shot setting while remaining competitive with state-of-the-art general-purpose LLMs. We show that feature selection mitigates degradation in high-dimensional inputs and that TAP-GPT maintains stable performance under simulated and real-world missingness without imputation. Additionally, TAP-GPT produces structured, modality-aware reasoning aligned with established AD biology and shows greater stability under self-reflection, supporting its use in iterative multi-agent systems. To our knowledge, this is the first systematic application of a tabular-specialized LLM to multimodal biomarker-based AD prediction, demonstrating that such pretrained models can effectively address structured clinical prediction tasks and laying the foundation for tabular LLM-driven multi-agent clinical decision-support systems. The source code is publicly available on GitHub: https://github.com/sophie-kearney/TAP-GPT.",
-      "pdf_url": "https://arxiv.org/pdf/2603.17191v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.17191v1",
-      "published": "2026-03-17T22:43:50Z",
-      "updated": "2026-03-17T22:43:50Z",
-      "categories": [
-        "cs.CL",
-        "cs.LG",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "Ablation Study of a Fairness Auditing Agentic System for Bias Mitigation in Early-Onset Colorectal Cancer Detection",
-      "authors": [
-        "Amalia Ionescu",
-        "Jose Guadalupe Hernandez",
-        "Jui-Hsuan Chang",
-        "Emily F. Wong",
-        "Paul Wang",
-        "Jason H. Moore",
-        "Tiffani J. Bright"
-      ],
-      "abstract": "Artificial intelligence (AI) is increasingly used in clinical settings, yet limited oversight and domain expertise can allow algorithmic bias and safety risks to persist. This study evaluates whether an agentic AI system can support auditing biomedical machine learning models for fairness in early-onset colorectal cancer (EO-CRC), a condition with documented demographic disparities. We implemented a two-agent architecture consisting of a Domain Expert Agent that synthesizes literature on EO-CRC disparities and a Fairness Consultant Agent that recommends sensitive attributes and fairness metrics for model evaluation. An ablation study compared three Ollama large language models (8B, 20B, and 120B parameters) across three configurations: pretrained LLM-only, Agent without Retrieval-Augmented Generation (RAG), and Agent with RAG. Across models, the Agent with RAG achieved the highest semantic similarity to expert-derived reference statements, particularly for disparity identification, suggesting agentic systems with retrieval may help scale fairness auditing in clinical AI.",
-      "pdf_url": "https://arxiv.org/pdf/2603.17179v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.17179v1",
-      "published": "2026-03-17T22:13:22Z",
-      "updated": "2026-03-17T22:13:22Z",
-      "categories": [
-        "cs.MA"
       ]
     }
   ]

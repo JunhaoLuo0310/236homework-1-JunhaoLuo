@@ -1,8 +1,131 @@
 {
-  "generated_at_utc": "2026-03-24T02:39:20.613116Z",
+  "generated_at_utc": "2026-03-25T02:44:36.941470Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Ran Score: a LLM-based Evaluation Score for Radiology Report Generation",
+      "authors": [
+        "Ran Zhang",
+        "Yucong Lin",
+        "Zhaoli Su",
+        "Bowen Liu",
+        "Danni Ai",
+        "Tianyu Fu",
+        "Deqiang Xiao",
+        "Jingfan Fan",
+        "Yuanyuan Wang",
+        "Mingwei Gao",
+        "Yuwan Hu",
+        "Shuya Gao",
+        "Jingtao Li",
+        "Jian Yang",
+        "Hong Song",
+        "Hongliang Sun"
+      ],
+      "abstract": "Chest X-ray report generation and automated evaluation are limited by poor recognition of low-prevalence abnormalities and inadequate handling of clinically important language, including negation and ambiguity. We develop a clinician-guided framework combining human expertise and large language models for multi-label finding extraction from free-text chest X-ray reports and use it to define Ran Score, a finding-level metric for report evaluation. Using three non-overlapping MIMIC-CXR-EN cohorts from a public chest X-ray dataset and an independent ChestX-CN validation cohort, we optimize prompts, establish radiologist-derived reference labels and evaluate report generation models. The optimized framework improves the macro-averaged score from 0.753 to 0.956 on the MIMIC-CXR-EN development cohort, exceeds the CheXbert benchmark by 15.7 percentage points on directly comparable labels, and shows robust generalization on the ChestX-CN validation cohort. Here we show that clinician-guided prompt optimization improves agreement with a radiologist-derived reference standard and that Ran Score enables finding-level evaluation of report fidelity, particularly for low-prevalence abnormalities.",
+      "pdf_url": "https://arxiv.org/pdf/2603.22935v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.22935v1",
+      "published": "2026-03-24T08:29:26Z",
+      "updated": "2026-03-24T08:29:26Z",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Can LLM Agents Generate Real-World Evidence? Evaluating Observational Studies in Medical Databases",
+      "authors": [
+        "Dubai Li",
+        "Yuxiang He",
+        "Yan Hu",
+        "Yu Tian",
+        "Jingsong Li"
+      ],
+      "abstract": "Observational studies can yield clinically actionable evidence at scale, but executing them on real-world databases is open-ended and requires coherent decisions across cohort construction, analysis, and reporting. Prior evaluations of LLM agents emphasize isolated steps or single answers, missing the integrity and internal structure of the resulting evidence bundle. To address this gap, we introduce RWE-bench, a benchmark grounded in MIMIC-IV and derived from peer-reviewed observational studies. Each task provides the corresponding study protocol as the reference standard, requiring agents to execute experiments in a real database and iteratively generate tree-structured evidence bundles. We evaluate six LLMs (three open-source, three closed-source) under three agent scaffolds using both question-level correctness and end-to-end task metrics. Across 162 tasks, task success is low: the best agent reaches 39.9%, and the best open-source model reaches 30.4%. Agent scaffolds also matter substantially, causing over 30% variation in performance metrics. Furthermore, we implement an automated cohort evaluation method to rapidly localize errors and identify agent failure modes. Overall, the results highlight persistent limitations in agents' ability to produce end-to-end evidence bundles, and efficient validation remains an important direction for future work. Code and data are available at https://github.com/somewordstoolate/RWE-bench.",
+      "pdf_url": "https://arxiv.org/pdf/2603.22767v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.22767v1",
+      "published": "2026-03-24T03:50:34Z",
+      "updated": "2026-03-24T03:50:34Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Synthetic or Authentic? Building Mental Patient Simulators from Longitudinal Evidence",
+      "authors": [
+        "Baihan Li",
+        "Bingrui Jin",
+        "Kunyao Lan",
+        "Ming Wang",
+        "Mengyue Wu"
+      ],
+      "abstract": "Patient simulation is essential for developing and evaluating mental health dialogue systems. As most existing approaches rely on snapshot-style prompts with limited profile information, homogeneous behaviors and incoherent disease progression in multi-turn interactions have become key chellenges. In this work, we propose DEPROFILE, a data-grounded patient simulation framework that constructs unified, multi-source patient profiles by integrating demographic attributes, standardized clinical symptoms, counseling dialogues, and longitudinal life-event histories from real-world data. We further introduce a Chain-of-Change agent to transform noisy longitudinal records into structured, temporally grounded memory representations for simulation. Experiments across multiple large language model (LLM) backbones show that with more comprehensive profile constructed by DEPROFILE, the dialogue realism, behavioral diversity, and event richness have consistently improved and exceed state-of-the-art baselines, highlighting the importance of grounding patient simulation in verifiable longitudinal evidence.",
+      "pdf_url": "https://arxiv.org/pdf/2603.22704v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.22704v1",
+      "published": "2026-03-24T01:56:33Z",
+      "updated": "2026-03-24T01:56:33Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Multi-Method Validation of Large Language Model Medical Translation Across High- and Low-Resource Languages",
+      "authors": [
+        "Chukwuebuka Anyaegbuna",
+        "Eduardo Juan Perez Guerrero",
+        "Jerry Liu",
+        "Timothy Keyes",
+        "April Liang",
+        "Natasha Steele",
+        "Stephen Ma",
+        "Jonathan Chen",
+        "Kevin Schulman"
+      ],
+      "abstract": "Language barriers affect 27.3 million U.S. residents with non-English language preference, yet professional medical translation remains costly and often unavailable. We evaluated four frontier large language models (GPT-5.1, Claude Opus 4.5, Gemini 3 Pro, Kimi K2) translating 22 medical documents into 8 languages spanning high-resource (Spanish, Chinese, Russian, Vietnamese), medium-resource (Korean, Arabic), and low-resource (Tagalog, Haitian Creole) categories using a five-layer validation framework. Across 704 translation pairs, all models achieved high semantic preservation (LaBSE greater than 0.92), with no significant difference between high- and low-resource languages (p = 0.066). Cross-model back-translation confirmed results were not driven by same-model circularity (delta = -0.0009). Inter-model concordance across four independently trained models was high (LaBSE: 0.946), and lexical borrowing analysis showed no correlation between English term retention and fidelity scores in low-resource languages (rho = +0.018, p = 0.82). These converging results suggest frontier LLMs preserve medical meaning across resource levels, with implications for language access in healthcare.",
+      "pdf_url": "https://arxiv.org/pdf/2603.22642v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.22642v1",
+      "published": "2026-03-23T23:34:02Z",
+      "updated": "2026-03-23T23:34:02Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Multimodal Survival Analysis with Locally Deployable Large Language Models",
+      "authors": [
+        "Moritz G\u00f6gl",
+        "Christopher Yau"
+      ],
+      "abstract": "We study multimodal survival analysis integrating clinical text, tabular covariates, and genomic profiles using locally deployable large language models (LLMs). As many institutions face tight computational and privacy constraints, this setting motivates the use of lightweight, on-premises models. Our approach jointly estimates calibrated survival probabilities and generates concise, evidence-grounded prognosis text via teacher-student distillation and principled multimodal fusion. On a TCGA cohort, it outperforms standard baselines, avoids reliance on cloud services and associated privacy concerns, and reduces the risk of hallucinated or miscalibrated estimates that can be observed in base LLMs.",
+      "pdf_url": "https://arxiv.org/pdf/2603.22158v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.22158v1",
+      "published": "2026-03-23T16:21:37Z",
+      "updated": "2026-03-23T16:21:37Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "GSEM: Graph-based Self-Evolving Memory for Experience Augmented Clinical Reasoning",
+      "authors": [
+        "Xiao Han",
+        "Yuzheng Fan",
+        "Sendong Zhao",
+        "Haochun Wang",
+        "Bing Qin"
+      ],
+      "abstract": "Clinical decision-making agents can benefit from reusing prior decision experience. However, many memory-augmented methods store experiences as independent records without explicit relational structure, which may introduce noisy retrieval, unreliable reuse, and in some cases even hurt performance compared to direct LLM inference. We propose GSEM (Graph-based Self-Evolving Memory), a clinical memory framework that organizes clinical experiences into a dual-layer memory graph, capturing both the decision structure within each experience and the relational dependencies across experiences, and supporting applicability-aware retrieval and online feedback-driven calibration of node quality and edge weights. Across MedR-Bench and MedAgentsBench with two LLM backbones, GSEM achieves the highest average accuracy among all baselines, reaching 70.90\\% and 69.24\\% with DeepSeek-V3.2 and Qwen3.5-35B, respectively. Code is available at https://github.com/xhan1022/gsem.",
+      "pdf_url": "https://arxiv.org/pdf/2603.22096v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.22096v1",
+      "published": "2026-03-23T15:24:15Z",
+      "updated": "2026-03-23T15:24:15Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Parameter-Efficient Fine-Tuning for Medical Text Summarization: A Comparative Study of Lora, Prompt Tuning, and Full Fine-Tuning",
       "authors": [
@@ -152,10 +275,10 @@
         "Ramez Kouzy"
       ],
       "abstract": "Time toxicity, the cumulative healthcare contact days from clinical trial participation, is an important but labor-intensive metric to extract from protocol documents. We developed TimeTox, an LLM-based pipeline for automated extraction of time toxicity from Schedule of Assessments tables. TimeTox uses Google's Gemini models in three stages: summary extraction from full-length protocol PDFs, time toxicity quantification at six cumulative timepoints for each treatment arm, and multi-run consensus via position-based arm matching. We validated against 20 synthetic schedules (240 comparisons) and assessed reproducibility on 644 real-world oncology protocols. Two architectures were compared: single-pass (vanilla) and two-stage (structure-then-count). The two-stage pipeline achieved 100% clinically acceptable accuracy ($\\pm$3 days) on synthetic data (MAE 0.81 days) versus 41.5% for vanilla (MAE 9.0 days). However, on real-world protocols, the vanilla pipeline showed superior reproducibility: 95.3% clinically acceptable accuracy (IQR $\\leq$ 3 days) across 3 runs on 644 protocols, with 82.0% perfect stability (IQR = 0). The production pipeline extracted time toxicity for 1,288 treatment arms across multiple disease sites. Extraction stability on real-world data, rather than accuracy on synthetic benchmarks, is the decisive factor for production LLM deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21335v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.21335v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.21335v2",
+      "arxiv_url": "https://arxiv.org/abs/2603.21335v2",
       "published": "2026-03-22T17:25:43Z",
-      "updated": "2026-03-22T17:25:43Z",
+      "updated": "2026-03-24T02:56:50Z",
       "categories": [
         "cs.CL",
         "cs.LG"
@@ -182,140 +305,6 @@
       "updated": "2026-03-22T03:58:34Z",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Clinical Cognition Alignment for Gastrointestinal Diagnosis with Multimodal LLMs",
-      "authors": [
-        "Huan Zheng",
-        "Yucheng Zhou",
-        "Tianyi Yan",
-        "Dubing Chen",
-        "Hongbo Lu",
-        "Wenlong Liao",
-        "Tao He",
-        "Pai Peng",
-        "Jianbing Shen"
-      ],
-      "abstract": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable potential in medical image analysis. However, their application in gastrointestinal endoscopy is currently hindered by two critical limitations: the misalignment between general model reasoning and standardized clinical cognitive pathways, and the lack of causal association between visual features and diagnostic outcomes. In this paper, we propose a novel Clinical-Cognitive-Aligned (CogAlign) framework to address these challenges. First, we endow the model with rigorous clinical analytical capabilities by constructing the hierarchical clinical cognition dataset and employing Supervised Fine-Tuning (SFT). Unlike conventional approaches, this strategy internalizes the hierarchical diagnostic logic of experts, ranging from anatomical localization and morphological evaluation to microvascular analysis, directly into the model. Second, to eliminate visual bias, we provide a theoretical analysis demonstrating that standard supervised tuning inevitably converges to spurious background correlations. Guided by this insight, we propose a counterfactual-driven reinforcement learning strategy to enforce causal rectification. By generating counterfactual normal samples via lesion masking and optimizing through clinical-cognition-centric rewards, we constrain the model to strictly ground its diagnosis in causal lesion features. Extensive experiments demonstrate that our approach achieves State-of-the-Art (SoTA) performance across multiple benchmarks, significantly enhancing diagnostic accuracy in complex clinical scenarios. All source code and datasets will be made publicly available.",
-      "pdf_url": "https://arxiv.org/pdf/2603.20698v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.20698v1",
-      "published": "2026-03-21T07:47:37Z",
-      "updated": "2026-03-21T07:47:37Z",
-      "categories": [
-        "cs.CV",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Deep reflective reasoning in interdependence constrained structured data extraction from clinical notes for digital health",
-      "authors": [
-        "Jingwei Huang",
-        "Kuroush Nezafati",
-        "Zhikai Chi",
-        "Ruichen Rong",
-        "Colin Treager",
-        "Tingyi Wanyan",
-        "Yueshuang Xu",
-        "Xiaowei Zhan",
-        "Patrick Leavey",
-        "Guanghua Xiao",
-        "Wenqi Shi",
-        "Yang Xie"
-      ],
-      "abstract": "Extracting structured information from clinical notes requires navigating a dense web of interdependent variables where the value of one attribute logically constrains others. Existing Large Language Model (LLM)-based extraction pipelines often struggle to capture these dependencies, leading to clinically inconsistent outputs. We propose deep reflective reasoning, a large language model agent framework that iteratively self-critiques and revises structured outputs by checking consistency among variables, the input text, and retrieved domain knowledge, stopping when outputs converge. We extensively evaluate the proposed method in three diverse oncology applications: (1) On colorectal cancer synoptic reporting from gross descriptions (n=217), reflective reasoning improved average F1 across eight categorical synoptic variables from 0.828 to 0.911 and increased mean correct rate across four numeric variables from 0.806 to 0.895; (2) On Ewing sarcoma CD99 immunostaining pattern identification (n=200), the accuracy improved from 0.870 to 0.927; (3) On lung cancer tumor staging (n=100), tumor stage accuracy improved from 0.680 to 0.833 (pT: 0.842 -> 0.884; pN: 0.885 -> 0.948). The results demonstrate that deep reflective reasoning can systematically improve the reliability of LLM-based structured data extraction under interdependence constraints, enabling more consistent machine-operable clinical datasets and facilitating knowledge discovery with machine learning and data science towards digital health.",
-      "pdf_url": "https://arxiv.org/pdf/2603.20435v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.20435v1",
-      "published": "2026-03-20T19:05:30Z",
-      "updated": "2026-03-20T19:05:30Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MedSPOT: A Workflow-Aware Sequential Grounding Benchmark for Clinical GUI",
-      "authors": [
-        "Rozain Shakeel",
-        "Abdul Rahman Mohammad Ali",
-        "Muneeb Mushtaq",
-        "Tausifa Jan Saleem",
-        "Tajamul Ashraf"
-      ],
-      "abstract": "Despite the rapid progress of Multimodal Large Language Models (MLLMs), their ability to perform reliable visual grounding in high-stakes clinical software environments remains underexplored. Existing GUI benchmarks largely focus on isolated, single-step grounding queries, overlooking the sequential, workflow-driven reasoning required in real-world medical interfaces, where tasks evolve across independent steps and dynamic interface states. We introduce MedSPOT, a workflow-aware sequential grounding benchmark for clinical GUI environments. Unlike prior benchmarks that treat grounding as a standalone prediction task, MedSPOT models procedural interaction as a sequence of structured spatial decisions. The benchmark comprises 216 task-driven videos with 597 annotated keyframes, in which each task consists of 2 to 3 interdependent grounding steps within realistic medical workflows. This design captures interface hierarchies, contextual dependencies, and fine-grained spatial precision under evolving conditions. To evaluate procedural robustness, we propose a strict sequential evaluation protocol that terminates task assessment upon the first incorrect grounding prediction, explicitly measuring error propagation in multi-step workflows. We further introduce a comprehensive failure taxonomy, including edge bias, small-target errors, no prediction, near miss, far miss, and toolbar confusion, to enable systematic diagnosis of model behavior in clinical GUI settings. By shifting evaluation from isolated grounding to workflow-aware sequential reasoning, MedSPOT establishes a realistic and safety-critical benchmark for assessing multimodal models in medical software environments. Code and data are available at: https://github.com/Tajamul21/MedSPOT.",
-      "pdf_url": "https://arxiv.org/pdf/2603.19993v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.19993v1",
-      "published": "2026-03-20T14:43:53Z",
-      "updated": "2026-03-20T14:43:53Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "MedQ-Engine: A Closed-Loop Data Engine for Evolving MLLMs in Medical Image Quality Assessment",
-      "authors": [
-        "Jiyao Liu",
-        "Junzhi Ning",
-        "Wanying Qu",
-        "Lihao Liu",
-        "Chenglong Ma",
-        "Junjun He",
-        "Ningsheng Xu"
-      ],
-      "abstract": "Medical image quality assessment (Med-IQA) is a prerequisite for clinical AI deployment, yet multimodal large language models (MLLMs) still fall substantially short of human experts, particularly when required to provide descriptive assessments with clinical reasoning beyond simple quality scores. However, improving them is hindered by the high cost of acquiring descriptive annotations and by the inability of one-time data collection to adapt to the model's evolving weaknesses. To address these challenges, we propose MedQ-Engine, a closed-loop data engine that iteratively evaluates the model to discover failure prototypes via data-driven clustering, explores a million-scale image pool using these prototypes as retrieval anchors with progressive human-in-the-loop annotation, and evolves through quality-assured fine-tuning, forming a self-improving cycle. Models are evaluated on complementary perception and description tasks. An entropy-guided routing mechanism triages annotations to minimize labeling cost. Experiments across five medical imaging modalities show that MedQ-Engine elevates an 8B-parameter model to surpass GPT-4o by over 13% and narrow the gap with human experts to only 4.34%, using only 10K annotations with more than 4x sample efficiency over random sampling.",
-      "pdf_url": "https://arxiv.org/pdf/2603.19863v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.19863v1",
-      "published": "2026-03-20T11:29:13Z",
-      "updated": "2026-03-20T11:29:13Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "FDARxBench: Benchmarking Regulatory and Clinical Reasoning on FDA Generic Drug Assessment",
-      "authors": [
-        "Betty Xiong",
-        "Jillian Fisher",
-        "Benjamin Newman",
-        "Meng Hu",
-        "Shivangi Gupta",
-        "Yejin Choi",
-        "Lanyan Fang",
-        "Russ B Altman"
-      ],
-      "abstract": "We introduce an expert curated, real-world benchmark for evaluating document-grounded question-answering (QA) motivated by generic drug assessment, using the U.S. Food and Drug Administration (FDA) drug label documents. Drug labels contain rich but heterogeneous clinical and regulatory information, making accurate question answering difficult for current language models. In collaboration with FDA regulatory assessors, we introduce FDARxBench, and construct a multi-stage pipeline for generating high-quality, expert curated, QA examples spanning factual, multi-hop, and refusal tasks, and design evaluation protocols to assess both open-book and closed-book reasoning. Experiments across proprietary and open-weight models reveal substantial gaps in factual grounding, long-context retrieval, and safe refusal behavior. While motivated by FDA generic drug assessment needs, this benchmark also provides a substantial foundation for challenging regulatory-grade evaluation of label comprehension. The benchmark is designed to support evaluation of LLM behavior on drug-label questions.",
-      "pdf_url": "https://arxiv.org/pdf/2603.19539v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.19539v1",
-      "published": "2026-03-20T00:33:58Z",
-      "updated": "2026-03-20T00:33:58Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "ReXInTheWild: A Unified Benchmark for Medical Photograph Understanding",
-      "authors": [
-        "Oishi Banerjee",
-        "Sung Eun Kim",
-        "Alexandra N. Willauer",
-        "Julius M. Kernbach",
-        "Abeer Rihan Alomaish",
-        "Reema Abdulwahab S. Alghamdi",
-        "Hassan Rayhan Alomaish",
-        "Mohammed Baharoon",
-        "Xiaoman Zhang",
-        "Julian Nicolas Acosta",
-        "Christine Zhou",
-        "Pranav Rajpurkar"
-      ],
-      "abstract": "Everyday photographs taken with ordinary cameras are already widely used in telemedicine and other online health conversations, yet no comprehensive benchmark evaluates whether vision-language models can interpret their medical content. Analyzing these images requires both fine-grained natural image understanding and domain-specific medical reasoning, a combination that challenges both general-purpose and specialized models. We introduce ReXInTheWild, a benchmark of 955 clinician-verified multiple-choice questions spanning seven clinical topics across 484 photographs sourced from the biomedical literature. When evaluated on ReXInTheWild, leading multimodal large language models show substantial performance variation: Gemini-3 achieves 78% accuracy, followed by Claude Opus 4.5 (72%) and GPT-5 (68%), while the medical specialist model MedGemma reaches only 37%. A systematic error analysis also reveals four categories of common errors, ranging from low-level geometric errors to high-level reasoning failures and requiring different mitigation strategies. ReXInTheWild provides a challenging, clinically grounded benchmark at the intersection of natural image understanding and medical reasoning. The dataset is available on HuggingFace.",
-      "pdf_url": "https://arxiv.org/pdf/2603.19517v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.19517v1",
-      "published": "2026-03-19T22:54:28Z",
-      "updated": "2026-03-19T22:54:28Z",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
       ]
     }
   ]

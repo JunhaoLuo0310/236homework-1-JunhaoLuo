@@ -1,8 +1,155 @@
 {
-  "generated_at_utc": "2026-03-25T02:44:36.941470Z",
+  "generated_at_utc": "2026-03-26T02:51:24.938385Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "MedAidDialog: A Multilingual Multi-Turn Medical Dialogue Dataset for Accessible Healthcare",
+      "authors": [
+        "Shubham Kumar Nigam",
+        "Suparnojit Sarkar",
+        "Piyush Patel"
+      ],
+      "abstract": "Conversational artificial intelligence has the potential to assist users in preliminary medical consultations, particularly in settings where access to healthcare professionals is limited. However, many existing medical dialogue systems operate in a single-turn question--answering paradigm or rely on template-based datasets, limiting conversational realism and multilingual applicability. In this work, we introduce MedAidDialog, a multilingual multi-turn medical dialogue dataset designed to simulate realistic physician--patient consultations. The dataset extends the MDDial corpus by generating synthetic consultations using large language models and further expands them into a parallel multilingual corpus covering seven languages: English, Hindi, Telugu, Tamil, Bengali, Marathi, and Arabic.\n  Building on this dataset, we develop MedAidLM, a conversational medical model trained using parameter-efficient fine-tuning on quantized small language models, enabling deployment without high-end computational infrastructure. Our framework additionally incorporates optional patient pre-context information (e.g., age, gender, allergies) to personalize the consultation process. Experimental results demonstrate that the proposed system can effectively perform symptom elicitation through multi-turn dialogue and generate diagnostic recommendations. We further conduct medical expert evaluation to assess the plausibility and coherence of the generated consultations.",
+      "pdf_url": "https://arxiv.org/pdf/2603.24132v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.24132v1",
+      "published": "2026-03-25T09:51:44Z",
+      "updated": "2026-03-25T09:51:44Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Can we generate portable representations for clinical time series data using LLMs?",
+      "authors": [
+        "Zongliang Ji",
+        "Yifei Sun",
+        "Andre Amaral",
+        "Anna Goldenberg",
+        "Rahul G. Krishnan"
+      ],
+      "abstract": "Deploying clinical ML is slow and brittle: models that work at one hospital often degrade under distribution shifts at the next. In this work, we study a simple question -- can large language models (LLMs) create portable patient embeddings i.e. representations of patients enable a downstream predictor built on one hospital to be used elsewhere with minimal-to-no retraining and fine-tuning. To do so, we map from irregular ICU time series onto concise natural language summaries using a frozen LLM, then embed each summary with a frozen text embedding model to obtain a fixed length vector capable of serving as input to a variety of downstream predictors. Across three cohorts (MIMIC-IV, HIRID, PPICU), on multiple clinically grounded forecasting and classification tasks, we find that our approach is simple, easy to use and competitive with in-distribution with grid imputation, self-supervised representation learning, and time series foundation models, while exhibiting smaller relative performance drops when transferring to new hospitals. We study the variation in performance across prompt design, with structured prompts being crucial to reducing the variance of the predictive models without altering mean accuracy. We find that using these portable representations improves few-shot learning and does not increase demographic recoverability of age or sex relative to baselines, suggesting little additional privacy risk. Our work points to the potential that LLMs hold as tools to enable the scalable deployment of production grade predictive models by reducing the engineering overhead.",
+      "pdf_url": "https://arxiv.org/pdf/2603.23987v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.23987v1",
+      "published": "2026-03-25T06:34:32Z",
+      "updated": "2026-03-25T06:34:32Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "VOLMO: Versatile and Open Large Models for Ophthalmology",
+      "authors": [
+        "Zhenyue Qin",
+        "Younjoon Chung",
+        "Elijah Lee",
+        "Wanyue Feng",
+        "Xuguang Ai",
+        "Serina Applebaum",
+        "Minjie Zou",
+        "Yang Liu",
+        "Pan Xiao",
+        "Mac Singer",
+        "Amisha Dave",
+        "Aidan Gilson",
+        "Tiarnan D. L. Keenan",
+        "Emily Y. Chew",
+        "Zhiyong Lu",
+        "Yih-Chung Tham",
+        "Ron Adelman",
+        "Luciano V. Del Priore",
+        "Qingyu Chen"
+      ],
+      "abstract": "Vision impairment affects millions globally, and early detection is critical to preventing irreversible vision loss. Ophthalmology workflows require clinicians to integrate medical images, structured clinical data, and free-text notes to determine disease severity and management, which is time-consuming and burdensome. Recent multimodal large language models (MLLMs) show promise, but existing general and medical MLLMs perform poorly in ophthalmology, and few ophthalmology-specific MLLMs are openly available. We present VOLMO (Versatile and Open Large Models for Ophthalmology), a model-agnostic, data-open framework for developing ophthalmology-specific MLLMs. VOLMO includes three stages: ophthalmology knowledge pretraining on 86,965 image-text pairs from 26,569 articles across 82 journals; domain task fine-tuning on 26,929 annotated instances spanning 12 eye conditions for disease screening and severity classification; and multi-step clinical reasoning on 913 patient case reports for assessment, planning, and follow-up care. Using this framework, we trained a compact 2B-parameter MLLM and compared it with strong baselines, including InternVL-2B, LLaVA-Med-7B, MedGemma-4B, MedGemma-27B, and RETFound. We evaluated these models on image description generation, disease screening and staging classification, and assessment-and-management generation, with additional manual review by two healthcare professionals and external validation on three independent cohorts for age-related macular degeneration and diabetic retinopathy. Across settings, VOLMO-2B consistently outperformed baselines, achieving stronger image description performance, an average F1 of 87.4% across 12 eye conditions, and higher scores in external validation.",
+      "pdf_url": "https://arxiv.org/pdf/2603.23953v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.23953v1",
+      "published": "2026-03-25T05:25:10Z",
+      "updated": "2026-03-25T05:25:10Z",
+      "categories": [
+        "cs.CV",
+        "cs.ET"
+      ]
+    },
+    {
+      "title": "Dialogue to Question Generation for Evidence-based Medical Guideline Agent Development",
+      "authors": [
+        "Zongliang Ji",
+        "Ziyang Zhang",
+        "Xincheng Tan",
+        "Matthew Thompson",
+        "Anna Goldenberg",
+        "Carl Yang",
+        "Rahul G. Krishnan",
+        "Fan Zhang"
+      ],
+      "abstract": "Evidence-based medicine (EBM) is central to high-quality care, but remains difficult to implement in fast-paced primary care settings. Physicians face short consultations, increasing patient loads, and lengthy guideline documents that are impractical to consult in real time. To address this gap, we investigate the feasibility of using large language models (LLMs) as ambient assistants that surface targeted, evidence-based questions during physician-patient encounters. Our study focuses on question generation rather than question answering, with the aim of scaffolding physician reasoning and integrating guideline-based practice into brief consultations. We implemented two prompting strategies, a zero-shot baseline and a multi-stage reasoning variant, using Gemini 2.5 as the backbone model. We evaluated on a benchmark of 80 de-identified transcripts from real clinical encounters, with six experienced physicians contributing over 90 hours of structured review. Results indicate that while general-purpose LLMs are not yet fully reliable, they can produce clinically meaningful and guideline-relevant questions, suggesting significant potential to reduce cognitive burden and make EBM more actionable at the point of care.",
+      "pdf_url": "https://arxiv.org/pdf/2603.23937v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.23937v1",
+      "published": "2026-03-25T04:58:53Z",
+      "updated": "2026-03-25T04:58:53Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Sparse Autoencoders for Interpretable Medical Image Representation Learning",
+      "authors": [
+        "Philipp Wesp",
+        "Robbie Holland",
+        "Vasiliki Sideri-Lampretsa",
+        "Sergios Gatidis"
+      ],
+      "abstract": "Vision foundation models (FMs) achieve state-of-the-art performance in medical imaging. However, they encode information in abstract latent representations that clinicians cannot interrogate or verify. The goal of this study is to investigate Sparse Autoencoders (SAEs) for replacing opaque FM image representations with human-interpretable, sparse features. We train SAEs on embeddings from BiomedParse (biomedical) and DINOv3 (general-purpose) using 909,873 CT and MRI 2D image slices from the TotalSegmentator dataset. We find that learned sparse features: (a) reconstruct original embeddings with high fidelity (R2 up to 0.941) and recover up to 87.8% of downstream performance using only 10 features (99.4% dimensionality reduction), (b) preserve semantic fidelity in image retrieval tasks, (c) correspond to specific concepts that can be expressed in language using large language model (LLM)-based auto-interpretation. (d) bridge clinical language and abstract latent representations in zero-shot language-driven image retrieval. Our work indicates SAEs are a promising pathway towards interpretable, concept-driven medical vision systems. Code repository: https://github.com/pwesp/sail.",
+      "pdf_url": "https://arxiv.org/pdf/2603.23794v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.23794v1",
+      "published": "2026-03-24T23:54:24Z",
+      "updated": "2026-03-24T23:54:24Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Exploring Self-Tracking Practices of Older Adults with CVD to Inform the Design of LLM-Enabled Health Data Sensemaking",
+      "authors": [
+        "Duosi Dai",
+        "Pavithren V S Pakianathan",
+        "Gunnar Treff",
+        "Mahdi Sareban",
+        "Jan David Smeddinck",
+        "Sanna Kuoppam\u00e4ki"
+      ],
+      "abstract": "Wearables and mobile health applications are increasingly adopted for self-management of chronic illnesses; yet the data feels overwhelming for older adults with cardiovascular disease (CVD). This study explores how they make sense of self-tracked data and identifies design opportunities for Large Language Model (LLM)-enabled support. We conducted a seven-day diary study and follow-up interviews with eight CVD patients aged 64-82. We identified six themes: navigating emotional complexity, owning health narratives, prioritizing bodily sensations, selective engagement with health metrics, negotiating socio-technical dynamics of sharing, and cautious optimism toward AI. Findings highlight that self-tracking is affective, interpretive, and socially situated. We outline design directions for LLM-enabled data sensemaking systems: supporting emotional engagement, reinforcing patient agency, acknowledging embodied experiences, and prompting dialogue in clinical and social contexts. To support safety, expert-in-the-loop mechanisms are essential. These directions articulate how LLMs can help translate data into narratives and carry implications for human-data interaction and behavior-change support.",
+      "pdf_url": "https://arxiv.org/pdf/2603.23733v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.23733v1",
+      "published": "2026-03-24T21:38:39Z",
+      "updated": "2026-03-24T21:38:39Z",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "PLACID: Privacy-preserving Large language models for Acronym Clinical Inference and Disambiguation",
+      "authors": [
+        "Manjushree B. Aithal",
+        "Ph. D.",
+        "Alexander Kotz",
+        "James Mitchell",
+        "Ph. D"
+      ],
+      "abstract": "Large Language Models (LLMs) offer transformative solutions across many domains, but healthcare integration is hindered by strict data privacy constraints. Clinical narratives are dense with ambiguous acronyms, misinterpretation these abbreviations can precipitate severe outcomes like life-threatening medication errors. While cloud-dependent LLMs excel at Acronym Disambiguation, transmitting Protected Health Information to external servers violates privacy frameworks. To bridge this gap, this study pioneers the evaluation of small-parameter models deployed entirely on-device to ensure privacy preservation. We introduce a privacy-preserving cascaded pipeline leveraging general-purpose local models to detect clinical acronyms, routing them to domain-specific biomedical models for context-relevant expansions. Results reveal that while general instruction-following models achieve high detection accuracy (~0.988), their expansion capabilities plummet (~0.655). Our cascaded approach utilizes domain-specific medical models to increase expansion accuracy to (~0.81). This novel work demonstrates that privacy-preserving, on-device (2B-10B) models deliver high-fidelity clinical acronym disambiguation support.",
+      "pdf_url": "https://arxiv.org/pdf/2603.23678v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.23678v1",
+      "published": "2026-03-24T19:33:44Z",
+      "updated": "2026-03-24T19:33:44Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Ran Score: a LLM-based Evaluation Score for Radiology Report Generation",
       "authors": [
@@ -157,154 +304,6 @@
       "updated": "2026-03-23T12:47:34Z",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Deterministic Hallucination Detection in Medical VQA via Confidence-Evidence Bayesian Gain",
-      "authors": [
-        "Mohammad Asadi",
-        "Tahoura Nedaee",
-        "Jack W. O'Sullivan",
-        "Euan Ashley",
-        "Ehsan Adeli"
-      ],
-      "abstract": "Multimodal large language models (MLLMs) have shown strong potential for medical Visual Question Answering (VQA), yet they remain prone to hallucinations, defined as generating responses that contradict the input image, posing serious risks in clinical settings. Current hallucination detection methods, such as Semantic Entropy (SE) and Vision-Amplified Semantic Entropy (VASE), require 10 to 20 stochastic generations per sample together with an external natural language inference model for semantic clustering, making them computationally expensive and difficult to deploy in practice. We observe that hallucinated responses exhibit a distinctive signature directly in the model's own log-probabilities: inconsistent token-level confidence and weak sensitivity to visual evidence. Based on this observation, we propose Confidence-Evidence Bayesian Gain (CEBaG), a deterministic hallucination detection method that requires no stochastic sampling, no external models, and no task-specific hyperparameters. CEBaG combines two complementary signals: token-level predictive variance, which captures inconsistent confidence across response tokens, and evidence magnitude, which measures how much the image shifts per-token predictions relative to text-only inference. Evaluated across four medical MLLMs and three VQA benchmarks (16 experimental settings), CEBaG achieves the highest AUC in 13 of 16 settings and improves over VASE by 8 AUC points on average, while being fully deterministic and self-contained. The code will be made available upon acceptance.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21693v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.21693v1",
-      "published": "2026-03-23T08:29:53Z",
-      "updated": "2026-03-23T08:29:53Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Overview of TREC 2025 Biomedical Generative Retrieval (BioGen) Track",
-      "authors": [
-        "Deepak Gupta",
-        "Dina Demner-Fushman",
-        "William Hersh",
-        "Steven Bedrick",
-        "Kirk Roberts"
-      ],
-      "abstract": "Recent advances in large language models (LLMs) have made significant progress across multiple biomedical tasks, including biomedical question answering, lay-language summarization of the biomedical literature, and clinical note summarization. These models have demonstrated strong capabilities in processing and synthesizing complex biomedical information and in generating fluent, human-like responses. Despite these advancements, hallucinations or confabulations remain key challenges when using LLMs in biomedical and other high-stakes domains. Inaccuracies may be particularly harmful in high-risk situations, such as medical question answering, making clinical decisions, or appraising biomedical research. Studies on the evaluation of the LLMs' abilities to ground generated statements in verifiable sources have shown that models perform significantly",
-      "pdf_url": "https://arxiv.org/pdf/2603.21582v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.21582v1",
-      "published": "2026-03-23T05:10:16Z",
-      "updated": "2026-03-23T05:10:16Z",
-      "categories": [
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "SynSym: A Synthetic Data Generation Framework for Psychiatric Symptom Identification",
-      "authors": [
-        "Migyeong Kang",
-        "Jihyun Kim",
-        "Hyolim Jeon",
-        "Sunwoo Hwang",
-        "Jihyun An",
-        "Yonghoon Kim",
-        "Haewoon Kwak",
-        "Jisun An",
-        "Jinyoung Han"
-      ],
-      "abstract": "Psychiatric symptom identification on social media aims to infer fine-grained mental health symptoms from user-generated posts, allowing a detailed understanding of users' mental states. However, the construction of large-scale symptom-level datasets remains challenging due to the resource-intensive nature of expert labeling and the lack of standardized annotation guidelines, which in turn limits the generalizability of models to identify diverse symptom expressions from user-generated text. To address these issues, we propose SynSym, a synthetic data generation framework for constructing generalizable datasets for symptom identification. Leveraging large language models (LLMs), SynSym constructs high-quality training samples by (1) expanding each symptom into sub-concepts to enhance the diversity of generated expressions, (2) producing synthetic expressions that reflect psychiatric symptoms in diverse linguistic styles, and (3) composing realistic multi-symptom expressions, informed by clinical co-occurrence patterns. We validate SynSym on three benchmark datasets covering different styles of depressive symptom expression. Experimental results demonstrate that models trained solely on the synthetic data generated by SynSym perform comparably to those trained on real data, and benefit further from additional fine-tuning with real data. These findings underscore the potential of synthetic data as an alternative resource to real-world annotations in psychiatric symptom modeling, and SynSym serves as a practical framework for generating clinically relevant and realistic symptom expressions.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21529v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.21529v1",
-      "published": "2026-03-23T03:41:41Z",
-      "updated": "2026-03-23T03:41:41Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Agentic Automation of BT-RADS Scoring: End-to-End Multi-Agent System for Standardized Brain Tumor Follow-up Assessment",
-      "authors": [
-        "Mohamed Sobhi Jabal",
-        "Jikai Zhang",
-        "Dominic LaBella",
-        "Jessica L. Houk",
-        "Dylan Zhang",
-        "Jeffrey D. Rudie",
-        "Kirti Magudia",
-        "Maciej A. Mazurowski",
-        "Evan Calabrese"
-      ],
-      "abstract": "The Brain Tumor Reporting and Data System (BT-RADS) standardizes post-treatment MRI response assessment in patients with diffuse gliomas but requires complex integration of imaging trends, medication effects, and radiation timing. This study evaluates an end-to-end multi-agent large language model (LLM) and convolutional neural network (CNN) system for automated BT-RADS classification. A multi-agent LLM system combined with automated CNN-based tumor segmentation was retrospectively evaluated on 509 consecutive post-treatment glioma MRI examinations from a single high-volume center. An extractor agent identified clinical variables (steroid status, bevacizumab status, radiation date) from unstructured clinical notes, while a scorer agent applied BT-RADS decision logic integrating extracted variables with volumetric measurements. Expert reference standard classifications were established by an independent board-certified neuroradiologist. Of 509 examinations, 492 met inclusion criteria. The system achieved 374/492 (76.0%; 95% CI, 72.1%-79.6%) accuracy versus 283/492 (57.5%; 95% CI, 53.1%-61.8%) for initial clinical assessments (+18.5 percentage points; P<.001). Context-dependent categories showed high sensitivity (BT-1b 100%, BT-1a 92.7%, BT-3a 87.5%), while threshold-dependent categories showed moderate sensitivity (BT-3c 74.8%, BT-2 69.2%, BT-4 69.3%, BT-3b 57.1%). For BT-4, positive predictive value was 92.9%. The multi-agent LLM system achieved higher BT-RADS classification agreement with expert reference standard compared to initial clinical scoring, with high accuracy for context-dependent scores and high positive predictive value for BT-4 detection.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21494v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.21494v1",
-      "published": "2026-03-23T02:31:54Z",
-      "updated": "2026-03-23T02:31:54Z",
-      "categories": [
-        "cs.CL",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "Deliberative multi-agent large language models improve clinical reasoning in ophthalmology",
-      "authors": [
-        "Ehsan Misaghi",
-        "Sean T Berkowitz",
-        "Bing Yu Chen",
-        "Qingyu Chen",
-        "Renaud Duval",
-        "Pearse A Keane",
-        "Danny A Mammo",
-        "Ariel Yuhan Ong",
-        "Mertcan Sevgi",
-        "Sumit Sharma",
-        "Sunil K Srivastava",
-        "Yih Chung Tham",
-        "Fares Antaki"
-      ],
-      "abstract": "Large language models (LLMs) show potential for ophthalmic clinical reasoning, yet individual models risk introducing harm. We evaluated whether multi-agent LLM deliberative councils improve diagnostic performance and mitigate harm compared to individual LLMs. In a comparative cross-sectional study, we assessed 12 individual LLMs and three multi-agent councils on 100 ophthalmology clinical vignettes. Each council comprised four models assembled by type: proprietary flagship, proprietary fast, and open-source. Models independently answered a vignette, anonymously ranked one another's responses, and a designated chair synthesized all responses and peer reviews into a final answer. Councils consistently outperformed pooled individual models across all three tiers. Accuracy improved for proprietary flagship (95.0% vs 90.8%; risk difference [RD]: 4.25 [95% CI: 0.45, 8.05]), proprietary fast (96.0% vs 86.5%; RD: 9.50 [5.31, 13.59]), and open-source councils (91.0% vs 83.2%; RD: 7.75 [4.17, 11.33]). Harm rates declined for proprietary flagship (10.0% vs 22.5%; RD: -12.50 [-16.86, -8.14]), proprietary fast (16.0% vs 31.8%; RD: -15.75 [-21.49, -10.01]), and open-source councils (22.0% vs 38.5%; RD: -16.50 [-22.27, -10.73]). Coverage analysis revealed net positive gains for accuracy (\u0394Coverage: 4.4-9.8 percentage points) and safety (\u0394Coverage: 13.6-20.6), indicating councils recovered correct diagnoses and averted harm. Councils elevated correct diagnoses to higher rank positions; and produced more complete differentials and management plans (all P<.05). Harmful council responses showed reduced combined commission-and-omission errors and tended to be less severe. Structured deliberation via multi-agent LLM councils may enhance the reliability of LLM-assisted ophthalmic clinical reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21447v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.21447v1",
-      "published": "2026-03-22T23:36:48Z",
-      "updated": "2026-03-22T23:36:48Z",
-      "categories": [
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "TimeTox: An LLM-Based Pipeline for Automated Extraction of Time Toxicity from Clinical Trial Protocols",
-      "authors": [
-        "Saketh Vinjamuri",
-        "Marielle Fis Loperena",
-        "Marie C. Spezia",
-        "Ramez Kouzy"
-      ],
-      "abstract": "Time toxicity, the cumulative healthcare contact days from clinical trial participation, is an important but labor-intensive metric to extract from protocol documents. We developed TimeTox, an LLM-based pipeline for automated extraction of time toxicity from Schedule of Assessments tables. TimeTox uses Google's Gemini models in three stages: summary extraction from full-length protocol PDFs, time toxicity quantification at six cumulative timepoints for each treatment arm, and multi-run consensus via position-based arm matching. We validated against 20 synthetic schedules (240 comparisons) and assessed reproducibility on 644 real-world oncology protocols. Two architectures were compared: single-pass (vanilla) and two-stage (structure-then-count). The two-stage pipeline achieved 100% clinically acceptable accuracy ($\\pm$3 days) on synthetic data (MAE 0.81 days) versus 41.5% for vanilla (MAE 9.0 days). However, on real-world protocols, the vanilla pipeline showed superior reproducibility: 95.3% clinically acceptable accuracy (IQR $\\leq$ 3 days) across 3 runs on 644 protocols, with 82.0% perfect stability (IQR = 0). The production pipeline extracted time toxicity for 1,288 treatment arms across multiple disease sites. Extraction stability on real-world data, rather than accuracy on synthetic benchmarks, is the decisive factor for production LLM deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21335v2",
-      "arxiv_url": "https://arxiv.org/abs/2603.21335v2",
-      "published": "2026-03-22T17:25:43Z",
-      "updated": "2026-03-24T02:56:50Z",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "When Minor Edits Matter: LLM-Driven Prompt Attack for Medical VLM Robustness in Ultrasound",
-      "authors": [
-        "Yasamin Medghalchi",
-        "Milad Yazdani",
-        "Amirhossein Dabiriaghdam",
-        "Moein Heidari",
-        "Mojan Izadkhah",
-        "Zahra Kavian",
-        "Giuseppe Carenini",
-        "Lele Wang",
-        "Dena Shahriari",
-        "Ilker Hacihaliloglu"
-      ],
-      "abstract": "Ultrasound is widely used in clinical practice due to its portability, cost-effectiveness, safety, and real-time imaging capabilities. However, image acquisition and interpretation remain highly operator dependent, motivating the development of robust AI-assisted analysis methods. Vision-language models (VLMs) have recently demonstrated strong multimodal reasoning capabilities and competitive performance in medical image analysis, including ultrasound. However, emerging evidence highlights significant concerns about their trustworthiness. In particular, adversarial robustness is critical because Med-VLMs operate via natural-language instructions, rendering prompt formulation a realistic and practically exploitable point of vulnerability. Small variations (typos, shorthand, underspecified requests, or ambiguous wording) can meaningfully shift model outputs. We propose a scalable adversarial evaluation framework that leverages a large language model (LLM) to generate clinically plausible adversarial prompt variants via \"humanized\" rewrites and minimal edits that mimic routine clinical communication. Using ultrasound multiple-choice question answering benchmarks, we systematically assess the vulnerability of SOTA Med-VLMs to these attacks, examine how attacker LLM capacity influences attack success, analyze the relationship between attack success and model confidence, and identify consistent failure patterns across models. Our results highlight realistic robustness gaps that must be addressed for safe clinical translation. Code will be released publicly following the review process.",
-      "pdf_url": "https://arxiv.org/pdf/2603.21047v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.21047v1",
-      "published": "2026-03-22T03:58:34Z",
-      "updated": "2026-03-22T03:58:34Z",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]

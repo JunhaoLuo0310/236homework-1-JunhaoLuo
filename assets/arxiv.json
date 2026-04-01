@@ -1,8 +1,152 @@
 {
-  "generated_at_utc": "2026-03-31T02:52:47.226182Z",
+  "generated_at_utc": "2026-04-01T03:23:14.431042Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "The Triadic Cognitive Architecture: Bounding Autonomous Action via Spatio-Temporal and Epistemic Friction",
+      "authors": [
+        "Davide Di Gioia"
+      ],
+      "abstract": "Current autonomous AI agents, driven primarily by Large Language Models (LLMs), operate in a state of cognitive weightlessness: they process information without an intrinsic sense of network topology, temporal pacing, or epistemic limits. Consequently, heuristic agentic loops (e.g., ReAct) can exhibit failure modes in interactive environments, including excessive tool use under congestion, prolonged deliberation under time decay, and brittle behavior under ambiguous evidence. In this paper, we propose the Triadic Cognitive Architecture (TCA), a unified mathematical framework that grounds machine reasoning in continuous-time physics. By synthesizing nonlinear filtering theory, Riemannian routing geometry, and optimal control, we formally define the concept of Cognitive Friction. We map the agent's deliberation process to a coupled stochastic control problem where information acquisition is path-dependent and physically constrained. Rather than relying on arbitrary heuristic stop-tokens, the TCA uses an HJB-motivated stopping boundary and instantiates a rollout-based approximation of belief-dependent value-of-information with a net-utility halting condition. Through empirical validation in a simulated Emergency Medical Diagnostic Grid (EMDG), we demonstrate that while greedy baselines over-deliberate under latency and congestion costs, the triadic policy reduces time-to-action while improving patient viability without degrading diagnostic accuracy in this environment.",
+      "pdf_url": "https://arxiv.org/pdf/2603.30031v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.30031v1",
+      "published": "2026-03-31T17:30:25Z",
+      "updated": "2026-03-31T17:30:25Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Learning Diagnostic Reasoning for Decision Support in Toxicology",
+      "authors": [
+        "Nico Oberl\u00e4nder",
+        "David Bani-Harouni",
+        "Tobias Zellner",
+        "Nassir Navab",
+        "Florian Eyer",
+        "Matthias Keicher"
+      ],
+      "abstract": "Acute poly-substance intoxication requires rapid, life-saving decisions under substantial uncertainty, as clinicians must rely on incomplete ingestion details and nonspecific symptoms. Effective diagnostic reasoning in this chaotic environment requires fusing unstructured, non-medical narratives (e.g. paramedic scene descriptions and unreliable patient self-reports or known histories), with structured medical data like vital signs. While Large Language Models (LLMs) show potential for processing such heterogeneous inputs, they struggle in this setting, often underperforming simple baselines that rely solely on patient histories. To address this, we present DeToxR (Decision-support for Toxicology with Reasoning), the first adaptation of Reinforcement Learning (RL) to emergency toxicology. We design a robust data-fusion engine for multi-label prediction across 14 substance classes based on an LLM finetuned with Group Relative Policy Optimization (GRPO). We optimize the model's reasoning directly using a clinical performance reward. By formulating a multi-label agreement metric as the reward signal, the model is explicitly penalized for missing co-ingested substances and hallucinating absent poisons. Our model significantly outperforms its unadapted base LLM counterpart and supervised baselines. Furthermore, in a clinical validation study, the model indicates a clinical advantage by outperforming an expert toxicologist in identifying the correct poisons (Micro-F1: 0.644 vs. 0.473). These results demonstrate the potential of RL-aligned LLMs to synthesize unstructured pre-clinical narratives and structured medical data for decision support in high-stakes environments.",
+      "pdf_url": "https://arxiv.org/pdf/2603.29608v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.29608v1",
+      "published": "2026-03-31T11:26:45Z",
+      "updated": "2026-03-31T11:26:45Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Assessing Multimodal Chronic Wound Embeddings with Expert Triplet Agreement",
+      "authors": [
+        "Fabian Kabus",
+        "Julia Hindel",
+        "Jelena Bratuli\u0107",
+        "Meropi Karakioulaki",
+        "Ayush Gupta",
+        "Cristina Has",
+        "Thomas Brox",
+        "Abhinav Valada",
+        "Harald Binder"
+      ],
+      "abstract": "Recessive dystrophic epidermolysis bullosa (RDEB) is a rare genetic skin disorder for which clinicians greatly benefit from finding similar cases using images and clinical text. However, off-the-shelf foundation models do not reliably capture clinically meaningful features for this heterogeneous, long-tail disease, and structured measurement of agreement with experts is challenging. To address these gaps, we propose evaluating embedding spaces with expert ordinal comparisons (triplet judgments), which are fast to collect and encode implicit clinical similarity knowledge. We further introduce TriDerm, a multimodal framework that learns interpretable wound representations from small cohorts by integrating wound imagery, boundary masks, and expert reports. On the vision side, TriDerm adapts visual foundation models to RDEB using wound-level attention pooling and non-contrastive representation learning. For text, we prompt large language models with comparison queries and recover medically meaningful representations via soft ordinal embeddings (SOE). We show that visual and textual modalities capture complementary aspects of wound phenotype, and that fusing both modalities yields 73.5% agreement with experts, outperforming the best off-the-shelf single-modality foundation model by over 5.6 percentage points. We make the expert annotation tool, model code and representative dataset samples publicly available.",
+      "pdf_url": "https://arxiv.org/pdf/2603.29376v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.29376v1",
+      "published": "2026-03-31T07:46:02Z",
+      "updated": "2026-03-31T07:46:02Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Beyond Idealized Patients: Evaluating LLMs under Challenging Patient Behaviors in Medical Consultations",
+      "authors": [
+        "Yahan Li",
+        "Xinyi Jie",
+        "Wanjia Ruan",
+        "Xubei Zhang",
+        "Huaijie Zhu",
+        "Yicheng Gao",
+        "Chaohao Du",
+        "Ruishan Liu"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly used for medical consultation and health information support. In this high-stakes setting, safety depends not only on medical knowledge, but also on how models respond when patient inputs are unclear, inconsistent, or misleading. However, most existing medical LLM evaluations assume idealized and well-posed patient questions, which limits their realism. In this paper, we study challenging patient behaviors that commonly arise in real medical consultations and complicate safe clinical reasoning. We define four clinically grounded categories of such behaviors: information contradiction, factual inaccuracy, self-diagnosis, and care resistance. For each behavior, we specify concrete failure criteria that capture unsafe responses. Building on four existing medical dialogue datasets, we introduce CPB-Bench (Challenging Patient Behaviors Benchmark), a bilingual (English and Chinese) benchmark of 692 multi-turn dialogues annotated with these behaviors. We evaluate a range of open- and closed-source LLMs on their responses to challenging patient utterances. While models perform well overall, we identify consistent, behavior-specific failure patterns, with particular difficulty in handling contradictory or medically implausible patient information. We also study four intervention strategies and find that they yield inconsistent improvements and can introduce unnecessary corrections. We release the dataset and code.",
+      "pdf_url": "https://arxiv.org/pdf/2603.29373v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.29373v1",
+      "published": "2026-03-31T07:42:07Z",
+      "updated": "2026-03-31T07:42:07Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "AI-Generated Prior Authorization Letters: Strong Clinical Content, Weak Administrative Scaffolding",
+      "authors": [
+        "Moiz Sadiq Awan",
+        "Maryam Raza"
+      ],
+      "abstract": "Prior authorization remains one of the most burdensome administrative processes in U.S. healthcare, consuming billions of dollars and thousands of physician hours each year. While large language models have shown promise across clinical text tasks, their ability to produce submission-ready prior authorization letters has received only limited attention, with existing work confined to single-case demonstrations rather than structured multi-scenario evaluation. We assessed three commercially available LLMs (GPT-4o, Claude Sonnet 4.5, and Gemini 2.5 Pro) across 45 physician-validated synthetic scenarios spanning rheumatology, psychiatry, oncology, cardiology, and orthopedics. All three models generated letters with strong clinical content: accurate diagnoses, well-structured medical necessity arguments, and thorough step therapy documentation. However, a secondary analysis of real-world administrative requirements revealed consistent gaps that clinical scoring alone did not capture, including absent billing codes, missing authorization duration requests, and inadequate follow-up plans. These findings reframe the question: the challenge for clinical deployment is not whether LLMs can write clinically adequate letters, but whether the systems built around them can supply the administrative precision that payer workflows require.",
+      "pdf_url": "https://arxiv.org/pdf/2603.29366v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.29366v1",
+      "published": "2026-03-31T07:40:31Z",
+      "updated": "2026-03-31T07:40:31Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Knowledge database development by large language models for countermeasures against viruses and marine toxins",
+      "authors": [
+        "Hung N. Do",
+        "Jessica Z. Kubicek-Sutherland",
+        "S. Gnanakaran"
+      ],
+      "abstract": "Access to the most up-to-date information on medical countermeasures is important for the research and development of effective treatments for viruses and marine toxins. However, there is a lack of comprehensive databases that curate data on viruses and marine toxins, making decisions on medical countermeasures slow and difficult. In this work, we employ two large language models (LLMs) of ChatGPT and Grok to design two comprehensive databases of therapeutic countermeasures for five viruses of Lassa, Marburg, Ebola, Nipah, and Venezuelan equine encephalitis, as well as marine toxins. With high-level human-provided inputs, the two LLMs identify public databases containing data on the five viruses and marine toxins, collect relevant information from these databases and the literature, iteratively cross-validate the collected information, and design interactive webpages for easy access to the curated, comprehensive databases. Notably, the ChatGPT LLM is employed to design agentic AI workflows (consisting of two AI agents for research and decision-making) to rank countermeasures for viruses and marine toxins in the databases. Together, our work explores the potential of LLMs as a scalable, updatable approach for building comprehensive knowledge databases and supporting evidence-based decision-making.",
+      "pdf_url": "https://arxiv.org/pdf/2603.29149v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.29149v1",
+      "published": "2026-03-31T01:55:31Z",
+      "updated": "2026-03-31T01:55:31Z",
+      "categories": [
+        "cs.AI",
+        "cs.DB"
+      ]
+    },
+    {
+      "title": "Human-Like Lifelong Memory: A Neuroscience-Grounded Architecture for Infinite Interaction",
+      "authors": [
+        "Diego C. Lerma-Torres"
+      ],
+      "abstract": "Large language models lack persistent, structured memory for long-term interaction and context-sensitive retrieval. Expanding context windows does not solve this: recent evidence shows that context length alone degrades reasoning by up to 85% - even with perfect retrieval. We propose a bio-inspired memory framework grounded in complementary learning systems theory, cognitive behavioral therapy's belief hierarchy, dual-process cognition, and fuzzy-trace theory, organized around three principles: (1) Memory has valence, not just content - pre-computed emotional-associative summaries (valence vectors) organized in an emergent belief hierarchy inspired by Beck's cognitive model enable instant orientation before deliberation; (2) Retrieval defaults to System 1 with System 2 escalation - automatic spreading activation and passive priming as default, with deliberate retrieval only when needed, and graded epistemic states that address hallucination structurally; and (3) Encoding is active, present, and feedback-dependent - a thalamic gateway tags and routes information between stores, while the executive forms gists through curiosity-driven investigation, not passive exposure. Seven functional properties specify what any implementation must satisfy. Over time, the system converges toward System 1 processing - the computational analog of clinical expertise - producing interactions that become cheaper, not more expensive, with experience.",
+      "pdf_url": "https://arxiv.org/pdf/2603.29023v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.29023v1",
+      "published": "2026-03-30T21:35:28Z",
+      "updated": "2026-03-30T21:35:28Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "EpiScreen: Early Epilepsy Detection from Electronic Health Records with Large Language Models",
+      "authors": [
+        "Shuang Zhou",
+        "Kai Yu",
+        "Zaifu Zhan",
+        "Huixue Zhou",
+        "Min Zeng",
+        "Feng Xie",
+        "Zhiyi Sha",
+        "Rui Zhang"
+      ],
+      "abstract": "Epilepsy and psychogenic non-epileptic seizures often present with similar seizure-like manifestations but require fundamentally different management strategies. Misdiagnosis is common and can lead to prolonged diagnostic delays, unnecessary treatments, and substantial patient morbidity. Although prolonged video-electroencephalography is the diagnostic gold standard, its high cost and limited accessibility hinder timely diagnosis. Here, we developed a low-cost, effective approach, EpiScreen, for early epilepsy detection by utilizing routinely collected clinical notes from electronic health records. Through fine-tuning large language models on labeled notes, EpiScreen achieved an AUC of up to 0.875 on the MIMIC-IV dataset and 0.980 on a private cohort of the University of Minnesota. In a clinician-AI collaboration setting, EpiScreen-assisted neurologists outperformed unaided experts by up to 10.9%. Overall, this study demonstrates that EpiScreen supports early epilepsy detection, facilitating timely and cost-effective screening that may reduce diagnostic delays and avoid unnecessary interventions, particularly in resource-limited regions.",
+      "pdf_url": "https://arxiv.org/pdf/2603.28698v1",
+      "arxiv_url": "https://arxiv.org/abs/2603.28698v1",
+      "published": "2026-03-30T17:16:08Z",
+      "updated": "2026-03-30T17:16:08Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "Towards a Medical AI Scientist",
       "authors": [
@@ -140,160 +284,6 @@
       "updated": "2026-03-28T16:41:57Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Supporting Reflection and Forward-Looking Reasoning With Data-Driven Questions",
-      "authors": [
-        "Simon WS Fischer",
-        "Hanna Schraffenberger",
-        "Serge Thill",
-        "Pim Haselager"
-      ],
-      "abstract": "Many generative AI systems as well as decision-support systems (DSSs) provide operators with predictions or recommendations. Various studies show, however, that people can mistakenly adopt the erroneous results presented by those systems. Hence, it is crucial to promote critical thinking and reflection during interaction. One approach we are focusing on involves encouraging reflection during machine-assisted decision-making by presenting decision-makers with data-driven questions. In this short paper, we provide a brief overview of our work in that regard, namely: 1) the development of a question taxonomy, 2) the development of a prototype in the medical domain and the feedback received from clinicians, 3) a method for generating questions using a large language model, and 4) a proposed scale for measuring cognitive engagement in human-AI decision-making. In doing so, we contribute to the discussion about the design, development, and evaluation of tools for thought, i.e., AI systems that provoke critical thinking and enable novel ways of sense-making.",
-      "pdf_url": "https://arxiv.org/pdf/2603.27318v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.27318v1",
-      "published": "2026-03-28T15:54:05Z",
-      "updated": "2026-03-28T15:54:05Z",
-      "categories": [
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "MediHive: A Decentralized Agent Collective for Medical Reasoning",
-      "authors": [
-        "Xiaoyang Wang",
-        "Christopher C. Yang"
-      ],
-      "abstract": "Large language models (LLMs) have revolutionized medical reasoning tasks, yet single-agent systems often falter on complex, interdisciplinary problems requiring robust handling of uncertainty and conflicting evidence. Multi-agent systems (MAS) leveraging LLMs enable collaborative intelligence, but prevailing centralized architectures suffer from scalability bottlenecks, single points of failure, and role confusion in resource-constrained environments. Decentralized MAS (D-MAS) promise enhanced autonomy and resilience via peer-to-peer interactions, but their application to high-stakes healthcare domains remains underexplored. We introduce MediHive, a novel decentralized multi-agent framework for medical question answering that integrates a shared memory pool with iterative fusion mechanisms. MediHive deploys LLM-based agents that autonomously self-assign specialized roles, conduct initial analyses, detect divergences through conditional evidence-based debates, and locally fuse peer insights over multiple rounds to achieve consensus. Empirically, MediHive outperforms single-LLM and centralized baselines on MedQA and PubMedQA datasets, attaining accuracies of 84.3% and 78.4%, respectively. Our work advances scalable, fault-tolerant D-MAS for medical AI, addressing key limitations of centralized designs while demonstrating superior performance in reasoning-intensive tasks.",
-      "pdf_url": "https://arxiv.org/pdf/2603.27150v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.27150v1",
-      "published": "2026-03-28T05:57:58Z",
-      "updated": "2026-03-28T05:57:58Z",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "Clinical named entity recognition in the Portuguese language: a benchmark of modern BERT models and LLMs",
-      "authors": [
-        "Vinicius Anjos de Almeida",
-        "Sandro Saorin da Silva",
-        "Josimar Chire",
-        "Leonardo Vicenzi",
-        "N\u00edcolas Henrique Borges",
-        "Helena Kociolek",
-        "Sarah Miri\u00e3 de Castro Rocha",
-        "Frederico Nassif Gomes",
-        "J\u00falia Cristina Ferreira",
-        "Oge Marques",
-        "Lucas Emanuel Silva e Oliveira"
-      ],
-      "abstract": "Clinical notes contain valuable unstructured information. Named entity recognition (NER) enables the automatic extraction of medical concepts; however, benchmarks for Portuguese remain scarce. In this study, we aimed to evaluate BERT-based models and large language models (LLMs) for clinical NER in Portuguese and to test strategies for addressing multilabel imbalance. We compared BioBERTpt, BERTimbau, ModernBERT, and mmBERT with LLMs such as GPT-5 and Gemini-2.5, using the public SemClinBr corpus and a private breast cancer dataset. Models were trained under identical conditions and evaluated using precision, recall, and F1-score. Iterative stratification, weighted loss, and oversampling were explored to mitigate class imbalance. The mmBERT-base model achieved the best performance (micro F1 = 0.76), outperforming all other models. Iterative stratification improved class balance and overall performance. Multilingual BERT models, particularly mmBERT, perform strongly for Portuguese clinical NER and can run locally with limited computational resources. Balanced data-splitting strategies further enhance performance.",
-      "pdf_url": "https://arxiv.org/pdf/2603.26510v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.26510v1",
-      "published": "2026-03-27T15:22:07Z",
-      "updated": "2026-03-27T15:22:07Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Automating Clinical Information Retrieval from Finnish Electronic Health Records Using Large Language Models",
-      "authors": [
-        "Mikko Saukkoriipi",
-        "Nicole Hernandez",
-        "Jaakko Sahlsten",
-        "Kimmo Kaski",
-        "Otso Arponen"
-      ],
-      "abstract": "Clinicians often need to retrieve patient-specific information from electronic health records (EHRs), a task that is time-consuming and error-prone. We present a locally deployable Clinical Contextual Question Answering (CCQA) framework that answers clinical questions directly from EHRs without external data transfer. Open-source large language models (LLMs) ranging from 4B to 70B parameters were benchmarked under fully offline conditions using 1,664 expert-annotated question-answer pairs derived from records of 183 patients. The dataset consisted predominantly of Finnish clinical text. In free-text generation, Llama-3.1-70B achieved 95.3% accuracy and 97.3% consistency across semantically equivalent question variants, while the smaller Qwen3-30B-A3B-2507 model achieved comparable performance. In a multiple-choice setting, models showed similar accuracy but variable calibration. Low-precision quantization (4-bit and 8-bit) preserved predictive performance while reducing GPU memory requirements and improving deployment feasibility. Clinical evaluation identified clinically significant errors in 2.9% of outputs, and semantically equivalent questions occasionally yielded discordant responses, including instances where one formulation was correct and the other contained a clinically significant error (0.96% of cases). These findings demonstrate that locally hosted open-source LLMs can accurately retrieve patient-specific information from EHRs using natural-language queries, while highlighting the need for validation and human oversight in clinical deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2603.26434v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.26434v1",
-      "published": "2026-03-27T14:03:51Z",
-      "updated": "2026-03-27T14:03:51Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "ClinicalAgents: Multi-Agent Orchestration for Clinical Decision Making with Dual-Memory",
-      "authors": [
-        "Zhuohan Ge",
-        "Haoyang Li",
-        "Yubo Wang",
-        "Nicole Hu",
-        "Chen Jason Zhang",
-        "Qing Li"
-      ],
-      "abstract": "While Large Language Models (LLMs) have demonstrated potential in healthcare, they often struggle with the complex, non-linear reasoning required for accurate clinical diagnosis. Existing methods typically rely on static, linear mappings from symptoms to diagnoses, failing to capture the iterative, hypothesis-driven reasoning inherent to human clinicians. To bridge this gap, we introduce ClinicalAgents, a novel multi-agent framework designed to simulate the cognitive workflow of expert clinicians. Unlike rigid sequential chains, ClinicalAgents employs a dynamic orchestration mechanism modeled as a Monte Carlo Tree Search (MCTS) process. This allows an Orchestrator to iteratively generate hypotheses, actively verify evidence, and trigger backtracking when critical information is missing. Central to this framework is a Dual-Memory architecture: a mutable Working Memory that maintains the evolving patient state for context-aware reasoning, and a static Experience Memory that retrieves clinical guidelines and historical cases via an active feedback loop. Extensive experiments demonstrate that ClinicalAgents achieves state-of-the-art performance, significantly enhancing both diagnostic accuracy and explainability compared to strong single-agent and multi-agent baselines.",
-      "pdf_url": "https://arxiv.org/pdf/2603.26182v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.26182v1",
-      "published": "2026-03-27T08:52:19Z",
-      "updated": "2026-03-27T08:52:19Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "SkinGPT-X: A Self-Evolving Collaborative Multi-Agent System for Transparent and Trustworthy Dermatological Diagnosis",
-      "authors": [
-        "Zhangtianyi Chen",
-        "Yuhao Shen",
-        "Florensia Widjaja",
-        "Yan Xu",
-        "Liyuan Sun",
-        "Zijian Wang",
-        "Hongyi Chen",
-        "Wufei Dai",
-        "Juexiao Zhou"
-      ],
-      "abstract": "While recent advancements in Large Language Models have significantly advanced dermatological diagnosis, monolithic LLMs frequently struggle with fine-grained, large-scale multi-class diagnostic tasks and rare skin disease diagnosis owing to training data sparsity, while also lacking the interpretability and traceability essential for clinical reasoning. Although multi-agent systems can offer more transparent and explainable diagnostics, existing frameworks are primarily concentrated on Visual Question Answering and conversational tasks, and their heavy reliance on static knowledge bases restricts adaptability in complex real-world clinical settings. Here, we present SkinGPT-X, a multimodal collaborative multi-agent system for dermatological diagnosis integrated with a self-evolving dermatological memory mechanism. By simulating the diagnostic workflow of dermatologists and enabling continuous memory evolution, SkinGPT-X delivers transparent and trustworthy diagnostics for the management of complex and rare dermatological cases. To validate the robustness of SkinGPT-X, we design a three-tier comparative experiment. First, we benchmark SkinGPT-X against four state-of-the-art LLMs across four public datasets, demonstrating its state-of-the-art performance with a +9.6% accuracy improvement on DDI31 and +13% weighted F1 gain on Dermnet over the state-of-the-art model. Second, we construct a large-scale multi-class dataset covering 498 distinct dermatological categories to evaluate its fine-grained classification capabilities. Finally, we curate the rare skin disease dataset, the first benchmark to address the scarcity of clinical rare skin diseases which contains 564 clinical samples with eight rare dermatological diseases. On this dataset, SkinGPT-X achieves a +9.8% accuracy improvement, a +7.1% weighted F1 improvement, a +10% Cohen's Kappa improvement.",
-      "pdf_url": "https://arxiv.org/pdf/2603.26122v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.26122v1",
-      "published": "2026-03-27T07:14:05Z",
-      "updated": "2026-03-27T07:14:05Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Retrieval-Augmented Generation Based Nurse Observation Extraction",
-      "authors": [
-        "Kyomin Hwang",
-        "Nojun Kwak"
-      ],
-      "abstract": "Recent advancements in Large Language Models (LLMs) have played a significant role in reducing human workload across various domains, a trend that is increasingly extending into the medical field. In this paper, we propose an automated pipeline designed to alleviate the burden on nurses by automatically extracting clinical observations from nurse dictations. To ensure accurate extraction, we introduce a method based on Retrieval-Augmented Generation (RAG). Our approach demonstrates effective performance, achieving an F1-score of 0.796 on the MEDIQA-SYNUR test dataset.",
-      "pdf_url": "https://arxiv.org/pdf/2603.26046v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.26046v1",
-      "published": "2026-03-27T03:32:37Z",
-      "updated": "2026-03-27T03:32:37Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "FairLLaVA: Fairness-Aware Parameter-Efficient Fine-Tuning for Large Vision-Language Assistants",
-      "authors": [
-        "Mahesh Bhosale",
-        "Abdul Wasi",
-        "Shantam Srivastava",
-        "Shifa Latif",
-        "Tianyu Luan",
-        "Mingchen Gao",
-        "David Doermann",
-        "Xuan Gong"
-      ],
-      "abstract": "While powerful in image-conditioned generation, multimodal large language models (MLLMs) can display uneven performance across demographic groups, highlighting fairness risks. In safety-critical clinical settings, such disparities risk producing unequal diagnostic narratives and eroding trust in AI-assisted decision-making. While fairness has been studied extensively in vision-only and language-only models, its impact on MLLMs remains largely underexplored. To address these biases, we introduce FairLLaVA, a parameter-efficient fine-tuning method that mitigates group disparities in visual instruction tuning without compromising overall performance. By minimizing the mutual information between target attributes, FairLLaVA regularizes the model's representations to be demographic-invariant. The method can be incorporated as a lightweight plug-in, maintaining efficiency with low-rank adapter fine-tuning, and provides an architecture-agnostic approach to fair visual instruction following. Extensive experiments on large-scale chest radiology report generation and dermoscopy visual question answering benchmarks show that FairLLaVA consistently reduces inter-group disparities while improving both equity-scaled clinical performance and natural language generation quality across diverse medical imaging modalities. Code can be accessed at https://github.com/bhosalems/FairLLaVA.",
-      "pdf_url": "https://arxiv.org/pdf/2603.26008v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.26008v1",
-      "published": "2026-03-27T01:55:14Z",
-      "updated": "2026-03-27T01:55:14Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
       ]
     }
   ]

@@ -1,20 +1,184 @@
 {
-  "generated_at_utc": "2026-04-01T03:23:14.431042Z",
+  "generated_at_utc": "2026-04-02T02:49:06.910737Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
     {
-      "title": "The Triadic Cognitive Architecture: Bounding Autonomous Action via Spatio-Temporal and Epistemic Friction",
+      "title": "Brainstacks: Cross-Domain Cognitive Capabilities via Frozen MoE-LoRA Stacks for Continual LLM Learning",
       "authors": [
-        "Davide Di Gioia"
+        "Mohammad R. Abu Ayyash"
       ],
-      "abstract": "Current autonomous AI agents, driven primarily by Large Language Models (LLMs), operate in a state of cognitive weightlessness: they process information without an intrinsic sense of network topology, temporal pacing, or epistemic limits. Consequently, heuristic agentic loops (e.g., ReAct) can exhibit failure modes in interactive environments, including excessive tool use under congestion, prolonged deliberation under time decay, and brittle behavior under ambiguous evidence. In this paper, we propose the Triadic Cognitive Architecture (TCA), a unified mathematical framework that grounds machine reasoning in continuous-time physics. By synthesizing nonlinear filtering theory, Riemannian routing geometry, and optimal control, we formally define the concept of Cognitive Friction. We map the agent's deliberation process to a coupled stochastic control problem where information acquisition is path-dependent and physically constrained. Rather than relying on arbitrary heuristic stop-tokens, the TCA uses an HJB-motivated stopping boundary and instantiates a rollout-based approximation of belief-dependent value-of-information with a net-utility halting condition. Through empirical validation in a simulated Emergency Medical Diagnostic Grid (EMDG), we demonstrate that while greedy baselines over-deliberate under latency and congestion costs, the triadic policy reduces time-to-action while improving patient viability without degrading diagnostic accuracy in this environment.",
-      "pdf_url": "https://arxiv.org/pdf/2603.30031v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.30031v1",
-      "published": "2026-03-31T17:30:25Z",
-      "updated": "2026-03-31T17:30:25Z",
+      "abstract": "We present Brainstacks, a modular architecture for continual multi-domain fine-tuning of large language models that packages domain expertise as frozen adapter stacks composing additively on a shared frozen base at inference. Five interlocking components: (1) MoE-LoRA with Shazeer-style noisy top-2 routing across all seven transformer projections under QLoRA 4-bit quantization with rsLoRA scaling; (2) an inner loop performing residual boosting by freezing trained stacks and adding new ones; (3) an outer loop training sequential domain-specific stacks with curriculum-ordered dependencies; (4) null-space projection via randomized SVD constraining new stacks to subspaces orthogonal to prior directions, achieving zero forgetting in isolation; (5) an outcome-based sigmoid meta-router trained on empirically discovered domain-combination targets that selectively weights stacks, enabling cross-domain composition. Two boundary experiments: (6) PSN pretraining on a randomly initialized model; (7) per-domain RL (DPO/GRPO) validating compatibility with post-SFT alignment. Validated on TinyLlama-1.1B (4 domains, 9 stacks) and Gemma 3 12B IT (5 domains, 10 stacks), MoE-LoRA achieves 2.5x faster convergence than parameter-matched single LoRA, residual boosting breaks through the single-stack ceiling, and the routed system recovers generation quality destroyed by ungated stack accumulation. The central finding: the outcome-based router discovers that domain stacks encode transferable cognitive primitives (instruction-following clarity, numerical reasoning, procedural logic, chain-of-thought structure) rather than domain-specific knowledge, with medical prompts routing to chat+math stacks in 97% of cases despite zero medical data in those stacks.",
+      "pdf_url": "https://arxiv.org/pdf/2604.01152v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.01152v1",
+      "published": "2026-04-01T17:08:25Z",
+      "updated": "2026-04-01T17:08:25Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "CARE: Privacy-Compliant Agentic Reasoning with Evidence Discordance",
+      "authors": [
+        "Haochen Liu",
+        "Weien Li",
+        "Rui Song",
+        "Zeyu Li",
+        "Chun Jason Xue",
+        "Xiao-Yang Liu",
+        "Sam Nallaperuma",
+        "Xue Liu",
+        "Ye Yuan"
+      ],
+      "abstract": "Large language model (LLM) systems are increasingly used to support high-stakes decision-making, but they typically perform worse when the available evidence is internally inconsistent. Such a scenario exists in real-world healthcare settings, with patient-reported symptoms contradicting medical signs. To study this problem, we introduce MIMIC-DOS, a dataset for short-horizon organ dysfunction worsening prediction in the intensive care unit (ICU) setting. We derive this dataset from the widely recognized MIMIC-IV, a publicly available electronic health record dataset, and construct it exclusively from cases in which discordance between signs and symptoms exists. This setting poses a substantial challenge for existing LLM-based approaches, with single-pass LLMs and agentic pipelines often struggling to reconcile such conflicting signals. To address this problem, we propose CARE: a multi-stage privacy-compliant agentic reasoning framework in which a remote LLM provides guidance by generating structured categories and transitions without accessing sensitive patient data, while a local LLM uses these categories and transitions to support evidence acquisition and final decision-making. Empirically, CARE achieves stronger performance across all key metrics compared to multiple baseline settings, showing that CARE can more robustly handle conflicting clinical evidence while preserving privacy.",
+      "pdf_url": "https://arxiv.org/pdf/2604.01113v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.01113v1",
+      "published": "2026-04-01T16:37:01Z",
+      "updated": "2026-04-01T16:37:01Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Auditing the Reliability of Multimodal Generative Search",
+      "authors": [
+        "Erfan Samieyan Sahneh",
+        "Luca Maria Aiello"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) increasingly function as generative search systems that retrieve and synthesize answers from multimedia content, including YouTube videos. Although these systems project authority by citing specific videos as evidence, the extent to which these citations genuinely substantiate the generated claims remains unexamined. We present a large-scale audit of the Gemini 2.5 Pro multimodal search system, analyzing 11,943 claim-video pairs generated across Medical, Economic, and General domains. Through automated verification using three independent LLM judges (87.7% inter-rater agreement), validated against human annotations, we find that depending on the judge's strictness, between 3.7% and 18.7% of video-grounded claims are not supported by their cited sources. The dominant failure modes are not outright contradictions but rather unverifiable specificities and overstated claims, suggesting the system injects precise but ungrounded details from parametric knowledge while citing videos as evidence. Exploratory post-hoc analysis via logistic regression reveals properties associated with these failures: claims departing from source vocabulary ($\u03b2= -1.6$ to $-3.1$, $p < 0.01$) and claims with low semantic similarity to the video transcript ($\u03b2= -2.1$ to $-11.6$, $p < 0.01$) are significantly more likely to be unsupported. These findings characterize the current trustworthiness of video-based generative search and highlight the gap between the confidence these systems project and the fidelity of their outputs.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00944v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.00944v1",
+      "published": "2026-04-01T14:15:41Z",
+      "updated": "2026-04-01T14:15:41Z",
+      "categories": [
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "PsychAgent: An Experience-Driven Lifelong Learning Agent for Self-Evolving Psychological Counselor",
+      "authors": [
+        "Yutao Yang",
+        "Junsong Li",
+        "Qianjun Pan",
+        "Jie Zhou",
+        "Kai Chen",
+        "Qin Chen",
+        "Jingyuan Zhao",
+        "Ningning Zhou",
+        "Xin Li",
+        "Liang He"
+      ],
+      "abstract": "Existing methods for AI psychological counselors predominantly rely on supervised fine-tuning using static dialogue datasets. However, this contrasts with human experts, who continuously refine their proficiency through clinical practice and accumulated experience. To bridge this gap, we propose an Experience-Driven Lifelong Learning Agent (\\texttt{PsychAgent}) for psychological counseling. First, we establish a Memory-Augmented Planning Engine tailored for longitudinal multi-session interactions, which ensures therapeutic continuity through persistent memory and strategic planning. Second, to support self-evolution, we design a Skill Evolution Engine that extracts new practice-grounded skills from historical counseling trajectories. Finally, we introduce a Reinforced Internalization Engine that integrates the evolved skills into the model via rejection fine-tuning, aiming to improve performance across diverse scenarios. Comparative analysis shows that our approach achieves higher scores than strong general LLMs (e.g., GPT-5.4, Gemini-3) and domain-specific baselines across all reported evaluation dimensions. These results suggest that lifelong learning can improve the consistency and overall quality of multi-session counseling responses.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00931v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.00931v1",
+      "published": "2026-04-01T14:08:49Z",
+      "updated": "2026-04-01T14:08:49Z",
       "categories": [
         "cs.AI"
+      ]
+    },
+    {
+      "title": "A 4D Representation for Training-Free Agentic Reasoning from Monocular Laparoscopic Video",
+      "authors": [
+        "Maximilian Fehrentz",
+        "Nicolas Stellwag",
+        "Robert Wiebe",
+        "Nicole Thorisch",
+        "Fabian Grob",
+        "Patrick Remerscheid",
+        "Ken-Joel Simmoteit",
+        "Benjamin D. Killeen",
+        "Christian Heiliger",
+        "Nassir Navab"
+      ],
+      "abstract": "Spatiotemporal reasoning is a fundamental capability for artificial intelligence (AI) in soft tissue surgery, paving the way for intelligent assistive systems and autonomous robotics. While 2D vision-language models show increasing promise at understanding surgical video, the spatial complexity of surgical scenes suggests that reasoning systems may benefit from explicit 4D representations. Here, we propose a framework for equipping surgical agents with spatiotemporal tools based on an explicit 4D representation, enabling AI systems to ground their natural language reasoning in both time and 3D space. Leveraging models for point tracking, depth, and segmentation, we develop a coherent 4D model with spatiotemporally consistent tool and tissue semantics. A Multimodal Large Language Model (MLLM) then acts as an agent on tools derived from the explicit 4D representation (e.g., trajectories) without any fine-tuning. We evaluate our method on a new dataset of 134 clinically relevant questions and find that the combination of a general purpose reasoning backbone and our 4D representation significantly improves spatiotemporal understanding and allows for 4D grounding. We demonstrate that spatiotemporal intelligence can be \"assembled\" from 2D MLLMs and 3D computer vision models without additional training. Code, data, and examples are available at https://tum-ai.github.io/surg4d/",
+      "pdf_url": "https://arxiv.org/pdf/2604.00867v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.00867v1",
+      "published": "2026-04-01T13:14:52Z",
+      "updated": "2026-04-01T13:14:52Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Can Large Language Models Self-Correct in Medical Question Answering? An Exploratory Study",
+      "authors": [
+        "Zaifu Zhan",
+        "Mengyuan Cui",
+        "Rui Zhang"
+      ],
+      "abstract": "Large language models (LLMs) have achieved strong performance on medical question answering (medical QA), and chain-of-thought (CoT) prompting has further improved results by eliciting explicit intermediate reasoning; meanwhile, self-reflective (self-corrective) prompting has been widely claimed to enhance model reliability by prompting LLMs to critique and revise their own reasoning, yet its effectiveness in safety-critical medical settings remains unclear. In this work, we conduct an exploratory analysis of self-reflective reasoning for medical multiple-choice question answering: using GPT-4o and GPT-4o-mini, we compare standard CoT prompting with an iterative self-reflection loop and track how predictions evolve across reflection steps on three widely used medical QA benchmarks (MedQA, HeadQA, and PubMedQA). We analyze whether self-reflection leads to error correction, error persistence, or the introduction of new errors. Our results show that self-reflective prompting does not consistently improve accuracy and its impact is highly dataset- and model-dependent: it yields modest gains on MedQA but provides limited or negative benefits on HeadQA and PubMedQA, and increasing the number of reflection steps does not guarantee better performance. These findings highlight a gap between reasoning transparency and reasoning correctness, suggesting that self-reflective reasoning is better viewed as an analytical tool for understanding model behavior rather than a standalone solution for improving medical QA reliability.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00261v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.00261v1",
+      "published": "2026-03-31T21:42:20Z",
+      "updated": "2026-03-31T21:42:20Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "A Safety-Aware Role-Orchestrated Multi-Agent LLM Framework for Behavioral Health Communication Simulation",
+      "authors": [
+        "Ha Na Cho"
+      ],
+      "abstract": "Single-agent large language model (LLM) systems struggle to simultaneously support diverse conversational functions and maintain safety in behavioral health communication. We propose a safety-aware, role-orchestrated multi-agent LLM framework designed to simulate supportive behavioral health dialogue through coordinated, role-differentiated agents. Conversational responsibilities are decomposed across specialized agents, including empathy-focused, action-oriented, and supervisory roles, while a prompt-based controller dynamically activates relevant agents and enforces continuous safety auditing. Using semi-structured interview transcripts from the DAIC-WOZ corpus, we evaluate the framework with scalable proxy metrics capturing structural quality, functional diversity, and computational characteristics. Results illustrate clear role differentiation, coherent inter-agent coordination, and predictable trade-offs between modular orchestration, safety oversight, and response latency when compared to a single-agent baseline. This work emphasizes system design, interpretability, and safety, positioning the framework as a simulation and analysis tool for behavioral health informatics and decision-support research rather than a clinical intervention.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00249v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.00249v1",
+      "published": "2026-03-31T21:21:31Z",
+      "updated": "2026-03-31T21:21:31Z",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "Agentic AI for Clinical Urgency Mapping and Queue Optimization in High-Volume Outpatient Departments: A Simulation-Based Evaluation",
+      "authors": [
+        "Ravish Gupta",
+        "Saket Kumar",
+        "Maulik Dang"
+      ],
+      "abstract": "Outpatient departments (OPDs) in Indian public hospitals face severe overcrowding, with daily volumes reaching 200--8,000 patients~\\cite{aiims2020annual}. The prevailing First-Come-First-Served (FCFS) token system treats all patients equally regardless of clinical urgency, leading to dangerous delays for critical cases. We present an agentic AI framework integrating six components: voice-based multilingual symptom capture (modeled), LLM-powered severity prediction, load-aware physician assignment, adaptive queue optimization with urgency drift detection, a multi-objective orchestrator, and a Patient Memory System for longitudinal context-aware triage. Evaluated through discrete-event simulation of a District Hospital in Jabalpur (Madhya Pradesh) with 368 synthetic patients over 30 runs, the framework achieves 94.2\\% critical patients seen within 10 minutes (vs.~30.8\\% under FCFS), detects $\\sim$236 simulated urgency drift events per session (modeled via stochastic deterioration probabilities), identifies $\\sim$11.9 additional hidden-critical cases via patient memory, and recomposes queue urgency distribution from 13/36/158/161 (Critical/High/Medium/Low) to $\\sim$25/178/115/50 through continuous reassessment, while maintaining comparable throughput ($\\sim$40.4 patients/hour).",
+      "pdf_url": "https://arxiv.org/pdf/2604.00215v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.00215v1",
+      "published": "2026-03-31T20:32:21Z",
+      "updated": "2026-03-31T20:32:21Z",
+      "categories": [
+        "eess.SY"
+      ]
+    },
+    {
+      "title": "One Panel Does Not Fit All: Case-Adaptive Multi-Agent Deliberation for Clinical Prediction",
+      "authors": [
+        "Yuxing Lu",
+        "Yushuhong Lin",
+        "Jason Zhang"
+      ],
+      "abstract": "Large language models applied to clinical prediction exhibit case-level heterogeneity: simple cases yield consistent outputs, while complex cases produce divergent predictions under minor prompt changes. Existing single-agent strategies sample from one role-conditioned distribution, and multi-agent frameworks use fixed roles with flat majority voting, discarding the diagnostic signal in disagreement. We propose CAMP (Case-Adaptive Multi-agent Panel), where an attending-physician agent dynamically assembles a specialist panel tailored to each case's diagnostic uncertainty. Each specialist evaluates candidates via three-valued voting (KEEP/REFUSE/NEUTRAL), enabling principled abstention outside one's expertise. A hybrid router directs each diagnosis through strong consensus, fallback to the attending physician's judgment, or evidence-based arbitration that weighs argument quality over vote counts. On diagnostic prediction and brief hospital course generation from MIMIC-IV across four LLM backbones, CAMP consistently outperforms strong baselines while consuming fewer tokens than most competing multi-agent methods, with voting records and arbitration traces offering transparent decision audits.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00085v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.00085v1",
+      "published": "2026-03-31T18:00:34Z",
+      "updated": "2026-03-31T18:00:34Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "Large Language Models for Variant-Centric Functional Evidence Mining",
+      "authors": [
+        "Ali Saadat",
+        "Jacques Fellay"
+      ],
+      "abstract": "Functional evidence is essential for clinical interpretation of genomic variants, but identifying relevant studies and translating experimental results into structured evidence remains labor intensive. We developed a benchmark based on ClinGen curated annotations to evaluate two large language models (LLMs), a non reasoning model (gpt-4o-mini) and a reasoning model (o4-mini), on tasks relevant to functional evidence curation: (1) abstract screening to determine whether a study reports functional experiments directly testing specific variants, and (2) full text evidence extraction and classification from matched variant-paper pairs, including interpretation of evidence direction and generation of evidence summaries. Starting from ClinGen variants annotated with functional evidence, we processed curator comments with an LLM to extract PubMed identifiers, evidence labels, and narrative, and retrieved titles, abstracts, and open access PDFs to construct variant-paper pairs. In abstract screening, both models achieved high recall (0.88-0.90) with moderate specificity (0.59-0.65). For full text evidence classification under an explicit variant matching gate, o4-mini achieved 96% accuracy and higher specificity (0.83 vs. 0.37) while maintaining high F1 (0.98 vs. 0.96) compared with gpt-4o-mini. We also used an LLM-as-judge protocol to compare model generated evidence summaries with expert curator comments. Finally, we developed AcmGENTIC, an end to end pipeline that expands variant identifiers, retrieves literature via LitVar2, filters abstracts with LLMs, acquires PDFs, performs multimodal evidence extraction, and generates evidence reports for curator review, with optional agentic parsing of figures and tables. Together, this benchmark and pipeline provide a practical framework for scaling functional evidence curation with human in the loop LLM assistance.",
+      "pdf_url": "https://arxiv.org/pdf/2604.00075v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.00075v1",
+      "published": "2026-03-31T15:08:37Z",
+      "updated": "2026-03-31T15:08:37Z",
+      "categories": [
+        "q-bio.GN"
       ]
     },
     {
@@ -109,181 +273,6 @@
       "categories": [
         "cs.AI",
         "cs.DB"
-      ]
-    },
-    {
-      "title": "Human-Like Lifelong Memory: A Neuroscience-Grounded Architecture for Infinite Interaction",
-      "authors": [
-        "Diego C. Lerma-Torres"
-      ],
-      "abstract": "Large language models lack persistent, structured memory for long-term interaction and context-sensitive retrieval. Expanding context windows does not solve this: recent evidence shows that context length alone degrades reasoning by up to 85% - even with perfect retrieval. We propose a bio-inspired memory framework grounded in complementary learning systems theory, cognitive behavioral therapy's belief hierarchy, dual-process cognition, and fuzzy-trace theory, organized around three principles: (1) Memory has valence, not just content - pre-computed emotional-associative summaries (valence vectors) organized in an emergent belief hierarchy inspired by Beck's cognitive model enable instant orientation before deliberation; (2) Retrieval defaults to System 1 with System 2 escalation - automatic spreading activation and passive priming as default, with deliberate retrieval only when needed, and graded epistemic states that address hallucination structurally; and (3) Encoding is active, present, and feedback-dependent - a thalamic gateway tags and routes information between stores, while the executive forms gists through curiosity-driven investigation, not passive exposure. Seven functional properties specify what any implementation must satisfy. Over time, the system converges toward System 1 processing - the computational analog of clinical expertise - producing interactions that become cheaper, not more expensive, with experience.",
-      "pdf_url": "https://arxiv.org/pdf/2603.29023v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.29023v1",
-      "published": "2026-03-30T21:35:28Z",
-      "updated": "2026-03-30T21:35:28Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "EpiScreen: Early Epilepsy Detection from Electronic Health Records with Large Language Models",
-      "authors": [
-        "Shuang Zhou",
-        "Kai Yu",
-        "Zaifu Zhan",
-        "Huixue Zhou",
-        "Min Zeng",
-        "Feng Xie",
-        "Zhiyi Sha",
-        "Rui Zhang"
-      ],
-      "abstract": "Epilepsy and psychogenic non-epileptic seizures often present with similar seizure-like manifestations but require fundamentally different management strategies. Misdiagnosis is common and can lead to prolonged diagnostic delays, unnecessary treatments, and substantial patient morbidity. Although prolonged video-electroencephalography is the diagnostic gold standard, its high cost and limited accessibility hinder timely diagnosis. Here, we developed a low-cost, effective approach, EpiScreen, for early epilepsy detection by utilizing routinely collected clinical notes from electronic health records. Through fine-tuning large language models on labeled notes, EpiScreen achieved an AUC of up to 0.875 on the MIMIC-IV dataset and 0.980 on a private cohort of the University of Minnesota. In a clinician-AI collaboration setting, EpiScreen-assisted neurologists outperformed unaided experts by up to 10.9%. Overall, this study demonstrates that EpiScreen supports early epilepsy detection, facilitating timely and cost-effective screening that may reduce diagnostic delays and avoid unnecessary interventions, particularly in resource-limited regions.",
-      "pdf_url": "https://arxiv.org/pdf/2603.28698v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.28698v1",
-      "published": "2026-03-30T17:16:08Z",
-      "updated": "2026-03-30T17:16:08Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Towards a Medical AI Scientist",
-      "authors": [
-        "Hongtao Wu",
-        "Boyun Zheng",
-        "Dingjie Song",
-        "Yu Jiang",
-        "Jianfeng Gao",
-        "Lei Xing",
-        "Lichao Sun",
-        "Yixuan Yuan"
-      ],
-      "abstract": "Autonomous systems that generate scientific hypotheses, conduct experiments, and draft manuscripts have recently emerged as a promising paradigm for accelerating discovery. However, existing AI Scientists remain largely domain-agnostic, limiting their applicability to clinical medicine, where research is required to be grounded in medical evidence with specialized data modalities. In this work, we introduce Medical AI Scientist, the first autonomous research framework tailored to clinical autonomous research. It enables clinically grounded ideation by transforming extensively surveyed literature into actionable evidence through clinician-engineer co-reasoning mechanism, which improves the traceability of generated research ideas. It further facilitates evidence-grounded manuscript drafting guided by structured medical compositional conventions and ethical policies. The framework operates under 3 research modes, namely paper-based reproduction, literature-inspired innovation, and task-driven exploration, each corresponding to a distinct level of automated scientific inquiry with progressively increasing autonomy. Comprehensive evaluations by both large language models and human experts demonstrate that the ideas generated by the Medical AI Scientist are of substantially higher quality than those produced by commercial LLMs across 171 cases, 19 clinical tasks, and 6 data modalities. Meanwhile, our system achieves strong alignment between the proposed method and its implementation, while also demonstrating significantly higher success rates in executable experiments. Double-blind evaluations by human experts and the Stanford Agentic Reviewer suggest that the generated manuscripts approach MICCAI-level quality, while consistently surpassing those from ISBI and BIBM. The proposed Medical AI Scientist highlights the potential of leveraging AI for autonomous scientific discovery in healthcare.",
-      "pdf_url": "https://arxiv.org/pdf/2603.28589v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.28589v1",
-      "published": "2026-03-30T15:37:25Z",
-      "updated": "2026-03-30T15:37:25Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Within the MDT Room: Situated in Multidisciplinary Team-Grounded Agent Debate for Clinical Diagnosis",
-      "authors": [
-        "Peng Kuai",
-        "Yukun Yang",
-        "Shaolun Ruan",
-        "Junchi Xu",
-        "Yanjie Zhang",
-        "Lin Zhang",
-        "Min Zhu",
-        "Rui Sheng"
-      ],
-      "abstract": "Rare disease diagnosis is inherently challenging due to heterogeneous symptoms, limited clinical familiarity, and fragmented evidence across specialties. Recent large language model (LLM)-based agentic systems have shown promise by simulating multidisciplinary team discussions to generate and evaluate diagnostic hypotheses. However, fully automated diagnosis remains unrealistic, and existing human-in-the-loop approaches provide limited support for effective clinician-agent collaboration. In practice, clinicians are often presented with final diagnostic outputs and lengthy, unstructured agent discussion logs, making it difficult to inspect reasoning, intervene in a timely manner, or guide agent deliberation effectively. To address these challenges, we developed MDTRoom, an interactive system that transforms multi-agent discussions from linear transcripts into a structured, inspectable workspace. The system externalizes patient data, evidence provenance, hypothesis evolution, and inter-agent conflicts as interconnected visual objects, enabling clinicians to efficiently examine, intervene in, and guide agent reasoning. Our evaluation demonstrates the effectiveness of MDTRoom in supporting clinician-agent collaboration.",
-      "pdf_url": "https://arxiv.org/pdf/2603.28393v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.28393v1",
-      "published": "2026-03-30T13:03:16Z",
-      "updated": "2026-03-30T13:03:16Z",
-      "categories": [
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "DongYuan: An LLM-Based Framework for Integrative Chinese and Western Medicine Spleen-Stomach Disorders Diagnosis",
-      "authors": [
-        "Hua Li",
-        "Yingying Li",
-        "Xiaobin Feng",
-        "Xinyi Fu",
-        "Lifeng Dong",
-        "Qingfeng Yang",
-        "Yanzhe Chen",
-        "Xiaoju Feng",
-        "Zhidong Cao",
-        "Jianbin Guo",
-        "Yanru Du"
-      ],
-      "abstract": "The clinical burden of spleen-stomach disorders is substantial. While large language models (LLMs) offer new potential for medical applications, they face three major challenges in the context of integrative Chinese and Western medicine (ICWM): a lack of high-quality data, the absence of models capable of effectively integrating the reasoning logic of traditional Chinese medicine (TCM) syndrome differentiation with that of Western medical (WM) disease diagnosis, and the shortage of a standardized evaluation benchmark. To address these interrelated challenges, we propose DongYuan, an ICWM spleen-stomach diagnostic framework. Specifically, three ICWM datasets (SSDF-Syndrome, SSDF-Dialogue, and SSDF-PD) were curated to fill the gap in high-quality data for spleen-stomach disorders. We then developed SSDF-Core, a core diagnostic LLM that acquires robust ICWM reasoning capabilities through a two-stage training regimen of supervised fine-tuning. tuning (SFT) and direct preference optimization (DPO), and complemented it with SSDF-Navigator, a pluggable consultation navigation model designed to optimize clinical inquiry strategies. Additionally, we established SSDF-Bench, a comprehensive evaluation benchmark focused on ICWM diagnosis of spleen-stomach disorders. Experimental results demonstrate that SSDF-Core significantly outperforms 12 mainstream baselines on SSDF-Bench. DongYuan lays a solid methodological foundation and provides practical technical references for the future development of intelligent ICWM diagnostic systems.",
-      "pdf_url": "https://arxiv.org/pdf/2603.28191v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.28191v1",
-      "published": "2026-03-30T08:56:24Z",
-      "updated": "2026-03-30T08:56:24Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Improving Clinical Diagnosis with Counterfactual Multi-Agent Reasoning",
-      "authors": [
-        "Zhiwen You",
-        "Xi Chen",
-        "Aniket Vashishtha",
-        "Simo Du",
-        "Gabriel Erion-Barner",
-        "Hongyuan Mei",
-        "Hao Peng",
-        "Yue Guo"
-      ],
-      "abstract": "Clinical diagnosis is a complex reasoning process in which clinicians gather evidence, form hypotheses, and test them against alternative explanations. In medical training, this reasoning is explicitly developed through counterfactual questioning--e.g., asking how a diagnosis would change if a key symptom were absent or altered--to strengthen differential diagnosis skills. As large language model (LLM)-based systems are increasingly used for diagnostic support, ensuring the interpretability of their recommendations becomes critical. However, most existing LLM-based diagnostic agents reason over fixed clinical evidence without explicitly testing how individual findings support or weaken competing diagnoses. In this work, we propose a counterfactual multi-agent diagnostic framework inspired by clinician training that makes hypothesis testing explicit and evidence-grounded. Our framework introduces counterfactual case editing to modify clinical findings and evaluate how these changes affect competing diagnoses. We further define the Counterfactual Probability Gap, a method that quantifies how strongly individual findings support a diagnosis by measuring confidence shifts under these edits. These counterfactual signals guide multi-round specialist discussions, enabling agents to challenge unsupported hypotheses, refine differential diagnoses, and produce more interpretable reasoning trajectories. Across three diagnostic benchmarks and seven LLMs, our method consistently improves diagnostic accuracy over prompting and prior multi-agent baselines, with the largest gains observed in complex and ambiguous cases. Human evaluation further indicates that our framework produces more clinically useful, reliable, and coherent reasoning. These results suggest that incorporating counterfactual evidence verification is an important step toward building reliable AI systems for clinical decision support.",
-      "pdf_url": "https://arxiv.org/pdf/2603.27820v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.27820v1",
-      "published": "2026-03-29T19:14:26Z",
-      "updated": "2026-03-29T19:14:26Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Synergizing Discriminative Exemplars and Self-Refined Experience for MLLM-based In-Context Learning in Medical Diagnosis",
-      "authors": [
-        "Wenkai Zhao",
-        "Zipei Wang",
-        "Mengjie Fang",
-        "Di Dong",
-        "Jie Tian",
-        "Lingwei Zhang"
-      ],
-      "abstract": "General Multimodal Large Language Models (MLLMs) often underperform in capturing domain-specific nuances in medical diagnosis, trailing behind fully supervised baselines. Although fine-tuning provides a remedy, the high costs of expert annotation and massive computational overhead limit its scalability. To bridge this gap without updating the weights of the pre-trained backbone of the MLLM, we propose a Clinician Mimetic Workflow. This is a novel In-Context Learning (ICL) framework designed to synergize Discriminative Exemplar Coreset Selection (DECS) and Self-Refined Experience Summarization (SRES). Specifically, DECS simulates a clinician's ability to reference \"anchor cases\" by selecting discriminative visual coresets from noisy data at the computational level; meanwhile, SRES mimics the cognition and reflection in clinical diagnosis by distilling diverse rollouts into a dynamic textual Experience Bank. Extensive evaluation across all 12 datasets of the MedMNIST 2D benchmark demonstrates that our method outperforms zero-shot general and medical MLLMs. Simultaneously, it achieves performance levels comparable to fully supervised vision models and domain-specific fine-tuned MLLMs, setting a new benchmark for parameter-efficient medical in-context learning. Our code is available at an anonymous repository: https://anonymous.4open.science/r/Synergizing-Discriminative-Exemplars-and-Self-Refined-Experience-ED74.",
-      "pdf_url": "https://arxiv.org/pdf/2603.27737v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.27737v1",
-      "published": "2026-03-29T15:29:59Z",
-      "updated": "2026-03-29T15:29:59Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Poisoning the Genome: Targeted Backdoor Attacks on DNA Foundation Models",
-      "authors": [
-        "Charalampos Koilakos",
-        "Ioannis Mouratidis",
-        "Ilias Georgakopoulos-Soares"
-      ],
-      "abstract": "Genomic foundation models trained on DNA sequences have demonstrated remarkable capabilities across diverse biological tasks, from variant effect prediction to genome design. These models are typically trained on massive, publicly sourced genomic datasets comprising trillions of nucleotide tokens, which renders them intrinsically susceptible to errors, artifacts, and adversarial issues embedded in the training data. Unlike natural language, DNA sequences lack the semantic transparency that might allow model makers to filter out corrupted entries, making genomic training corpora particularly susceptible to undetected manipulation. While training data poisoning has been established as a credible threat to large language models, its implications for genomic foundation models remain unexplored. Here, we present the first systematic investigation of training data poisoning in genomic language models. We demonstrate two complementary attack vectors. First, we show that adversarially crafted sequences can selectively degrade generative behavior on targeted genomic contexts, with backdoor activation following a sigmoidal dose-response relationship and full implantation achieved at 1 percent cumulative poison exposure. Second, targeted label corruption of downstream training data can selectively compromise clinically relevant variant classification, demonstrated using BRCA1 variant effect prediction. Our results reveal that genomic foundation models are vulnerable to targeted data poisoning attacks, underscoring the need for data provenance tracking, integrity verification, and adversarial robustness evaluation in the genomic foundation model development pipeline.",
-      "pdf_url": "https://arxiv.org/pdf/2603.27465v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.27465v1",
-      "published": "2026-03-29T00:59:10Z",
-      "updated": "2026-03-29T00:59:10Z",
-      "categories": [
-        "q-bio.GN"
-      ]
-    },
-    {
-      "title": "PubMed Reasoner: Dynamic Reasoning-based Retrieval for Evidence-Grounded Biomedical Question Answering",
-      "authors": [
-        "Yiqing Zhang",
-        "Xiaozhong Liu",
-        "Fabricio Murai"
-      ],
-      "abstract": "Trustworthy biomedical question answering (QA) systems must not only provide accurate answers but also justify them with current, verifiable evidence. Retrieval-augmented approaches partially address this gap but lack mechanisms to iteratively refine poor queries, whereas self-reflection methods kick in only after full retrieval is completed. In this context, we introduce PubMed Reasoner, a biomedical QA agent composed of three stages: self-critic query refinement evaluates MeSH terms for coverage, alignment, and redundancy to enhance PubMed queries based on partial (metadata) retrieval; reflective retrieval processes articles in batches until sufficient evidence is gathered; and evidence-grounded response generation produces answers with explicit citations. PubMed Reasoner with a GPT-4o backbone achieves 78.32% accuracy on PubMedQA, slightly surpassing human experts, and showing consistent gains on MMLU Clinical Knowledge. Moreover, LLM-as-judge evaluations prefer our responses across: reasoning soundness, evidence grounding, clinical relevance, and trustworthiness. By orchestrating retrieval-first reasoning over authoritative sources, our approach provides practical assistance to clinicians and biomedical researchers while controlling compute and token costs.",
-      "pdf_url": "https://arxiv.org/pdf/2603.27335v1",
-      "arxiv_url": "https://arxiv.org/abs/2603.27335v1",
-      "published": "2026-03-28T16:41:57Z",
-      "updated": "2026-03-28T16:41:57Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

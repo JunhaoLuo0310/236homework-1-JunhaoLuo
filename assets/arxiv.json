@@ -1,8 +1,105 @@
 {
-  "generated_at_utc": "2026-04-05T03:17:56.451781Z",
+  "generated_at_utc": "2026-04-06T03:21:07.758679Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "ESL-Bench: An Event-Driven Synthetic Longitudinal Benchmark for Health Agents",
+      "authors": [
+        "Chao Li",
+        "Cailiang Liu",
+        "Ang Gao",
+        "Kexin Deng",
+        "Shu Zhang",
+        "Langping Xu",
+        "Xiaotong Shi",
+        "Xionghao Ding",
+        "Jian Pei",
+        "Xun Jiang"
+      ],
+      "abstract": "Longitudinal health agents must reason across multi-source trajectories that combine continuous device streams, sparse clinical exams, and episodic life events - yet evaluating them is hard: real-world data cannot be released at scale, and temporally grounded attribution questions seldom admit definitive answers without structured ground truth. We present ESL-Bench, an event-driven synthesis framework and benchmark providing 100 synthetic users, each with a 1-5 year trajectory comprising a health profile, a multi-phase narrative plan, daily device measurements, periodic exam records, and an event log with explicit per-indicator impact parameters. Each indicator follows a baseline stochastic process driven by discrete events with sigmoid-onset, exponential-decay kernels under saturation and projection constraints; a hybrid pipeline delegates sparse semantic artifacts to LLM-based planning and dense indicator dynamics to algorithmic simulation with hard physiological bounds. Users are each paired with 100 evaluation queries across five dimensions - Lookup, Trend, Comparison, Anomaly, Explanation - stratified into Easy, Medium, and Hard tiers, with all ground-truth answers programmatically computable from the recorded event-indicator relationships. Evaluating 13 methods spanning LLMs with tools, DB-native agents, and memory-augmented RAG, we find that DB agents (48-58%) substantially outperform memory RAG baselines (30-38%), with the gap concentrated on Comparison and Explanation queries where multi-hop reasoning and evidence attribution are required.",
+      "pdf_url": "https://arxiv.org/pdf/2604.02834v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.02834v1",
+      "published": "2026-04-03T07:55:56Z",
+      "updated": "2026-04-03T07:55:56Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Visual Instruction-Finetuned Language Model for Versatile Brain MR Image Tasks",
+      "authors": [
+        "Jonghun Kim",
+        "Sinyoung Ra",
+        "Hyunjin Park"
+      ],
+      "abstract": "LLMs have demonstrated remarkable capabilities in linguistic reasoning and are increasingly adept at vision-language tasks. The integration of image tokens into transformers has enabled direct visual input and output, advancing research from image-to-text descriptions to text-to-image generation. However, simple text-to-image generation holds limited clinical utility. In medical imaging, tasks such as image segmentation for localizing pathologies or image translation for reconstructing missing sequences have much greater clinical importance. Despite this, integrating these diverse, clinically relevant tasks within a single, versatile language model remains unexplored. Our method, LLaBIT (Large Language Model for Brain Image Translation), extends the visual reasoning of LLMs to these clinically meaningful tasks in the brain MRI domain. To mitigate the spatial information loss inherent in image tokenization, we incorporate a mechanism to reuse feature maps from the image encoder, minimizing data degradation. We also generate text data using LLMs with strict predefined instructions to augment limited image-text paired data in brain MRI. We comprehensively evaluated our method on five brain MRI datasets across four distinct tasks: report generation, visual question answering, image segmentation, and image translation. Our model not only demonstrated superior performance across all tasks but also outperformed specialized, task-specific models in direct comparisons, highlighting its efficacy and versatility",
+      "pdf_url": "https://arxiv.org/pdf/2604.02748v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.02748v1",
+      "published": "2026-04-03T05:39:47Z",
+      "updated": "2026-04-03T05:39:47Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Eligibility-Aware Evidence Synthesis: An Agentic Framework for Clinical Trial Meta-Analysis",
+      "authors": [
+        "Yao Zhao",
+        "Zhiyue Zhang",
+        "Yanxun Xu"
+      ],
+      "abstract": "Clinical evidence synthesis requires identifying relevant trials from large registries and aggregating results that account for population differences. While recent LLM-based approaches have automated components of systematic review, they do not support end-to-end evidence synthesis. Moreover, conventional meta-analysis weights studies by statistical precision without considering clinical compatibility reflected in eligibility criteria. We propose EligMeta, an agentic framework that integrates automated trial discovery with eligibility-aware meta-analysis, translating natural-language queries into reproducible trial selection and incorporating eligibility alignment into study weighting to produce cohort-specific pooled estimates. EligMeta employs a hybrid architecture separating LLM-based reasoning from deterministic execution: LLMs generate interpretable rules from natural-language queries and perform schema-constrained parsing of trial metadata, while all logical operations, weight computations, and statistical pooling are executed deterministically to ensure reproducibility. The framework structures eligibility criteria and computes similarity-based study weights reflecting population alignment between target and comparator trials. In a gastric cancer landscape analysis, EligMeta reduced 4,044 candidate trials to 39 clinically relevant studies through rule-based filtering, recovering all 13 guideline-cited trials. In an olaparib adverse events meta-analysis across four trials, eligibility-aware weighting shifted the pooled risk ratio from 2.18 (95% CI: 1.71-2.79) under conventional Mantel-Haenszel estimation to 1.97 (95% CI: 1.76-2.20), demonstrating quantifiable impact of incorporating eligibility alignment. EligMeta bridges automated trial discovery with eligibility-aware meta-analysis, providing a scalable and reproducible framework for evidence synthesis in precision medicine.",
+      "pdf_url": "https://arxiv.org/pdf/2604.02678v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.02678v1",
+      "published": "2026-04-03T03:18:50Z",
+      "updated": "2026-04-03T03:18:50Z",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "ECG Foundation Models and Medical LLMs for Agentic Cardiovascular Intelligence at the Edge: A Review and Outlook",
+      "authors": [
+        "Mudassir Hasan Khan",
+        "Ahmad Nayfeh",
+        "Mudassir Masood",
+        "Ali Ahmad Al-Shaikhi",
+        "Muhammad Mahboob Ur Rahman",
+        "Tareq Y. Al-Naffouri"
+      ],
+      "abstract": "Electrocardiogram (ECG) foundation models represent a paradigm shift from task-specific pipelines to generalizable architectures pre-trained on large-scale unlabeled waveform data. This survey presents a unified and deployment-aware review of foundation models and medical large language models (LLMs) for ECG intelligence in cardiovascular disease (CVD) diagnosis, monitoring, and clinical decision support. The central thesis of this survey paper is that next-generation cardiovascular AI systems will be inherently agentic, requiring the synergistic integration of two complementary model classes: (i) ECG foundation models that act as signal-level interpreters, learning rich electrophysiological representations via self-supervised and multimodal pretraining, and (ii) medical LLMs, trained on biomedical text corpora, that function as knowledge-based reasoning backbones for contextual inference, guideline alignment, and clinical decision support. Thus, the survey systematically reviews existing pool of generalist medical LLMs, as well as ECG foundation models that utilize techniques such as self-supervised learning, multimodal ECG-language alignment, vision transformer architectures, and possess capabilities such as zero-shot classification, automated report generation, and longitudinal risk modeling. Recognizing the constraints of consumer-grade wearable edge devices, we further examine model optimization techniques such as quantization, pruning, knowledge distillation, as well as the role of small language models in enabling low-latency, energy-efficient, and privacy-preserving ECG intelligence on edge platforms such as smartwatches. Finally, we outline future directions in multimodal ECG foundation models, agent-driven monitoring, and explainable, secure edge intelligence, with particular emphasis on real-time, on-device cardiovascular analytics in consumer electronics ecosystems.",
+      "pdf_url": "https://arxiv.org/pdf/2604.02501v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.02501v1",
+      "published": "2026-04-02T20:09:05Z",
+      "updated": "2026-04-02T20:09:05Z",
+      "categories": [
+        "eess.SP"
+      ]
+    },
+    {
+      "title": "Guideline2Graph: Profile-Aware Multimodal Parsing for Executable Clinical Decision Graphs",
+      "authors": [
+        "Onur Selim Kilic",
+        "Yeti Z. Gurbuz",
+        "Cem O. Yaldiz",
+        "Afra Nawar",
+        "Etrit Haxholli",
+        "Ogul Can",
+        "Eli Waxman"
+      ],
+      "abstract": "Clinical practice guidelines are long, multimodal documents whose branching recommendations are difficult to convert into executable clinical decision support (CDS), and one-shot parsing often breaks cross-page continuity. Recent LLM/VLM extractors are mostly local or text-centric, under-specifying section interfaces and failing to consolidate cross-page control flow across full documents into one coherent decision graph. We present a decomposition-first pipeline that converts full-guideline evidence into an executable clinical decision graph through topology-aware chunking, interface-constrained chunk graph generation, and provenance-preserving global aggregation. Rather than relying on single-pass generation, the pipeline uses explicit entry/terminal interfaces and semantic deduplication to preserve cross-page continuity while keeping the induced control flow auditable and structurally consistent. We evaluate on an adjudicated prostate-guideline benchmark with matched inputs and the same underlying VLM backbone across compared methods. On the complete merged graph, our approach improves edge and triplet precision/recall from $19.6\\%/16.1\\%$ in existing models to $69.0\\%/87.5\\%$, while node recall rises from $78.1\\%$ to $93.8\\%$. These results support decomposition-first, auditable guideline-to-CDS conversion on this benchmark, while current evidence remains limited to one adjudicated prostate guideline and motivates broader multi-guideline validation.",
+      "pdf_url": "https://arxiv.org/pdf/2604.02477v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.02477v1",
+      "published": "2026-04-02T19:21:31Z",
+      "updated": "2026-04-02T19:21:31Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Do Emotions in Prompts Matter? Effects of Emotional Framing on Large Language Models",
       "authors": [
@@ -190,105 +287,6 @@
       "categories": [
         "cs.CL",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "CARE: Privacy-Compliant Agentic Reasoning with Evidence Discordance",
-      "authors": [
-        "Haochen Liu",
-        "Weien Li",
-        "Rui Song",
-        "Zeyu Li",
-        "Chun Jason Xue",
-        "Xiao-Yang Liu",
-        "Sam Nallaperuma",
-        "Xue Liu",
-        "Ye Yuan"
-      ],
-      "abstract": "Large language model (LLM) systems are increasingly used to support high-stakes decision-making, but they typically perform worse when the available evidence is internally inconsistent. Such a scenario exists in real-world healthcare settings, with patient-reported symptoms contradicting medical signs. To study this problem, we introduce MIMIC-DOS, a dataset for short-horizon organ dysfunction worsening prediction in the intensive care unit (ICU) setting. We derive this dataset from the widely recognized MIMIC-IV, a publicly available electronic health record dataset, and construct it exclusively from cases in which discordance between signs and symptoms exists. This setting poses a substantial challenge for existing LLM-based approaches, with single-pass LLMs and agentic pipelines often struggling to reconcile such conflicting signals. To address this problem, we propose CARE: a multi-stage privacy-compliant agentic reasoning framework in which a remote LLM provides guidance by generating structured categories and transitions without accessing sensitive patient data, while a local LLM uses these categories and transitions to support evidence acquisition and final decision-making. Empirically, CARE achieves stronger performance across all key metrics compared to multiple baseline settings, showing that CARE can more robustly handle conflicting clinical evidence while preserving privacy.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01113v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.01113v1",
-      "published": "2026-04-01T16:37:01Z",
-      "updated": "2026-04-01T16:37:01Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Auditing the Reliability of Multimodal Generative Search",
-      "authors": [
-        "Erfan Samieyan Sahneh",
-        "Luca Maria Aiello"
-      ],
-      "abstract": "Multimodal Large Language Models (MLLMs) increasingly function as generative search systems that retrieve and synthesize answers from multimedia content, including YouTube videos. Although these systems project authority by citing specific videos as evidence, the extent to which these citations genuinely substantiate the generated claims remains unexamined. We present a large-scale audit of the Gemini 2.5 Pro multimodal search system, analyzing 11,943 claim-video pairs generated across Medical, Economic, and General domains. Through automated verification using three independent LLM judges (87.7% inter-rater agreement), validated against human annotations, we find that depending on the judge's strictness, between 3.7% and 18.7% of video-grounded claims are not supported by their cited sources. The dominant failure modes are not outright contradictions but rather unverifiable specificities and overstated claims, suggesting the system injects precise but ungrounded details from parametric knowledge while citing videos as evidence. Exploratory post-hoc analysis via logistic regression reveals properties associated with these failures: claims departing from source vocabulary ($\u03b2= -1.6$ to $-3.1$, $p < 0.01$) and claims with low semantic similarity to the video transcript ($\u03b2= -2.1$ to $-11.6$, $p < 0.01$) are significantly more likely to be unsupported. These findings characterize the current trustworthiness of video-based generative search and highlight the gap between the confidence these systems project and the fidelity of their outputs.",
-      "pdf_url": "https://arxiv.org/pdf/2604.00944v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.00944v1",
-      "published": "2026-04-01T14:15:41Z",
-      "updated": "2026-04-01T14:15:41Z",
-      "categories": [
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "PsychAgent: An Experience-Driven Lifelong Learning Agent for Self-Evolving Psychological Counselor",
-      "authors": [
-        "Yutao Yang",
-        "Junsong Li",
-        "Qianjun Pan",
-        "Jie Zhou",
-        "Kai Chen",
-        "Qin Chen",
-        "Jingyuan Zhao",
-        "Ningning Zhou",
-        "Xin Li",
-        "Liang He"
-      ],
-      "abstract": "Existing methods for AI psychological counselors predominantly rely on supervised fine-tuning using static dialogue datasets. However, this contrasts with human experts, who continuously refine their proficiency through clinical practice and accumulated experience. To bridge this gap, we propose an Experience-Driven Lifelong Learning Agent (\\texttt{PsychAgent}) for psychological counseling. First, we establish a Memory-Augmented Planning Engine tailored for longitudinal multi-session interactions, which ensures therapeutic continuity through persistent memory and strategic planning. Second, to support self-evolution, we design a Skill Evolution Engine that extracts new practice-grounded skills from historical counseling trajectories. Finally, we introduce a Reinforced Internalization Engine that integrates the evolved skills into the model via rejection fine-tuning, aiming to improve performance across diverse scenarios. Comparative analysis shows that our approach achieves higher scores than strong general LLMs (e.g., GPT-5.4, Gemini-3) and domain-specific baselines across all reported evaluation dimensions. These results suggest that lifelong learning can improve the consistency and overall quality of multi-session counseling responses.",
-      "pdf_url": "https://arxiv.org/pdf/2604.00931v2",
-      "arxiv_url": "https://arxiv.org/abs/2604.00931v2",
-      "published": "2026-04-01T14:08:49Z",
-      "updated": "2026-04-02T15:22:11Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A 4D Representation for Training-Free Agentic Reasoning from Monocular Laparoscopic Video",
-      "authors": [
-        "Maximilian Fehrentz",
-        "Nicolas Stellwag",
-        "Robert Wiebe",
-        "Nicole Thorisch",
-        "Fabian Grob",
-        "Patrick Remerscheid",
-        "Ken-Joel Simmoteit",
-        "Benjamin D. Killeen",
-        "Christian Heiliger",
-        "Nassir Navab"
-      ],
-      "abstract": "Spatiotemporal reasoning is a fundamental capability for artificial intelligence (AI) in soft tissue surgery, paving the way for intelligent assistive systems and autonomous robotics. While 2D vision-language models show increasing promise at understanding surgical video, the spatial complexity of surgical scenes suggests that reasoning systems may benefit from explicit 4D representations. Here, we propose a framework for equipping surgical agents with spatiotemporal tools based on an explicit 4D representation, enabling AI systems to ground their natural language reasoning in both time and 3D space. Leveraging models for point tracking, depth, and segmentation, we develop a coherent 4D model with spatiotemporally consistent tool and tissue semantics. A Multimodal Large Language Model (MLLM) then acts as an agent on tools derived from the explicit 4D representation (e.g., trajectories) without any fine-tuning. We evaluate our method on a new dataset of 134 clinically relevant questions and find that the combination of a general purpose reasoning backbone and our 4D representation significantly improves spatiotemporal understanding and allows for 4D grounding. We demonstrate that spatiotemporal intelligence can be \"assembled\" from 2D MLLMs and 3D computer vision models without additional training. Code, data, and examples are available at https://tum-ai.github.io/surg4d/",
-      "pdf_url": "https://arxiv.org/pdf/2604.00867v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.00867v1",
-      "published": "2026-04-01T13:14:52Z",
-      "updated": "2026-04-01T13:14:52Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Can Large Language Models Self-Correct in Medical Question Answering? An Exploratory Study",
-      "authors": [
-        "Zaifu Zhan",
-        "Mengyuan Cui",
-        "Rui Zhang"
-      ],
-      "abstract": "Large language models (LLMs) have achieved strong performance on medical question answering (medical QA), and chain-of-thought (CoT) prompting has further improved results by eliciting explicit intermediate reasoning; meanwhile, self-reflective (self-corrective) prompting has been widely claimed to enhance model reliability by prompting LLMs to critique and revise their own reasoning, yet its effectiveness in safety-critical medical settings remains unclear. In this work, we conduct an exploratory analysis of self-reflective reasoning for medical multiple-choice question answering: using GPT-4o and GPT-4o-mini, we compare standard CoT prompting with an iterative self-reflection loop and track how predictions evolve across reflection steps on three widely used medical QA benchmarks (MedQA, HeadQA, and PubMedQA). We analyze whether self-reflection leads to error correction, error persistence, or the introduction of new errors. Our results show that self-reflective prompting does not consistently improve accuracy and its impact is highly dataset- and model-dependent: it yields modest gains on MedQA but provides limited or negative benefits on HeadQA and PubMedQA, and increasing the number of reflection steps does not guarantee better performance. These findings highlight a gap between reasoning transparency and reasoning correctness, suggesting that self-reflective reasoning is better viewed as an analytical tool for understanding model behavior rather than a standalone solution for improving medical QA reliability.",
-      "pdf_url": "https://arxiv.org/pdf/2604.00261v2",
-      "arxiv_url": "https://arxiv.org/abs/2604.00261v2",
-      "published": "2026-03-31T21:42:20Z",
-      "updated": "2026-04-02T14:18:08Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

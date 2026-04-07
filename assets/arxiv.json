@@ -1,8 +1,216 @@
 {
-  "generated_at_utc": "2026-04-06T03:21:07.758679Z",
+  "generated_at_utc": "2026-04-07T02:54:15.319183Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Do No Harm: Exposing Hidden Vulnerabilities of LLMs via Persona-based Client Simulation Attack in Psychological Counseling",
+      "authors": [
+        "Qingyang Xu",
+        "Yaling Shen",
+        "Stephanie Fong",
+        "Zimu Wang",
+        "Yiwen Jiang",
+        "Xiangyu Zhao",
+        "Jiahe Liu",
+        "Zhongxing Xu",
+        "Vincent Lee",
+        "Zongyuan Ge"
+      ],
+      "abstract": "The increasing use of large language models (LLMs) in mental healthcare raises safety concerns in high-stakes therapeutic interactions. A key challenge is distinguishing therapeutic empathy from maladaptive validation, where supportive responses may inadvertently reinforce harmful beliefs or behaviors in multi-turn conversations. This risk is largely overlooked by existing red-teaming frameworks, which focus mainly on generic harms or optimization-based attacks. To address this gap, we introduce Personality-based Client Simulation Attack (PCSA), the first red-teaming framework that simulates clients in psychological counseling through coherent, persona-driven client dialogues to expose vulnerabilities in psychological safety alignment. Experiments on seven general and mental health-specialized LLMs show that PCSA substantially outperforms four competitive baselines. Perplexity analysis and human inspection further indicate that PCSA generates more natural and realistic dialogues. Our results reveal that current LLMs remain vulnerable to domain-specific adversarial tactics, providing unauthorized medical advice, reinforcing delusions, and implicitly encouraging risky actions.",
+      "pdf_url": "https://arxiv.org/pdf/2604.04842v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.04842v1",
+      "published": "2026-04-06T16:43:12Z",
+      "updated": "2026-04-06T16:43:12Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Ruling Out to Rule In: Contrastive Hypothesis Retrieval for Medical Question Answering",
+      "authors": [
+        "Byeolhee Kim",
+        "Min-Kyung Kim",
+        "Young-Hak Kim",
+        "Tae-Joon Jeon"
+      ],
+      "abstract": "Retrieval-augmented generation (RAG) grounds large language models in external medical knowledge, yet standard retrievers frequently surface hard negatives that are semantically close to the query but describe clinically distinct conditions. While existing query-expansion methods improve query representation to mitigate ambiguity, they typically focus on enriching target-relevant semantics without an explicit mechanism to selectively suppress specific, clinically plausible hard negatives. This leaves the system prone to retrieving plausible mimics that overshadow the actual diagnosis, particularly when such mimics are dominant within the corpus. We propose Contrastive Hypothesis Retrieval (CHR), a framework inspired by the process of clinical differential diagnosis. CHR generates a target hypothesis $H^+$ for the likely correct answer and a mimic hypothesis $H^-$ for the most plausible incorrect alternative, then scores documents by promoting $H^+$-aligned evidence while penalizing $H^-$-aligned content. Across three medical QA benchmarks and three answer generators, CHR outperforms all five baselines in every configuration, with improvements of up to 10.4 percentage points over the next-best method. On the $n=587$ pooled cases where CHR answers correctly while embedded hypothetical-document query expansion does not, 85.2\\% have no shared documents between the top-5 retrieval lists of CHR and of that baseline, consistent with substantive retrieval redirection rather than light re-ranking of the same candidates. By explicitly modeling what to avoid alongside what to find, CHR bridges clinical reasoning with retrieval mechanism design and offers a practical path to reducing hard-negative contamination in medical RAG systems.",
+      "pdf_url": "https://arxiv.org/pdf/2604.04593v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.04593v1",
+      "published": "2026-04-06T11:13:57Z",
+      "updated": "2026-04-06T11:13:57Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Benchmarking Multi-turn Medical Diagnosis: Hold, Lure, and Self-Correction",
+      "authors": [
+        "Jinrui Fang",
+        "Runhan Chen",
+        "Xu Yang",
+        "Jian Yu",
+        "Jiawei Xu",
+        "Ashwin Vinod",
+        "Wenqi Shi",
+        "Tianlong Chen",
+        "Heng Ji",
+        "ChengXiang Zhai",
+        "Ying Ding",
+        "Yuji Zhang"
+      ],
+      "abstract": "Large language models (LLMs) achieve high accuracy in medical diagnosis when all clinical information is provided in a single turn, yet how they behave under multi-turn evidence accumulation closer to real clinical reasoning remains unexplored. We introduce MINT (Medical Incremental N-Turn Benchmark), a high-fidelity, multi-turn medical diagnosis benchmark comprising 1,035 cases with clinically labeled evidence shards, controlled turn granularity, and information-preserving decomposition. Through systematic evaluation of 11 LLMs on MINT, we uncover three persistent behavioral patterns that significantly impact diagnostic decisions: (1) intent to answer, models rush to answer before sufficient evidence has been observed, with over 55% of answers committed within the first two turns; (2) self-correction, incorrect-to-correct answer revisions occur at up to 10.6 times the rate of correct-to-incorrect flips, revealing a latent capacity for self-correction that premature commitment forecloses; and (3) strong lures, clinically salient information such as laboratory results trigger premature answering even when models are explicitly instructed to wait. We translate these findings into clinically actionable guidance: deferring the diagnostic question to later turns reduces premature answering and improves accuracy at the first point of commitment by up to 62.6%, while reserving salient clinical evidence for later turns prevents a catastrophic accuracy drop of up to 23.3% caused by premature commitment. Our work provides both a controlled evaluation framework and concrete recommendations for improving the reliability of LLMs in multi-turn medical diagnosis.",
+      "pdf_url": "https://arxiv.org/pdf/2604.04325v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.04325v1",
+      "published": "2026-04-06T00:23:10Z",
+      "updated": "2026-04-06T00:23:10Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "A Semi-Automated Annotation Workflow for Paediatric Histopathology Reports Using Small Language Models",
+      "authors": [
+        "Avish Vijayaraghavan",
+        "Jaskaran Singh Kawatra",
+        "Sebin Sabu",
+        "Jonny Sheldon",
+        "Will Poulett",
+        "Alex Eze",
+        "Daniel Key",
+        "John Booth",
+        "Shiren Patel",
+        "Jonny Pearson",
+        "Dan Schofield",
+        "Jonathan Hope",
+        "Pavithra Rajendran",
+        "Neil Sebire"
+      ],
+      "abstract": "Electronic Patient Record (EPR) systems contain valuable clinical information, but much of it is trapped in unstructured text, limiting its use for research and decision-making. Large language models can extract such information but require substantial computational resources to run locally, and sending sensitive clinical data to cloud-based services, even when deidentified, raises significant patient privacy concerns. In this study, we develop a resource-efficient semi-automated annotation workflow using small language models (SLMs) to extract structured information from unstructured EPR data, focusing on paediatric histopathology reports. As a proof-of-concept, we apply the workflow to paediatric renal biopsy reports, a domain chosen for its constrained diagnostic scope and well-defined underlying biology. We develop the workflow iteratively with clinical oversight across three meetings, manually annotating 400 reports from a dataset of 2,111 at Great Ormond Street Hospital as a gold standard, while developing an automated information extraction approach using SLMs. We frame extraction as a Question-Answering task grounded by clinician-guided entity guidelines and few-shot examples, evaluating five instruction-tuned SLMs with a disagreement modelling framework to prioritise reports for clinical review. Gemma 2 2B achieves the highest accuracy at 84.3%, outperforming off-the-shelf models including spaCy (74.3%), BioBERT-SQuAD (62.3%), RoBERTa-SQuAD (59.7%), and GLiNER (60.2%). Entity guidelines improved performance by 7-19% over the zero-shot baseline, and few-shot examples by 6-38%, though their benefits do not compound when combined. These results demonstrate that SLMs can extract structured information from specialised clinical domains on CPU-only infrastructure with minimal clinician involvement. Our code is available at https://github.com/gosh-dre/nlp_renal_biopsy.",
+      "pdf_url": "https://arxiv.org/pdf/2604.04168v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.04168v1",
+      "published": "2026-04-05T16:15:39Z",
+      "updated": "2026-04-05T16:15:39Z",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Unmasking Hallucinations: A Causal Graph-Attention Perspective on Factual Reliability in Large Language Models",
+      "authors": [
+        "Sailesh kiran kurra",
+        "Shiek Ruksana",
+        "Vishal Borusu"
+      ],
+      "abstract": "This paper primarily focuses on the hallucinations caused due to AI language models(LLMs).LLMs have shown extraordinary Language understanding and generation capabilities .Still it has major a disadvantage hallucinations which give outputs which are factually incorrect ,misleading or unsupported by input data . These hallucinations cause serious problems in scenarios like medical diagnosis or legal reasoning.Through this work,we propose causal graph attention network (GCAN) framework that reduces hallucinations through interpretation of internal attention flow within a transformer architecture with the help of constructing token level graphs that combine self attention weights and gradient based influence scores.our method quantifies each tokens factual dependency using a new metric called the Causal Contribution Score (CCS). We further introduce a fact-anchored graph reweighting layer that dynamically reduces the influence of hallucination prone nodes during generation. Experiments on standard benchmarks such as TruthfulQA and HotpotQA show a 27.8 percent reduction in hallucination rate and 16.4 percent improvement in factual accuracy over baseline retrieval-augmented generation (RAG) models. This work contributes to the interpretability,robustness, and factual reliability of future LLM architectures.",
+      "pdf_url": "https://arxiv.org/pdf/2604.04020v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.04020v1",
+      "published": "2026-04-05T08:37:36Z",
+      "updated": "2026-04-05T08:37:36Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "VectraFlow: Long-Horizon Semantic Processing over Data and Event Streams with LLMs",
+      "authors": [
+        "Shu Chen",
+        "Junhan Liu",
+        "Deepti Raghavan",
+        "Ugur Cetintemel"
+      ],
+      "abstract": "Monitoring continuous data for meaningful signals increasingly demands long-horizon, stateful reasoning over unstructured streams. However, today's LLM frameworks remain stateless and one-shot, and traditional Complex Event Processing (CEP) systems, while capable of temporal pattern detection, assume structured, typed event streams that leave unstructured text out of reach. We demonstrate VectraFlow, a semantic streaming dataflow engine, to address both gaps. VectraFlow extends traditional relational operators with LLM-powered execution over free-text streams, offering a suite of continuous semantic operators -- filter, map, aggregate, join, group-by, and window -- each with configurable throughput-accuracy tradeoffs across LLM-based, embedding-based, and hybrid implementations. Building on this, a semantic event pattern operator lifts complex event processing to unstructured document streams, combining LLM-based event extraction with NFA-based temporal rule matching for stateful reasoning over sequences of semantic events. In this demonstration, users will interact with VectraFlow's live query interface to compose semantic pipelines over clinical document streams. Attendees will compile natural language intents into executable operator graphs, inspect intermediate stateful outputs, and observe end-to-end temporal pattern detection, from raw text to matched event cohorts.",
+      "pdf_url": "https://arxiv.org/pdf/2604.03855v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.03855v1",
+      "published": "2026-04-04T20:29:43Z",
+      "updated": "2026-04-04T20:29:43Z",
+      "categories": [
+        "cs.DB"
+      ]
+    },
+    {
+      "title": "Selective Forgetting for Large Reasoning Models",
+      "authors": [
+        "Tuan Le",
+        "Wei Qian",
+        "Mengdi Huai"
+      ],
+      "abstract": "Large Reasoning Models (LRMs) generate structured chains of thought (CoTs) before producing final answers, making them especially vulnerable to knowledge leakage through intermediate reasoning steps. Yet, the memorization of sensitive information in the training data such as copyrighted and private content has led to ethical and legal concerns. To address these issues, selective forgetting (also known as machine unlearning) has emerged as a potential remedy for LRMs. However, existing unlearning methods primarily target final answers and may degrade the overall reasoning ability of LRMs after forgetting. Additionally, directly applying unlearning on the entire CoTs could degrade the general reasoning capabilities. The key challenge for LRM unlearning lies in achieving precise unlearning of targeted knowledge while preserving the integrity of general reasoning capabilities. To bridge this gap, we in this paper propose a novel LRM unlearning framework that selectively removes sensitive reasoning components while preserving general reasoning capabilities. Our approach leverages multiple LLMs with retrieval-augmented generation (RAG) to analyze CoT traces, identify forget-relevant segments, and replace them with benign placeholders that maintain logical structure. We also introduce a new feature replacement unlearning loss for LRMs, which can simultaneously suppress the probability of generating forgotten content while reinforcing structurally valid replacements. Extensive experiments on both synthetic and medical datasets verify the desired properties of our proposed method.",
+      "pdf_url": "https://arxiv.org/pdf/2604.03571v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.03571v1",
+      "published": "2026-04-04T03:47:12Z",
+      "updated": "2026-04-04T03:47:12Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Applications of Large Language Models in Radiation Oncology: From Workflow Automation to Clinical Intelligence",
+      "authors": [
+        "Yuzhen Ding",
+        "Jason Holmes",
+        "Yuexing Hao",
+        "Zhengliang Liu",
+        "Peilong Wang",
+        "Junjie Cui",
+        "Meiyun Cao",
+        "Caiwen Jiang",
+        "Shuoyang Wei",
+        "Lin Zhao",
+        "Chenbin Liu",
+        "Lian Zhang",
+        "Yunze Yang",
+        "Tianming Liu",
+        "Wei Liu"
+      ],
+      "abstract": "Large language models (LLMs) have emerged as transformative tools in medicine, with strong capabilities in language understanding, reasoning, and structured information extraction. Radiation oncology is particularly well suited for LLM integration due to its data-intensive workflows, reliance on structured guidelines, and documentation burden. This review summarizes recent applications, including domain-specific fine-tuning for decision support, automated nomenclature standardization, registry curation using autonomous LLM agents, and protocol-aware radiotherapy plan evaluation using modular retrieval-augmented generation (RAG). Additional applications include patient safety analysis through incident classification and root cause analysis, electronic health record (EHR)-integrated communication, CT simulation order summarization, daily readiness briefings, and patient education systems. Emerging multimodal approaches enable context-aware contouring, while early studies show LLMs can assist treatment planning by interpreting dosimetric feedback. Together, these advances highlight a shift toward clinically grounded, auditable, and workflow-integrated AI systems that enhance efficiency, safety, and patient engagement.",
+      "pdf_url": "https://arxiv.org/pdf/2604.03509v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.03509v1",
+      "published": "2026-04-03T23:10:45Z",
+      "updated": "2026-04-03T23:10:45Z",
+      "categories": [
+        "physics.med-ph"
+      ]
+    },
+    {
+      "title": "Resource-Conscious Modeling for Next- Day Discharge Prediction Using Clinical Notes",
+      "authors": [
+        "Ha Na Cho",
+        "Sairam Sutari",
+        "Alexander Lopez",
+        "Hansen Bow",
+        "Kai Zheng"
+      ],
+      "abstract": "Timely discharge prediction is essential for optimizing bed turnover and resource allocation in elective spine surgery units. This study evaluates the feasibility of lightweight, fine-tuned large language models (LLMs) and traditional text-based models for predicting next-day discharge using postoperative clinical notes. We compared 13 models, including TF-IDF with XGBoost and LGBM, and compact LLMs (DistilGPT-2, Bio_ClinicalBERT) fine-tuned via LoRA. TF-IDF with LGBM achieved the best balance, with an F1-score of 0.47 for the discharge class, a recall of 0.51, and the highest AUC-ROC (0.80). While LoRA improved recall in DistilGPT2, overall transformer-based and generative models underperformed. These findings suggest interpretable, resource-efficient models may outperform compact LLMs in real-world, imbalanced clinical prediction tasks.",
+      "pdf_url": "https://arxiv.org/pdf/2604.03498v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.03498v1",
+      "published": "2026-04-03T22:42:50Z",
+      "updated": "2026-04-03T22:42:50Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Lightweight Query Routing for Adaptive RAG: A Baseline Study on RAGRouter-Bench",
+      "authors": [
+        "Prakhar Bansal",
+        "Shivangi Agarwal"
+      ],
+      "abstract": "Retrieval-Augmented Generation pipelines span a wide range of retrieval strategies that differ substantially in token cost and capability. Selecting the right strategy per query is a practical efficiency problem, yet no routing classifiers have been trained on RAGRouter-Bench \\citep{wang2026ragrouterbench}, a recently released benchmark of $7,727$ queries spanning four knowledge domains, each annotated with one of three canonical query types: factual, reasoning, and summarization. We present the first systematic evaluation of lightweight classifier-based routing on this benchmark. Five classical classifiers are evaluated under three feature regimes, namely, TF-IDF, MiniLM sentence embeddings \\citep{reimers2019sbert}, and hand-crafted structural features, yielding 15 classifier feature combinations. Our best configuration, TF-IDF with an SVM, achieves a macro-averaged F1 of $\\mathbf{0.928}$ and an accuracy of $\\mathbf{93.2\\%}$, while simulating $\\mathbf{28.1\\%}$ token savings relative to always using the most expensive paradigm. Lexical TF-IDF features outperform semantic sentence embeddings by $3.1$ macro-F1 points, suggesting that surface keyword patterns are strong predictors of query-type complexity. Domain-level analysis reveals that medical queries are hardest to route and legal queries most tractable. These results establish a reproducible query-side baseline and highlight the gap that corpus-aware routing must close.",
+      "pdf_url": "https://arxiv.org/pdf/2604.03455v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.03455v1",
+      "published": "2026-04-03T20:58:00Z",
+      "updated": "2026-04-03T20:58:00Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
     {
       "title": "ESL-Bench: An Event-Driven Synthetic Longitudinal Benchmark for Health Agents",
       "authors": [
@@ -24,6 +232,21 @@
       "updated": "2026-04-03T07:55:56Z",
       "categories": [
         "cs.AI"
+      ]
+    },
+    {
+      "title": "NativeTernary: A Self-Delimiting Binary Encoding with Unary Run-Length Hierarchy Markers for Ternary Neural Network Weights, Structured Data, and General Computing Infrastructure",
+      "authors": [
+        "Maharshi Savdhariya"
+      ],
+      "abstract": "BitNet b1.58 (Ma et al., 2024) demonstrates that large language models can operate entirely on ternary weights {-1, 0, +1}, yet no native binary wire format exists for such models. NativeTernary closes this gap. We present NativeTernary, a binary encoding scheme that partitions the 2-bit pair space into three data symbols representing ternary values -- either balanced {-1, 0, +1} or unsigned {0, 1, 2} -- and a reserved structural delimiter. The central contribution is the use of unary run-length encoding to represent semantic hierarchy depth: a sequence of N consecutive delimiter pairs denotes a boundary of level N, encoding character, word, sentence, paragraph, and topic boundaries at cost 2, 4, 6, 8, and 10 bits respectively -- proportional to boundary rarity. The choice of which 2-bit pair serves as the delimiter is a design parameter: {11} is the primary embodiment, offering simple OR-gate detection; {00} is an alternative embodiment optimised for ultra-low-power CMOS systems, minimising switching activity. All four bit-pair choices are covered by the patent claims. We present three encoding variants: (1) the primary scheme with {11} as sole delimiter; (2) a dual-starter variant where both {10} and {11} initiate distinct symbol namespaces; and (3) an analysis of unsigned versus balanced ternary data mappings. We describe a path toward ternary-native general computing infrastructure requiring no hardware changes, and outline applications spanning ternary neural network weight storage, hierarchical natural language encoding, edge computing, IoT and satellite telemetry, industrial sensors, automotive systems, medical devices, gaming, and financial tick data. The decoder is a 10-line stateless state machine resilient to bitstream corruption.",
+      "pdf_url": "https://arxiv.org/pdf/2604.03336v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.03336v1",
+      "published": "2026-04-03T06:58:03Z",
+      "updated": "2026-04-03T06:58:03Z",
+      "categories": [
+        "cs.LG",
+        "eess.SP"
       ]
     },
     {
@@ -77,216 +300,6 @@
       "updated": "2026-04-02T20:09:05Z",
       "categories": [
         "eess.SP"
-      ]
-    },
-    {
-      "title": "Guideline2Graph: Profile-Aware Multimodal Parsing for Executable Clinical Decision Graphs",
-      "authors": [
-        "Onur Selim Kilic",
-        "Yeti Z. Gurbuz",
-        "Cem O. Yaldiz",
-        "Afra Nawar",
-        "Etrit Haxholli",
-        "Ogul Can",
-        "Eli Waxman"
-      ],
-      "abstract": "Clinical practice guidelines are long, multimodal documents whose branching recommendations are difficult to convert into executable clinical decision support (CDS), and one-shot parsing often breaks cross-page continuity. Recent LLM/VLM extractors are mostly local or text-centric, under-specifying section interfaces and failing to consolidate cross-page control flow across full documents into one coherent decision graph. We present a decomposition-first pipeline that converts full-guideline evidence into an executable clinical decision graph through topology-aware chunking, interface-constrained chunk graph generation, and provenance-preserving global aggregation. Rather than relying on single-pass generation, the pipeline uses explicit entry/terminal interfaces and semantic deduplication to preserve cross-page continuity while keeping the induced control flow auditable and structurally consistent. We evaluate on an adjudicated prostate-guideline benchmark with matched inputs and the same underlying VLM backbone across compared methods. On the complete merged graph, our approach improves edge and triplet precision/recall from $19.6\\%/16.1\\%$ in existing models to $69.0\\%/87.5\\%$, while node recall rises from $78.1\\%$ to $93.8\\%$. These results support decomposition-first, auditable guideline-to-CDS conversion on this benchmark, while current evidence remains limited to one adjudicated prostate guideline and motivates broader multi-guideline validation.",
-      "pdf_url": "https://arxiv.org/pdf/2604.02477v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.02477v1",
-      "published": "2026-04-02T19:21:31Z",
-      "updated": "2026-04-02T19:21:31Z",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Do Emotions in Prompts Matter? Effects of Emotional Framing on Large Language Models",
-      "authors": [
-        "Minda Zhao",
-        "Yutong Yang",
-        "Chufei Peng",
-        "Rachel Gonsalves",
-        "Weiyue Li",
-        "Ruyi Yang",
-        "Zhixi Liu",
-        "Mengyu Wang"
-      ],
-      "abstract": "Emotional tone is pervasive in human communication, yet its influence on large language model (LLM) behaviour remains unclear. Here, we examine how first-person emotional framing in user-side queries affect LLM performance across six benchmark domains, including mathematical reasoning, medical question answering, reading comprehension, commonsense reasoning and social inference. Across models and tasks, static emotional prefixes usually produce only small changes in accuracy, suggesting that affective phrasing is typically a mild perturbation rather than a reliable general-purpose intervention. This stability is not uniform: effects are more variable in socially grounded tasks, where emotional context more plausibly interacts with interpersonal reasoning. Additional analyses show that stronger emotional wording induces only modest extra change, and that human-written prefixes reproduce the same qualitative pattern as LLM-generated ones. We then introduce EmotionRL, an adaptive emotional prompting framework that selects emotional framing adaptively for each query. Although no single emotion is consistently beneficial, adaptive selection yields more reliable gains than fixed emotional prompting. Together, these findings show that emotional tone is neither a dominant driver of LLM performance nor irrelevant noise, but a weak and input-dependent signal that can be exploited through adaptive control.",
-      "pdf_url": "https://arxiv.org/pdf/2604.02236v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.02236v1",
-      "published": "2026-04-02T16:31:08Z",
-      "updated": "2026-04-02T16:31:08Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Blinded Radiologist and LLM-Based Evaluation of LLM-Generated Japanese Translations of Chest CT Reports: Comparative Study",
-      "authors": [
-        "Yosuke Yamagishi",
-        "Atsushi Takamatsu",
-        "Yasunori Hamaguchi",
-        "Tomohiro Kikuchi",
-        "Shouhei Hanaoka",
-        "Takeharu Yoshikawa",
-        "Osamu Abe"
-      ],
-      "abstract": "Background: Accurate translation of radiology reports is important for multilingual research, clinical communication, and radiology education, but the validity of LLM-based evaluation remains unclear. Objective: To evaluate the educational suitability of LLM-generated Japanese translations of chest CT reports and compare radiologist assessments with LLM-as-a-judge evaluations. Methods: We analyzed 150 chest CT reports from the CT-RATE-JPN validation set. For each English report, a human-edited Japanese translation was compared with an LLM-generated translation by DeepSeek-V3.2. A board-certified radiologist and a radiology resident independently performed blinded pairwise evaluations across 4 criteria: terminology accuracy, readability, overall quality, and radiologist-style authenticity. In parallel, 3 LLM judges (DeepSeek-V3.2, Mistral Large 3, and GPT-5) evaluated the same pairs. Agreement was assessed using QWK and percentage agreement. Results: Agreement between radiologists and LLM judges was near zero (QWK=-0.04 to 0.15). Agreement between the 2 radiologists was also poor (QWK=0.01 to 0.06). Radiologist 1 rated terminology as equivalent in 59% of cases and favored the LLM translation for readability (51%) and overall quality (51%). Radiologist 2 rated readability as equivalent in 75% of cases and favored the human-edited translation for overall quality (40% vs 21%). All 3 LLM judges strongly favored the LLM translation across all criteria (70%-99%) and rated it as more radiologist-like in >93% of cases. Conclusions: LLM-generated translations were often judged natural and fluent, but the 2 radiologists differed substantially. LLM-as-a-judge showed strong preference for LLM output and negligible agreement with radiologists. For educational use of translated radiology reports, automated LLM-based evaluation alone is insufficient; expert radiologist review remains important.",
-      "pdf_url": "https://arxiv.org/pdf/2604.02207v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.02207v1",
-      "published": "2026-04-02T15:59:40Z",
-      "updated": "2026-04-02T15:59:40Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Abnormal Head Movements in Neurological Conditions: A Knowledge-Based Dataset with Application to Cervical Dystonia",
-      "authors": [
-        "Saja Al-Dabet",
-        "Sherzod Turaev",
-        "Nazar Zaki"
-      ],
-      "abstract": "Abnormal head movements (AHMs) manifest across a broad spectrum of neurological disorders; however, the absence of a multi-condition resource integrating kinematic measurements, clinical severity scores, and patient demographics constitutes a persistent barrier to the development of AI-driven diagnostic tools. To address this gap, this study introduces NeuroPose-AHM, a knowledge-based dataset of neurologically induced AHMs constructed through a multi-LLM extraction framework applied to 1,430 peer-reviewed publications. The dataset contains 2,756 patient-group-level records spanning 57 neurological conditions, derived from 846 AHM-relevant papers. Inter-LLM reliability analysis confirms robust extraction performance, with study-level classification achieving strong agreement (kappa = 0.822). To demonstrate the dataset's analytical utility, a four-task framework is applied to cervical dystonia (CD), the condition most directly defined by pathological head movement. First, Task 1 performs multi-label AHM type classification (F1 = 0.856). Task 2 constructs the Head-Neck Severity Index (HNSI), a unified metric that normalizes heterogeneous clinical rating scales. The clinical relevance of this index is then evaluated in Task 3, where HNSI is validated against real-world CD patient data, with aligned severe-band proportions (6.7%) providing a preliminary plausibility indication for index calibration within the high severity range. Finally, Task 4 performs bridge analysis between movement-type probabilities and HNSI scores, producing significant correlations (p less than 0.001). These results demonstrate the analytical utility of NeuroPose-AHM as a structured, knowledge-based resource for neurological AHM research. The NeuroPose-AHM dataset is publicly available on Zenodo (https://doi.org/10.5281/zenodo.19386862).",
-      "pdf_url": "https://arxiv.org/pdf/2604.01962v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.01962v1",
-      "published": "2026-04-02T12:25:59Z",
-      "updated": "2026-04-02T12:25:59Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Is Clinical Text Enough? A Multimodal Study on Mortality Prediction in Heart Failure Patients",
-      "authors": [
-        "Oumaima El Khettari",
-        "Virgile Barthet",
-        "Guillaume Hocquet",
-        "Joconde Weller",
-        "Emmanuel Morin",
-        "Pierre Zweigenbaum"
-      ],
-      "abstract": "Accurate short-term mortality prediction in heart failure (HF) remains challenging, particularly when relying on structured electronic health record (EHR) data alone. We evaluate transformer-based models on a French HF cohort, comparing text-only, structured-only, multimodal, and LLM-based approaches. Our results show that enriching clinical text with entity-level representations improves prediction over CLS embeddings alone, and that supervised multimodal fusion of text and structured variables achieves the best overall performance. In contrast, large language models perform inconsistently across modalities and decoding strategies, with text-only prompts outperforming structured or multimodal inputs. These findings highlight that entity-aware multimodal transformers offer the most reliable solution for short-term HF outcome prediction, while current LLM prompting remains limited for clinical decision support.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01924v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.01924v1",
-      "published": "2026-04-02T11:41:36Z",
-      "updated": "2026-04-02T11:41:36Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Development and multi-center evaluation of domain-adapted speech recognition for human-AI teaming in real-world gastrointestinal endoscopy",
-      "authors": [
-        "Ruijie Yang",
-        "Yan Zhu",
-        "Peiyao Fu",
-        "Te Luo",
-        "Zhihua Wang",
-        "Xian Yang",
-        "Quanlin Li",
-        "Pinghong Zhou",
-        "Shuo Wang"
-      ],
-      "abstract": "Automatic speech recognition (ASR) is a critical interface for human-AI interaction in gastrointestinal endoscopy, yet its reliability in real-world clinical settings is limited by domain-specific terminology and complex acoustic conditions. Here, we present EndoASR, a domain-adapted ASR system designed for real-time deployment in endoscopic workflows. We develop a two-stage adaptation strategy based on synthetic endoscopy reports, targeting domain-specific language modeling and noise robustness. In retrospective evaluation across six endoscopists, EndoASR substantially improves both transcription accuracy and clinical usability, reducing character error rate (CER) from 20.52% to 14.14% and increasing medical term accuracy (Med ACC) from 54.30% to 87.59%. In a prospective multi-center study spanning five independent endoscopy centers, EndoASR demonstrates consistent generalization under heterogeneous real-world conditions. Compared with the baseline Paraformer model, CER is reduced from 16.20% to 14.97%, while Med ACC is improved from 61.63% to 84.16%, confirming its robustness in practical deployment scenarios. Notably, EndoASR achieves a real-time factor (RTF) of 0.005, significantly faster than Whisper-large-v3 (RTF 0.055), while maintaining a compact model size of 220M parameters, enabling efficient edge deployment. Furthermore, integration with large language models demonstrates that improved ASR quality directly enhances downstream structured information extraction and clinician-AI interaction. These results demonstrate that domain-adapted ASR can serve as a reliable interface for human-AI teaming in gastrointestinal endoscopy, with consistent performance validated across multi-center real-world clinical settings.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01705v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.01705v1",
-      "published": "2026-04-02T07:13:02Z",
-      "updated": "2026-04-02T07:13:02Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Countering Catastrophic Forgetting of Large Language Models for Better Instruction Following via Weight-Space Model Merging",
-      "authors": [
-        "Mengxian Lyu",
-        "Cheng Peng",
-        "Ziyi Chen",
-        "Mengyuan Zhang",
-        "Jieting Li Lu",
-        "Yonghui Wu"
-      ],
-      "abstract": "Large language models have been adopted in the medical domain for clinical documentation to reduce clinician burden. However, studies have reported that LLMs often \"forget\" a significant amount of instruction-following ability when fine-tuned using a task-specific medical dataset, a critical challenge in adopting general-purpose LLMs for clinical applications. This study presents a model merging framework to efficiently adapt general-purpose LLMs to the medical domain by countering this forgetting issue. By merging a clinical foundation model (GatorTronLlama) with a general instruct model (Llama-3.1-8B-Instruct) via interpolation-based merge methods, we seek to derive a domain-adapted model with strong performance on clinical tasks while retaining instruction-following ability. Comprehensive evaluation across medical benchmarks and five clinical generation tasks (e.g., radiology and discharge summarization) shows that merged models can effectively mitigate catastrophic forgetting, preserve clinical domain expertise, and retain instruction-following ability. In addition, our model merging strategies demonstrate training efficiency, achieving performance on par with fully fine-tuned baselines under severely constrained supervision (e.g., 64-shot vs. 256-shot). Consequently, weight-space merging constitutes a highly scalable solution for adapting open-source LLMs to clinical applications, facilitating broader deployment in resource-constrained healthcare environments.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01538v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.01538v1",
-      "published": "2026-04-02T02:18:49Z",
-      "updated": "2026-04-02T02:18:49Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "DISCO-TAB: A Hierarchical Reinforcement Learning Framework for Privacy-Preserving Synthesis of Complex Clinical Data",
-      "authors": [
-        "Arshia Ilaty",
-        "Hossein Shirazi",
-        "Amir Rahmani",
-        "Hajar Homayouni"
-      ],
-      "abstract": "The development of robust clinical decision support systems is frequently impeded by the scarcity of high-fidelity, privacy-preserving biomedical data. While Generative Large Language Models (LLMs) offer a promising avenue for synthetic data generation, they often struggle to capture the complex, non-linear dependencies and severe class imbalances inherent in Electronic Health Records (EHR), leading to statistically plausible but clinically invalid records. To bridge this gap, we introduce DISCO-TAB (DIScriminator-guided COntrol for TABular synthesis), a novel framework that orchestrates a fine-tuned LLM with a multi-objective discriminator system optimized via Reinforcement Learning. Unlike prior methods relying on scalar feedback, DISCO-TAB evaluates synthesis at four granularities, token, sentence, feature, and row, while integrating Automated Constraint Discovery and Inverse-Frequency Reward Shaping to autonomously preserve latent medical logic and resolve minority-class collapse. We rigorously validate our framework across diverse benchmarks, including high-dimensional, small-sample medical datasets (e.g., Heart Failure, Parkinson's). Our results demonstrate that hierarchical feedback yields state-of-the-art performance, achieving up to 38.2% improvement in downstream clinical classifier utility compared to GAN and Diffusion baselines, while ensuring exceptional statistical fidelity (JSD < 0.01) and robust resistance to membership inference attacks. This work establishes a new standard for generating trustworthy, utility-preserving synthetic tabular data for sensitive healthcare applications.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01481v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.01481v1",
-      "published": "2026-04-01T23:37:58Z",
-      "updated": "2026-04-01T23:37:58Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Low-Burden LLM-Based Preference Learning: Personalizing Assistive Robots from Natural Language Feedback for Users with Paralysis",
-      "authors": [
-        "Keshav Shankar",
-        "Dan Ding",
-        "Wei Gao"
-      ],
-      "abstract": "Physically Assistive Robots (PARs) require personalized behaviors to ensure user safety and comfort. However, traditional preference learning methods, like exhaustive pairwise comparisons, cause severe physical and cognitive fatigue for users with profound motor impairments. To solve this, we propose a low-burden, offline framework that translates unstructured natural language feedback directly into deterministic robotic control policies. To safely bridge the gap between ambiguous human speech and robotic code, our pipeline uses Large Language Models (LLMs) grounded in the Occupational Therapy Practice Framework (OTPF). This clinical reasoning decodes subjective user reactions into explicit physical and psychological needs, which are then mapped into transparent decision trees. Before deployment, an automated \"LLM-as-a-Judge\" verifies the code's structural safety. We validated this system in a simulated meal preparation study with 10 adults with paralysis. Results show our natural language approach significantly reduces user workload compared to traditional baselines. Additionally, independent clinical experts confirmed the generated policies are safe and accurately reflect user preferences.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01463v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.01463v1",
-      "published": "2026-04-01T23:17:10Z",
-      "updated": "2026-04-01T23:17:10Z",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Safety, Security, and Cognitive Risks in World Models",
-      "authors": [
-        "Manoj Parmar"
-      ],
-      "abstract": "World models -- learned internal simulators of environment dynamics -- are rapidly becoming foundational to autonomous decision-making in robotics, autonomous vehicles, and agentic AI. Yet this predictive power introduces a distinctive set of safety, security, and cognitive risks. Adversaries can corrupt training data, poison latent representations, and exploit compounding rollout errors to cause catastrophic failures in safety-critical deployments. World model-equipped agents are more capable of goal misgeneralisation, deceptive alignment, and reward hacking precisely because they can simulate the consequences of their own actions. Authoritative world model predictions further foster automation bias and miscalibrated human trust that operators lack the tools to audit.\n  This paper surveys the world model landscape; introduces formal definitions of trajectory persistence and representational risk; presents a five-profile attacker capability taxonomy; and develops a unified threat model extending MITRE ATLAS and the OWASP LLM Top 10 to the world model stack. We provide an empirical proof-of-concept on trajectory-persistent adversarial attacks (GRU-RSSM: A_1 = 2.26x amplification, -59.5% reduction under adversarial fine-tuning; stochastic RSSM proxy: A_1 = 0.65x; DreamerV3 checkpoint: non-zero action drift confirmed). We illustrate risks through four deployment scenarios and propose interdisciplinary mitigations spanning adversarial hardening, alignment engineering, NIST AI RMF and EU AI Act governance, and human-factors design. We argue that world models must be treated as safety-critical infrastructure requiring the same rigour as flight-control software or medical devices.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01346v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.01346v1",
-      "published": "2026-04-01T19:57:33Z",
-      "updated": "2026-04-01T19:57:33Z",
-      "categories": [
-        "cs.CR",
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
-      ]
-    },
-    {
-      "title": "Brainstacks: Cross-Domain Cognitive Capabilities via Frozen MoE-LoRA Stacks for Continual LLM Learning",
-      "authors": [
-        "Mohammad R. Abu Ayyash"
-      ],
-      "abstract": "We present Brainstacks, a modular architecture for continual multi-domain fine-tuning of large language models that packages domain expertise as frozen adapter stacks composing additively on a shared frozen base at inference. Five interlocking components: (1) MoE-LoRA with Shazeer-style noisy top-2 routing across all seven transformer projections under QLoRA 4-bit quantization with rsLoRA scaling; (2) an inner loop performing residual boosting by freezing trained stacks and adding new ones; (3) an outer loop training sequential domain-specific stacks with curriculum-ordered dependencies; (4) null-space projection via randomized SVD constraining new stacks to subspaces orthogonal to prior directions, achieving zero forgetting in isolation; (5) an outcome-based sigmoid meta-router trained on empirically discovered domain-combination targets that selectively weights stacks, enabling cross-domain composition. Two boundary experiments: (6) PSN pretraining on a randomly initialized model; (7) per-domain RL (DPO/GRPO) validating compatibility with post-SFT alignment. Validated on TinyLlama-1.1B (4 domains, 9 stacks) and Gemma 3 12B IT (5 domains, 10 stacks), MoE-LoRA achieves 2.5x faster convergence than parameter-matched single LoRA, residual boosting breaks through the single-stack ceiling, and the routed system recovers generation quality destroyed by ungated stack accumulation. The central finding: the outcome-based router discovers that domain stacks encode transferable cognitive primitives (instruction-following clarity, numerical reasoning, procedural logic, chain-of-thought structure) rather than domain-specific knowledge, with medical prompts routing to chat+math stacks in 97% of cases despite zero medical data in those stacks.",
-      "pdf_url": "https://arxiv.org/pdf/2604.01152v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.01152v1",
-      "published": "2026-04-01T17:08:25Z",
-      "updated": "2026-04-01T17:08:25Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]

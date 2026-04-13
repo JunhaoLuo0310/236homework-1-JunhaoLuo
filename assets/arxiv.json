@@ -1,8 +1,94 @@
 {
-  "generated_at_utc": "2026-04-12T03:25:49.618229Z",
+  "generated_at_utc": "2026-04-13T03:32:08.885151Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Facet-Level Tracing of Evidence Uncertainty and Hallucination in RAG",
+      "authors": [
+        "Passant Elchafei",
+        "Monorama Swain",
+        "Shahed Masoudian",
+        "Markus Schedl"
+      ],
+      "abstract": "Retrieval-Augmented Generation (RAG) aims to reduce hallucination by grounding answers in retrieved evidence, yet hallucinated answers remain common even when relevant documents are available. Existing evaluations focus on answer-level or passage-level accuracy, offering limited insight into how evidence is used during generation. In this work, we introduce a facet-level diagnostics framework for QA that decomposes each input question into atomic reasoning facets. For each facet, we assess evidence sufficiency and grounding using a structured Facet x Chunk matrix that combines retrieval relevance with natural language inference-based faithfulness scores. To diagnose evidence usage, we analyze three controlled inference modes: Strict RAG, which enforces exclusive reliance on retrieved evidence; Soft RAG, which allows integration of retrieved evidence and parametric knowledge; and LLM-only generation without retrieval. Comparing these modes enables thorough analysis of retrieval-generation misalignment, defined as cases where relevant evidence is retrieved but not correctly integrated during generation. Across medical QA and HotpotQA, we evaluate three open-source and closed-source LLMs (GPT, Gemini, and LLaMA), providing interpretable diagnostics that reveal recurring facet-level failure modes, including evidence absence, evidence misalignment, and prior-driven overrides. Our results demonstrate that hallucinations in RAG systems are driven less by retrieval accuracy and more by how retrieved evidence is integrated during generation, with facet-level analysis exposing systematic evidence override and misalignment patterns that remain hidden under answer-level evaluation.",
+      "pdf_url": "https://arxiv.org/pdf/2604.09174v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.09174v1",
+      "published": "2026-04-10T09:59:43Z",
+      "updated": "2026-04-10T09:59:43Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "SiMing-Bench: Evaluating Procedural Correctness from Continuous Interactions in Clinical Skill Videos",
+      "authors": [
+        "Xiyang Huang",
+        "Jiawei Lin",
+        "Keying Wu",
+        "Jiaxin Huang",
+        "Kailai Yang",
+        "Renxiong Wei",
+        "Cheng zeng",
+        "Jiayi Xiang",
+        "Ziyan Kuang",
+        "Min Peng",
+        "Qianqian Xie",
+        "Sophia Ananiadou"
+      ],
+      "abstract": "Current video benchmarks for multimodal large language models (MLLMs) focus on event recognition, temporal ordering, and long-context recall, but overlook a harder capability required for expert procedural judgment: tracking how ongoing interactions update the procedural state and thereby determine the correctness of later actions. We introduce SiMing-Bench, the first benchmark for evaluating this capability from full-length clinical skill videos. It targets rubric-grounded process-level judgment of whether interaction-driven state updates preserve procedural correctness across an entire workflow. SiMing-Bench is instantiated with SiMing-Score, a physician-annotated dataset of real clinical skill examination videos spanning cardiopulmonary resuscitation, automated external defibrillator operation, and bag-mask ventilation, each paired with a standardized step-wise rubric and dual-expert labels. Across diverse open- and closed-source MLLMs, we observe consistently weak agreement with physician judgments. Moreover, weak performance on rubric-defined intermediate steps persists even when overall procedure-level correlation appears acceptable, suggesting that coarse global assessment substantially overestimates current models' procedural judgment ability. Additional analyses with binary step judgment and step-aligned clips indicate that the bottleneck is not merely fine-grained scoring or temporal localization, but modeling how continuous interactions update procedural state over time.",
+      "pdf_url": "https://arxiv.org/pdf/2604.09037v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.09037v1",
+      "published": "2026-04-10T06:58:29Z",
+      "updated": "2026-04-10T06:58:29Z",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Scalable High-Recall Constraint-Satisfaction-Based Information Retrieval for Clinical Trials Matching",
+      "authors": [
+        "Cyrus Zhou",
+        "Yufei Jin",
+        "Yilin Xu",
+        "Yu-Chiang Wang",
+        "Chieh-Ju Chao",
+        "Monica S. Lam"
+      ],
+      "abstract": "Clinical trials are central to evidence-based medicine, yet many struggle to meet enrollment targets, despite the availability of over half a million trials listed on ClinicalTrials.gov, which attracts approximately two million users monthly. Existing retrieval techniques, largely based on keyword and embedding-similarity matching between patient profiles and eligibility criteria, often struggle with low recall, low precision, and limited interpretability due to complex constraints. We propose SatIR, a scalable clinical trial retrieval method based on constraint satisfaction, enabling high-precision and interpretable matching of patients to relevant trials. Our approach uses formal methods -- Satisfiability Modulo Theories (SMT) and relational algebra -- to efficiently represent and match key constraints from clinical trials and patient records. Beyond leveraging established medical ontologies and conceptual models, we use Large Language Models (LLMs) to convert informal reasoning regarding ambiguity, implicit clinical assumptions, and incomplete patient records into explicit, precise, controllable, and interpretable formal constraints. Evaluated on 59 patients and 3,621 trials, SatIR outperforms TrialGPT on all three evaluated retrieval objectives. It retrieves 32%-72% more relevant-and-eligible trials per patient, improves recall over the union of useful trials by 22-38 points, and serves more patients with at least one useful trial. Retrieval is fast, requiring 2.95 seconds per patient over 3,621 trials. These results show that SatIR is scalable, effective, and interpretable.",
+      "pdf_url": "https://arxiv.org/pdf/2604.08849v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.08849v1",
+      "published": "2026-04-10T01:13:44Z",
+      "updated": "2026-04-10T01:13:44Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.DB",
+        "cs.MA",
+        "cs.SC"
+      ]
+    },
+    {
+      "title": "MedConceal: A Benchmark for Clinical Hidden-Concern Reasoning Under Partial Observability",
+      "authors": [
+        "Yikun Han",
+        "Joey Chan",
+        "Jingyuan Chen",
+        "Mengting Ai",
+        "Simo Du",
+        "Yue Guo"
+      ],
+      "abstract": "Patient-clinician communication is an asymmetric-information problem: patients often do not disclose fears, misconceptions, or practical barriers unless clinicians elicit them skillfully. Effective medical dialogue therefore requires reasoning under partial observability: clinicians must elicit latent concerns, confirm them through interaction, and respond in ways that guide patients toward appropriate care. However, existing medical dialogue benchmarks largely sidestep this challenge by exposing hidden patient state, collapsing elicitation into extraction, or evaluating responses without modeling what remains hidden. We present MedConceal, a benchmark with an interactive patient simulator for evaluating hidden-concern reasoning in medical dialogue, comprising 300 curated cases and 600 clinician-LLM interactions. Built from clinician-answered online health discussions, each case pairing clinician-visible context with simulator-internal hidden concerns derived from prior literature and structured using an expert-developed taxonomy. The simulator withholds these concerns from the dialogue agent, tracks whether they have been revealed and addressed via theory-grounded turn-level communication signals, and is clinician-reviewed for clinical plausibility. This enables process-aware evaluation of both task success and the interaction process that leads to it. We study two abilities: confirmation, surfacing hidden concerns through multi-turn dialogue, and intervention, addressing the primary concern and guiding the patient toward a target plan. Results show that no single system dominates: frontier models lead on different confirmation metrics, while human clinicians (N=159) remain strongest on intervention success. Together, these results identify hidden-concern reasoning under partial observability as a key unresolved challenge for medical dialogue systems.",
+      "pdf_url": "https://arxiv.org/pdf/2604.08788v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.08788v1",
+      "published": "2026-04-09T21:51:02Z",
+      "updated": "2026-04-09T21:51:02Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "Lost in the Hype: Revealing and Dissecting the Performance Degradation of Medical Multimodal Large Language Models in Image Classification",
       "authors": [
@@ -218,87 +304,6 @@
         "cs.CL",
         "cs.AI",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Joint Optimization of Reasoning and Dual-Memory for Self-Learning Diagnostic Agent",
-      "authors": [
-        "Bingxuan Li",
-        "Simo Du",
-        "Yue Guo"
-      ],
-      "abstract": "Clinical expertise improves not only by acquiring medical knowledge, but by accumulating experience that yields reusable diagnostic patterns. Recent LLMs-based diagnostic agents have shown promising progress in clinical reasoning for decision support. However, most approaches treat cases independently, limiting experience reuse and continual adaptation. We propose SEA, a self-learning diagnostic agent with cognitively inspired dual-memory module. We design a reinforcement training framework tailored to our designed agent for joint optimization of reasoning and memory management. We evaluate SEA in two complementary settings. On standard evaluation with MedCaseReasoning dataset, SEA achieves 92.46% accuracy, outperforming the strongest baseline by +19.6%, demonstrating the benefit of jointly optimizing reasoning and memory. On the long-horizon with ER-Reason dataset, SEA attains the best final accuracy (0.7214) and the largest improvement (+0.35 Acc@100), while baseline methods show limited or unstable gains. Expert evaluation further indicates that rules consolidated from SEA show strong clinical correctness, usefulness and trust, suggesting that the induced rules in dual-memory module are reliable and practically meaningful. Overall, SEA improves both diagnostic reasoning ability and continual learning by effectively transforming experience into reusable knowledge.",
-      "pdf_url": "https://arxiv.org/pdf/2604.07269v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.07269v1",
-      "published": "2026-04-08T16:32:17Z",
-      "updated": "2026-04-08T16:32:17Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Self-Preference Bias in Rubric-Based Evaluation of Large Language Models",
-      "authors": [
-        "Jos\u00e9 Pombal",
-        "Ricardo Rei",
-        "Andr\u00e9 F. T. Martins"
-      ],
-      "abstract": "LLM-as-a-judge has become the de facto approach for evaluating LLM outputs. However, judges are known to exhibit self-preference bias (SPB): they tend to favor outputs produced by themselves or by models from their own family. This skews evaluations and, thus, hinders model development, especially in settings of recursive self-improvement. We present the first study of SPB in rubric-based evaluation, an increasingly popular benchmarking paradigm where judges issue binary verdicts on individual evaluation criteria, instead of assigning holistic scores or rankings. Using IFEval, a benchmark with programmatically verifiable rubrics, we show that SPB persists even when evaluation criteria are entirely objective: among rubrics where generators fail, judges can be up to 50\\% more likely to incorrectly mark them as satisfied when the output is their own. We also find that, similarly to other evaluation paradigms, ensembling multiple judges helps mitigate SPB, but without fully eliminating it. On HealthBench, a medical chat benchmark with subjective rubrics, we observe that SPB skews model scores by up to 10 points, a potentially decisive margin when ranking frontier models. We analyze the factors that drive SPB in this setting, finding that negative rubrics, extreme rubric lengths, and subjective topics like emergency referrals are particularly susceptible.",
-      "pdf_url": "https://arxiv.org/pdf/2604.06996v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.06996v1",
-      "published": "2026-04-08T12:13:53Z",
-      "updated": "2026-04-08T12:13:53Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "LungCURE: Benchmarking Multimodal Real-World Clinical Reasoning for Precision Lung Cancer Diagnosis and Treatment",
-      "authors": [
-        "Fangyu Hao",
-        "Jiayu Yang",
-        "Yifan Zhu",
-        "Zijun Yu",
-        "Qicen Wu",
-        "Wang Yunlong",
-        "Jiawei Li",
-        "Yulin Liu",
-        "Xu Zeng",
-        "Guanting Chen",
-        "Shihao Li",
-        "Zhonghong Ou",
-        "Meina Song",
-        "Mengyang Sun",
-        "Haoran Luo",
-        "Yu Shi",
-        "Yingyi Wang"
-      ],
-      "abstract": "Lung cancer clinical decision support demands precise reasoning across complex, multi-stage oncological workflows. Existing multimodal large language models (MLLMs) fail to handle guideline-constrained staging and treatment reasoning. We formalize three oncological precision treatment (OPT) tasks for lung cancer, spanning TNM staging, treatment recommendation, and end-to-end clinical decision support. We introduce LungCURE, the first standardized multimodal benchmark built from 1,000 real-world, clinician-labeled cases across more than 10 hospitals. We further propose LCAgent, a multi-agent framework that ensures guideline-compliant lung cancer clinical decision-making by suppressing cascading reasoning errors across the clinical pathway. Experiments reveal large differences across various large language models (LLMs) in their capabilities for complex medical reasoning, when given precise treatment requirements. We further verify that LCAgent, as a simple yet effective plugin, enhances the reasoning performance of LLMs in real-world medical scenarios.",
-      "pdf_url": "https://arxiv.org/pdf/2604.06925v2",
-      "arxiv_url": "https://arxiv.org/abs/2604.06925v2",
-      "published": "2026-04-08T10:30:43Z",
-      "updated": "2026-04-09T06:51:09Z",
-      "categories": [
-        "cs.MM"
-      ]
-    },
-    {
-      "title": "To Adapt or not to Adapt, Rethinking the Value of Medical Knowledge-Aware Large Language Models",
-      "authors": [
-        "Ane G. Domingo-Aldama",
-        "Iker De La Iglesia",
-        "Maitane Urruela",
-        "Aitziber Atutxa",
-        "Ander Barrena"
-      ],
-      "abstract": "BACKGROUND: Recent studies have shown that domain-adapted large language models (LLMs) do not consistently outperform general-purpose counterparts on standard medical benchmarks, raising questions about the need for specialized clinical adaptation.\n  METHODS: We systematically compare general and clinical LLMs on a diverse set of multiple choice clinical question answering tasks in English and Spanish. We introduce a perturbation based evaluation benchmark that probes model robustness, instruction following, and sensitivity to adversarial variations. Our evaluation includes, one-step and two-step question transformations, multi prompt testing and instruction guided assessment. We analyze a range of state-of-the-art clinical models and their general-purpose counterparts, focusing on Llama 3.1-based models. Additionally, we introduce Marmoka, a family of lightweight 8B-parameter clinical LLMs for English and Spanish, developed via continual domain-adaptive pretraining on medical corpora and instructions.\n  RESULTS: The experiments show that clinical LLMs do not consistently outperform their general purpose counterparts on English clinical tasks, even under the proposed perturbation based benchmark. However, for the Spanish subsets the proposed Marmoka models obtain better results compared to Llama.\n  CONCLUSIONS: Our results show that, under current short-form MCQA benchmarks, clinical LLMs offer only marginal and unstable improvements over general-purpose models in English, suggesting that existing evaluation frameworks may be insufficient to capture genuine medical expertise. We further find that both general and clinical models exhibit substantial limitations in instruction following and strict output formatting. Finally, we demonstrate that robust medical LLMs can be successfully developed for low-resource languages such as Spanish, as evidenced by the Marmoka models.",
-      "pdf_url": "https://arxiv.org/pdf/2604.06854v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.06854v1",
-      "published": "2026-04-08T09:17:55Z",
-      "updated": "2026-04-08T09:17:55Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

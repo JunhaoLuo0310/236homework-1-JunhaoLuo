@@ -1,8 +1,124 @@
 {
-  "generated_at_utc": "2026-04-14T03:21:45.419475Z",
+  "generated_at_utc": "2026-04-15T03:19:58.402305Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Representation geometry shapes task performance in vision-language modeling for CT enterography",
+      "authors": [
+        "Cristian Minoccheri",
+        "Emily Wittrup",
+        "Kayvan Najarian",
+        "Ryan Stidham"
+      ],
+      "abstract": "Computed tomography (CT) enterography is a primary imaging modality for assessing inflammatory bowel disease (IBD), yet the representational choices that best support automated analysis of this modality are unknown. We present the first study of vision-language transfer learning on abdominal CT enterography and identify two main findings. First, mean pooling of slice embeddings gives better categorical disease assessment (59.2\\% three-class accuracy), whereas attention pooling gives better cross-modal retrieval (0.235 text-to-image MRR). This pattern holds across all LoRA configurations tested and suggests that the two aggregators emphasize different properties of the learned representation. Second, per-slice tissue contrast matters more than broader spatial coverage: multi-window RGB encoding, which maps complementary Hounsfield Unit windows to RGB channels, outperforms all strategies that increase spatial coverage through multiplanar sampling, and in this setting adding coronal and sagittal views reduces classification performance. For report generation, fine-tuning without retrieval context yields within-1 severity accuracy at the prevalence-matched chance level (70.4\\% vs.\\ 71\\% random), suggesting little learned ordering beyond the class distribution. Retrieval-augmented generation (RAG) improves this across all configurations, scoring 7--14 percentage points above the chance baseline and improving ordinal MAE from 0.98 to 0.80--0.89. A three-teacher pseudolabel framework enables all comparisons without expert annotations. Together, these findings provide the first baselines for this underexplored modality and offer practical guidance for building vision-language systems for volumetric medical imaging.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13021v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13021v1",
+      "published": "2026-04-14T17:56:23Z",
+      "updated": "2026-04-14T17:56:23Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "InsightFlow: LLM-Driven Synthesis of Patient Narratives for Mental Health into Causal Models",
+      "authors": [
+        "Shreya Gupta",
+        "Prottay Kumar Adhikary",
+        "Bhavyaa Dave",
+        "Salam Michael Singh",
+        "Aniket Deroy",
+        "Tanmoy Chakraborty"
+      ],
+      "abstract": "Clinical case formulation organizes patient symptoms and psychosocial factors into causal models, often using the 5P framework. However, constructing such graphs from therapy transcripts is time consuming and varies across clinicians. We present InsightFlow, an LLM based approach that automatically generates 5P aligned causal graphs from patient-therapist dialogues. Using 46 psychotherapy intake transcripts annotated by clinical experts, we evaluate LLM generated graphs against human formulations using structural (NetSimile), semantic (embedding similarity), and expert rated clinical criteria. The generated graphs show structural similarity comparable to inter annotator agreement and high semantic alignment with human graphs. Expert evaluations rate the outputs as moderately complete, consistent, and clinically useful. While LLM graphs tend to form more interconnected structures compared to the chain like patterns of human graphs, overall complexity and content coverage are similar. These results suggest that LLMs can produce clinically meaningful case formulation graphs within the natural variability of expert practice. InsightFlow highlights the potential of automated causal modeling to augment clinical workflows, with future work needed to improve temporal reasoning and reduce redundancy.",
+      "pdf_url": "https://arxiv.org/pdf/2604.12721v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.12721v1",
+      "published": "2026-04-14T13:36:18Z",
+      "updated": "2026-04-14T13:36:18Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Identifying and Mitigating Gender Cues in Academic Recommendation Letters: An Interpretability Case Study",
+      "authors": [
+        "Charlotte S. Alexander",
+        "Shane Storks",
+        "Souradip Pal",
+        "Sayak Chakrabarty",
+        "Arushi Sharma",
+        "Mlen-Too Wesley",
+        "Bailey Russo"
+      ],
+      "abstract": "Letters of recommendation (LoRs) can carry patterns of implicitly gendered language that can inadvertently influence downstream decisions, e.g. in hiring and admissions. In this work, we investigate the extent to which Transformer-based encoder models as well as Large Language Models (LLMs) can infer the gender of applicants in academic LoRs submitted to an U.S. medical-residency program after explicit identifiers like names and pronouns are de-gendered. While using three models (DistilBERT, RoBERTa, and Llama 2) to classify the gender of anonymized and de-gendered LoRs, significant gender leakage was observed as evident from up to 68% classification accuracy. Text interpretation methods, like TF-IDF and SHAP, demonstrate that certain linguistic patterns are strong proxies for gender, e.g. \"emotional'' and \"humanitarian'' are commonly associated with LoRs from female applicants. As an experiment in creating truly gender-neutral LoRs, these implicit gender cues were remove resulting in a drop of up to 5.5% accuracy and 2.7% macro $F_1$ score on re-training the classifiers. However, applicant gender prediction still remains better than chance. In this case study, our findings highlight that 1) LoRs contain gender-identifying cues that are hard to remove and may activate bias in decision-making and 2) while our technical framework may be a concrete step toward fairer academic and professional evaluations, future work is needed to interrogate the role that gender plays in LoR review. Taken together, our findings motivate upstream auditing of evaluative text in real-world academic letters of recommendation as a necessary complement to model-level fairness interventions.",
+      "pdf_url": "https://arxiv.org/pdf/2604.12337v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.12337v1",
+      "published": "2026-04-14T06:19:35Z",
+      "updated": "2026-04-14T06:19:35Z",
+      "categories": [
+        "cs.LG",
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "Coding-Free and Privacy-Preserving MCP Framework for Clinical Agentic Research Intelligence System",
+      "authors": [
+        "Taehun Kim",
+        "Hyeryun Park",
+        "Hyeonhoon Lee",
+        "Yushin Lee",
+        "Kyungsang Kim",
+        "Hyung-Chul Lee"
+      ],
+      "abstract": "Clinical research involves labor-intensive processes such as study design, cohort construction, model development, and documentation, requiring domain expertise, programming skills, and access to sensitive patient data. These demands create barriers for clinicians and external researchers conducting data-driven studies. To overcome these limitations, we developed a Clinical Agentic Research Intelligence System (CARIS) that automates the clinical research workflow while preserving data privacy, enabling comprehensive studies without direct access to raw data. CARIS integrates Large Language Models (LLMs) with modular tools via the Model Context Protocol (MCP), enabling natural language-driven orchestration of appropriate tools. Databases remain securely within the MCP server, and users access only the outputs and final research reports. Based on user intent, CARIS automatically executes the full pipeline: research planning, literature search, cohort construction, Institutional Review Board (IRB) documentation, Vibe Machine Learning (ML), and report generation, with iterative human-in-the-loop refinement. We evaluated CARIS on three heterogeneous datasets with distinct clinical tasks. Research plans and IRB documents were finalized within three to four iterations, using evidence from literature and data. The system supported Vibe ML by exploring feature-model combinations, ranking the top ten models, and generating performance visualizations. Final reports showed high completeness based on a checklist derived from the TRIPOD+AI framework, achieving 96% coverage in LLM evaluation and 82% in human evaluation. CARIS demonstrates that agentic AI can transform clinical hypotheses into executable research workflows across heterogeneous datasets. By eliminating the need for coding and direct data access, the system lowers barriers and bridges public and private clinical data environments.",
+      "pdf_url": "https://arxiv.org/pdf/2604.12258v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.12258v1",
+      "published": "2026-04-14T04:22:44Z",
+      "updated": "2026-04-14T04:22:44Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Development, Evaluation, and Deployment of a Multi-Agent System for Thoracic Tumor Board",
+      "authors": [
+        "Tim Ellis-Caleo",
+        "Timothy Keyes",
+        "Nerissa Ambers",
+        "Faraah Bekheet",
+        "Wen-wai Yim",
+        "Nikesh Kotecha",
+        "Nigam H. Shah",
+        "Joel Neal"
+      ],
+      "abstract": "Tumor boards are multidisciplinary conferences dedicated to producing actionable patient care recommendations with live review of primary radiology and pathology data. Succinct patient case summaries are needed to drive efficient and accurate case discussions. We developed a manual AI-based workflow to generate patient summaries to display live at the Stanford Thoracic Tumor board. To improve on this manually intensive process, we developed several automated AI chart summarization methods and evaluated them against physician gold standard summaries and fact-based scoring rubrics. We report these comparative evaluations as well as our deployment of the final state automated AI chart summarization tool along with post-deployment monitoring. We also validate the use of an LLM as a judge evaluation strategy for fact-based scoring. This work is an example of integrating AI-based workflows into routine clinical practice.",
+      "pdf_url": "https://arxiv.org/pdf/2604.12161v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.12161v1",
+      "published": "2026-04-14T00:35:40Z",
+      "updated": "2026-04-14T00:35:40Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "MedConcept: Unsupervised Concept Discovery for Interpretability in Medical VLMs",
+      "authors": [
+        "Md Rakibul Haque",
+        "KM Arefeen Sultan",
+        "Tushar Kataria",
+        "Shireen Elhabian"
+      ],
+      "abstract": "While medical Vision-Language models (VLMs) achieve strong performance on tasks such as tumor or organ segmentation and diagnosis prediction, their opaque latent representations limit clinical trust and the ability to explain predictions. Interpretability of these multimodal representations are therefore essential for the trustworthy clinical deployment of pretrained medical VLMs. However, current interpretability methods, such as gradient- or attention-based visualizations, are often limited to specific tasks such as classification. Moreover, they do not provide concept-level explanations derived from shared pretrained representations that can be reused across downstream tasks. We introduce MedConcept, a framework that uncovers latent medical concepts in a fully unsupervised manner and grounds them in clinically verifiable textual semantics. MedConcept identifies sparse neuron-level concept activations from pretrained VLM representations and translates them into pseudo-report-style summaries, enabling physician-level inspection of internal model reasoning. To address the lack of quantitative evaluation in concept-based interpretability, we introduce a quantitative semantic verification protocol that leverages an independent pretrained medical LLM as a frozen external evaluator to assess concept alignment with radiology reports. We define three concept scores, Aligned, Unaligned, and Uncertain, to quantify semantic support, contradiction, or ambiguity relative to radiology reports and use them exclusively for post hoc evaluation. These scores provide a quantitative baseline for assessing interpretability in medical VLMs. All codes, prompt and data to be released on acceptance. Ke",
+      "pdf_url": "https://arxiv.org/pdf/2604.11868v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.11868v1",
+      "published": "2026-04-13T17:53:41Z",
+      "updated": "2026-04-13T17:53:41Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "Ambivalence/Hesitancy Recognition in Videos for Personalized Digital Health Interventions",
       "authors": [
@@ -19,10 +135,10 @@
         "Eric Granger"
       ],
       "abstract": "Using behavioural science, health interventions focus on behaviour change by providing a framework to help patients acquire and maintain healthy habits that improve medical outcomes. In-person interventions are costly and difficult to scale, especially in resource-limited regions. Digital health interventions offer a cost-effective approach, potentially supporting independent living and self-management. Automating such interventions, especially through machine learning, has gained considerable attention recently. Ambivalence and hesitancy (A/H) play a primary role for individuals to delay, avoid, or abandon health interventions. A/H are subtle and conflicting emotions that place a person in a state between positive and negative evaluations of a behaviour, or between acceptance and refusal to engage in it. They manifest as affective inconsistency across modalities or within a modality, such as language, facial, vocal expressions, and body language. While experts can be trained to recognize A/H, integrating them into digital health interventions is costly and less effective. Automatic A/H recognition is therefore critical for the personalization and cost-effectiveness of digital health interventions. Here, we explore the application of deep learning models for A/H recognition in videos, a multi-modal task by nature. In particular, this paper covers three learning setups: supervised learning, unsupervised domain adaptation for personalization, and zero-shot inference via large language models (LLMs). Our experiments are conducted on the unique and recently published BAH video dataset for A/H recognition. Our results show limited performance, suggesting that more adapted multi-modal models are required for accurate A/H recognition. Better methods for modeling spatio-temporal and multimodal fusion are necessary to leverage conflicts within/across modalities.",
-      "pdf_url": "https://arxiv.org/pdf/2604.11730v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.11730v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.11730v2",
+      "arxiv_url": "https://arxiv.org/abs/2604.11730v2",
       "published": "2026-04-13T17:05:38Z",
-      "updated": "2026-04-13T17:05:38Z",
+      "updated": "2026-04-14T11:00:18Z",
       "categories": [
         "cs.CV",
         "cs.HC",
@@ -204,125 +320,6 @@
       "updated": "2026-04-13T03:14:31Z",
       "categories": [
         "cs.IR"
-      ]
-    },
-    {
-      "title": "Learning Preference-Based Objectives from Clinical Narratives for Sequential Treatment Decision-Making",
-      "authors": [
-        "Daniel J. Tan",
-        "Kay Choong See",
-        "Mengling Feng"
-      ],
-      "abstract": "Designing reward functions remains a central challenge in reinforcement learning (RL) for healthcare, where outcomes are sparse, delayed, and difficult to specify. While structured data capture physiological states, they often fail to reflect the overall quality of a patient's clinical trajectory, including recovery dynamics, treatment burden, and stability. Clinical narratives, in contrast, summarize longitudinal reasoning and implicitly encode evaluations of treatment effectiveness. We propose Clinical Narrative-informed Preference Rewards (CN-PR), a framework for learning reward functions directly from discharge summaries by treating them as scalable supervision for trajectory-level preferences. Using a large language model, we derive trajectory quality scores (TQS) and construct pairwise preferences over patient trajectories, enabling reward learning via a structured preference-based objective. To account for variability in narrative informativeness, we incorporate a confidence signal that weights supervision based on its relevance to the decision-making task. The learned reward aligns strongly with trajectory quality (Spearman rho = 0.63) and enables policies that are consistently associated with improved recovery-related outcomes, including increased organ support-free days and faster shock resolution, while maintaining comparable performance on mortality. These effects persist under external validation. Our results demonstrate that narrative-derived supervision provides a scalable and expressive alternative to handcrafted or outcome-based reward design for dynamic treatment regimes.",
-      "pdf_url": "https://arxiv.org/pdf/2604.10783v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.10783v1",
-      "published": "2026-04-12T19:18:02Z",
-      "updated": "2026-04-12T19:18:02Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "MMRareBench: A Rare-Disease Multimodal and Multi-Image Medical Benchmark",
-      "authors": [
-        "Junzhi Ning",
-        "Jiashi Lin",
-        "Yingying Fang",
-        "Wei Li",
-        "Jiyao Liu",
-        "Cheng Tang",
-        "Chenglong Ma",
-        "Wenhao Tang",
-        "Tianbin Li",
-        "Ziyan Huang",
-        "Guang Yang",
-        "Junjun He"
-      ],
-      "abstract": "Multimodal large language models (MLLMs) have advanced clinical tasks for common conditions, but their performance on rare diseases remains largely untested. In rare-disease scenarios, clinicians often lack prior clinical knowledge, forcing them to rely strictly on case-level evidence for clinical judgments. Existing benchmarks predominantly evaluate common-condition, single-image settings, leaving multimodal and multi-image evidence integration under rare-disease data scarcity systematically unevaluated. We introduce MMRareBench, to our knowledge the first rare-disease benchmark jointly evaluating multimodal and multi-image clinical capability across four workflow-aligned tracks: diagnosis, treatment planning, cross-image evidence alignment, and examination suggestion. The benchmark comprises 1,756 question-answer pairs with 7,958 associated medical images curated from PMC case reports, with Orphanet-anchored ontology alignment, track-specific leakage control, evidence-grounded annotations, and a two-level evaluation protocol. A systematic evaluation of 23 MLLMs reveals fragmented capability profiles and universally low treatment-planning performance, with medical-domain models trailing general-purpose MLLMs substantially on multi-image tracks despite competitive diagnostic scores. These patterns are consistent with a capacity dilution effect: medical fine-tuning can narrow the diagnostic gap but may erode the compositional multi-image capability that rare-disease evidence integration demands.",
-      "pdf_url": "https://arxiv.org/pdf/2604.10755v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.10755v1",
-      "published": "2026-04-12T17:53:02Z",
-      "updated": "2026-04-12T17:53:02Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Evaluating Small Open LLMs for Medical Question Answering: A Practical Framework",
-      "authors": [
-        "Avi-ad Avraam Buskila"
-      ],
-      "abstract": "Incorporating large language models (LLMs) in medical question answering demands more than high average accuracy: a model that returns substantively different answers each time it is queried is not a reliable medical tool. Online health communities such as Reddit have become a primary source of medical information for millions of users, yet they remain highly susceptible to misinformation; deploying LLMs as assistants in these settings amplifies the need for output consistency alongside correctness. We present a practical, open-source evaluation framework for assessing small, locally-deployable open-weight LLMs on medical question answering, treating reproducibility as a first-class metric alongside lexical and semantic accuracy. Our pipeline computes eight quality metrics, including BERTScore, ROUGE-L, and an LLM-as-judge rubric, together with two within-model reproducibility metrics derived from repeated inference (N=10 runs per question). Evaluating three models (Llama 3.1 8B, Gemma 3 12B, MedGemma 1.5 4B) on 50 MedQuAD questions (N=1,500 total responses) reveals that despite low-temperature generation (T=0.2), self-agreement across runs reaches at most 0.20, while 87-97% of all outputs per model are unique -- a safety gap that single-pass benchmarks entirely miss. The clinically fine-tuned MedGemma 1.5 4B underperforms the larger general-purpose models on both quality and reproducibility; however, because MedGemma is also the smallest model, this comparison confounds domain fine-tuning with model scale. We describe the methodology in sufficient detail for practitioners to replicate or extend the evaluation for their own model-selection workflows. All code and data pipelines are available at https://github.com/aviad-buskila/llm_medical_reproducibility.",
-      "pdf_url": "https://arxiv.org/pdf/2604.10535v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.10535v1",
-      "published": "2026-04-12T08:56:15Z",
-      "updated": "2026-04-12T08:56:15Z",
-      "categories": [
-        "cs.IR",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "EviCare: Enhancing Diagnosis Prediction with Deep Model-Guided Evidence for In-Context Reasoning",
-      "authors": [
-        "Hengyu Zhang",
-        "Xuyun Zhang",
-        "Pengxiang Zhan",
-        "Linhao Luo",
-        "Hang Lv",
-        "Yanchao Tan",
-        "Shirui Pan",
-        "Carl Yang"
-      ],
-      "abstract": "Recent advances in large language models (LLMs) have enabled promising progress in diagnosis prediction from electronic health records (EHRs). However, existing LLM-based approaches tend to overfit to historically observed diagnoses, often overlooking novel yet clinically important conditions that are critical for early intervention. To address this, we propose EviCare, an in-context reasoning framework that integrates deep model guidance into LLM-based diagnosis prediction. Rather than prompting LLMs directly with raw EHR inputs, EviCare performs (1) deep model inference for candidate selection, (2) evidential prioritization for set-based EHRs, and (3) relational evidence construction for novel diagnosis prediction. These signals are then composed into an adaptive in-context prompt to guide LLM reasoning in an accurate and interpretable manner. Extensive experiments on two real-world EHR benchmarks (MIMIC-III and MIMIC-IV) demonstrate that EviCare achieves significant performance gains, which consistently outperforms both LLM-only and deep model-only baselines by an average of 20.65\\% across precision and accuracy metrics. The improvements are particularly notable in challenging novel diagnosis prediction, yielding average improvements of 30.97\\%.",
-      "pdf_url": "https://arxiv.org/pdf/2604.10455v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.10455v1",
-      "published": "2026-04-12T04:35:14Z",
-      "updated": "2026-04-12T04:35:14Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "VeriSim: A Configurable Framework for Evaluating Medical AI Under Realistic Patient Noise",
-      "authors": [
-        "Sina Mansouri",
-        "Mohit Marvania",
-        "Vibhavari Ashok Shihorkar",
-        "Han Ngoc Tran",
-        "Kazhal Shafiei",
-        "Mehrdad Fazli",
-        "Yikuan Li",
-        "Ziwei Zhu"
-      ],
-      "abstract": "Medical large language models (LLMs) achieve impressive performance on standardized benchmarks, yet these evaluations fail to capture the complexity of real clinical encounters where patients exhibit memory gaps, limited health literacy, anxiety, and other communication barriers. We introduce VeriSim, a truth-preserving patient simulation framework that injects controllable, clinically evidence-grounded noise into patient responses while maintaining strict adherence to medical ground truth through a hybrid UMLS-LLM verification mechanism. Our framework operationalizes six noise dimensions derived from peer-reviewed medical communication literature, capturing authentic clinical phenomena such as patient recall limitations, health literacy barriers, and stigma-driven non-disclosure. Experiments across seven open-weight LLMs reveal that all models degrade significantly under realistic patient noise, with diagnostic accuracy dropping 15-25% and conversation length increasing 34-55%. Notably, smaller models (7B) show 40% greater degradation than larger models (70B+), while medical fine-tuning on standard corpora provides limited robustness benefits against patient communication noise. Evaluation by board-certified clinicians demonstrates high-quality simulation with strong inter-annotator agreement (kappa > 0.80), while LLM-as-a-Judge serves as a validated auxiliary evaluator achieving comparable reliability for scalable assessment. Our results highlight a critical Sim-to-Real gap in current medical AI. We release VeriSim as an open-source noise-injection framework, establishing a rigorous testbed for evaluating clinical robustness.",
-      "pdf_url": "https://arxiv.org/pdf/2604.10441v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.10441v1",
-      "published": "2026-04-12T03:35:22Z",
-      "updated": "2026-04-12T03:35:22Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CARE-ECG: Causal Agent-based Reasoning for Explainable and Counterfactual ECG Interpretation",
-      "authors": [
-        "Elahe Khatibi",
-        "Ziyu Wang",
-        "Ankita Sharma",
-        "Krishnendu Chakrabarty",
-        "Sanaz Rahimi Moosavi",
-        "Farshad Firouzi",
-        "Amir Rahmani"
-      ],
-      "abstract": "Large language models (LLMs) enable waveform-to-text ECG interpretation and interactive clinical questioning, yet most ECG-LLM systems still rely on weak signal-text alignment and retrieval without explicit physiological or causal structure. This limits grounding, temporal reasoning, and counterfactual \"what-if\" analysis central to clinical decision-making. We propose CARE-ECG, a causally structured ECG-language reasoning framework that unifies representation learning, diagnosis, and explanation in a single pipeline. CARE-ECG encodes multi-lead ECGs into temporally organized latent biomarkers, performs causal graph inference for probabilistic diagnosis, and supports counterfactual assessment via structural causal models. To improve faithfulness, CARE-ECG grounds language outputs through causal retrieval-augmented generation and a modular agentic pipeline that integrates history, diagnosis, and response with verification. Across multiple ECG benchmarks and expert QA settings, CARE-ECG improves diagnostic accuracy and explanation faithfulness while reducing hallucinations (e.g., 0.84 accuracy on Expert-ECG-QA and 0.76 on SCP-mapped PTB-XL under GPT-4). Overall, CARE-ECG provides traceable reasoning by exposing key latent drivers, causal evidence paths, and how alternative physiological states would change outcomes.",
-      "pdf_url": "https://arxiv.org/pdf/2604.10420v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.10420v1",
-      "published": "2026-04-12T02:35:23Z",
-      "updated": "2026-04-12T02:35:23Z",
-      "categories": [
-        "cs.LG"
       ]
     }
   ]

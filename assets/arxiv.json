@@ -1,8 +1,214 @@
 {
-  "generated_at_utc": "2026-04-15T03:19:58.402305Z",
+  "generated_at_utc": "2026-04-16T03:28:20.666174Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "\"AI Psychosis\" in Context: How Conversation History Shapes LLM Responses to Delusional Beliefs",
+      "authors": [
+        "Luke Nicholls",
+        "Robert Hutto",
+        "Zephrah Soto"
+      ],
+      "abstract": "Extended interaction with large language models (LLMs) has been linked to the reinforcement of delusional beliefs, a phenomenon attracting growing clinical and public concern. Yet most empirical work evaluates model safety in brief interactions, which may not reflect how these harms develop through sustained dialogue. We tested five models across three levels of accumulated context, using the same escalating delusional history to isolate its effect on model behaviour. Human raters coded responses on risk and safety dimensions, and each model was analysed qualitatively. Models separated into two distinct tiers: GPT-4o, Grok 4.1 Fast, and Gemini 3 Pro exhibited high-risk, low-safety profiles; Claude Opus 4.5 and GPT-5.2 Instant displayed the opposite pattern. As context accumulated, performance tended to degrade in the unsafe group, while the same material activated stronger safety interventions among the safer models. Qualitative analysis identified distinct mechanisms of failure, including validation of the user's delusional premises, elaboration beyond them, and attempting harm reduction from within the delusional frame. Safer models, however, often used the established relationship to support intervention, taking accountability for past missteps so that redirection would not be received as betrayal. These findings indicate that accumulated context functions as a stress test of safety architecture, revealing whether a model treats prior dialogue as a worldview to inherit or as evidence to evaluate. Short-context assessments may therefore mischaracterise model safety, underestimating danger in some systems while missing context-activated gains in others. The results suggest that delusional reinforcement by LLMs reflects a preventable alignment failure. In demonstrating that these harms can be resisted, the safer models establish a baseline future systems should now be expected to meet.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13860v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13860v1",
+      "published": "2026-04-15T13:27:23Z",
+      "updated": "2026-04-15T13:27:23Z",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "RPS: Information Elicitation with Reinforcement Prompt Selection",
+      "authors": [
+        "Tao Wang",
+        "Jingyao Lu",
+        "Xibo Wang",
+        "Haonan Huang",
+        "Su Yao",
+        "Zhiqiang Hu",
+        "Xingyan Chen",
+        "Enmao Diao"
+      ],
+      "abstract": "Large language models (LLMs) have shown remarkable capabilities in dialogue generation and reasoning, yet their effectiveness in eliciting user-known but concealed information in open-ended conversations remains limited. In many interactive AI applications, such as personal assistants, tutoring systems, and legal or clinical support, users often withhold sensitive or uncertain information due to privacy concerns, ambiguity, or social hesitation. This makes it challenging for LLMs to gather complete and contextually relevant inputs. In this work, we define the problem of information elicitation in open-ended dialogue settings and propose Reinforcement Prompt Selection (RPS), a lightweight reinforcement learning framework that formulates prompt selection as a sequential decision-making problem. To analyze this problem in a controlled setting, we design a synthetic experiment, where a reinforcement learning agent outperforms a random query baseline, illustrating the potential of policy-based approaches for adaptive information elicitation. Building on this insight, RPS learns a policy over a pool of prompts to adaptively elicit concealed or incompletely expressed information from users through dialogue. We also introduce IELegal, a new benchmark dataset constructed from real legal case documents, which simulates dialogue-based information elicitation tasks aimed at uncovering case-relevant facts. In this setting, RPS outperforms static prompt baselines, demonstrating the effectiveness of adaptive prompt selection for eliciting critical information in LLM-driven dialogue systems.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13817v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13817v1",
+      "published": "2026-04-15T12:51:01Z",
+      "updated": "2026-04-15T12:51:01Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "MedRCube: A Multidimensional Framework for Fine-Grained and In-Depth Evaluation of MLLMs in Medical Imaging",
+      "authors": [
+        "Zhijie Bao",
+        "Fangke Chen",
+        "Licheng Bao",
+        "Chenhui Zhang",
+        "Wei Chen",
+        "Jiajie Peng",
+        "Zhongyu Wei"
+      ],
+      "abstract": "The potential of Multimodal Large Language Models (MLLMs) in domain of medical imaging raise the demands of systematic and rigorous evaluation frameworks that are aligned with the real-world medical imaging practice. Existing practices that report single or coarse-grained metrics are lack the granularity required for specialized clinical support and fail to assess the reliability of reasoning mechanisms. To address this, we propose a paradigm shift toward multidimensional, fine-grained and in-depth evaluation. Based on a two-stage systematic construction pipeline designed for this paradigm, we instantiate it with MedRCube. We benchmark 33 MLLMs, \\textit{Lingshu-32B} achieve top-tier performance. Crucially, MedRCube exposes a series of pronounced insights inaccessible under prior evaluation settings. Furthermore, we introduce a credibility evaluation subset to quantify reasoning credibility, uncover a highly significant positive association between shortcut behavior and diagnostic task performance, raising concerns for clinically trustworthy deployment. The resources of this work can be found at https://github.com/F1mc/MedRCube.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13756v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13756v1",
+      "published": "2026-04-15T11:41:20Z",
+      "updated": "2026-04-15T11:41:20Z",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Beyond Arrow's Impossibility: Fairness as an Emergent Property of Multi-Agent Collaboration",
+      "authors": [
+        "Sayan Kumar Chaki",
+        "Antoine Gourru",
+        "Julien Velcin"
+      ],
+      "abstract": "Fairness in language models is typically studied as a property of a single, centrally optimized model. As large language models become increasingly agentic, we propose that fairness emerges through interaction and exchange. We study this via a controlled hospital triage framework in which two agents negotiate over three structured debate rounds. One agent is aligned to a specific ethical framework via retrieval-augmented generation (RAG), while the other is either unaligned or adversarially prompted to favor demographic groups over clinical need. We find that alignment systematically shapes negotiation strategies and allocation patterns, and that neither agent's allocation is ethically adequate in isolation, yet their joint final allocation can satisfy fairness criteria that neither would have reached alone. Aligned agents partially moderate bias through contestation rather than override, acting as corrective patches that restore access for marginalized groups without fully converting a biased counterpart. We further observe that even explicitly aligned agents exhibit intrinsic biases toward certain frameworks, consistent with known left-leaning tendencies in LLMs. We connect these limits to Arrow's Impossibility Theorem: no aggregation mechanism can simultaneously satisfy all desiderata of collective rationality, and multi-agent deliberation navigates rather than resolves this constraint. Our results reposition fairness as an emergent, procedural property of decentralized agent interaction, and the system rather than the individual agent as the appropriate unit of evaluation.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13705v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13705v1",
+      "published": "2026-04-15T10:34:35Z",
+      "updated": "2026-04-15T10:34:35Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.GT",
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "Enhancing Reinforcement Learning for Radiology Report Generation with Evidence-aware Rewards and Self-correcting Preference Learning",
+      "authors": [
+        "Qin Zhou",
+        "Guoyan Liang",
+        "Qianyi Yang",
+        "Jingyuan Chen",
+        "Sai Wu",
+        "Chang Yao",
+        "Zhe Wang"
+      ],
+      "abstract": "Recent reinforcement learning (RL) approaches have advanced radiology report generation (RRG), yet two core limitations persist: (1) report-level rewards offer limited evidence-grounded guidance for clinical faithfulness; and (2) current methods lack an explicit self-improving mechanism to align with clinical preference. We introduce clinically aligned Evidence-aware Self-Correcting Reinforcement Learning (ESC-RL), comprising two key components. First, a Group-wise Evidence-aware Alignment Reward (GEAR) delivers group-wise, evidence-aware feedback. GEAR reinforces consistent grounding for true positives, recovers missed findings for false negatives, and suppresses unsupported content for false positives. Second, a Self-correcting Preference Learning (SPL) strategy automatically constructs a reliable, disease-aware preference dataset from multiple noisy observations and leverages an LLM to synthesize refined reports without human supervision. ESC-RL promotes clinically faithful, disease-aligned reward and supports continual self-improvement during training. Extensive experiments on two public chest X-ray datasets demonstrate consistent gains and state-of-the-art performance.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13598v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13598v1",
+      "published": "2026-04-15T08:08:06Z",
+      "updated": "2026-04-15T08:08:06Z",
+      "categories": [
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Using reasoning LLMs to extract SDOH events from clinical notes",
+      "authors": [
+        "Ertan Doganl",
+        "Kunyu Yu",
+        "Yifan Peng"
+      ],
+      "abstract": "Social Determinants of Health (SDOH) refer to environmental, behavioral, and social conditions that influence how individuals live, work, and age. SDOH have a significant impact on personal health outcomes, and their systematic identification and management can yield substantial improvements in patient care. However, SDOH information is predominantly captured in unstructured clinical notes within electronic health records, which limits its direct use as machine-readable entities. To address this issue, researchers have employed Natural Language Processing (NLP) techniques using pre-trained BERT-based models, demonstrating promising performance but requiring sophisticated implementation and extensive computational resources. In this study, we investigated prompt engineering strategies for extracting structured SDOH events utilizing LLMs with advanced reasoning capabilities. Our method consisted of four modules: 1) developing concise and descriptive prompts integrated with established guidelines, 2) applying few-shot learning with carefully curated examples, 3) using a self-consistency mechanism to ensure robust outputs, and 4) post-processing for quality control. Our approach achieved a micro-F1 score of 0.866, demonstrating competitive performance compared to the leading models. The results demonstrated that LLMs with reasoning capabilities are effective solutions for SDOH event extraction, offering both implementation simplicity and strong performance.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13502v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13502v1",
+      "published": "2026-04-15T05:40:24Z",
+      "updated": "2026-04-15T05:40:24Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "ReSS: Learning Reasoning Models for Tabular Data Prediction via Symbolic Scaffold",
+      "authors": [
+        "Chenlang Yi",
+        "Gang Li",
+        "Zizhan Xiong",
+        "Tue Minh Cao",
+        "Yanmin Gong",
+        "My T. Thai",
+        "Tianbao Yang"
+      ],
+      "abstract": "Tabular data remains prevalent in high-stakes domains such as healthcare and finance, where predictive models are expected to provide both high accuracy and faithful, human-understandable reasoning. While symbolic models offer verifiable logic, they lack semantic expressiveness. Meanwhile, general-purpose LLMs often require specialized fine-tuning to master domain-specific tabular reasoning. To address the dual challenges of scalable data curation and reasoning consistency, we propose ReSS, a systematic framework that bridges symbolic and neural reasoning models. ReSS leverages a decision-tree model to extract instance-level decision paths as symbolic scaffolds. These scaffolds, alongside input features and labels, guide an LLM to generate grounded natural-language reasoning that strictly adheres to the underlying decision logic. The resulting high-quality dataset is used to fine-tune a pretrained LLM into a specialized tabular reasoning model, further enhanced by a scaffold-invariant data augmentation strategy to improve generalization and explainability. To rigorously assess faithfulness, we introduce quantitative metrics including hallucination rate, explanation necessity, and explanation sufficiency. Experimental results on medical and financial benchmarks demonstrate that ReSS-trained models improve traditional decision trees and standard fine-tuning approaches up to $10\\%$ while producing faithful and consistent reasoning",
+      "pdf_url": "https://arxiv.org/pdf/2604.13392v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13392v1",
+      "published": "2026-04-15T01:43:00Z",
+      "updated": "2026-04-15T01:43:00Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Text-Attributed Knowledge Graph Enrichment with Large Language Models for Medical Concept Representation",
+      "authors": [
+        "Mohsen Nayebi Kerdabadi",
+        "Arya Hadizadeh Moghaddam",
+        "Chen Chen",
+        "Dongjie Wang",
+        "Zijun Yao"
+      ],
+      "abstract": "In electronic health record (EHR) mining, learning high-quality representations of medical concepts (e.g., standardized diagnosis, medication, and procedure codes) is fundamental for downstream clinical prediction. However, robust concept representation learning is hindered by two key challenges: (i) clinically important cross-type dependencies (e.g., diagnosis-medication and medication-procedure relations) are often missing or incomplete in existing ontology resources, limiting the ability to model complex EHR patterns; and (ii) rich clinical semantics are often missing from structured resources, and even when available as text, are difficult to integrate with KG structure for representation learning. To address these challenges, we present CoMed, an LLM-empowered graph learning framework for medical concept representation. CoMed first builds a global knowledge graph (KG) over medical codes by combining statistically reliable associations mined from EHRs with type-constrained LLM prompting to infer semantic relations. It then utilizes LLMs to enrich the KG into a text-attributed graph by generating node descriptions and edge rationales, providing semantic signals for both concepts and their relationships. Finally, CoMed jointly trains a LoRA-tuned LLaMA text encoder with a heterogeneous GNN, fusing text semantics and graph structure into unified concept embeddings. Extensive experiments on MIMIC-III and MIMIC-IV show that CoMed consistently improves prediction performance and serves as an effective plug-in concept encoder for standard EHR pipelines.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13331v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13331v1",
+      "published": "2026-04-14T22:29:18Z",
+      "updated": "2026-04-14T22:29:18Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Multi-Task LLM with LoRA Fine-Tuning for Automated Cancer Staging and Biomarker Extraction",
+      "authors": [
+        "Jiahao Shao",
+        "Anam Nawaz Khan",
+        "Christopher Brett",
+        "Tom Berg",
+        "Xueping Li",
+        "Bing Yao"
+      ],
+      "abstract": "Pathology reports serve as the definitive record for breast cancer staging, yet their unstructured format impedes large-scale data curation. While Large Language Models (LLMs) offer semantic reasoning, their deployment is often limited by high computational costs and hallucination risks. This study introduces a parameter-efficient, multi-task framework for automating the extraction of Tumor-Node-Metastasis (TNM) staging, histologic grade, and biomarkers. We fine-tune a Llama-3-8B-Instruct encoder using Low-Rank Adaptation (LoRA) on a curated, expert-verified dataset of 10,677 reports. Unlike generative approaches, our architecture utilizes parallel classification heads to enforce consistent schema adherence. Experimental results demonstrate that the model achieves a Macro F1 score of 0.976, successfully resolving complex contextual ambiguities and heterogeneous reporting formats that challenge traditional extraction methods including rule-based natural language processing (NLP) pipelines, zero-shot LLMs, and single-task LLM baselines. The proposed adapter-efficient, multi-task architecture enables reliable, scalable pathology-derived cancer staging and biomarker profiling, with the potential to enhance clinical decision support and accelerate data-driven oncology research.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13328v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13328v1",
+      "published": "2026-04-14T22:26:30Z",
+      "updated": "2026-04-14T22:26:30Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "L2D-Clinical: Learning to Defer for Adaptive Model Selection in Clinical Text Classification",
+      "authors": [
+        "Rishik Kondadadi",
+        "John E. Ortega"
+      ],
+      "abstract": "Clinical text classification requires choosing between specialized fine-tuned models (BERT variants) and general-purpose large language models (LLMs), yet neither dominates across all instances. We introduce Learning to Defer for clinical text (L2D-Clinical), a framework that learns when a BERT classifier should defer to an LLM based on uncertainty signals and text characteristics. Unlike prior L2D work that defers to human experts assumed universally superior, our approach enables adaptive deferral-improving accuracy when the LLM complements BERT. We evaluate on two English clinical tasks: (1) ADE detection (ADE Corpus V2), where BioBERT (F1=0.911) outperforms the LLM (F1=0.765), and (2) treatment outcome classification (MIMIC-IV with multi-LLM consensus ground truth), where GPT-5-nano (F1=0.967) outperforms ClinicalBERT (F1=0.887). On ADE, L2D-Clinical achieves F1=0.928 (+1.7 points over BERT) by selectively deferring 7% of instances where the LLM's high recall compensates for BERT's misses. On MIMIC, L2D-Clinical achieves F1=0.980 (+9.3 points over BERT) by deferring only 16.8\\% of cases to the LLM. The key insight is that L2D-Clinical learns to selectively leverage LLM strengths while minimizing API costs.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13285v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13285v1",
+      "published": "2026-04-14T20:23:45Z",
+      "updated": "2026-04-14T20:23:45Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Agentic MR sequence development: leveraging LLMs with MR skills for automatic physics-informed sequence development",
+      "authors": [
+        "Moritz Zaiss",
+        "Amr Aly",
+        "Jonathan Endres",
+        "Tobias Dornstetter",
+        "Simon Weinm\u00fcller",
+        "Andreas Maier"
+      ],
+      "abstract": "Purpose: Novel MR sequence developments still today allow generation of new diagnostic tools or novel imaging biomarkers. Programming MRI pulse sequences, however, is time-consuming and requires deep expertise in sequence design, restrictions by hardware constraints and MRI physics; even small modifications often require substantial debugging and validation. LLMs can assist when given structured prompts and error feedback, but many generated sequences still exhibit physical inconsistencies. We present Agent4MR, an agent-based framework that automatically generates and refines PyPulseq sequences using a structured, physics-aware validation report. These agents can perform also autonomous research. Methods: We evaluated Agent4MR on a spin-echo EPI task across three state-of-the-art LLMs and compared it to a context-only baseline (LLM4MR) and to a human developer with the same tools. We tested an MR autoresearch on a fluid-suppressed spin-echo EPI challenge for three different model generations. Results: Across all models, Agent4MR consistently produced artifact-free, physically valid sequences in a single user interaction, reducing the number of required interactions below the human baseline while maintaining correct timing and k-space coverage. Autonomous agents could then improve a sequence to match a given target contrast in an autoresearch approach. Conclusion: An appropriate agentic harness with physics-based validation can turn general-purpose LLMs into reliable MRI sequence developers and may ultimately enable non-experts to refine or innovate MR sequences guided by biological or clinical questions, or let swarms of agents realize sequence programming for them. Keywords: MRI; pulse sequence; PyPulseq; large language models; agents; autoresearch, sequence development.",
+      "pdf_url": "https://arxiv.org/pdf/2604.13282v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.13282v1",
+      "published": "2026-04-14T20:17:47Z",
+      "updated": "2026-04-14T20:17:47Z",
+      "categories": [
+        "physics.med-ph"
+      ]
+    },
     {
       "title": "Representation geometry shapes task performance in vision-language modeling for CT enterography",
       "authors": [
@@ -79,247 +285,6 @@
       "categories": [
         "cs.CL",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Development, Evaluation, and Deployment of a Multi-Agent System for Thoracic Tumor Board",
-      "authors": [
-        "Tim Ellis-Caleo",
-        "Timothy Keyes",
-        "Nerissa Ambers",
-        "Faraah Bekheet",
-        "Wen-wai Yim",
-        "Nikesh Kotecha",
-        "Nigam H. Shah",
-        "Joel Neal"
-      ],
-      "abstract": "Tumor boards are multidisciplinary conferences dedicated to producing actionable patient care recommendations with live review of primary radiology and pathology data. Succinct patient case summaries are needed to drive efficient and accurate case discussions. We developed a manual AI-based workflow to generate patient summaries to display live at the Stanford Thoracic Tumor board. To improve on this manually intensive process, we developed several automated AI chart summarization methods and evaluated them against physician gold standard summaries and fact-based scoring rubrics. We report these comparative evaluations as well as our deployment of the final state automated AI chart summarization tool along with post-deployment monitoring. We also validate the use of an LLM as a judge evaluation strategy for fact-based scoring. This work is an example of integrating AI-based workflows into routine clinical practice.",
-      "pdf_url": "https://arxiv.org/pdf/2604.12161v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.12161v1",
-      "published": "2026-04-14T00:35:40Z",
-      "updated": "2026-04-14T00:35:40Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MedConcept: Unsupervised Concept Discovery for Interpretability in Medical VLMs",
-      "authors": [
-        "Md Rakibul Haque",
-        "KM Arefeen Sultan",
-        "Tushar Kataria",
-        "Shireen Elhabian"
-      ],
-      "abstract": "While medical Vision-Language models (VLMs) achieve strong performance on tasks such as tumor or organ segmentation and diagnosis prediction, their opaque latent representations limit clinical trust and the ability to explain predictions. Interpretability of these multimodal representations are therefore essential for the trustworthy clinical deployment of pretrained medical VLMs. However, current interpretability methods, such as gradient- or attention-based visualizations, are often limited to specific tasks such as classification. Moreover, they do not provide concept-level explanations derived from shared pretrained representations that can be reused across downstream tasks. We introduce MedConcept, a framework that uncovers latent medical concepts in a fully unsupervised manner and grounds them in clinically verifiable textual semantics. MedConcept identifies sparse neuron-level concept activations from pretrained VLM representations and translates them into pseudo-report-style summaries, enabling physician-level inspection of internal model reasoning. To address the lack of quantitative evaluation in concept-based interpretability, we introduce a quantitative semantic verification protocol that leverages an independent pretrained medical LLM as a frozen external evaluator to assess concept alignment with radiology reports. We define three concept scores, Aligned, Unaligned, and Uncertain, to quantify semantic support, contradiction, or ambiguity relative to radiology reports and use them exclusively for post hoc evaluation. These scores provide a quantitative baseline for assessing interpretability in medical VLMs. All codes, prompt and data to be released on acceptance. Ke",
-      "pdf_url": "https://arxiv.org/pdf/2604.11868v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.11868v1",
-      "published": "2026-04-13T17:53:41Z",
-      "updated": "2026-04-13T17:53:41Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Ambivalence/Hesitancy Recognition in Videos for Personalized Digital Health Interventions",
-      "authors": [
-        "Manuela Gonz\u00e1lez-Gonz\u00e1lez",
-        "Soufiane Belharbi",
-        "Muhammad Osama Zeeshan",
-        "Masoumeh Sharafi",
-        "Muhammad Haseeb Aslam",
-        "Lorenzo Sia",
-        "Nicolas Richet",
-        "Marco Pedersoli",
-        "Alessandro Lameiras Koerich",
-        "Simon L Bacon",
-        "Eric Granger"
-      ],
-      "abstract": "Using behavioural science, health interventions focus on behaviour change by providing a framework to help patients acquire and maintain healthy habits that improve medical outcomes. In-person interventions are costly and difficult to scale, especially in resource-limited regions. Digital health interventions offer a cost-effective approach, potentially supporting independent living and self-management. Automating such interventions, especially through machine learning, has gained considerable attention recently. Ambivalence and hesitancy (A/H) play a primary role for individuals to delay, avoid, or abandon health interventions. A/H are subtle and conflicting emotions that place a person in a state between positive and negative evaluations of a behaviour, or between acceptance and refusal to engage in it. They manifest as affective inconsistency across modalities or within a modality, such as language, facial, vocal expressions, and body language. While experts can be trained to recognize A/H, integrating them into digital health interventions is costly and less effective. Automatic A/H recognition is therefore critical for the personalization and cost-effectiveness of digital health interventions. Here, we explore the application of deep learning models for A/H recognition in videos, a multi-modal task by nature. In particular, this paper covers three learning setups: supervised learning, unsupervised domain adaptation for personalization, and zero-shot inference via large language models (LLMs). Our experiments are conducted on the unique and recently published BAH video dataset for A/H recognition. Our results show limited performance, suggesting that more adapted multi-modal models are required for accurate A/H recognition. Better methods for modeling spatio-temporal and multimodal fusion are necessary to leverage conflicts within/across modalities.",
-      "pdf_url": "https://arxiv.org/pdf/2604.11730v2",
-      "arxiv_url": "https://arxiv.org/abs/2604.11730v2",
-      "published": "2026-04-13T17:05:38Z",
-      "updated": "2026-04-14T11:00:18Z",
-      "categories": [
-        "cs.CV",
-        "cs.HC",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "GazeVaLM: A Multi-Observer Eye-Tracking Benchmark for Evaluating Clinical Realism in AI-Generated X-Rays",
-      "authors": [
-        "David Wong",
-        "Zeynep Isik",
-        "Bin Wang",
-        "Marouane Tliba",
-        "Gorkem Durak",
-        "Elif Keles",
-        "Halil Ertugrul Aktas",
-        "Aladine Chetouani",
-        "Cagdas Topel",
-        "Nicolo Gennaro",
-        "Camila Lopes Vendrami",
-        "Tugce Agirlar Trabzonlu",
-        "Amir Ali Rahsepar",
-        "Laetitia Perronne",
-        "Matthew Antalek",
-        "Onural Ozturk",
-        "Gokcan Okur",
-        "Andrew C. Gordon",
-        "Ayis Pyrros",
-        "Frank H. Miller",
-        "Amir Borhani",
-        "Hatice Savas",
-        "Eric Hart",
-        "Elizabeth Krupinski",
-        "Ulas Bagci"
-      ],
-      "abstract": "We introduce GazeVaLM, a public eye-tracking dataset for studying clinical perception during chest radiograph authenticity assessment. The dataset comprises 960 gaze recordings from 16 expert radiologists interpreting 30 real and 30 synthetic chest X-rays (generated by diffusion based generative AI) under two conditions: diagnostic assessment and real-fake classification (Visual Turing test). For each image-observer pair, we provide raw gaze samples, fixation maps, scanpaths, saliency density maps, structured diagnostic labels, and authenticity judgments. We extend the protocol to 6 state-of-the-art multimodal LLMs, releasing their predicted diagnoses, authenticity labels, and confidence scores under matched conditions - enabling direct human-AI comparison at both decision and uncertainty levels. We further provide analyses of gaze agreement, inter-observer consistency, and benchmarking of radiologists versus LLMs in diagnostic accuracy and authenticity detection. GazeVaLM supports research in gaze modeling, clinical decision-making, human-AI comparison, generative image realism assessment, and uncertainty quantification. By jointly releasing visual attention data, clinical labels, and model predictions, we aim to facilitate reproducible research on how experts and AI systems perceive, interpret, and evaluate medical images. The dataset is available at https://huggingface.co/datasets/davidcwong/GazeVaLM.",
-      "pdf_url": "https://arxiv.org/pdf/2604.11653v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.11653v1",
-      "published": "2026-04-13T16:05:45Z",
-      "updated": "2026-04-13T16:05:45Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Eliciting Medical Reasoning with Knowledge-enhanced Data Synthesis: A Semi-Supervised Reinforcement Learning Approach",
-      "authors": [
-        "Haolin Li",
-        "Shuyang Jiang",
-        "Ruipeng Zhang",
-        "Jiangchao Yao",
-        "Ya Zhang",
-        "Yanfeng Wang"
-      ],
-      "abstract": "While large language models hold promise for complex medical applications, their development is hindered by the scarcity of high-quality reasoning data. To address this issue, existing approaches typically distill chain-of-thought reasoning traces from large proprietary models via supervised fine-tuning, then conduct reinforcement learning (RL). These methods exhibit limited improvement on underrepresented domains like rare diseases while incurring substantial costs from generating complex reasoning chains. To efficiently enhance medical reasoning, we propose MedSSR, a Medical Knowledge-enhanced data Synthesis and Semi-supervised Reinforcement learning framework. Our framework first employs rare disease knowledge to synthesize distribution-controllable reasoning questions. We then utilize the policy model itself to generate high-quality pseudo-labels. This enables a two-stage, intrinsic-to-extrinsic training paradigm: self-supervised RL on the pseudo-labeled synthetic data, followed by supervised RL on the human-annotated real data. MedSSR scales model training efficiently without relying on costly trace distillation. Extensive experiments on Qwen and Llama demonstrate that our method outperforms existing methods across ten medical benchmarks, achieving up to +5.93% gain on rare-disease tasks. Our code is available at https://github.com/tdlhl/MedSSR.",
-      "pdf_url": "https://arxiv.org/pdf/2604.11547v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.11547v1",
-      "published": "2026-04-13T14:37:38Z",
-      "updated": "2026-04-13T14:37:38Z",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Dynamic Summary Generation for Interpretable Multimodal Depression Detection",
-      "authors": [
-        "Shiyu Teng",
-        "Jiaqing Liu",
-        "Hao Sun",
-        "Yu Li",
-        "Shurong Chai",
-        "Ruibo Hou",
-        "Tomoko Tateyama",
-        "Lanfen Lin",
-        "Yen-Wei Chen"
-      ],
-      "abstract": "Depression remains widely underdiagnosed and undertreated because stigma and subjective symptom ratings hinder reliable screening. To address this challenge, we propose a coarse-to-fine, multi-stage framework that leverages large language models (LLMs) for accurate and interpretable detection. The pipeline performs binary screening, five-class severity classification, and continuous regression. At each stage, an LLM produces progressively richer clinical summaries that guide a multimodal fusion module integrating text, audio, and video features, yielding predictions with transparent rationale. The system then consolidates all summaries into a concise, human-readable assessment report. Experiments on the E-DAIC and CMDC datasets show significant improvements over state-of-the-art baselines in both accuracy and interpretability.",
-      "pdf_url": "https://arxiv.org/pdf/2604.11334v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.11334v1",
-      "published": "2026-04-13T11:34:40Z",
-      "updated": "2026-04-13T11:34:40Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Consistency of AI-Generated Exercise Prescriptions: A Repeated Generation Study Using a Large Language Model",
-      "authors": [
-        "Kihyuk Lee"
-      ],
-      "abstract": "Background: Large language models (LLMs) have been explored as tools for generating personalized exercise prescriptions, yet the consistency of outputs under identical conditions remains insufficiently examined. Objective: This study evaluated the intra-model consistency of LLM-generated exercise prescriptions using a repeated generation design. Methods: Six clinical scenarios were used to generate exercise prescriptions using Gemini 2.5 Flash (20 outputs per scenario; total n = 120). Consistency was assessed across three dimensions: (1) semantic consistency using SBERT-based cosine similarity, (2) structural consistency based on the FITT principle using an AI-as-a-judge approach, and (3) safety expression consistency, including inclusion rates and sentence-level quantification. Results: Semantic similarity was high across scenarios (mean cosine similarity: 0.879-0.939), with greater consistency in clinically constrained cases. Frequency showed consistent patterns, whereas variability was observed in quantitative components, particularly exercise intensity. Unclassifiable intensity expressions were observed in 10-25% of resistance training outputs. Safety-related expressions were included in 100% of outputs; however, safety sentence counts varied significantly across scenarios (H=86.18, p less than 0.001), with clinical cases generating more safety expressions than healthy adult cases. Conclusions: LLM-generated exercise prescriptions demonstrated high semantic consistency but showed variability in key quantitative components. Reliability depends substantially on prompt structure, and additional structural constraints and expert validation are needed before clinical deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2604.11287v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.11287v1",
-      "published": "2026-04-13T10:50:44Z",
-      "updated": "2026-04-13T10:50:44Z",
-      "categories": [
-        "cs.AI",
-        "q-bio.OT"
-      ]
-    },
-    {
-      "title": "MedP-CLIP: Medical CLIP with Region-Aware Prompt Integration",
-      "authors": [
-        "Jiahui Peng",
-        "He Yao",
-        "Jingwen Li",
-        "Yanzhou Su",
-        "Sibo Ju",
-        "Yujie Lu",
-        "Jin Ye",
-        "Hongchun Lu",
-        "Xue Li",
-        "Lincheng Jiang",
-        "Min Zhu",
-        "Junlong Cheng"
-      ],
-      "abstract": "Contrastive Language-Image Pre-training (CLIP) has demonstrated outstanding performance in global image understanding and zero-shot transfer through large-scale text-image alignment. However, the core of medical image analysis often lies in the fine-grained understanding of specific anatomical structures or lesion regions. Therefore, precisely comprehending region-of-interest (RoI) information provided by medical professionals or perception models becomes crucial. To address this need, we propose MedP-CLIP, a region-aware medical vision-language model (VLM). MedP-CLIP innovatively integrates medical prior knowledge and designs a feature-level region prompt integration mechanism, enabling it to flexibly respond to various prompt forms (e.g., points, bounding boxes, masks) while maintaining global contextual awareness when focusing on local regions. We pre-train the model on a meticulously constructed large-scale dataset (containing over 6.4 million medical images and 97.3 million region-level annotations), equipping it with cross-disease and cross-modality fine-grained spatial semantic understanding capabilities. Experiments demonstrate that MedP-CLIP significantly outperforms baseline methods in various medical tasks, including zero-shot recognition, interactive segmentation, and empowering multimodal large language models. This model provides a scalable, plug-and-play visual backbone for medical AI, combining holistic image understanding with precise regional analysis.",
-      "pdf_url": "https://arxiv.org/pdf/2604.11197v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.11197v1",
-      "published": "2026-04-13T08:53:36Z",
-      "updated": "2026-04-13T08:53:36Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "From Answers to Arguments: Toward Trustworthy Clinical Diagnostic Reasoning with Toulmin-Guided Curriculum Goal-Conditioned Learning",
-      "authors": [
-        "Chen Zhan",
-        "Xiaoyu Tan",
-        "Gengchen Ma",
-        "Yu-Jie Xiong",
-        "Xiaoyan Jiang",
-        "Xihe Qiu"
-      ],
-      "abstract": "The integration of Large Language Models (LLMs) into clinical decision support is critically obstructed by their opaque and often unreliable reasoning. In the high-stakes domain of healthcare, correct answers alone are insufficient; clinical practice demands full transparency to ensure patient safety and enable professional accountability. A pervasive and dangerous weakness of current LLMs is their tendency to produce \"correct answers through flawed reasoning.\" This issue is far more than a minor academic flaw; such process errors signal a fundamental lack of robust understanding, making the model prone to broader hallucinations and unpredictable failures when faced with real-world clinical complexity. In this paper, we establish a framework for trustworthy clinical argumentation by adapting the Toulmin model to the diagnostic process. We propose a novel training pipeline: Curriculum Goal-Conditioned Learning (CGCL), designed to progressively train LLM to generate diagnostic arguments that explicitly follow this Toulmin structure. CGCL's progressive three-stage curriculum systematically builds a solid clinical argument: (1) extracting facts and generating differential diagnoses; (2) justifying a core hypothesis while rebutting alternatives; and (3) synthesizing the analysis into a final, qualified conclusion. We validate CGCL using T-Eval, a quantitative framework measuring the integrity of the diagnosis reasoning. Experiments show that our method achieves diagnostic accuracy and reasoning quality comparable to resource-intensive Reinforcement Learning (RL) methods, while offering a more stable and efficient training pipeline.",
-      "pdf_url": "https://arxiv.org/pdf/2604.11137v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.11137v1",
-      "published": "2026-04-13T07:49:39Z",
-      "updated": "2026-04-13T07:49:39Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "How Robust Are Large Language Models for Clinical Numeracy? An Empirical Study on Numerical Reasoning Abilities in Clinical Contexts",
-      "authors": [
-        "Minh-Vuong Nguyen",
-        "Fatemeh Shiri",
-        "Zhuang Li",
-        "Karin Verspoor"
-      ],
-      "abstract": "Large Language Models (LLMs) are increasingly being explored for clinical question answering and decision support, yet safe deployment critically requires reliable handling of patient measurements in heterogeneous clinical notes. Existing evaluations of LLMs for clinical numerical reasoning provide limited operation-level coverage, restricted primarily to arithmetic computation, and rarely assess the robustness of numerical understanding across clinical note formats. We introduce ClinicNumRobBench, a benchmark of 1,624 context-question instances with ground-truth answers that evaluates four main types of clinical numeracy: value retrieval, arithmetic computation, relational comparison, and aggregation. To stress-test robustness, ClinicNumRobBench presents longitudinal MIMIC-IV vital-sign records in three semantically equivalent representations, including a real-world note-style variant derived from the Open Patients dataset, and instantiates queries using 42 question templates. Experiments on 14 LLMs show that value retrieval is generally strong, with most models exceeding 85% accuracy, while relational comparison and aggregation remain challenging, with some models scoring below 15%. Fine-tuning on medical data can reduce numeracy relative to base models by over 30%, and performance drops under note-style variation indicate LLM sensitivity to format. ClinicNumRobBench offers a rigorous testbed for clinically reliable numerical reasoning. Code and data URL are available on https://github.com/MinhVuong2000/ClinicNumRobBench.",
-      "pdf_url": "https://arxiv.org/pdf/2604.11133v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.11133v1",
-      "published": "2026-04-13T07:44:41Z",
-      "updated": "2026-04-13T07:44:41Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "CMedTEB & CARE: Benchmarking and Enabling Efficient Chinese Medical Retrieval via Asymmetric Encoders",
-      "authors": [
-        "Angqing Jiang",
-        "Jianlyu Chen",
-        "Zhe Fang",
-        "Yongcan Wang",
-        "Xinpeng Li",
-        "Keyu Ding",
-        "Defu Lian"
-      ],
-      "abstract": "Effective medical text retrieval requires both high accuracy and low latency. While LLM-based embedding models possess powerful retrieval capabilities, their prohibitive latency and high computational cost limit their application in real-time scenarios. Furthermore, the lack of comprehensive and high-fidelity benchmarks hinders progress in Chinese medical text retrieval. In this work, we introduce the Chinese Medical Text Embedding Benchmark (CMedTEB), a benchmark spanning three kinds of practical embedding tasks: retrieval, reranking, and semantic textual similarity (STS). Distinct from purely automated datasets, CMedTEB is curated via a rigorous multi-LLM voting pipeline validated by clinical experts, ensuring gold-standard label quality while effectively mitigating annotation noise. On this foundation, we propose the Chinese Medical Asymmetric REtriever (CARE), an asymmetric architecture that pairs a lightweight BERT-style encoder for online query encoding with a powerful LLM-based encoder for offline document encoding. However, optimizing such an asymmetric retriever with two structurally different encoders presents distinctive challenges. To address this, we introduce a novel two-stage training strategy that progressively bridges the query and document representations. Extensive experiments demonstrate that CARE surpasses state-of-the-art symmetric models on CMedTEB, achieving superior retrieval performance without increasing inference latency.",
-      "pdf_url": "https://arxiv.org/pdf/2604.10937v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.10937v1",
-      "published": "2026-04-13T03:14:31Z",
-      "updated": "2026-04-13T03:14:31Z",
-      "categories": [
-        "cs.IR"
       ]
     }
   ]

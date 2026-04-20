@@ -1,28 +1,101 @@
 {
-  "generated_at_utc": "2026-04-19T03:30:32.232592Z",
+  "generated_at_utc": "2026-04-20T03:32:26.473359Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
     {
+      "title": "Sketching the Readout of Large Language Models for Scalable Data Attribution and Valuation",
+      "authors": [
+        "Yide Ran",
+        "Jianwen Xie",
+        "Minghui Wang",
+        "Wenjin Zheng",
+        "Denghui Zhang",
+        "Chuan Li",
+        "Zhaozhuo Xu"
+      ],
+      "abstract": "Data attribution and valuation are critical for understanding data-model synergy for Large Language Models (LLMs), yet existing gradient-based methods suffer from scalability challenges on LLMs. Inspired by human cognition, where decision making relies on a focused readout of relevant memories rather than replaying all pathways, we introduce RISE (Readout Influence Sketching Estimator). Instead of computing and indexing gradients across the entire LLM, RISE focuses on influence hotspots at the output layer, where influence signals concentrate, and the gradient admits a decomposed outer-product form. This enables a dual-channel representation combining a lexical residual channel (RH) and a semantic projected-error channel (GH). Applying CountSketch projections to these channels achieves strong compression while maintaining accurate attribution. Across the OLMo (1B-32B) and Pythia (14M-6.9B) families, RISE reduces index storage by up to 112$\\times$ compared to RapidIn and scales to 32B parameters LLM, where gradient-based baselines such as RapidIn and ZO-Inf become memory-infeasible. We evaluate RISE on two paradigms: (1) retrospective attribution, retrieving influential training examples for specific predictions, and (2) prospective valuation, scoring candidate data utility zero-shot. We validate RISE on three tasks: Howdy backdoor data detection, Finance-Medical domain separation, and Brain Rot high-quality data selection. In a closed-loop Brain Rot study, continued pretraining on RISE-selected data yields consistent downstream improvements. Overall, RISE provides a practical and scalable primitive for influence analysis and training-data selection in modern large language models.",
+      "pdf_url": "https://arxiv.org/pdf/2604.16197v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.16197v1",
+      "published": "2026-04-17T16:07:11Z",
+      "updated": "2026-04-17T16:07:11Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "KWBench: Measuring Unprompted Problem Recognition in Knowledge Work",
+      "authors": [
+        "Ankit Maloo"
+      ],
+      "abstract": "We introduce the first version of KWBench (Knowledge Work Bench), a benchmark for unprompted problem recognition in large language models: can an LLM identify a professional scenario before attempting to solve it. Existing frontier benchmarks have saturated, and most knowledge-work evaluations to date reduce to extraction or task completion against a specification. KWBench targets the step before that: recognizing the governing structure of the situation from raw inputs alone.\n  The benchmark contains 223 tasks sourced from practitioners across acquisitions, contract negotiations, clinical pharmacy, organizational politics, fraud analysis, and incentive design. Each task encodes a formal game-theoretic pattern (principal-agent conflict, signaling, mechanism design failure, strategic omission, coalitional dynamics, strategic interdependence) and carries structured ground truth recording the expert reading of the situation and the anticipated failure modes. Models receive raw data and a task prompt with no indication of problem type. Scoring is a three-tier rubric gated by a mandatory conjunctive check. Mandatory criteria encode the predicted wrong paths.\n  We evaluate 16 models. The best model passes on 27.9% of tasks. The top two models agree on only 31.7% of their passes. Among the top 8, 44 tasks are solved by exactly one model; routing across the top 8 covers 50.7% of the benchmark, nearly double the best single model. Conditional on passing, quality scores converge (approx 83% across models); unconditional scores do not. Same models articulate the relevant game-theoretic concept correctly when asked, then fail to apply it unprompted. We release KWBench to shift how frontier models are evaluated on knowledge work, scoring them on whether they recognize the right problem from the situation alone, not only on how well they execute once the problem has been framed for them.",
+      "pdf_url": "https://arxiv.org/pdf/2604.15760v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.15760v1",
+      "published": "2026-04-17T07:04:54Z",
+      "updated": "2026-04-17T07:04:54Z",
+      "categories": [
+        "cs.AI",
+        "cs.GT"
+      ]
+    },
+    {
+      "title": "Towards Robust Endogenous Reasoning: Unifying Drift Adaptation in Non-Stationary Tuning",
+      "authors": [
+        "Xiaoyu Yang",
+        "En Yu",
+        "Wei Duan",
+        "Jie Lu"
+      ],
+      "abstract": "Reinforcement Fine-Tuning (RFT) has established itself as a critical paradigm for the alignment of Multi-modal Large Language Models (MLLMs) with complex human values and domain-specific requirements. Nevertheless, current research primarily focuses on mitigating exogenous distribution shifts arising from data-centric factors, the non-stationarity inherent in the endogenous reasoning remains largely unexplored. In this work, a critical vulnerability is revealed within MLLMs: they are highly susceptible to endogenous reasoning drift, across both thinking and perception perspectives. It manifests as unpredictable distribution changes that emerge spontaneously during the autoregressive generation process, independent of external environmental perturbations. To adapt it, we first theoretically define endogenous reasoning drift within the RFT of MLLMs as the multi-modal concept drift. In this context, this paper proposes Counterfactual Preference Optimization ++ (CPO++), a comprehensive and autonomous framework adapted to the multi-modal concept drift. It integrates counterfactual reasoning with domain knowledge to execute controlled perturbations across thinking and perception, employing preference optimization to disentangle spurious correlations. Extensive empirical evaluations across two highly dynamic and safety-critical domains: medical diagnosis and autonomous driving. They demonstrate that the proposed framework achieves superior performance in reasoning coherence, decision-making precision, and inherent robustness against extreme interference. The methodology also exhibits exceptional zero-shot cross-domain generalization, providing a principled foundation for reliable multi-modal reasoning in safety-critical applications.",
+      "pdf_url": "https://arxiv.org/pdf/2604.15705v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.15705v1",
+      "published": "2026-04-17T05:24:04Z",
+      "updated": "2026-04-17T05:24:04Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "FD-NL2SQL: Feedback-Driven Clinical NL2SQL that Improves with Use",
+      "authors": [
+        "Suparno Roy Chowdhury",
+        "Tejas Anvekar",
+        "Manan Roy Choudhury",
+        "Muhammad Ali Khan",
+        "Kaneez Zahra Rubab Khakwani",
+        "Mohamad Bassam Sonbol",
+        "Irbaz Bin Riaz",
+        "Vivek Gupta"
+      ],
+      "abstract": "Clinicians exploring oncology trial repositories often need ad-hoc, multi-constraint queries over biomarkers, endpoints, interventions, and time, yet writing SQL requires schema expertise. We demo FD-NL2SQL, a feedback-driven clinical NL2SQL assistant for SQLite-based oncology databases. Given a natural-language question, a schema-aware LLM decomposes it into predicate-level sub-questions, retrieves semantically similar expert-verified NL2SQL exemplars via sentence embeddings, and synthesizes executable SQL conditioned on the decomposition, retrieved exemplars, and schema, with post-processing validity checks. To improve with use, FD-NL2SQL incorporates two update signals: (i) clinician edits of generated SQL are approved and added to the exemplar bank; and (ii) lightweight logic-based SQL augmentation applies a single atomic mutation (e.g., operator or column change), retaining variants only if they return non-empty results. A second LLM generates the corresponding natural-language question and predicate decomposition for accepted variants, automatically expanding the exemplar bank without additional annotation. The demo interface exposes decomposition, retrieval, synthesis, and execution results to support interactive refinement and continuous improvement.",
+      "pdf_url": "https://arxiv.org/pdf/2604.15646v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.15646v1",
+      "published": "2026-04-17T02:45:57Z",
+      "updated": "2026-04-17T02:45:57Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
       "title": "Can LLMs Score Medical Diagnoses and Clinical Reasoning as well as Expert Panels?",
       "authors": [
         "Amy Rouillard",
-        "Sitwala Mundiab",
-        "Linda Camarab",
-        "Michael Cameron Gramaniec",
-        "Ziyaad Dangorc",
-        "Ismail Kallad",
-        "Shabir A. Madhic",
-        "Kajal Morarc",
-        "Marlvin T. Ncubec",
-        "Haroon Saloojeee",
+        "Sitwala Mundia",
+        "Linda Camara",
+        "Michael Cameron Gramanie",
+        "Ziyaad Dangor",
+        "Ismail Kalla",
+        "Shabir A. Madhi",
+        "Kajal Morar",
+        "Marlvin T. Ncube",
+        "Haroon Saloojee",
         "Bruce A. Bassett"
       ],
       "abstract": "Evaluating medical AI systems using expert clinician panels is costly and slow, motivating the use of large language models (LLMs) as alternative adjudicators. Here, we evaluate an LLM jury composed of three frontier AI models scoring 3333 diagnoses on 300 real-world middle-income country (MIC) hospital cases. Model performance was benchmarked against expert clinician panel and independent human re-scoring panel evaluations. Both LLM and clinician-generated diagnoses are scored across four dimensions: diagnosis, differential diagnosis, clinical reasoning and negative treatment risk. For each of these, we assess scoring difference, inter-rater agreement, scoring stability, severe safety errors and the effect of post-hoc calibration. We find that: (i) the uncalibrated LLM jury scores are systematically lower than clinician panels scores; (ii) the LLM Jury preserves ordinal agreement and exhibits better concordance with the primary expert panels than the human expert re-score panels do; (iii) the probability of severe errors is lower in \\lj models compared to the human expert re-score panels; (iv) the LLM Jury shows excellent agreement with primary expert panels' rankings. We find that the LLM jury combined with AI model diagnoses can be used to identify ward diagnoses at high risk of error, enabling targeted expert review and improved panel efficiency; (v) LLM jury models show no self-preference bias. They did not score diagnoses generated by their own underlying model or models from the same vendor more (or less) favourably than those generated by other models. Finally, we demonstrate that LLM jury calibration using isotonic regression improves alignment with human expert panel evaluations. Together, these results provide compelling evidence that a calibrated, multi-model LLM jury can serve as a trustworthy and reliable proxy for expert clinician evaluation in medical AI benchmarking.",
-      "pdf_url": "https://arxiv.org/pdf/2604.14892v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.14892v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.14892v2",
+      "arxiv_url": "https://arxiv.org/abs/2604.14892v2",
       "published": "2026-04-16T11:32:09Z",
-      "updated": "2026-04-16T11:32:09Z",
+      "updated": "2026-04-17T09:12:13Z",
       "categories": [
         "cs.LG",
         "cs.AI"
@@ -242,83 +315,6 @@
       "updated": "2026-04-15T12:51:01Z",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "MedRCube: A Multidimensional Framework for Fine-Grained and In-Depth Evaluation of MLLMs in Medical Imaging",
-      "authors": [
-        "Zhijie Bao",
-        "Fangke Chen",
-        "Licheng Bao",
-        "Chenhui Zhang",
-        "Wei Chen",
-        "Jiajie Peng",
-        "Zhongyu Wei"
-      ],
-      "abstract": "The potential of Multimodal Large Language Models (MLLMs) in domain of medical imaging raise the demands of systematic and rigorous evaluation frameworks that are aligned with the real-world medical imaging practice. Existing practices that report single or coarse-grained metrics are lack the granularity required for specialized clinical support and fail to assess the reliability of reasoning mechanisms. To address this, we propose a paradigm shift toward multidimensional, fine-grained and in-depth evaluation. Based on a two-stage systematic construction pipeline designed for this paradigm, we instantiate it with MedRCube. We benchmark 33 MLLMs, \\textit{Lingshu-32B} achieve top-tier performance. Crucially, MedRCube exposes a series of pronounced insights inaccessible under prior evaluation settings. Furthermore, we introduce a credibility evaluation subset to quantify reasoning credibility, uncover a highly significant positive association between shortcut behavior and diagnostic task performance, raising concerns for clinically trustworthy deployment. The resources of this work can be found at https://github.com/F1mc/MedRCube.",
-      "pdf_url": "https://arxiv.org/pdf/2604.13756v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.13756v1",
-      "published": "2026-04-15T11:41:20Z",
-      "updated": "2026-04-15T11:41:20Z",
-      "categories": [
-        "cs.CL",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Beyond Arrow's Impossibility: Fairness as an Emergent Property of Multi-Agent Collaboration",
-      "authors": [
-        "Sayan Kumar Chaki",
-        "Antoine Gourru",
-        "Julien Velcin"
-      ],
-      "abstract": "Fairness in language models is typically studied as a property of a single, centrally optimized model. As large language models become increasingly agentic, we propose that fairness emerges through interaction and exchange. We study this via a controlled hospital triage framework in which two agents negotiate over three structured debate rounds. One agent is aligned to a specific ethical framework via retrieval-augmented generation (RAG), while the other is either unaligned or adversarially prompted to favor demographic groups over clinical need. We find that alignment systematically shapes negotiation strategies and allocation patterns, and that neither agent's allocation is ethically adequate in isolation, yet their joint final allocation can satisfy fairness criteria that neither would have reached alone. Aligned agents partially moderate bias through contestation rather than override, acting as corrective patches that restore access for marginalized groups without fully converting a biased counterpart. We further observe that even explicitly aligned agents exhibit intrinsic biases toward certain frameworks, consistent with known left-leaning tendencies in LLMs. We connect these limits to Arrow's Impossibility Theorem: no aggregation mechanism can simultaneously satisfy all desiderata of collective rationality, and multi-agent deliberation navigates rather than resolves this constraint. Our results reposition fairness as an emergent, procedural property of decentralized agent interaction, and the system rather than the individual agent as the appropriate unit of evaluation.",
-      "pdf_url": "https://arxiv.org/pdf/2604.13705v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.13705v1",
-      "published": "2026-04-15T10:34:35Z",
-      "updated": "2026-04-15T10:34:35Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.GT",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "Enhancing Reinforcement Learning for Radiology Report Generation with Evidence-aware Rewards and Self-correcting Preference Learning",
-      "authors": [
-        "Qin Zhou",
-        "Guoyan Liang",
-        "Qianyi Yang",
-        "Jingyuan Chen",
-        "Sai Wu",
-        "Chang Yao",
-        "Zhe Wang"
-      ],
-      "abstract": "Recent reinforcement learning (RL) approaches have advanced radiology report generation (RRG), yet two core limitations persist: (1) report-level rewards offer limited evidence-grounded guidance for clinical faithfulness; and (2) current methods lack an explicit self-improving mechanism to align with clinical preference. We introduce clinically aligned Evidence-aware Self-Correcting Reinforcement Learning (ESC-RL), comprising two key components. First, a Group-wise Evidence-aware Alignment Reward (GEAR) delivers group-wise, evidence-aware feedback. GEAR reinforces consistent grounding for true positives, recovers missed findings for false negatives, and suppresses unsupported content for false positives. Second, a Self-correcting Preference Learning (SPL) strategy automatically constructs a reliable, disease-aware preference dataset from multiple noisy observations and leverages an LLM to synthesize refined reports without human supervision. ESC-RL promotes clinically faithful, disease-aligned reward and supports continual self-improvement during training. Extensive experiments on two public chest X-ray datasets demonstrate consistent gains and state-of-the-art performance.",
-      "pdf_url": "https://arxiv.org/pdf/2604.13598v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.13598v1",
-      "published": "2026-04-15T08:08:06Z",
-      "updated": "2026-04-15T08:08:06Z",
-      "categories": [
-        "cs.LG",
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "Using reasoning LLMs to extract SDOH events from clinical notes",
-      "authors": [
-        "Ertan Doganl",
-        "Kunyu Yu",
-        "Yifan Peng"
-      ],
-      "abstract": "Social Determinants of Health (SDOH) refer to environmental, behavioral, and social conditions that influence how individuals live, work, and age. SDOH have a significant impact on personal health outcomes, and their systematic identification and management can yield substantial improvements in patient care. However, SDOH information is predominantly captured in unstructured clinical notes within electronic health records, which limits its direct use as machine-readable entities. To address this issue, researchers have employed Natural Language Processing (NLP) techniques using pre-trained BERT-based models, demonstrating promising performance but requiring sophisticated implementation and extensive computational resources. In this study, we investigated prompt engineering strategies for extracting structured SDOH events utilizing LLMs with advanced reasoning capabilities. Our method consisted of four modules: 1) developing concise and descriptive prompts integrated with established guidelines, 2) applying few-shot learning with carefully curated examples, 3) using a self-consistency mechanism to ensure robust outputs, and 4) post-processing for quality control. Our approach achieved a micro-F1 score of 0.866, demonstrating competitive performance compared to the leading models. The results demonstrated that LLMs with reasoning capabilities are effective solutions for SDOH event extraction, offering both implementation simplicity and strong performance.",
-      "pdf_url": "https://arxiv.org/pdf/2604.13502v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.13502v1",
-      "published": "2026-04-15T05:40:24Z",
-      "updated": "2026-04-15T05:40:24Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

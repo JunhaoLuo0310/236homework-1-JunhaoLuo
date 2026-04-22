@@ -1,8 +1,78 @@
 {
-  "generated_at_utc": "2026-04-21T03:24:19.067032Z",
+  "generated_at_utc": "2026-04-22T03:22:23.233599Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Cross-Model Consistency of AI-Generated Exercise Prescriptions: A Repeated Generation Study Across Three Large Language Models",
+      "authors": [
+        "Kihyuk Lee"
+      ],
+      "abstract": "This study compared repeated generation consistency of exercise prescription outputs across three large language models (LLMs), specifically GPT-4.1, Claude Sonnet 4.6, and Gemini 2.5 Flash, under temperature=0 conditions. Each model generated prescriptions for six clinical scenarios 20 times, yielding 360 total outputs analyzed across four dimensions: semantic similarity, output reproducibility, FITT classification, and safety expression. Mean semantic similarity was highest for GPT-4.1 (0.955), followed by Gemini 2.5 Flash (0.950) and Claude Sonnet 4.6 (0.903), with significant inter-model differences confirmed (H = 458.41, p < .001). Critically, these scores reflected fundamentally different generative behaviors: GPT-4.1 produced entirely unique outputs (100%) with stable semantic content, while Gemini 2.5 Flash showed pronounced output repetition (27.5% unique outputs), indicating that its high similarity score derived from text duplication rather than consistent reasoning. Identical decoding settings thus yielded fundamentally different consistency profiles, a distinction that single-output evaluations cannot capture. Safety expression reached ceiling levels across all models, confirming its limited utility as a differentiating metric. These results indicate that model selection constitutes a clinical rather than merely technical decision, and that output behavior under repeated generation conditions should be treated as a core criterion for reliable deployment of LLM-based exercise prescription systems.",
+      "pdf_url": "https://arxiv.org/pdf/2604.19598v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.19598v1",
+      "published": "2026-04-21T15:51:46Z",
+      "updated": "2026-04-21T15:51:46Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Can Continual Pre-training Bridge the Performance Gap between General-purpose and Specialized Language Models in the Medical Domain?",
+      "authors": [
+        "Niclas Doll",
+        "Jasper Schulze Buschhoff",
+        "Shalaka Satheesh",
+        "Hammam Abdelwahab",
+        "H\u00e9ctor Allende-Cid",
+        "Katrin Klug"
+      ],
+      "abstract": "This paper narrows the performance gap between small, specialized models and significantly larger general-purpose models through domain adaptation via continual pre-training and merging. We address the scarcity of specialized non-English data by constructing a high-quality German medical corpus (FineMed-de) from FineWeb2. This corpus is used to continually pre-train and merge three well-known LLMs (ranging from $7B$ to $24B$ parameters), creating the DeFineMed model family. A comprehensive evaluation confirms that specialization dramatically enhances $7B$ model performance on German medical benchmarks. Furthermore, the pairwise win-rate analysis of the Qwen2.5-based models demonstrates an approximately $3.5$-fold increase in the win-rate against the much larger Mistral-Small-24B-Instruct through domain adaptation. This evidence positions specialized $7B$ models as a competitive, resource-efficient solution for complex medical instruction-following tasks. While model merging successfully restores instruction-following abilities, a subsequent failure mode analysis reveals inherent trade-offs, including the introduction of language mixing and increased verbosity, highlighting the need for more targeted fine-tuning in future work. This research provides a robust, compliant methodology for developing specialized LLMs, serving as the foundation for practical use in German-speaking healthcare contexts.",
+      "pdf_url": "https://arxiv.org/pdf/2604.19394v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.19394v1",
+      "published": "2026-04-21T12:19:48Z",
+      "updated": "2026-04-21T12:19:48Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Beyond Semantic Similarity: A Component-Wise Evaluation Framework for Medical Question Answering Systems with Health Equity Implications",
+      "authors": [
+        "Abu Noman Md Sakib",
+        "Md. Main Oddin Chisty",
+        "Zijie Zhang"
+      ],
+      "abstract": "The use of Large Language Models (LLMs) to support patients in addressing medical questions is becoming increasingly prevalent. However, most of the measures currently used to evaluate the performance of these models in this context only measure how closely a model's answers match semantically, and therefore do not provide a true indication of the model's medical accuracy or of the health equity risks associated with it. To address these shortcomings, we present a new evaluation framework for medical question answering called VB-Score (Verification-Based Score) that provides a separate evaluation of the four components of entity recognition, semantic similarity, factual consistency, and structured information completeness for medical question-answering models. We perform rigorous reviews of the performance of three well-known and widely used LLMs on 48 public health-related topics taken from high-quality, authoritative information sources. Based on our analyses, we discover a major discrepancy between the models' semantic and entity accuracy. Our assessments of the performance of all three models show that each of them has almost uniformly severe performance failures when evaluated against our criteria. Our findings indicate alarming performance disparities across various public health topics, with most of the models exhibiting 13.8% lower performance (compared to an overall average) for all the public health topics that relate to chronic conditions that occur in older and minority populations, which indicates the existence of what's known as condition-based algorithmic discrimination. Our findings also demonstrate that prompt engineering alone does not compensate for basic architectural limitations on how these models perform in extracting medical entities and raise the question of whether semantic evaluation alone is a sufficient measure of medical AI safety.",
+      "pdf_url": "https://arxiv.org/pdf/2604.19281v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.19281v1",
+      "published": "2026-04-21T09:50:08Z",
+      "updated": "2026-04-21T09:50:08Z",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Handling and Interpreting Missing Modalities in Patient Clinical Trajectories via Autoregressive Sequence Modeling",
+      "authors": [
+        "Andrew Wang",
+        "Ellie Pavlick",
+        "Ritambhara Singh"
+      ],
+      "abstract": "An active challenge in developing multimodal machine learning (ML) models for healthcare is handling missing modalities during training and deployment. As clinical datasets are inherently temporal and sparse in terms of modality presence, capturing the underlying predictive signal via diagnostic multimodal ML models while retaining model explainability remains an ongoing challenge. In this work, we address this by re-framing clinical diagnosis as an autoregressive sequence modeling task, utilizing causal decoders from large language models (LLMs) to model a patient's multimodal trajectory. We first introduce a missingness-aware contrastive pre-training objective that integrates multiple modalities in datasets with missingness in a shared latent space. We then show that autoregressive sequence modeling with transformer-based architectures outperforms baselines on the MIMIC-IV and eICU fine-tuning benchmarks. Finally, we use interpretability techniques to move beyond performance boosts and find that across various patient stays, removing modalities leads to divergent behavior that our contrastive pre-training mitigates. By abstracting clinical diagnosis as sequence modeling and interpreting patient stay trajectories, we develop a framework to profile and handle missing modalities while addressing the canonical desideratum of safe, transparent clinical AI.",
+      "pdf_url": "https://arxiv.org/pdf/2604.18753v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.18753v1",
+      "published": "2026-04-20T18:55:56Z",
+      "updated": "2026-04-20T18:55:56Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "MedProbeBench: Systematic Benchmarking at Deep Evidence Integration for Expert-level Medical Guideline",
       "authors": [
@@ -231,73 +301,6 @@
       "categories": [
         "cs.CL",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "PsychBench: Auditing Epidemiological Fidelity in Large Language Model Mental Health Simulations",
-      "authors": [
-        "Patrick Keough"
-      ],
-      "abstract": "Large language models are increasingly deployed to simulate patients for clinical training, research, and mental health tools, yet population-level validity remains largely untested. We introduce PsychBench, the first epidemiological audit of LLM patient simulation: 28,800 profiles from four frontier models (GPT-4o-mini, DeepSeek-V3, Gemini-3-Flash, GLM-4.7) evaluated against NHANES and NESARC-III baselines across 120 intersectional cohorts. The central finding is a coherence-fidelity dissociation: models produce clinically plausible individuals while misrepresenting the populations they are drawn from. Variance compression ranges from 14 percent (GLM-4.7) to 62 percent (DeepSeek-V3), eliminating the distributional tails of clinical reality. Despite test-retest correlations above r = 0.90, 36.66 percent of cases cross diagnostic thresholds between runs. Symptom correlation matrices diverge across demographic groups beyond split-half noise, with transgender populations diverging three to five times more than racial differences. Calibration bias is systematic and asymmetric. Models overestimate depression severity for most groups by 3.6 to 6.1 points (Cohen d = 1.13 to 1.91), consistent with training on clinical corpora with elevated base rates. For transgender women the direction inverts: models capture only 8 to 46 percent of documented minority stress elevation, yielding a -5.42 residual (d = -1.55). Models also attribute irritability to Black men and fatigue to women beyond matched controls, encoding racialized and gendered assumptions. Patterns replicate across US and Chinese architectures, indicating failures tied to current training paradigms rather than isolated implementations. For most users, LLM mental health tools risk pathologizing ordinary distress; for transgender users, algorithmic erasure of genuine need. The patients look right. They do not represent real populations.",
-      "pdf_url": "https://arxiv.org/pdf/2604.17359v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.17359v1",
-      "published": "2026-04-19T10:05:25Z",
-      "updated": "2026-04-19T10:05:25Z",
-      "categories": [
-        "cs.CY",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Neuro-Symbolic Resolution of Recommendation Conflicts in Multimorbidity Clinical Guidelines",
-      "authors": [
-        "Shiyao Xie",
-        "Jian Du"
-      ],
-      "abstract": "Clinical guidelines, typically developed by independent specialty societies, inherently exhibit substantial fragmentation, redundancy, and logical contradiction. These inconsistencies, particularly when applied to patients with multimorbidity, not only cause cognitive dissonance for clinicians but also introduce catastrophic noise into AI systems, rendering the standard Retrieval-Augmented Generation (RAG) system fragile and prone to hallucination. To address this fundamental reliability crisis, we introduce a Neuro-Symbolic framework that automates the detection of recommendation redundancies and conflicts. Our pipeline employs a multi-agent system to translate unstructured clinical natural language into rigorous symbolic logic language, which is then verified by a Satisfiability (SAT) solver. By formulating a hierarchical taxonomy of logical rule interactions, we identify a critical category termed Local Conflict - a decision conflict arising from the intersection of comorbidities. Evaluating our system on a curated benchmark of 12 authoritative SGLT2 inhibitor guidelines, we reveal that 90.6% of conflicts are Local, a structural complexity that single-disease guidelines fail to address. While state-of-the-art LLMs fail in detecting these conflicts, our neuro-symbolic approach achieves an F1 score of 0.861. This work demonstrates that logical verification must precede retrieval, establishing a new technical standard for automated knowledge coordination in medical AI.",
-      "pdf_url": "https://arxiv.org/pdf/2604.17340v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.17340v1",
-      "published": "2026-04-19T09:22:17Z",
-      "updated": "2026-04-19T09:22:17Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Calibrated? Not for Everyone: How Sexual Orientation and Religious Markers Distort LLM Accuracy and Confidence in Medical QA",
-      "authors": [
-        "Alberto Testoni",
-        "Iacer Calixto"
-      ],
-      "abstract": "Safe clinical deployment of Large Language Models (LLMs) requires not only high accuracy but also robust uncertainty calibration to ensure models defer to clinicians when appropriate. Our paper investigates how social descriptors of a patient (specifically sexual orientation and religious affiliation) distort these uncertainty signals and model accuracy. Evaluating nine general-purpose and biomedical LLMs on 2,364 medical questions and their counterfactual variants, we demonstrate that identity markers cause a \"calibration crisis\". \"Homosexual\" markers consistently trigger performance drops, and intersectional identities produce idiosyncratic, non-additive harms to calibration. Moreover, a clinician-validated case study in an open-ended generation setting confirms that these failures are not an artifact of the multiple-choice format. Our results demonstrate that the presence of social identity cues does not merely shift predictions; it affects the reliability of confidence signals, posing a significant risk to equitable care and safe deployment in confidence-based clinical workflows.",
-      "pdf_url": "https://arxiv.org/pdf/2604.17316v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.17316v1",
-      "published": "2026-04-19T08:11:45Z",
-      "updated": "2026-04-19T08:11:45Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MedPRMBench: A Fine-grained Benchmark for Process Reward Models in Medical Reasoning",
-      "authors": [
-        "Lingyan Wu",
-        "Xiang Zheng",
-        "Weiqi Zhai",
-        "Wei Wang",
-        "Xuan Ren",
-        "Zifan Zhang",
-        "Hu Wei",
-        "Bing Zhao"
-      ],
-      "abstract": "Process-Level Reward Models (PRMs) are essential for guiding complex reasoning in large language models, yet existing PRM benchmarks cover only general domains such as mathematics, failing to address medical reasoning -- which is uniquely characterized by safety criticality, knowledge intensity, and diverse error patterns. Without a reliable medical PRM evaluation framework, we cannot quantify models' error detection capabilities in clinical reasoning, leaving their safety in real-world healthcare applications unverified. We propose MedPRMBench, the first process-level reward model benchmark for the medical domain. Built through a three-phase pipeline based on Clinical Reasoning Blueprints (CRBs), MedPRMBench systematically generates high-quality evaluation data from seven medical QA sources, covering 14 fine-grained error types across three categories (Simplicity, Soundness, and Sensitivity) with the first 4-level severity grading system to quantify clinical impact. The benchmark comprises 6{,}500 questions with 13{,}000 reasoning chains and 113{,}910 step-level labels, plus 6{,}879 questions for training. Our medical PRM baseline achieves an 87.1\\% overall PRMScore -- substantially surpassing all baselines -- and serves as a plug-and-play verifier that improves downstream medical QA accuracy by 3.2--6.7 percentage points. Systematic evaluation spanning proprietary frontier models, open-source reasoning models, and medical-specialized models reveals critical weaknesses in current models' medical reasoning error detection capabilities, providing clear directions for future PRM improvement.",
-      "pdf_url": "https://arxiv.org/pdf/2604.17282v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.17282v1",
-      "published": "2026-04-19T06:44:07Z",
-      "updated": "2026-04-19T06:44:07Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

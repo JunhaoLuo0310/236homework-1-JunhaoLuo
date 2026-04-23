@@ -1,8 +1,215 @@
 {
-  "generated_at_utc": "2026-04-22T03:22:23.233599Z",
+  "generated_at_utc": "2026-04-23T03:26:09.177487Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Can \"AI\" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs",
+      "authors": [
+        "Mariano Barone",
+        "Francesco Di Serio",
+        "Roberto Moio",
+        "Marco Postiglione",
+        "Giuseppe Riccio",
+        "Antonio Romano",
+        "Vincenzo Moscato"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly deployed in healthcare, yet their communicative alignment with clinical standards remains insufficiently quantified. We conduct a multidimensional evaluation of general-purpose and domain-specialized LLMs across structured medical explanations and real-world physician-patient interactions, analyzing semantic fidelity, readability, and affective resonance. Baseline models amplify affective polarity relative to physicians (Very Negative: 43.14-45.10% vs. 37.25%) and, in larger architectures such as GPT-5 and Claude, produce substantially higher linguistic complexity (FKGL up to 16.91-17.60 vs. 11.47-12.50 in physician-authored responses). Empathy-oriented prompting reduces extreme negativity and lowers grade-level complexity (up to -6.87 FKGL points for GPT-5) but does not significantly increase semantic fidelity. Collaborative rewriting yields the strongest overall alignment. Rephrase configurations achieve the highest semantic similarity to physician answers (up to mean = 0.93) while consistently improving readability and reducing affective extremity. Dual stakeholder evaluation shows that no model surpasses physicians on epistemic criteria, whereas patients consistently prefer rewritten variants for clarity and emotional tone. These findings suggest that LLMs function most effectively as collaborative communication enhancers rather than replacements for clinical expertise.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20791v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.20791v1",
+      "published": "2026-04-22T17:17:27Z",
+      "updated": "2026-04-22T17:17:27Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation",
+      "authors": [
+        "Serhii Zabolotnii"
+      ],
+      "abstract": "Automatically filling Case Report Forms (CRFs) from clinical notes is challenging due to noisy language, strict output contracts, and the high cost of false positives. We describe our CL4Health 2026 submission for Dyspnea CRF filling (134 items) using a contract-driven two-stage design grounded in Schema-Guided Reasoning (SGR). The key task property is extreme sparsity: the majority of fields are unknown, and official scoring penalizes both empty values and unsupported predictions. We shift from a single-step \"LLM predicts 134 fields\" approach to a decomposition where (i) Stage 1 produces a stable SGR-style JSON summary with exactly 9 domain keys, and (ii) Stage 2 is a fully deterministic, 0-LLM compiler that parses the Stage 1 summary, canonicalizes item names, normalizes predictions to the official controlled vocabulary, applies evidence-gated false-positive filters, and expands the output into the required 134-item format. On the dev80 split, the best teacher configuration achieves macro-F1 0.6543 (EN) and 0.6905 (IT); on the hidden test200, the submitted English variant scores 0.63 on Codabench. The pipeline is language-agnostic: Italian results match or exceed English with no language-specific engineering.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20560v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.20560v1",
+      "published": "2026-04-22T13:42:00Z",
+      "updated": "2026-04-22T13:42:00Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Effects of Cross-lingual Evidence in Multilingual Medical Question Answering",
+      "authors": [
+        "Anar Yeginbergen",
+        "Maite Oronoz",
+        "Rodrigo Agerri"
+      ],
+      "abstract": "This paper investigates Multilingual Medical Question Answering across high-resource (English, Spanish, French, Italian) and low-resource (Basque, Kazakh) languages. We evaluate three types of external evidence sources across models of varying size: curated repositories of specialized medical knowledge, web-retrieved content, and explanations from LLM's parametric knowledge. Moreover, we conduct experiments with multilingual, monolingual and cross-lingual retrieval. Our results demonstrate that larger models consistently achieve superior performance in English across baseline evaluations. When incorporating external knowledge, web-retrieved data in English proves most beneficial for high-resource languages. Conversely, for low-resource languages, the most effective strategy combines retrieval in both English and the target language, achieving comparable accuracy to high-resource language results. These findings challenge the assumption that external knowledge systematically improves performance and reveal that effective strategies depend on both the source of language resources and on model scale. Furthermore, specialized medical knowledge sources such as PubMed are limited: while they provide authoritative expert knowledge, they lack adequate multilingual coverage",
+      "pdf_url": "https://arxiv.org/pdf/2604.20531v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.20531v1",
+      "published": "2026-04-22T13:09:41Z",
+      "updated": "2026-04-22T13:09:41Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Graph2Counsel: Clinically Grounded Synthetic Counseling Dialogue Generation from Client Psychological Graphs",
+      "authors": [
+        "Aishik Mandal",
+        "Hiba Arnaout",
+        "Clarissa W. Ong",
+        "Juliet Bockhorst",
+        "Kate Sheehan",
+        "Rachael Moldow",
+        "Tanmoy Chakraborty",
+        "Iryna Gurevych"
+      ],
+      "abstract": "Rising demand for mental health support has increased interest in using Large Language Models (LLMs) for counseling. However, adapting LLMs to this high-risk safety-critical domain is hindered by the scarcity of real-world counseling data due to privacy constraints. Synthetic datasets provide a promising alternative, but existing approaches often rely on unstructured or semi-structured text inputs and overlook structural dependencies between a client's cognitive, emotional, and behavioral states, often producing psychologically inconsistent interactions and reducing data realism and quality. We introduce Graph2Counsel, a framework for generating synthetic counseling sessions grounded in Client Psychological Graphs (CPGs) that encode relationships among clients' thoughts, emotions, and behaviors. Graph2Counsel employs a structured prompting pipeline guided by counselor strategies and CPG, and explores prompting strategies including CoT (Wei et al., 2022) and Multi-Agent Feedback (Li et al., 2025a). Graph2Counsel produces 760 sessions from 76 CPGs across diverse client profiles. In expert evaluation, our dataset outperforms prior datasets on specificity, counselor competence, authenticity, conversational flow, and safety, with substantial inter-annotator agreement (Krippendorff's $\u03b1$ = 0.70). Fine-tuning an open-source model on this dataset improves performance on CounselingBench (Nguyen et al., 2025) and CounselBench (Li et al., 2025b), showing downstream utility. We also make our code and data public.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20382v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.20382v1",
+      "published": "2026-04-22T09:31:56Z",
+      "updated": "2026-04-22T09:31:56Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "X-PCR: A Benchmark for Cross-modality Progressive Clinical Reasoning in Ophthalmic Diagnosis",
+      "authors": [
+        "Gui Wang",
+        "Zehao Zhong",
+        "YongSong Zhou",
+        "Yudong Li",
+        "Ende Wu",
+        "Wooi Ping Cheah",
+        "Rong Qu",
+        "Jianfeng Ren",
+        "Linlin Shen"
+      ],
+      "abstract": "Despite significant progress in Multi-modal Large Language Models (MLLMs), their clinical reasoning capacity for multi-modal diagnosis remains largely unexamined. Current benchmarks, mostly single-modality data, can't evaluate progressive reasoning and cross-modal integration essential for clinical practice. We introduce the Cross-Modality Progressive Clinical Reasoning (X-PCR) benchmark, the first comprehensive evaluation of MLLMs through a complete ophthalmology diagnostic workflow, with two reasoning tasks: 1) a six-stage progressive reasoning chain spanning image quality assessment to clinical decision-making, and 2) a cross-modality reasoning task integrating six imaging modalities. The benchmark comprises 26,415 images and 177,868 expert-verified VQA pairs curated from 51 public datasets, covering 52 ophthalmic diseases. Evaluation of 21 MLLMs reveals critical gaps in progressive reasoning and cross-modal integration. Dataset and code: https://github.com/CVI-SZU/X-PCR.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20350v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.20350v1",
+      "published": "2026-04-22T08:52:50Z",
+      "updated": "2026-04-22T08:52:50Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Surrogate modeling for interpreting black-box LLMs in medical predictions",
+      "authors": [
+        "Changho Han",
+        "Songsoo Kim",
+        "Dong Won Kim",
+        "Leo Anthony Celi",
+        "Jaewoong Kim",
+        "SungA Bae",
+        "Dukyong Yoon"
+      ],
+      "abstract": "Large language models (LLMs), trained on vast datasets, encode extensive real-world knowledge within their parameters, yet their black-box nature obscures the mechanisms and extent of this encoding. Surrogate modeling, which uses simplified models to approximate complex systems, can offer a path toward better interpretability of black-box models. We propose a surrogate modeling framework that quantitatively explains LLM-encoded knowledge. For a specific hypothesis derived from domain knowledge, this framework approximates the latent LLM knowledge space using observable elements (input-output pairs) through extensive prompting across a comprehensive range of simulated scenarios. Through proof-of-concept experiments in medical predictions, we demonstrate our framework's effectiveness in revealing the extent to which LLMs \"perceive\" each input variable in relation to the output. Particularly, given concerns that LLMs may perpetuate inaccuracies and societal biases embedded in their training data, our experiments using this framework quantitatively revealed both associations that contradict established medical knowledge and the persistence of scientifically refuted racial assumptions within LLM-encoded knowledge. By disclosing these issues, our framework can act as a red-flag indicator to support the safe and reliable application of these models.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20331v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.20331v1",
+      "published": "2026-04-22T08:26:23Z",
+      "updated": "2026-04-22T08:26:23Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "SurgCoT: Advancing Spatiotemporal Reasoning in Surgical Videos through a Chain-of-Thought Benchmark",
+      "authors": [
+        "Gui Wang",
+        "YongSong Zhou",
+        "Kaijun Deng",
+        "Wooi Ping Cheah",
+        "Rong Qu",
+        "Jianfeng Ren",
+        "Linlin Shen"
+      ],
+      "abstract": "Fine-grained spatiotemporal reasoning on surgical videos is critical, yet the capabilities of Multi-modal Large Language Models (MLLMs) in this domain remain largely unexplored. To bridge this gap, we introduce SurgCoT, a unified benchmark for evaluating chain-of-thought (CoT) reasoning in MLLMs across 7 surgical specialties and 35 diverse procedures. SurgCoT assesses five core reasoning dimensions: Causal Action Ordering, Cue-Action Alignment, Affordance Mapping, Micro-Transition Localization, and Anomaly Onset Tracking, through a structured CoT framework with an intensive annotation protocol (Question-Option-Knowledge-Clue-Answer), where the Knowledge field provides essential background context and Clue provides definitive spatiotemporal evidence. Evaluation of 10 leading MLLMs shows: 1) commercial models outperform open-source and medical-specialized variants; 2) significant gaps exist in surgical CoT reasoning; 3) SurgCoT enables effective evaluation and enhances progressive spatiotemporal reasoning. SurgCoT provides a reproducible testbed to narrow the gap between MLLM capabilities and clinical reasoning demands. Code: https://github.com/CVI-SZU/SurgCoT.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20319v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.20319v1",
+      "published": "2026-04-22T08:18:21Z",
+      "updated": "2026-04-22T08:18:21Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "From Fuzzy to Formal: Scaling Hospital Quality Improvement with AI",
+      "authors": [
+        "Patrick Vossler",
+        "Jean Feng",
+        "Venkat Sivaraman",
+        "Robert Gallo",
+        "Hemal Kanzaria",
+        "Dana Freiser",
+        "Christopher Ross",
+        "Amy Ou",
+        "James Marks",
+        "Susan Ehrlich",
+        "Christopher Peabody",
+        "Lucas Zier"
+      ],
+      "abstract": "Hospital Quality Improvement (QI) plays a critical role in optimizing healthcare delivery by translating high-level hospital goals into actionable solutions. A critical step of QI is to identify the key modifiable contributing factors, a process we call QI factor discovery, typically through expert-driven semi-structured qualitative tools like fishbone diagrams, chart reviews, and Lean Healthcare methods. AI has the potential to transform and accelerate QI factor discovery, which is traditionally time- and resource-intensive and limited in reproducibility and auditability. Nevertheless, current AI alignment methods assume the task is well-defined, whereas QI factor discovery is an exploratory, fuzzy, and iterative sense-making process that relies on complex implicit expert judgments. To design an AI pipeline that formalizes the QI process while preserving its exploratory components, we propose viewing the task as learning not only LLM prompts but also the overarching natural-language specifications. In particular, we map QI factor discovery to steps of the classical AI/ML development process (problem formalization, model learning, and model validation) where the specifications are tunable hyperparameters. Domain experts and AI agents iteratively refine both the overarching specifications and AI pipeline until AI extractions are concordant with expert annotations and aligned with clinical objectives. We applied this \"Human-AI Spec-Solution Co-optimization\" framework at an urban safety-net hospital to identify factors driving prolonged length of stay and unplanned 30-day readmissions. The resulting AI-for-QI pipelines achieved $\\ge 70\\%$ concordance with expert annotations. Compared to prior manual Lean analyses, the AI pipeline was substantially more efficient, recovered previous findings, surfaced new modifiable factors, and produced auditable reasoning traces.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20055v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.20055v1",
+      "published": "2026-04-21T23:31:48Z",
+      "updated": "2026-04-21T23:31:48Z",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Statistics, Not Scale: Modular Medical Dialogue with Bayesian Belief Engine",
+      "authors": [
+        "Yusuf Kesmen",
+        "Fay Elhassan",
+        "Jiayi Ma",
+        "Julien Stalhandske",
+        "David Sasu",
+        "Alexandra Kulinkina",
+        "Akhil Arora",
+        "Lars Klein",
+        "Mary-Anne Hartley"
+      ],
+      "abstract": "Large language models are increasingly deployed as autonomous diagnostic agents, yet they conflate two fundamentally different capabilities: natural-language communication and probabilistic reasoning. We argue that this conflation is an architectural flaw, not an engineering shortcoming. We introduce BMBE (Bayesian Medical Belief Engine), a modular diagnostic dialogue framework that enforces a strict separation between language and reasoning: an LLM serves only as a sensor, parsing patient utterances into structured evidence and verbalising questions, while all diagnostic inference resides in a deterministic, auditable Bayesian engine. Because patient data never enters the LLM, the architecture is private by construction; because the statistical backend is a standalone module, it can be replaced per target population without retraining. This separation yields three properties no autonomous LLM can offer: calibrated selective diagnosis with a continuously adjustable accuracy-coverage tradeoff, a statistical separation gap where even a cheap sensor paired with the engine outperforms a frontier standalone model from the same family at a fraction of the cost, and robustness to adversarial patient communication styles that cause standalone doctors to collapse. We validate across empirical and LLM-generated knowledge bases against frontier LLMs, confirming the advantage is architectural, not informational.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20022v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.20022v1",
+      "published": "2026-04-21T21:59:57Z",
+      "updated": "2026-04-21T21:59:57Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Infection-Reasoner: A Compact Vision-Language Model for Wound Infection Classification with Evidence-Grounded Clinical Reasoning",
+      "authors": [
+        "Palawat Busaranuvong",
+        "Reza Saadati Fard",
+        "Emmanuel Agu",
+        "Deepak Kumar",
+        "Shefalika Gautam",
+        "Bengisu Tulu",
+        "Diane Strong"
+      ],
+      "abstract": "Assessing chronic wound infection from photographs is challenging because visual appearance varies across wound etiologies, anatomical locations, and imaging conditions. Prior image-based deep learning methods have mainly focused on classification with limited interpretability, despite the need for evidence-grounded explanations to support point-of-care decision making. We present Infection-Reasoner, a compact 4B-parameter reasoning vision-language model for chronic wound infection classification and rationale generation. To address the scarcity of expert-labeled wound images with reasoning annotations, Infection-Reasoner is trained using a two-stage pipeline: (1) reasoning distillation, in which GPT-5.1 generates chain-of-thought rationales for unlabeled wound images to initialize wound-specific reasoning in a smaller student model (Qwen3-VL-4B-Thinking), and (2) reinforcement learning post-training with Group Relative Policy Optimization on a small labeled infection dataset to refine classification reasoning. On a held-out heterogeneous wound dataset, Infection-Reasoner achieved 86.8\\% accuracy, 86.4\\% sensitivity, and 87.1\\% specificity, outperforming several strong baselines, including GPT-5.1. Rationale quality was further evaluated using both multimodal large language model (MLLM) judges and wound expert review. Across four MLLM judges, visual-support agreement scores ranged from 0.722 to 0.903, while expert review rated 61.8\\% of rationales as Correct and 32.4\\% as Partially Correct.",
+      "pdf_url": "https://arxiv.org/pdf/2604.19937v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.19937v1",
+      "published": "2026-04-21T19:28:08Z",
+      "updated": "2026-04-21T19:28:08Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Cross-Model Consistency of AI-Generated Exercise Prescriptions: A Repeated Generation Study Across Three Large Language Models",
       "authors": [
@@ -106,201 +313,6 @@
       "updated": "2026-04-20T15:37:46Z",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Toward Zero-Egress Psychiatric AI: On-Device LLM Deployment for Privacy-Preserving Mental Health Decision Support",
-      "authors": [
-        "Eranga Bandara",
-        "Asanga Gunaratna",
-        "Ross Gore",
-        "Anita H. Clayton",
-        "Christopher K. Rhea",
-        "Sachini Rajapakse",
-        "Isurunima Kularathna",
-        "Sachin Shetty",
-        "Ravi Mukkamala",
-        "Xueping Liang",
-        "Preston Samuel",
-        "Atmaram Yarlagadda"
-      ],
-      "abstract": "Privacy represents one of the most critical yet underaddressed barriers to AI adoption in mental healthcare -- particularly in high-sensitivity operational environments such as military, correctional, and remote healthcare settings, where the risk of patient data exposure can deter help-seeking behavior entirely. Existing AI-enabled psychiatric decision support systems predominantly rely on cloud-based inference pipelines, requiring sensitive patient data to leave the device and traverse external servers, creating unacceptable privacy and security risks in these contexts. In this paper, we propose a zero-egress, on-device AI platform for privacy-preserving psychiatric decision support, deployed as a cross-platform mobile application. The proposed system extends our prior work on fine-tuned LLM consortiums for psychiatric diagnosis standardization by fundamentally re-architecting the inference pipeline for fully local execution -- ensuring that no patient data is transmitted to, processed by, or stored on any external server at any stage. The platform integrates a consortium of three lightweight, fine-tuned, and quantized open-source LLMs -- Gemma, Phi-3.5-mini, and Qwen2 -- selected for their compact architectures and proven efficiency on resource-constrained mobile hardware. An on-device orchestration layer coordinates ensemble inference and consensus-based diagnostic reasoning, producing DSM-5-aligned assessments for conditions. The platform is designed to assist clinicians with differential diagnosis and evidence-linked symptom mapping, as well as to support patient-facing self-screening with appropriate clinical safeguards. Initial evaluation demonstrates that the proposed zero-egress deployment achieves diagnostic accuracy comparable to its server-side predecessor while sustaining real-time inference latency on commodity mobile hardware.",
-      "pdf_url": "https://arxiv.org/pdf/2604.18302v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.18302v1",
-      "published": "2026-04-20T14:09:01Z",
-      "updated": "2026-04-20T14:09:01Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Region-Grounded Report Generation for 3D Medical Imaging: A Fine-Grained Dataset and Graph-Enhanced Framework",
-      "authors": [
-        "Cong Huy Nguyen",
-        "Son Dinh Nguyen",
-        "Guanlin Li",
-        "Tuan Dung Nguyen",
-        "Aditya Narayan Sankaran",
-        "Mai Huy Thong",
-        "Thanh Trung Nguyen",
-        "Mai Hong Son",
-        "Reza Farahbakhsh",
-        "Phi Le Nguyen",
-        "Noel Crespi"
-      ],
-      "abstract": "Automated medical report generation for 3D PET/CT imaging is fundamentally challenged by the high-dimensional nature of volumetric data and a critical scarcity of annotated datasets, particularly for low-resource languages. Current black-box methods map whole volumes to reports, ignoring the clinical workflow of analyzing localized Regions of Interest (RoIs) to derive diagnostic conclusions. In this paper, we bridge this gap by introducing VietPET-RoI, the first large-scale 3D PET/CT dataset with fine-grained RoI annotation for a low-resource language, comprising 600 PET/CT samples and 1,960 manually annotated RoIs, paired with corresponding clinical reports. Furthermore, to demonstrate the utility of this dataset, we propose HiRRA, a novel framework that mimics the professional radiologist diagnostic workflow by employing graph-based relational modules to capture dependencies between RoI attributes. This approach shifts from global pattern matching toward localized clinical findings. Additionally, we introduce new clinical evaluation metrics, namely RoI Coverage and RoI Quality Index, that measure both RoI localization accuracy and attribute description fidelity using LLM-based extraction. Extensive evaluation demonstrates that our framework achieves SOTA performance, surpassing existing models by 19.7% in BLEU and 4.7% in ROUGE-L, while achieving a remarkable 45.8% improvement in clinical metrics, indicating enhanced clinical reliability and reduced hallucination. Our code and dataset are available on GitHub.",
-      "pdf_url": "https://arxiv.org/pdf/2604.18145v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.18145v1",
-      "published": "2026-04-20T12:08:21Z",
-      "updated": "2026-04-20T12:08:21Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Can LLM-Generated Text Empower Surgical Vision-Language Pre-training?",
-      "authors": [
-        "Chengan Che",
-        "Chao Wang",
-        "Jiayuan Huang",
-        "Xinyue Chen",
-        "Luis C. Garcia-Peraza-Herrera"
-      ],
-      "abstract": "Recent advancements in self-supervised learning have led to powerful surgical vision encoders capable of spatiotemporal understanding. However, extending these visual foundations to multi-modal reasoning tasks is severely bottlenecked by the prohibitive cost of expert textual annotations. To overcome this scalability limitation, we introduce \\textbf{LIME}, a large-scale multi-modal dataset derived from open-access surgical videos using human-free, Large Language Model (LLM)-generated narratives. While LIME offers immense scalability, unverified generated texts may contain errors, including hallucinations, that could potentially lead to catastrophically degraded pre-trained medical priors in standard contrastive pipelines. To mitigate this, we propose \\textbf{SurgLIME}, a parameter-efficient Vision-Language Pre-training (VLP) framework designed to learn reliable cross-modal alignments using noisy narratives. SurgLIME preserves foundational medical priors using a LoRA-adapted dual-encoder architecture and introduces an automated confidence estimation mechanism that dynamically down-weights uncertain text during contrastive alignment. Evaluations on the AutoLaparo and Cholec80 benchmarks show that SurgLIME achieves competitive zero-shot cross-modal alignment while preserving the robust linear probing performance of the visual foundation model. Dataset, code, and models are publicly available at \\href{https://github.com/visurg-ai/SurgLIME}{https://github.com/visurg-ai/SurgLIME}.",
-      "pdf_url": "https://arxiv.org/pdf/2604.18134v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.18134v1",
-      "published": "2026-04-20T12:01:51Z",
-      "updated": "2026-04-20T12:01:51Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "First, Do No Harm (With LLMs): Mitigating Racial Bias via Agentic Workflows",
-      "authors": [
-        "Sihao Xing",
-        "Zaur Gouliev"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly used in clinical settings, raising concerns about racial bias in both generated medical text and clinical reasoning. Existing studies have identified bias in medical LLMs, but many focus on single models and give less attention to mitigation. This study uses the EU AI Act as a governance lens to evaluate five widely used LLMs across two tasks, namely synthetic patient-case generation and differential diagnosis ranking. Using race-stratified epidemiological distributions in the United States and expert differential diagnosis lists as benchmarks, we apply structured prompt templates and a two-part evaluation design to examine implicit and explicit racial bias. All models deviated from observed racial distributions in the synthetic case generation task, with GPT-4.1 showing the smallest overall deviation. In the differential diagnosis task, DeepSeek V3 produced the strongest overall results across the reported metrics. When embedded in an agentic workflow, DeepSeek V3 showed an improvement of 0.0348 in mean p-value, 0.1166 in median p-value, and 0.0949 in mean difference relative to the standalone model, although improvement was not uniform across every metric. These findings support multi-metric bias evaluation for AI systems used in medical settings and suggest that retrieval-based agentic workflows may reduce some forms of explicit bias in benchmarked diagnostic tasks. Detailed prompt templates, experimental datasets, and code pipelines are available on our GitHub.",
-      "pdf_url": "https://arxiv.org/pdf/2604.18038v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.18038v1",
-      "published": "2026-04-20T10:02:38Z",
-      "updated": "2026-04-20T10:02:38Z",
-      "categories": [
-        "cs.CY",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Employing General-Purpose and Biomedical Large Language Models with Advanced Prompt Engineering for Pharmacoepidemiologic Study Design",
-      "authors": [
-        "Xinyao Zhang",
-        "Nicole Sonne Heckmann",
-        "Manuela Del Castillo Suero",
-        "Francesco Paolo Speca",
-        "Maurizio Sessa"
-      ],
-      "abstract": "Background: The potential of large language models (LLMs) to automate and support pharmacoepidemiologic study design is an emerging area of interest, yet their reliability remains insufficiently characterized. General-purpose LLMs often display inaccuracies, while the comparative performance of specialized biomedical LLMs in this domain remains unknown. Methods: This study evaluated general-purpose LLMs (GPT-4o and DeepSeek-R1) versus biomedically fine-tuned LLMs (QuantFactory/Bio-Medical-Llama-3-8B-GGUF and Irathernotsay/qwen2-1.5B-medical_qa-Finetune) using 46 protocols (2018-2024) from the HMA-EMA Catalogue and Sentinel System. Performance was assessed across relevance, logic of justification, and ontology-code agreement across multiple coding systems using Least-to-Most (LTM) and Active Prompting strategies. Results: GPT-4o and DeepSeek-R1 paired with LTM prompting achieved the highest relevance and logic of justification scores, with GPT-4o-LTM reaching a median relevance score of 4 in 8 of 9 questions for HMA-EMA protocols. Biomedical LLMs showed lower relevance overall and frequently generated insufficient justification. All LLMs demonstrated limited proficiency in ontology-code mapping, although LTM provided the most consistent improvements in reasoning stability. Conclusion: Off-the-shelf general-purpose LLMs currently offer superior support for pharmacoepidemiologic design compared to biomedical LLMs. Prompt strategy strongly influenced LLM performance.",
-      "pdf_url": "https://arxiv.org/pdf/2604.17988v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.17988v1",
-      "published": "2026-04-20T09:10:30Z",
-      "updated": "2026-04-20T09:10:30Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Design and Evaluation of a Culturally Adapted Multimodal Virtual Agent for PTSD Screening",
-      "authors": [
-        "Cengiz Ozel",
-        "Waleed Nadeem",
-        "Samuel Potter",
-        "Yahya Bokhari",
-        "Bdour Alwuqaysi",
-        "Wejdan Alotaibi",
-        "Rahaf Fahad Alnufaie",
-        "Sabri Boughorbel",
-        "Abdulrhman Aljouie",
-        "Rakan Altasan",
-        "Ehsan Hoque"
-      ],
-      "abstract": "Post-traumatic stress disorder (PTSD) is highly prevalent yet chronically underreported among combat-exposed military personnel. This paper presents Molhim, a culturally adapted multimodal conversational AI platform that supports purpose-specific interactions through a configurable conversational pipeline consisting of session setup, real-time dialogue with a high-fidelity virtual avatar, and post-session analysis and feedback. In this work, we examine the PTSD screening configuration of the Molhim platform in a military healthcare context. The system employs a conversational avatar driven by a large language model, integrating real-time speech recognition, visual understanding of user input, text-to-speech synthesis, and a high-fidelity human avatar to support structured multi-turn dialogue and automated post-session analysis, including administration of the PTSD Checklist for DSM-5 (PCL-5). These findings suggest the feasibility of Molhim as a conversational platform for PTSD screening and highlight design considerations for socially cooperative human-AI systems in clinical environments.",
-      "pdf_url": "https://arxiv.org/pdf/2604.17871v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.17871v1",
-      "published": "2026-04-20T06:31:30Z",
-      "updated": "2026-04-20T06:31:30Z",
-      "categories": [
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "MHSafeEval: Role-Aware Interaction-Level Evaluation of Mental Health Safety in Large Language Models",
-      "authors": [
-        "Suhyun Lee",
-        "Palakorn Achananuparp",
-        "Neemesh Yadav",
-        "Ee-Peng Lim",
-        "Yang Deng"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly explored as scalable tools for mental health counseling, yet evaluating their safety remains challenging due to the interactional and context-dependent nature of clinical harm. Existing evaluation frameworks predominantly assess isolated responses using coarse-grained taxonomies or static datasets, limiting their ability to diagnose how harms emerge and accumulate over multi-turn counseling interactions. In this work, we introduce R-MHSafe, a role-aware mental health safety taxonomy that characterizes clinically significant harm in terms of the interactional roles an AI counselor adopts, including perpetrator, instigator, facilitator, or enabler, combined with clinically grounded harm categories. Then, we propose MHSafeEval, a closed-loop, agent-based evaluation framework that formulates safety assessment as trajectory-level discovery of harm through adversarial multi-turn interactions, guided by role-aware modeling. Using R-MHSafe and MHSafeEval, we conduct a large-scale evaluation across state-of-the-art LLMs. Our results reveal substantial role-dependent and cumulative safety failures that are systematically missed by existing static benchmarks, and show that our framework significantly improves failure-mode coverage and diagnostic granularity.",
-      "pdf_url": "https://arxiv.org/pdf/2604.17730v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.17730v1",
-      "published": "2026-04-20T02:37:45Z",
-      "updated": "2026-04-20T02:37:45Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "RePrompT: Recurrent Prompt Tuning for Integrating Structured EHR Encoders with Large Language Models",
-      "authors": [
-        "Arya Hadizadeh Moghaddam",
-        "Drew Ross",
-        "Mohsen Nayebi Kerdabadi",
-        "Dongjie Wang",
-        "Zijun Yao"
-      ],
-      "abstract": "Large Language Models (LLMs) have shown strong promise for mining Electronic Health Records (EHRs) by reasoning over longitudinal clinical information to capture context-rich patient trajectories. However, leveraging LLMs for structured EHRs (e.g., standardized diagnosis and medication codes) presents two key challenges. First, translating time-stamped EHR sequences into plain text can obscure both temporal structure and code identities, weakening the ability to capture code co-occurrence and longitudinal regularities. Second, unlike cohort-trained predictive models that learn a shared, task-aligned representation space across patients, LLMs are often applied in a case-isolated inference setting where each patient is processed independently without leveraging population-level patterns. To address these challenges, we introduce RePrompT, a time-aware LLM framework that integrates structured EHR encoders through prompt tuning, without modifying underlying architectures. Specifically, RePrompT recurrently incorporates latent states from prior visits to preserve longitudinal information, and injects population-level information through trainable prompt tokens derived from a cohort-trained, task-aligned EHR encoder. Experiments on MIMIC-III and MIMIC-IV demonstrate that RePrompT consistently outperforms both EHR-based and LLM-based baselines across multiple clinical prediction tasks.",
-      "pdf_url": "https://arxiv.org/pdf/2604.17725v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.17725v1",
-      "published": "2026-04-20T02:20:13Z",
-      "updated": "2026-04-20T02:20:13Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Screen Before You Interpret: A Portable Validity Protocol for Benchmark-Based LLM Confidence Signals",
-      "authors": [
-        "Jon-Paul Cacioli"
-      ],
-      "abstract": "LLM confidence signals are used for abstention, routing, and safety-critical decisions. No standard practice exists for checking whether a confidence signal carries item-level information before building on it. We transfer the validity screening principle from clinical personality assessment (PAI, MMPI-3) as a portable protocol for benchmark-based LLM confidence data. The protocol specifies three core indices (L, Fp, RBS), a structural indicator (TRIN), and an item-sensitivity statistic, computed from a single 2x2 contingency table. A three-tier classification system (Invalid, Indeterminate, Valid) draws on four clinical traditions. Validated on 20 frontier LLMs across 524 items, four models are classified Invalid, two Indeterminate. Valid-profile models show mean r = .18 (15/16 significant). Invalid-profile models show mean r = -.20 (d = 2.48). Cross-benchmark validation on 18 models using MMLU with verbalized confidence and on external data from Yang et al. (2024) confirms the screen transfers across benchmarks and probe formats. All data and code: https://github.com/synthiumjp/validity-scaling-llm",
-      "pdf_url": "https://arxiv.org/pdf/2604.17714v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.17714v1",
-      "published": "2026-04-20T01:50:38Z",
-      "updated": "2026-04-20T01:50:38Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Before You Interpret the Profile: Validity Scaling for LLM Metacognitive Self-Report",
-      "authors": [
-        "Jon-Paul Cacioli"
-      ],
-      "abstract": "Clinical personality assessment screens response validity before interpreting substantive scales. LLM evaluation does not. We apply the validity scaling framework from the PAI and MMPI-3 to metacognitive probe data from 20 frontier models across 524 items. Six validity indices are operationalised: L (maintaining confidence on errors), K (betting on errors), F (withdrawing consensus-endorsed items), Fp (withdrawing correct answers), RBS (inverted monitoring), and TRIN (fixed responding). A tiered classification system identifies four models as construct-level invalid and two as elevated. Valid-profile models produce item-sensitive confidence (mean r = .18, 14 of 16 significant). Invalid-profile models do not (mean r = -.20, d = 2.17, p = .001). Chain-of-thought training produces two opposite response distortions. Two latent dimensions account for 94.6% of index variance. Companion papers extract a portable screening protocol (Cacioli, 2026e) and validate it against selective prediction (Cacioli, 2026f). All data and code: https://github.com/synthiumjp/validity-scaling-llm",
-      "pdf_url": "https://arxiv.org/pdf/2604.17707v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.17707v1",
-      "published": "2026-04-20T01:42:54Z",
-      "updated": "2026-04-20T01:42:54Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]

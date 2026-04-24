@@ -1,8 +1,134 @@
 {
-  "generated_at_utc": "2026-04-23T03:26:09.177487Z",
+  "generated_at_utc": "2026-04-24T03:28:39.892265Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Transient Turn Injection: Exposing Stateless Multi-Turn Vulnerabilities in Large Language Models",
+      "authors": [
+        "Naheed Rayhan",
+        "Sohely Jahan"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly integrated into sensitive workflows, raising the stakes for adversarial robustness and safety. This paper introduces Transient Turn Injection(TTI), a new multi-turn attack technique that systematically exploits stateless moderation by distributing adversarial intent across isolated interactions. TTI leverages automated attacker agents powered by large language models to iteratively test and evade policy enforcement in both commercial and open-source LLMs, marking a departure from conventional jailbreak approaches that typically depend on maintaining persistent conversational context. Our extensive evaluation across state-of-the-art models-including those from OpenAI, Anthropic, Google Gemini, Meta, and prominent open-source alternatives-uncovers significant variations in resilience to TTI attacks, with only select architectures exhibiting substantial inherent robustness. Our automated blackbox evaluation framework also uncovers previously unknown model specific vulnerabilities and attack surface patterns, especially within medical and high stakes domains. We further compare TTI against established adversarial prompting methods and detail practical mitigation strategies, such as session level context aggregation and deep alignment approaches. Our study underscores the urgent need for holistic, context aware defenses and continuous adversarial testing to future proof LLM deployments against evolving multi-turn threats.",
+      "pdf_url": "https://arxiv.org/pdf/2604.21860v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.21860v1",
+      "published": "2026-04-23T16:56:14Z",
+      "updated": "2026-04-23T16:56:14Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Differentially Private De-identification of Dutch Clinical Notes: A Comparative Evaluation",
+      "authors": [
+        "Michele Miranda",
+        "Xinlan Yan",
+        "Nishant Mishra",
+        "Rachel Murphy",
+        "Ameen Abu-Hanna",
+        "S\u00e9bastien Brati\u00e8res",
+        "Iacer Calixto"
+      ],
+      "abstract": "Protecting patient privacy in clinical narratives is essential for enabling secondary use of healthcare data under regulations such as GDPR and HIPAA. While manual de-identification remains the gold standard, it is costly and slow, motivating the need for automated methods that combine privacy guarantees with high utility. Most automated text de-identification pipelines employed named entity recognition (NER) to identify protected entities for redaction. Although methods based on differential privacy (DP) provide formal privacy guarantees, more recently also large language models (LLMs) are increasingly used for text de-identification in the clinical domain. In this work, we present the first comparative study of DP, NER, and LLMs for Dutch clinical text de-identification. We investigate these methods separately as well as hybrid strategies that apply NER or LLM preprocessing prior to DP, and assess performance in terms of privacy leakage and extrinsic evaluation (entity and relation classification). We show that DP mechanisms alone degrade utility substantially, but combining them with linguistic preprocessing, especially LLM-based redaction, significantly improves the privacy-utility trade-off.",
+      "pdf_url": "https://arxiv.org/pdf/2604.21421v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.21421v1",
+      "published": "2026-04-23T08:37:40Z",
+      "updated": "2026-04-23T08:37:40Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Agentic AI for Personalized Physiotherapy: A Multi-Agent Framework for Generative Video Training and Real-Time Pose Correction",
+      "authors": [
+        "Abhishek Dharmaratnakar",
+        "Srivaths Ranganathan",
+        "Anushree Sinha",
+        "Debanshu Das"
+      ],
+      "abstract": "At-home physiotherapy compliance remains critically low due to a lack of personalized supervision and dynamic feedback. Existing digital health solutions rely on static, pre-recorded video libraries or generic 3D avatars that fail to account for a patient's specific injury limitations or home environment. In this paper, we propose a novel Multi-Agent System (MAS) architecture that leverages Generative AI and computer vision to close the tele-rehabilitation loop. Our framework consists of four specialized micro-agents: a Clinical Extraction Agent that parses unstructured medical notes into kinematic constraints; a Video Synthesis Agent that utilizes foundational video generation models to create personalized, patient-specific exercise videos; a Vision Processing Agent for real-time pose estimation; and a Diagnostic Feedback Agent that issues corrective instructions. We present the system architecture, detail the prototype pipeline using Large Language Models and MediaPipe, and outline our clinical evaluation plan. This work demonstrates the feasibility of combining generative media with agentic autonomous decision-making to scale personalized patient care safely and effectively.",
+      "pdf_url": "https://arxiv.org/pdf/2604.21154v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.21154v1",
+      "published": "2026-04-22T23:47:51Z",
+      "updated": "2026-04-22T23:47:51Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Serialisation Strategy Matters: How FHIR Data Format Affects LLM Medication Reconciliation",
+      "authors": [
+        "Sanjoy Pator"
+      ],
+      "abstract": "Medication reconciliation at clinical handoffs is a high-stakes, error-prone process. Large language models are increasingly proposed to assist with this task using FHIR-structured patient records, but a fundamental and largely unstudied variable is how the FHIR data is serialised before being passed to the model. We present the first systematic comparison of four FHIR serialisation strategies (Raw JSON, Markdown Table, Clinical Narrative, and Chronological Timeline) across five open-weight models (Phi-3.5-mini, Mistral-7B, BioMistral-7B, Llama-3.1-8B, Llama-3.3-70B) on a controlled benchmark of 200 synthetic patients, totalling 4,000 inference runs. We find that serialisation strategy has a large, statistically significant effect on performance for models up to 8B parameters: Clinical Narrative outperforms Raw JSON by up to 19 F1 points for Mistral-7B (r = 0.617, p < 10^{-10}). This advantage reverses at 70B, where Raw JSON achieves the best mean F1 of 0.9956. In all 20 model and strategy combinations, mean precision exceeds mean recall: omission is the dominant failure mode, with models more often missing an active medication than fabricating one, which changes how clinical safety auditing priorities should be set. Smaller models plateau at roughly 7-10 concurrent active medications, leaving polypharmacy patients, the patients most at risk from reconciliation errors, systematically underserved. BioMistral-7B, a domain-pretrained model without instruction tuning, produces zero usable output in all conditions, showing that domain pretraining alone is not sufficient for structured extraction. These results offer practical, evidence-based format recommendations for clinical LLM deployment: Clinical Narrative for models up to 8B, Raw JSON for 70B and above. The complete pipeline is reproducible on open-source tools running on an AWS g6e.xlarge instance (NVIDIA L40S, 48 GB VRAM).",
+      "pdf_url": "https://arxiv.org/pdf/2604.21076v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.21076v1",
+      "published": "2026-04-22T20:39:35Z",
+      "updated": "2026-04-22T20:39:35Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "DWTSumm: Discrete Wavelet Transform for Document Summarization",
+      "authors": [
+        "Rana Salama",
+        "Abdou Youssef",
+        "Mona Diab"
+      ],
+      "abstract": "Summarizing long, domain-specific documents with large language models (LLMs) remains challenging due to context limitations, information loss, and hallucinations, particularly in clinical and legal settings. We propose a Discrete Wavelet Transform (DWT)-based multi-resolution framework that treats text as a semantic signal and decomposes it into global (approximation) and local (detail) components. Applied to sentence- or word-level embeddings, DWT yields compact representations that preserve overall structure and critical domain-specific details, which are used directly as summaries or to guide LLM generation. Experiments on clinical and legal benchmarks demonstrate comparable ROUGE-L scores. Compared to a GPT-4o baseline, the DWT based summarization consistently improve semantic similarity and grounding, achieving gains of over 2% in BERTScore, more than 4\\% in Semantic Fidelity, factual consistency in legal tasks, and large METEOR improvements indicative of preserved domain-specific semantics. Across multiple embedding models, Fidelity reaches up to 97%, suggesting that DWT acts as a semantic denoising mechanism that reduces hallucinations and strengthens factual grounding. Overall, DWT provides a lightweight, generalizable method for reliable long-document and domain-specific summarization with LLMs.",
+      "pdf_url": "https://arxiv.org/pdf/2604.21070v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.21070v1",
+      "published": "2026-04-22T20:30:52Z",
+      "updated": "2026-04-22T20:30:52Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "HypEHR: Hyperbolic Modeling of Electronic Health Records for Efficient Question Answering",
+      "authors": [
+        "Yuyu Liu",
+        "Sarang Rajendra Patil",
+        "Mengjia Xu",
+        "Tengfei Ma"
+      ],
+      "abstract": "Electronic health record (EHR) question answering is often handled by LLM-based pipelines that are costly to deploy and do not explicitly leverage the hierarchical structure of clinical data. Motivated by evidence that medical ontologies and patient trajectories exhibit hyperbolic geometry, we propose HypEHR, a compact Lorentzian model that embeds codes, visits, and questions in hyperbolic space and answers queries via geometry-consistent cross-attention with type-specific pointer heads. HypEHR is pretrained with next-visit diagnosis prediction and hierarchy-aware regularization to align representations with the ICD ontology. On two MIMIC-IV-based EHR-QA benchmarks, HypEHR approaches LLM-based methods while using far fewer parameters. Our code is publicly available at https://github.com/yuyuliu11037/HypEHR.",
+      "pdf_url": "https://arxiv.org/pdf/2604.21027v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.21027v1",
+      "published": "2026-04-22T19:18:36Z",
+      "updated": "2026-04-22T19:18:36Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Thinking Like a Botanist: Challenging Multimodal Language Models with Intent-Driven Chain-of-Inquiry",
+      "authors": [
+        "Syed Nazmus Sakib",
+        "Nafiul Haque",
+        "Shahrear Bin Amin",
+        "Hasan Muhammad Abdullah",
+        "Md. Mehedi Hasan",
+        "Mohammad Zabed Hossain",
+        "Shifat E. Arman"
+      ],
+      "abstract": "Vision evaluations are typically done through multi-step processes. In most contemporary fields, experts analyze images using structured, evidence-based adaptive questioning. In plant pathology, botanists inspect leaf images, identify visual cues, infer diagnostic intent, and probe further with targeted questions that adapt to species, symptoms, and severity. This structured probing is crucial for accurate disease diagnosis and treatment formulation. Yet current vision-language models are evaluated on single-turn question answering. To address this gap, we introduce PlantInquiryVQA, a benchmark for studying multi-step, intent-driven visual reasoning in botanical diagnosis. We formalize a Chain of Inquiry framework modeling diagnostic trajectories as ordered question-answer sequences conditioned on grounded visual cues and explicit epistemic intent. We release a dataset of 24,950 expert-curated plant images and 138,068 question-answer pairs annotated with visual grounding, severity labels, and domain-specific reasoning templates. Evaluations on top-tier Multimodal Large Language Models reveal that while they describe visual symptoms adequately, they struggle with safe clinical reasoning and accurate diagnosis. Importantly, structured question-guided inquiry significantly improves diagnostic correctness, reduces hallucination, and increases reasoning efficiency. We hope PlantInquiryVQA serves as a foundational benchmark in advancing research to train diagnostic agents to reason like expert botanists rather than static classifiers.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20983v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.20983v1",
+      "published": "2026-04-22T18:12:07Z",
+      "updated": "2026-04-22T18:12:07Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
     {
       "title": "Can \"AI\" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs",
       "authors": [
@@ -109,10 +235,10 @@
         "Dukyong Yoon"
       ],
       "abstract": "Large language models (LLMs), trained on vast datasets, encode extensive real-world knowledge within their parameters, yet their black-box nature obscures the mechanisms and extent of this encoding. Surrogate modeling, which uses simplified models to approximate complex systems, can offer a path toward better interpretability of black-box models. We propose a surrogate modeling framework that quantitatively explains LLM-encoded knowledge. For a specific hypothesis derived from domain knowledge, this framework approximates the latent LLM knowledge space using observable elements (input-output pairs) through extensive prompting across a comprehensive range of simulated scenarios. Through proof-of-concept experiments in medical predictions, we demonstrate our framework's effectiveness in revealing the extent to which LLMs \"perceive\" each input variable in relation to the output. Particularly, given concerns that LLMs may perpetuate inaccuracies and societal biases embedded in their training data, our experiments using this framework quantitatively revealed both associations that contradict established medical knowledge and the persistence of scientifically refuted racial assumptions within LLM-encoded knowledge. By disclosing these issues, our framework can act as a red-flag indicator to support the safe and reliable application of these models.",
-      "pdf_url": "https://arxiv.org/pdf/2604.20331v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.20331v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.20331v2",
+      "arxiv_url": "https://arxiv.org/abs/2604.20331v2",
       "published": "2026-04-22T08:26:23Z",
-      "updated": "2026-04-22T08:26:23Z",
+      "updated": "2026-04-23T03:15:21Z",
       "categories": [
         "cs.CL",
         "cs.AI",
@@ -140,179 +266,23 @@
       ]
     },
     {
-      "title": "From Fuzzy to Formal: Scaling Hospital Quality Improvement with AI",
+      "title": "Clinically Interpretable Sepsis Early Warning via LLM-Guided Simulation of Temporal Physiological Dynamics",
       "authors": [
-        "Patrick Vossler",
-        "Jean Feng",
-        "Venkat Sivaraman",
-        "Robert Gallo",
-        "Hemal Kanzaria",
-        "Dana Freiser",
-        "Christopher Ross",
-        "Amy Ou",
-        "James Marks",
-        "Susan Ehrlich",
-        "Christopher Peabody",
-        "Lucas Zier"
+        "Weizhi Nie",
+        "Zhen Qu",
+        "Weijie Wang",
+        "Chunpei Li",
+        "Ke Lu",
+        "Bingyang Zhou",
+        "Hongzhi Yu"
       ],
-      "abstract": "Hospital Quality Improvement (QI) plays a critical role in optimizing healthcare delivery by translating high-level hospital goals into actionable solutions. A critical step of QI is to identify the key modifiable contributing factors, a process we call QI factor discovery, typically through expert-driven semi-structured qualitative tools like fishbone diagrams, chart reviews, and Lean Healthcare methods. AI has the potential to transform and accelerate QI factor discovery, which is traditionally time- and resource-intensive and limited in reproducibility and auditability. Nevertheless, current AI alignment methods assume the task is well-defined, whereas QI factor discovery is an exploratory, fuzzy, and iterative sense-making process that relies on complex implicit expert judgments. To design an AI pipeline that formalizes the QI process while preserving its exploratory components, we propose viewing the task as learning not only LLM prompts but also the overarching natural-language specifications. In particular, we map QI factor discovery to steps of the classical AI/ML development process (problem formalization, model learning, and model validation) where the specifications are tunable hyperparameters. Domain experts and AI agents iteratively refine both the overarching specifications and AI pipeline until AI extractions are concordant with expert annotations and aligned with clinical objectives. We applied this \"Human-AI Spec-Solution Co-optimization\" framework at an urban safety-net hospital to identify factors driving prolonged length of stay and unplanned 30-day readmissions. The resulting AI-for-QI pipelines achieved $\\ge 70\\%$ concordance with expert annotations. Compared to prior manual Lean analyses, the AI pipeline was substantially more efficient, recovered previous findings, surfaced new modifiable factors, and produced auditable reasoning traces.",
-      "pdf_url": "https://arxiv.org/pdf/2604.20055v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.20055v1",
-      "published": "2026-04-21T23:31:48Z",
-      "updated": "2026-04-21T23:31:48Z",
+      "abstract": "Timely and interpretable early warning of sepsis remains a major clinical challenge due to the complex temporal dynamics of physiological deterioration. Traditional data-driven models often provide accurate yet opaque predictions, limiting physicians' confidence and clinical applicability. To address this limitation, we propose a Large Language Model (LLM)-guided temporal simulation framework that explicitly models physiological trajectories prior to disease onset for clinically interpretable prediction. The framework consists of a spatiotemporal feature extraction module that captures dynamic dependencies among multivariate vital signs, a Medical Prompt-as-Prefix module that embeds clinical reasoning cues into LLMs, and an agent-based post-processing component that constrains predictions within physiologically plausible ranges. By first simulating the evolution of key physiological indicators and then classifying sepsis onset, our model offers transparent prediction mechanisms that align with clinical judgment. Evaluated on the MIMIC-IV and eICU databases, the proposed method achieves superior AUC scores (0.861-0.903) across 24-4-hour pre-onset prediction tasks, outperforming conventional deep learning and rule-based approaches. More importantly, it provides interpretable trajectories and risk trends that can assist clinicians in early intervention and personalized decision-making in intensive care environments.",
+      "pdf_url": "https://arxiv.org/pdf/2604.20924v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.20924v1",
+      "published": "2026-04-22T06:30:54Z",
+      "updated": "2026-04-22T06:30:54Z",
       "categories": [
-        "cs.AI",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Statistics, Not Scale: Modular Medical Dialogue with Bayesian Belief Engine",
-      "authors": [
-        "Yusuf Kesmen",
-        "Fay Elhassan",
-        "Jiayi Ma",
-        "Julien Stalhandske",
-        "David Sasu",
-        "Alexandra Kulinkina",
-        "Akhil Arora",
-        "Lars Klein",
-        "Mary-Anne Hartley"
-      ],
-      "abstract": "Large language models are increasingly deployed as autonomous diagnostic agents, yet they conflate two fundamentally different capabilities: natural-language communication and probabilistic reasoning. We argue that this conflation is an architectural flaw, not an engineering shortcoming. We introduce BMBE (Bayesian Medical Belief Engine), a modular diagnostic dialogue framework that enforces a strict separation between language and reasoning: an LLM serves only as a sensor, parsing patient utterances into structured evidence and verbalising questions, while all diagnostic inference resides in a deterministic, auditable Bayesian engine. Because patient data never enters the LLM, the architecture is private by construction; because the statistical backend is a standalone module, it can be replaced per target population without retraining. This separation yields three properties no autonomous LLM can offer: calibrated selective diagnosis with a continuously adjustable accuracy-coverage tradeoff, a statistical separation gap where even a cheap sensor paired with the engine outperforms a frontier standalone model from the same family at a fraction of the cost, and robustness to adversarial patient communication styles that cause standalone doctors to collapse. We validate across empirical and LLM-generated knowledge bases against frontier LLMs, confirming the advantage is architectural, not informational.",
-      "pdf_url": "https://arxiv.org/pdf/2604.20022v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.20022v1",
-      "published": "2026-04-21T21:59:57Z",
-      "updated": "2026-04-21T21:59:57Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Infection-Reasoner: A Compact Vision-Language Model for Wound Infection Classification with Evidence-Grounded Clinical Reasoning",
-      "authors": [
-        "Palawat Busaranuvong",
-        "Reza Saadati Fard",
-        "Emmanuel Agu",
-        "Deepak Kumar",
-        "Shefalika Gautam",
-        "Bengisu Tulu",
-        "Diane Strong"
-      ],
-      "abstract": "Assessing chronic wound infection from photographs is challenging because visual appearance varies across wound etiologies, anatomical locations, and imaging conditions. Prior image-based deep learning methods have mainly focused on classification with limited interpretability, despite the need for evidence-grounded explanations to support point-of-care decision making. We present Infection-Reasoner, a compact 4B-parameter reasoning vision-language model for chronic wound infection classification and rationale generation. To address the scarcity of expert-labeled wound images with reasoning annotations, Infection-Reasoner is trained using a two-stage pipeline: (1) reasoning distillation, in which GPT-5.1 generates chain-of-thought rationales for unlabeled wound images to initialize wound-specific reasoning in a smaller student model (Qwen3-VL-4B-Thinking), and (2) reinforcement learning post-training with Group Relative Policy Optimization on a small labeled infection dataset to refine classification reasoning. On a held-out heterogeneous wound dataset, Infection-Reasoner achieved 86.8\\% accuracy, 86.4\\% sensitivity, and 87.1\\% specificity, outperforming several strong baselines, including GPT-5.1. Rationale quality was further evaluated using both multimodal large language model (MLLM) judges and wound expert review. Across four MLLM judges, visual-support agreement scores ranged from 0.722 to 0.903, while expert review rated 61.8\\% of rationales as Correct and 32.4\\% as Partially Correct.",
-      "pdf_url": "https://arxiv.org/pdf/2604.19937v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.19937v1",
-      "published": "2026-04-21T19:28:08Z",
-      "updated": "2026-04-21T19:28:08Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Cross-Model Consistency of AI-Generated Exercise Prescriptions: A Repeated Generation Study Across Three Large Language Models",
-      "authors": [
-        "Kihyuk Lee"
-      ],
-      "abstract": "This study compared repeated generation consistency of exercise prescription outputs across three large language models (LLMs), specifically GPT-4.1, Claude Sonnet 4.6, and Gemini 2.5 Flash, under temperature=0 conditions. Each model generated prescriptions for six clinical scenarios 20 times, yielding 360 total outputs analyzed across four dimensions: semantic similarity, output reproducibility, FITT classification, and safety expression. Mean semantic similarity was highest for GPT-4.1 (0.955), followed by Gemini 2.5 Flash (0.950) and Claude Sonnet 4.6 (0.903), with significant inter-model differences confirmed (H = 458.41, p < .001). Critically, these scores reflected fundamentally different generative behaviors: GPT-4.1 produced entirely unique outputs (100%) with stable semantic content, while Gemini 2.5 Flash showed pronounced output repetition (27.5% unique outputs), indicating that its high similarity score derived from text duplication rather than consistent reasoning. Identical decoding settings thus yielded fundamentally different consistency profiles, a distinction that single-output evaluations cannot capture. Safety expression reached ceiling levels across all models, confirming its limited utility as a differentiating metric. These results indicate that model selection constitutes a clinical rather than merely technical decision, and that output behavior under repeated generation conditions should be treated as a core criterion for reliable deployment of LLM-based exercise prescription systems.",
-      "pdf_url": "https://arxiv.org/pdf/2604.19598v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.19598v1",
-      "published": "2026-04-21T15:51:46Z",
-      "updated": "2026-04-21T15:51:46Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Can Continual Pre-training Bridge the Performance Gap between General-purpose and Specialized Language Models in the Medical Domain?",
-      "authors": [
-        "Niclas Doll",
-        "Jasper Schulze Buschhoff",
-        "Shalaka Satheesh",
-        "Hammam Abdelwahab",
-        "H\u00e9ctor Allende-Cid",
-        "Katrin Klug"
-      ],
-      "abstract": "This paper narrows the performance gap between small, specialized models and significantly larger general-purpose models through domain adaptation via continual pre-training and merging. We address the scarcity of specialized non-English data by constructing a high-quality German medical corpus (FineMed-de) from FineWeb2. This corpus is used to continually pre-train and merge three well-known LLMs (ranging from $7B$ to $24B$ parameters), creating the DeFineMed model family. A comprehensive evaluation confirms that specialization dramatically enhances $7B$ model performance on German medical benchmarks. Furthermore, the pairwise win-rate analysis of the Qwen2.5-based models demonstrates an approximately $3.5$-fold increase in the win-rate against the much larger Mistral-Small-24B-Instruct through domain adaptation. This evidence positions specialized $7B$ models as a competitive, resource-efficient solution for complex medical instruction-following tasks. While model merging successfully restores instruction-following abilities, a subsequent failure mode analysis reveals inherent trade-offs, including the introduction of language mixing and increased verbosity, highlighting the need for more targeted fine-tuning in future work. This research provides a robust, compliant methodology for developing specialized LLMs, serving as the foundation for practical use in German-speaking healthcare contexts.",
-      "pdf_url": "https://arxiv.org/pdf/2604.19394v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.19394v1",
-      "published": "2026-04-21T12:19:48Z",
-      "updated": "2026-04-21T12:19:48Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Beyond Semantic Similarity: A Component-Wise Evaluation Framework for Medical Question Answering Systems with Health Equity Implications",
-      "authors": [
-        "Abu Noman Md Sakib",
-        "Md. Main Oddin Chisty",
-        "Zijie Zhang"
-      ],
-      "abstract": "The use of Large Language Models (LLMs) to support patients in addressing medical questions is becoming increasingly prevalent. However, most of the measures currently used to evaluate the performance of these models in this context only measure how closely a model's answers match semantically, and therefore do not provide a true indication of the model's medical accuracy or of the health equity risks associated with it. To address these shortcomings, we present a new evaluation framework for medical question answering called VB-Score (Verification-Based Score) that provides a separate evaluation of the four components of entity recognition, semantic similarity, factual consistency, and structured information completeness for medical question-answering models. We perform rigorous reviews of the performance of three well-known and widely used LLMs on 48 public health-related topics taken from high-quality, authoritative information sources. Based on our analyses, we discover a major discrepancy between the models' semantic and entity accuracy. Our assessments of the performance of all three models show that each of them has almost uniformly severe performance failures when evaluated against our criteria. Our findings indicate alarming performance disparities across various public health topics, with most of the models exhibiting 13.8% lower performance (compared to an overall average) for all the public health topics that relate to chronic conditions that occur in older and minority populations, which indicates the existence of what's known as condition-based algorithmic discrimination. Our findings also demonstrate that prompt engineering alone does not compensate for basic architectural limitations on how these models perform in extracting medical entities and raise the question of whether semantic evaluation alone is a sufficient measure of medical AI safety.",
-      "pdf_url": "https://arxiv.org/pdf/2604.19281v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.19281v1",
-      "published": "2026-04-21T09:50:08Z",
-      "updated": "2026-04-21T09:50:08Z",
-      "categories": [
-        "cs.HC",
-        "cs.AI",
-        "cs.CL",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Handling and Interpreting Missing Modalities in Patient Clinical Trajectories via Autoregressive Sequence Modeling",
-      "authors": [
-        "Andrew Wang",
-        "Ellie Pavlick",
-        "Ritambhara Singh"
-      ],
-      "abstract": "An active challenge in developing multimodal machine learning (ML) models for healthcare is handling missing modalities during training and deployment. As clinical datasets are inherently temporal and sparse in terms of modality presence, capturing the underlying predictive signal via diagnostic multimodal ML models while retaining model explainability remains an ongoing challenge. In this work, we address this by re-framing clinical diagnosis as an autoregressive sequence modeling task, utilizing causal decoders from large language models (LLMs) to model a patient's multimodal trajectory. We first introduce a missingness-aware contrastive pre-training objective that integrates multiple modalities in datasets with missingness in a shared latent space. We then show that autoregressive sequence modeling with transformer-based architectures outperforms baselines on the MIMIC-IV and eICU fine-tuning benchmarks. Finally, we use interpretability techniques to move beyond performance boosts and find that across various patient stays, removing modalities leads to divergent behavior that our contrastive pre-training mitigates. By abstracting clinical diagnosis as sequence modeling and interpreting patient stay trajectories, we develop a framework to profile and handle missing modalities while addressing the canonical desideratum of safe, transparent clinical AI.",
-      "pdf_url": "https://arxiv.org/pdf/2604.18753v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.18753v1",
-      "published": "2026-04-20T18:55:56Z",
-      "updated": "2026-04-20T18:55:56Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MedProbeBench: Systematic Benchmarking at Deep Evidence Integration for Expert-level Medical Guideline",
-      "authors": [
-        "Jiyao Liu",
-        "Jianghan Shen",
-        "Sida Song",
-        "Tianbin Li",
-        "Xiaojia Liu",
-        "Rongbin Li",
-        "Ziyan Huang",
-        "Jiashi Lin",
-        "Junzhi Ning",
-        "Changkai Ji",
-        "Siqi Luo",
-        "Wenjie Li",
-        "Chenglong Ma",
-        "Ming Hu",
-        "Jing Xiong",
-        "Jin Ye",
-        "Bin Fu",
-        "Ningsheng Xu",
-        "Yirong Chen",
-        "Lei Jin",
-        "Hong Chen",
-        "Junjun He"
-      ],
-      "abstract": "Recent advances in deep research systems enable large language models to retrieve, synthesize, and reason over large-scale external knowledge. In medicine, developing clinical guidelines critically depends on such deep evidence integration. However, existing benchmarks fail to evaluate this capability in realistic workflows requiring multi-step evidence integration and expert-level judgment. To address this gap, we introduce MedProbeBench, the first benchmark leveraging high-quality clinical guidelines as expert-level references. Medical guidelines, with their rigorous standards in neutrality and verifiability, represent the pinnacle of medical expertise and pose substantial challenges for deep research agents. For evaluation, we propose MedProbe-Eval, a comprehensive evaluation framework featuring: (1) Holistic Rubrics with 1,200+ task-adaptive rubric criteria for comprehensive quality assessment, and (2) Fine-grained Evidence Verification for rigorous validation of evidence precision, grounded in 5,130+ atomic claims. Evaluation of 17 LLMs and deep research agents reveals critical gaps in evidence integration and guideline generation, underscoring the substantial distance between current capabilities and expert-level clinical guideline development. Project: https://github.com/uni-medical/MedProbeBench",
-      "pdf_url": "https://arxiv.org/pdf/2604.18418v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.18418v1",
-      "published": "2026-04-20T15:37:46Z",
-      "updated": "2026-04-20T15:37:46Z",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]

@@ -1,8 +1,206 @@
 {
-  "generated_at_utc": "2026-04-28T03:44:43.877891Z",
+  "generated_at_utc": "2026-04-29T03:41:22.035500Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "PSI-Bench: Towards Clinically Grounded and Interpretable Evaluation of Depression Patient Simulators",
+      "authors": [
+        "Nguyen Khoi Hoang",
+        "Shuhaib Mehri",
+        "Tse-An Hsu",
+        "Yi-Jyun Sun",
+        "Quynh Xuan Nguyen Truong",
+        "Khoa D Doan",
+        "Dilek Hakkani-T\u00fcr"
+      ],
+      "abstract": "Patient simulators are gaining traction in mental health training by providing scalable exposure to complex and sensitive patient interactions. Simulating depressed patients is particularly challenging, as safety constraints and high patient variability complicate simulations and underscore the need for simulators that capture diverse and realistic patient behaviors. However, existing evaluations heavily rely on LLM-judges with poorly specified prompts and do not assess behavioral diversity. We introduce PSI-Bench, an automatic evaluation framework that provides interpretable, clinically grounded diagnostics of depression patient simulator behavior across turn-, dialogue-, and population-level dimensions. Using PSI-Bench, we benchmark seven LLMs across two simulator frameworks and find that simulators produce overly long, lexically diverse responses, show reduced variability, resolve emotions too quickly, and follow a uniform negative-to-positive trajectory. We also show that the simulation framework has a larger impact on fidelity than the model scale. Results from a human study demonstrate that our benchmark is strongly aligned with expert judgments. Our work reveals key limitations of current depression patient simulators and provides an interpretable, extensible benchmark to guide future simulator design and evaluation.",
+      "pdf_url": "https://arxiv.org/pdf/2604.25840v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.25840v1",
+      "published": "2026-04-28T16:46:25Z",
+      "updated": "2026-04-28T16:46:25Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Toward Multimodal Conversational AI for Age-Related Macular Degeneration",
+      "authors": [
+        "Ran Gu",
+        "Benjamin Hou",
+        "M\u00e9lanie H\u00e9bert",
+        "Asmita Indurkar",
+        "Yifan Yang",
+        "Emily Y. Chew",
+        "Tiarn\u00e1n D. L. Keenan",
+        "Zhiyong Lu"
+      ],
+      "abstract": "Despite strong performance of deep learning models in retinal disease detection, most systems produce static predictions without clinical reasoning or interactive explanation. Recent advances in multimodal large language models (MLLMs) integrate diagnostic predictions with clinically meaningful dialogue to support clinical decision-making and patient counseling. In this study, OcularChat, an MLLM, was fine-tuned from Qwen2.5-VL using simulated patient-physician dialogues to diagnose age-related macular degeneration (AMD) through visual question answering on color fundus photographs (CFPs). A total of 705,850 simulated dialogues paired with 46,167 CFPs were generated to train OcularChat to identify key AMD features and produce reasoned predictions. OcularChat demonstrated strong classification performance in AREDS, achieving accuracies of 0.954, 0.849, and 0.678 for the three diagnostic tasks: advanced AMD, pigmentary abnormalities, and drusen size, significantly outperforming existing MLLMs. On AREDS2, OcularChat remained the top-performing method on all tasks. Across three independent ophthalmologist graders, OcularChat achieved higher mean scores than a strong baseline model for advanced AMD (3.503 vs. 2.833), pigmentary abnormalities (3.272 vs. 2.828), drusen size (3.064 vs. 2.433), and overall impression (2.978 vs. 2.464) on a 5-point clinical grading rubric. Beyond strong objective performance in AMD severity classification, OcularChat demonstrated the ability to provide diagnostic reasoning, clinically relevant explanations, and interactive dialogue, with high performance in subjective ophthalmologist evaluation. These findings suggest that MLLMs may enable accurate, interpretable, and clinically useful image-based diagnosis and classification of AMD.",
+      "pdf_url": "https://arxiv.org/pdf/2604.25720v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.25720v1",
+      "published": "2026-04-28T14:46:29Z",
+      "updated": "2026-04-28T14:46:29Z",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Health System Scale Semantic Search Across Unstructured Clinical Notes",
+      "authors": [
+        "Faith Wavinya Mutinda",
+        "Spandana Makeneni",
+        "Anna Lin",
+        "Shivaji Dutta",
+        "Irit R. Rasooly",
+        "Patrick Dibussolo",
+        "Shivani Kamath Belman",
+        "Hessam Shahriari",
+        "Kevin Murphy",
+        "Alex B. Ruan",
+        "Barbara H. Chaiyachati",
+        "Sanjay Chainani",
+        "Robert W. Grundmeier",
+        "Scott M. Haag",
+        "Jeffrey M. Miller",
+        "Heather M. Griffis",
+        "Ian M. Campbell"
+      ],
+      "abstract": "Introduction: Semantic search, which retrieves documents based on conceptual similarity rather than keyword matching, offers substantial advantages for retrieval of clinical information. However, deploying semantic search across entire health systems, comprising hundreds of millions of clinical notes, presents formidable engineering, cost, and governance challenges that have prevented adoption. Methods: We deployed a semantic search system at a large children's hospital indexing 166 million clinical notes (484 million vectors) from 1.68 million patients. The system uses instruction-tuned qwen3-embedding-0.6B embeddings, stores vectors in a managed database with storage-optimized indexing, maintains full-text metadata in a low-latency key-value store, and operates within a HIPAA-compliant governance framework. We evaluated the system through three experiments: optimization of embedding model and chunking strategy using a physician-authored benchmark dataset, characterization of full-scale performance (cost, latency, retrieval quality), and clinical utility assessment via comparison of chart abstraction efficiency across three tasks. Results: The system delivers sub-second query latency (median 237 ms single-user, 451 ms 20-user concurrency) with monthly costs of approximately USD 4,000. Qwen3 embeddings with 300-token chunk size achieved 94.6% accuracy on a clinical question-answering benchmark. In clinical utility evaluation across three abstraction tasks, semantic search reduced time-to-completion by 24 to 89% compared to clinician-performed chart review while maintaining comparable inter-rater agreement. Conclusion: Health-system-scale semantic search is both technically and operationally feasible. The system provides infrastructure supporting interactive search, cohort generation, and downstream LLM-powered clinical applications without requiring specialized informatics expertise.",
+      "pdf_url": "https://arxiv.org/pdf/2604.25605v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.25605v1",
+      "published": "2026-04-28T13:09:48Z",
+      "updated": "2026-04-28T13:09:48Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.DB"
+      ]
+    },
+    {
+      "title": "FED-FSTQ: Fisher-Guided Token Quantization for Communication-Efficient Federated Fine-Tuning of LLMs on Edge Devices",
+      "authors": [
+        "Changyu Li",
+        "Shuanghong Huang",
+        "Jiashen Liu",
+        "Ming Lei",
+        "Jidu Xing",
+        "Kaishun Wu",
+        "Lu Wang",
+        "Fei Luo"
+      ],
+      "abstract": "Federated fine-tuning provides a practical route to adapt large language models (LLMs) on edge devices without centralizing private data, yet in mobile deployments the training wall-clock is often bottlenecked by straggler-limited uplink communication under heterogeneous bandwidth and intermittent participation. Although parameter-efficient fine-tuning (PEFT) reduces trainable parameters, per-round payloads remain prohibitive in non-IID regimes, where uniform compression can discard rare but task-critical signals. We propose Fed-FSTQ, a Fisher-guided token quantization system primitive for communication-efficient federated LLM fine-tuning. Fed-FSTQ employs a lightweight Fisher proxy to estimate token sensitivity, coupling importance-aware token selection with non-uniform mixed-precision quantization to allocate higher fidelity to informative evidence while suppressing redundant transmission. The method is model-agnostic, serves as a drop-in module for standard federated PEFT pipelines, e.g., LoRA, without modifying the server aggregation rule, and supports bandwidth-heterogeneous clients via compact sparse message packing. Experiments on multilingual QA and medical QA under non-IID partitions show that Fed-FSTQ reduces cumulative uplink traffic required to reach a fixed quality threshold by 46x relative to a standard LoRA baseline, and improves end-to-end wall-clock time-to-accuracy by 52%. Furthermore, enabling Fisher-guided token reduction at inference yields up to a 1.55x end-to-end speedup on NVIDIA Jetson-class edge devices, demonstrating deployability under tight resource constraints.",
+      "pdf_url": "https://arxiv.org/pdf/2604.25421v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.25421v1",
+      "published": "2026-04-28T09:29:41Z",
+      "updated": "2026-04-28T09:29:41Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "The Structured Output Benchmark: A Multi-Source Benchmark for Evaluating Structured Output Quality in Large Language Models",
+      "authors": [
+        "Abhinav Kumar Singh",
+        "Harsha Vardhan Khurdula",
+        "Yoeven D Khemlani",
+        "Vineet Agarwal"
+      ],
+      "abstract": "Large Language Models are increasingly being deployed to extract structured data from unstructured and semi-structured sources: parsing invoices, medical records, and converting PDF documents to database entries. Yet existing benchmarks for structured output generation either focus on schema compliance alone, or evaluate value correctness within a single source domain. We introduce SOB (The Structured Output Benchmark), a multi-source benchmark spanning three source modalities: native text, images, and audio conversations. All models receive a text-normalized representation of their context regardless of source modality; this deliberate design isolates structured-output capability from raw vision or speech-processing quality, ensuring a fair, source-agnostic comparison. Our benchmark comprises 5,000 text evaluation records derived from multi-hop QA drawn from a 25,091-record full corpus, 209 image records from OCR-processed PDFs across seven document types including multi-column layouts, dense tables, scanned historical documents, small-print text, and mathematical typesetting, and 115 audio records from the AMI corpus. Each record pairs a natural-language question with a JSON schema that the model must follow and a ground-truth answer verified against the source context. We evaluate 21 frontier and open-weight models across three source domains and seven metrics. Our results reveal a consistent pattern: models achieve near-perfect schema compliance, yet the best Value Accuracy, measured by exact leaf-value match, reaches only 83.0% on text, 67.2% on images, and 23.7% on audio, where longer context makes extraction substantially harder. We release the dataset, evaluation pipeline, and all related code.",
+      "pdf_url": "https://arxiv.org/pdf/2604.25359v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.25359v1",
+      "published": "2026-04-28T08:27:01Z",
+      "updated": "2026-04-28T08:27:01Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Learning from Medical Entity Trees: An Entity-Centric Medical Data Engineering Framework for MLLMs",
+      "authors": [
+        "Jianghang Lin",
+        "Haihua Yang",
+        "Deli Yu",
+        "Kai Wu",
+        "Kai Ye",
+        "Jinghao Lin",
+        "Zihan Wang",
+        "Yuhang Wu",
+        "Liujuan Cao"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) have shown transformative potential in medical applications, yet their performance is hindered by conventional data curation strategies that rely on coarse-grained partitioning by modality or department. Such fragmented approaches fail to capture the hierarchical and interconnected nature of clinical medical knowledge, limiting the models' ability to perform fine-grained recognition and complex reasoning. In this paper, we propose a novel Entity-Centric Medical Data Engineering framework. We automatically extract entities from authoritative medical literature to construct a Medical Entity Tree (MET), a hierarchical structure that systematically encodes diseases, anatomical structures, modalities, and symptoms into a unified knowledge repository. Building upon the MET, we propose an advanced data engine that includes: (1) node-guided retrieval to anchor raw data to specific medical concepts, (2) a two-stage hybrid filtering and alignment pipeline to ensure precise visual-semantic correspondence, and (3) knowledge-aware data synthesis to generate enriched captions and targeted reasoning VQA pairs, leveraging structural constraints. Extensive evaluations across six medical benchmarks demonstrate that our approach significantly enhances the medical capabilities of general-purpose MLLMs, improving their ability to handle complex clinical queries and achieve state-of-the-art performance in diverse medical contexts.",
+      "pdf_url": "https://arxiv.org/pdf/2604.25296v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.25296v1",
+      "published": "2026-04-28T07:05:26Z",
+      "updated": "2026-04-28T07:05:26Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Below-Chance Blindness: Prompted Underperformance in Small LLMs Produces Positional Bias Rather than Answer Avoidance",
+      "authors": [
+        "Jon-Paul Cacioli"
+      ],
+      "abstract": "Detecting sandbagging--the deliberate underperformance on capability evaluations--is an open problem in AI safety. We tested whether symptom validity testing (SVT) logic from clinical malingering detection could identify sandbagging through below-chance performance (BCB) on forced-choice items. In a pre-registered pilot at the 7-9 billion parameter instruction-tuned scale (3 models, 4 MMLU-Pro domains, 4 conditions, 500 items per cell, 24,000 total trials), the plausibility gate failed. Zero of 12 model-domain cells showed significant below-chance performance under sandbagging instruction. Exploratory analyses revealed three qualitatively distinct failure modes. Qwen-2.5-7B and Phi-3.5-mini largely ignored the sandbagging instruction, with 62-88% response identity with the honest baseline. Llama-3-8B complied substantially but implemented underperformance as a positional heuristic, collapsing its response distribution onto middle-alphabet options (E at 31.8%, F at 26.1%) regardless of where the correct answer fell. This produced accuracy boosts of up to 33 percentage points when the correct answer coincidentally occupied the model's preferred position. An explicit anti-task instruction (\"pick the least likely answer\") drove two of three models below chance, with accuracy as low as 0.024. The capability for answer-aware avoidance therefore exists but is not activated by \"deliberately underperform.\" BCB did not fail as a logical marker of answer-aware avoidance. It was not observed in this regime because the model showing the largest behavioural shift exhibited behaviour consistent with a position-dominant response policy rather than content-aware answer avoidance. We propose that positional-distribution shift may be a more effective behavioural signature than below-chance accuracy for detecting prompted underperformance at this model scale.",
+      "pdf_url": "https://arxiv.org/pdf/2604.25249v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.25249v1",
+      "published": "2026-04-28T05:57:23Z",
+      "updated": "2026-04-28T05:57:23Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Diagnosis, Bad Planning & Reasoning. Treatment, SCOPE -- Planning for Hybrid Querying over Clinical Trial Data",
+      "authors": [
+        "Suparno Roy Chowdhury",
+        "Manan Roy Choudhury",
+        "Tejas Anvekar",
+        "Muhammad Ali Khan",
+        "Kaneez Zahra Rubab Khakwani",
+        "Mohamad Bassam Sonbol",
+        "Irbaz Bin Riaz",
+        "Vivek Gupta"
+      ],
+      "abstract": "We study clinical trial table reasoning, where answers are not directly stored in visible cells but must be reasoned from semantic understanding through normalization, classification, extraction, or lightweight domain reasoning. Motivated by the observation that current LLM approaches often suffer from \"bad reasoning\" under implicit planning assumptions, we focus on settings in which the model must recover implicit attributes such as therapy type, added agents, endpoint roles, or follow-up status from partially observed clinical-trial tables. We propose SCOPE (Structured Clinical hybrid Planning for Evidence retrieval in clinical trials), a multi-LLM planner-based framework that decomposes the task into row selection, structured planning, and execution. The planner makes the source field, reasoning rules, and output constraints explicit before answer generation, reducing ambiguity relative to direct prompting. We evaluate SCOPE on 1,500 hybrid reasoning questions over oncology clinical-trial tables against zero-shot, few-shot, chain-of-thought, TableGPT2, Blend-SQL, and EHRAgent. Results show that explicit multi-LLM planning improves accuracy for reasoning-based questions while offering a stronger accuracy-efficiency tradeoff than heavier agentic baselines. Our findings position clinical trial reasoning as a distinct table understanding problem and highlight hybrid planner-based decomposition as an effective solution",
+      "pdf_url": "https://arxiv.org/pdf/2604.25120v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.25120v1",
+      "published": "2026-04-28T01:54:55Z",
+      "updated": "2026-04-28T01:54:55Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Analyzing LLM Reasoning to Uncover Mental Health Stigma",
+      "authors": [
+        "Sreehari Sankar",
+        "Aliakbar Nafar",
+        "Mona Barman",
+        "Hannah K. Heitz",
+        "Ashwin Kumar",
+        "Pouria Tohidi",
+        "Dailun Li",
+        "Danish Hussain",
+        "Russell DuBois",
+        "Hamed Hasheminia",
+        "Farshad Majzoubi"
+      ],
+      "abstract": "While large language models (LLMs) are increasingly being explored for mental health applications, recent studies reveal that they can exhibit stigma toward individuals with psychological conditions. Existing evaluations of this stigma primarily rely on multiple-choice questions (MCQs), which fail to capture the biases embedded within the models' underlying logic. In this paper, we analyze the intermediate reasoning steps of LLMs to uncover hidden stigmatizing language and the internal rationales driving it. We leverage clinical expertise to categorize common patterns of stigmatizing language directed at individuals with psychological conditions and use this framework to identify and tag problematic statements in LLM reasoning. Furthermore, we rate the severity of these statements, distinguishing between overt prejudice and more subtle, less immediately harmful biases. To broaden the reasoning domain and capture a wider array of patterns, we also extend an existing mental health stigma benchmark by incorporating additional psychological conditions. Our findings demonstrate that evaluating model reasoning not only exposes substantially more stigma than traditional MCQ-based methods but it helps to identify the flaws in the LLMs' logic and their understanding of mental health conditions.",
+      "pdf_url": "https://arxiv.org/pdf/2604.25053v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.25053v1",
+      "published": "2026-04-27T23:08:39Z",
+      "updated": "2026-04-27T23:08:39Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Case-Specific Rubrics for Clinical AI Evaluation: Methodology, Validation, and LLM-Clinician Agreement Across 823 Encounters",
       "authors": [
@@ -138,170 +336,6 @@
       "updated": "2026-04-27T12:08:01Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "MultiDx: A Multi-Source Knowledge Integration Framework towards Diagnostic Reasoning",
-      "authors": [
-        "Yimin Deng",
-        "Zhenxi Lin",
-        "Yejing Wang",
-        "Guoshuai Zhao",
-        "Pengyue Jia",
-        "Zichuan Fu",
-        "Derong Xu",
-        "Yefeng Zheng",
-        "Xiangyu Zhao",
-        "Li Zhu",
-        "Xian Wu",
-        "Xueming Qian"
-      ],
-      "abstract": "Diagnostic prediction and clinical reasoning are critical tasks in healthcare applications. While Large Language Models (LLMs) have shown strong capabilities in commonsense reasoning, they still struggle with diagnostic reasoning due to limited domain knowledge. Existing approaches often rely on internal model knowledge or static knowledge bases, resulting in knowledge insufficiency and limited adaptability, which hinder their capacity to perform diagnostic reasoning. Moreover, these methods focus solely on the accuracy of final predictions, overlooking alignment with standard clinical reasoning trajectories. To this end, we propose MultiDx, a two-stage diagnostic reasoning framework that performs differential diagnosis by analyzing evidence collected from multiple knowledge sources. Specifically, it first generates suspected diagnoses and reasoning paths by leveraging knowledge from web search, SOAP-formatted case, and clinical case database. Then it integrates multi-perspective evidence through matching, voting, and differential diagnosis to generate the final prediction.~Extensive experiments on two public benchmarks demonstrate the effectiveness of our approach.",
-      "pdf_url": "https://arxiv.org/pdf/2604.24186v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.24186v1",
-      "published": "2026-04-27T08:46:29Z",
-      "updated": "2026-04-27T08:46:29Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Psychologically-Grounded Graph Modeling for Interpretable Depression Detection",
-      "authors": [
-        "Rishitej Reddy Vyalla",
-        "Kritarth Prasad",
-        "Avinash Anand",
-        "Erik Cambria",
-        "Shaoxiong Ji",
-        "Faten S. Alamri",
-        "Zhengkui Wang"
-      ],
-      "abstract": "Automatic depression detection from conversational interactions holds significant promise for scalable screening but remains hindered by severe data scarcity and a lack of clinical interpretability. Existing approaches typically rely on black-box deep learning architectures that struggle to model the subtle, temporal evolution of depressive symptoms or account for participant-specific heterogeneity. In this work, we propose PsyGAT (Psychological Graph Attention Network), a psychologically grounded framework that models conversational sessions as dynamic temporal graphs. We introduce Psychological Expression Units (PEUs) to explicitly encode utterance-level clinical evidence, structuring the session graph to capture transitions in psychological states rather than mere semantic dependencies. To address the critical class imbalance in depression datasets, we employ clinically approved persona-based data augmentation, enable robust model learning. Additionally, we integrate session-level personality context directly into the graph structure to disentangle trait-based behavior from acute depressive symptoms. PsyGAT achieves state-of-the-art performance, surpassing both strong graph-based baselines and closed-source LLMs like GPT-5, achieving 89.99 and 71.37 Macro F1 scores in DAIC-WoZ and E-DAIC, respectively. We further introduce Causal-PsyGAT, an interpretability module that identifies symptom triggers. Experiments show a 20% improvement in MRR for identifying causal indicators, effectively bridging the gap between depression monitoring and clinical explainability. The full augmented dataset is publicly available at https://doi.org/10.6084/m9.figshare.31801921.",
-      "pdf_url": "https://arxiv.org/pdf/2604.24126v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.24126v1",
-      "published": "2026-04-27T07:27:45Z",
-      "updated": "2026-04-27T07:27:45Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Quantum Knowledge Graph: Modeling Context-Dependent Triplet Validity",
-      "authors": [
-        "Yao Wang",
-        "Zixu Geng",
-        "Jun Yan"
-      ],
-      "abstract": "Knowledge graphs (KGs) are increasingly used to support large lan guage model (LLM) reasoning, but standard triplet-based KGs treat each relation as globally valid. In many settings, whether a relation should count as evidence depends on the context. We therefore formulate triplet validity as a triplet-specific function of context and refer to this formulation as a Quantum Knowledge Graph (QKG). We instantiate QKG in medicine using a diabetes-centered PrimeKG subgraph, whose 68,651 context-sensitive relations are further annotated with patient-group-specific constraints. We evaluate it in a reasoner--validator pipeline for medical question answering on a KG-grounded subset of MedReason containing 2,788 questions. With Haiku-4.5 as both the Reasoner and the Validator, KG-backed validation significantly improves over a no-validator baseline ($+0.61$ pp), and QKG with context matching yields the largest gain, outperforming both KG validation without context matching ($+0.79$ pp) and the no-validator baseline ($+1.40$ pp; paired McNemar, all $p<0.05$). Under a stronger validator (Qwen-3.6-Plus), the raw QKG gain over the no-validator baseline grows from $+1.40$ pp to $+5.96$ pp; the context-matching gap is non-significant ($p=0.73$) on the raw set but becomes borderline significant ($p=0.05$) after adjustment for knowledge leakage and suspicious questions, consistent with a benchmark-gold ceiling rather than a QKG limitation. Taken together, the results support the view that the value of a KG in LLM-based clinical reasoning lies not merely in storing medically related facts, but in representing whether those facts are applicable to the specific patient context. For reproducibility and further research, we release the curated QKG datasets and source code.\\footnote{https://github.com/HKAI-Sci/QKG}",
-      "pdf_url": "https://arxiv.org/pdf/2604.23972v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.23972v1",
-      "published": "2026-04-27T02:35:10Z",
-      "updated": "2026-04-27T02:35:10Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.SC"
-      ]
-    },
-    {
-      "title": "Context-Aware Hospitalization Forecasting Evaluations for Decision Support using LLMs",
-      "authors": [
-        "Rhea Makkuni",
-        "Ananya Joshi"
-      ],
-      "abstract": "Medical and public health experts must make real-time resource decisions, such as expanding hospital bed capacity, based on projected hospitalization trends during large-scale healthcare disruptions (e.g., operational failures or pandemics). Forecasting models can assist in this task by analyzing large volumes of resource-related data at the facility level, but they must be reliable for decision-making under real-world data conditions. Recent work shows that large language models (LLMs) can incorporate richer forms of context into numerical forecasting. Whereas traditional models rely primarily on temporal context (i.e., past observations), LLMs can also leverage non-temporal public health context such as demographic, geographic, and population-level features. However, it remains unclear how these models should be used to produce stable or decision-relevant predictions in real-world healthcare settings. To evaluate how LLMs can be effectively used in this setting, we evaluate three approaches across 60 counties with low-,mid-, and high-hospitalization intensities in the United States: direct LLM-based forecasting, classical time-series models, and a context-augmented hybrid pipeline (HybridARX) that incorporates LLM-derived signals into structured models. Because the goal is operational decision-making rather than error minimization alone, we evaluate performance with bias and lead-lag alignment in addition to standard forecasting metrics. Our results show that HybridARX improves over classical ARX by yielding more stable and better-calibrated forecasts, particularly when incorporating noisy contextual signals into structured time-series models. These findings suggest that, in non-stationary healthcare resource forecasting, LLMs are most useful when embedded within structured hybrid models.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23949v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.23949v1",
-      "published": "2026-04-27T01:56:55Z",
-      "updated": "2026-04-27T01:56:55Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Translate or Simplify First: An Analysis of Cross-lingual Text Simplification in English and French",
-      "authors": [
-        "Ido Dahan",
-        "Omer Toledano",
-        "Roey J. Gafter",
-        "Sharon Pardo",
-        "Oren Tsur",
-        "Hila Zahavi",
-        "Elior Sulem"
-      ],
-      "abstract": "Cross-Lingual Text Simplification (CLTS) aims to make content more accessible across languages by simultaneously addressing both linguistic complexity and translation. This study investigates the effectiveness of different prompting strategies for CLTS between English and French using large language models (LLMs). We examine five distinct prompting systems: a direct prompt instructing the LLM to perform both translation and simplification simultaneously, two Composition approaches that either translate-then-simplify or simplify-then-translate within a single prompt, and two decomposition approaches that perform the same operations in separate, consecutive prompts. These systems are evaluated across a diverse set of five corpora of different genres (Wikipedia and medical texts) using seven state-of-the-art LLMs. Output quality is assessed through a multi-faceted evaluation framework comprising automatic metrics, comprehensive linguistic feature analysis, and human evaluation of simplicity and meaning preservation. Our findings reveal that while direct prompting consistently achieves the highest BLEU scores, indicating meaning fidelity, Translate-then-Simplify approaches demonstrate the highest simplicity, as measured by the linguistic features.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23844v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.23844v1",
-      "published": "2026-04-26T19:16:27Z",
-      "updated": "2026-04-26T19:16:27Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "One Size Fits None: Heuristic Collapse in LLM Investment Advice",
-      "authors": [
-        "Jillian Ross",
-        "Andrew W. Lo"
-      ],
-      "abstract": "Large language models are increasingly deployed as advisors in high-stakes domains -- answering medical questions, interpreting legal documents, recommending financial products -- where good advice requires integrating a user's full context rather than responding to salient surface features. We investigate whether frontier LLMs actually do this, or whether they instead exhibit heuristic collapse: a systematic reduction of complex, multi-factor decisions to a small number of dominant inputs. We study the phenomenon in investment advice, where legal standards explicitly require individualized reasoning over a client's full circumstances. Applying interpretable surrogate models to LLM outputs, we find systematic heuristic collapse: investment allocation decisions are largely determined by self-reported risk tolerance, while other relevant factors contribute minimally. We further find that web search partially attenuates heuristic collapse but does not resolve it. These findings suggest that heuristic collapse is not resolved by web search augmentation or model scale alone, and that deploying LLMs as advisors requires auditing input sensitivity, not just output quality.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23837v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.23837v1",
-      "published": "2026-04-26T18:45:11Z",
-      "updated": "2026-04-26T18:45:11Z",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "EndoGov: A knowledge-governed multi-agent expert system for endometrial cancer risk stratification",
-      "authors": [
-        "Weiye Dai",
-        "Liyun Shi",
-        "Zanxiang He",
-        "Yuling Ma",
-        "Mengyuan Lin",
-        "Dianxiang Sun",
-        "Liming Nie"
-      ],
-      "abstract": "Multimodal artificial intelligence models for endometrial cancer (EC) risk stratification typically optimize aggregate predictive performance but provide limited mechanisms for enforcing mandatory guideline overrides, such as assigning POLE-mutated tumors to the low-risk group despite high-grade morphology. We present EndoGov, a two-tier multi-agent expert system that factorizes the decision process as D(x) = G(P(x), R), where specialist agents P extract structured evidence and a governance agent G applies an executable rule set R. Tier 1 comprises pathology, molecular, and clinical agents that independently generate schema-constrained reports from frozen foundation-model features or structured records. Tier 2 queries an evidence-level-weighted Guideline Knowledge Graph, using deterministic hard-path rules for high-priority overrides and constrained soft-path reasoning for ambiguous cases. In TCGA-UCEC (n=541), EndoGov achieved 0.943 accuracy, 0.973 macro AUC, and a conditional logic-violation rate (C-LVR) of 0.93% among trigger-exposed cases. In CPTAC-UCEC (n=95), where reference labels are guideline-derived, EndoGov reached 0.842 accuracy compared with < 0.31 for locked-transfer neural baselines, supporting governance-pathway transfer under distribution shift rather than validation against independent clinical truth. End-to-end safety decomposition localized residual failures primarily to upstream molecular detection rather than downstream governance. Backend-swap experiments further showed that hard-path compliance is invariant to the LLM backend. These findings indicate that explicit clinical-rule governance can provide guideline-compliant, auditable EC risk assignment while preserving competitive discrimination.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23802v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.23802v1",
-      "published": "2026-04-26T16:54:13Z",
-      "updated": "2026-04-26T16:54:13Z",
-      "categories": [
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "Domain Fine-Tuning vs. Retrieval-Augmented Generation for Medical Multiple-Choice Question Answering: A Controlled Comparison at the 4B-Parameter Scale",
-      "authors": [
-        "Avi-ad Avraam Buskila"
-      ],
-      "abstract": "Practitioners deploying small open-weight large language models (LLMs) for medical question answering face a recurring design choice: invest in a domain-fine-tuned model, or keep a general-purpose model and inject domain knowledge at inference time via retrieval-augmented generation (RAG). We isolate this trade-off by holding model size, prompt template, decoding temperature, retrieval pipeline, and evaluation protocol fixed, and varying only (i) whether the model has been domain-adapted (Gemma 3 4B vs. MedGemma 4B, both 4-bit quantized and served via Ollama) and (ii) whether retrieved passages from a medical knowledge corpus are inserted into the prompt. We evaluate all four cells of this 2x2 design on the full MedQA-USMLE 4-option test split (1,273 questions) with three repetitions per question (15,276 LLM calls). Domain fine-tuning yields a +6.8 percentage-point gain in majority-vote accuracy over the general 4B baseline (53.3% vs. 46.4%, McNemar p < 10^-4). RAG over MedMCQA explanations does not produce a statistically significant gain in either model, and in the domain-tuned model the point estimate is slightly negative (-1.9 pp, p = 0.16). At this scale and on this benchmark, domain knowledge encoded in weights dominates domain knowledge supplied in context. We release the full experiment code and JSONL traces to support replication.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23801v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.23801v1",
-      "published": "2026-04-26T16:49:39Z",
-      "updated": "2026-04-26T16:49:39Z",
-      "categories": [
-        "cs.CL",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "LLM-CEG: Extending the Classification Error Gauge Framework for Privacy Auditing of Large Language Models",
-      "authors": [
-        "Kato Mivule"
-      ],
-      "abstract": "This paper extends the Classification Error Gauge (x-CEG) framework, originally developed for measuring the privacy-utility trade-off in tabular datasets, to privacy auditing of Large Language Models (LLMs). We propose LLM-CEG, a systematic framework that employs membership inference attack (MIA) success rates as an empirical privacy gauge and model perplexity as a utility gauge, iteratively adjusting differential privacy parameters until both thresholds are jointly satisfied. A proof-of-concept prototype fine-tunes DistilGPT-2 on a synthetic clinical PII dataset under four privacy regimes using DP-SGD. Results indicate that DP-SGD reduces MIA attacker advantage by 71.5% while simultaneously improving out-of-distribution utility by 47-50% relative to the overfitted baseline, suggesting that differential privacy may act as implicit regularization under narrow fine-tuning conditions. We further extend the SIED engineering framework to the LLM context as LLM-SIED, providing an auditable, regulator-aligned process for privacy-compliant LLM deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2604.23795v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.23795v1",
-      "published": "2026-04-26T16:39:37Z",
-      "updated": "2026-04-26T16:39:37Z",
-      "categories": [
-        "cs.CR"
       ]
     }
   ]

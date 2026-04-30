@@ -1,8 +1,101 @@
 {
-  "generated_at_utc": "2026-04-29T03:41:22.035500Z",
+  "generated_at_utc": "2026-04-30T03:42:41.426054Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "HealthNLP_Retrievers at ArchEHR-QA 2026: Cascaded LLM Pipeline for Grounded Clinical Question Answering",
+      "authors": [
+        "Md Biplob Hosen",
+        "Md Alomgeer Hussein",
+        "Md Akmol Masud",
+        "Omar Faruque",
+        "Tera L Reynolds",
+        "Lujie Karen Chen"
+      ],
+      "abstract": "Patient portals now give individuals direct access to their electronic health records (EHRs), yet access alone does not ensure patients understand or act on the complex clinical information contained in these records. The ArchEHR-QA 2026 shared task addresses this challenge by focusing on grounded question answering over EHRs, and this paper presents the system developed by the HealthNLP_Retrievers team for this task. The proposed approach uses a multi-stage cascaded pipeline powered by the Gemini 2.5 Pro large language model to interpret patient-authored questions and retrieve relevant evidence from lengthy clinical notes. Our architecture comprises four integrated modules: (1) a few-shot query reformulation unit which summarizes verbose patient queries; (2) a heuristic-based evidence scorer which ranks clinical sentences to prioritize recall; (3) a grounded response generator which synthesizes professional-caliber answers restricted strictly to identified evidence; and (4) a high-precision many-to-many alignment framework which links generated answers to supporting clinical sentences. This cascaded approach achieved competitive results. Across the individual tracks, the system ranked 1st in question interpretation, 5th in answer generation, 7th in evidence identification, and 9th in answer-evidence alignment. These results show that integrating large language models within a structured multi-stage pipeline improves grounding, precision, and the professional quality of patient-oriented health communication. To support reproducibility, our source code is publicly available in our GitHub repository",
+      "pdf_url": "https://arxiv.org/pdf/2604.26880v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.26880v1",
+      "published": "2026-04-29T16:47:20Z",
+      "updated": "2026-04-29T16:47:20Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Domain-Adapted Small Language Models for Reliable Clinical Triage",
+      "authors": [
+        "Manar Aljohani",
+        "Brandon Ho",
+        "Kenneth McKinley",
+        "Dennis Ren",
+        "Xuan Wang"
+      ],
+      "abstract": "Accurate and consistent Emergency Severity Index (ESI) assignment remains a persistent challenge in emergency departments, where highly variable free-text triage documentation contributes to mistriage and workflow inefficiencies. This study evaluates whether open-source small language models (SLMs) can serve as reliable, privacy-preserving decision-support tools for clinical triage. We systematically compared multiple SLMs across diverse prompting pipelines and found that clinical vignettes, concise summaries of triage narratives, yielded the most accurate predictions. The SLM, Qwen2.5-7B, demonstrated the strongest balance of accuracy, stability, and computational efficiency. Through large-scale domain adaptation using expert-curated and silver-standard pediatric triage data, fine-tuned Qwen2.5-7B models substantially reduced discordance and clinically significant errors, outperforming all baseline SLMs and advanced proprietary large language models (LLMs, e.g., GPT-4o). These findings highlight the feasibility of institution-specific SLMs for reliable, privacy-preserving ESI decision support and underscore the importance of targeted fine-tuning over more complex inference strategies.",
+      "pdf_url": "https://arxiv.org/pdf/2604.26766v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.26766v1",
+      "published": "2026-04-29T15:00:09Z",
+      "updated": "2026-04-29T15:00:09Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "SAGE: A Strategy-Aware Graph-Enhanced Generation Framework For Online Counseling",
+      "authors": [
+        "Eliya Naomi Aharon",
+        "Meytal Grimland",
+        "Avi Segal",
+        "Loona Ben Dayan",
+        "Inbar Shenfeld",
+        "Yossi Levi Belz",
+        "Kobi Gal"
+      ],
+      "abstract": "Effective mental health counseling is a complex, theory-driven process requiring the simultaneous integration of psychological frameworks, real-time distress signals, and strategic intervention planning. This level of clinical reasoning is critical for safety and therapeutic effectiveness but is often missing in general-purpose Large Language Models (LLMs). We introduce SAGE (Strategy-Aware Graph-Enhanced), a novel framework designed to bridge the gap between structured clinical knowledge and generative AI. SAGE constructs a heterogeneous graph that unifies conversational dynamics with a psychologically grounded layer, explicitly anchoring interactions in a theory-driven lexicon. Our architecture first employs a Next Strategy Classifier to identify the optimal therapeutic intervention. Subsequently, a Graph-Aware Attention mechanism projects graph-derived structural signals into soft prompts, conditioning the LLM to generate responses that maintain clinical depth. Validated through both automated metrics and expert human evaluation, SAGE outperforms baselines in strategy prediction and recommended response quality. By providing actionable intervention recommendations, SAGE serves as a cutting-edge decision-support tool designed to augment human expertise in high-stakes crisis counseling.",
+      "pdf_url": "https://arxiv.org/pdf/2604.26630v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.26630v1",
+      "published": "2026-04-29T12:56:44Z",
+      "updated": "2026-04-29T12:56:44Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Benchmarking the Safety of Large Language Models for Robotic Health Attendant Control",
+      "authors": [
+        "Mahiro Nakao",
+        "Kazuhiro Takemoto"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly considered for deployment as the control component of robotic health attendants, yet their safety in this context remains poorly characterized. We introduce a dataset of 270 harmful instructions spanning nine prohibited behavior categories grounded in the American Medical Association Principles of Medical Ethics, and use it to evaluate 72 LLMs in a simulation environment based on the Robotic Health Attendant framework. The mean violation rate across all models was 54.4\\%, with more than half exceeding 50\\%, and violation rates varied substantially across behavior categories, with superficially plausible instructions such as device manipulation and emergency delay proving harder to refuse than overtly destructive ones. Model size and release date were the primary determinants of safety performance among open-weight models, and proprietary models were substantially safer than open-weight counterparts (median 23.7\\% versus 72.8\\%). Medical domain fine-tuning conferred no significant overall safety benefit, and a prompt-based defense strategy produced only a modest reduction in violation rates among the least safe models, leaving absolute violation rates at levels that would preclude safe clinical deployment. These findings demonstrate that safety evaluation must be treated as a first-class criterion in the development and deployment of LLMs for robotic health attendants.",
+      "pdf_url": "https://arxiv.org/pdf/2604.26577v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.26577v1",
+      "published": "2026-04-29T11:58:59Z",
+      "updated": "2026-04-29T11:58:59Z",
+      "categories": [
+        "cs.AI",
+        "cs.CY",
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "Multimodal LLMs are not all you need for Pediatric Speech Language Pathology",
+      "authors": [
+        "Darren F\u00fcrst",
+        "Sebastian Steindl",
+        "Ulrich Sch\u00e4fer"
+      ],
+      "abstract": "Speech Sound Disorders (SSD) affect roughly five percent of children, yet speech-language pathologists face severe staffing shortages and unmanageable caseloads. We test a hierarchical approach to SSD classification on the granular multi-task SLPHelmUltraSuitePlus benchmark. We propose a cascading approach from binary classification to type, and symptom classification. By fine-tuning Speech Representation Models (SRM), and using targeted data augmentation we mitigate biases found by previous works, and improve upon all clinical tasks in the benchmark. We also treat Automatic Speech Recognition (ASR) with our data augmentation approach. Our results demonstrate that SRM consistently outperform the LLM-based state-of-the-art across all evaluated tasks by a large margin. We publish our models and code to foster future research.",
+      "pdf_url": "https://arxiv.org/pdf/2604.26568v1",
+      "arxiv_url": "https://arxiv.org/abs/2604.26568v1",
+      "published": "2026-04-29T11:52:54Z",
+      "updated": "2026-04-29T11:52:54Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "PSI-Bench: Towards Clinically Grounded and Interpretable Evaluation of Depression Patient Simulators",
       "authors": [
@@ -221,120 +314,6 @@
       "updated": "2026-04-27T17:17:56Z",
       "categories": [
         "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Green Shielding: A User-Centric Approach Towards Trustworthy AI",
-      "authors": [
-        "Aaron J. Li",
-        "Nicolas Sanchez",
-        "Hao Huang",
-        "Ruijiang Dong",
-        "Jaskaran Bains",
-        "Katrin Jaradeh",
-        "Zhen Xiang",
-        "Bo Li",
-        "Feng Liu",
-        "Aaron Kornblith",
-        "Bin Yu"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly deployed, yet their outputs can be highly sensitive to routine, non-adversarial variation in how users phrase queries, a gap not well addressed by existing red-teaming efforts. We propose Green Shielding, a user-centric agenda for building evidence-backed deployment guidance by characterizing how benign input variation shifts model behavior. We operationalize this agenda through the CUE criteria: benchmarks with authentic Context, reference standards and metrics that capture true Utility, and perturbations that reflect realistic variations in the Elicitation of model behavior. Guided by the PCS framework and developed with practicing physicians, we instantiate Green Shielding in medical diagnosis through HealthCareMagic-Diagnosis (HCM-Dx), a benchmark of patient-authored queries, together with structured reference diagnosis sets and clinically grounded metrics for evaluating differential diagnosis lists. We also study perturbation regimes that capture routine input variation and show that prompt-level factors shift model behavior along clinically meaningful dimensions. Across multiple frontier LLMs, these shifts trace out Pareto-like tradeoffs. In particular, neutralization, which removes common user-level factors while preserving clinical content, increases plausibility and yields more concise, clinician-like differentials, but reduces coverage of highly likely and safety-critical conditions. Together, these results show that interaction choices can systematically shift task-relevant properties of model outputs and support user-facing guidance for safer deployment in high-stakes domains. Although instantiated here in medical diagnosis, the agenda extends naturally to other decision-support settings and agentic AI systems.",
-      "pdf_url": "https://arxiv.org/pdf/2604.24700v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.24700v1",
-      "published": "2026-04-27T17:04:17Z",
-      "updated": "2026-04-27T17:04:17Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "FastOMOP: A Foundational Architecture for Reliable Agentic Real-World Evidence Generation on OMOP CDM data",
-      "authors": [
-        "Niko Moeller-Grell",
-        "Shihao Shenzhang",
-        "Zhangshu Joshua Jiang",
-        "Richard JB Dobson",
-        "Vishnu V Chandrabalan"
-      ],
-      "abstract": "The Observational Medical Outcomes Partnership Common Data Model (OMOP CDM), maintained by the Observational Health Data Sciences and Informatics (OHDSI) collaboration, enabled the harmonisation of electronic health records data of nearly one billion patients in 83 countries. Yet generating real-world evidence (RWE) from these repositories remains a manual process requiring clinical, epidemiological and technical expertise. LLMs and multi-agent systems have shown promise for clinical tasks, but RWE automation exposes a fundamental challenge: agentic systems introduce emergent behaviours, coordination failures and safety risks that existing approaches fail to govern. No infrastructure exists to ensure agentic RWE generation is flexible, safe and auditable across the lifecycle. We introduce FastOMOP, an open-source multi-agent architecture that addresses this gap by separating three infrastructure layers, governance, observability and orchestration, from pluggable agent-teams. Governance is enforced at the process boundary through deterministic validation independent of agent reasoning, ensuring no compromised or hallucinating agent can bypass safety controls. Agent teams for phenotyping, study design and statistical analysis inherit these guarantees through controlled tool exposure. We validated FastOMOP using a natural-language-to-SQL agent team across three OMOP CDM datasets: synthetic data from Synthea, MIMIC-IV and a real-world NHS dataset from Lancashire Teaching Hospitals (IDRIL). FastOMOP achieved reliability scores of 0.84-0.94 with perfect adversarial and out-of-scope block rates, demonstrating process-boundary governance delivers safety guarantees independent of model choice. These results indicate that the reliability gap in RWE deployment is architectural rather than model capability, and establish FastOMOP as a governed architecture for progressive RWE automation.",
-      "pdf_url": "https://arxiv.org/pdf/2604.24572v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.24572v1",
-      "published": "2026-04-27T15:02:02Z",
-      "updated": "2026-04-27T15:02:02Z",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "Agentic clinical reasoning over longitudinal myeloma records: a retrospective evaluation against expert consensus",
-      "authors": [
-        "Johannes Moll",
-        "Jannik L\u00fcbberstedt",
-        "Christoph Nuernbergk",
-        "Jacob Stroh",
-        "Luisa Mertens",
-        "Anna Purcarea",
-        "Christopher Zirn",
-        "Zeineb Benchaaben",
-        "Fabian Drexel",
-        "Hartmut H\u00e4ntze",
-        "Anirudh Narayanan",
-        "Friedrich Puttkammer",
-        "Andrei Zhukov",
-        "Jacqueline Lammert",
-        "Sebastian Ziegelmayer",
-        "Markus Graf",
-        "Marion H\u00f6gner",
-        "Marcus Makowski",
-        "Florian Bassermann",
-        "Lisa C. Adams",
-        "Jiazhen Pan",
-        "Daniel Rueckert",
-        "Krischan Braitsch",
-        "Keno K. Bressem"
-      ],
-      "abstract": "Multiple myeloma is managed through sequential lines of therapy over years to decades, with each decision depending on cumulative disease history distributed across dozens to hundreds of heterogeneous clinical documents. Whether LLM-based systems can synthesise this evidence at a level approaching expert agreement has not been established. A retrospective evaluation was conducted on longitudinal clinical records of 811 myeloma patients treated at a tertiary centre (2001-2026), covering 44,962 documents and 1,334,677 laboratory values, with external validation on MIMIC-IV. An agentic reasoning system was compared against single-pass retrieval-augmented generation (RAG), iterative RAG, and full-context input on 469 patient-question pairs from 48 templates at three complexity levels. Reference labels came from double annotation by four oncologists with senior haematologist adjudication. Iterative RAG and full-context input converged on a shared ceiling (75.4% vs 75.8%, p = 1.00). The agentic system reached 79.6% concordance (95% CI 76.4-82.8), exceeding both baselines (+3.8 and +4.2 pp; p = 0.006 and 0.007). Gains rose with question complexity, reaching +9.4 pp on criteria-based synthesis (p = 0.032), and with record length, reaching +13.5 pp in the top decile (n = 10). The system error rate (12.2%) was comparable to expert disagreement (13.6%), but severity was inverted: 57.8% of system errors were clinically significant versus 18.8% of expert disagreements. Agentic reasoning was the only approach to exceed the shared ceiling, with gains concentrated on the most complex questions and longest records. The greater clinical consequence of residual system errors indicates that prospective evaluation in routine care is required before these findings translate into patient benefit.",
-      "pdf_url": "https://arxiv.org/pdf/2604.24473v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.24473v1",
-      "published": "2026-04-27T13:41:18Z",
-      "updated": "2026-04-27T13:41:18Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Zero-shot Large Language Models for Automatic Readability Assessment",
-      "authors": [
-        "Riley Grossman",
-        "Yi Chen"
-      ],
-      "abstract": "Unsupervised automatic readability assessment (ARA) methods have important practical and research applications (e.g., ensuring medical or educational materials are suitable for their target audiences). In this paper, we propose a new zero-shot prompting methodology for ARA and present the first comprehensive evaluation of using large language models (LLMs) as an unsupervised ARA method by testing 10 diverse open-source LLMs (e.g., different sizes and developers) on 14 diverse datasets (e.g., different text lengths and languages). Our findings show that our proposed prompting methodology outperforms prior methods on 13 of the 14 datasets. Furthermore, we propose LAURAE, which combines LLM and readability formula scores to improve robustness by capturing both contextual and shallow (e.g., sentence length) features of readability. Our evaluation demonstrates that LAURAE robustly outperforms prior methods across languages, text lengths, and amounts of technical language.",
-      "pdf_url": "https://arxiv.org/pdf/2604.24470v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.24470v1",
-      "published": "2026-04-27T13:38:44Z",
-      "updated": "2026-04-27T13:38:44Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Learning Evidence of Depression Symptoms via Prompt Induction",
-      "authors": [
-        "Eliseo Bao",
-        "Anxo Perez",
-        "David Otero",
-        "Javier Parapar"
-      ],
-      "abstract": "Depression places substantial pressure on mental health services, and many people describe their experiences outside clinical settings in high-volume user-generated text (e.g., online forums and social media). Automatically identifying clinical symptom evidence in such text can therefore complement limited clinical capacity and scale to large populations. We address this need through sentence-level classification of 21 depression symptoms from the BDI-II questionnaire, using BDI-Sen, a dataset annotated for symptom relevance. This task is fine-grained and highly imbalanced, and we find that common LLM approaches (zero-shot, in-context learning, and fine-tuning) struggle to apply consistent relevance criteria for most symptoms. We propose Symptom Induction (SI), a novel approach which compresses labeled examples into short, interpretable guidelines that specify what counts as evidence for each symptom and uses these guidelines to condition classification. Across four LLM families and eight models, SI achieves the best overall weighted F1 on BDI-Sen, with especially large gains for infrequent symptoms. Cross-domain evaluation on an external dataset further shows that induced guidelines generalize across other diseases shared symptomatology (bipolar and eating disorders).",
-      "pdf_url": "https://arxiv.org/pdf/2604.24376v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.24376v1",
-      "published": "2026-04-27T12:08:01Z",
-      "updated": "2026-04-27T12:08:01Z",
-      "categories": [
         "cs.CL"
       ]
     }

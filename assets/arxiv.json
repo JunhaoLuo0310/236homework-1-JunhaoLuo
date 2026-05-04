@@ -1,8 +1,89 @@
 {
-  "generated_at_utc": "2026-05-03T03:49:46.814301Z",
+  "generated_at_utc": "2026-05-04T03:47:38.782658Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "When RAG Chatbots Expose Their Backend: An Anonymized Case Study of Privacy and Security Risks in Patient-Facing Medical AI",
+      "authors": [
+        "Alfredo Madrid-Garc\u00eda",
+        "Miguel Rujas"
+      ],
+      "abstract": "Background: Patient-facing medical chatbots based on retrieval-augmented generation (RAG) are increasingly promoted to deliver accessible, grounded health information. AI-assisted development lowers the barrier to building them, but they still demand rigorous security, privacy, and governance controls. Objective: To report an anonymized, non-destructive security assessment of a publicly accessible patient-facing medical RAG chatbot and identify governance lessons for safe deployment of generative AI in health. Methods: We used a two-stage strategy. First, Claude Opus 4.6 supported exploratory prompt-based testing and structured vulnerability hypotheses. Second, candidate findings were manually verified using Chrome Developer Tools, inspecting browser-visible network traffic, payloads, API schemas, configuration objects, and stored interaction data. Results: The LLM-assisted phase identified a critical vulnerability: sensitive system and RAG configuration appeared exposed through client-server communication rather than restricted server-side. Manual verification confirmed that ordinary browser inspection allowed collection of the system prompt, model and embedding configuration, retrieval parameters, backend endpoints, API schema, document and chunk metadata, knowledge-base content, and the 1,000 most recent patient-chatbot conversations. The deployment also contradicted its privacy assurances: full conversation records, including health-related queries, were retrievable without authentication. Conclusions: Serious privacy and security failures in patient-facing RAG chatbots can be identified with standard browser tools, without specialist skills or authentication; independent review should be a prerequisite for deployment. Commercial LLMs accelerated this assessment, including under a false developer persona; assistance available to auditors is equally available to adversaries.",
+      "pdf_url": "https://arxiv.org/pdf/2605.00796v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.00796v1",
+      "published": "2026-05-01T17:29:09Z",
+      "updated": "2026-05-01T17:29:09Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "RadLite: Multi-Task LoRA Fine-Tuning of Small Language Models for CPU-Deployable Radiology AI",
+      "authors": [
+        "Pankaj Gupta",
+        "Kartik Bose"
+      ],
+      "abstract": "Large language models (LLMs) show promise in radiology but their deployment is limited by computational requirements that preclude use in resource-constrained clinical environments. We investigate whether small language models (SLMs) of 3-4 billion parameters can achieve strong multi-task radiology performance through LoRA fine-tuning, enabling deployment on consumer-grade CPUs. We train Qwen2.5-3B-Instruct and Qwen3-4B on 162K samples spanning 9 radiology tasks - RADS classification across 10 systems, impression generation, temporal comparison, radiology NLI, NER, abnormality detection, N/M staging, and radiology Q&A - compiled from 12 public datasets. Both models are evaluated on up to 500 held-out test samples per task with standardized metrics. Our key findings are: (1) LoRA fine-tuning dramatically improves performance over zero-shot baselines (RADS accuracy +53%, NLI +60%, N-staging +89%); (2) the two models exhibit complementary strengths - Qwen2.5 excels at structured generation tasks while Qwen3 dominates extractive tasks; (3) a task-outed oracle ensemble combining both models achieves the best performance across all tasks; (4) few-shot prompting with fine-tuned models hurts performance, demonstrating that LoRA adaptation is more effective than in-context learning for specialized domains; and (5) models can be quantized to GGUF format (~1.8-2.4GB) for CPU deployment at 4-8 tokens/second on consumer hardware. Our work demonstrates that small, efficiently fine-tuned models - which we collectively call RadLite - can serve as practical multi-task radiology AI assistants deployable entirely on consumer hardware without GPU requirements.",
+      "pdf_url": "https://arxiv.org/pdf/2605.00421v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.00421v1",
+      "published": "2026-05-01T05:39:08Z",
+      "updated": "2026-05-01T05:39:08Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Budget-Aware Routing for Long Clinical Text",
+      "authors": [
+        "Khizar Qureshi",
+        "Geoffrey Martin",
+        "Yifan Peng"
+      ],
+      "abstract": "A key challenge for large language models is token cost per query and overall deployment cost. Clinical inputs are long, heterogeneous, and often redundant, while downstream tasks are short and high stakes. We study budgeted context selection, where a subset of document units is chosen under a strict token budget so an off-the-shelf generator can meet fixed cost and latency constraints. We cast this as a knapsack-constrained subset selection problem with two design choices, unitization that defines document segmentation and selection that determines which units are kept.\n  We propose \\textbf{RCD}, a monotone submodular objective that balances relevance, coverage, and diversity. We compare sentence, section, window, and cluster-based unitization, and introduce a routing heuristic that adapts to the budget regime. Experiments on MIMIC discharge notes, Cochrane abstracts, and L-Eval show that optimal strategies depend on the evaluation setting. Positional heuristics perform best at low budgets in extractive tasks, while diversity-aware methods such as MMR improve LLM generation. Selector choice matters more than unitization, with cluster-based grouping reducing performance and other schemes behaving similarly. ROUGE saturates for LLM summaries, while BERTScore better reflects quality differences. We release our code at https://github.com/stone-technologies/ACL_budget_paper.",
+      "pdf_url": "https://arxiv.org/pdf/2605.00336v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.00336v1",
+      "published": "2026-05-01T01:34:53Z",
+      "updated": "2026-05-01T01:34:53Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "What Don't You Understand? Using Large Language Models to Identify and Characterize Student Misconceptions About Challenging Topics",
+      "authors": [
+        "Michael J. Parker",
+        "Maria G. Zavala-Cerna"
+      ],
+      "abstract": "This study presents a systematic approach to identifying and characterizing student misconceptions in online learning environments through a novel combination of quantitative performance analysis and large language model (LLM) assessment. We analyzed data from 9 course periods across 5 online biomedical science courses, encompassing 3,802 medical student enrollments. Using data from 40-50 topic-focused quizzes per course, we developed a two-stage methodology. First, we identified challenging central topics using quiz-level performance metrics. Second, we employed LLMs to characterize the underlying misconceptions in these high-priority areas. By examining student performance on first attempts across primarily multiple-choice questions (MCQs), we identified consistently challenging topics that were also central to course objectives. We then leveraged recent advances in generative AI to analyze three distinct data sources in combination: quiz question content, student response patterns, and lecture transcripts. This approach revealed actionable insights about student misconceptions that were not apparent from performance data alone. The quality of the LLM-identified misconceptions was rated as excellent by subject matter experts. We also conducted teacher interviews to assess the perceived utility of our topic identification method. Faculty found that data-driven identification of challenging topics was valuable and corroborated their own classroom observations. This methodology provides a scalable approach to characterizing student difficulties in learning environments where quizzes are used. Our findings demonstrate the potential for targeted and potentially personalized interventions in future course iterations, with clear pathways for measuring intervention effectiveness through follow-up quiz performance.",
+      "pdf_url": "https://arxiv.org/pdf/2605.00294v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.00294v1",
+      "published": "2026-04-30T23:32:50Z",
+      "updated": "2026-04-30T23:32:50Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Persona-Grounded Safety Evaluation of AI Companions in Multi-Turn Conversations",
+      "authors": [
+        "Prerna Juneja",
+        "Lika Lomidze"
+      ],
+      "abstract": "There are growing concerns about the risks posed by AI companion applications designed for emotional engagement. Existing safety evaluations often rely on self-reported user data or interviews, offering limited insights into real-time dynamics. We present the first end-to-end scalable framework for controlled simulation and safety evaluation of multi-turn interactions with AI companion applications. Our framework integrates four key components: persona construction with clinical and psychometric validation, persona-specific scenario generation, scenario-driven multi-turn simulation with a dialogue refinement module that preserves persona fidelity, and harm evaluation. We apply this framework to evaluate how Replika, a widely used AI companion app, responds to high-risk user groups. We construct 9 personas representing individuals with depression, anxiety, PTSD, eating disorders, and incel identity, and collect 1,674 dialogue pairs across 25 high-risk scenarios. We combine emotion modeling and LLM-assisted utterance-and harm-level classification to analyze these exchanges. Results show that Replika exhibits a narrow emotional range dominated by curiosity and care, while frequently mirroring or normalizing unsafe content such as self-harm, disordered eating, and violent-fantasy narratives. These findings highlight how controlled persona simulations can serve as a scalable testbed for evaluating safety risks in AI companions.",
+      "pdf_url": "https://arxiv.org/pdf/2605.00227v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.00227v1",
+      "published": "2026-04-30T21:04:41Z",
+      "updated": "2026-04-30T21:04:41Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis",
       "authors": [
@@ -207,100 +288,6 @@
       "categories": [
         "cs.CL",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Safe Bilevel Delegation (SBD): A Formal Framework for Runtime Delegation Safety in Multi-Agent Systems",
-      "authors": [
-        "Yuan Sun"
-      ],
-      "abstract": "As large language model (LLM) agents are deployed in high-stakes environments, the question of how safely to delegate subtasks to specialized sub-agents becomes critical. Existing work addresses multi-agent architecture selection at design time or provides broad empirical guidelines, but neither provides a runtime mechanism that dynamically adjusts the safety-efficiency trade-off as task context changes during execution.\n  We propose Safe Bilevel Delegation (SBD), a formal framework for runtime delegation safety in hierarchical multi-agent systems. SBD formulates task delegation as a bilevel optimization problem: an outer meta-weight network phi learns context-dependent safety-efficiency weights lambda(s) in [0,1]; an inner loop optimizes the delegation policy pi subject to a probabilistic safety constraint P(safe) >= 1-delta. The continuous delegation degree alpha in [0, 1] controls how much decision authority is transferred to each sub-agent, interpolating smoothly between full human override (alpha=0) and fully autonomous execution (alpha=1).\n  We establish three theoretical results: (1) Safety Monotonicity--higher outer safety weight produces a weakly safer inner policy; (2) Inner Policy Convergence--projected gradient descent on the inner problem converges linearly under standard smoothness assumptions; (3) an Accountability Propagation bound that distributes responsibility across multi-hop delegation chains with a provable per-agent ceiling. We instantiate SBD in three high-stakes domains--medical AI (MIMIC-III), financial risk control (S and P 500), and educational agent supervision (ASSISTments)--specifying datasets, safety constraint sets, baselines, and evaluation protocols. This manuscript presents the formal framework and theoretical results in full; empirical validation following the protocols described herein is planned and will be reported in a forthcoming revision.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27358v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.27358v1",
-      "published": "2026-04-30T03:15:05Z",
-      "updated": "2026-04-30T03:15:05Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "OptimusKG: Unifying biomedical knowledge in a modern multimodal graph",
-      "authors": [
-        "Lucas Vittor",
-        "Ayush Noori",
-        "I\u00f1aki Arango",
-        "Joaqu\u00edn Polonuer",
-        "Sam Rodriques",
-        "Andrew White",
-        "David A. Clifton",
-        "Marinka Zitnik"
-      ],
-      "abstract": "Biomedical knowledge graphs (KGs) are widely used in the life sciences, yet many are derived from unstructured documents and therefore lack schema-level constrains, whereas graphs assembled from structured resources are difficult to harmonize into a unified representation. We present OptimusKG, a multimodal biomedical labeled property graph (LPG) built from structured and semi-structured resources to preserve factual, type-specific metadata across molecular, anatomical, clinical, and environmental domains. OptimusKG contains 190,531 nodes across 10 entity types, 21,813,816 edges across 26 relation types, and 67,249,863 property instances encoding 110,276,843 values across 150 distinct property keys, derived from 18 ontologies and controlled vocabularies. The graph enforces a top-level schema for nodes and edges and retains granular, type-specific properties, cross-references, and provenance across molecular, anatomical, clinical, and environmental domains. We assessed the validity of OptimusKG by evaluating whether graph relationships are supported by evidence from the scientific literature using a multimodal agent, PaperQA3. PaperQA3 identified supporting evidence for 70.0% of sampled edges, whereas 83.4% of sampled false edges received no supporting evidence. Edges without literature support were concentrated in associations derived from experimental and functional genomics resources, suggesting that OptimusKG captures biomedical knowledge that may precede synthesis in the scientific literature. OptimusKG is distributed as Apache Parquet files, providing a standardized resource for graph-based machine learning, knowledge-grounded retrieval with large language models, and biomedical discovery use cases such as hypothesis generation.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27269v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.27269v1",
-      "published": "2026-04-29T23:49:34Z",
-      "updated": "2026-04-29T23:49:34Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Detecting Clinical Discrepancies in Health Coaching Agents: A Dual-Stream Memory and Reconciliation Architecture",
-      "authors": [
-        "Samuel L Pugh",
-        "Eric Yang",
-        "Alexander Muir Sutherland",
-        "Alessandra Breschi"
-      ],
-      "abstract": "As Large Language Model (LLM) agents transition from single-session tools to persistent systems managing longitudinal healthcare journeys, their memory architectures face a critical challenge: reconciling two imperfect sources of truth. The patient's evolving self-report is current but prone to recall bias, while the Electronic Health Record (EHR) is medically validated but frequently stale. General-purpose agent memory systems optimize for coherence by overwriting older facts with the user's latest statement, a pattern that risks safety failures when applied to clinical data. We introduce a Dual-Stream Memory Architecture that strictly separates the patient narrative from the structured clinical record (FHIR), governed by a dedicated Reconciliation Engine that evaluates every extracted memory against the patient's FHIR profile and classifies discrepancies by type, severity, and the specific FHIR resources involved. We evaluate this architecture on 26 patients across 675 longitudinal wellness coaching sessions, using a hybrid dataset that interleaves real provider-patient transcripts with synthetic, FHIR-grounded clinical scenarios. In isolated testing, the engine detects 84.4% of designed clinical discrepancies with 86.7% safety-critical recall. By coupling extraction and reconciliation evaluation on the same data, we directly quantify a 13.6% error cascade, tracing the degradation to clinical details lost during memory extraction from unstructured conversation rather than to downstream classification errors. These findings establish that validating patient-reported memories against clinical records is both feasible and necessary for safe deployment of longitudinal health agents.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27045v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.27045v1",
-      "published": "2026-04-29T17:59:28Z",
-      "updated": "2026-04-29T17:59:28Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "HealthNLP_Retrievers at ArchEHR-QA 2026: Cascaded LLM Pipeline for Grounded Clinical Question Answering",
-      "authors": [
-        "Md Biplob Hosen",
-        "Md Alomgeer Hussein",
-        "Md Akmol Masud",
-        "Omar Faruque",
-        "Tera L Reynolds",
-        "Lujie Karen Chen"
-      ],
-      "abstract": "Patient portals now give individuals direct access to their electronic health records (EHRs), yet access alone does not ensure patients understand or act on the complex clinical information contained in these records. The ArchEHR-QA 2026 shared task addresses this challenge by focusing on grounded question answering over EHRs, and this paper presents the system developed by the HealthNLP_Retrievers team for this task. The proposed approach uses a multi-stage cascaded pipeline powered by the Gemini 2.5 Pro large language model to interpret patient-authored questions and retrieve relevant evidence from lengthy clinical notes. Our architecture comprises four integrated modules: (1) a few-shot query reformulation unit which summarizes verbose patient queries; (2) a heuristic-based evidence scorer which ranks clinical sentences to prioritize recall; (3) a grounded response generator which synthesizes professional-caliber answers restricted strictly to identified evidence; and (4) a high-precision many-to-many alignment framework which links generated answers to supporting clinical sentences. This cascaded approach achieved competitive results. Across the individual tracks, the system ranked 1st in question interpretation, 5th in answer generation, 7th in evidence identification, and 9th in answer-evidence alignment. These results show that integrating large language models within a structured multi-stage pipeline improves grounding, precision, and the professional quality of patient-oriented health communication. To support reproducibility, our source code is publicly available in our GitHub repository",
-      "pdf_url": "https://arxiv.org/pdf/2604.26880v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.26880v1",
-      "published": "2026-04-29T16:47:20Z",
-      "updated": "2026-04-29T16:47:20Z",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Domain-Adapted Small Language Models for Reliable Clinical Triage",
-      "authors": [
-        "Manar Aljohani",
-        "Brandon Ho",
-        "Kenneth McKinley",
-        "Dennis Ren",
-        "Xuan Wang"
-      ],
-      "abstract": "Accurate and consistent Emergency Severity Index (ESI) assignment remains a persistent challenge in emergency departments, where highly variable free-text triage documentation contributes to mistriage and workflow inefficiencies. This study evaluates whether open-source small language models (SLMs) can serve as reliable, privacy-preserving decision-support tools for clinical triage. We systematically compared multiple SLMs across diverse prompting pipelines and found that clinical vignettes, concise summaries of triage narratives, yielded the most accurate predictions. The SLM, Qwen2.5-7B, demonstrated the strongest balance of accuracy, stability, and computational efficiency. Through large-scale domain adaptation using expert-curated and silver-standard pediatric triage data, fine-tuned Qwen2.5-7B models substantially reduced discordance and clinically significant errors, outperforming all baseline SLMs and advanced proprietary large language models (LLMs, e.g., GPT-4o). These findings highlight the feasibility of institution-specific SLMs for reliable, privacy-preserving ESI decision support and underscore the importance of targeted fine-tuning over more complex inference strategies.",
-      "pdf_url": "https://arxiv.org/pdf/2604.26766v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.26766v1",
-      "published": "2026-04-29T15:00:09Z",
-      "updated": "2026-04-29T15:00:09Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
       ]
     }
   ]

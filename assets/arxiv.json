@@ -1,8 +1,305 @@
 {
-  "generated_at_utc": "2026-05-04T03:47:38.782658Z",
+  "generated_at_utc": "2026-05-05T03:30:25.799964Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "SCPRM: A Schema-aware Cumulative Process Reward Model for Knowledge Graph Question Answering",
+      "authors": [
+        "Jiujiu Chen",
+        "Yazheng Liu",
+        "Sihong Xie",
+        "Hui Xiong"
+      ],
+      "abstract": "Large language models excel at complex reasoning, yet evaluating their intermediate steps remains challenging. Although process reward models provide step-wise supervision, they often suffer from a risk compensation effect, where incorrect steps are offset by later correct ones, assigning high rewards to flawed reasoning paths. This issue is further exacerbated in knowledge graph (KG) reasoning, as there may exist multiple paths between the start and end entities in the KGs, and a risky step can make the reasoning path flawed. Those limitations are problematic in risk-sensitive tasks such as medical and legal KG reasoning. To address the issues, we propose a Schema-aware Cumulative Process Reward Model (SCPRM) that evaluates reasoning paths by conditioning on the reasoning prefix , and incorporating schema distance between current reasoning step and the implicit target parsed from the query, which provides cumulative and future rewards to guide the path explorations. We further integrate SCPRM into Monte Carlo Tree Search (MCTS) as SCPRM-MCTS to conduct multi-hop reasoning on KGs for question answering (QA) tasks. Across medical and legal KGQA and CWQ, SCPRM-MCTS improves the performance of Hits@k by an average of 1.18% over strong baselines, demonstrating more accurate and risk-sensitive reasoning evaluation.",
+      "pdf_url": "https://arxiv.org/pdf/2605.02819v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.02819v1",
+      "published": "2026-05-04T16:56:01Z",
+      "updated": "2026-05-04T16:56:01Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Reliability-Oriented Multilingual Orthopedic Diagnosis: A Domain-Adaptive Modeling and a Conceptual Validation Framework",
+      "authors": [
+        "Danish Ali",
+        "Li Xiaojian",
+        "Sundas Iqbal",
+        "Farrukh Zaidi"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly proposed for clinical decision support including multilingual diagnosis in low-resource settings. However, their reliability, calibration and safety characteristics remain insufficiently understood for structured, high-risk tasks. We present a system-level analysis of multilingual orthopedic diagnosis from free-text clinical notes in English, Hindi and Punjabi. We evaluate three modeling regimes: (i) task-aligned multilingual transformer encoders, (ii) a task-fine-tuned baseline (DistilBERT), and (iii) a domain-adaptive architecture tailored to orthopedic text (IndicBERT-HPA). These models are compared with zero-shot, instruction-tuned LLMs to assess suitability for structured diagnostic classification. Results indicate that while LLMs exhibit strong linguistic fluency, they show unstable calibration and reduced reliability under structured multilingual conditions, particularly in low-resource languages. These findings are specific to zero-shot evaluation and do not imply limitations of fine-tuned models. Domain-adaptive specialization substantially improves cross-lingual discrimination and confidence behavior. IndicBERT-HPA, with language-specific orthopedic adapter heads achieves consistently strong performance across six diagnostic categories and more predictable deployment characteristics than task-only adaptation. Building on these observations, we outline a conceptual deterministic agent-based validation framework for future implementation, formalizing evidence checks, language-sensitive validation and conservative human-in-the-loop gating. Reliable multilingual clinical decision support requires specialized architecture, explicit reliability analysis, and structured validation for safety-critical systems.",
+      "pdf_url": "https://arxiv.org/pdf/2605.02266v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.02266v1",
+      "published": "2026-05-04T06:20:36Z",
+      "updated": "2026-05-04T06:20:36Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "PhysicianBench: Evaluating LLM Agents in Real-World EHR Environments",
+      "authors": [
+        "Ruoqi Liu",
+        "Imran Q. Mohiuddin",
+        "Austin J. Schoeffler",
+        "Kavita Renduchintala",
+        "Ashwin Nayak",
+        "Prasantha L. Vemu",
+        "Shivam C. Vedak",
+        "Kameron C. Black",
+        "John L. Havlik",
+        "Isaac Ogunmola",
+        "Stephen P. Ma",
+        "Roopa Dhatt",
+        "Jonathan H. Chen"
+      ],
+      "abstract": "We introduce PhysicianBench, a benchmark for evaluating LLM agents on physician tasks grounded in real clinical setting within electronic health record (EHR) environments. Existing medical agent benchmarks primarily focus on static knowledge recall, single-step atomic actions, or action intent without verifiable execution against the environment. As a result, they fail to capture the long-horizon, composite workflows that characterize real clinical systems. PhysicianBench comprises 100 long-horizon tasks adapted from real consultation cases between primary care and subspecialty physicians, with each task independently reviewed by a separate panel of physicians. Tasks are instantiated in an EHR environment with real patient records and accessed through the same standard APIs used by commercial EHR vendors. Tasks span 21 specialties (e.g., cardiology, endocrinology, oncology, psychiatry) and diverse workflow types (e.g., diagnosis interpretation, medication prescribing, treatment planning), requiring an average of 27 tool calls per task. Solving each task requires retrieving data across encounters, reasoning over heterogeneous clinical information, executing consequential clinical actions, and producing clinical documentation. Each task is decomposed into structured checkpoints (670 in total across the benchmark) capturing distinct stages of completion graded by task-specific scripts with execution-grounded verification. Across 13 proprietary and open-source LLM agents, the best-performing model achieves only 46% success rate (pass@1), while open-source models reach at most 19%, revealing a substantial gap between current agent capabilities and the demands of real-world clinical workflows. PhysicianBench provides a realistic and execution-grounded benchmark for measuring progress toward autonomous clinical agents.",
+      "pdf_url": "https://arxiv.org/pdf/2605.02240v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.02240v1",
+      "published": "2026-05-04T05:32:25Z",
+      "updated": "2026-05-04T05:32:25Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Ultrasound Vision-Language Alignment via Contrastive Learning",
+      "authors": [
+        "Zhuoyang Lyu",
+        "Yiyang Zhang",
+        "Tongxin Wang",
+        "Ruirui Lan"
+      ],
+      "abstract": "Ultrasound foundation models have achieved strong performance on structured prediction tasks but remain exclusively vision-based, limiting zero-shot and few-shot transfer to novel tasks where task-specific annotation is scarce. We address this gap with EchoCare-CLIP, a CLIP-style dual-encoder contrastive framework that aligns ultrasound images with clinical text in a shared embedding space. We curate a multi-organ corpus of over 16K image-text pairs spanning breast, liver, lung, and thyroid, with over 78% of captions derived from expert-annotated reports, and complement the remainder with a three-tier template-based and LLM-based caption generation pipeline. We evaluate model configurations spanning two text encoder families (CLIP, BioClinicalBERT) and two caption strategies (template-based, LLM-generated) against OpenAI CLIP and BiomedCLIP baselines. Our trained models consistently improve cross-modal alignment over baselines, with the best configuration achieving a paired alignment score of 0.682. However, stronger alignment does not guarantee better downstream performance: CLIP-based variants with partial fine-tuning achieve the strongest zero-shot classification on external held-out datasets (0.709 on BUSI; 0.626 on AULI), while full end-to-end fine-tuning degrades transfer due to overfitting. On linear probing and few-shot adaptation, model rankings are dataset-dependent, reflecting a trade-off between domain adaptation and representational generalizability. We further show that template-based captions match or outperform LLM-generated captions, suggesting lexical diversity is not a proxy for caption quality. Taken together, our results demonstrate that ultrasound vision-language alignment is achievable from public data alone, but robust clinical transfer requires careful balancing of domain adaptation, encoder capacity, and caption supervision quality.",
+      "pdf_url": "https://arxiv.org/pdf/2605.02126v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.02126v1",
+      "published": "2026-05-04T01:12:45Z",
+      "updated": "2026-05-04T01:12:45Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "MedScribe: Clinically Grounded CT Reporting through Agentic Workflows",
+      "authors": [
+        "Giuseppe A. Orlando",
+        "Paolo Papotti",
+        "Maria A. Zuluaga",
+        "Olivier Humbert",
+        "Marco Lorenzi"
+      ],
+      "abstract": "Vision-language models (VLMs) have shown potential for automated radiology report generation, yet existing approaches rely on global embedding compression of volumetric data, often leading to hallucinated findings and limited anatomical grounding in 3D CT imaging. We introduce MedScribe, a hypothesis-driven framework that reformulates report generation as an iterative evidence acquisition process rather than a single-pass encoding task. MedScribe models reporting as a sequential decision process in which a large language model dynamically invokes pathology-specific diagnostic tools to extract localized volumetric features. These structured features are used to query a multidimensional retrieval space aligned with pathology-specific textual evidence. By explicitly accumulating quantitative evidence prior to synthesis, the framework enforces fine-grained grounding and reduces unsupported claims. Without task-specific fine-tuning, MedScribe improves clinical accuracy, factual consistency, and interpretability on CT-RATE and RadChestCT compared to state-of-the-art 2D and 3D VLMs, demonstrating the value of hypothesis-driven reasoning for reliable medical image reporting.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01779v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.01779v1",
+      "published": "2026-05-03T08:32:40Z",
+      "updated": "2026-05-03T08:32:40Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "PRCD-MAP: Learning How Much to Trust Imperfect Priors in Causal Discovery",
+      "authors": [
+        "Xihang Shan",
+        "Da Zhou"
+      ],
+      "abstract": "External priors of unknown reliability create a brittle trade-off in causal discovery: blind trust amplifies errors, blind rejection wastes signal. Real priors are also \\emph{heterogeneously} reliable -- physical laws are trustworthy, LLM-suggested edges are speculative -- yet existing methods either ignore priors or impose them through globally uniform trust. We propose \\textbf{PRCD-MAP}, a soft prior-consumption layer that assigns \\emph{per-edge} trust to an imperfect prior and uses it to modulate a prior-aware $\\ell_1$ penalty and prior-weighted $\\ell_2$ regularizer in a MAP objective. Trust is calibrated by empirical Bayes on a Laplace-approximated marginal likelihood and propagated along the prior graph by an MLP, so that data-confirmed neighborhoods boost trust and contradictions suppress it. PRCD-MAP enjoys a population-level safety guarantee: it is $\\varepsilon$-safe in expectation over the prior-generation distribution, with $\\varepsilon = O(d^2/T)$ -- inheriting the oracle convergence rate. When the prior is uninformative, learned trust provably collapses to its floor and the method recovers a no-prior baseline. Empirically, on real CausalTime data PRCD-MAP exploits informative priors when present ($+0.123$ AUROC on AQI, $+0.043$ on Medical over PCMCI+), auto-attenuates on the anonymous-variable Traffic stress test, and retains a lead at $d{=}300$; against BayesDAG~\\citep{annadani2023bayesdag} -- the closest soft-Bayesian baseline -- PRCD-MAP wins on every CausalTime dataset under a matched $W_0$-only protocol. A four-way ablation isolates each component: EB calibration and MLP trust propagation jointly carry the plurality of the gain, with positive sign on every dataset. Extensions to nonlinear (NAM) and cross-sectional settings show the calibrated-trust principle is setting-agnostic.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01669v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.01669v1",
+      "published": "2026-05-03T01:48:45Z",
+      "updated": "2026-05-03T01:48:45Z",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "ReMedi: Reasoner for Medical Clinical Prediction",
+      "authors": [
+        "Yushi Cao",
+        "Yiming Chen",
+        "Hongchao Jiang",
+        "Hung-yi Lee",
+        "Robby T. Tan"
+      ],
+      "abstract": "Predicting future clinical outcomes from electronic health records (EHR) remains challenging due to the complexity and heterogeneity of patient data. LLMs have shown strong potential for such predictive tasks, yet existing approaches mainly focus on enhancing medical knowledge through distillation or RAG while relying on the model's internal ability to interpret contextual information. In this work, we present ReMedi (Reasoner for Medical Clinical Prediction), a framework for improving clinical outcome prediction from EHR. ReMedi generates rationale-answer pairs using a challenging sample regeneration mechanism for complex clinical questions, which leverages ground-truth answers as hints to enhance reasoning for further fine-tuning and preference tuning. ReMedi integrates ground-truth outcome guidance into the preference data construction loop, regenerating rationale-answer variants. By tuning on these rationale-answer pairs, the model improves its predictive performance. Experiments on multiple EHR prediction tasks demonstrate substantial gains of up to 19.9 percent over state-of-the-art baselines in terms of F1 score, underscoring ReMedi's effectiveness in real-world clinical prediction.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01474v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.01474v1",
+      "published": "2026-05-02T14:44:49Z",
+      "updated": "2026-05-02T14:44:49Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Artificial intelligence language technologies in multilingual healthcare: Grand challenges ahead",
+      "authors": [
+        "Vicent Briva-Iglesias"
+      ],
+      "abstract": "AI language technologies (AILTs), increasingly enabled by large language models (LLMs), are becoming embedded in multilingual healthcare workflows for translation, rewriting, documentation, interpreting, and messaging in language-discordant settings. Yet fluent output is not the same as clinically safe or equitable communication: performance varies across languages, accents, tasks, and workflows, and efficiency gains can hide errors, reduce traceability, and shift responsibility across clinicians, translators, interpreters, and health systems. This narrative review synthesises recent peer-reviewed evidence across written communication, spoken communication, and emerging agentic workflows. Using the Human-Centered AI Language Technology (HCAILT) lens, it examines capabilities, evaluation practices, implementation patterns, and recurrent errors through reliability, safety culture, and trustworthiness. We identify key convergences and contradictions in the literature and propose seven grand challenges for the next phase of research and deployment. Progress, we argue, requires not only better models but also accountable sociotechnical design, calibrated human oversight, and stronger collaboration across MT/NLP, translation studies, HCI, clinical practice, implementation science, and policy.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01441v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.01441v1",
+      "published": "2026-05-02T13:39:56Z",
+      "updated": "2026-05-02T13:39:56Z",
+      "categories": [
+        "cs.CL",
+        "cs.CY",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Medmarks: A Comprehensive Open-Source LLM Benchmark Suite for Medical Tasks",
+      "authors": [
+        "Benjamin Warner",
+        "Ratna Sagari Grandhi",
+        "Max Kieffer",
+        "Aymane Ouraq",
+        "Saurav Panigrahi",
+        "Geetu Ambwani",
+        "Kunal Bagga",
+        "Nikhil Khandekar",
+        "Arya Hariharan",
+        "Nishant Mishra",
+        "Manish Ram",
+        "Shamus Sim Zi Yang",
+        "Ahmed Essouaied",
+        "Adepoju Jeremiah Moyondafoluwa",
+        "Robert Scholz",
+        "Bofeng Huang",
+        "Molly Beavers",
+        "Srishti Gureja",
+        "Anish Mahishi",
+        "Sameed Khan",
+        "Maxime Griot",
+        "Hunar Batra",
+        "Jean-Benoit Delbrouck",
+        "Siddhant Bharadwaj",
+        "Ronald Clark",
+        "Ashish Vashist",
+        "Anas Zafar",
+        "Leema Krishna Murali",
+        "Harsh Deshpande",
+        "Ameen Patel",
+        "William Brown",
+        "Johannes Hagemann",
+        "Connor Lane",
+        "Paul Steven Scotti",
+        "Tanishq Mathew Abraham"
+      ],
+      "abstract": "Evaluating large language models (LLMs) for medical applications remains challenging due to benchmark saturation, limited data accessibility, and insufficient coverage of relevant tasks. Existing suites have either saturated, heavily depend on restricted datasets, or lack comprehensive model coverage. We introduce Medmarks, a fully open-source evaluation suite with 30 benchmarks spanning question answering, information extraction, medical calculations, and open-ended clinical reasoning. We perform a systematic evaluation of 61 models across 71 configurations using verifiable metrics and LLM-as-a-Judge. Our results show that frontier reasoning models (Gemini 3 Pro Preview, GPT-5.1, & GPT-5.2) achieve the highest performance across both benchmarks, most frontier proprietary models are significantly more token efficient than open-weight alternatives, medically fine-tuned models outperform their generalist counterparts, and that models are susceptible to answer-order bias (particularly smaller models and Grok 4). A subset of our evals (Medmarks-T) can be directly used as reinforcement learning environments to post-train LLMs for medical reasoning. Code is available at https://github.com/MedARC-AI/Medmarks",
+      "pdf_url": "https://arxiv.org/pdf/2605.01417v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.01417v1",
+      "published": "2026-05-02T12:29:03Z",
+      "updated": "2026-05-02T12:29:03Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "OralMLLM-Bench: Evaluating Cognitive Capabilities of Multimodal Large Language Models in Dental Practice",
+      "authors": [
+        "Rongyang Wang",
+        "Shuang Zhou",
+        "Jiashuo Wang",
+        "Wenya Xie",
+        "Xiaoxia Che"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) have emerged as a promising paradigm for dental image analysis. However, their ability to capture the multi-level cognitive processes required for radiographic analysis remains unclear. Here, we present a comprehensive benchmark to evaluate the cognitive capabilities of MLLMs in dental radiographic analysis. It spans three critical imaging modalities, i.e., periapical, panoramic, and lateral cephalometric radiographs, and defines four cognitive categories: perception, comprehension, prediction, and decision-making. The benchmark comprises 27 clinically grounded tasks derived from public datasets, with manually curated annotations and 3,820 clinician assessments for evaluation. Six frontier MLLMs, including GPT-5.2 and GLM-4.6, are evaluated. We demonstrate the performance gap between MLLMs and clinicians in dental practice, delineate model strengths and limitations, characterize failure patterns, and provide recommendations for improvement. This data resource will facilitate the development of next-generation artificial intelligence systems aligned with clinical cognition, safety requirements, and workflow complexity in dental practice.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01333v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.01333v1",
+      "published": "2026-05-02T09:08:33Z",
+      "updated": "2026-05-02T09:08:33Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "NEURON: A Neuro-symbolic System for Grounded Clinical Explainability",
+      "authors": [
+        "Anuradha Chandrasekaran",
+        "Dimitrios Zikos",
+        "Mutlu Mete",
+        "Alan Pang",
+        "Brady D. Lund",
+        "Kewei Sha"
+      ],
+      "abstract": "Clinical AI adoption is hindered by the black-box/grey-box nature of high-performing models, which lack the ontological grounding and narrative transparency required for professional-level explainability. We present NEURON, a neuro-symbolic system designed to enhance both predictive reliability and clinical interpretability. NEURON integrates SNOMED CT ontology-informed structural representations with machine learning models to bridge the gap between raw data and medical nomenclature. To facilitate human-aligned interaction, the system utilizes a Retrieval-Augmented Generation (RAG) grounded LLM layer to synthesize SHAP feature attributions and patient-specific clinical notes into coherent, natural-language explanations. Validated on the MIMIC-IV dataset for Acute Heart Failure mortality prediction, NEURON improved the AUC from 0.74-0.77 to 0.84-0.88 and significantly outperformed raw SHAP visualizations in human-aligned metrics (0.85 vs. 0.50). Our results demonstrate that NEURON offers a robust, scalable engineering solution for deploying trustworthy, human-centered connected health applications.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01189v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.01189v1",
+      "published": "2026-05-02T02:00:02Z",
+      "updated": "2026-05-02T02:00:02Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Virtual Speech Therapist: A Clinician-in-the-Loop AI Speech Therapy Agent for Personalized and Supervised Therapy",
+      "authors": [
+        "Shakeel Sheikh",
+        "Patrick Marmaroli",
+        "MD Sahidullah",
+        "Slim Ouni",
+        "Fabrice Hirsch",
+        "Goncalo Leal",
+        "Bjorn W Schuller"
+      ],
+      "abstract": "This paper develops Virtual Speech Therapist (VST), an intelligent agent-based platform that streamlines stuttering assessment and delivers customized therapy planning through automated and adaptive AI-driven workflows. VST integrates state-of-the-art deep learning-based stuttering classification, and multi-agent large language model (LLM) reasoning to support evidence-based clinical decision-making. The VST begins with the acquisition and feature extraction of patient speech samples, followed by robust classification of stuttering types. Building on these outputs, VST initiates an agentic reasoning process in which specialized LLM agents autonomously generate, critique, and iteratively refine individualized therapy plans. A dedicated critic agent evaluates all generated therapy plans to ensure clinical safety, methodological soundness, and alignment with peer-reviewed evidence and established professional guidelines. The resulting output is a comprehensive, patient-specific therapy draft intended for clinician review. Incorporating clinician feedback, the system then produces a finalized therapy plan suitable for patient delivery, thereby maintaining a clinician-in-the-loop paradigm. Experimental evaluation by expert speech therapists confirms that VST consistently generates high-quality, evidence-based therapy recommendations. These findings demonstrate the system's potential to augment clinical workflows, reduce clinician burden, and improve therapeutic outcomes for individuals with speech impairments. An interactive user interface for the proposed system is available online at: https://vocametrix.com/ai/stuttering-therapy-planning-agent , facilitating real-time stuttering assessment and personalized therapy planning.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01101v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.01101v1",
+      "published": "2026-05-01T21:14:45Z",
+      "updated": "2026-05-01T21:14:45Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.SD",
+        "eess.AS"
+      ]
+    },
+    {
+      "title": "Teaching LLMs Brazilian Healthcare: Injecting Knowledge from Official Clinical Guidelines",
+      "authors": [
+        "Hugo Abonizio",
+        "Filipe Rocha Lopes",
+        "Roberto Lotufo",
+        "Rodrigo Nogueira"
+      ],
+      "abstract": "Brazil's Unified Health System (SUS) relies on official clinical guidelines that define diagnostic criteria, treatments, dosages, and monitoring procedures for over 200 million citizens. Yet current LLMs perform poorly on this guideline-specific knowledge, and no benchmark evaluates clinical recall grounded in Brazilian Portuguese protocols. We address this gap by adapting Qwen2.5-14B-Instruct to the Brazilian clinical domain. From 178 official guidelines (~5.4M tokens), we generate ~70M tokens of synthetic data in three formats -- rephrases, wiki-style articles, and question-answer pairs -- using four generator LLMs. We then apply continual pre-training followed by Group Relative Policy Optimization (GRPO). We introduce HealthBench-BR, with 1,780 balanced true/false clinical assertions, and PCDT-QA, with 890 open-ended clinical questions scored by an LLM judge. Our best model achieves 83.9% on HealthBench-BR and 85.4% on PCDT-QA, outperforming GPT-5.2, Claude Sonnet 4.6, Gemini 3.1 Pro, and Google AI Overview's web-grounded RAG despite having only 14B parameters. Ablations show that generator diversity and reinforcement learning are critical to these gains. We release all datasets, benchmarks, and model weights to support reproducible clinical NLP research for Brazilian Portuguese. Code, data, and model weights are available at https://github.com/hugoabonizio/clinical-protocols-br",
+      "pdf_url": "https://arxiv.org/pdf/2605.01077v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.01077v1",
+      "published": "2026-05-01T20:22:38Z",
+      "updated": "2026-05-01T20:22:38Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "CLEAR: Revealing How Noise and Ambiguity Degrade Reliability in LLMs for Medicine",
+      "authors": [
+        "Kevin H. Guo",
+        "Chao Yan",
+        "Avinash Baidya",
+        "Katherine Brown",
+        "Xiang Goa",
+        "Juming Xiong",
+        "Zhijun Yin",
+        "Bradley A. Malin"
+      ],
+      "abstract": "Medical large language model (LLM) evaluations rely on simplified, exam-style benchmarks that rarely reflect the ambiguity of real-world medical inquiries. We introduce the CLinical Evaluation of Ambiguity and Reliability (CLEAR) framework, which assesses how decision-space presentation, ambiguity, and uncertainty affect LLMs' reasoning on medical benchmarks. CLEAR systematically perturbs (1) the number of plausible answer options, (2) the presence of a ground truth or abstention option, and (3) the semantic framing of answer options. Applying CLEAR on three benchmarks evaluated across 17 LLMs reveals three notable limitations of existing evaluation methods. First, increasing the number of plausible answers degrades a model's ability to identify the correct answer and abstain against incorrect ones. Second, this lack of caution intensifies as the framing of abstention shifts from assertive rejection like \"None of the Above\" to uncertainty admission like \"I don't know\" (IDK). Notably, just including IDK in the answer space increases incorrect answer selections. Lastly, we formalize the performance gap between identifying the correct answer and abstaining from incorrect ones as the humility deficit, which worsens with model scale. Our findings reveal limitations in standard medical benchmarks and underscore that scaling alone does not resolve LLM reliability issues.",
+      "pdf_url": "https://arxiv.org/pdf/2605.01011v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.01011v1",
+      "published": "2026-05-01T18:23:24Z",
+      "updated": "2026-05-01T18:23:24Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
     {
       "title": "When RAG Chatbots Expose Their Backend: An Anonymized Case Study of Privacy and Security Risks in Patient-Facing Medical AI",
       "authors": [
@@ -18,276 +315,6 @@
         "cs.CR",
         "cs.AI",
         "cs.CL"
-      ]
-    },
-    {
-      "title": "RadLite: Multi-Task LoRA Fine-Tuning of Small Language Models for CPU-Deployable Radiology AI",
-      "authors": [
-        "Pankaj Gupta",
-        "Kartik Bose"
-      ],
-      "abstract": "Large language models (LLMs) show promise in radiology but their deployment is limited by computational requirements that preclude use in resource-constrained clinical environments. We investigate whether small language models (SLMs) of 3-4 billion parameters can achieve strong multi-task radiology performance through LoRA fine-tuning, enabling deployment on consumer-grade CPUs. We train Qwen2.5-3B-Instruct and Qwen3-4B on 162K samples spanning 9 radiology tasks - RADS classification across 10 systems, impression generation, temporal comparison, radiology NLI, NER, abnormality detection, N/M staging, and radiology Q&A - compiled from 12 public datasets. Both models are evaluated on up to 500 held-out test samples per task with standardized metrics. Our key findings are: (1) LoRA fine-tuning dramatically improves performance over zero-shot baselines (RADS accuracy +53%, NLI +60%, N-staging +89%); (2) the two models exhibit complementary strengths - Qwen2.5 excels at structured generation tasks while Qwen3 dominates extractive tasks; (3) a task-outed oracle ensemble combining both models achieves the best performance across all tasks; (4) few-shot prompting with fine-tuned models hurts performance, demonstrating that LoRA adaptation is more effective than in-context learning for specialized domains; and (5) models can be quantized to GGUF format (~1.8-2.4GB) for CPU deployment at 4-8 tokens/second on consumer hardware. Our work demonstrates that small, efficiently fine-tuned models - which we collectively call RadLite - can serve as practical multi-task radiology AI assistants deployable entirely on consumer hardware without GPU requirements.",
-      "pdf_url": "https://arxiv.org/pdf/2605.00421v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.00421v1",
-      "published": "2026-05-01T05:39:08Z",
-      "updated": "2026-05-01T05:39:08Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Budget-Aware Routing for Long Clinical Text",
-      "authors": [
-        "Khizar Qureshi",
-        "Geoffrey Martin",
-        "Yifan Peng"
-      ],
-      "abstract": "A key challenge for large language models is token cost per query and overall deployment cost. Clinical inputs are long, heterogeneous, and often redundant, while downstream tasks are short and high stakes. We study budgeted context selection, where a subset of document units is chosen under a strict token budget so an off-the-shelf generator can meet fixed cost and latency constraints. We cast this as a knapsack-constrained subset selection problem with two design choices, unitization that defines document segmentation and selection that determines which units are kept.\n  We propose \\textbf{RCD}, a monotone submodular objective that balances relevance, coverage, and diversity. We compare sentence, section, window, and cluster-based unitization, and introduce a routing heuristic that adapts to the budget regime. Experiments on MIMIC discharge notes, Cochrane abstracts, and L-Eval show that optimal strategies depend on the evaluation setting. Positional heuristics perform best at low budgets in extractive tasks, while diversity-aware methods such as MMR improve LLM generation. Selector choice matters more than unitization, with cluster-based grouping reducing performance and other schemes behaving similarly. ROUGE saturates for LLM summaries, while BERTScore better reflects quality differences. We release our code at https://github.com/stone-technologies/ACL_budget_paper.",
-      "pdf_url": "https://arxiv.org/pdf/2605.00336v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.00336v1",
-      "published": "2026-05-01T01:34:53Z",
-      "updated": "2026-05-01T01:34:53Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "What Don't You Understand? Using Large Language Models to Identify and Characterize Student Misconceptions About Challenging Topics",
-      "authors": [
-        "Michael J. Parker",
-        "Maria G. Zavala-Cerna"
-      ],
-      "abstract": "This study presents a systematic approach to identifying and characterizing student misconceptions in online learning environments through a novel combination of quantitative performance analysis and large language model (LLM) assessment. We analyzed data from 9 course periods across 5 online biomedical science courses, encompassing 3,802 medical student enrollments. Using data from 40-50 topic-focused quizzes per course, we developed a two-stage methodology. First, we identified challenging central topics using quiz-level performance metrics. Second, we employed LLMs to characterize the underlying misconceptions in these high-priority areas. By examining student performance on first attempts across primarily multiple-choice questions (MCQs), we identified consistently challenging topics that were also central to course objectives. We then leveraged recent advances in generative AI to analyze three distinct data sources in combination: quiz question content, student response patterns, and lecture transcripts. This approach revealed actionable insights about student misconceptions that were not apparent from performance data alone. The quality of the LLM-identified misconceptions was rated as excellent by subject matter experts. We also conducted teacher interviews to assess the perceived utility of our topic identification method. Faculty found that data-driven identification of challenging topics was valuable and corroborated their own classroom observations. This methodology provides a scalable approach to characterizing student difficulties in learning environments where quizzes are used. Our findings demonstrate the potential for targeted and potentially personalized interventions in future course iterations, with clear pathways for measuring intervention effectiveness through follow-up quiz performance.",
-      "pdf_url": "https://arxiv.org/pdf/2605.00294v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.00294v1",
-      "published": "2026-04-30T23:32:50Z",
-      "updated": "2026-04-30T23:32:50Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Persona-Grounded Safety Evaluation of AI Companions in Multi-Turn Conversations",
-      "authors": [
-        "Prerna Juneja",
-        "Lika Lomidze"
-      ],
-      "abstract": "There are growing concerns about the risks posed by AI companion applications designed for emotional engagement. Existing safety evaluations often rely on self-reported user data or interviews, offering limited insights into real-time dynamics. We present the first end-to-end scalable framework for controlled simulation and safety evaluation of multi-turn interactions with AI companion applications. Our framework integrates four key components: persona construction with clinical and psychometric validation, persona-specific scenario generation, scenario-driven multi-turn simulation with a dialogue refinement module that preserves persona fidelity, and harm evaluation. We apply this framework to evaluate how Replika, a widely used AI companion app, responds to high-risk user groups. We construct 9 personas representing individuals with depression, anxiety, PTSD, eating disorders, and incel identity, and collect 1,674 dialogue pairs across 25 high-risk scenarios. We combine emotion modeling and LLM-assisted utterance-and harm-level classification to analyze these exchanges. Results show that Replika exhibits a narrow emotional range dominated by curiosity and care, while frequently mirroring or normalizing unsafe content such as self-harm, disordered eating, and violent-fantasy narratives. These findings highlight how controlled persona simulations can serve as a scalable testbed for evaluating safety risks in AI companions.",
-      "pdf_url": "https://arxiv.org/pdf/2605.00227v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.00227v1",
-      "published": "2026-04-30T21:04:41Z",
-      "updated": "2026-04-30T21:04:41Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis",
-      "authors": [
-        "Lincan Li",
-        "Zheng Chen",
-        "Yushun Dong"
-      ],
-      "abstract": "Electroencephalogram (EEG) signals are vital for automated seizure detection, but their inherent noise makes robust representation learning challenging. Existing graph construction methods, whether correlation-based or learning-based, often generate redundant or irrelevant edges due to the noisy nature of EEG data. This significantly impairs the quality of graph representation and limits downstream task performance. Motivated by the remarkable reasoning and contextual understanding capabilities of large language models (LLMs), we explore the idea of using LLMs as graph edge refiners. Specifically, we propose a two-stage framework: we first verify that LLM-based edge refinement can effectively identify and remove redundant connections, leading to significant improvements in seizure detection accuracy and more meaningful graph structures. Building on this insight, we further develop a robust solution where the initial graph is constructed using a Transformer-based edge predictor and multilayer perceptron, assigning probability scores to potential edges and applying a threshold to determine their existence. The LLM then acts as an edge set refiner, making informed decisions based on both textual and statistical features of node pairs to validate the remaining connections. Extensive experiments on TUSZ dataset demonstrate that our LLM-refined graph learning framework not only enhances task performance but also yields cleaner and more interpretable graph representations.",
-      "pdf_url": "https://arxiv.org/pdf/2604.28178v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.28178v1",
-      "published": "2026-04-30T17:57:12Z",
-      "updated": "2026-04-30T17:57:12Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Characterizing the Consistency of the Emergent Misalignment Persona",
-      "authors": [
-        "Anietta Weckauff",
-        "Yuchen Zhang",
-        "Maksym Andriushchenko"
-      ],
-      "abstract": "Fine-tuning large language models (LLMs) on narrowly misaligned data generalizes to broadly misaligned behavior, a phenomenon termed emergent misalignment (EM). While prior work has found a correlation between harmful behavior and self-assessment in emergently misaligned models, it remains unclear how consistent this correspondence is across tasks and whether it varies across fine-tuning domains. We characterize the consistency of the EM persona by fine-tuning Qwen 2.5 32B Instruct on six narrowly misaligned domains (e.g., insecure code, risky financial advice, bad medical advice) and administering experiments including harmfulness evaluation, self-assessment, choosing between two descriptions of AI systems, output recognition, and score prediction. Our results reveal two distinct patterns: coherent-persona models, in which harmful behavior and self-reported misalignment are coupled, and inverted-persona models, which produce harmful outputs while identifying as aligned AI systems. These findings reveal a more fine-grained picture of the effects of emergent misalignment, calling into question the consistency of the EM persona.",
-      "pdf_url": "https://arxiv.org/pdf/2604.28082v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.28082v1",
-      "published": "2026-04-30T16:26:53Z",
-      "updated": "2026-04-30T16:26:53Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Echo-\u03b1: Large Agentic Multimodal Reasoning Model for Ultrasound Interpretation",
-      "authors": [
-        "Jing Zhang",
-        "Wentao Jiang",
-        "Tao Huang",
-        "Zhiwei Wang",
-        "Jianxin Liu",
-        "Jian Chen",
-        "Ping Ye",
-        "Gang Wang",
-        "Zengmao Wang",
-        "Bo Du",
-        "Dacheng Tao"
-      ],
-      "abstract": "Ultrasound interpretation requires both precise lesion localization and holistic clinical reasoning, yet existing methods typically excel at only one of these capabilities: specialized detectors offer strong localization but limited reasoning, whereas multimodal large language models (MLLMs) provide flexible reasoning but weak grounding in specialized medical domains. We present Echo-\u03b1, an agentic multimodal reasoning model for ultrasound interpretation that unifies these strengths within an invoke-and-reason framework. Echo-\u03b1 is trained to coordinate organ-specific detector outputs, integrate them with global visual context, and convert the resulting evidence into grounded diagnostic decisions beyond detector-only inference. This behavior is established through a nine-task supervised curriculum and then refined by sequential reinforcement learning under different reward trade-offs, yielding Echo-\u03b1-Grounding for lesion anchoring and Echo-\u03b1-Diagnosis for final diagnosis. On multi-center renal and breast ultrasound benchmarks, Echo-\u03b1 outperforms competitive baselines on both grounding and diagnosis. In particular, on cross-center test sets, Echo-\u03b1-Grounding attains 56.73%/43.78% F1@0.5 and Echo- \u03b1-Diagnosis reaches 74.90%/49.20% overall accuracy on renal/breast ultrasound. These results suggest that agentic multimodal reasoning can turn specialized detectors into verifiable clinical evidence, offering a practical route toward ultrasound AI systems that are more accurate, interpretable, and transferable. The repository is at https://github.com/MiliLab/Echo-Alpha.",
-      "pdf_url": "https://arxiv.org/pdf/2604.28011v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.28011v1",
-      "published": "2026-04-30T15:31:00Z",
-      "updated": "2026-04-30T15:31:00Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Modeling Clinical Concern Trajectories in Language Model Agents",
-      "authors": [
-        "Sukesh Subaharan",
-        "Venkatesan VS",
-        "Murugadasan P",
-        "Sivakumar D",
-        "Gautham N",
-        "Ganeshkumar M"
-      ],
-      "abstract": "Large language model (LLM) agents deployed in clinical settings often exhibit abrupt, threshold-driven behavior, offering little visibility into accumulating risk prior to escalation. In real-world care, however, clinicians act on gradually rising concern rather than instantaneous triggers. We study whether explicit state dynamics can expose such pre-escalation signals without delegating clinical authority to the agent. We introduce a lightweight agent architecture in which a memoryless clinical risk encoder is integrated over time using first- and second-order dynamics to produce a continuous escalation pressure signal. Across synthetic ward scenarios, stateless agents exhibit sharp escalation cliffs, while second-order dynamics produce smooth, anticipatory concern trajectories despite similar escalation timing. These trajectories surface sustained unease prior to escalation, enabling human-in-the-loop monitoring and more informed intervention. Our results suggest that explicit state dynamics can make LLM agents more clinically legible by revealing how long concern has been rising, not just when thresholds are crossed.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27872v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.27872v1",
-      "published": "2026-04-30T13:53:09Z",
-      "updated": "2026-04-30T13:53:09Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Multi-Level Narrative Evaluation Outperforms Lexical Features for Mental Health",
-      "authors": [
-        "Yuxi Ma",
-        "Jieming Cui",
-        "Muyang Li",
-        "Ye Zhao",
-        "Yu Li",
-        "Yixuan Wang",
-        "Chi Zhang",
-        "Yinyin Zang",
-        "Yixin Zhu"
-      ],
-      "abstract": "How people narrate their experiences offers a window into how the mind organizes them. Computational approaches to therapeutic writing have evolved from lexical counting to neural methods, yet remain fragmented: dictionary tools miss discourse structure, while embeddings conflate local coherence with global organization. No existing framework maps these techniques onto the hierarchical processes through which narratives are constructed. Here we introduce a three-level framework - micro-level lexical features, meso-level semantic embeddings, and macro-level LLM narrative evaluation - and show, across 830 Chinese therapeutic texts spanning depression, anxiety, and trauma, that macro-level evaluation substantially outperforms lexical and embedding features for mental health prediction. This challenges the field's emphasis on word-counting: formal structural features (Labov's story grammar, RST coherence, propositional composition) demonstrate that narrative organization per se carries predictive signal, while clinically-grounded narrative dimensions capture how psychological states are expressed through discourse. Semantic embeddings add minimal independent value but yield incremental gains in multi-level classification. By grounding computational levels in discourse processing theory, this framework identifies macro-structural organization as the primary locus of clinical signal and generates testable hypotheses for intervention design and longitudinal research.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27846v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.27846v1",
-      "published": "2026-04-30T13:31:56Z",
-      "updated": "2026-04-30T13:31:56Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Iterative Multimodal Retrieval-Augmented Generation for Medical Question Answering",
-      "authors": [
-        "Xupeng Chen",
-        "Binbin Shi",
-        "Chenqian Le",
-        "Jiaqi Zhang",
-        "Kewen Wang",
-        "Ran Gong",
-        "Jinhan Zhang",
-        "Chihang Wang"
-      ],
-      "abstract": "Medical retrieval-augmented generation (RAG) systems typically operate on text chunks extracted from biomedical literature, discarding the rich visual content (tables, figures, structured layouts) of original document pages. We propose MED-VRAG, an iterative multimodal RAG framework that retrieves and reasons over PMC document page images instead of OCR'd text. The system pairs ColQwen2.5 patch-level page embeddings with a sharded MapReduce LLM filter, scaling to ~350K pages while keeping Stage-1 retrieval under 30 ms via an offline coarse-to-fine index (C=8 centroids per page, ANN over centroids, exact two-way scoring on the top-R shortlist). A vision-language model (VLM) then iteratively refines its query and accumulates evidence in a memory bank across up to 3 reasoning rounds, with a single iteration costing ~15.9 s and the full three-round pipeline ~47.8 s on 4xA100. Across four medical QA benchmarks (MedQA, MedMCQA, PubMedQA, MMLU-Med), MEDVRAG reaches 78.6% average accuracy. Under controlled comparison with the same Qwen2.5-VL-32B backbone, retrieval contributes a +5.8 point gain over the no-retrieval baseline; we also note a +1.8 point edge over MedRAG + GPT-4 (76.8%), with the caveat that this is a cross-paper rather than head-to-head comparison. Ablations isolate +1.0 from page-image vs text-chunk retrieval, +1.5 from iteration, and +1.0 from the memory bank.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27724v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.27724v1",
-      "published": "2026-04-30T11:16:07Z",
-      "updated": "2026-04-30T11:16:07Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Optimized Deferral for Imbalanced Settings",
-      "authors": [
-        "Corinna Cortes",
-        "Anqi Mao",
-        "Mehryar Mohri",
-        "Yutao Zhong"
-      ],
-      "abstract": "Learning algorithms can be significantly improved by routing complex or uncertain inputs to specialized experts, balancing accuracy with computational cost. This approach, known as learning to defer, is essential in domains like natural language generation, medical diagnosis, and computer vision, where an effective deferral can reduce errors at low extra resource consumption. However, the two-stage learning to defer setting, which leverages existing predictors such as a collection of LLMs or other classifiers, often faces challenges due to an expert imbalance problem. This imbalance can lead to suboptimal performance, with deferral algorithms favoring the majority expert. We present a comprehensive study of two-stage learning to defer in expert imbalance settings. We cast the deferral loss optimization as a novel cost-sensitive learning problem over the input-expert domain. We derive new margin-based loss functions and guarantees tailored to this setting, and develop novel algorithms for cost-sensitive learning. Leveraging these results, we design principled deferral algorithms, MILD (Margin-based Imbalanced Learning to Defer), specifically suited for expert imbalance settings. Extensive experiments demonstrate the effectiveness of our approach, showing clear improvements over existing baselines on both image classification and real-world Large Language Model (LLM) routing tasks.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27723v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.27723v1",
-      "published": "2026-04-30T11:15:37Z",
-      "updated": "2026-04-30T11:15:37Z",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "Diagnosing Capability Gaps in Fine-Tuning Data",
-      "authors": [
-        "Saeid Asgari Taghanaki",
-        "Rakshanda Agarwal",
-        "Bruce Sun",
-        "Rohan Jha",
-        "Elias Stengel-Eskin",
-        "Sara Malvar",
-        "Rui Ying",
-        "Yifei Xu",
-        "Guilherme Potje",
-        "Tusher Chakraborty",
-        "Leonardo de Oliveira Nunes",
-        "Ranveer Chandra",
-        "Emre Kiciman"
-      ],
-      "abstract": "Fine-tuning large language models (LLMs) for domain-specific tasks requires training datasets that comprehensively cover the target capabilities a practitioner needs. Yet identifying which capabilities a dataset fails to support, and doing so before an expensive fine-tuning run, remains a largely unsolved problem. We introduce GoalCover, a framework that helps practitioners systematically detect capability gaps in fine-tuning datasets through interactive goal decomposition and automated coverage assessment. GoalCover guides a practitioner through structured decomposition of a high-level goal into atomic, independently evaluable subgoals; assigns each training sample an LLM-based alignment score against every subgoal; and surfaces missing capabilities through automated analysis of low-scoring sample explanations. We validate the framework along two complementary axes. First, through controlled corruption experiments across three domains (medical QA, legal summarization, code generation), we show that GoalCover reliably distinguishes targeted from non-targeted capability impacts: target subgoals degrade by 25.6% on average versus 2.1% for non-target subgoals (Cohen's d=1.24). Second, we demonstrate downstream utility on a financial-summarization Reinforcement Fine-Tuning (RFT) task with Qwen-3-14B: training on GoalCover-filtered data improves the LLM-judge reward from 3.77 to 4.12 (out of 5) over the unfiltered baseline, and combining filtered data with goal-conditioned synthetic samples yields the strongest result (4.20). The two results together show that GoalCover works as a practical pre-fine-tuning diagnostic: it detects capability gaps and produces concrete signal for closing them.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27547v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.27547v1",
-      "published": "2026-04-30T07:52:28Z",
-      "updated": "2026-04-30T07:52:28Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "HealthBench Professional: Evaluating Large Language Models on Real Clinician Chats",
-      "authors": [
-        "Rebecca Soskin Hicks",
-        "Mikhail Trofimov",
-        "Dominick Lim",
-        "Rahul K. Arora",
-        "Foivos Tsimpourlas",
-        "Preston Bowman",
-        "Michael Sharman",
-        "Chi Tong",
-        "Kavin Karthik",
-        "Arnav Dugar",
-        "Akshay Jagadeesh",
-        "Khaled Saab",
-        "Johannes Heidecke",
-        "Ashley Alexander",
-        "Nate Gross",
-        "Karan Singhal"
-      ],
-      "abstract": "Millions of clinicians use ChatGPT to support clinical care, but evaluations of the most common use cases in model-clinician conversations are limited. We introduce HealthBench Professional, an open benchmark for evaluating large language models on real tasks that clinicians bring to ChatGPT in the course of their work. The benchmark is organized around three common use cases central to clinical practice: care consult, writing and documentation, and medical research. Each example includes a physician-authored conversation with ChatGPT for Clinicians and is scored via rubrics written and iteratively adjudicated by three or more physicians across three phases. HealthBench Professional examples were carefully selected for quality, representativeness, and difficulty for OpenAI's current frontier models, to enable continued measurement of progress. Difficult examples for recent OpenAI models were enriched by roughly 3.5 times relative to the candidate pool of 15,079 examples. Additionally, about one-third of examples involve physicians conducting deliberate adversarial testing of models. As a strong baseline, we also collected human physician responses for all tasks (unbounded time, specialist-matched, web access). The best scoring system, GPT-5.4 in ChatGPT for Clinicians, outperforms base GPT-5.4, all other models, and human physicians. We hope HealthBench Professional provides the healthcare AI community a measure to track frontier model progress in real-world clinical tasks and build systems that clinicians can trust to improve care.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27470v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.27470v1",
-      "published": "2026-04-30T06:13:01Z",
-      "updated": "2026-04-30T06:13:01Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Beyond the Mean: Within-Model Reliable Change Detection for LLM Evaluation",
-      "authors": [
-        "Jon-Paul Cacioli"
-      ],
-      "abstract": "We adapted the Reliable Change Index (RCI; Jacobson and Truax, 1991) from clinical psychology to item-level LLM version comparison on 2,000 MMLU-Pro items (K=10 samples at T=0.7). Two within-family pairs were tested: Llama 3 to 3.1 (+1.6 points) and Qwen 2.5 to 3 (+2.8 points). On the full benchmark, most items showed no reliable change (79% and 72%). However, over half the items were floor/ceiling. Among analysable items, change was bidirectional with large effect sizes: 34% improved and 28% deteriorated for Llama; 47% improved and 39% deteriorated for Qwen (median |delta p| = 0.50 and 0.90). Churn was asymmetric by difficulty: low-accuracy items improved, high-accuracy items deteriorated. Domain-level decomposition revealed family-specific reversals: Llama lost physics while Qwen lost law. Greedy single-shot evaluation missed 42% of reliably changed items and falsely flagged 25% of unchanged items. The aggregate accuracy gain is the net residual of opposing item-level movements. We recommend reporting churn rate alongside aggregate accuracy.",
-      "pdf_url": "https://arxiv.org/pdf/2604.27405v1",
-      "arxiv_url": "https://arxiv.org/abs/2604.27405v1",
-      "published": "2026-04-30T04:16:13Z",
-      "updated": "2026-04-30T04:16:13Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]

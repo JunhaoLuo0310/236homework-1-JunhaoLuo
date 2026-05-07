@@ -1,8 +1,88 @@
 {
-  "generated_at_utc": "2026-05-06T03:42:30.332389Z",
+  "generated_at_utc": "2026-05-07T03:42:08.810122Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "MRI-Eval: A Tiered Benchmark for Evaluating LLM Performance on MRI Physics and GE Scanner Operations Knowledge",
+      "authors": [
+        "Perry E. Radau"
+      ],
+      "abstract": "Background: Existing MRI LLM benchmarks rely mainly on review-book multiple-choice questions, where top proprietary models already score highly, limiting discrimination. No systematic benchmark has evaluated vendor-specific scanner operational knowledge central to research MRI practice. Purpose: We developed MRI-Eval, a tiered benchmark for relative model comparison on MRI physics and GE scanner operations knowledge using primary multiple-choice questions (MCQ), with stem-only and primed diagnostic conditions as complementary analyses. Methods: MRI-Eval includes 1365 scored items across nine categories and three difficulty tiers from textbooks, GE scanner manuals, programming course materials, and expert-generated questions. Five model families were evaluated (GPT-5.4, Claude Opus 4.6, Claude Sonnet 4.6, Gemini 2.5 Pro, Llama 3.3 70B). MCQ was primary; stem-only removed options and used an independent LLM judge; primed stem-only tested responses to incorrect user claims. Results: Overall MCQ accuracy was 93.2% to 97.1%. GE scanner operations was the lowest category for every model (88.2% to 94.6%). In stem-only, frontier-model accuracy fell to 58.4% to 61.1%, and Llama 3.3 70B fell to 37.1%; GE scanner operations stem-only accuracy was 13.8% to 29.8%. Conclusion: High MCQ performance can mask weak free-text recall, especially for vendor-specific operational knowledge. MRI-Eval is most informative as a relative comparison benchmark rather than an absolute competency measure and supports caution in using raw LLM outputs for GE-specific protocol guidance.",
+      "pdf_url": "https://arxiv.org/pdf/2605.05175v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.05175v1",
+      "published": "2026-05-06T17:42:01Z",
+      "updated": "2026-05-06T17:42:01Z",
+      "categories": [
+        "eess.IV",
+        "cs.CL",
+        "physics.med-ph"
+      ]
+    },
+    {
+      "title": "FairEnc: A Fair Vision-Language Model with Fair Vision and Text Encoders for Glaucoma Detection",
+      "authors": [
+        "Mohamed Elhabebe",
+        "Ayman El-Baz",
+        "Qing Liu"
+      ],
+      "abstract": "Automated glaucoma detection is critical for preventing irreversible vision loss and reducing the burden on healthcare systems. However, ensuring fairness across diverse patient populations remains a significant challenge. In this paper, we propose FairEnc, a fair pretraining method for vision-language models (VLMs) that enables simultaneous debiasing across multiple sensitive attributes. FairEnc jointly mitigates biases in both textual and visual modalities with respect to multiple sensitive attributes, including race, gender, ethnicity, and language. Specifically, for the textual encoder, we leverage a large language model to generate synthetic clinical descriptions with varied sensitive attributes while preserving disease semantics, and employ a contrastive alignment objective to encourage demographic-invariant representations. For the visual encoder, we propose a dual-level fairness strategy that combines mutual information regularization to reduce statistical dependence between learned features and demographic groups, with multi-discriminator adversarial debiasing. Comprehensive experiments on the publicly available Harvard-FairVLMed dataset demonstrate that FairEnc effectively reduces demographic disparity as measured by DPD and DEOdds while achieving strong diagnostic performance under both zero-shot and linear probing evaluations. Additional experiments on the private FairFundus dataset show that FairEnc consistently preserves fairness advantages under cross-domain and cross-modality settings and maintains diagnostic performance within a competitive range. These results highlight FairEnc's ability to generalize fairness under distribution shifts, supporting its potential for more equitable deployment in real-world clinical settings. Our codebase and synthetic clinical notes are available at https://github.com/Mohamed-Elhabebe/FairEnc",
+      "pdf_url": "https://arxiv.org/pdf/2605.04882v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.04882v1",
+      "published": "2026-05-06T13:18:34Z",
+      "updated": "2026-05-06T13:18:34Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "eess.IV",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "MIRAGE: Retrieval and Generation of Multimodal Images and Texts for Medical Education",
+      "authors": [
+        "Miguel Diaz Benito",
+        "Cecilia Diana Albelda",
+        "Alvaro Garcia Martin",
+        "Jesus Bescos Cano",
+        "Marcos Escudero-Vinolo",
+        "Juan C. SanMiguel"
+      ],
+      "abstract": "Access to diverse, well-annotated medical images with interactive learning tools is fundamental for training practitioners in medicine and related fields to improve their diagnostic skills and understanding of anatomical structures. While medical atlases are valuable, they are often impractical due to their size and lack of interactivity, whereas online image search may provide mislabeled or incomplete material. To address this, we propose MIRAGE, a multimodal medical text and image retrieval and generation system that allows users to find and generate clinically relevant images from trustworthy sources by mapping both text and images to a shared latent space, enabling semantically meaningful queries. The system is based on a fine-tuned medical version of CLIP (MedICaT-ROCO), trained with the ROCO dataset, obtained from PubMed Central. MIRAGE allows users to give prompts to retrieve images, generate synthetic ones through a medical diffusion model (Prompt2MedImage) and receive enriched descriptions from a large language model (Dolly-v2-3b). It also supports a dual search option, enabling the visual comparison of different medical conditions. A key advantage of the system is that it relies entirely on publicly available pretrained models, ensuring reproducibility and accessibility. Our goal is to provide a free, transparent and easy-to-use didactic tool for medical students, especially those without programming skills. The system features an interface that enables interactive and personalized visual learning through medical image retrieval and generation. The system is accessible to medical students worldwide without requiring local computational resources or technical expertise, and is currently deployed on Kaggle: http://www-vpu.eps.uam.es/mirage",
+      "pdf_url": "https://arxiv.org/pdf/2605.04772v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.04772v1",
+      "published": "2026-05-06T11:20:08Z",
+      "updated": "2026-05-06T11:20:08Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "MedFabric and EtHER: A Data-Centric Framework for Word-Level Fabrication Generation and Detection in Medical LLMs",
+      "authors": [
+        "Tung Sum Thomas Kwok",
+        "Qian Qian",
+        "Xiaofeng Lin",
+        "Dongxu Zhang",
+        "Jun Han",
+        "Zhichao Yang",
+        "Davin Hill",
+        "Tamer Soliman",
+        "Sanjit Singh Batra",
+        "Robert Tillman",
+        "Guang Cheng"
+      ],
+      "abstract": "Large Language Models exhibit strong reasoning and semantic understanding capabilities but often hallucinate in domains that require expert knowledge, among which fabrications, the generation of factually incorrect yet fluent statements, pose the greatest risk in medical contexts. Existing medical hallucination datasets inadequately capture fabrication phenomena due to limited fabrication coverage, stylistic disparities between human and LLM-authored texts, and distributional drift during hallucinated sample synthesis. To address this, we propose a data-centric pipeline to generate realistic and word-level fabrications that preserve syntactic and stylistic fidelity while introducing subtle factual deviations, resulting in MedFabric. Building upon this dataset, we introduce ETHER, a modular word-level fabrication detector integrating Text2Table Decomposition, Word Masking and Filling and Hybrid Sentence Pair Evaluation to enhance factual alignment. Empirical results demonstrate that MedFabric outperforms state-of-the-art detectors by over 15% on word-level fabrication benchmarks while maintaining consistent performance across structural similarities, offering a comprehensive framework for reliable and domain-specific factuality detection.",
+      "pdf_url": "https://arxiv.org/pdf/2605.04180v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.04180v1",
+      "published": "2026-05-05T18:19:51Z",
+      "updated": "2026-05-05T18:19:51Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Safety and accuracy follow different scaling laws in clinical large language models",
       "authors": [
@@ -243,94 +323,16 @@
         "Marc Aafjes"
       ],
       "abstract": "Modeling latent clinical constructs from unconstrained clinical interactions is a unique challenge in affective computing. We present ADAPTS (Agentic Decomposition for Automated Protocol-agnostic Tracking of Symptoms), a framework for automated rating of depression and anxiety severity using a mixture-of-agents LLM architecture. This approach decomposes long-form clinical interviews into symptom-specific reasoning tasks, producing auditable justifications while preserving temporal and speaker alignment. Generalization was evaluated across two independent datasets ($N=204$) with distinct interview structures. On high-discrepancy interviews, automated ratings approximated expert benchmarks ($\\text{absolute error}=22$) more closely than original human ratings ($\\text{absolute error}=26$). Implementing an ``extended'' protocol that incorporates qualitative clinical conventions significantly stabilized ratings, with absolute agreement reaching $\\text{ICC(2,1)} = 0.877$. These findings suggest that the ADAPTS framework enables promising evaluations of psychiatric severity. While the current implementation is purely text-based, the underlying architecture is readily extensible to multimodal inputs, including acoustic and visual features. By approximating expert-level precision in a protocol-agnostic manner, this framework provides a foundation for objective and scalable psychiatric assessment, especially in resource-limited settings.",
-      "pdf_url": "https://arxiv.org/pdf/2605.03212v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.03212v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.03212v2",
+      "arxiv_url": "https://arxiv.org/abs/2605.03212v2",
       "published": "2026-05-04T23:08:42Z",
-      "updated": "2026-05-04T23:08:42Z",
+      "updated": "2026-05-06T14:46:49Z",
       "categories": [
         "cs.AI",
         "cs.CL",
         "cs.HC",
         "stat.AP",
         "stat.CO"
-      ]
-    },
-    {
-      "title": "Dependency-Aware Privacy for Multi-turn Agents",
-      "authors": [
-        "Divyam Anshumaan",
-        "Sarthak Choudhary",
-        "Nils Palumbo",
-        "Somesh Jha"
-      ],
-      "abstract": "LLM agents release private data across multi-service interactions. Existing prompt sanitizers based on metric differential privacy treat each release independently, so adversaries combining releases across turns can recover private attributes; privacy degrades with every release.\n  This degradation is fundamental: when private attributes are the \\emph{roots} of a computation graph, independently noising a derived value amplifies the root's distinguishability by up to the deriving function's Lipschitz constant $L$, which can far exceed the nominal privacy parameter for nonlinear functions in medical and financial workflows.\n  RootGuard sanitizes root values once and computes subsequent releases deterministically from the noised roots. By the post-processing theorem, the privacy guarantee depends only on the initial root sanitization, regardless of the adversary's functions or number of turns, and derived values inherit privacy at zero marginal cost. RootGuard further exploits structural domain knowledge (e.g., BMI from height and weight, or a known target function) to allocate budget across roots, improving the privacy-utility tradeoff.\n  A worst-case adversary forcing $t$ turns increases the total budget $B = t \\cdot \\varepsilon$. RootGuard distributes this larger budget across roots, while independent noising spends $\\varepsilon$ per release and gives the adversary $t$ observations to combine via MAP reconstruction. This yields a \\emph{double asymmetry}: more turns aid RootGuard while weakening independent noising.\n  On eight NHANES medical diagnostic templates, RootGuard achieves $2.3$--$3.0\\times$ lower target error than independent noising at $\\varepsilon = 0.1$ (7.6\\% vs.\\ 17.1\\% wMAPE at $B = (2k{+}1)\\varepsilon$). Under MAP reconstruction, more queries strengthen attacks against independent noising while RootGuard remains invariant.",
-      "pdf_url": "https://arxiv.org/pdf/2605.03188v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.03188v1",
-      "published": "2026-05-04T22:13:56Z",
-      "updated": "2026-05-04T22:13:56Z",
-      "categories": [
-        "cs.CR"
-      ]
-    },
-    {
-      "title": "SCPRM: A Schema-aware Cumulative Process Reward Model for Knowledge Graph Question Answering",
-      "authors": [
-        "Jiujiu Chen",
-        "Yazheng Liu",
-        "Sihong Xie",
-        "Hui Xiong"
-      ],
-      "abstract": "Large language models excel at complex reasoning, yet evaluating their intermediate steps remains challenging. Although process reward models provide step-wise supervision, they often suffer from a risk compensation effect, where incorrect steps are offset by later correct ones, assigning high rewards to flawed reasoning paths. This issue is further exacerbated in knowledge graph (KG) reasoning, as there may exist multiple paths between the start and end entities in the KGs, and a risky step can make the reasoning path flawed. Those limitations are problematic in risk-sensitive tasks such as medical and legal KG reasoning. To address the issues, we propose a Schema-aware Cumulative Process Reward Model (SCPRM) that evaluates reasoning paths by conditioning on the reasoning prefix , and incorporating schema distance between current reasoning step and the implicit target parsed from the query, which provides cumulative and future rewards to guide the path explorations. We further integrate SCPRM into Monte Carlo Tree Search (MCTS) as SCPRM-MCTS to conduct multi-hop reasoning on KGs for question answering (QA) tasks. Across medical and legal KGQA and CWQ, SCPRM-MCTS improves the performance of Hits@k by an average of 1.18% over strong baselines, demonstrating more accurate and risk-sensitive reasoning evaluation.",
-      "pdf_url": "https://arxiv.org/pdf/2605.02819v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.02819v1",
-      "published": "2026-05-04T16:56:01Z",
-      "updated": "2026-05-04T16:56:01Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Reliability-Oriented Multilingual Orthopedic Diagnosis: A Domain-Adaptive Modeling and a Conceptual Validation Framework",
-      "authors": [
-        "Danish Ali",
-        "Li Xiaojian",
-        "Sundas Iqbal",
-        "Farrukh Zaidi"
-      ],
-      "abstract": "Large Language Models (LLMs) are increasingly proposed for clinical decision support including multilingual diagnosis in low-resource settings. However, their reliability, calibration and safety characteristics remain insufficiently understood for structured, high-risk tasks. We present a system-level analysis of multilingual orthopedic diagnosis from free-text clinical notes in English, Hindi and Punjabi. We evaluate three modeling regimes: (i) task-aligned multilingual transformer encoders, (ii) a task-fine-tuned baseline (DistilBERT), and (iii) a domain-adaptive architecture tailored to orthopedic text (IndicBERT-HPA). These models are compared with zero-shot, instruction-tuned LLMs to assess suitability for structured diagnostic classification. Results indicate that while LLMs exhibit strong linguistic fluency, they show unstable calibration and reduced reliability under structured multilingual conditions, particularly in low-resource languages. These findings are specific to zero-shot evaluation and do not imply limitations of fine-tuned models. Domain-adaptive specialization substantially improves cross-lingual discrimination and confidence behavior. IndicBERT-HPA, with language-specific orthopedic adapter heads achieves consistently strong performance across six diagnostic categories and more predictable deployment characteristics than task-only adaptation. Building on these observations, we outline a conceptual deterministic agent-based validation framework for future implementation, formalizing evidence checks, language-sensitive validation and conservative human-in-the-loop gating. Reliable multilingual clinical decision support requires specialized architecture, explicit reliability analysis, and structured validation for safety-critical systems.",
-      "pdf_url": "https://arxiv.org/pdf/2605.02266v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.02266v1",
-      "published": "2026-05-04T06:20:36Z",
-      "updated": "2026-05-04T06:20:36Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "PhysicianBench: Evaluating LLM Agents in Real-World EHR Environments",
-      "authors": [
-        "Ruoqi Liu",
-        "Imran Q. Mohiuddin",
-        "Austin J. Schoeffler",
-        "Kavita Renduchintala",
-        "Ashwin Nayak",
-        "Prasantha L. Vemu",
-        "Shivam C. Vedak",
-        "Kameron C. Black",
-        "John L. Havlik",
-        "Isaac Ogunmola",
-        "Stephen P. Ma",
-        "Roopa Dhatt",
-        "Jonathan H. Chen"
-      ],
-      "abstract": "We introduce PhysicianBench, a benchmark for evaluating LLM agents on physician tasks grounded in real clinical setting within electronic health record (EHR) environments. Existing medical agent benchmarks primarily focus on static knowledge recall, single-step atomic actions, or action intent without verifiable execution against the environment. As a result, they fail to capture the long-horizon, composite workflows that characterize real clinical systems. PhysicianBench comprises 100 long-horizon tasks adapted from real consultation cases between primary care and subspecialty physicians, with each task independently reviewed by a separate panel of physicians. Tasks are instantiated in an EHR environment with real patient records and accessed through the same standard APIs used by commercial EHR vendors. Tasks span 21 specialties (e.g., cardiology, endocrinology, oncology, psychiatry) and diverse workflow types (e.g., diagnosis interpretation, medication prescribing, treatment planning), requiring an average of 27 tool calls per task. Solving each task requires retrieving data across encounters, reasoning over heterogeneous clinical information, executing consequential clinical actions, and producing clinical documentation. Each task is decomposed into structured checkpoints (670 in total across the benchmark) capturing distinct stages of completion graded by task-specific scripts with execution-grounded verification. Across 13 proprietary and open-source LLM agents, the best-performing model achieves only 46% success rate (pass@1), while open-source models reach at most 19%, revealing a substantial gap between current agent capabilities and the demands of real-world clinical workflows. PhysicianBench provides a realistic and execution-grounded benchmark for measuring progress toward autonomous clinical agents.",
-      "pdf_url": "https://arxiv.org/pdf/2605.02240v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.02240v1",
-      "published": "2026-05-04T05:32:25Z",
-      "updated": "2026-05-04T05:32:25Z",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]

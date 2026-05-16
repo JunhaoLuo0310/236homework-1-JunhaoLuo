@@ -1,8 +1,246 @@
 {
-  "generated_at_utc": "2026-05-14T03:54:47.183845Z",
+  "generated_at_utc": "2026-05-16T03:40:04.900333Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Text Knows What, Tables Know When: Clinical Timeline Reconstruction via Retrieval-Augmented Multimodal Alignment",
+      "authors": [
+        "Sayantan Kumar",
+        "Shahriar Noroozizadeh",
+        "Juyong Kim",
+        "Jeremy C. Weiss"
+      ],
+      "abstract": "Reconstructing precise clinical timelines is essential for modeling patient trajectories and forecasting risk in complex, heterogeneous conditions like sepsis. While unstructured clinical narratives offer semantically rich and contextually complete descriptions of a patient's course, they often lack temporal precision and contain ambiguous event timing. Conversely, structured electronic health record (EHR) data provides precise temporal anchors but misses a substantial portion of clinically meaningful events. We introduce a retrieval-augmented multimodal alignment framework that bridges this gap to improve the temporal precision of absolute clinical timelines extracted from text. Our approach formulates timeline reconstruction as a graph-based multistep process: it first extracts central anchor events from narratives to build an initial temporal scaffold, places non-central events relative to this backbone, and then calibrates the timeline using retrieved structured EHR rows as external temporal evidence. Evaluated using instruction-tuned large language models on the i2m4 benchmark spanning MIMIC-III and MIMIC-IV, our multimodal pipeline consistently improves absolute timestamp accuracy (AULTC) and improves temporal concordance across nearly all evaluated models over unimodal text-only reconstruction, without compromising event match rates. Furthermore, our empirical gap analysis reveals that 34.8% of text-derived events are entirely absent from tabular records, demonstrating that aligning these modalities can produce a more temporally faithful and clinically informative reconstruction of patient trajectories than either source alone.",
+      "pdf_url": "https://arxiv.org/pdf/2605.15168v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.15168v1",
+      "published": "2026-05-14T17:55:27Z",
+      "updated": "2026-05-14T17:55:27Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "COTCAgent: Preventive Consultation via Probabilistic Chain-of-Thought Completion",
+      "authors": [
+        "Zihan Deng",
+        "Xiaozhen Zhong",
+        "Chuanzhi Xu"
+      ],
+      "abstract": "As large language models empower healthcare, intelligent clinical decision support has developed rapidly. Longitudinal electronic health records (EHR) provide essential temporal evidence for accurate clinical diagnosis and analysis. However, current large language models have critical flaws in longitudinal EHR reasoning. First, lacking fine-grained statistical reasoning, they often hallucinate clinical trends and metrics when quantitative evidence is textually implied, biasing diagnostic inference. Second, non-uniform time series and scarce labels in longitudinal EHR hinder models from capturing long-range temporal dependencies, limiting reliable clinical reasoning. To address the above limitations, this work presents the Probabilistic Chain-of-Thought Completion Agent (COTCAgent), a hierarchical reasoning framework for longitudinal electronic health records. It consists of three core modules. The Temporal-Statistics Adapter (TSA) converts analytical plans into executable code for standardized trend output. The Chain-of-Thought Completion (COTC) layer leverages a symptom-trend-disease knowledge base with weighted scoring to evaluate disease risk, while the bounded completion module acquires structured evidence through standardized inquiries and iterative scoring constraints to ensure rigorous reasoning. By decoupling statistical computation, feature matching, and language generation, the framework eliminates reliance on complex multi-modal inputs and enables efficient longitudinal record analysis with lower computational overhead. Experimental results show that COTCAgent powered by Baichuan-M2 achieves 90.47% Top-1 accuracy on the self-built dataset and 70.41% on HealthBench, outperforming existing medical agents and mainstream large language models. The code is available at https://github.com/FrankDengAI/COTCAgent/.",
+      "pdf_url": "https://arxiv.org/pdf/2605.15016v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.15016v1",
+      "published": "2026-05-14T16:17:35Z",
+      "updated": "2026-05-14T16:17:35Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Quantifying and Mitigating Premature Closure in Frontier LLMs",
+      "authors": [
+        "Rebecca Handler",
+        "Suhana Bedi",
+        "Nigam Shah"
+      ],
+      "abstract": "Premature closure, or committing to a conclusion before sufficient information is available, is a recognized contributor to diagnostic error but remains underexamined in large language models (LLMs). We define LLM premature closure as inappropriate commitment under uncertainty: providing an answer, recommendation, or clinical guidance when the safer response would be clarification, abstention, escalation, or refusal. We evaluated five frontier LLMs across structured and open-ended medical tasks. In MedQA (n = 500) and AfriMed-QA (n = 490) questions where the correct choice had been removed, models still selected an answer at high rates, with baseline false-action rates of 55-81% and 53-82%, respectively. In open-ended evaluation, models gave inappropriate answers on an average of 30% of 861 HealthBench questions and 78% of 191 physician-authored adversarial queries. Safety-oriented prompting reduced premature closure across models, but residual failure persisted, highlighting the need to evaluate whether medical LLMs know when not to answer.",
+      "pdf_url": "https://arxiv.org/pdf/2605.15000v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.15000v1",
+      "published": "2026-05-14T16:02:28Z",
+      "updated": "2026-05-14T16:02:28Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Explainable Detection of Depression Status Shifts from User Digital Traces",
+      "authors": [
+        "Loris Belcastro",
+        "Francesco Gervino",
+        "Fabrizio Marozzo",
+        "Domenico Talia",
+        "Paolo Trunfio"
+      ],
+      "abstract": "Every day, users generate digital traces (e.g., social media posts, chats, and online interactions) that are inherently timestamped and may reflect aspects of their mental state. These traces can be organized into temporal trajectories that capture how a user's mental health signals evolve, including phases of improvement, deterioration, or stability. In this work, we propose an explainable framework for detecting and analyzing depression-related status shifts in user digital traces. The approach combines multiple BERT-based models to extract complementary signals across different dimensions (e.g., sentiment, emotion, and depression severity). Such signals are then aggregated over time to construct user-level trajectories that are analyzed to identify meaningful change points. To enhance interpretability, the framework integrates a large language model to generate concise and human-readable reports that describe the evolution of mental-health signals and highlight key transitions. We evaluate the framework on two social media datasets. Results show that the approach produces more coherent and informative summaries than direct LLM-based reporting, achieving higher coverage of user history, stronger temporal coherence, and improved sensitivity to change points. An ablation study confirms the contribution of each component, particularly temporal modeling and segmentation. Overall, the method provides an interpretable view of mental health signals over time, supporting research and decision making without aiming at clinical diagnosis.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14995v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.14995v1",
+      "published": "2026-05-14T15:56:38Z",
+      "updated": "2026-05-14T15:56:38Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.SI"
+      ]
+    },
+    {
+      "title": "Agentifying Patient Dynamics within LLMs through Interacting with Clinical World Model",
+      "authors": [
+        "Minghao Wu",
+        "Yuting Yan",
+        "Zhenyang Cai",
+        "Ke Ji",
+        "Chuangsen Fang",
+        "Ziying Sheng",
+        "Xidong Wang",
+        "Rongsheng Wang",
+        "Hejia Zhang",
+        "Shuang Li",
+        "Benyou Wang",
+        "Hongyuan Zha"
+      ],
+      "abstract": "Sepsis management in the ICU requires sequential treatment decisions under rapidly evolving patient physiology. Although large language models (LLMs) encode broad clinical knowledge and can reason over guidelines, they are not inherently grounded in action-conditioned patient dynamics. We introduce SepsisAgent, a world model-augmented LLM agent for sepsis treatment recommendation. SepsisAgent uses a learned Clinical World Model to simulate patient responses under candidate fluid--vasopressor interventions, and follows a propose--simulate--refine workflow before committing to a prescription. We first show that world-model access alone yields inconsistent LLM decision performance, motivating agent-specific training. We then train SepsisAgent through a three-stage curriculum: patient-dynamics supervised fine-tuning, propose--simulate--refine behavior cloning, and world-model-based agentic reinforcement learning. On MIMIC-IV sepsis trajectories, SepsisAgent outperforms all traditional RL and LLM-based baselines in off-policy value while achieving the best safety profile under guideline adherence and unsafe-action metrics. Further analysis shows that repeated interaction with the Clinical World Model enables the agent to learn regularities in patient evolution, which remain useful even when simulator access is removed.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14723v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.14723v1",
+      "published": "2026-05-14T11:50:00Z",
+      "updated": "2026-05-14T11:50:00Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Vision-Core Guided Contrastive Learning for Balanced Multi-modal Prognosis Prediction of Stroke",
+      "authors": [
+        "Liren Chen",
+        "Lidong Sun",
+        "Mingyan Huang",
+        "Junzhe Tang",
+        "Yinghui Zhu",
+        "Guanjie Wang",
+        "Yiqing Xia",
+        "Ting Xiao"
+      ],
+      "abstract": "Deep learning and multi-modal fusion have demonstrated transformative potential in medical diagnosis by integrating diverse data sources. However, accurate prognosis for ischemic stroke remains challenging due to limitations in existing multi-modal approaches. First, current methods are predominantly confined to dual-modal fusion, lacking a framework that effectively integrates the trifecta of medical images, structured clinical data, and unstructured text. Second, they often fail to establish deep bidirectional interactions between modalities; To address these critical gaps, this paper proposes a novel tri-modal fusion model for ischemic stroke prognosis. Our approach first enriches the data representation by employing a Large Language Model (LLM) to automatically generate semi-structured diagnostic text from brain MRIs. This process not only addresses the scarcity of expert annotations but also serves as a regularized semantic enhancement, improving multimodal fusion robustness. Furthermore, we design a core component termed the Vision-Conditioned Dual Alignment Fusion Module (VDAFM), which strategically uses visual features as a conditional prior to guide fine-grained interaction with the generated text. This module achieves a dynamic and profound fusion through a dual semantic alignment loss, effectively mitigating modal heterogeneity. Extensive experiments on a real-world clinical dataset demonstrate that our model achieves state-of-the-art performance.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14710v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.14710v1",
+      "published": "2026-05-14T11:28:57Z",
+      "updated": "2026-05-14T11:28:57Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "MindGap: A Conversational AI Framework for Upstream Neuroplastic Intervention in Post-Traumatic Stress Disorder",
+      "authors": [
+        "Eranga Bandara",
+        "Ross Gore",
+        "Asanga Gunaratna",
+        "Ravi Mukkamala",
+        "Nihal Siriwardanagea",
+        "Sachini Rajapakse",
+        "Isurunima Kularathna",
+        "Pramoda Karunarathna",
+        "Wathsala Herath",
+        "Chalani Rajapakse",
+        "Sachin Shetty",
+        "Anita H. Clayton",
+        "Christopher K. Rhea",
+        "Ng Wee Keong",
+        "Kasun De Zoysa",
+        "Amin Hass",
+        "Shaifali Kaushik",
+        "Preston Samuel",
+        "Atmaram Yarlagadda"
+      ],
+      "abstract": "Post-Traumatic Stress Disorder (PTSD) is fundamentally a neuroplastic problem traumatic contact events encode over-reactive neural pathways through Hebbian long-term potentiation, producing hair-triggered amygdala-HPA stress cascades that fire before conscious awareness can intercept them. Existing therapeutic approaches, prolonged exposure, EMDR, cognitive behavioural therapy, operate predominantly downstream of the reactive cascade, teaching patients to tolerate or reframe distress after it has arisen. While clinically valuable, these suppression-based approaches do not produce the upstream pathway dissolution that constitutes lasting structural neural reorganisation. This paper proposes MindGap, a privacy-preserving on-device conversational AI framework that delivers structured neuroplastic rehabilitation for PTSD through the practice of dependent origination, a Buddhist psychological framework that identifies the precise moment between the pre-cognitive affective signal and the reactive elaboration that follows as the site of therapeutic intervention. MindGap guides patients through three progressive layers of observation at this feeling tone gap: noticing the bare affective signal before reactive elaboration, recognising it as self-arising rather than caused by the stimulus, and recognising the conditioned implicit belief beneath the feeling. Each layer corresponds to progressively deeper prefrontal regulatory engagement and progressively deeper long-term depression-mediated weakening of the reactive pathway, producing genuine upstream dissolution rather than downstream suppression. Running entirely on-device with no data egress, MindGap delivers daily calibrated exposure sessions through a fine-tuned lightweight large language model, making it deployable in sensitive clinical and military contexts where cloud-based solutions are not permitted.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14660v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.14660v1",
+      "published": "2026-05-14T10:13:42Z",
+      "updated": "2026-05-14T10:13:42Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "RxEval: A Prescription-Level Benchmark for Evaluating LLM Medication Recommendation",
+      "authors": [
+        "Shuhao Chen",
+        "Weisen Jiang",
+        "Changmiao Wang",
+        "Xiaoqing Wu",
+        "Xuanren Shi",
+        "Yu Zhang",
+        "James T. Kwok"
+      ],
+      "abstract": "Inpatient medication recommendation requires clinicians to repeatedly select specific medications, doses, and routes as a patient's condition evolves. Existing benchmarks formulate this task as admission-level prediction over coarse drug codes with multi-hot diagnostic and procedure code inputs, failing to capture the per-timepoint, information-rich nature of real prescribing. We propose RxEval, a prescription-level benchmark that evaluates LLM prescribing capability by multiple-choice questions: each question presents a detailed patient profile and time-ordered clinical trajectory, requiring selection of specific medication-dose-route triples from real prescriptions and patient-specific distractors generated via reasoning-chain perturbation. RxEval comprises 1,547 questions spanning 584 patients, 18 diagnostic categories, and 969 unique medications. Evaluation of 16 LLMs shows that RxEval is both challenging and discriminative: F1 ranges from 45.18 to 77.10 across models, and the best Exact Match is only 46.10%. Error analysis reveals that even frontier models may overlook stated patient information and fail to derive clinical conclusions.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14543v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.14543v1",
+      "published": "2026-05-14T08:24:03Z",
+      "updated": "2026-05-14T08:24:03Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "DermAgent: A Self-Reflective Agentic System for Dermatological Image Analysis with Multi-Tool Reasoning and Traceable Decision-Making",
+      "authors": [
+        "Yize Liu",
+        "Siyuan Yan",
+        "Ming Hu",
+        "Lie Ju",
+        "Xieji Li",
+        "Feilong Tang",
+        "Wei Feng",
+        "Zongyuan Ge"
+      ],
+      "abstract": "Dermatological diagnosis requires integrating fine-grained visual perception with expert clinical knowledge. Although Multimodal Large Language Models (MLLMs) facilitate interactive medical image analysis, their application in dermatology is hindered by insufficient domain-specific grounding and hallucinations. To address these issues, we propose DermAgent, a collaborative multi-tool agent that orchestrates seven specialized vision and language modules within a Plan-Execute-Reflect framework. DermAgent delivers stepwise, traceable diagnostic reasoning through three core components. First, it employs complementary visual perception tools for comprehensive morphological description, dermoscopic concept annotation, and disease diagnosis. Second, to overcome the lack of domain prior, a dual-modality retrieval module anchors every prediction in external evidence by cross-referencing 413,210 diagnosed image cases and 3,199 clinical guideline chunks. To further mitigate hallucinations, a deterministic critic module conducts strict post-hoc auditing via confidence, coverage, and conflict gates, automatically detecting inter-source disagreements to trigger targeted self-correction. Extensive experiments on five dermatology benchmarks demonstrate that DermAgent consistently outperforms state-of-the-art MLLMs and medical agent baselines across zero-shot fine-grained disease diagnosis, concept annotation, and clinical captioning tasks, exceeding GPT-4o by 17.6% in skin disease diagnostic accuracy and 3.15% in captioning ROUGE-L. Our code is available at https://github.com/YizeezLiu/DermAgent.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14403v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.14403v1",
+      "published": "2026-05-14T05:41:11Z",
+      "updated": "2026-05-14T05:41:11Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Reinforcement Learning for Tool-Calling Agents in Fast Healthcare Interoperability Resources (FHIR)",
+      "authors": [
+        "Marius S. Knorr",
+        "Robert M\u00fcller",
+        "Jan P. Bremer",
+        "Nils Schweingruber"
+      ],
+      "abstract": "Fast Healthcare Interoperability Resources (FHIR) is the dominant standard for interoperable exchange of healthcare data. In FHIR, electronic health records form a directed graph of resources. Answering clinically meaningful questions over FHIR requires agents to perform multi-step reasoning, filtering, and aggregation across multiple resource types. Prior work shows that even tool-augmented LLM agents (retrieval, code execution, multi-turn planning) often select the wrong resources or violate traversal constraints. We study this problem in the context of FHIR-AgentBench, a benchmark for realistic question answering over real-world hospital data, and frame reasoning on FHIR as a sequential decision-making problem over a queryable structured graph. We implement a multi-turn CodeAct agent and post-train it with reinforcement learning using a custom harness and tools. A LLM Judge provides execution-grounded rewards. Compared to prompt-based, closed-model baselines, RL post-training improves performance while enforcing data-integrity constraints. Empirically, our approach improves answer correctness from 50% (o4-mini) to 77% on FHIR-AgentBench using a smaller and cheaper Qwen3-8B model. We present an end-to-end post-training pipeline (environment building, harness construction, model training and custom evaluation) that reliably improves multi-turn reasoning over structured clinical graphs.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14126v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.14126v1",
+      "published": "2026-05-13T21:27:21Z",
+      "updated": "2026-05-13T21:27:21Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ProtoMedAgent: Multimodal Clinical Interpretability via Privacy-Aware Agentic Workflows",
+      "authors": [
+        "Alvaro Lopez Pellicer",
+        "Plamen Angelov",
+        "Marwan Bukhari",
+        "Yi Li",
+        "Eduardo Soares",
+        "Jemma Kerns"
+      ],
+      "abstract": "While interpretable prototype networks offer compelling case-based reasoning for clinical diagnostics, their raw continuous outputs lack the semantic structure required for medical documentation. Bridging this gap via standard Retrieval-Augmented Generation (RAG) routinely triggers ``retrieval sycophancy,'' where Large Language Models (LLMs) hallucinate post-hoc rationalizations to align with visual predictions. We introduce ProtoMedAgent, a framework that formalizes multimodal clinical reporting as an iterative, zero-gradient test-time optimization problem over a strict neuro-symbolic bottleneck. Operating on a frozen prototype backbone, we distill latent visual and tabular features into a discrete semantic memory. Online generation is strictly constrained by exact set-theoretic differentials and a reflective Scribe-Critic loop, mathematically precluding unsupported narrative claims. To safely bound data disclosure, we introduce a semantic privacy gate governed by $k$-anonymity and $\\ell$-diversity. Evaluated on a 4,160-patient clinical cohort, ProtoMedAgent achieves 91.2\\% Comparison Set Faithfulness where it fundamentally outperforms standard RAG (46.2\\%). ProtoMedAgent additionally leverages a binding $\\ell$-diversity phase transition to systematically reduce artifact-level membership inference risks by an absolute 9.8\\%.",
+      "pdf_url": "https://arxiv.org/pdf/2605.14113v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.14113v1",
+      "published": "2026-05-13T20:57:37Z",
+      "updated": "2026-05-13T20:57:37Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ]
+    },
     {
       "title": "Neurosymbolic Auditing of Natural-Language Software Requirements",
       "authors": [
@@ -82,229 +320,6 @@
         "cs.CL",
         "cs.LG",
         "cs.MA"
-      ]
-    },
-    {
-      "title": "Towards Unified Surgical Scene Understanding:Bridging Reasoning and Grounding via MLLMs",
-      "authors": [
-        "Jincai Huang",
-        "Shihao Zou",
-        "Yuchen Guo",
-        "Jingjing Li",
-        "Wei Ji",
-        "Kai Wang",
-        "Shanshan Wang",
-        "Weixin Si"
-      ],
-      "abstract": "Surgical scene understanding is a cornerstone of computer-assisted intervention. While recent advances, particularly in surgical image segmentation, have driven progress, real-world clinical applications require a more holistic understanding that jointly captures procedural context, semantic reasoning, and precise visual grounding. However, existing approaches typically address these components in isolation, leading to fragmented representations and limited semantic consistency. To address this limitation, we propose SurgMLLM, a unified surgical scene understanding framework that bridges high-level reasoning and low-level visual grounding within a single model. Given surgical videos, SurgMLLM fine-tunes a multimodal large language model (MLLM) to support structured interpretability reasoning, which is used to jointly model phases, instrument-verb-target (IVT) triplets, and triplet-entity segmentation tokens. These tokens are then temporally aggregated and serve as prompts for a segmentation network, enabling accurate pixel-wise grounding of triplet instruments and targets. The entire framework is trained end-to-end with a unified objective that couples language-based reasoning supervision with visual grounding losses, promoting coherent cross-task learning and clinically consistent scene representations. To facilitate unified evaluation, we introduce CholecT45-Scene, extending CholecT45 dataset with 64,299 frames of pixel-level mask annotations for instruments and targets, aligned with existing triplet labels. Extensive experiments show that SurgMLLM significantly advances surgical scene understanding, improving the primary triplet recognition metric AP_IVT from 40.7% to 46.0% and consistently outperforming prior methods in phase recognition and segmentation. These results highlight the effectiveness of unified reasoning-and-grounding for reliable, context-aware surgical assistance.",
-      "pdf_url": "https://arxiv.org/pdf/2605.13530v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.13530v1",
-      "published": "2026-05-13T13:42:23Z",
-      "updated": "2026-05-13T13:42:23Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "VERA-MH: Validation of Ethical and Responsible AI in Mental Health",
-      "authors": [
-        "Luca Belli",
-        "Kate H. Bentley",
-        "Josh Gieringer",
-        "Emily Van Ark",
-        "Nilu Zhao",
-        "Pradip Thachile",
-        "Matt Hawrilenko",
-        "Millard Brown",
-        "Adam M. Chekroud"
-      ],
-      "abstract": "Chatbot usage has increased, including in fields for which they were never developed for--notably mental health support. To that end, we introduce Validations of Ethical and Responsible AI in Mental Health (VERA-MH), a novel clinically-validated evaluation for safety of chatbots in the context of mental health support. The first iteration of VERA-MH focuses on Suicidal Ideation (SI) risks, by assessing how well chatbots can responds to users that might be in crisis.\n  VERA-MH is comprised of three steps: conversation simulation, conversation judging and model rating. First, to simulate conversations with the chatbot under evaluation, another chatbot is tasked with role-playing users based on specific personas. Such user personas have been developed under clinical guidance, to make sure that, among others, multiple risk factors, demographic characteristics and disclosure factors were represented. In the judging step, a second support model is used as an LLM-as-a-Judge, together with a clinically-developed rubric. The rubric is structured as a flow, with a single Yes/No question asked each time, to improve answers' consistency and highlight models' failure modes. In the last stage, results of each conversation are aggregated to present the final evaluation of the chatbot. Together with the framework, we present the result of the evaluations for four leading LLM providers.",
-      "pdf_url": "https://arxiv.org/pdf/2605.13318v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.13318v1",
-      "published": "2026-05-13T10:31:48Z",
-      "updated": "2026-05-13T10:31:48Z",
-      "categories": [
-        "cs.AI",
-        "cs.ET"
-      ]
-    },
-    {
-      "title": "IndicMedDialog: A Parallel Multi-Turn Medical Dialogue Dataset for Accessible Healthcare in Indic Languages",
-      "authors": [
-        "Shubham Kumar Nigam",
-        "Suparnojit Sarkar",
-        "Piyush Patel"
-      ],
-      "abstract": "Most existing medical dialogue systems operate in a single-turn question--answering paradigm or rely on template-based datasets, limiting conversational realism and multilingual applicability. We introduce IndicMedDialog, a parallel multi-turn medical dialogue dataset spanning English and nine Indic languages: Assamese, Bengali, Gujarati, Hindi, Marathi, Punjabi, Tamil, Telugu, and Urdu. The dataset extends MDDial with LLM-generated synthetic consultations, translated using TranslateGemma, verified by native speakers, and refined through a script-aware post-processing pipeline to correct phonetic, lexical, and character-spacing errors. Building on this dataset, we fine-tune IndicMedLM via parameter-efficient adaptation of a quantized small language model, incorporating optional patient pre-context to personalise multi-turn symptom elicitation. We evaluate against zero-shot multilingual baselines, conduct systematic error analysis across ten languages, and validate clinical plausibility through medical expert evaluation.",
-      "pdf_url": "https://arxiv.org/pdf/2605.13292v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.13292v1",
-      "published": "2026-05-13T10:06:38Z",
-      "updated": "2026-05-13T10:06:38Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.IR",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "An Agentic LLM-Based Framework for Population-Scale Mental Health Screening",
-      "authors": [
-        "Giuliano Lorenzoni",
-        "Paulo Alencar",
-        "Donald Cowan"
-      ],
-      "abstract": "Mental health disorders affect millions worldwide, and healthcare systems are increasingly overwhelmed by the volume of clinical data generated from electronic records, telemedicine platforms, and population-level screening programs. At the same time, the emergence of novel AI-based approaches in healthcare calls for intelligent frameworks capable of processing domain-specific unstructured clinical information while adapting to patient-specific needs. This paper proposes an agentic framework for building robust LLM-based pipelines, where each stage is encapsulated as a LangChain agent governed by explicit policies and proxy-guided evaluation. Stages are incrementally locked once validated, ensuring that later adaptations cannot overwrite configurations without demonstrated improvement. The proposed framework evolves from feature-level exploration, through proxy-based tuning and freeze/rollback mechanisms, to full orchestration by an Orchestrator Agent that coordinates preprocessing, retrieval, selection, diversity, threshold optimization, and decoding. A proof-of-concept in transcript-based depression detection demonstrates that the framework converges to stable configurations, such as cosine similarity, dynamic Top-k, and threshold 0.75, while controlling evaluation costs and avoiding regressions. These results highlight the potential of agentic AI to enable population-level mental health screening over large clinical datasets, addressing critical challenges in trustworthiness, reproducibility, and adaptability required in healthcare environments.",
-      "pdf_url": "https://arxiv.org/pdf/2605.13046v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.13046v1",
-      "published": "2026-05-13T06:08:43Z",
-      "updated": "2026-05-13T06:08:43Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Large Language Models Lack Temporal Awareness of Medical Knowledge",
-      "authors": [
-        "Zihan Guan",
-        "Qiao Jin",
-        "Guangzhi Xiong",
-        "Fangyuan Chen",
-        "Mengxuan Hu",
-        "Qingyu Chen",
-        "Yifan Peng",
-        "Zhiyong Lu",
-        "Anil Vullikanti"
-      ],
-      "abstract": "The existing methods for evaluating the medical knowledge of Large Language Models (LLMs) are largely based on atemporal examination-style benchmarks, while in reality, medical knowledge is inherently dynamic and continuously evolves as new evidence emerges and treatments are approved. Consequently, evaluating medical knowledge without a temporal context may provide an incomplete assessment of whether LLMs can accurately reason about time-specific medical knowledge. Moreover, most medical data are historical, requiring the models not only to recall the correct knowledge, but also to know when that knowledge is correct. To bridge the gap, we built TempoMed-Bench, the first-of-its-kind benchmark for evaluating the temporal awareness of the LLMs in the medical domain through evolving guideline knowledge. Based on the TempoMed-Bench, our evaluation analysis first reveals that LLMs lack temporal awareness in medical knowledge through the key findings: (1) model performance on up-to-date medical knowledge exhibits a gradual linear decline over time rather than a sharp knowledge-cutoff behavior, suggesting that parametric medical knowledge is not strictly bounded by knowledge cutoffs; (2) LLMs consistently struggle more with recalling outdated historical medical knowledge than with up-to-date recommendations: accuracy of historical knowledge is only 25.37%-53.89% of up-to-date knowledge, indicating potential knowledge forgetting effects during training; and (3) LLMs often exhibit temporally inconsistent behaviors, where predictions fluctuate irregularly across neighboring years. We also show that the temporal awareness problem is a challenge that cannot be easily solved when integrated with agentic search tools (-3.15%-14.14%). This work highlights an important yet underexplored challenge and motivates future research on developing LLMs that can better encode time-specific medical knowledge.",
-      "pdf_url": "https://arxiv.org/pdf/2605.13045v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.13045v1",
-      "published": "2026-05-13T06:04:40Z",
-      "updated": "2026-05-13T06:04:40Z",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Large Language Models for AI-Assisted Radiotherapy Scheduling: A Feasibility Study Under Realistic Operational Constraints",
-      "authors": [
-        "Eric Zhang",
-        "Wen Li",
-        "Youfang Lai",
-        "Annette Souranis",
-        "Georgia Paparoidamis",
-        "Michael Roumeliotis",
-        "Xun Jia"
-      ],
-      "abstract": "Radiotherapy (RT) patient scheduling is a complex operational problem. Current scheduling often relies on manual coordination and can be difficult to adapt to changing clinical demands. This study evaluated the feasibility of using a large language model (LLM) to generate candidate RT patient schedules satisfying predefined clinical and operational constraints. A simulated three-LINAC RT scheduling environment was developed over one year using synthetic patient arrivals and treatment characteristics modeled after clinical practice. A total of 1,400 new patients across 12 treatment categories were generated. An LLM-based scheduling framework used structured natural-language prompts encoding clinical rules, operational constraints, and scheduling objectives. Performance was evaluated across scenarios involving weekly time consistency, LINAC continuity, gap-constrained temporal relaxation, and infeasible request handling. Generated schedules were validated using deterministic rule-based checks and manual review. LLM-generated schedules satisfied predefined feasibility rules in the evaluated scenarios. Approximately 99% of evaluated fractions remained within the preferred 60-minute weekly treatment-time window. Adding a LINAC-continuity objective reduced LINAC switching from 54.6% to 10.1%. Adding gap-constrained temporal relaxation reduced Friday mean daily gap time from 169.5 to 89.2 minutes while maintaining approximately 99% of fractions within the 60-minute window. The framework also identified infeasible scheduling requests and proposed interpretable corrective actions. These results suggested that LLMs may support RT patient scheduling in constraint-rich simulated clinical environments, motivating further investigation of LLM-assisted scheduling as a flexible, human-in-the-loop decision-support approach for RT operations.",
-      "pdf_url": "https://arxiv.org/pdf/2605.12896v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.12896v1",
-      "published": "2026-05-13T02:18:17Z",
-      "updated": "2026-05-13T02:18:17Z",
-      "categories": [
-        "physics.med-ph"
-      ]
-    },
-    {
-      "title": "Multimodal Hidden Markov Models for Persistent Emotional State Tracking",
-      "authors": [
-        "Anamika Ragu",
-        "Aneesh Jonelagadda"
-      ],
-      "abstract": "Tracking an interpretable emotional arc of a conversation via the sentiment of individual utterances processed as a whole is central to both understanding and guiding communication in applied, especially clinical, conversational contexts. Existing approaches to emotion recognition operate at the utterance level, obscuring the persistent phases that characterize real conversational dynamics. We propose a lightweight framework that models conversational emotion as a sequence of latent emotional regimes using sticky factorial HDP-HMMs over multimodal valence-arousal representations derived from simultaneous video, audio and textual input. We evaluate the quality of regime prediction using LLM-as-a-Judge, geometric, and temporal consistency metrics, demonstrating that the sticky HDP-HMM produces more interpretable regime sequences than the baseline Gaussian HMM at a fraction of the computational cost of LLM-based dialogue state tracking methods. In addition, Question-Answer experiments in a clinical dataset suggest that meaningful emotional phases can reliably be recovered from multimodal valence-arousal trajectories and used to improve the quality of LLM responses in unstable affective regimes via context augmentation. This framework thus opens a path toward interpretable, lightweight, and actionable analysis of conversational emotion dynamics at scale.",
-      "pdf_url": "https://arxiv.org/pdf/2605.12838v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.12838v1",
-      "published": "2026-05-13T00:16:05Z",
-      "updated": "2026-05-13T00:16:05Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Training Large Language Models to Predict Clinical Events",
-      "authors": [
-        "Benjamin Turtel",
-        "Paul Wilczewski",
-        "Kris Skotheim"
-      ],
-      "abstract": "Longitudinal clinical notes contain rich evidence of how patients evolve over time, but converting this signal into training supervision for clinical prediction remains challenging. We extend Foresight Learning to clinical prediction by converting time-ordered MIMIC-III notes into examples consisting of past patient context, a natural-language question about a possible future event, and a label resolved from later documentation. This process yields 6,900 prediction examples from 702 admissions across medications, procedures, organ support, microbiology, and mortality. A small LoRA adapter trained on these examples improves over the prompted base model, reducing expected calibration error from 0.1269 to 0.0398 and Brier score from 0.199 to 0.145, while slightly outperforming GPT-5 point estimates on held-out questions. The approach enables reusable clinical prediction supervision from longitudinal notes without hand-engineered structured features or endpoint-specific classifiers.",
-      "pdf_url": "https://arxiv.org/pdf/2605.12817v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.12817v1",
-      "published": "2026-05-12T23:18:14Z",
-      "updated": "2026-05-12T23:18:14Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Correcting Influence: Unboxing LLM Outputs with Orthogonal Latent Spaces",
-      "authors": [
-        "Shixing Yu",
-        "Promit Ghosal",
-        "Kyra Gan"
-      ],
-      "abstract": "A critical step for reliable large language models (LLMs) use in healthcare is to attribute predictions to their training data, akin to a medical case study. This requires token-level precision: pinpointing not just which training examples influence a decision, but which tokens within them are responsible. While influence functions offer a principled framework for this, prior work is restricted to autoregressive settings and relies on an implicit assumption of token independence, rendering their identified influences unreliable. We introduce a flexible framework that infers token-level influence through a latent mediation approach for general prediction tasks. Our method attaches sparse autoencoders to any layer of a pretrained LLM to learn a basis of approximately independent latent features. Unlike prior methods where influence decomposes additively across tokens, influence computed over latent features is inherently non-decomposable. To address this, we introduce a novel method using Jacobian-vector products. Token-level influence is obtained by propagating latent attributions back to the input space via token activation patterns. We scale our approach using efficient inverse-Hessian approximations. Experiments on medical benchmarks show our approach identifies sparse, interpretable sets of tokens that jointly influence predictions. Our framework enhances trust and enables model auditing, generalizing to high-stakes domain requiring transparent and accountable decisions.",
-      "pdf_url": "https://arxiv.org/pdf/2605.12809v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.12809v1",
-      "published": "2026-05-12T23:01:29Z",
-      "updated": "2026-05-12T23:01:29Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CRAFT: Clinical Reward-Aligned Finetuning for Medical Image Synthesis",
-      "authors": [
-        "Yunsung Chung",
-        "Alex El Darzi",
-        "Carlo El Khoury",
-        "Han Feng",
-        "Nassir Marrouche",
-        "Jihun Hamm"
-      ],
-      "abstract": "Foundation diffusion models can generate photorealistic natural images, but adapting them to medical imaging remains challenging. In medical adaptation, limited labeled data can exacerbate hallucination-like and clinically implausible synthesis, while existing metrics such as FID or Inception Score do not quantify per-image alignment with pathology-relevant criteria. We introduce the Clinical Alignment Score (CAS), a foundation-model-based proxy for clinical alignment that evaluates generated images along four complementary dimensions beyond visual fidelity. Building on CAS, we propose Clinical Reward-Aligned Finetuning (CRAFT), a reward-based adaptation framework that transfers medical knowledge from multimodal large language models and vision-language models through label-conditioned prompt enrichment, clinical checklists, and differentiable reward optimization. Across four diverse modalities, CRAFT improves CAS and downstream classification performance over strong adaptation baselines. Beyond average CAS gains, CRAFT reduces the empirical low-alignment tail below a real-image reference threshold by 5.5-34.7% points relative to the strongest baseline, corresponding to a 20.4% average relative reduction across datasets. These results indicate fewer hallucination-like generations under CAS, and are corroborated by out-of-family evaluator evaluation, structured checklist auditing, memorization analysis, and a blinded physician preference study on CheXpert.",
-      "pdf_url": "https://arxiv.org/pdf/2605.12650v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.12650v1",
-      "published": "2026-05-12T18:56:34Z",
-      "updated": "2026-05-12T18:56:34Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "MedHopQA: A Disease-Centered Multi-Hop Reasoning Benchmark and Evaluation Framework for LLM-Based Biomedical Question Answering",
-      "authors": [
-        "Rezarta Islamaj",
-        "Robert Leaman",
-        "Joey Chan",
-        "Nicholas Wan",
-        "Qiao Jin",
-        "Natalie Xie",
-        "John Wilbur",
-        "Shubo Tian",
-        "Lana Yeganova",
-        "Po-Ting Lai",
-        "Chih-Hsuan Wei",
-        "Yifan Yang",
-        "Yao Ge",
-        "Qingqing Zhu",
-        "Zhizheng Wang",
-        "Zhiyong Lu"
-      ],
-      "abstract": "Evaluating large language models (LLMs) in the biomedical domain requires benchmarks that can distinguish reasoning from pattern matching and remain discriminative as model capabilities improve. Existing biomedical question answering (QA) benchmarks are limited in this respect. Multiple-choice formats can allow models to succeed through answer elimination rather than inference, while widely circulated exam-style datasets are increasingly vulnerable to performance saturation and training data contamination. Multi-hop reasoning, defined as the ability to integrate information across multiple sources to derive an answer, is central to clinically meaningful tasks such as diagnostic support, literature-based discovery, and hypothesis generation, yet remains underrepresented in current biomedical QA benchmarks. MedHopQA is a disease-centered multi-hop reasoning benchmark consisting of 1,000 expert-curated question-answer pairs introduced as a shared task at BioCreative IX. Each question requires synthesis of information across two distinct Wikipedia articles, and answers are provided in an open-ended free-text format. Gold annotations are augmented with ontology-grounded synonym sets from MONDO, NCBI Gene, and NCBI Taxonomy to support both lexical and concept-level evaluation. MedHopQA was constructed through a structured process combining human annotation, triage, iterative verification, and LLM-as-a-judge validation. To reduce leaderboard gaming and contamination risk, the 1,000 scored questions are embedded within a publicly downloadable set of 10,000 questions, with answers withheld, on a CodaBench leaderboard. MedHopQA provides both a benchmark and a reusable framework for constructing future biomedical QA datasets that prioritize compositional reasoning, saturation resistance, and contamination resistance as core design constraints.",
-      "pdf_url": "https://arxiv.org/pdf/2605.12361v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.12361v1",
-      "published": "2026-05-12T16:32:43Z",
-      "updated": "2026-05-12T16:32:43Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.IR"
       ]
     }
   ]

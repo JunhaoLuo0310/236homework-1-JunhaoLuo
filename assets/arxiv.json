@@ -1,8 +1,167 @@
 {
-  "generated_at_utc": "2026-05-21T04:15:48.714615Z",
+  "generated_at_utc": "2026-05-23T03:49:44.970018Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "ChronoMedKG: A Temporally-Grounded Biomedical Knowledge Graph and Benchmark for Clinical Reasoning",
+      "authors": [
+        "Md Shamim Ahmed",
+        "Farzaneh Firoozbakht",
+        "Lukas Galke Poech",
+        "Jan Baumbach",
+        "Richard R\u00f6ttger"
+      ],
+      "abstract": "Biomedical knowledge graphs (KGs) treat disease associations as static facts, but temporal information is crucial for clinical reasoning, e.g., a symptom diagnostic of one disease at age 3 may imply a different disease at age 13. Existing KGs such as PrimeKG, Hetionet, and iKraph do not encode when a finding becomes clinically relevant over the course of a disease. This limits their usefulness for longitudinal clinical reasoning and retrieval augmentation.\n  We introduce ChronoMedKG, a temporal biomedical knowledge graph that contains 460,497 evidence-linked triples (filtered from 13M raw extractions) covering 13,431 diseases. Each association is tied to temporal components like onset window or progression stage, which are backed by PMID-traceable evidence and a multi-signal credibility score. The graph is constructed through a disease-autonomous multi-agent pipeline in which multiple frontier LLMs independently extract knowledge from PubMed and PMC literature. Only those relations are kept that are supported by multi-model consensus, survive credibility filtering, as well as ontology alignment.\n  ChronoMedKG scored 92.7% agreement against Orphadata and adds temporal grounding for 6,250 diseases absent from HPOA, Orphadata, and Phenopackets, including 1,657 Orphanet-coded rare diseases. We further introduce ChronoTQA, a benchmark of 3,341 questions across eight task types (six temporal plus two static controls), with a 12-question supplementary probe. Frontier LLMs lose roughly 30 points moving from static to temporal questions; ChronoMedKG retrieval rescues 47-65% of their long-tail failures, against 17-29% for HPOA-RAG. As such, ChronoMedKG provides a crucial temporal axis for retrieval-augmented clinical systems that was previously absent.",
+      "pdf_url": "https://arxiv.org/pdf/2605.22734v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.22734v1",
+      "published": "2026-05-21T17:04:28Z",
+      "updated": "2026-05-21T17:04:28Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "EmoTrack: Robust Depression Tracking from Counseling Transcripts across Session Regimes",
+      "authors": [
+        "Zhaomin Wu",
+        "Jiayi Li",
+        "Bingsheng He"
+      ],
+      "abstract": "Text-based counseling is an important interface for AI mental-health support, where transcripts may be used to monitor depression severity and flag sessions requiring timely human review. However, robust PHQ-8 prediction across session regimes remains challenging: fine-tuning-based methods can exploit richer supervision but may generalize poorly under data scarcity, while prompt-based LLM methods are data-efficient but usually treat each transcript holistically and provide limited support for longitudinal context. We study robust depression tracking from counseling transcripts across single-session and multi-session regimes. We introduce LongCounsel, a multi-session counseling dataset with session-level PHQ-8 supervision for evaluating repeated-session tracking under partial symptom disclosure and cross-session continuity. We further propose EmoTrack, a PHQ-8 prediction framework that combines LLM-extracted clinical signals with frozen turn-level semantic embeddings and trains symptom-specific predictors over the resulting transcript representation. When prior sessions are available, EmoTrack can further incorporate them through compact cross-session memory. Experiments on LongCounsel and DAIC-WOZ show that EmoTrack achieves a clear gain on the real single-session benchmark, including a 13.5% relative MAE reduction over the strongest DAIC-WOZ baseline, and remains competitive with the strongest longitudinal baseline on LongCounsel.",
+      "pdf_url": "https://arxiv.org/pdf/2605.22286v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.22286v1",
+      "published": "2026-05-21T10:37:45Z",
+      "updated": "2026-05-21T10:37:45Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Active Evidence-Seeking and Diagnostic Reasoning in Large Language Models for Clinical Decision Support",
+      "authors": [
+        "Chen Zhan",
+        "Xihe Qiu",
+        "Xiaoyu Tan",
+        "Xibing Zhuang",
+        "Gengchen Ma",
+        "Yue Zhang",
+        "Shuo Li",
+        "Peifeng Liu",
+        "Xiaoxiao Ge",
+        "Liang Liu",
+        "Lu Gan"
+      ],
+      "abstract": "Large language models perform well on static medical examinations, yet clinical diagnosis often requires iterative evidence gathering under uncertainty. Building on prior interactive evaluation efforts, we introduce an OSCE-inspired standardized patient simulator and a controlled, reproducible benchmark for active diagnostic inquiry. Across 468 cases and 15 models in our protocol, we observe that multi-turn evidence seeking reduces diagnostic accuracy by 12.75% and lowers supporting-evidence quality by 24.36% relative to full-context evaluation; error analyses associate these drops with premature diagnostic closure and inefficient questioning. Together, these results suggest that static full-context benchmarks may overestimate performance in interactive evidence-seeking settings, motivating complementary interactive assessment for safer clinical decision support.",
+      "pdf_url": "https://arxiv.org/pdf/2605.22047v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.22047v1",
+      "published": "2026-05-21T06:34:50Z",
+      "updated": "2026-05-21T06:34:50Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ChronoMedicalWorld: A Medical World Model for Learning Patient Trajectories from Longitudinal Care Data",
+      "authors": [
+        "Jiangyuan Wang",
+        "Xuyong Chen",
+        "Junwei He",
+        "Xu Xu",
+        "Shasha Xie",
+        "Fuman Han"
+      ],
+      "abstract": "Long-horizon clinical simulation -- predicting how a patient's physiology evolves over years under specified interventions -- is central to chronic-disease care, yet existing electronic health record (EHR) models are predominantly discriminative, and general-purpose large language models drift under repeated interventions. We propose the \\textbf{ChronoMedicalWorld Model (CMWM)}, an action-conditioned latent world-model framework for learning patient trajectories from longitudinal care data. CMWM couples a joint-embedding state encoder with a wide action encoder that admits both structured intervention indicators and free-text communication embeddings, and trains a recurrent latent transition module under a six-term objective: next-observation supervision, next-latent prediction, SIGReg latent regularisation, and three physiology-aware shape priors (slope, continuity, large-jump penalty). A closed-loop rollout-prefix protocol matches training to deployment, so the model is optimised against the same multi-step error it exhibits at inference. As a concrete case study, we instantiate CMWM for annual estimated glomerular filtration rate (eGFR) trajectory forecasting in chronic kidney disease (CKD). On a 2{,}232-patient nephrology cohort, the CKD instantiation achieves a dynamic-50\\% history rollout test mean absolute error (MAE) of 7.384 and root-mean-square error (RMSE) of 10.256, against 7.964 and 11.069 for a tuned GPT-5.5 structured-prompting baseline ($-7.28\\%$ MAE, $-7.35\\%$ RMSE), with the gain dominated by the dialogue portion of patient--health-coach communication. The framework is not CKD-specific: its architecture, loss design, and training protocol apply to any chronic condition that can be cast as periodic clinical state interleaved with structured and conversational interventions.",
+      "pdf_url": "https://arxiv.org/pdf/2605.21963v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.21963v1",
+      "published": "2026-05-21T03:50:17Z",
+      "updated": "2026-05-21T03:50:17Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Claim-Selective Certification for High-Risk Medical Retrieval-Augmented Generation",
+      "authors": [
+        "Shao Kan"
+      ],
+      "abstract": "Medical RAG systems in high-risk QA settings are often evaluated through a single answer-or-abstain decision, but mixed evidence may support one claim, require conditions for another, and contradict a third. We study claim-selective certification: each response is decomposed into verifiable claims, scored against retrieved evidence, and mapped by an intent-aware selector to {full, partial, conflict, abstain}. On the primary weak-label certificate protocol, whose real-source-only dev/test rows cover the naturally occurring non-abstain actions, the full system records UCCR=0.0000, PAU=1.0000, PAU Precision=0.9901, and action accuracy=0.9204 on dev (n=314), and UCCR=0.0000, PAU=0.9967, PAU Precision=0.9739, and action accuracy=0.8997 on test (n=319). UCCR measures unsupported-claim risk within the certificate definition, and a source-missing counterfactual slice evaluates abstain under empty evidence. Shortcut controls quantify the action-label prior explained by source and intent metadata, while source/evidence-novel slices characterize transfer boundaries. The resulting interface separates action-label prediction from evidence-linked claim selection under mixed evidence.",
+      "pdf_url": "https://arxiv.org/pdf/2605.21949v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.21949v1",
+      "published": "2026-05-21T03:29:50Z",
+      "updated": "2026-05-21T03:29:50Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Seizure-Semiology-Suite (S3): A Clinically Multimodal Dataset, Benchmark, and Models for Seizure Semiology Understanding",
+      "authors": [
+        "Lina Zhang",
+        "Tonmoy Monsoor",
+        "Peizheng Li",
+        "Jiarui Cui",
+        "Xinyi Peng",
+        "Chong Han",
+        "Prateik Sinha",
+        "Siyuan Dai",
+        "Jessica Nichole Pasqua",
+        "Colin M McCrimmon",
+        "Weiting Liu",
+        "Hailey Marie Miranda",
+        "Bing Hu",
+        "Xiangting Wu",
+        "Tengyou Xu",
+        "Chunhan Li",
+        "Jiaye Tian",
+        "Jiarui Tang",
+        "Detao Ma",
+        "Lingye Kong",
+        "Junnan Lyu",
+        "Jungang Li",
+        "Yan Zan",
+        "Junhua Huang",
+        "Rajarshi Mazumder",
+        "Vwani Roychowdhury"
+      ],
+      "abstract": "While Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in general video understanding, their capacity to interpret involuntary, and spatio-temporally evolving pathologic motor behaviors such as seizure semiology remains largely untested. To address this gap, we introduce Seizure-Semiology-Suite, a clinically grounded dataset and benchmark for fine-grained, structured seizure semiology understanding. The dataset includes 438 seizure videos annotated with over 35,000 dense labels covering 20 ILAE-defined semiological features. Building on this dataset, we propose a seven-task hierarchical benchmark that systematically evaluates MLLMs from low-level visual perception to temporal sequencing, narrative report generation, and seizure diagnosis. To enable clinically meaningful evaluation of generated reports, we further introduce the Report Quality Index for Seizure Semiology (Seizure-RQI). Extensive baselines across 11 open-weight MLLMs reveal systematic weaknesses in laterality reasoning, temporal localization, symptom sequencing, and clinically faithful reporting. We show that seizure-specific fine-tuning substantially improves performance across tasks, and that a two-stage neuro-symbolic framework achieves an F1 score of 0.96 on epileptic versus non-epileptic seizure classification. Seizure-Semiology-Suite establishes a rigorous benchmark for evaluating multimodal models in safety-critical medical video understanding and guides the development of clinically reliable, domain-adaptive multimodal intelligence.",
+      "pdf_url": "https://arxiv.org/pdf/2605.21852v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.21852v1",
+      "published": "2026-05-21T00:57:39Z",
+      "updated": "2026-05-21T00:57:39Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "When Cases Get Rare: A Retrieval Benchmark for Off-Guideline Clinical Question Answering",
+      "authors": [
+        "Doeun Lee",
+        "Muge Zhang",
+        "Yi Yu",
+        "Ashish Manne",
+        "Stephen Koesters",
+        "Frank Wen",
+        "Brady Buchanan",
+        "Lynda Villagomez",
+        "Oluwatoba Moninuola",
+        "James Lim",
+        "Kathryn Tobin",
+        "Andrew Srisuwananukorn",
+        "Ping Zhang",
+        "Sachin Kumar"
+      ],
+      "abstract": "Across medical specialties, clinical practice is anchored in evidence-based guidelines that codify best studied diagnostic and treatment pathways. These pathways routinely fall short for the long tail of real-world care not covered by guidelines. Most medical large language models (LLMs), however, are trained to encode common, guideline-focused medical knowledge in their parameters. Current evaluations test models primarily on recalling and reasoning with this memorized content, often in multiple-choice settings. Given the fundamental importance of evidence-based reasoning in medicine, it is neither feasible nor reliable to depend on memorization in practice. To address this gap, we introduce OGCaReBench, a free-form retrieval-focused benchmark aimed at evaluating LLMs at answering clinical questions that require going beyond typical guidelines. Extracted from published medical case reports and validated by medical experts, OGCaReBench contains long-form clinical questions requiring free-text answers, providing a systematic framework for assessing open-ended medical reasoning in rare, case-based scenarios. Our experiments reveal that even the best-performing baseline (GPT-5.2) correctly answers only 56% of our benchmark with specialized models only reaching 42%. Augmenting models with retrieved medical articles improves this performance to up to 82% (using GPT-5.2) highlighting the importance of evidence-grounding for real-world medical reasoning tasks. This work thus establishes a foundation for benchmarking and advancing both general-purpose and medical LLMs to produce reliable answers in challenging clinical contexts.",
+      "pdf_url": "https://arxiv.org/pdf/2605.21807v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.21807v1",
+      "published": "2026-05-20T23:04:48Z",
+      "updated": "2026-05-20T23:04:48Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "Automated ICD Classification of Psychiatric Diagnoses: From Classical NLP to Large Language Models",
       "authors": [
@@ -150,159 +309,6 @@
         "cs.CV",
         "cs.AI",
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Prompting language influences diagnostic reasoning and accuracy of large language models",
-      "authors": [
-        "Adrien Bazoge",
-        "Josselin Corvellec",
-        "Sofiane Djillali Sid-Ahmed",
-        "Pierre-Antoine Gourraud"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly explored for clinical decision support, yet most evaluations are conducted in English, leaving their reliability in other languages uncertain. Here we evaluate the impact of prompting language on diagnostic reasoning and final diagnosis accuracy by comparing English and French performance across five LLMs (o3, DeepSeek-R1, GPT-4-Turbo, Llama-3.1-405B-Instruct, and BioMistral-7B). A total of 180 clinical vignettes covering 16 medical specialties were assessed by two physicians using an 18-point scale evaluating both diagnosis accuracy and reasoning quality. Four of the five models performed better in English (mean difference 0.37-0.91, adjusted p < 0.05), with the gap spanning multiple aspects of reasoning, including differential diagnosis, logical structure, and internal validity. o3 was the only model showing no overall language effect. These findings demonstrate that prompting language remains a critical determinant of LLM clinical performance, with implications for equitable linguistico-cultural deployment worldwide.",
-      "pdf_url": "https://arxiv.org/pdf/2605.19173v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.19173v1",
-      "published": "2026-05-18T22:55:21Z",
-      "updated": "2026-05-18T22:55:21Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "CLIC: Contextual Language-Informed Cardiac Pathology Classification",
-      "authors": [
-        "Giovani D. Lucafo",
-        "Rafael da Costa Silva",
-        "Jo\u00e3o Lucas Luz Lima Sarcinelli",
-        "Andre Guarnier De Mitri",
-        "Diego Furtado Silva"
-      ],
-      "abstract": "The electrocardiogram (ECG) is the gold standard for non-invasive diagnosis of cardiac pathologies and is a fundamental pillar of cardiovascular medicine. Recent progress in deep learning has led to the development of robust automated classifiers that achieve high performance by processing raw physiological signals. However, in clinical practice, diagnosis is rarely based solely on the signal. Cardiologists commonly support their interpretation with the patient's characteristics and the specific data-acquisition context. Despite this, most current algorithms remain restricted to signal-only analysis, failing to integrate technical metadata and demographic variables. This paper proposes Contextual Language-Informed Cardiac pathology classification (CLIC), a multimodal framework that significantly enhances diagnostic precision by encoding these variables through natural language. We demonstrate that translating patient-level contextual data into descriptive text provides an informative anchor that helps the model disambiguate complex physiological patterns. We further investigate the use of Large Language Models to synthesize richer clinical descriptions and observe that, while these generated texts remain competitive, controlled template-based contextual clinical text leads to consistent improvements in downstream classification performance.",
-      "pdf_url": "https://arxiv.org/pdf/2605.19132v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.19132v1",
-      "published": "2026-05-18T21:31:51Z",
-      "updated": "2026-05-18T21:31:51Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "What Does the AI Doctor Value? Auditing Pluralism in the Clinical Ethics of Language Models",
-      "authors": [
-        "Payal Chandak",
-        "Victoria Alkin",
-        "David Wu",
-        "Maya Dagan",
-        "Taposh Dutta Roy",
-        "Maria Clara Saad Menezes",
-        "Ayush Noori",
-        "Nirali Somia",
-        "John S. Brownstein",
-        "Ran Balicer",
-        "Rebecca W. Brendel",
-        "Noa Dagan",
-        "Isaac S. Kohane",
-        "Gabriel A. Brat"
-      ],
-      "abstract": "Medicine is inherently pluralistic. Principles such as autonomy, beneficence, nonmaleficence, and justice routinely conflict, and such ethical dilemmas often sharply divide reasonable physicians. Good clinical practice navigates these tensions in concert with each patient's values rather than imposing a single ethical stance. The ethical values that large language models bring to medical advice, however, have not been systematically examined. We present a framework for auditing value pluralism in medical AI, comprising a benchmark of clinician-verified dilemmas and an attribution method that recovers value priorities directly from decisions. The ecosystem of frontier models spans physician-level value heterogeneity, and models discuss competing values in their reasoning (Overton pluralism) before committing to a decision. However, individual model decisions are near-deterministic across repeated sampling and semantic variations, failing to reproduce the distributional pluralism of the physician panel. Across benchmark cases, these consistent decisions reflect committed, systematic value preferences. While most model priorities fall within the natural range of inter-physician variation, some significantly underweight patient autonomy. A single LLM deployed without regard for its value priorities could amplify those priorities at scale to every patient it serves. Without explicit efforts to balance ethical perspectives with one or multiple models, these tools risk replacing clinical pluralism with a deployment monoculture.",
-      "pdf_url": "https://arxiv.org/pdf/2605.18738v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.18738v1",
-      "published": "2026-05-18T17:56:13Z",
-      "updated": "2026-05-18T17:56:13Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Evaluating the Utility of Personal Health Records in Personalized Health AI",
-      "authors": [
-        "Rory Sayres",
-        "Kejia Chen",
-        "Ayush Jain",
-        "Matthew Thompson",
-        "Jonathan Richina",
-        "Xiang Yin",
-        "Jimmy Hu",
-        "Fan Zhang",
-        "Bob Lou",
-        "Mike Sanchez",
-        "Ines Mezerreg",
-        "Meredith Schreier",
-        "Hamsa Subramaniam",
-        "I-Ching Lee",
-        "Yugang Jia",
-        "Daniel Mcduff",
-        "Yossi Matias",
-        "Avinatan Hassidim",
-        "Dale Webster",
-        "Yun Liu",
-        "Jackie Barr",
-        "Quang Duong"
-      ],
-      "abstract": "Patient-managed Personal Health Records (PHRs) promises to empower patients to better understand their health; but information in the record is complex, potentially hindering insights. In this study, we assess the potential of large language models (LLMs, Gemini 3.0 Flash) to provide helpful answers to user health queries, when provided clinical data from PHRs as context. A total of 2,257 user queries were drawn from 3 different distributions to represent patient questions: shorter web search queries, longer questions derived from templates of chatbot conversations, and questions patients asked to their healthcare team (patient calls). Queries were matched with de-identified PHRs (from a pool of 1,945). Gemini responses were generated (1) without PHR context; (2) with a basic summary of demographics, conditions, and medications; (3) with full, extensive clinical notes. For evaluation, we leveraged an existing rating framework (SHARP), and developed a new framework for specific error modes when interpreting PHRs. Evaluation was performed using autoraters for the full set, and with clinician ratings for a subset (n=95), with both sets of raters knowing the full PHR context. We see significant improvements in the helpfulness of answers to all question types with PHR data (p < 0.001, paired t-test). We also observe potential gains in safety, accuracy, relevance and personalization of answers. Our PHR evaluation framework further identifies gaps in LLM understanding of particular aspects of complex PHRs, such as temporal disorientation, and rare but meaningful confabulations. These results suggest potential for PHR data to help people with a wide range of user needs; and provide a framework for monitoring for gaps in LLM answers based on PHR context. This study motivates further work to assess and realize potential benefits to users from understanding their health records.",
-      "pdf_url": "https://arxiv.org/pdf/2605.18937v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.18937v1",
-      "published": "2026-05-18T17:55:15Z",
-      "updated": "2026-05-18T17:55:15Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Query-Conditioned Knowledge Alignment for Reliable Cross-System Medical Reasoning",
-      "authors": [
-        "Yan Jiao",
-        "Jingran Xu",
-        "Pin-Han Ho",
-        "Limei Peng"
-      ],
-      "abstract": "Cross-domain knowledge alignment is essential for integrating heterogeneous medical systems, yet existing approaches typically treat entity alignment as a static matching problem, ignoring query context and cross-system asymmetry. This limitation is particularly critical in integrative medical settings, where correspondence between concepts is inherently context-dependent, non-bijective, and direction-sensitive.\n  In this paper, we propose Query-Conditioned Entity Alignment (QCEA), which reformulates entity alignment as a query-conditioned correspondence problem. Instead of learning a fixed mapping between entity representations, QCEA treats the textual description of a source entity as a query and ranks candidate entities in the target graph, enabling context-dependent alignment. The framework integrates semantic encoding, graph-based representation learning, and a direction-aware transformation module to capture asymmetric and many-to-many correspondence across heterogeneous knowledge systems.\n  We evaluate QCEA on TCM--WM knowledge graphs derived from SymMap, covering both symptom alignment and herb--molecule alignment tasks. Experimental results show consistent improvements over representative baselines, particularly on rank-sensitive metrics such as Hit@K and MRR. Furthermore, downstream retrieval-augmented generation (RAG) experiments demonstrate that improved alignment leads to better evidence retrieval, stronger grounding, and higher answer accuracy. These findings highlight that alignment is not merely a data integration step, but a key factor that shapes knowledge accessibility and reliability in cross-system medical reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2605.18570v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.18570v1",
-      "published": "2026-05-18T15:49:46Z",
-      "updated": "2026-05-18T15:49:46Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Visualizing the Invisible: Generative Visual Grounding Empowers Universal EEG Understanding in MLLMs",
-      "authors": [
-        "Junyu Pan",
-        "Yansen Wang",
-        "Enze Zhang",
-        "Baoliang Lu",
-        "Weilong Zheng",
-        "Dongsheng Li"
-      ],
-      "abstract": "Leveraging the universal representations of pre-trained LLMs and MLLMs offers a promising path toward brain foundation models. However, visually-evoked EEG datasets remain scarce, leading existing methods to align neural signals mainly with abstract text, a lossy translation that may discard fine-grained perceptual information encoded in brain activity. We propose Generative Visual Grounding (GVG), a framework that visualizes the invisible by using an EEG-to-image generative model as a visual translator. Instead of forcing EEG into text alone, GVG hallucinates instance-specific proxy images for non-visual EEG, providing structured visual contexts that allow MLLMs to exploit their visual priors for clinical-state interpretation. We validate this idea on two MLLM backbones, GVG-X-Omni and GVG-Janus. Image-only alignment is already competitive: the lightweight GVG-X-Omni matches 1.7B-parameter text-aligned baselines while tuning only 170M parameters on a frozen 7B backbone. We further extend GVG-Janus with trimodal Image+Text alignment, where text supplies categorical semantic anchors and visual proxies enrich neural representations with perceptual details. Experiments show consistent gains in EEG understanding and visual generation, suggesting visual proxy grounding as an effective complement to textual alignment.",
-      "pdf_url": "https://arxiv.org/pdf/2605.18172v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.18172v1",
-      "published": "2026-05-18T10:15:40Z",
-      "updated": "2026-05-18T10:15:40Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "How Good LLMs Are at Answering Bangla Medical Visual Questions? Dataset and Benchmarking",
-      "authors": [
-        "Rafid Ahmed",
-        "Intesar Tahmid",
-        "Mir Sazzat Hossain",
-        "Tasnimul Hossain Tomal",
-        "Md Fahim",
-        "Md Farhad Alam Bhuiyan"
-      ],
-      "abstract": "Recent advancements in Large Language Models (LLMs) and Large Vision Language Models (LVLMs) have enabled general-purpose systems to demonstrate promising capabilities in complex reasoning tasks, including those in the medical domain. Medical Visual Question Answering (MedVQA) has particularly benefited from these developments. However, despite Bangla being one of the most widely spoken languages globally, there exists no established MedVQA benchmark for it. To address this gap, we introduce BanglaMedVQA, a dataset comprising clinically validated image-question-answer pairs, along with a comprehensive evaluation of current foundation models on this resource. Consistent with prior findings that report low performance of current models on English MedVQA benchmarks, our analysis reveals that Bangla performance is substantially lower, reflecting the challenges inherent to low-resource languages. Even top-performing models such as Gemini and GPT-4.1 mini fail to accurately answer specialized diagnostic questions, indicating severe limitations in fine-grained medical reasoning. Although certain open-source models, such as Gemma-3, occasionally outperform these models in general categories, they too struggle with clinically complex questions, underscoring the urgent need for top-notch evaluation method.",
-      "pdf_url": "https://arxiv.org/pdf/2605.18111v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.18111v1",
-      "published": "2026-05-18T09:20:32Z",
-      "updated": "2026-05-18T09:20:32Z",
-      "categories": [
-        "cs.CL",
-        "cs.CV"
       ]
     }
   ]

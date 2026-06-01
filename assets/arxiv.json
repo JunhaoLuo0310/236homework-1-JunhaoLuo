@@ -1,8 +1,172 @@
 {
-  "generated_at_utc": "2026-05-31T04:22:29.667135Z",
+  "generated_at_utc": "2026-06-01T04:51:55.742927Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Reliable Multilingual Orthopedic Decision Support from Clinical Narratives: Language-Aware Adaptation and Verification-Guided Deferral",
+      "authors": [
+        "Danish Ali",
+        "Li Xiaojian",
+        "Sundas Iqbal",
+        "Farrukh Zaidi"
+      ],
+      "abstract": "Multilingual orthopedic decision support remains challenging in low-resource healthcare settings, where clinical narratives contain specialized terminology, mixed scripts, incomplete evidence, label imbalance and language-dependent documentation patterns. This article presents a reliability-oriented framework for classifying free-text orthopedic notes in English, Hindi and Punjabi. We compare task-aligned multilingual transformer encoders, a task-fine-tuned DistilBERT baseline, zero-shot instruction-tuned large language models (LLMs) and a domain-adaptive encoder, IndicBERT-HPA. IndicBERT-HPA augments IndicBERT with language-aware orthopedic adapter heads to support clinically relevant multilingual representation learning. Evaluation extends beyond aggregate accuracy to per-class performance, ROC-AUC, AUPRC, expected calibration error, cross-language stability and robustness under controlled balanced and natural-prevalence distributions. The evaluated zero-shot LLMs remain substantially less effective than task-adapted encoders for closed-set classification, with language-dependent instability. Under natural clinical prevalence, IndicBERT-HPA achieves the strongest overall performance, reaching an averaged Macro-F1 of 0.8792, Macro-AUROC of 0.894 and AUPRC of 0.902. We further implement a deterministic selective-verification layer combining confidence gating, evidence-consistency checking and language-risk screening. On a randomly selected held-out 5,000-record subset, it achieves 84.4% selective accuracy and 0.76 selective Macro-F1 at 72.3% coverage, compared with 71.5% accuracy and 0.65 Macro-F1 for accept-all prediction. These results support reliability-oriented multilingual clinical decision support with explicit deferral.",
+      "pdf_url": "https://arxiv.org/pdf/2605.31512v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.31512v1",
+      "published": "2026-05-29T16:30:45Z",
+      "updated": "2026-05-29T16:30:45Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Evaluating Factual Density in Multi-Source RAG: A Study in Medical AI Accuracy",
+      "authors": [
+        "Michael R. DeMarco"
+      ],
+      "abstract": "Retrieval-Augmented Generation (RAG) is the current industry standard for grounding AI in real-world facts. Traditional retrieval methods rely on keyword matching and topic proximity, ranking content based on how closely it sounds like the user's query. What they do not measure is how many verified facts the content actually contains. This structural gap, termed the Expert Blindness Effect, causes standard RAG pipelines to consistently bury high-density factual evidence in favor of lexically dominant text on the same topic. To address this gap, this paper introduces Factual Density (FD*), a novel retrieval optimization signal that measures the proportion of verified atomic claims relative to total token count. Using the NexusAgentics Ghost Audit preprocessing pipeline, raw text is scored for factual specificity using probabilistic factuality analysis to filter content before corpus ingestion. An initial formulation introduced a severe document-length confound (Pearson R = -0.8636, p = 2.27e-07). Implementing Z-score normalization within length bins resolved this bias, validating FD* as a length-independent density signal (p = 0.0749). Evaluated against the HealthFC benchmark (750 health claims labeled Supported, Refuted, or No Evidence by medical experts), FD*-optimized retrieval was the only condition to achieve 100% systematic review saturation in top-5 results, surfacing Cochrane evidence that standard cosine similarity ranked outside the top ten. Ground truth verification confirmed 25 mappings across seven HealthFC-supported claims. While full statistical validation across n=50 queries remains future work due to constraints on corpus-benchmark alignment, these findings establish factual density reranking as a low-cost, high-impact intervention for improving factual precision in health RAG architectures.",
+      "pdf_url": "https://arxiv.org/pdf/2605.31506v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.31506v1",
+      "published": "2026-05-29T16:25:39Z",
+      "updated": "2026-05-29T16:25:39Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Simple Token-Efficient Vision-Language Model for Case-level Pathology Synoptic Report Generation",
+      "authors": [
+        "Zhiyuan Yang",
+        "Jiahao Cheng",
+        "Vincent Quoc-Huy Trinh",
+        "Mahdi S. Hosseini"
+      ],
+      "abstract": "Generating clinically useful pathology reports for pathology cases from whole-slide images (WSIs) is challenging due to gigapixel resolution, long visual-token sequences, and the complexity of case-level reasoning, where a single case may contain multiple WSIs with heterogeneous tissues and ambiguous findings. We present a simple token-efficient vision--language model for case-level synoptic report generation that remains practical under constrained GPU memory. Our architecture follows a minimal three-component design: a frozen pathology patch encoder, a lightweight two-layer MLP vision-language aligner, and a large language model decoder, with an explicit WSI marker token to separate slides within a case. Training proceeds in two supervised stages: (1) aligner-only WSI captioning using heterogeneous WSI-text pairs, and (2) case-level supervised fine-tuning on case-report pairs for structured report generation. To reduce sequence length, we represent each slide using $512 \\times 512$ patches at $5\\times$ magnification, which reduces the average sequence length by up to $64\\times$ times compared to the commonly used $20\\times$ patches. Combined with efficient training techniques, we enable practical training with only half a NVIDIA H100 GPU. Across both training stages, our approach achieves high ROUGE-L/METEOR/BLEU-4 scores while being substantially more efficient in memory and runtime. In AI-based evaluations, our model is consistently preferred over strong baselines. Extensive ablations characterize performance-efficiency trade-offs and identify simple choices that improve robustness in multi-WSI settings. Overall, this work provides a strong, reproducible baseline for efficient pathology report generation, lowering the barrier to multi-WSI VLM research under limited compute.",
+      "pdf_url": "https://arxiv.org/pdf/2605.30716v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.30716v1",
+      "published": "2026-05-29T01:15:13Z",
+      "updated": "2026-05-29T01:15:13Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Same Patient, Different Words, Different Diagnosis? Evaluating Semantic Stability in Clinical LLMs",
+      "authors": [
+        "Mahdi Alkaeed",
+        "Adnan Qayyum",
+        "Nabeel Abo Kashreef",
+        "Muhammad Bilal",
+        "Junaid Qadir"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly used in clinical applications. However, their behavior remains highly sensitive to subtle linguistic variations, such as rephrasing or syntactic variation. This sensitivity poses risks in safety-critical healthcare settings, where semantically equivalent inputs should produce consistent predictions. However, a key challenge is to ensure that prompt variations truly preserve clinical meaning, as embedding-based similarity metrics often fail to capture distinctions involving negation, temporality, or severity. To address this limitation, we propose a semantic verification framework based on Natural Language Inference (NLI) to filter meaning-preserving prompt variations, which are further refined using an LLM-as-a-judge and audited by a clinical expert. In addition, we introduce three metrics to quantify model sensitivity: MeaningPreserving Variation Sensitivity (MVS), confidence variation (\u0394C), and Worst-Case Instability (WCI). We evaluate 16 open-source general-purpose (GP) and medical LLMs within the same model families and parameter scales, using reformulated prompts derived from the DiagnosisQA and MedQA datasets. Our results demonstrate that robustness differences between domain-specific (DS) models are mixed and highly model-dependent, i.e., domain specialization does not consistently improve or reduce robustness to meaning-preserving prompt reformulations. Several DS models rank among the most robust (when compared with GP counterparts), and strong GP baselines remain competitive as well.",
+      "pdf_url": "https://arxiv.org/pdf/2605.30646v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.30646v1",
+      "published": "2026-05-28T23:03:43Z",
+      "updated": "2026-05-28T23:03:43Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "EHRBench: An Automated and Reliable EHR-based Benchmark for Clinical Decision Making with LLMs",
+      "authors": [
+        "Yuzhang Xie",
+        "Keqi Han",
+        "Yunpeng Xiao",
+        "Hejie Cui",
+        "Guanchen Wu",
+        "Ziyang Zhang",
+        "Kai Shu",
+        "Jiaying Lu",
+        "Xiao Hu",
+        "Carl Yang"
+      ],
+      "abstract": "Clinical decision-making (CDM) is central to real-world clinical workflows, where clinicians infer diagnoses, select treatments, or anticipate future health outcomes under incomplete evidence. LLMs are increasingly used to support these decisions due to strong language capabilities, broad biomedical knowledge, and efficiency, yet the reliability of LLMs on real-world clinical decision tasks remains insufficiently understood. To evaluate CDM models, especially LLM-based models, an ideal and practical medical decision benchmark should be constructed via an automated yet reliable pipeline to ensure both scale and quality. Moreover, the grounding of a CDM benchmark in real patient EHRs can better support evaluation on practical CDM tasks that require substantive biomedical knowledge and clinical inference. To fill the gaps, we introduce EHRBench, an automated and reliable EHR-grounded benchmark for evaluating LLM-based clinical decision-making at scale. To ensure scalability and reliability, EHRBench is constructed through an EHR-LLM-KB(knowledge-base) interaction pipeline. For efficiency, we use a specialized LLM to automatically convert encounter-level EHR trajectories into structured templates and deterministically instantiate the templates into QA items. In parallel, we apply systematic KB-based verification and enrichment to filter hallucinated or ambiguous relations and to improve reliability. Using this pipeline, we construct nearly 1M (960,067) QA items spanning three core inference-required clinical decision tasks: diagnosis, treatment, and prognosis. We benchmark more than 30 representative LLMs on EHRBench and provide detailed analyses of performance and robustness. The results show consistent capability trends across settings, further validating the reliability of EHRBench and highlighting actionable gaps toward clinically reliable LLM systems.",
+      "pdf_url": "https://arxiv.org/pdf/2605.30637v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.30637v1",
+      "published": "2026-05-28T22:38:26Z",
+      "updated": "2026-05-28T22:38:26Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "The Architecture of Errors: From Universal Impossibility to Patch-Local LLM Reliability",
+      "authors": [
+        "Mikhail L. Arbuzov",
+        "Lee Mosbacker",
+        "Sisong Bei",
+        "Ziwei Dong",
+        "Dmitri Kalaev",
+        "Alexey Shvets"
+      ],
+      "abstract": "Universal LLM reliability is not a finite-library problem: across all possible tasks, tools, schemas, knowledge sources, and evaluator expectations, new intervention-distinguishable failure modes can appear without bound, so no finite intervention dictionary can guarantee bounded residual error for every such mode. But deployed systems do not operate over the whole universe. They operate inside operationally bounded patches (legal review, medical RAG, code repair, customer-support agents, contract extraction) with recurring tasks, schemas, tools, and evaluator expectations. Within such patches, empirical evidence suggests failures are sparse, repetitive, and concentrated in a small recurring catalogue, so reliability becomes a local catalogue-discovery and intervention-coverage problem rather than an exponential token-length problem. We formalize this transition with two propositions and one corollary. Proposition 1 is the worst-case-mode-wise negative result: no finite intervention dictionary covers every distinguishable failure mode of an unbounded domain. Corollary 1 is the inverse-discovery implication: the logarithmic upper bound on mode discovery cannot accommodate linearly more distinct tail modes without exponentially more observed hard-failure events. Proposition 2 is the positive patch-local result: under log active-mode exposure and head-heavy coverage, a sufficient per-hard-decision intervention budget grows polylogarithmically in sequence length and becomes domain-constant once the patch catalogue saturates. The framework relocates rather than dissolves long-context difficulty: where the number of hard decisions itself grows with task length, reliability remains hard; the contribution is to identify the on-axis intervention rather than to make those regimes easy.",
+      "pdf_url": "https://arxiv.org/pdf/2605.30628v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.30628v1",
+      "published": "2026-05-28T22:27:08Z",
+      "updated": "2026-05-28T22:27:08Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "AMNESIA: A Large Scale Medical Unlearning Benchmark Suite with Disease-Informed Analysis",
+      "authors": [
+        "Saeedeh Davoudi",
+        "Reihaneh Iranmanesh",
+        "Ophir Frieder",
+        "Nazli Goharian"
+      ],
+      "abstract": "Medical knowledge is continuously evolving. This creates a need to update or selectively forget information encoded in already-trained medical LLMs. Machine unlearning aims to remove the influence of specific training data from a model without full retraining. Yet, existing unlearning benchmarks rely on synthetic or small-scale general data, leaving clinical unlearning understudied. We introduce AMNESIA, the first large-scale, open source benchmark for medical unlearning, with 70,560 question-answer pairs from 8,820 patient notes across 11 disease categories. AMNESIA includes both factual questions testing direct recall and reasoning questions testing clinical inference. We use it to evaluate four widely used unlearning methods at both random patient and disease-level, and introduce a new metric for detecting leakage of medical terminology. We show that unlearning individual patients erodes knowledge of others with the same condition, calling for methods that can better separate patients from shared clinical knowledge.",
+      "pdf_url": "https://arxiv.org/pdf/2605.30599v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.30599v1",
+      "published": "2026-05-28T21:46:46Z",
+      "updated": "2026-05-28T21:46:46Z",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Counterfactual Evaluation Reveals Hidden Capability Profiles in Clinical LLMs and Agents",
+      "authors": [
+        "Matt Turk"
+      ],
+      "abstract": "Two clinical AI systems can score nearly identically on coverage-based rubrics yet behave radically differently when their patient inputs change: one updates its recommendations to match the new clinical signal, while the other produces the same output regardless. We introduce the Causal Sensitivity Score (CSS), a pre-registered interventional metric that mutates oncology tumor-board cases along five clinically meaningful dimensions - biomarker flips, prior-treatment failures, biomarker removals, surgery-status changes, and stage perturbations - and scores whether each model updates its recommendations in the pre-registered correct direction using a {0, 0.5, 1.0} scale. Benchmarked against the Consensus Match Score (CMS), a coverage-based weighted recall metric, six frontier models from three labs evaluated in single-shot inference across 224 cases rank in nearly opposite orders: all six models change rank, the CMS-worst model becomes CSS-best, and one upper-mid CMS model ranks last on CSS. We further surface a universal safety blind spot: every frontier model fails on surgery-status interventions (at most 17.2% CSS on Family D), a finding CMS does not expose. The metric also transfers to tool-using agents: in a ReAct-style experiment, tool use improves CSS for five of six models (+2.5 to +20.3 percentage points), yet the lowest-CSS model retrieves the same chart sections and still fails to update its recommendations - revealing a structural responsiveness deficit visible only under counterfactual evaluation. Cross-judge replication and three-rater medical-professional validation confirm the aggregate findings. Interventional pre-registered metrics like CSS complement coverage-based evaluation for clinical AI agents: they capture responsiveness that coverage metrics miss and offer a candidate dense reward signal for future agentic RL systems.",
+      "pdf_url": "https://arxiv.org/pdf/2605.30590v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.30590v1",
+      "published": "2026-05-28T21:37:06Z",
+      "updated": "2026-05-28T21:37:06Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Generalistic or Specific Embeddings, Which is Better? An Empirical Study on Search for Clinical Coding in Non-English Languages",
+      "authors": [
+        "David Rey-Blanco",
+        "Roberto Cruz"
+      ],
+      "abstract": "Sentence-embedding models for semantic search are overwhelmingly developed and evaluated on English corpora. When applied to clinical retrieval in other languages -- particularly retrieval of ICD-10-CM / CIE-10 codes -- recall degrades in ways often masked by aggregate benchmarks. We study whether large generative language models can serve as data factories to close this gap. We build a two-stage retriever (bi-encoder followed by cross-encoder reranker), fine-tuned from a Spanish biomedical encoder (PlanTL-GOB-ES/bsc-bio-ehr-es) on Gemini-generated synthetic data covering English, Spanish, Catalan, Italian, Portuguese and French, and evaluate against BioBERT-ST and the un-tuned Spanish encoder. The bi-encoder alone matches BioBERT-ST on MRR (0.876 vs. 0.866) and overtakes it on R@3 (0.650 vs. 0.626) and R@5 (0.804 vs. 0.790) without English biomedical pretraining. Adding a cross-encoder reranker lifts aggregate R@5 to 0.822 and dominates on four of five languages (+0.017 Spanish, +0.033 Catalan, +0.018 French, +0.037 Portuguese) at the cost of a small English regression. The trade-off is clinically acceptable: Portuguese reaches R@5 = 0.829 vs. BioBERT-ST's 0.714. Contributions: an open recipe for building domain-specific medical retrievers from LLM-generated data; quantification of the learning gain (MRR 0.755 to 0.876, +15.9% with ~19,500 synthetic pairs); and a characterisation of where gains concentrate by language and rank.",
+      "pdf_url": "https://arxiv.org/pdf/2605.30529v1",
+      "arxiv_url": "https://arxiv.org/abs/2605.30529v1",
+      "published": "2026-05-28T20:06:43Z",
+      "updated": "2026-05-28T20:06:43Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
     {
       "title": "MedCase-Structured: A Text-to-FHIR Dataset for Benchmarking Diagnostic Reasoning in Clinically Realistic EHR Settings",
       "authors": [
@@ -121,183 +285,6 @@
       "categories": [
         "cs.AI",
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Learning study similarity to investigate heterogeneity in meta-analysis using LLMs and triplet loss",
-      "authors": [
-        "Kanella Panagiotopoulou",
-        "Theodoros Evrenoglou"
-      ],
-      "abstract": "Meta-analyses of observational studies often show substantial between-study heterogeneity, limiting the interpretability of pooled estimates. Meta-regression can be used to explore heterogeneity, but it is often underpowered to handle multiple effect modifiers. We propose a novel framework that integrates large language models (LLMs) with deep metric learning to infer study-level similarity prior to meta-analysis. Study-level clinical and methodological characteristics were processed by an LLM to generate study triplets (anchor, similar, dissimilar). These triplets were constructed by treating each study as an anchor and comparing it with pairs of other studies to identify, in each instance, the study most similar to the anchor. Then, the triplets were used into an embedding model trained with triplet loss; a deep learning approach that learns an embedding space where clinically and methodologically similar studies are clustered together. We apply our framework to a meta-analysis dataset of 58 observational studies comparing cognitive outcomes between preterm- and term-born children. Subsequently, we fit meta-analysis models within the identified study clusters and compare the results with those of the overall analysis. Results suggested three clusters two of which retained considerable between-study heterogeneity. The remaining cluster comprised the most homogeneous group of studies and exhibited a more extreme pooled effect estimate together with a narrower prediction interval compared with the overall analysis. This work presents a novel approach for exploring heterogeneity in meta-analysis by incorporating study characteristics prior to model fitting. By transforming study information into a similarity space, the framework identifies coherent subgroups and supports more precise inference in heterogeneous real-world evidence.",
-      "pdf_url": "https://arxiv.org/pdf/2605.29603v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.29603v1",
-      "published": "2026-05-28T08:40:47Z",
-      "updated": "2026-05-28T08:40:47Z",
-      "categories": [
-        "stat.ME"
-      ]
-    },
-    {
-      "title": "SURGENT: A Surgical Multi-Agent Assistance System Across the Perioperative Workflow",
-      "authors": [
-        "Dongsheng Shi",
-        "Yue Li",
-        "Xin Yi",
-        "Yongyi Cui",
-        "Huawei Feng",
-        "Linlin Wang"
-      ],
-      "abstract": "The intricate nature of modern surgical care necessitates intelligent systems that can synthesize extensive patient records, support collaborative decision-making, and provide transparent, auditable reasoning across the entire perioperative workflow. Although web-based Large Language Models (LLMs) possess advanced reasoning capabilities, they are ill-equipped for surgical applications due to critical limitations: input length constraints, incomplete memory management, and limited traceability. To address this issue, we present SURGENT, a surgical multi-agent assistance system that combines a Tree-of-Thought planner, multi-department collaboration agents, and retrieval-augmented reasoning with clinical guidelines and biomedical literature. SURGENT features a novel memory design that manages both long-term patient histories and short-term working summaries, enabling more complete, contextualized, and consistent reasoning. Experimental evaluations across five key perioperative tasks - case analysis, surgical plan simulation, safety monitoring, complication risk assessment, and rehabilitation guidance - show that SURGENT outperforms baseline LLMs and existing medical multi-agent frameworks, yielding recommendations more closely aligned with patient histories. Ablation studies further highlight the advantage of DeepSeek as a locally deployable backbone model, enabling privacy-preserving deployment without reliance on centralized services. These results position SURGENT as a practical and trustworthy advancement toward intelligent, equitable, and secure surgical assistance systems.",
-      "pdf_url": "https://arxiv.org/pdf/2605.29368v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.29368v1",
-      "published": "2026-05-28T05:12:41Z",
-      "updated": "2026-05-28T05:12:41Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Pocket-Dentist: On-Device Dental Image Understanding via Efficient Multimodal Large Language Models",
-      "authors": [
-        "Kai Bian",
-        "Xucheng Guo",
-        "Bin Chen",
-        "Lingyan Ruan",
-        "Yiran Shen",
-        "Ting Dang",
-        "Hong Jia"
-      ],
-      "abstract": "Evaluations of dental vision-language models remain fragmented across datasets, task definitions and metrics, and often ignore their computational cost. This limits their widespread deployment for dental screening outside specialist centres, where timely inference, limited hardware, and local handling of patient images are vital for practical, privacy-preserving clinical prescreening. Here we present Pocket-Dentist, an efficiency-aware benchmark for dental multimodal question answering that brings together three datasets spanning approximately 1,159 patients, five task types and seven metrics. Across typical 14 VLMs, our results reveals an interesting observation: compact VLMs (e.g., 2B-parameter models) outperform larger VLMs in accuracy while requiring substantially lower computational costs in dental image understanding. Deployed locally on an iPhone 17 Pro, our finetuned compact VLM Pocket-Dentist-2B processed each sample in 4.31 s, reducing latency by 4.9-fold and memory use by 2.3-fold compared with a 7B baseline.",
-      "pdf_url": "https://arxiv.org/pdf/2605.29299v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.29299v1",
-      "published": "2026-05-28T03:28:07Z",
-      "updated": "2026-05-28T03:28:07Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "SAMD: A Tool for Identifying False Data Injection Scenarios in AI/ML-enabled Medical Devices",
-      "authors": [
-        "Mohammadreza Hallajiyan",
-        "Xueren Ge",
-        "Athish Pranav Dharmalingam",
-        "Gargi Mitra",
-        "Shahrear Iqbal",
-        "Homa Alemzadeh",
-        "Karthik Pattabiraman"
-      ],
-      "abstract": "The growing integration of artificial intelligence (AI) and machine learning (ML) in medical systems requires effective measures to address emerging security risks. One such risk is that of adversaries introducing false data through vulnerable system components during inference, causing misdiagnosis and wrong treatments. These risks are challenging to anticipate and address in the design phase, as the system assembly partially occurs during actual use by end users. To address this concern, we introduce SAMD, an automated tool for performing System Theoretic Process Analysis for Security (STPA-Sec) on AI/ML-enabled medical devices during the design phase. SAMD models the medical system as a control structure, treating all system components as potential points for injecting false data into the ML engine. It leverages state-of-the-art vulnerability databases and Large Language Models (LLMs) to automate vulnerability discovery and generate a list of potential attack scenarios. We demonstrate SAMD's effectiveness through case studies on five FDA-cleared medical devices, showcasing its ability to identify vulnerable points and potential attack paths. We find that SAMD has 100% precision in identifying target device technologies in the case studies' documents, retrieves the known vulnerabilities linked to them (with 63.2% precision), and generates highly relevant attack scenarios on the ML model, including detailed steps that an adversary might take (with 95.3% accuracy, and the highest time taken being 191.64s).",
-      "pdf_url": "https://arxiv.org/pdf/2605.29210v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.29210v1",
-      "published": "2026-05-28T00:44:11Z",
-      "updated": "2026-05-28T00:44:11Z",
-      "categories": [
-        "cs.CR"
-      ]
-    },
-    {
-      "title": "SafeRx-Agent: A Knowledge-Grounded Multi-Agent Framework for Safe and Explainable Medication Recommendation",
-      "authors": [
-        "Xinyu Wang",
-        "Hanwei Wu",
-        "Zhenghan Tai",
-        "Sicheng Lyu",
-        "Qincheng Lu",
-        "Ziyu Zhao",
-        "Jijun Chi",
-        "Jingrui Tian",
-        "Xiao-Wen Chang",
-        "Ziyang Song"
-      ],
-      "abstract": "Medication recommendation predicts medications for patient visits, but existing methods still face two key challenges. At the model level, traditional drug recommendation methods only predict structured drug codes with limited evidence grounding, while LLM agents can use richer clinical context but may lack safety verification and traceability. At the task level, existing benchmarks often use broad medication categories, which ignore subgroup-level safety differences and can lead to risk overestimation. We introduce the first fine-grained medication recommendation setting based on fourth-level ATC code generation. We propose Safe Prescription Agent (SafeRx-Agent), a knowledge-grounded multi-agent framework that uses patient context, external clinical knowledge, and safety verification to recommend traceable medication sets. Experimental results on MIMIC-III and MIMIC-IV datasets show that SafeRx-Agent improves fine-grained medication prediction accuracy while controlling drug interactions, contraindications, and medication set size.",
-      "pdf_url": "https://arxiv.org/pdf/2605.29146v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.29146v1",
-      "published": "2026-05-27T22:15:48Z",
-      "updated": "2026-05-27T22:15:48Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Trends in AI and Human-AI Interaction in Clinical Trials -- A Hybrid Human-AI Exploration",
-      "authors": [
-        "Sandra Woolley",
-        "Tim Collins",
-        "Khalid Khattak",
-        "Illia Chernomorets",
-        "Ariane Arevalo",
-        "Chris Richardson"
-      ],
-      "abstract": "This paper examines records retrieved from the ClinicalTrials.gov registry to characterize temporal trends in AI terminology and the geographical distribution of AI trials. The work also reports on an exploratory hybrid human-AI approach to analyzing human-AI interaction trends in registered clinical trials. The hybrid workflow comprised a frontier generative AI model (GPT-5.5) and human review to screen and categorize records returned by an AI-focused search. The findings indicate a marked increase in AI-related trials over time, with recent growth in references to machine learning, deep learning, chatbots, GPTs, and large language models. Geographically, China and the United States accounted for the largest numbers of AI-related trials, with notable recent increases in several other countries including Italy, France, Spain, the UK and Turkey (T\u00fcrkiye). In a random sample of 100 records, human and AI classifiers showed good agreement in identifying studies not substantively using AI, but lower agreement in classifying human-AI interaction, particularly where health professional interaction was ambiguous or insufficiently described. Overall, the results suggest that hybrid human-AI screening of clinical trial records is potentially viable, but clearer trial reporting and more precise interaction definitions will benefit the process.",
-      "pdf_url": "https://arxiv.org/pdf/2605.29096v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.29096v1",
-      "published": "2026-05-27T20:56:36Z",
-      "updated": "2026-05-27T20:56:36Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Same Question, Different Source, Different Answer: Auditing Source-Dependence in Medical Multi-Source RAG",
-      "authors": [
-        "Yubo Li",
-        "Rema Padman",
-        "Ramayya Krishnan"
-      ],
-      "abstract": "A retrieval-augmented generation (RAG) system deployed over a multi-author institutional corpus can give a different answer to the same question depending on which source it retrieves -- a failure mode the dominant single-gold-answer paradigm cannot diagnose. We argue that source-dependence is a missing axis of NLP evaluation, and that auditing it means shifting the unit of evaluation from answer correctness to the inter-source relationship. We make this concrete in transplant patient education, where institutional sources demonstrably disagree, releasing three artefacts: TransplantQA, a benchmark of real patient questions, each answered by grounding generation in multiple institutional handbooks as candidate sources; HERO-QA, a hierarchical retrieval strategy that grounds and audits each answer; and a structured-output judge that scores inter-source relationships on a validated 5-label taxonomy. At scale, better retrieval reveals far more disagreement than prior estimates suggested -- understating its prevalence, not its intensity. The framework is domain-agnostic and transfers to legal and educational RAG: measuring source-dependence is a responsibility for deployed multi-source NLP generally.",
-      "pdf_url": "https://arxiv.org/pdf/2605.29084v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.29084v1",
-      "published": "2026-05-27T20:38:05Z",
-      "updated": "2026-05-27T20:38:05Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Hallucination Detection-Guided Preference Optimization for Clinical Summarization",
-      "authors": [
-        "Shamanth Kuthpadi Seethakantha",
-        "Dung Ngoc Thai",
-        "Vara Prasad Gudi",
-        "Simran Tiwari",
-        "Rami Matar",
-        "Avijit Mitra",
-        "Wenlong Zhao",
-        "Wael Salloum",
-        "Andrew McCallum"
-      ],
-      "abstract": "Large language models (LLMs) have shown promise on summarization tasks, but they often produce hallucinations, which are unsupported or incorrect statements that limit their reliability in specialized healthcare applications. We introduce \\itermodelfull (\\itermodel), an inference-time method that leverages hallucination detectors to guide iterative summary revisions toward factual corrections. Building on this, we propose \\itermodel for Preference Learning (\\model), which converts detector-guided refinement trajectories into preference pairs for model finetuning. Extensive experiments show that our methods substantially reduce hallucinations for Llama and Gemma models in summarizing real-world clinical notes from \\MimicIV. For example, \\itermodel reduces 24\\% and \\model reduces 48\\% hallucinations in Llama-3.1-8B-Instruct. Importantly, both methods preserve summary fluency, coherence, and relevance according to human expert and LLM-Jury evaluations. Together, these results demonstrate that detection-informed refinement and preference learning offer an automated solution for improving factual faithfulness in clinical summarization.",
-      "pdf_url": "https://arxiv.org/pdf/2605.28910v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.28910v1",
-      "published": "2026-05-27T17:24:26Z",
-      "updated": "2026-05-27T17:24:26Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Reverse Probing: Supervised Token-level Uncertainty Quantification for Large Language Models in Clinical Text",
-      "authors": [
-        "Bushi Xiao",
-        "Sarvesh Soni",
-        "Daisy Zhe Wang"
-      ],
-      "abstract": "As large language models are increasingly deployed for clinical text, ensuring they can reliably signal their own uncertainty becomes critical. Most existing uncertainty quantification (UQ) methods are designed for open-domain generation and cannot localize uncertainty at the token or span level in long clinical text. We propose Reverse Probing, the first UQ framework specialized for clinical summarization, which estimates token-level uncertainty directly from pre-existing labeled summaries. Rather than sampling new outputs, Reverse Probing treats the text as a probe into the model's internal state, extracting uncertainty signals from four categories of internal activations. We evaluate on two expert-annotated clinical datasets and outperform eight adapted baselines on all metrics, achieving up to 4 times higher AUPRC while reducing inference time and computational costs. Feature analysis reveals that delta energy and neighborhood context are the most consistent predictors across all models. This study offers interpretable insights into how models internally respond to unsupported clinical content.",
-      "pdf_url": "https://arxiv.org/pdf/2605.28740v1",
-      "arxiv_url": "https://arxiv.org/abs/2605.28740v1",
-      "published": "2026-05-27T17:01:04Z",
-      "updated": "2026-05-27T17:01:04Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]

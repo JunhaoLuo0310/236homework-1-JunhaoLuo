@@ -1,8 +1,156 @@
 {
-  "generated_at_utc": "2026-06-03T04:49:16.910979Z",
+  "generated_at_utc": "2026-06-04T04:43:30.949768Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Evaluating Large Language Models in Dynamic Clinical Decision-Making with Standardized Patient Cases",
+      "authors": [
+        "Cheng Liang",
+        "Pengcheng Qiu",
+        "Ya Zhang",
+        "Yanfeng Wang",
+        "Chaoyi Wu",
+        "Weidi Xie"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly proposed as clinical agents, yet static, single-turn benchmarks cannot capture how a model dynamically delivers care across an encounter: gathering information, planning treatment, and adapting longitudinal management across successive patient states. Medical education has long addressed an analogous challenge through standardized patients (SPs): trained actors who consistently portray clinical cases, enabling realistic practice and objective, scripted assessment. Here we introduce MedSP1000, an SP-derived interactive benchmark for clinical-agent evaluation, including 1,638 SP cases with 24,602 trajectory-level peer-reviewed rubrics. MedSP1000 converts peer-reviewed SP teaching cases into executable scenarios with defined SP case scripts, clinical environment contexts, and human-validated structured rubric. In each simulation evaluation run, a clinical agent interacts in closed loop with a patient agent and an environment controller, and its behaviour is scored throughout the encounter against expert criteria specified in the original materials. Applying MedSP1000 to a range of general-purpose and medically specialized LLMs, we find that performance on static benchmarks does not reliably translate to such educational scenarios. The best-performing model, GPT-5.5, completes only 60.4% of expert-defined rubric items, whereas the strongest medically specialized model reaches 40.0%; increasing test-time compute produces no measurable gain. These results suggest that current LLMs, including agentic systems tuned for medicine, are not yet reliable enough to be safely integrated into actual clinical practice. More broadly, MedSP1000 shows how process-level, SP-style evaluation can reveal clinically relevant failure modes that single-turn benchmarks miss.",
+      "pdf_url": "https://arxiv.org/pdf/2606.05112v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.05112v1",
+      "published": "2026-06-03T17:17:16Z",
+      "updated": "2026-06-03T17:17:16Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Clinical Assistant for Remote Engagement Link (CARE-link): A Web-Based Electronic Health Records Software for Managing Diabetes",
+      "authors": [
+        "Prince Ebenezer Adjei",
+        "Joshua Teye Tettey",
+        "Toufiq Musah",
+        "Audrey Agbeve",
+        "John Amuasi"
+      ],
+      "abstract": "CARE-link is an open-source, web-based clinical support platform designed to improve the management of gestational diabetes by linking clinicians and patients through an LLM-mediated workflow. The system aggregates patient-generated data outside the hospital, summarizes relevant clinical information, and delivers context-aware decision support to clinicians. For patients, CARE-link provides clear explanations of management plans and delivers timely lifestyle guidance through a WhatsApp interface. The integrated dual-facing design aims to promote continuous monitoring, support individualized care, and reduce the burden of in-clinic follow-ups. Built with a modular architecture, the platform can be adapted to other chronic conditions requiring longitudinal tracking and behavioral support. CARE-link has the potential to enhance clinical oversight, promote patient compliance, and strengthen continuity of care particularly in resource-constrained settings.",
+      "pdf_url": "https://arxiv.org/pdf/2606.04952v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.04952v1",
+      "published": "2026-06-03T14:39:29Z",
+      "updated": "2026-06-03T14:39:29Z",
+      "categories": [
+        "cs.HC",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "BreastGPT: A Multimodal Large Language Model for the Full Spectrum of Breast Cancer Clinical Routine",
+      "authors": [
+        "Yang Liu",
+        "Jiajin Zhang",
+        "Danyang Tu",
+        "Yaojun Hu",
+        "Jiao Qu",
+        "Jiuyu Zhang",
+        "Yu Shi",
+        "Wei Fang",
+        "Shi Gu",
+        "Ling Zhang",
+        "Yingda Xia"
+      ],
+      "abstract": "Breast cancer remains a leading cause of cancer-related mortality among women. Its clinical management requires multimodal reasoning across a clinical workflow that spans \\textit{screening}, \\textit{diagnosis} and \\textit{treatment planning}, where each stage involves distinct imaging modalities, task objectives, and reasoning patterns. However, constrained by data scarcity and model versatility, existing medical MLLMs are typically evaluated on isolated modalities or narrow task families, limiting their ability to support workflow-level clinical reasoning. In this work, we first introduce \\textbf{BreastStage}, a workflow-aligned breast imaging instruction corpus comprising 1.86M instruction-following pairs curated from 17 sub-datasets across 5 imaging modalities and 136 task templates. Its held-out split, \\textbf{BreastStage-Bench}, provides a comprehensive benchmark for evaluating multimodal reasoning across the breast cancer care continuum. Building on this corpus, we propose \\textbf{BreastGPT}, a unified MLLM equipped with a dual-branch visual encoder and concept-preserving token compression to bridge the scale gap between standard radiology and gigapixel pathology. On BreastStage-Bench, BreastGPT achieves 75.66\\% closed-ended accuracy and 89.92\\% open-ended score, outperforming both general-purpose and medical-specific MLLMs across clinical stages and task formats. These results suggest that workflow-aligned data and cross-scale visual modeling are critical for clinically grounded medical MLLMs. All data, code, and model checkpoints are released at https://yangyy-liu.github.io/BreastGPT.io.",
+      "pdf_url": "https://arxiv.org/pdf/2606.04911v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.04911v1",
+      "published": "2026-06-03T14:06:52Z",
+      "updated": "2026-06-03T14:06:52Z",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "VentAgent: When LLMs Learn to Breathe -- Multi-Objective Arbitration for ARDS Ventilation",
+      "authors": [
+        "Teqi Hao",
+        "Yuxuan Fu",
+        "Xiaoyu Tan",
+        "Shaojie Shi",
+        "Bohao Lv",
+        "Yinghui Xu",
+        "Xihe Qiu"
+      ],
+      "abstract": "Mechanical ventilation for Acute Respiratory Distress Syndrome (ARDS) requires balancing competing physiological goals, including oxygenation, lung protection, and acid-base homeostasis. However, current data-driven methods, especially those imitating retrospective Electronic Health Records (EHR), often suffer from imitation bias. They may capture superficial correlations from inconsistent clinical demonstrations, such as associating passive ventilator settings with survival because such settings are common in stable patients, and thus fail to generalize to volatile or out-of-distribution phenotypes. Standard Reinforcement Learning (RL) methods also struggle with the adversarial trade-offs of critical care and often produce opaque policies with limited clinical interpretability. To address these limitations, we introduce VentAgent, a hierarchical framework in which Large Language Models (LLMs) act as transparent arbitrators for mechanical ventilation. We reformulate ventilation control as a dynamic Multi-Objective Arbitration process rather than single-objective optimization. VentAgent decomposes decision-making into three interpretable stages: Perception, Planning, and Orchestration. By leveraging the semantic reasoning capabilities of LLMs, it synthesizes strategies from heterogeneous experts and resolves conflicting clinical priorities through an explicit coordination mechanism. Evaluations on a high-fidelity physiological simulator show that VentAgent outperforms state-of-the-art RL and classical control baselines. Moreover, it converts control decisions into human-readable reasoning chains, offering a safer, more interpretable, and adaptable paradigm for critical care automation.",
+      "pdf_url": "https://arxiv.org/pdf/2606.04632v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.04632v1",
+      "published": "2026-06-03T09:03:31Z",
+      "updated": "2026-06-03T09:03:31Z",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Literature-Guided Minimax Optimization of Virtual Epilepsy Neurostimulation",
+      "authors": [
+        "Cathy Liu"
+      ],
+      "abstract": "Computational models of epilepsy promise patient-specific treatment design, but most optimization workflows still search for parameters that perform well on average. In neuromodulation, this is a weak target: a protocol that improves the mean response can still fail in the patient whose network is least tolerant to stimulation. We present a literature-guided minimax pipeline that couples PubMed-scale hypothesis extraction, The Virtual Brain (TVB) Epileptor simulations, and large-language-model-guided black-box optimization. The optimizer proposes either intrinsic model-control parameters or clinically interpretable external-stimulation protocols; TVB evaluates each proposal across sampled virtual patients; and the objective maximizes worst-case reward, defined as the negative variance of simulated seizure activity. In the intrinsic model-control experiment, the best archived parameter set improved worst-case reward from -0.5285 to -0.3182, a 39.8% gain over baseline. The clinical-style external-stimulation search produced a much smaller worst-case improvement (1.7%), and a 20-patient virtual cohort showed no aggregate benefit (p=0.9019), despite a 55% responder rate and a positive temporal-lobe subgroup signal. The study should be read as an in silico proof of concept for robust, literature-aware neurostimulation design, not as clinical evidence.",
+      "pdf_url": "https://arxiv.org/pdf/2606.04339v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.04339v1",
+      "published": "2026-06-03T01:40:34Z",
+      "updated": "2026-06-03T01:40:34Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Can I Take Another Dose? Evaluating LLM Decision-Making Under Temporal Uncertainty in OTC Dosing QA",
+      "authors": [
+        "Maroof Kousar",
+        "Yibo Hu"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly used for everyday health questions, including whether a user can safely take another dose of an over-the-counter (OTC) medication. Yet this common safety-relevant setting remains underexplored in existing medical QA evaluations, where correct answers require tracking dose timing, computing rolling 24-hour intake, following product-label constraints, and handling incomplete medication histories. We introduce DOSEBENCH, a focused benchmark of 81 curated OTC dosing scenarios focused on adult acetaminophen and ibuprofen use, with manually annotated gold references. We evaluate four LLMs across repeated runs using metrics for decision correctness, consistency, explanation verifiability, failure types, and confidence-related signals, resulting in 1,620 model responses. Our results show that models frequently struggle with rolling-window reasoning and ambiguity-sensitive cases and that stable or confident-looking responses can still violate dosing constraints. These findings suggest that OTC dosing QA provides a narrow yet practical testbed for evaluating temporal reasoning, constraint following, and safety-relevant uncertainty handling in medical QA.",
+      "pdf_url": "https://arxiv.org/pdf/2606.04262v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.04262v1",
+      "published": "2026-06-02T22:30:15Z",
+      "updated": "2026-06-02T22:30:15Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "When Retrieval Doesn't Help: A Large-Scale Study of Biomedical RAG",
+      "authors": [
+        "Erfan Nourbakhsh",
+        "Rocky Slavin",
+        "Ke Yang",
+        "Anthony Rios"
+      ],
+      "abstract": "Medical question answering is a high-stakes setting where factual errors can have serious consequences. Retrieval-augmented generation (RAG) is widely viewed as a promising solution, and prior work has reported substantial gains for large medical QA models. We revisit this assumption across a broad range of open-weight instruction-tuned models spanning 7B to 72B parameters. Across five models, ten biomedical QA datasets, four retrieval methods, and four retrieval corpora, we find that retrieval yields only small and inconsistent improvements over a no-retrieval baseline, typically within 1-2 points. In contrast, the choice of backbone model has a much larger effect than the choice of retriever or corpus, and expert and layman retrieval sources perform similarly in most settings. These results suggest that the main bottleneck is not retrieval quality alone, but the model's limited ability to use retrieved evidence effectively.",
+      "pdf_url": "https://arxiv.org/pdf/2606.04127v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.04127v1",
+      "published": "2026-06-02T18:34:54Z",
+      "updated": "2026-06-02T18:34:54Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Need to Know: Contextual-Integrity-Grounded Query Rewriting for Privacy-Conscious LLM Delegation",
+      "authors": [
+        "Xinyue Huang",
+        "Xiaochun Cao",
+        "Wenyuan Yang"
+      ],
+      "abstract": "As LLMs become increasingly woven into everyday workflows, user queries sent to cloud hosted LLMs routinely mix task-essential content with task non-essential sensitive disclosures, yet type based PII redaction is context agnostic and may raise two issues: over disclosing untyped sensitive context and over removing answer bearing spans. We recast privacy preserving query rewriting under Contextual Integrity: a span should be forwarded only if it is necessary for the task. We introduce DelegateCI-Bench, the first task based Contextual Integrity benchmark for privacy-conscious delegation, comprising 3,167 samples that combine high quality synthetic data spanning 11 tasks and 20 task types, WildChat based real user queries, and a medical challenge set with dense sensitive information. Building on this benchmark, we propose a CI-guided reinforcement learning framework that converts essential and non-essential sensitive spans into verifiable optimization signals, and train a query rewriter to preserve task critical information while suppressing unnecessary sensitive disclosure. Experiments show that our learned rewriter achieves the best privacy-utility tradeoff, achieving up to +10.1 average utility over on-device baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2606.04067v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.04067v1",
+      "published": "2026-06-02T14:28:28Z",
+      "updated": "2026-06-02T14:28:28Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Gender-Dependent Diagnostic Substitution in LLM Medical Triage: Same Symptoms, Unequal Urgency",
       "authors": [
@@ -125,180 +273,6 @@
       "updated": "2026-06-02T05:09:18Z",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "DMT-CBT: Longitudinal Therapeutic State Modeling for CBT Counseling",
-      "authors": [
-        "Chang Liu",
-        "Shuyi Zhang",
-        "Changsheng Ma",
-        "Yongfeng Tao",
-        "Minqiang Yang",
-        "Bin Hu"
-      ],
-      "abstract": "Large language models (LLMs) have shown growing potential for Cognitive Behavioral Therapy (CBT) counseling. However, most existing approaches still formulate counseling as a local response generation problem, focusing on empathetic replies within short, text-only, or single-session interactions. We argue that this formulation fundamentally mismatches the nature of real psychotherapy. In clinical CBT, therapy is a longitudinal process in which therapists continuously infer, update, and intervene on evolving therapeutic states across sessions. Realistic CBT further involves multimodal inference and delayed cross-session intervention effects, requiring models to capture longitudinal therapeutic state evolution under partial observability. We propose DMT-CBT, a framework for Dynamic Modeling of evolving Therapeutic states in CBT counseling. DMT-CBT maintains structured therapeutic states across sessions while incorporating multimodal behavioral grounding and tool-augmented intervention to support adaptive therapeutic reasoning. Based on this framework, we construct DMTCorpus, a synthetic multi-session multimodal CBT counseling dataset featuring evolving therapeutic states, image-grounded client behaviors, and cross-session intervention continuity. Experimental results show that DMT-CBT improves counseling fidelity and therapeutic alliance, produces more favorable longitudinal affective trajectories, and preserves therapeutic states more faithfully than post-hoc extraction approaches.",
-      "pdf_url": "https://arxiv.org/pdf/2606.03132v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.03132v1",
-      "published": "2026-06-02T04:18:25Z",
-      "updated": "2026-06-02T04:18:25Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Automated Report-Derived Oncology VQA Benchmark for Evaluating Vision-Language Models on 3D Medical Imaging",
-      "authors": [
-        "Bo Liu",
-        "Hanxue Gu",
-        "Xiangru Li",
-        "Zheren Zhu",
-        "Jacob Ellison",
-        "Kang Wang",
-        "Janine M. Lupo",
-        "Yang Yang",
-        "Hui Lin"
-      ],
-      "abstract": "Evaluating vision-language models (VLMs) on medical images requires benchmarks that are clinically grounded, scalable, and controlled for evaluation confounds. Existing public benchmarks are limited in scale, manually annotated, or potentially leaked into VLM pretraining corpora. We present an automated agent-driven pipeline that generates multiple-choice VQA datasets directly from paired private radiology reports and 3D oncology imaging, producing two complementary question types: RADS-style questions deterministically derived from clinician-defined reporting schemas, and radiology report-derived questions generated by an LLM from radiologist findings and verified against the source report. Applied to four in-house cancer cohorts, the pipeline yields an instance-contamination-controlled benchmark without per-question human annotation. Zero-shot evaluation of six VLMs reveals no dominant model and substantial headroom across all cells. A blind ablation reveals that visual reliance is highly dataset-specific: liver Report-derived questions genuinely require the image, while Lung CT is essentially solvable without it - the leading closed model exceeds its sighted accuracy on Lung CT when blinded - indicating that even private clinical data does not guarantee a contamination-controlled read of visual capability. The pipeline is released as an open agent skill for in-house redeployment.",
-      "pdf_url": "https://arxiv.org/pdf/2606.02809v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.02809v1",
-      "published": "2026-06-01T19:27:42Z",
-      "updated": "2026-06-01T19:27:42Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "ChatHealthAI: Aligning Electronic Health Record Representations with Large Language Models for Grounded Clinical Reasoning",
-      "authors": [
-        "Bo-Hong Wang",
-        "Baicheng Peng",
-        "Ruilin Wang",
-        "Jun Bai",
-        "Ziyang Song",
-        "Yue Li"
-      ],
-      "abstract": "Large language models (LLMs) exhibit strong natural-language reasoning abilities for clinical decision support, but struggle to effectively model structured longitudinal electronic health records (EHRs). In contrast, EHR foundation models can learn predictive patient representations, yet lack interpretable language-based reasoning. To bridge this gap, we propose ChatHealthAI, a multimodal reasoning framework that aligns structured EHR representations from a pretrained EHR foundation model with the semantic space of a frozen LLM through a task-aware resampler. By integrating longitudinal patient representations with refined clinical event descriptions, ChatHealthAI enables clinically grounded natural-language reasoning while maintaining accurate patient prediction. We evaluated ChatHealthAI on three clinical predictive tasks from the EHRSHOT benchmark. Results show that ChatHealthAI improves reasoning quality and interpretability while preserving competitive predictive performance. These findings highlight the potential of integrating EHR foundation models with pretrained LLMs for interpretable clinical prediction.",
-      "pdf_url": "https://arxiv.org/pdf/2606.02802v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.02802v1",
-      "published": "2026-06-01T19:21:18Z",
-      "updated": "2026-06-01T19:21:18Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Topics as Proxies for Sociodemographics: How Conversational Context Affects LLM Answers",
-      "authors": [
-        "Vera Neplenbroek",
-        "Gabriele Sarti",
-        "Arianna Bisazza",
-        "Raquel Fern\u00e1ndez"
-      ],
-      "abstract": "When large language models (LLMs) are used in high-stakes scenarios, such as legal, medical and financial advice, even a single conversation history is enough to drive differences in outcomes between users. Prior work has demonstrated that this results in outcome disparities between sociodemographic groups, with some groups receiving more advantageous outcomes than others. In this work, we demonstrate that LLMs actually struggle to infer user sociodemographics from a single conversation history and that although there are disparities between sociodemographic groups, they are minimal in magnitude. To investigate what the main driver of these disparities is, we compare user sociodemographics to a range of (psycho)linguistic features of conversations, including conversation topic, emotions, and readability. We find that conversation topics are most predictive of LLM-generated advice within a conversational context, which, to some extent, function as proxies for sociodemographic groups and often affect advice in unpredictable ways. This is cause for concern and highlights the need for future research to better understand and, if needed, mitigate the effect of conversational context on LLM outputs in high-stakes scenarios.",
-      "pdf_url": "https://arxiv.org/pdf/2606.02776v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.02776v1",
-      "published": "2026-06-01T18:38:41Z",
-      "updated": "2026-06-01T18:38:41Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "ClinEnv: An Interactive Multi-Stage Long Horizon EHR Environment for Agents",
-      "authors": [
-        "Yuxing Lu",
-        "Yushuhong Lin",
-        "Wenqi Shi",
-        "J. Ben Tamo",
-        "Xukai Zhao",
-        "Jinzhuo Wang",
-        "May Dongmei Wang"
-      ],
-      "abstract": "Clinical practice is not the selection of an answer from enumerated options: a physician gathers heterogeneous information incrementally and commits to sequential, irreversible decisions under uncertainty. Static benchmarks cannot probe and existing interactive medical benchmarks each compromise on at least one of them. We present ClinEnv, an interactive benchmark that evaluates LLMs as attending physicians over real inpatient admissions under a paradigm we term Longitudinal Inpatient Simulation. Each case is automatically constructed into an ordered sequence of decision stages; at every stage the model must actively query four specialized agents before committing to medications, procedures, and diagnoses. ClinEnv scores both what the model decides, through deterministic ontology-grounded matching, and how it gathers information. Across seven models, the strongest reaches only 0.31 decision F1, and outcome quality is sharply decoupled from process quality. Difficulty concentrates in management decisions and later stages, where models recover discharge diagnoses far more reliably than management actions (0.51 vs. 0.17 F1) and continue to issue redundant queries as cases progress. ClinEnv makes this information-acquisition gap, invisible to outcome-only evaluation, directly measurable.",
-      "pdf_url": "https://arxiv.org/pdf/2606.02568v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.02568v1",
-      "published": "2026-06-01T17:56:26Z",
-      "updated": "2026-06-01T17:56:26Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.ET",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "When Rating Scales Fall Short: LLM-Assisted Discovery of ADHD Signals in Turkish Teacher Narratives",
-      "authors": [
-        "Baris Karacan",
-        "Irem Aktar Songur",
-        "Ahmet Ozaslan",
-        "Elvan Iseri"
-      ],
-      "abstract": "Attention Deficit Hyperactivity Disorder (ADHD) is one of the most common neurodevelopmental disorders in childhood, and its diagnosis relies on assessments combining clinician judgment with standardized rating scales and reports from parents and teachers. While structured instruments such as the Conners' Teacher Rating Scale-Revised Short Form (CTRS-R:S) quantify ADHD-related behaviors, teachers also provide open-ended narratives that may contain complementary signals not captured by structured assessments. However, it remains unclear to what extent teacher narratives encode signals overlooked by rating scales. In this study, we analyze de-identified Turkish teacher evaluation forms collected during clinical ADHD assessments, including both CTRS-R:S scores and open-ended teacher narratives. We compare predictive signals from structured scores and narrative text and identify cases where structured assessments fail to clearly distinguish ADHD from non-ADHD students while narrative-based models capture distinct behavioral patterns. Notably, these cases show minimal overlap with those missed by the narrative model, suggesting that structured and narrative information encode complementary signals. To interpret these differences, we apply a large language model (LLM)-assisted theme discovery pipeline that reveals distinct attention, behavioral, and family-related patterns, highlighting the potential of natural language processing (NLP) to uncover clinically relevant signals from teacher narratives and to complement traditional ADHD screening tools.",
-      "pdf_url": "https://arxiv.org/pdf/2606.02509v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.02509v1",
-      "published": "2026-06-01T17:22:38Z",
-      "updated": "2026-06-01T17:22:38Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Towards Multidisciplinary Summarization of Hospital Stays: Efficient Sentence-Level Clinical Provenance Categorization",
-      "authors": [
-        "Baris Karacan",
-        "Vaibhav Bhargava",
-        "Barbara Di Eugenio",
-        "Natalie Parde",
-        "Mary Khetani",
-        "Yu-Shan Tseng",
-        "Vanessa Barbosa",
-        "Julie Vignato",
-        "Lindsey Knake",
-        "Rajashree Dahal",
-        "Emily Spellman",
-        "Danielle Hitzel",
-        "Janine Petitgout",
-        "Kristi Haughey",
-        "Amanda Karstens",
-        "Brianna Clarahan",
-        "Rachel Dawson",
-        "Lauren Boyd",
-        "Mackenzie Weis",
-        "Angie Tipton",
-        "Jaewon Bae",
-        "Catherine K. Craven",
-        "Karen Dunn Lopez",
-        "Andrew D. Boyd"
-      ],
-      "abstract": "Effective \"all-team\" summarization in high-complexity settings like the Neonatal Intensive Care Unit (NICU) requires aggregating insights from diverse disciplines (physicians, nurses, therapists) spread across hundreds of clinical free-text notes. Simply pooling heterogeneous text often leads to incoherent outputs. Structured summarization therefore first requires accurate categorization of sentence-level provenance across multi-source notes. This pilot study introduces a clinical provenance categorization pipeline using supervised fine-tuning (SFT) of large language models (LLMs). We adapted two Llama-3 models (8B and 70B) to MedSecId, a corpus of 2,002 MIMIC-III (Adult ICU) notes annotated with clinical provenance headers, achieving in-domain Macro F1 scores above 92% for both models. To evaluate cross-domain generalization, we assessed model capacity (8B vs. 70B) and quantization on a gold-standard dataset of 227 sentence-level spans derived from three multi-disciplinary NICU summaries. Experimental results demonstrate a scale-dependent transfer effect: while SFT produced only marginal changes for the 8B model, it substantially improved the 70B model, increasing Macro F1 by 7%. Notably, the quantized fine-tuned 70B model outperformed its full-precision baseline while substantially reducing computational requirements. These findings suggest that sufficient model capacity is critical for preserving semantic flexibility during cross-domain clinical transfer and that efficient quantized adaptation can enable structured provenance modeling for downstream summarization.",
-      "pdf_url": "https://arxiv.org/pdf/2606.02487v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.02487v1",
-      "published": "2026-06-01T16:57:51Z",
-      "updated": "2026-06-01T16:57:51Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Food Noise & False Safety: A Systematic Evaluation of How LLMs Fail to Adapt to Eating Disorder Queries with Clinician Feedback",
-      "authors": [
-        "Giulia Pucci",
-        "Emily Hemendinger",
-        "Ruizhe Li",
-        "Gavin Abercrombie",
-        "Tanvi Dinkar",
-        "Arabella Sinclair"
-      ],
-      "abstract": "Recent evidence shows that people with eating disorders (EDs) are increasingly seeking guidance, advice, and emotional support from Large Language Model (LLM)-based chat systems. Although these systems are not designed to provide clinical advice, their perceived expertise, neutrality and accessibility make them a frequent, albeit risky, source of support. This paper investigates potential patterns of interaction between users with EDs and LLMs, focusing on the potential harms arising from models that uncritically adapt to, and facilitate unsafe or self-harming user requests. We find, in consultation with clinical ED experts, that specific linguistic cues in prompts increase the likelihood of unsafe responses and, through systematically varying the degree of potential risk present in the user prompt, report the extent to which LLMs uncritically adapt to problematic, and potentially dangerous user inputs.",
-      "pdf_url": "https://arxiv.org/pdf/2606.02444v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.02444v1",
-      "published": "2026-06-01T16:14:18Z",
-      "updated": "2026-06-01T16:14:18Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
       ]
     }
   ]

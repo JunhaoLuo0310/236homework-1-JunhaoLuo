@@ -1,8 +1,61 @@
 {
-  "generated_at_utc": "2026-06-09T04:03:46.732970Z",
+  "generated_at_utc": "2026-06-10T04:15:26.105150Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Recalling Too Well: Sycophancy Evaluation and Mitigation in Memory-Augmented Models",
+      "authors": [
+        "Shelly Bensal",
+        "Axel Magnuson",
+        "Aparna Balagopalan",
+        "Daniel M. Bikel"
+      ],
+      "abstract": "Persistent memory systems promise to make LLMs more helpful by storing user beliefs over time. We show they also make models less correct by systematically amplifying sycophancy, wherein models prioritize agreement with users over accuracy. We conduct the first systematic evaluation of this effect, introducing MIST: a benchmark of synthetically generated multi-turn conversations where users express plausible misconceptions in scientific, medical, and moral reasoning domains. Testing across three state-of-the-art memory systems and five model families reveals that memory amplifies sycophantic behavior across all conditions, with up to 25x higher sycophancy rates than in-context baselines. Error analyses suggest memory extraction as the primary culprit: lossy compression into discrete snippets encodes user misconceptions while discarding corrective context. Based on these results, we propose two lightweight mitigations that substantially reduce sycophancy while matching or exceeding memory systems at factual recall.",
+      "pdf_url": "https://arxiv.org/pdf/2606.10949v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.10949v1",
+      "published": "2026-06-09T14:53:32Z",
+      "updated": "2026-06-09T14:53:32Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Dep-LLM: Training-Free Depression Diagnosis via Evidence-Guided Structured Multi-factor with Reliable LLM Reasoning",
+      "authors": [
+        "Yiqing Lyu",
+        "Xianbing Zhao",
+        "Buzhou Tang",
+        "Ronghuan Jiang"
+      ],
+      "abstract": "Automatic Depression Detection (ADD) from clinical interviews is a pivotal task in computational mental health, yet it remains challenging due to two critical obstacles: 1) difficulty in modeling complex but sparsely distributed depression clues within lengthy, multi-topic clinical interviews, leading to superficial and unreliable reasoning; 2) scarcity of labeled data due to clinical privacy, together with high cost of training and fine-tuning, limiting the deployment of supervised ADD systems. To jointly address these challenges, we propose Dep-LLM, a training-free framework that mirrors the step-by-step reasoning of clinical psychiatrists and operates entirely on frozen off-the-shelf foundation LLMs. Dep-LLM comprises three stages. First, a Chain-of-Thought (CoT) Depression Multi-factor Analysis module structurally decomposes the long dialogue into five clinically aligned themes and produces evidence-grounded rationales, effectively handling long-context dependencies. Second, we introduce Confidence Analysis and Modulation module that quantifies the epistemic reliability from token-level entropy of each rationale and applies an intra-label and inter-theme modulation that amplifies trustworthy signals while suppressing uncertain ones without extra training. Third, a Collaborative Multi-factor Prediction module dynamically integrates multi-factor signals weighted by confidence into the final diagnosis. Extensive experiments on the DAIC-WOZ and E-DAIC datasets demonstrate the effectiveness and generalizability of Dep-LLM: it surpasses zero-shot baseline on nearly all 21 foundation LLMs across 9 metrics such as accuracy, macro F1 and weighted-average F1, and further outperforms state-of-the-art supervised domain-specific LLMs as well as the latest closed-source commercial LLMs, while requiring no extra training.",
+      "pdf_url": "https://arxiv.org/pdf/2606.10796v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.10796v1",
+      "published": "2026-06-09T12:44:12Z",
+      "updated": "2026-06-09T12:44:12Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "MetaPlate: Counterfactual-Guided RAG-LLM Tool for Personalized Food Recommendation and Hyperglycemia Prevention",
+      "authors": [
+        "Asiful Arefeen",
+        "Carol Johnston",
+        "Hassan Ghasemzadeh"
+      ],
+      "abstract": "Postprandial hyperglycemia is a key risk factor for metabolic disorders; however, existing dietary guidance is often static, impractical, and insufficiently personalized, providing recommendations that are difficult to follow or not impactful. While recent advances leverage continuous glucose monitoring (CGM) and machine learning to predict glycemic responses, these approaches are largely predictive and lack actionable guidance. Moreover, recommendation systems are often misaligned with user goals and require extensive input. We present MetaPlate, a counterfactual explanation (CF) guided, context-aware decision-support framework that generates personalized meal recommendations to mitigate postprandial glucose excursions in healthy adults. MetaPlate integrates multimodal data, including CGM readings, wearable-derived physiological signals, and user-provided meal inputs from $25$ individuals to model pre-meal context. A machine learning model predicts glucose response, while a CF optimization module adjusts meal composition modifying macronutrient amounts to maintain glucose levels within a target range ($\\leq 140$ mg/dL). An LLM-based retrieval-augmented generation (RAG) layer enhances interpretability by producing human-readable recommendations using constrained search of the USDA food database. We evaluate MetaPlate via a structured expert-in-the-loop assessment with registered dietitians (RDs), comparing performance before and after prompt refinement. Results show improvements in meal realism, portion suitability, and recommendation likelihood, with expert feedback indicating a shift from clinically implausible outputs to actionable, contextually appropriate recommendations. Our findings emphasize the importance of domain knowledge and structured constraints in LLM-driven systems and highlight the potential of MetaPlate as a real-time personalized dietary decision-support tool.",
+      "pdf_url": "https://arxiv.org/pdf/2606.10120v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.10120v1",
+      "published": "2026-06-08T19:52:08Z",
+      "updated": "2026-06-08T19:52:08Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.HC"
+      ]
+    },
     {
       "title": "Deterministic Integrity Gates for LLM-Assisted Clinical Manuscript Preparation: An Auditable Biomedical Informatics Architecture",
       "authors": [
@@ -10,11 +63,11 @@
         "Jinhoon Jeong",
         "Namkug Kim"
       ],
-      "abstract": "Objective. Large language models (LLMs) increasingly draft clinical research manuscripts, but their fluency can hide fabricated citations, numbers that drift from source tables, and unmet reporting-guideline items. Existing tools generate text without verifying it, and self-critique inherits the blind spots that produce confident fabrication. We describe an architecture that pairs generation with verification. Methods. The design rests on three principles: decompose the workflow into self-contained skills, gate every stage transition with halt-on-failure, and resolve each integrity question with the cheapest sufficient mechanism -- a deterministic, re-executable check where one suffices, and a prose-level probe only where interpretation is unavoidable. This determinism-where-possible split, organized as an integrity-gate taxonomy, is the core contribution. It is realized as MedSci Skills, an open-source toolkit of 43 skills coordinated by one orchestrator, whose deterministic tier comprises 21 standard-library detectors. We evaluate it on three reproducible public-dataset pipelines (STARD, PRISMA, STROBE) and a seeded-defect ablation. Results. Across the three pipelines every content-hash manifest verified clean and the gates surfaced real defects. On 27 identical injected defects the deterministic gates detected all 27 with no false positives on the matched clean fixtures, whereas a generic single-prompt LLM reviewer detected 11, its misses concentrated in generated-code, bibliography-internal, and style defects the prose does not expose. Conclusion. Determinism-where-possible verification yields an auditable, re-executable trail that exposes the evidence a human needs to check an LLM-assisted manuscript -- feasibility and reproducibility evidence, not a claim of human-competitive quality, which a separate blinded study addresses. MedSci Skills is MIT-licensed and archived (v3.8.0).",
-      "pdf_url": "https://arxiv.org/pdf/2606.09500v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.09500v1",
+      "abstract": "As autonomous research agents and AI co-scientist systems push large language models (LLMs) from drafting toward end-to-end manuscript production, the bottleneck shifts from generation to verification. Fluent LLM output can hide fabricated citations, numbers that drift from source tables, and unmet reporting-guideline items; existing tools generate without verifying, and self-critique inherits the blind spots that produce confident fabrication. We describe an architecture pairing generation with verification, resting on three principles: decompose the workflow into self-contained skills, gate every stage transition with halt-on-failure, and resolve each integrity question with the cheapest sufficient mechanism, a deterministic, re-executable check where one suffices and a prose-level probe only where interpretation is unavoidable. This determinism-where-possible split, organized as an integrity-gate taxonomy, is the core contribution. It is realized as MedSci Skills, an open-source toolkit of 43 skills with a 21-detector deterministic tier, evaluated on three public-dataset pipelines (STARD, PRISMA, STROBE) and a seeded-defect ablation. Across the three pipelines every content-hash manifest verified clean and the gates surfaced real defects; on 27 identical injected defects the deterministic gates detected all 27 with no false positives on the matched clean fixtures, whereas a single-prompt LLM reviewer detected 11, its misses in code, bibliography, and style defects the prose hides. Determinism-where-possible verification yields an auditable, re-executable trail that exposes the evidence a human needs to check an LLM-assisted manuscript: feasibility and reproducibility evidence, not a claim of human-competitive quality, which a separate blinded study addresses. MedSci Skills is MIT-licensed and archived (v3.8.0).",
+      "pdf_url": "https://arxiv.org/pdf/2606.09500v2",
+      "arxiv_url": "https://arxiv.org/abs/2606.09500v2",
       "published": "2026-06-08T13:51:04Z",
-      "updated": "2026-06-08T13:51:04Z",
+      "updated": "2026-06-09T14:24:13Z",
       "categories": [
         "cs.AI",
         "cs.DL"
@@ -241,54 +294,6 @@
       "updated": "2026-06-07T07:01:15Z",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "The Consistency Illusion: How Multi-Agent Debate Hides Reasoning Misalignment",
-      "authors": [
-        "Xiaoyang Wang",
-        "Christopher C. Yang"
-      ],
-      "abstract": "Multi-agent LLM systems for medical question answering often treat consensus as a reliability signal: if multiple agents agree on an answer, it is presumed trustworthy. However, answer-level consensus does not entail reasoning-level alignment. We introduce CARA (Cross-Agent Reasoning Alignment), a family of automated metrics that measure whether agents who agree on an answer also agree on the reasoning. Applying CARA to a standard debate system on two medical QA benchmarks, MedQA-USMLE and MedThink-Bench, we identify the consistency illusion: a failure mode where debate reduces detectable contradictions between agents while simultaneously decreasing the semantic similarity of their reasoning chains; agents appear to agree more but reason less consistently. To improve this misalignment, we propose the Grounded Debate Protocol (GDP), a prompt-level intervention that requires agents to commit to named medical facts and take explicit stances on other agents' claims. GDP produces large, consistent alignment improvements, with Cohen's d ranging from +1.43 to +1.99, across two datasets and two backbone models, without adding LLM calls or modifying system architecture. Our results motivate cross-agent reasoning alignment as a quantity to audit alongside accuracy in safety-critical domains.",
-      "pdf_url": "https://arxiv.org/pdf/2606.08457v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.08457v1",
-      "published": "2026-06-07T05:14:26Z",
-      "updated": "2026-06-07T05:14:26Z",
-      "categories": [
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "Understanding the Sociocultural Dimensions of Mental Health Discourse in Arabic-Language X Communities",
-      "authors": [
-        "Amal Alqahtani",
-        "Rana Salama",
-        "Mona Diab"
-      ],
-      "abstract": "Computational mental health research has predominantly centered on English-speaking populations, leaving Arabic-language discourse comparatively under-examined. We present an exploratory computational study of 8,147 tweets from 607 users classified by a GPT-4.1 personal-disclosure pipeline as likely lived-experience authors in three condition-specific Arabic-language X (formerly Twitter) Communities. We focus on discourse related to borderline personality disorder (BPD), bipolar disorder, and ADHD, and characterize community-associated linguistic patterns using a multi-domain cultural keyword framework. The results suggest that in this corpus, Bipolar tweets contain more religious and medical vocabulary, BPD tweets contain more relational, identity, and emotional-distress vocabulary, and ADHD tweets more often focus on practical symptoms and medication management. We treat these patterns as hypothesis-generating rather than confirmatory because the corpus is imbalanced across conditions, some subcorpora are temporally concentrated, and the keyword framework is an initial operationalization rather than a validated measurement instrument. The paper contributes a reusable LLM-assisted personal-disclosure pipeline and an exploratory cultural keyword framework for Arabic mental health discourse.",
-      "pdf_url": "https://arxiv.org/pdf/2606.08307v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.08307v1",
-      "published": "2026-06-06T19:31:39Z",
-      "updated": "2026-06-06T19:31:39Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "SSR: Can Simulated Patients Learn to Stigmatize Themselves? Modeling Self-Stigma through Internal Monologue",
-      "authors": [
-        "Kunyao Lan",
-        "Bingrui Jin",
-        "Zichen Zhu",
-        "Mengyue Wu"
-      ],
-      "abstract": "Simulating patients with large language models (LLMs) is a promising tool for mental health training, but existing approaches fail to capture a key clinical reality: self-stigma. Patients experiencing self-stigma, the internalization of negative stereotypes, often exhibit context-sensitive resistance, such as avoidance, denial, or self-blame, which current models render as static or uniformly compliant behavior. To address this, we introduce a novel simulation framework grounded in the psychological 3A1H model of self-stigmatization. Our core innovation is the creation of a \\textbf{Stigmatized Self-Reflection} (\\textbf{SSR}) dataset, where we augment mental health dialogues with internal monologues that reflect stigma-aware reasoning. By fine-tuning LLMs with this data using a chain-of-thought approach, we train patient agents to dynamically adjust their level and expression of stigma based on conversational triggers. Evaluations demonstrate that our approach significantly outperforms specialized baselines, generating more authentic and situationally appropriate patient responses. This work provides a crucial step towards realistic stigma simulation for clinical training and empathetic dialogue systems.",
-      "pdf_url": "https://arxiv.org/pdf/2606.08254v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.08254v1",
-      "published": "2026-06-06T16:50:57Z",
-      "updated": "2026-06-06T16:50:57Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

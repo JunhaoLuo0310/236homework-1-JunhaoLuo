@@ -1,8 +1,119 @@
 {
-  "generated_at_utc": "2026-06-10T04:15:26.105150Z",
+  "generated_at_utc": "2026-06-11T04:38:27.977252Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Measuring Epistemic Resilience of LLMs Under Misleading Medical Context",
+      "authors": [
+        "Hongjian Zhou",
+        "Xinyu Zou",
+        "Jinge Wu",
+        "Sean Wu",
+        "Junchi Yu",
+        "Bradley Max Segal",
+        "Tobias Erich Niebuhr",
+        "Sara Amro",
+        "Michael Petrus",
+        "Sheikh Momin",
+        "Alexandra M. Cardoso Pinto",
+        "Rachel Niesen",
+        "Laura Sophie Wegner",
+        "Dhruv Darji",
+        "Jung Moses Koo",
+        "Joshua Fieggen",
+        "Kapil Narain",
+        "Mingde Zeng",
+        "Lei Clifton",
+        "Linda Shapiro",
+        "Fenglin Liu",
+        "David A. Clifton"
+      ],
+      "abstract": "Large language models (LLMs) now reach expert-level scores on medical licensing exams, encouraging the assumption that high scores imply safe medical judgment while patients increasingly use them for health advice. We show this assumption is fragile: when misleading context is injected into questions that LLMs originally answer correctly, they abandon the correct answer. We call the ability to maintain correct judgment under adversarial context epistemic resilience, and introduce MedMisBench to measure it. MedMisBench contains 10,932 medical question items and 48,889 misleading context-option pairs spanning medical reasoning, agentic capability, and patient-journey evaluation. Across 11 model configurations, mean accuracy falls from 71.1% on original questions to 38.0% under focused misleading context, with 51.5% attack success. The most damaging injections are formal, rule-like fabrications: authority-framed falsehoods reach 69.5% attack success and exception-poisoning claims reach 64.1%. A 14-member clinical panel from 7 countries identified serious potential harm in 38.2% of reviewed cases. MedMisBench exposes a structural blind spot in LLM evaluation in medical settings: existing benchmarks measure what models know, but not whether they preserve correct medical judgment under misleading context.",
+      "pdf_url": "https://arxiv.org/pdf/2606.12291v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.12291v1",
+      "published": "2026-06-10T16:27:26Z",
+      "updated": "2026-06-10T16:27:26Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Reassessing High-Performing LLMs on Polish Medical Exams: True Competence or Bias-Driven Performance?",
+      "authors": [
+        "Antoni Lasik",
+        "Jakub Pokrywka",
+        "\u0141ukasz Grzybowski",
+        "Jeremi Ignacy Kaczmarek",
+        "Gabriela Korza\u0144ska",
+        "Janusz \u015awieczkowski-Feiz",
+        "Oskar Pastuszek",
+        "Paulina Hoffman",
+        "Jakub Tomasz D\u0105browski",
+        "Wojciech Kusa"
+      ],
+      "abstract": "Large language models (LLMs) in medicine are mainly evaluated using multiple-choice question answering (MCQA), which can overestimate real clinical ability due to guessing strategies and answer biases. To address these limitations, we introduce an expanded and more challenging benchmark based on Polish medical exams, adding over 15,000 questions, two new domains, and four structural modifications that reduce MCQA-specific artifacts and better test reasoning. We evaluate 21 LLMs and show that evaluation design strongly affects results. Under our harder setup, the best model (Qwen3.5-122B) drops by 28.4 and 31 pp on English and Polish exams, respectively. Despite low evidence of data contamination, standard MCQA scores do not reliably reflect true medical competence. To facilitate further research, we make our benchmark publicly available.",
+      "pdf_url": "https://arxiv.org/pdf/2606.12250v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.12250v1",
+      "published": "2026-06-10T15:52:24Z",
+      "updated": "2026-06-10T15:52:24Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Skill-Augmented AI Agents for Medical Research Analysis: An Exploratory Multi-Model Human Evaluation in an NSCLC Transcriptomic Biomarker Task",
+      "authors": [
+        "Qianyu Yao",
+        "Fei Sun",
+        "Bocheng Huang",
+        "Wei Chen",
+        "Jiarui Jiang",
+        "Shu Quan",
+        "Yifei Chen",
+        "Wenjie Xu",
+        "Bo li",
+        "Liping Su",
+        "Ruoqiong Wu",
+        "Huhai Hong",
+        "Huimei Wang"
+      ],
+      "abstract": "Background. Large language models and AI agents are increasingly used to support biomedical research, but native model outputs may omit key analytical steps, misuse methods, or overstate conclusions. We evaluated whether autonomous access to a medical research skill package was associated with higher-quality AI-generated transcriptomic research-analysis outputs compared with native AI without skills. Methods. We conducted an exploratory multi-model human evaluation using a non-small cell lung cancer immunotherapy biomarker task. Six model backbones were tested. The evaluation included 21 anonymized outputs: 9 native-AI outputs and 12 skill-augmented outputs generated through an AI agent implementation represented by OpenClaw. Four non-expert biomedical reviewers and two blinded experts evaluated each output, with two ratings from each reviewer type. The primary outcome was expert-rated overall quality. Results. Skill-augmented outputs showed directionally higher expert overall quality than native-AI outputs (mean 5.50 vs 5.11; difference=0.39; bootstrap 95\\% CI, -0.04 to 0.90; Welch p=0.156). Non-expert reviewer quality showed the same direction (mean 4.72 vs 4.47; difference=0.26; bootstrap 95\\% CI, -0.25 to 0.80; Welch p=0.373). Expert agreement was limited (single-rating ICC=-0.15), and model-specific effects were descriptive and heterogeneous. Conclusions. Autonomous skill access showed a directional quality signal in this exploratory sample, but the signal was smaller than expert-rating noise and should not be interpreted as confirmatory evidence. The findings primarily motivate larger evaluations of skill-augmented AI agents with stronger reliability controls, platform replication, and biological-validity assessment.",
+      "pdf_url": "https://arxiv.org/pdf/2606.11830v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.11830v1",
+      "published": "2026-06-10T09:13:10Z",
+      "updated": "2026-06-10T09:13:10Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Lung-R1: A Knowledge Graph-Guided LLM for Pulmonary Diagnostic Reasoning",
+      "authors": [
+        "Haoyang Zeng",
+        "Yuanxi Fu",
+        "Rongzhen Li",
+        "Yuming Yang",
+        "Xiao Sun",
+        "Jingwang Huang",
+        "Gujie Shao",
+        "Guohui Xiang",
+        "Quan Lu",
+        "Dongfan Ye",
+        "Xuetao Chen",
+        "Jiang Zhong",
+        "Kaiwen Wei",
+        "Zhi Xu"
+      ],
+      "abstract": "Diagnosing pulmonary diseases requires integrating heterogeneous evidence amid phenotypic variability and cross-disease overlap. Although large language models (LLMs) have shown progress on pulmonary knowledge question answering (QA) and information-processing tasks, reliable pulmonary diagnosis requires patient-specific, relation-aware reasoning over electronic medical record (EMR) evidence rather than isolated knowledge recall. We define this gap between pulmonary knowledge and case-level diagnostic reasoning as the Pulmonary Knowledge-to-Diagnosis Gap. To address it, we introduce LungKG, the first structured pulmonary knowledge graph for diagnostic knowledge organization and record-grounded reasoning. LungKG contains 59,038 nodes and 164,308 edges across 15 entity types and 112 relation types, serving as both a reusable pulmonary knowledge resource and the foundation for LungKG-guided model adaptation. Built on LungKG, we propose Lung-R1, a LungKG-guided pulmonary LLM trained through KG-constrained reasoning-chain construction and KG-guided reinforcement learning. In a 20-system evaluation, Lung-R1-14B achieves state-of-the-art performance across Choice, Pulmonary-QA, and EMR Diagnosis, reaching an EMR Diagnosis score of 4.3583 and surpassing the strongest non-Lung-R1 baseline by 0.1476 points. These results demonstrate the value of LungKG-guided training for EMR-based pulmonary diagnosis.",
+      "pdf_url": "https://arxiv.org/pdf/2606.11675v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.11675v1",
+      "published": "2026-06-10T05:39:08Z",
+      "updated": "2026-06-10T05:39:08Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Recalling Too Well: Sycophancy Evaluation and Mitigation in Memory-Augmented Models",
       "authors": [
@@ -46,10 +157,10 @@
         "Hassan Ghasemzadeh"
       ],
       "abstract": "Postprandial hyperglycemia is a key risk factor for metabolic disorders; however, existing dietary guidance is often static, impractical, and insufficiently personalized, providing recommendations that are difficult to follow or not impactful. While recent advances leverage continuous glucose monitoring (CGM) and machine learning to predict glycemic responses, these approaches are largely predictive and lack actionable guidance. Moreover, recommendation systems are often misaligned with user goals and require extensive input. We present MetaPlate, a counterfactual explanation (CF) guided, context-aware decision-support framework that generates personalized meal recommendations to mitigate postprandial glucose excursions in healthy adults. MetaPlate integrates multimodal data, including CGM readings, wearable-derived physiological signals, and user-provided meal inputs from $25$ individuals to model pre-meal context. A machine learning model predicts glucose response, while a CF optimization module adjusts meal composition modifying macronutrient amounts to maintain glucose levels within a target range ($\\leq 140$ mg/dL). An LLM-based retrieval-augmented generation (RAG) layer enhances interpretability by producing human-readable recommendations using constrained search of the USDA food database. We evaluate MetaPlate via a structured expert-in-the-loop assessment with registered dietitians (RDs), comparing performance before and after prompt refinement. Results show improvements in meal realism, portion suitability, and recommendation likelihood, with expert feedback indicating a shift from clinically implausible outputs to actionable, contextually appropriate recommendations. Our findings emphasize the importance of domain knowledge and structured constraints in LLM-driven systems and highlight the potential of MetaPlate as a real-time personalized dietary decision-support tool.",
-      "pdf_url": "https://arxiv.org/pdf/2606.10120v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.10120v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.10120v2",
+      "arxiv_url": "https://arxiv.org/abs/2606.10120v2",
       "published": "2026-06-08T19:52:08Z",
-      "updated": "2026-06-08T19:52:08Z",
+      "updated": "2026-06-10T02:51:13Z",
       "categories": [
         "cs.IR",
         "cs.AI",
@@ -213,86 +324,6 @@
       "updated": "2026-06-08T02:34:12Z",
       "categories": [
         "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Bridging Expert Knowledge and Automated Feature Engineering via Self-Evolution",
-      "authors": [
-        "Varun Khurana",
-        "Vijval Ekbote",
-        "Vashu Chauhan",
-        "Yaman Kumar Singla",
-        "Rajiv Ratn Shah",
-        "Balaji Krishnamurthy"
-      ],
-      "abstract": "In high-stakes settings such as brand compliance, clinical care, and content moderation, machine learning cannot be deployed as opaque oracles: practitioners inspect the features driving model decisions, and models must leverage the expert documentation governing these domains. In practice, the data arrives as unstructured content, and features extracted from it must be interpretable, discriminative, and aligned with what experts consider important. Existing methods fall short: they target tabular inputs, lack demonstrated expert alignment, and cannot operationalize qualitative criteria such as 'maintain professional tone' into precise features. We present FEST (Feature Engineering with Self-evolving Trees), combining dual-stream feature generation (semantic and deterministic), semantic deduplication, and tree-guided iterative evolution to discover auditable features from raw text and images. FEST leads in 17 of 20 classifier-task combinations across brand classification, content authenticity detection, and stress detection, with a mean gain of 4.2 pp over the strongest baseline across five classifiers. An LLM-as-judge evaluation shows FEST achieves 60-80% coverage of expert-designed brand features at strict semantic-alignment thresholds, corroborated by a human expert study rating features highly on relevance, clarity, and actionability. When seeded with expert guidelines, FEST refines qualitative criteria into operational features, improving accuracy by 6-12 pp on average across brands. To enable systematic evaluation of expert alignment in automated feature engineering, we release BrandGuide, the first dataset pairing expert-designed features with 1M+ assets across 2,683 brands. By grounding feature engineering in expert knowledge, FEST opens a practical pathway for interpretable ML in domains demanding human oversight.",
-      "pdf_url": "https://arxiv.org/pdf/2606.08800v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.08800v1",
-      "published": "2026-06-07T19:39:03Z",
-      "updated": "2026-06-07T19:39:03Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "RadOT-Eval: Auditable Structured-Evidence Transport for Radiology Report Evaluation",
-      "authors": [
-        "Weixin Liu",
-        "Juming Xiong",
-        "Yang Li",
-        "Qingyuan Song",
-        "Susannah Rose",
-        "Murat Kantarcioglu",
-        "Bradley Malin",
-        "Zhijun Yin"
-      ],
-      "abstract": "Automatic evaluation is critical for high-stakes text generation, where errors often involve omitted findings, hallucinated content, polarity reversals, location changes, uncertainty mismatches, and temporal-comparison errors rather than low surface similarity alone. Radiology report generation provides a challenging test case because generated reports must preserve structured clinical evidence across sources. We present RadOT-Eval, an interpretable structured-evidence optimal transport framework for offline auditing of radiology report generation. RadOT-Eval decomposes reference and candidate reports into attribute-structured clinical evidence units, aligns corresponding evidence using entropy-regularized optimal transport, and uses clinically meaningful side-channel discrepancies in a monotone risk model to predict error burden. All transport, feature, and readout choices are selected using the ReXVal dataset, and the frozen system is evaluated on the independent RadEvalX dataset. RadOT-Eval achieves Spearman correlations of 0.715, 0.548, and 0.399 with total, clinically significant, and clinically insignificant annotated error burden, respectively, yielding higher point estimates than standard evaluation metrics and the open-source large language model (LLM)-based evaluator GREEN-radllama2-7B. In a frozen auxiliary corruption-sensitivity stress test on ReXErr-v1, RadOT-Eval achieves 0.768 AUROC and a 0.990 corrupted-greater-than-clean paired win rate. These results show that structured evidence transport provides an auditable, rank-oriented evaluation tool for high-stakes generated clinical text under ReXVal-only model selection and frozen RadEvalX testing.",
-      "pdf_url": "https://arxiv.org/pdf/2606.08769v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.08769v1",
-      "published": "2026-06-07T18:16:56Z",
-      "updated": "2026-06-07T18:16:56Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Calibration of Structured Ignorance Certificates for Diagnosing Unknown Unknowns in Reasoning Models",
-      "authors": [
-        "Subramanyam Sahoo"
-      ],
-      "abstract": "Large language models frequently fail in a characteristic way: rather than acknowledging ignorance, they produce fluent but incorrect answers to questions that lie beyond their knowledge boundaries. We introduce \\textbf{Structured Ignorance Certificates} (SICs), a JSON-formatted output schema that demands a model explicitly name the missing domain intersection, enumerate required concepts, and propose a productive retrieval query rather than hallucinating an answer. To train models to produce high-quality SICs we construct a 7,347-sample \\emph{Unknown-Unknown} (UU) dataset by prompting Qwen3-14B to stitch together questions from seven domains (physics, biology, engineering, CS, economics, medical, legal) into novel cross-domain queries that no single-domain expert could answer. We fine-tune a 14B-parameter model with Group Relative Policy Optimization (GRPO) using a composite reward that combines retrieval utility, concept specificity, and output-format validity. A paraphrase-divergence probe trained on model responses confirms that SIC-tuned outputs systematically exhibit higher unknown-unknown probability scores. Evaluation on 735 held-out UU questions achieves a 99.46\\% JSON validity rate, a mean Certificate Specificity Score of 0.967, and a 3.6\\% ROUGE-L improvement over the base model on retrieval-grounded generation -- demonstrating that explicit epistemic structuring is a learnable and measurable capability.",
-      "pdf_url": "https://arxiv.org/pdf/2606.08571v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.08571v1",
-      "published": "2026-06-07T11:01:13Z",
-      "updated": "2026-06-07T11:01:13Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Testing the Black Box: Structural Barriers to Independent Evaluation of Consumer-Facing Health LLMs",
-      "authors": [
-        "Rahul Gorijavolu",
-        "Kaushik Madapati",
-        "Pritika Vig",
-        "Rawan Abulibdeh",
-        "Nikhil Jaiswal",
-        "Mahri Kadyrova",
-        "Zeamanuel Hailu Tesfaye",
-        "Charles Senteio",
-        "Paula Maurutto",
-        "Leo Anthony Celi"
-      ],
-      "abstract": "Background: Consumer-facing large language models are now a common source of health information, and they interpret and personalize responses rather than retrieve them. Whether their responses vary across users is a clinical, equity, and governance question, sharpened by evidence that sycophantic responses can alter judgment and increase trust.\n  Objective: To evaluate response variation and sycophancy in consumer-facing health LLMs under conditions resembling ordinary patient use.\n  Methods: We constructed simulated user profiles differing in geography, browsing context, expressed beliefs, and social determinants of health, drawing on literature linking social context to health attitudes. We adapted validated instruments, including the Vaccination Attitudes Examination scale and reproductive attitudes scales, into multi-turn prompts designed to elicit clinically meaningful variation across users.\n  Results: The evaluation encountered five linked barriers. Factual prompts produced stable responses that masked sycophancy emerging over multi-turn conversation. Browser-based interfaces did not disclose which signals influence outputs and could not be reset to a clean baseline. Large-scale testing was restricted by terms of service, rate limits, and bot detection. Accuracy-based criteria could not capture tone, framing, or omission, and LLM-as-judge methods risked shared alignment bias. Models changed without traceable version identifiers, preventing reliable replication.\n  Conclusions: No reliable independent evaluation framework yet exists for examining how consumer-facing health LLMs behave in ordinary use. Oversight requires disclosure of personalization signals, stable version identifiers, researcher safe harbor programs, and post-deployment monitoring of health-related outputs.",
-      "pdf_url": "https://arxiv.org/pdf/2606.08483v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.08483v1",
-      "published": "2026-06-07T07:01:15Z",
-      "updated": "2026-06-07T07:01:15Z",
-      "categories": [
         "cs.AI"
       ]
     }

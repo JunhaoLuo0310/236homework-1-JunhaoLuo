@@ -1,8 +1,120 @@
 {
-  "generated_at_utc": "2026-06-11T04:38:27.977252Z",
+  "generated_at_utc": "2026-06-12T04:40:28.069557Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "ArogyaSutra: A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages",
+      "authors": [
+        "Tanmoy Kanti Halder",
+        "Akash Ghosh",
+        "Subhadip Baidya",
+        "Arijit Roy",
+        "Sriparna Saha"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) have shown promising reasoning capabilities in general domains, yet their performance remains limited in specialized settings such as healthcare, especially in multilingual and low-resource scenarios. This gap is critical in regions like rural India, where patients often express complex medical queries in native Indic languages and rely on multimodal inputs such as medical images. Existing English-centric MLLMs struggle to support such use cases, limiting equitable access to AI-driven healthcare assistance. To address this challenge, we introduce ArogyaBodha, a large-scale multilingual multimodal medical question-answer dataset constructed from eight heterogeneous sources, covering 31 body systems, six imaging modalities, and 21 clinical domains across English and seven major Indian languages. We further propose ArogyaSutra, an actor-critic-based multi-agent framework that integrates tool grounding with dual-memory mechanisms for step-wise, reasoning-aware decision making, and uses stored actor-critic simulation trajectories for distillation. Experiments show that our dataset and framework improve multilingual medical reasoning accuracy across all Indic languages, with ablations validating the contribution of each component. The source code and dataset are available at: https://iitp-cse.github.io/ ArogyaSutra/",
+      "pdf_url": "https://arxiv.org/pdf/2606.13572v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.13572v1",
+      "published": "2026-06-11T16:59:42Z",
+      "updated": "2026-06-11T16:59:42Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "sebis at CRF Filling 2026: A Two-Stage Local LLM Pipeline for Medical CRF Filling",
+      "authors": [
+        "Katharina Sommer",
+        "Tristan Till",
+        "Florian Matthes"
+      ],
+      "abstract": "The extraction of structured clinical information from unstructured EHR notes is a persistent bottleneck in healthcare informatics. While large language models (LLMs) offer high performance, their deployment in clinical settings is hindered by privacy risks, inference costs, and the tendency to hallucinate beyond textual evidence. We address these challenges for the CL4Health 2026 Case Report Form (CRF) filling task by proposing a fully local, domain-adapted pipeline using the MedGemma-27B model. Our two-stage architecture, which separates binary presence classification from value extraction, enforces strict adherence to textual evidence and ensures deterministic outputs for negated, uncertain, or unknown states. By leveraging item-specific, few-shot in-context learning without external API calls or fine-tuning, our approach achieves a macro-F1 score of 0.55 on the official English test track. This result secures second place among all locally-hosted, open-source submissions. Our work demonstrates that privacy-preserving, on-premise LLM pipelines can achieve near-competitive performance with proprietary frontier models, providing a practical, data-sovereign framework for clinical NLP.",
+      "pdf_url": "https://arxiv.org/pdf/2606.13082v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.13082v1",
+      "published": "2026-06-11T09:04:16Z",
+      "updated": "2026-06-11T09:04:16Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "AAbAAC: An Annotated Corpus for Autoimmunity Information Extraction",
+      "authors": [
+        "Fabien Maury",
+        "Sol\u00e8ne Grosdidier",
+        "Maud de Dieuleveult",
+        "Adrien Coulet"
+      ],
+      "abstract": "Despite advances in information extraction driven by deep learning and large language models, performance gaps remain in highly specialized biomedical fields, where domainspecific complexity poses challenges for generalist models. In this work, we focus on the domain of autoimmunity, where the main entities of interest are autoimmune diseases, autoantibodies (i.e., molecules that may mark or cause these diseases), their molecular targets, their location in the body, and their associated clinical signs. Herein, we present AAbAAC (AutoAntibodies and Autoimmunity Annotated Corpus), a corpus of 115 abstracts selected from PubMed, where we manually annotated entities and their relationships. First, AAbAAC was used to evaluate several methods on the task of named entity recognition (NER), and secondly, to fine-tune NER models. Our study demonstrates the utility of AAbAAC for information extraction in the domain of autoimmunity, showing expected improvement in NER performance after finetuning. This illustrates the value of small-scale annotation efforts for specialized domains and contributes to the computational study of autoimmunity. The AAbAAC corpus is available at https://github.com/f-maury/AAbAAC.",
+      "pdf_url": "https://arxiv.org/pdf/2606.13051v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.13051v1",
+      "published": "2026-06-11T08:34:34Z",
+      "updated": "2026-06-11T08:34:34Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Deployment-Centered Evaluation: Predicting Query-Level Rejection Risk in a Clinical LLM System",
+      "authors": [
+        "Alyssa Unell",
+        "Miguel Fuentes",
+        "Brenna Li",
+        "Bridget Lin",
+        "Meena Jagadeesan",
+        "Sanmi Koyejo",
+        "Nigam Shah"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly integrated into clinical systems, making it essential to evaluate the real-world utility of these systems. However, static benchmarks tend to measure correctness rather than user acceptance, aggregate performance across queries, and require densely annotated datasets -- leading to major blind spots for evaluating clinical systems. In this work, we perform a deployment-centered evaluation of an LLM system embedded within electronic health records at an academic medical center, where user feedback is sparse but closely reflects the deployment conditions. Specifically, we train a pre-response classifier that estimates the risk that a future interaction will result in the user rejecting the LLM response, based on query content and deployment-specific context available before generation. We conduct a prospective analysis of our model over 4.5 months of user feedback, finding that our prediction model achieves an AUROC of 0.719. Further, we estimate the benefit of such predictions in two downstream use cases (guardrail triggering and abstention). Our key conceptual insight is that making use of deployment-specific context (i.e., the provider type, department name, language model used for response), as opposed to only query content, improves the ability to predict whether the user will reject the system output. Altogether, our empirical case study demonstrates the feasibility of predicting user rejection using deployment-specific context, opening the door to targeted guardrails.",
+      "pdf_url": "https://arxiv.org/pdf/2606.12702v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.12702v1",
+      "published": "2026-06-10T21:44:20Z",
+      "updated": "2026-06-10T21:44:20Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "EDEN: A Large-Scale Corpus of Clinical Notes for Italian",
+      "authors": [
+        "Tiziano Labruna",
+        "Guido Bertolini",
+        "Pietro Ferrazzi",
+        "Bernardo Magnini"
+      ],
+      "abstract": "We present EDEN (Emergency Department Electronic Notes), a new and unique large-scale corpus of clinical notes produced in Emergency Departments of Italian hospitals. The corpus, in its current version, is composed of approximately 4 million clinical notes fully anonymized, covering diverse phases of patient care during the stay in the emergency department. In addition, a subset of about six thousand notes has been manually annotated by clinical experts through a structured Case Report Form (CRF) containing 132 items relevant for two patient situations in emergency departments, dyspnea and loss of consciousness. Items may assume numerical values (e.g., for blood saturation), categorical (e.g., for level of consciousness ), binary (e.g., for presence of traumas), and mixed value types. The annotation process involved multiple clinicians and underwent iterative revision to resolve ambiguities in item formulation, resulting in a richly structured (although high imbalanced) resource. The dataset aims to fill a relevant gap of data able to support both the development and the use of Large Language Models in concrete medical applications. We describe the data collection protocol, the on-site anonymisation pipeline, corpus statistics, and the annotation scheme. Finally, we propose CRF-filling as a novel structured information extraction benchmark, and provide zero-shot baseline resulting from Gemma-27B and MedGemma-27B. To the best of our knowledge, the EDEN dataset is the largest freely available corpus of clinical notes existing for the Italian language.",
+      "pdf_url": "https://arxiv.org/pdf/2606.12569v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.12569v1",
+      "published": "2026-06-10T18:21:50Z",
+      "updated": "2026-06-10T18:21:50Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Rubric-Guided Self-Distillation: Post-Training Without Rubric Verifiers",
+      "authors": [
+        "MohammadHossein Rezaei",
+        "Anas Mahmoud",
+        "Zihao Wang",
+        "Utkarsh Tyagi",
+        "Advait Gosai",
+        "Razvan-Gabriel Dumitru",
+        "Aakash Sabharwal",
+        "Bing Liu",
+        "Yunzhong He"
+      ],
+      "abstract": "Rubrics have emerged as an alternative to RLVR in open-ended domains where a single ground-truth final answer is not available. Existing rubric-based training methods rely on an LLM verifier that scores each rollout against rubrics. This introduces substantial training-time overhead, exposes optimization to verifier-specific biases, and reduces rubric feedback to a sparse end-of-trajectory signal. We propose Rubric-Guided Self-Distillation (RGSD), a verifier-free training method in which the base policy, conditioned on the rubric, serves as the teacher for the unconditioned student. RGSD distills the rubric-conditioned teacher distribution into the student token-by-token, replacing sparse trajectory-level rewards with dense per-token learning signals and removing the LLM judge from the training loop entirely. Across Qwen-2.5 (3B, 7B) and Qwen3-Thinking (4B, 8B) models on medical and science domains, RGSD achieves rubric satisfaction comparable to judge-based GRPO while using one on-policy rollout per prompt and no training-time verifier calls. Ablations show that raw rubrics provide a stronger teacher enrichment signal than self-generated reference responses, while a stronger GRPO judge can outperform RGSD in some settings, positioning RGSD as a complementary verifier-free alternative when verifier cost or reliability is the bottleneck.",
+      "pdf_url": "https://arxiv.org/pdf/2606.12507v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.12507v1",
+      "published": "2026-06-10T17:53:19Z",
+      "updated": "2026-06-10T17:53:19Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Measuring Epistemic Resilience of LLMs Under Misleading Medical Context",
       "authors": [
@@ -175,10 +287,10 @@
         "Namkug Kim"
       ],
       "abstract": "As autonomous research agents and AI co-scientist systems push large language models (LLMs) from drafting toward end-to-end manuscript production, the bottleneck shifts from generation to verification. Fluent LLM output can hide fabricated citations, numbers that drift from source tables, and unmet reporting-guideline items; existing tools generate without verifying, and self-critique inherits the blind spots that produce confident fabrication. We describe an architecture pairing generation with verification, resting on three principles: decompose the workflow into self-contained skills, gate every stage transition with halt-on-failure, and resolve each integrity question with the cheapest sufficient mechanism, a deterministic, re-executable check where one suffices and a prose-level probe only where interpretation is unavoidable. This determinism-where-possible split, organized as an integrity-gate taxonomy, is the core contribution. It is realized as MedSci Skills, an open-source toolkit of 43 skills with a 21-detector deterministic tier, evaluated on three public-dataset pipelines (STARD, PRISMA, STROBE) and a seeded-defect ablation. Across the three pipelines every content-hash manifest verified clean and the gates surfaced real defects; on 27 identical injected defects the deterministic gates detected all 27 with no false positives on the matched clean fixtures, whereas a single-prompt LLM reviewer detected 11, its misses in code, bibliography, and style defects the prose hides. Determinism-where-possible verification yields an auditable, re-executable trail that exposes the evidence a human needs to check an LLM-assisted manuscript: feasibility and reproducibility evidence, not a claim of human-competitive quality, which a separate blinded study addresses. MedSci Skills is MIT-licensed and archived (v3.8.0).",
-      "pdf_url": "https://arxiv.org/pdf/2606.09500v2",
-      "arxiv_url": "https://arxiv.org/abs/2606.09500v2",
+      "pdf_url": "https://arxiv.org/pdf/2606.09500v3",
+      "arxiv_url": "https://arxiv.org/abs/2606.09500v3",
       "published": "2026-06-08T13:51:04Z",
-      "updated": "2026-06-09T14:24:13Z",
+      "updated": "2026-06-11T11:46:34Z",
       "categories": [
         "cs.AI",
         "cs.DL"
@@ -199,131 +311,6 @@
       "published": "2026-06-08T13:44:03Z",
       "updated": "2026-06-08T13:44:03Z",
       "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "H2HMem: A Multimodal Memory Benchmark for Agents in Human-Human Interactions",
-      "authors": [
-        "Shiping Zhu",
-        "Yibo Yang",
-        "Zhengyang Wang",
-        "Tiancheng Shen",
-        "Dandan Guo",
-        "Ming-Hsuan Yang"
-      ],
-      "abstract": "Large language model agents are increasingly deployed in human-human interaction settings, such as meeting assistants and clinical documentation systems, where they must observe conversations and retain information for downstream queries. Unlike traditional human-assistant settings, these environments are inherently multimodal, involve complex discourse phenomena such as anaphora and deixis, and contain asynchronous or conflicting information from multiple participants. However, existing memory benchmarks largely focus on single-user, text-only interactions, failing to capture these challenges. To address this gap, we introduce H2HMem, a Human-to-Human Multimodal Memory Benchmark for evaluating memory capabilities in complex human-human interactions. H2HMem includes both dyadic and multi-party conversations with multimodal information streams, and evaluates agents along three dimensions: memory recall, reasoning, and application. Experiments with advanced agents reveal substantial limitations in constructing, retaining, and utilizing memories across modalities, participants, and sessions, highlighting substantial room for improvement in next-generation LLM agents.",
-      "pdf_url": "https://arxiv.org/pdf/2606.09461v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.09461v1",
-      "published": "2026-06-08T13:17:16Z",
-      "updated": "2026-06-08T13:17:16Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "TRIAGE: Dialectical Reasoning for Explainable Risk Prediction on Irregularly Sampled Medical Time Series with LLMs",
-      "authors": [
-        "Hyeongwon Jang",
-        "Gyouk Chu",
-        "Changhun Kim",
-        "Joonhyung Park",
-        "Hangyul Yoon",
-        "Eunho Yang"
-      ],
-      "abstract": "Clinical early warning systems built on electronic health records, in which clinical observations are recorded as irregularly sampled medical time series (ISMTS), must deliver both calibrated risk scores for patient triage and interpretable rationales that clinicians can verify. Large Language Models (LLMs) have been explored for this task, yet they collapse graded clinical risk into overconfident binary predictions. This risk polarization undermines both calibration and cross-patient comparability. To address this, we propose TRIAGE, a framework that trains an LLM to generate dialectical reasoning over competing clinical outcomes by eliciting outcome-specific rationales. This dialectical formulation mitigates risk polarization, enabling a single LLM to yield continuous risk scores grounded in explicit clinical reasoning. Evaluated on three ISMTS benchmarks, TRIAGE achieves an average AUPRC improvement of 3.3% and reduces calibration error by 81% compared to the competitive baselines. An LLM-as-a-judge assessment further shows that our rationales surpass post-hoc explanations from the baseline by 20% in clinical reasoning quality. The source code is available at https://github.com/HyeongWon-Jang/TRIAGE .",
-      "pdf_url": "https://arxiv.org/pdf/2606.09030v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.09030v1",
-      "published": "2026-06-08T04:53:44Z",
-      "updated": "2026-06-08T04:53:44Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "CARE: A Conformal Safety Layer for Medical Summarization",
-      "authors": [
-        "Suhana Bedi",
-        "Bridget Lin",
-        "Anson Y. Zhou",
-        "Chloe O. Stanwyck",
-        "Jenelle A. Jindal",
-        "Sanmi Koyejo",
-        "David Stutz",
-        "Nigam H. Shah"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly used for medical summarization, but their outputs can omit medically important information and introduce unsupported claims. Existing error-detection methods produce heuristic or uncalibrated scores, providing no formal control over missed errors and no principled way to trade off safety against clinician review burden. We introduce Conformal Assessment for Risk Evaluation (CARE), a post-hoc, model-agnostic safety layer that uses conformal risk control to overlay calibrated omission and hallucination flags onto summaries from any LLM without retraining. CARE provides finite-sample, distribution-free guarantees through two controllers: a hallucination controller that bounds the probability of a document containing any unflagged hallucinated sentence, and an omission controller that bounds the expected fraction of important omissions not surfaced for review. Unlike hallucination detection, omissions depend jointly on whether a source sentence is important and whether it is covered by the summary. We show that calibrating only one dimension can violate the target risk bound, while marginal decompositions remain valid but overly conservative. By jointly calibrating over the full $(\u03c4,\u03b3)$ threshold space, CARE preserves formal guarantees while surfacing up to 5$\\times$ fewer sentences than alternative calibrated baselines. Across five medical summarization tasks, CARE satisfies the target risk bound at $\u03b1= 0.15$ with 95% confidence across 100 calibration/test resplits, using only ~100 labeled documents per domain. In a preliminary clinician study (75 document reviews), calibrated flags improved omission detection by 28.6 percentage points on average. These results show that sentence-level safety guarantees are feasible for LLM-assisted medical summarization and offer a tunable mechanism for balancing residual risk and review effort.",
-      "pdf_url": "https://arxiv.org/pdf/2606.08969v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.08969v1",
-      "published": "2026-06-08T03:10:45Z",
-      "updated": "2026-06-08T03:10:45Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "NutriMLLM: Multimodal Large Language Models for Dietary Micronutrient Analysis",
-      "authors": [
-        "Runze Yan",
-        "Minxiao Wang",
-        "Jiaying Lu",
-        "Darren Liu",
-        "Xiao Hu",
-        "Hanqi Luo"
-      ],
-      "abstract": "Comprehensive estimation of dietary micronutrients from food images could improve clinical nutrition care, but training such models requires large multimodal datasets linking diverse foods to complete nutrient profiles. We first show that existing multimodal large language models (MLLMs), including leading proprietary models, are unreliable for this task. Across five model families and four independent evaluation benchmarks (ASA24, SNAPMe, FNDDS, and NutriBench), models frequently abstained or returned statistically implausible values. To address this gap without costly expert annotation, we repurposed a decade of population-scale 24-hour dietary recalls as structured prompts for text-to-image generation. This pipeline produced a synthetic corpus of about 1.1 million image-description-nutrient triplets, each pairing a generated food image with a complete 65-nutrient label. To our knowledge, this is the largest synthetic food-image corpus with comprehensive micronutrient annotation planned for public release upon publication. Fine-tuning Qwen3-VL (2B/4B/8B/30B) and GLM-4.6V-Flash on this corpus yielded NutriMLLM, the first family of vision-language models specialized for comprehensive dietary micronutrient estimation. We evaluate these models with a four-component framework that separately measures abstention, hallucination, overall usability, and per-nutrient numerical accuracy. On real food images, every NutriMLLM variant achieved near-complete coverage across all 65 nutrients, and the largest variant matched or exceeded proprietary baselines (GPT-5, Gemini 3, and Claude Sonnet 4.5) in accuracy on most nutrients. These results show that recall-driven synthetic supervision can make image-based comprehensive micronutrient estimation a tractable engineering problem and support dietary assessment, personalized nutrition guidance, and population-scale micronutrient surveillance.",
-      "pdf_url": "https://arxiv.org/pdf/2606.08948v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.08948v1",
-      "published": "2026-06-08T02:50:08Z",
-      "updated": "2026-06-08T02:50:08Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "From Hazard Functions to Language Space: Cox-Supervised Distillation of Survival Risk into a Large Language Model",
-      "authors": [
-        "Nicholas I-Hsien Kuo",
-        "Blanca Gallego",
-        "Louisa Jorm"
-      ],
-      "abstract": "We investigate whether information about time-to-event risk estimated by a Cox proportional hazards model can be transferred into a generative large language model. We propose a text-based survival modelling pipeline in which structured clinical covariates are converted into text prompts and a Qwen-based large language model is fine-tuned to generate patient-specific survival risk using Cox model predictions as a training target. Across GBSG2, ACTG320, and WHAS500, the model achieves competitive held-out discrimination and calibration despite being trained as a text-generation task rather than with a conventional survival-analysis loss. We further analyse the geometry of the model's hidden states, where t-SNE visualisations reveal smooth risk gradients in latent space, suggesting that the model represents survival risk as a continuous structure rather than isolated risk categories. Together, these findings suggest that large language models can internalise survival-risk structure while supporting calibrated prediction, providing a route towards time-to-event reasoning in language models.",
-      "pdf_url": "https://arxiv.org/pdf/2606.08945v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.08945v1",
-      "published": "2026-06-08T02:47:05Z",
-      "updated": "2026-06-08T02:47:05Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "PACT: Learning Diverse Diagnostic Strategies via Privileged Synthesis and Branch Consensus",
-      "authors": [
-        "Gen Li",
-        "Yuanze Hu",
-        "Zhichao Yang",
-        "Qingchen Yu",
-        "Jianwei Lv",
-        "Yue Guo",
-        "Yujing Liu",
-        "Faguo Wu",
-        "Hongwei Zheng",
-        "Xiandong Li",
-        "Bo Yuan",
-        "Yifan Sun",
-        "Zhaoxin Fan"
-      ],
-      "abstract": "Clinical diagnosis requires flexible use of multiple reasoning paradigms under incomplete patient information. Existing LLM-based medical agents show strong medical reasoning ability, but single-paradigm or naively mixed dialogue supervision makes these paradigms difficult to learn without interference. We propose \\textbf{PACT} (Periodic Anchor Consensus Training), a framework that couples supervised multi-paradigm dialogue synthesis with consensus-based Branch training. At the data level, \\textbf{DPS} (Doctor-Patient-Supervisor) uses complete electronic medical records (EMRs) for quality control while keeping the doctor agent restricted to patient-visible information. This produces validated dialogues under four diagnostic reasoning paradigms without leaking hidden clinical answers. At the training level, PACT trains one paradigm-specific LoRA Branch per paradigm and periodically aggregates Branches into a shared Anchor through sign consensus. We further construct a dynamic multi-turn Chinese medical diagnosis benchmark for interactive consultation. Experiments show that PACT achieves state-of-the-art performance among compared proprietary, medical-specialized, and task-adapted baselines on diagnostic outcome and consultation-process metrics.",
-      "pdf_url": "https://arxiv.org/pdf/2606.08938v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.08938v1",
-      "published": "2026-06-08T02:34:12Z",
-      "updated": "2026-06-08T02:34:12Z",
-      "categories": [
-        "cs.CL",
         "cs.AI"
       ]
     }

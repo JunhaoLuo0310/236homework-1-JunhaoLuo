@@ -1,8 +1,136 @@
 {
-  "generated_at_utc": "2026-06-14T04:46:28.864260Z",
+  "generated_at_utc": "2026-06-15T05:02:16.037437Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "ClinHallu: A Benchmark for Diagnosing Stage-Wise Hallucinations in Medical MLLM Reasoning",
+      "authors": [
+        "Sicheng Yang",
+        "Hangjie Yuan",
+        "Wenjun Zhang",
+        "Jinwang Wang",
+        "Yichen Qian",
+        "Weihua Chen",
+        "Fan Wang",
+        "Lei Zhu"
+      ],
+      "abstract": "Building trustworthy medical multimodal large language models (MLLMs) is critical for reliable clinical decision support. Existing medical hallucination benchmarks mainly focus on data collection, but often ignore where hallucinations originate within the reasoning process. We find that hallucination sources vary across samples: errors may arise from visual misrecognition, incorrect medical knowledge recall, or flawed reasoning integration. To enable source-level hallucination diagnosis, we introduce ClinHallu, a benchmark for stage-wise hallucination diagnosis in medical MLLM reasoning. ClinHallu contains 7,031 validated instances, where each instance is augmented with a structured reasoning trace decomposed into Visual Recognition, Knowledge Recall, and Reasoning Integration. We also use stage-replacement interventions to measure how correcting specific stages affects the final answer. Beyond evaluation, we show that trace-supervised fine-tuning reduces stage-wise hallucinations. ClinHallu provides a fine-grained hallucination testbed for diagnosing and mitigating reasoning failures in medical MLLMs. The benchmark is publicly available at https://github.com/alibaba-damo-academy/ClinHallu.",
+      "pdf_url": "https://arxiv.org/pdf/2606.14697v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.14697v1",
+      "published": "2026-06-12T17:58:38Z",
+      "updated": "2026-06-12T17:58:38Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "The Self-Aware Body: A User-Centered Framework for Designing Therapeutic Sonic Interactions",
+      "authors": [
+        "Prithvi Ravi Kantan",
+        "Sofia Dahl",
+        "Erika G. Spaich"
+      ],
+      "abstract": "This chapter presents a framework for designing therapeutic sonic interaction technologies, with a focus on movement sonification: the real-time conversion of bodily motion into sound that serves as feedback during motor rehabilitation. Despite growing evidence for their effectiveness, technologies implementing movement sonification are yet to be systematically adopted as part of clinical practice, potentially due to a lack of standardized development methodologies as well as inadequate integration of clinical stakeholder perspectives into interaction design. The framework addresses these barriers through three interconnected contributions. The first is a conceptual reframing of the design task as the calibration of sonic variability to the perceptual affordances of the listener and the demands of the clinical context. The second is a practical design platform inspired by professional audio mixing workflows, which imposes a structured and learnable signal-flow architecture on the interaction design process and enables rapid iterative exploration. The third is a user-centered development methodology adapted from healthcare intervention science, which grounds design decisions in engagement with the clinicians and patients who will use the resulting systems. The HearWalk biofeedback system for hemiparetic gait rehabilitation illustrates the framework, and the chapter concludes by examining where large language models and AI tools can meaningfully assist each stage of this design process, as well as where human clinical and perceptual expertise remains irreplaceable.",
+      "pdf_url": "https://arxiv.org/pdf/2606.14664v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.14664v1",
+      "published": "2026-06-12T17:34:29Z",
+      "updated": "2026-06-12T17:34:29Z",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "S$^2$COPE: Self-Supervised Concept Discovery via Preference Learning",
+      "authors": [
+        "Shilong Xiang",
+        "Zirui Zhang",
+        "Chengzhi Mao"
+      ],
+      "abstract": "Current representation learning paradigms force a fundamental compromise: self-supervised methods scale to massive datasets but yield opaque features, whereas interpretable models remain bottlenecked by the need for dense human annotation. We introduce Self-Supervised Concept discOvery via Preference lEarning (\\model), a label-free framework that resolves this dilemma. Instead of treating Vision-Large-Language Models (VLLMs) as static feature extractors, \\model leverages them as active participants in a self-supervised preference optimization loop. By autonomously hypothesizing, validating, and reinforcing candidate visual attributes directly from raw imagery, our framework discovers novel, structured concepts without a single label. Extensive experiments across natural, medical, and physics domains demonstrate that \\model successfully extracts domain-specific concepts where standard VLLMs often fail to generate. By amortizing concept discovery directly into the VLLM backbone through our self-supervised preference objective -- rather than relying on static generation and disjoint filtering -- we achieve up to a 24-point absolute improvement in downstream top-1 classification accuracy on unseen data. Our work suggest that interpretability can emerge through a model's autonomous interaction with incidental visual structures, without any human supervision.",
+      "pdf_url": "https://arxiv.org/pdf/2606.14586v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.14586v1",
+      "published": "2026-06-12T16:02:44Z",
+      "updated": "2026-06-12T16:02:44Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Trust but Verify: Mitigating Medical Hallucinations via Post-Hoc Adversarial Auditing and Multi-Agent Feedback Loops",
+      "authors": [
+        "Muhammad Osama",
+        "Maheera Amjad",
+        "Zartasha Mustansar",
+        "Arslan Shaukat",
+        "Muhammad U. S. Khan"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly deployed in healthcare settings, yet their tendency to hallucinate poses risks when clinical decisions are involved. This study examine whether LLMs recommend recently banned or withdrawn pharmaceuticals when answering clinical questions and tests an agent-based method for reducing such errors. We developed a five-agent \"Trust but Verify\" system using a single LLM backbone. To measure regulatory knowledge obsolescence, we created an adversarial dataset of 103 clinical MCQs where historically correct answers now refer to banned substances. This scale ensures statistical significance across various therapeutic classes. We evaluated three open-access model families (GPT-OSS, Llama-3, Falcon-3) under vanilla and agentic conditions. Performance was measured via pointwise score, label accuracy, Hallucination Error Rate (HER), and Component Fidelity (CF) score. We also observed clinical safety regression in proprietary models. In default configurations, all models showed high hallucination rates, consistently selecting banned drugs that matched training data patterns. Our proposed agentic architecture reduced HER by approximately 53% across models. Pointwise scores shifted from -0.25 (unsafe recommendation) toward 0.0 (appropriate refusal). The safety audit intercepted dangerous outputs even when models' parametric knowledge favored the banned substance. The proposed multi-agent framework offers a model-agnostic method for enforcing regulatory compliance that prioritizes patient safety over fluent text generation. Our work demonstrates a practical approach for deploying autonomous AI systems in safety-critical healthcare settings. It shows how real-time regulatory data can be integrated into LLM pipelines to support clinical decision-making.",
+      "pdf_url": "https://arxiv.org/pdf/2606.14149v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.14149v1",
+      "published": "2026-06-12T06:21:19Z",
+      "updated": "2026-06-12T06:21:19Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Personal Care Utility: Health as Everyday Infrastructure",
+      "authors": [
+        "Mahyar Abbasian",
+        "Elahe Khatibi",
+        "Saba A. Farahani",
+        "Nitish Nagesh",
+        "Arshia Ilaty",
+        "Hooman Sajjadi",
+        "Amir Rahmani",
+        "Ramesh Jain"
+      ],
+      "abstract": "Healthcare is essential, expert, and episodic by design - built around the roughly one hour per year a person spends with a clinician. The 8,759 hours outside clinical settings, where eating, sleeping, movement, medication, and stress actually shape long-term health, have no comparable infrastructure. The bottleneck for personalized health is not raw data or reasoning capability; it is the absence of that infrastructure layer. This paper introduces the Personal Care Utility (PCU): a layered, event-driven architecture proposed as the missing utility for everyday health, in the way that payments, networks, and power are utilities for their domains. PCU organizes continuous personal signals into semantically meaningful life events through a Personicle, estimates dynamic health state against personal baselines, reasons about cause and context, and routes guidance through an orchestrator that separates clinical decision logic, behavioral strategy selection, and natural-language expression. This separation lets large language models support reasoning and communication while keeping safety-critical clinical decisions grounded in validated evidence. We instantiate PCU for Type 2 Diabetes - turning CGM, meal, activity, medication, sleep, stress, and clinical data into glycemic events, individualized state estimates, causal explanations, and knowledge-grounded interventions. A day-in-the-life scenario shows the same infrastructure producing real-time nudges, weekly summaries, medication check-ins, silence, or deterministic safety alerts depending on context and risk. We close with how PCU generalizes to other chronic conditions and the governance questions any always-on personal health utility must address. The result is a blueprint that treats personalization not as a final messaging layer, but as an architectural property of everyday health guidance.",
+      "pdf_url": "https://arxiv.org/pdf/2606.14145v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.14145v1",
+      "published": "2026-06-12T06:07:37Z",
+      "updated": "2026-06-12T06:07:37Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "MedLatentDx: Latent Multi-Agent Communication for Cross-Hospital Rare-Disease Diagnosis",
+      "authors": [
+        "Ziqing Wang",
+        "Lili Zhao",
+        "Kaize Ding"
+      ],
+      "abstract": "Rare diseases affect over $300$ million patients across more than $7{,}000$ conditions, yet no single hospital encounters enough cases of any one condition for reliable diagnosis. Cross-hospital collaboration could help by allowing a diagnosing institution to use distributed, case-specific diagnostic evidence, but privacy regulations restrict the transmission of identifiable clinical text across institutional boundaries. This setting raises two challenges: existing medical agent systems often rely on textual evidence exchange, while raw latent states such as hidden states and KV caches may still reveal prompt-derived clinical content. We introduce MedLatentDx, a latent multi-agent communication framework in which hospital agents keep private clinical records and retrieved cases local, and send compact latent KV blocks to a host agent for rare-disease diagnosis. MedLatentDx supports two deployment settings: same-backbone hospital agents use latent KV distillation, while hospitals with different LLM backbones use cross-family latent alignment. On CrossRare-Bench, a self-built large-scale rare-disease benchmark with hospital-level partitions, MedLatentDx improves cross-hospital diagnostic performance while reducing reconstructable clinical content relative to raw-latent communication baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2606.13945v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.13945v1",
+      "published": "2026-06-11T22:11:25Z",
+      "updated": "2026-06-11T22:11:25Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Can Post-Training Turn LLMs into Good Medical Coders? An Empirical Study of Generative ICD Coding",
+      "authors": [
+        "Ziqing Wang",
+        "Weihao Li",
+        "Shijie Chen",
+        "Yuan Luo",
+        "Kaize Ding"
+      ],
+      "abstract": "Automated International Classification of Diseases (ICD) coding is a core medical-coding task for billing, epidemiology, and clinical decision support. Generative large language models (LLMs) are often reported as weak medical coders, but this finding mainly comes from inference-time settings such as prompting, retrieval, reranking, or tool use, leaving the role of task-specific post-training underexplored. We present a controlled empirical study of post-training for generative ICD coding, comparing discriminative baselines with LLM coders across prompting, supervised fine-tuning, and reinforcement learning under a common protocol and metric set. To our knowledge, this is the first study to evaluate RL-based post-training for generative LLM coders in ICD coding. We further introduce PHI, a diagnostic curriculum that extends GRPO to refine missed-code cases. Our results show that prompting-only evaluation substantially underestimates the potential of LLMs for ICD coding. SFT provides the main capability jump, GRPO further improves code-set prediction beyond SFT, and PHI provides targeted gains on macro-level performance. These findings suggest that the main bottleneck is not the generative formulation alone, but how the model is adapted and optimized for full-taxonomy recall. We release our code, data splits, and checkpoints at https://github.com/AlexandreWANG915/LLM4ICD.",
+      "pdf_url": "https://arxiv.org/pdf/2606.13940v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.13940v1",
+      "published": "2026-06-11T22:04:50Z",
+      "updated": "2026-06-11T22:04:50Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "ArogyaSutra: A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages",
       "authors": [
@@ -171,147 +299,6 @@
       "updated": "2026-06-10T15:52:24Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Skill-Augmented AI Agents for Medical Research Analysis: An Exploratory Multi-Model Human Evaluation in an NSCLC Transcriptomic Biomarker Task",
-      "authors": [
-        "Qianyu Yao",
-        "Fei Sun",
-        "Bocheng Huang",
-        "Wei Chen",
-        "Jiarui Jiang",
-        "Shu Quan",
-        "Yifei Chen",
-        "Wenjie Xu",
-        "Bo li",
-        "Liping Su",
-        "Ruoqiong Wu",
-        "Huhai Hong",
-        "Huimei Wang"
-      ],
-      "abstract": "Background. Large language models and AI agents are increasingly used to support biomedical research, but native model outputs may omit key analytical steps, misuse methods, or overstate conclusions. We evaluated whether autonomous access to a medical research skill package was associated with higher-quality AI-generated transcriptomic research-analysis outputs compared with native AI without skills. Methods. We conducted an exploratory multi-model human evaluation using a non-small cell lung cancer immunotherapy biomarker task. Six model backbones were tested. The evaluation included 21 anonymized outputs: 9 native-AI outputs and 12 skill-augmented outputs generated through an AI agent implementation represented by OpenClaw. Four non-expert biomedical reviewers and two blinded experts evaluated each output, with two ratings from each reviewer type. The primary outcome was expert-rated overall quality. Results. Skill-augmented outputs showed directionally higher expert overall quality than native-AI outputs (mean 5.50 vs 5.11; difference=0.39; bootstrap 95\\% CI, -0.04 to 0.90; Welch p=0.156). Non-expert reviewer quality showed the same direction (mean 4.72 vs 4.47; difference=0.26; bootstrap 95\\% CI, -0.25 to 0.80; Welch p=0.373). Expert agreement was limited (single-rating ICC=-0.15), and model-specific effects were descriptive and heterogeneous. Conclusions. Autonomous skill access showed a directional quality signal in this exploratory sample, but the signal was smaller than expert-rating noise and should not be interpreted as confirmatory evidence. The findings primarily motivate larger evaluations of skill-augmented AI agents with stronger reliability controls, platform replication, and biological-validity assessment.",
-      "pdf_url": "https://arxiv.org/pdf/2606.11830v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.11830v1",
-      "published": "2026-06-10T09:13:10Z",
-      "updated": "2026-06-10T09:13:10Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Lung-R1: A Knowledge Graph-Guided LLM for Pulmonary Diagnostic Reasoning",
-      "authors": [
-        "Haoyang Zeng",
-        "Yuanxi Fu",
-        "Rongzhen Li",
-        "Yuming Yang",
-        "Xiao Sun",
-        "Jingwang Huang",
-        "Gujie Shao",
-        "Guohui Xiang",
-        "Quan Lu",
-        "Dongfan Ye",
-        "Xuetao Chen",
-        "Jiang Zhong",
-        "Kaiwen Wei",
-        "Zhi Xu"
-      ],
-      "abstract": "Diagnosing pulmonary diseases requires integrating heterogeneous evidence amid phenotypic variability and cross-disease overlap. Although large language models (LLMs) have shown progress on pulmonary knowledge question answering (QA) and information-processing tasks, reliable pulmonary diagnosis requires patient-specific, relation-aware reasoning over electronic medical record (EMR) evidence rather than isolated knowledge recall. We define this gap between pulmonary knowledge and case-level diagnostic reasoning as the Pulmonary Knowledge-to-Diagnosis Gap. To address it, we introduce LungKG, the first structured pulmonary knowledge graph for diagnostic knowledge organization and record-grounded reasoning. LungKG contains 59,038 nodes and 164,308 edges across 15 entity types and 112 relation types, serving as both a reusable pulmonary knowledge resource and the foundation for LungKG-guided model adaptation. Built on LungKG, we propose Lung-R1, a LungKG-guided pulmonary LLM trained through KG-constrained reasoning-chain construction and KG-guided reinforcement learning. In a 20-system evaluation, Lung-R1-14B achieves state-of-the-art performance across Choice, Pulmonary-QA, and EMR Diagnosis, reaching an EMR Diagnosis score of 4.3583 and surpassing the strongest non-Lung-R1 baseline by 0.1476 points. These results demonstrate the value of LungKG-guided training for EMR-based pulmonary diagnosis.",
-      "pdf_url": "https://arxiv.org/pdf/2606.11675v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.11675v1",
-      "published": "2026-06-10T05:39:08Z",
-      "updated": "2026-06-10T05:39:08Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Recalling Too Well: Sycophancy Evaluation and Mitigation in Memory-Augmented Models",
-      "authors": [
-        "Shelly Bensal",
-        "Axel Magnuson",
-        "Aparna Balagopalan",
-        "Daniel M. Bikel"
-      ],
-      "abstract": "Persistent memory systems promise to make LLMs more helpful by storing user beliefs over time. We show they also make models less correct by systematically amplifying sycophancy, wherein models prioritize agreement with users over accuracy. We conduct the first systematic evaluation of this effect, introducing MIST: a benchmark of synthetically generated multi-turn conversations where users express plausible misconceptions in scientific, medical, and moral reasoning domains. Testing across three state-of-the-art memory systems and five model families reveals that memory amplifies sycophantic behavior across all conditions, with up to 25x higher sycophancy rates than in-context baselines. Error analyses suggest memory extraction as the primary culprit: lossy compression into discrete snippets encodes user misconceptions while discarding corrective context. Based on these results, we propose two lightweight mitigations that substantially reduce sycophancy while matching or exceeding memory systems at factual recall.",
-      "pdf_url": "https://arxiv.org/pdf/2606.10949v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.10949v1",
-      "published": "2026-06-09T14:53:32Z",
-      "updated": "2026-06-09T14:53:32Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Dep-LLM: Training-Free Depression Diagnosis via Evidence-Guided Structured Multi-factor with Reliable LLM Reasoning",
-      "authors": [
-        "Yiqing Lyu",
-        "Xianbing Zhao",
-        "Buzhou Tang",
-        "Ronghuan Jiang"
-      ],
-      "abstract": "Automatic Depression Detection (ADD) from clinical interviews is a pivotal task in computational mental health, yet it remains challenging due to two critical obstacles: 1) difficulty in modeling complex but sparsely distributed depression clues within lengthy, multi-topic clinical interviews, leading to superficial and unreliable reasoning; 2) scarcity of labeled data due to clinical privacy, together with high cost of training and fine-tuning, limiting the deployment of supervised ADD systems. To jointly address these challenges, we propose Dep-LLM, a training-free framework that mirrors the step-by-step reasoning of clinical psychiatrists and operates entirely on frozen off-the-shelf foundation LLMs. Dep-LLM comprises three stages. First, a Chain-of-Thought (CoT) Depression Multi-factor Analysis module structurally decomposes the long dialogue into five clinically aligned themes and produces evidence-grounded rationales, effectively handling long-context dependencies. Second, we introduce Confidence Analysis and Modulation module that quantifies the epistemic reliability from token-level entropy of each rationale and applies an intra-label and inter-theme modulation that amplifies trustworthy signals while suppressing uncertain ones without extra training. Third, a Collaborative Multi-factor Prediction module dynamically integrates multi-factor signals weighted by confidence into the final diagnosis. Extensive experiments on the DAIC-WOZ and E-DAIC datasets demonstrate the effectiveness and generalizability of Dep-LLM: it surpasses zero-shot baseline on nearly all 21 foundation LLMs across 9 metrics such as accuracy, macro F1 and weighted-average F1, and further outperforms state-of-the-art supervised domain-specific LLMs as well as the latest closed-source commercial LLMs, while requiring no extra training.",
-      "pdf_url": "https://arxiv.org/pdf/2606.10796v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.10796v1",
-      "published": "2026-06-09T12:44:12Z",
-      "updated": "2026-06-09T12:44:12Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MetaPlate: Counterfactual-Guided RAG-LLM Tool for Personalized Food Recommendation and Hyperglycemia Prevention",
-      "authors": [
-        "Asiful Arefeen",
-        "Carol Johnston",
-        "Hassan Ghasemzadeh"
-      ],
-      "abstract": "Postprandial hyperglycemia is a key risk factor for metabolic disorders; however, existing dietary guidance is often static, impractical, and insufficiently personalized, providing recommendations that are difficult to follow or not impactful. While recent advances leverage continuous glucose monitoring (CGM) and machine learning to predict glycemic responses, these approaches are largely predictive and lack actionable guidance. Moreover, recommendation systems are often misaligned with user goals and require extensive input. We present MetaPlate, a counterfactual explanation (CF) guided, context-aware decision-support framework that generates personalized meal recommendations to mitigate postprandial glucose excursions in healthy adults. MetaPlate integrates multimodal data, including CGM readings, wearable-derived physiological signals, and user-provided meal inputs from $25$ individuals to model pre-meal context. A machine learning model predicts glucose response, while a CF optimization module adjusts meal composition modifying macronutrient amounts to maintain glucose levels within a target range ($\\leq 140$ mg/dL). An LLM-based retrieval-augmented generation (RAG) layer enhances interpretability by producing human-readable recommendations using constrained search of the USDA food database. We evaluate MetaPlate via a structured expert-in-the-loop assessment with registered dietitians (RDs), comparing performance before and after prompt refinement. Results show improvements in meal realism, portion suitability, and recommendation likelihood, with expert feedback indicating a shift from clinically implausible outputs to actionable, contextually appropriate recommendations. Our findings emphasize the importance of domain knowledge and structured constraints in LLM-driven systems and highlight the potential of MetaPlate as a real-time personalized dietary decision-support tool.",
-      "pdf_url": "https://arxiv.org/pdf/2606.10120v2",
-      "arxiv_url": "https://arxiv.org/abs/2606.10120v2",
-      "published": "2026-06-08T19:52:08Z",
-      "updated": "2026-06-10T02:51:13Z",
-      "categories": [
-        "cs.IR",
-        "cs.AI",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Deterministic Integrity Gates for LLM-Assisted Clinical Manuscript Preparation: An Auditable Biomedical Informatics Architecture",
-      "authors": [
-        "Yoojin Nam",
-        "Jinhoon Jeong",
-        "Namkug Kim"
-      ],
-      "abstract": "As autonomous research agents and AI co-scientist systems push large language models (LLMs) from drafting toward end-to-end manuscript production, the bottleneck shifts from generation to verification. Fluent LLM output can hide fabricated citations, numbers that drift from source tables, and unmet reporting-guideline items; existing tools generate without verifying, and self-critique inherits the blind spots that produce confident fabrication. We describe an architecture pairing generation with verification, resting on three principles: decompose the workflow into self-contained skills, gate every stage transition with halt-on-failure, and resolve each integrity question with the cheapest sufficient mechanism, a deterministic, re-executable check where one suffices and a prose-level probe only where interpretation is unavoidable. This determinism-where-possible split, organized as an integrity-gate taxonomy, is the core contribution. It is realized as MedSci Skills, an open-source toolkit of 43 skills with a 21-detector deterministic tier, evaluated on three public-dataset pipelines (STARD, PRISMA, STROBE) and a seeded-defect ablation. Across the three pipelines every content-hash manifest verified clean and the gates surfaced real defects; on 27 identical injected defects the deterministic gates detected all 27 with no false positives on the matched clean fixtures, whereas a single-prompt LLM reviewer detected 11, its misses in code, bibliography, and style defects the prose hides. Determinism-where-possible verification yields an auditable, re-executable trail that exposes the evidence a human needs to check an LLM-assisted manuscript: feasibility and reproducibility evidence, not a claim of human-competitive quality, which a separate blinded study addresses. MedSci Skills is MIT-licensed and archived (v3.8.0).",
-      "pdf_url": "https://arxiv.org/pdf/2606.09500v3",
-      "arxiv_url": "https://arxiv.org/abs/2606.09500v3",
-      "published": "2026-06-08T13:51:04Z",
-      "updated": "2026-06-11T11:46:34Z",
-      "categories": [
-        "cs.AI",
-        "cs.DL"
-      ]
-    },
-    {
-      "title": "LLM-Orchestrated Conformance Checking in Stroke Care Without Computer-Interpretable Guidelines",
-      "authors": [
-        "Giorgio Leonardi",
-        "Stefania Montani",
-        "Manuel Striani",
-        "Alessandro Canessa",
-        "Delfina Ferrandi"
-      ],
-      "abstract": "Objective: Conformance checking in healthcare seeks to assess whether patient care pathways adhere to clinical guidelines. However, its practical application often depends on the availability of formal, machine-interpretable representations of guidelines, such as Computer-Interpretable Guidelines (CIGs), which are seldom available in real-world clinical settings.\n  Methods: This work introduces a modular framework based on the orchestration of Large Language Models (LLMs) to support medical conformance checking directly from unstructured clinical and guideline texts, without requiring predefined CIGs. The proposed architecture integrates multiple LLMs and supporting components to extract patient traces from clinical discharge letters, identify normative rules from textual clinical guidelines, translate these rules into executable scripts, and compute a Trace Conformance Indicator to quantify compliance within the event log.\n  Results: The framework was implemented and evaluated in the stroke care domain at the neurological ward of Alessandria Hospital. Hundreds of patient traces were automatically extracted from hospital data and assessed against 50 rules derived from the reference guideline. The analysis showed that more than 86\\% of the available traces were conformant.\n  Conclusion: The results demonstrate the feasibility of using orchestrated LLMs for practical healthcare conformance analysis. At the same time, the study provides evidence of a high level of adherence to stroke care guidelines at Alessandria Hospital.",
-      "pdf_url": "https://arxiv.org/pdf/2606.09489v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.09489v1",
-      "published": "2026-06-08T13:44:03Z",
-      "updated": "2026-06-08T13:44:03Z",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]

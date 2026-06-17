@@ -1,307 +1,301 @@
 {
-  "generated_at_utc": "2026-06-16T05:05:17.811946Z",
+  "generated_at_utc": "2026-06-17T04:46:54.192954Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
     {
-      "title": "Compositional Reasoning Depth Predicts Clinical AI Failure: Empirical Evidence Consistent with Transformer Compositionality Limits in Electronic Health Record Question Answering",
+      "title": "RubricsTree: Scalable and Evolving Open-Ended Evaluation of Personal Health Agents across Health Memory and Medical Skills",
       "authors": [
-        "Sanjay Basu"
+        "Weizhi Zhang",
+        "Zechen Li",
+        "Hamid Palangi",
+        "Ben Graef",
+        "A. Ali Heydari",
+        "Simon A. Lee",
+        "Salman Rahman",
+        "Ray Luo",
+        "Zeinab Esmaeilpour",
+        "Erik Schenck",
+        "Chloe Zhang",
+        "Yamin Li",
+        "Menglian Zhou",
+        "Philip S. Yu",
+        "Daniel McDuff",
+        "Lindsey Sunden",
+        "Mark Malhotra",
+        "Shwetak Patel",
+        "Ahmed A. Metwally"
       ],
-      "abstract": "Aggregate accuracy benchmarks conceal a systematic structure in how large language models fail at electronic health record (EHR) question answering: questions requiring more inferential steps produce disproportionately more errors. Motivated by theoretical results on transformer compositionality limits, we introduce a pre-specified hop-count taxonomy -- the number of distinct reasoning steps required to answer a clinical question from an EHR -- as a principled predictor of model failure. We annotate 313 clinician-generated MedAlign EHR question-answer pairs across four hop levels and evaluate 301 questions in a within-model ablation (claude-sonnet-4-6, zero-shot vs. extended thinking) and cross-architecture replications (gpt-4o and gpt-5.4-2026-03-05, zero-shot). All three models, spanning two providers and two OpenAI generations (GPT-4 and GPT-5), show monotone accuracy decline with hop count: Claude Sonnet zero-shot falls from 30.6% (hop=1) to 17.6% (hop=4) (Cochran-Armitage z=-2.30, p=0.011; OR per hop 0.72, 95% CI [0.56,0.92], p=0.008); GPT-4o replicates this (37.8% to 14.7%; OR 0.58 [0.45,0.75], p<0.001); and gpt-5.4-2026-03-05 confirms it (37.8% to 23.5%; OR 0.80 [0.66,0.98], p=0.027). A pre-specified context-sufficiency audit shows higher-hop questions are not differentially disadvantaged by EHR truncation (answerability 93-95% at hops 2-4 vs. 79% at hop=1), so the decline reflects compositional reasoning difficulty. Extended thinking did not significantly flatten the accuracy-depth curve across three reasoning conditions, and thinking-token usage scaled with hop count (r=0.31, p<0.0001), consistent with the predicted O(k) computational requirement. Hop count is thus a theory-motivated, cross-architecture predictor of large-language-model error on EHR question answering, with direct implications for deployment risk stratification of clinical AI.",
-      "pdf_url": "https://arxiv.org/pdf/2606.16890v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.16890v1",
-      "published": "2026-06-15T16:00:27Z",
-      "updated": "2026-06-15T16:00:27Z",
+      "abstract": "The LLM-empowered personal health agents with user health (sensor) metrics have offered a promising pathway to alleviate global disparities in healthcare access. However, large-scale clinical deployment remains constrained by an open-ended evaluation bottleneck: physician annotation is reliable but costly and unscalable, while LLM-as-a-judge evaluators are scalable but subjective, inconsistent, and sometimes clinically misaligned. We introduce RubricsTree, a scalable evaluation framework with an expert-aligned hierarchical taxonomy of over 100 atomic, clinically-verifiable Boolean rubrics, evolving from the insights of 4,000 real user queries through an iterative human-in-the-loop curation protocol with an expertise panel led by an experienced physician. A context-aware adaptive router activates only the relevant auto-weighted rubric subset per query, providing the throughput needed for scalable evaluation with expert-aligned quality. Through a systematic meta-evaluation, we show that RubricsTree (i) substantially exceeds a strong large-scale evaluation baseline in expert alignment on challenging open-ended queries; (ii) reliably penalizes contextually degraded responses; and (iii) when used as structured instructions, text feedback, or training rewards for performance optimization, yields up to ~66% relative gains on HealthBench for Gemini, GPT, and Qwen model families. RubricsTree thus provides a scalable, auditable, and evolving evaluation infrastructure required for the continuous optimization of product-level personal healthcare AI.",
+      "pdf_url": "https://arxiv.org/pdf/2606.18203v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.18203v1",
+      "published": "2026-06-16T17:34:53Z",
+      "updated": "2026-06-16T17:34:53Z",
       "categories": [
         "cs.CL",
         "cs.AI"
       ]
     },
     {
-      "title": "LLM-Based Visual Explanation Evaluation Framework for Assessing the Explainability of Facial Skin Disease Classification Models",
+      "title": "WEQA: Wearable hEalth Question Answering with Query-Adaptive Agentic Reasoning",
       "authors": [
-        "Gyuyeon Na"
+        "Yuwei Zhang",
+        "Tong Xia",
+        "Bianca Emmerich",
+        "Yu Yvonne Wu",
+        "Dimitris Spathis",
+        "Xin Liu",
+        "Daniel McDuff",
+        "Cecilia Mascolo"
       ],
-      "abstract": "This study proposes a domain-specific LLM-based Visual Explanation Evaluation Framework for assessing Grad-CAM explanations in facial skin disease diagnosis models. While previous studies have primarily focused on improving classification performance through data augmentation techniques, relatively few studies have systematically examined whether model explanations are grounded in clinically relevant lesion regions.\n  In this study, geometric augmentation, color-based augmentation, and mixed augmentation strategies were applied to facial skin disease classification models based on EfficientNet-B0, MobileNetV3, and ResNet18. Grad-CAM was employed to generate visual explanations representing the models' decision-making processes. Furthermore, an LLM-as-a-Judge evaluation framework was designed using GPT-5.5, Gemini 3.5 Flash, and Claude Sonnet 4.6 to assess Grad-CAM explanations from the perspectives of lesion localization and explanation trustworthiness. To improve evaluation consistency and clinical grounding, a progressive prompt engineering strategy was introduced, incorporating evaluation rubrics, clinical knowledge, penalty rules, and structured output formats.",
-      "pdf_url": "https://arxiv.org/pdf/2606.16794v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.16794v1",
-      "published": "2026-06-15T14:37:14Z",
-      "updated": "2026-06-15T14:37:14Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "AgentFairBench: Do LLM Agents Discriminate When They Act?",
-      "authors": [
-        "Triveni Morla",
-        "Rohith Reddy Bellibaltu",
-        "Manpreet Singh",
-        "Manmeet Singh Kapoor"
-      ],
-      "abstract": "Large language model (LLM) agents increasingly take actions (screening applicants, recommending credit, triaging patients), yet fairness for LLMs is still measured by grading answers. We introduce AgentFairBench, a cheap, reproducible, multi-domain benchmark for demographic disparity in the actions of LLM agents. Grounded in a companion framework, the Bias Conduction Framework (BCF, restated here), it spans three regulator-anchored domains: hiring, lending, and medical triage. Synthetic, demographic-neutral profiles are evaluated in counterfactual matched sets that vary only a name-coded race x gender signal (in the Bertrand Mullainathan tradition), under four agent scaffolds of increasing agency (direct, chain-of-thought, multi-agent deliberation, tool-augmented). A NumPy-only harness computes counterfactual flip rate, mean absolute score difference (MASD), action-rate disparity, and tool-invocation disparity, with bootstrap confidence intervals, paired tests, and false-discovery-rate control, for single-digit dollars per model. A live leaderboard with a held-out private split and a contamination canary admits external models by submission. Our pilot (864 decisions plus a test-retest replication) carries a methodological lesson: comparing a six-group score spread against a two-run noise difference overstates disparity by ~ 2.4X through statistic arity alone. Against an arity matched noise floor and an omnibus group test, claude haiku 4 5 shows no demographic effect above sampling noise (0 of 120 pairwise and 0 of 9 omnibus contrasts survive correction); a planted-bias test confirms the instrument detects disparity when present. The contribution is a sound, sensitive, adoption-ready instrument, the arity matched null methodology, and open artifacts to scale it. Code, data, and harness are released under open licenses, with an anonymized review artifact.",
-      "pdf_url": "https://arxiv.org/pdf/2606.16723v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.16723v1",
-      "published": "2026-06-15T13:50:26Z",
-      "updated": "2026-06-15T13:50:26Z",
+      "abstract": "Language models are remarkably capable at medical question answering, in some cases surpassing the accuracy of general physicians. However, answering questions about wearable health data remains challenging and understudied, as these ubiquitous sensors produce continuous, high-dimensional, and longitudinal data, which is non-trivial to align with text-centric distributions in LLM pretraining. The diversity of sensor modalities and user intents cannot be effectively handled by a fixed reasoning workflow or a single pretrained foundation model. To address these challenges, we propose WEQA, a query-adaptive agent framework that unifies LLM reasoning with specialized wearable analytical and modeling tools. An LLM controller is employed to synthesize execution plans and dynamically route each query to the appropriate combination of sensor analysis and pretrained models, and perform grounded response auditing with external knowledge. We also curate a benchmark spanning four open wearable datasets comprising analytic and predictive tasks in three different health domains. Experiments show that our framework is 24% more accurate than LLM and agentic baselines, and a blinded study with 12 medical experts and 8 users shows substantial gains in usefulness and clinical soundness.",
+      "pdf_url": "https://arxiv.org/pdf/2606.18147v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.18147v1",
+      "published": "2026-06-16T16:45:56Z",
+      "updated": "2026-06-16T16:45:56Z",
       "categories": [
         "cs.AI"
       ]
     },
     {
-      "title": "Misinformation Propagation in Benign Multi-Agent Systems",
+      "title": "Towards Understanding and Measuring COGNITIVE ATROPHY in LLM Behaviour",
       "authors": [
-        "Jonas Becker",
-        "Jan Philip Wahle",
-        "Terry Ruas",
-        "Bela Gipp"
+        "Abeer Badawi",
+        "Moyosoreoluwa Olatosi",
+        "Negin Baghbanzadeh",
+        "Laleh Seyyed-Kalantari",
+        "Frank Rudzicz",
+        "R. Shayna Rosenbaum",
+        "Sara Pishdadian",
+        "Elham Dolatabadi"
       ],
-      "abstract": "Multi-agent systems, in which multiple large language model agents solve problems through turn-based interaction, are increasingly deployed in high-stakes settings such as medical diagnosis, legal analysis, and forensic decision-making. Their reliability can be at risk when single agents reason from incorrect or misleading context, e.g., from tool calls, since errors may propagate through agent interactions. This work studies this risk by injecting intent-based misinformation into benign single-agent and multi-agent systems across reasoning, knowledge, and alignment tasks. We find that misinformation can degrade single-agent performance and persists across multi-agent debate, with agents often retaining answers introduced by misinformed peers. Nevertheless, multi-agent debate reduces the resulting performance degradation compared to single-agent prompting, especially when most agents are not exposed to misinformation. Robustness depends on group composition and decision protocol. Consensus can be more stable than voting under peer pressure, while majorities can often steer misinformed agents back toward correct answers. Our results show that misinformation robustness in multi-agent systems depends on the underlying model and also on how agents exchange information and aggregate decisions.",
-      "pdf_url": "https://arxiv.org/pdf/2606.16710v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.16710v1",
-      "published": "2026-06-15T13:40:01Z",
-      "updated": "2026-06-15T13:40:01Z",
+      "abstract": "Recent incidents involving LLMs used for mental-health support reveal a critical evaluation gap: surface-level safety scores do not capture how models behave across realistic, emotionally sensitive interactions over time. Existing benchmarks measure knowledge, safety, or static response quality, but miss whether LLM interactions help users keep reflecting, coping, and making decisions themselves. We formalize this missing dimension as COGNITIVE ATROPHY, a process-level behavioural measure in AI-mediated mental-health support distinct from safety and helpfulness. To measure it, we introduce COGNITIVE ATROPHY BENCH, a clinically grounded benchmark built from 1,576 fully human-generated counseling conversations, 15,680 turns, and 42,230 responses from five LLMs. Three clinical and neuropsychology experts developed a 20-attribute schema spanning user context, response behaviour, and global risk flags; six trained clinical reviewers applied it with span-grounded evidence, producing 5,324 reviewer judgments. We further introduce the User-Input Risk Index (UIRI), the Cognitive Atrophy Risk Index (ARI), and trajectory summaries. Across five LLMs, models show a consistent moderate-to-high level of atrophy-aligned behaviour across single and multi-turn settings. While models generally respond to overt safety cues, they adapt less reliably when users seek solutions or decisions. The dominant recurring patterns are directive advice, problem-solving, recommendation responses, topic shifts, and forms of validation that may reinforce dependence rather than reflection. Our work makes COGNITIVE ATROPHY measurable and provides a foundation for auditing model behaviour in sensitive LLM conversations.",
+      "pdf_url": "https://arxiv.org/pdf/2606.18129v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.18129v1",
+      "published": "2026-06-16T16:26:12Z",
+      "updated": "2026-06-16T16:26:12Z",
       "categories": [
-        "cs.MA",
-        "cs.CL"
+        "cs.HC",
+        "cs.AI"
       ]
     },
     {
-      "title": "Unified Multimodal Model for Brain MRI Imputation and Understanding",
+      "title": "Agentic AI-based Framework for Mitigating Premature Diagnostic Handoff and Silent Hallucination in Healthcare Applications",
       "authors": [
-        "Zhiyun Song",
-        "Che Liu",
-        "Tian Xia",
-        "Avinash Kori",
-        "Wenjia Bai"
+        "Divyansh Srivastava",
+        "Shreya Ghosh",
+        "Anshul Verma",
+        "Rajkumar Buyya"
       ],
-      "abstract": "Multimodal large language models (MLLMs) hold great potential for medicine, as they inherit knowledge from LLM and allow multiple data modalities to be integrated, analysed and interpreted in natural language. However, the field of medical MLLMs is constrained by non-trivial challenges, notably the scarcity of high-quality training data and the frequent occurrence of missing data in the real-world clinical setting. Here, we propose a novel unified multimodal model, UniBrain, for brain magnetic resonance image (MRI) analysis. To address potential missing brain MRI modalities, we employ a unified training strategy to perform joint imaging modality imputation and brain image understanding. During training, an interleaved and description-enriched data flow is constructed to train the model in an autoregressive manner, enabling medical reasoning with generated multimodal data. A self-alignment strategy is introduced to leverage dense image embeddings to learn fine-grained anatomical features without requiring detailed image captions. Furthermore, we propose a dynamic hidden state mechanism to alleviate the exposure bias during long-context multimodal inference. Extensive experiments on multi-disease brain MRI dataset demonstrate that UniBrain achieves high performance for brain image imputation, understanding, and disease diagnosis under various extents of modality incompleteness.",
-      "pdf_url": "https://arxiv.org/pdf/2606.16484v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.16484v1",
-      "published": "2026-06-15T09:51:00Z",
-      "updated": "2026-06-15T09:51:00Z",
+      "abstract": "Recent advances in Large Language Models (LLMs) and multi-agent systems have driven the rise of Agentic AI, showing promise for medical reasoning. However, open-ended conversational agents remain prone to two critical failure modes: premature diagnostic handoff and silent clinical hallucinations that may go undetected before reaching the patient. In this work, we propose a multi-agent framework that addresses both issues by replacing ``LLM-as-a-judge'' routing with deterministic orchestration constraints. The framework incorporates two safety mechanisms. First, a neuro-symbolic state-tracking gate enforces completeness of the OLDCARTS clinical protocol (Onset, Location, Duration, Character, Aggravating/Alleviating factors, Radiation, Timing, and Severity) by blocking diagnostic transitions until all required dimensions are collected. Second, an epistemic uncertainty quantification (UQ) gate computes semantic entropy (H) across K=5 independent diagnostic samples to identify and intercept divergent outputs before delivery.\n  We evaluate the system using simulated patient agents powered by the llama-3.1-70b-instruct model on 150 test cases. The full architecture achieves 49.3% diagnostic precision, representing an absolute improvement of 11.3 percentage points over an unconstrained baseline. Additionally, we observe a statistically significant negative correlation (r = -0.181, p < 0.05) between OLDCARTS completeness (\u03c3) and semantic entropy (H), suggesting that structured information gathering is associated with reduced diagnostic uncertainty.",
+      "pdf_url": "https://arxiv.org/pdf/2606.18068v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.18068v1",
+      "published": "2026-06-16T15:39:19Z",
+      "updated": "2026-06-16T15:39:19Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "When LLMs Analyze Scars: From Images to Clinically-Meaningful Features",
+      "authors": [
+        "Ruman Wang",
+        "Hangting Ye"
+      ],
+      "abstract": "Medical image classification faces a fundamental dilemma: while deep learning models achieve remarkable performance at scale, real-world clinical scenarios often suffer from severe data scarcity due to annotation costs, privacy constraints, and disease rarity. This challenge is particularly pronounced in pathological scar classification, where differentiating keloids from hypertrophic scars requires subtle expert knowledge and labeled images are extremely limited. We propose a novel paradigm that repositions large language models (LLMs) as knowledge-driven feature engineers rather than end-to-end classifiers. We call this framework ScaFE (Scar Feature Engineering). Our key insight is that LLMs encode rich medical knowledge that can be externalized as executable feature extraction code, enabling the transformation of high-dimensional images into low-dimensional, clinically interpretable representations. Specifically, we prompt an LLM with established scar assessment criteria to generate deterministic Python code that extracts features aligned with clinical scoring systems such as the Vancouver Scar Scale. Our approach offers three key advantages: (1) data efficiency, achieving robust performance with limited training samples by decoupling knowledge acquisition from statistical learning; (2) privacy preservation, as raw images are processed locally without exposure to external LLMs; and (3) interpretability, through explicit features grounded in clinical reasoning. Extensive experiments on scar classification demonstrate that our method consistently outperforms end-to-end deep learning baselines or using LLMs as black-box classifiers under limited data conditions, establishing a promising direction for integrating LLMs into data-efficient and clinically transparent medical AI systems.",
+      "pdf_url": "https://arxiv.org/pdf/2606.18063v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.18063v1",
+      "published": "2026-06-16T15:38:06Z",
+      "updated": "2026-06-16T15:38:06Z",
       "categories": [
         "cs.CV",
         "cs.AI",
-        "cs.MM"
-      ]
-    },
-    {
-      "title": "Medical Heuristic Learning: An LLM-Driven Framework for Interpretable and Auditable Clinical Decision Rules",
-      "authors": [
-        "Wei Xu",
-        "Ke Yang",
-        "Gang Luo",
-        "Keli Zheng",
-        "Lingyan Hu",
-        "Jing Wang",
-        "Kefeng Li"
-      ],
-      "abstract": "Predictive modeling for clinical tabular data is central to clinical decision support and therefore requires not only strong predictive performance but also transparent decision logic. Although deep learning and tree-based ensemble methods can achieve high accuracy, their black-box nature remains a major obstacle to clinical deployment. This challenge is further compounded by common characteristics of medical data, including limited sample sizes, severe class imbalance, and feature evolution arising from changes in diagnostic criteria and clinical documentation. To address these issues, we propose Medical Heuristic Learning (MHL), an instantiation of the learning-beyond-gradients paradigm for clinical tabular prediction. Instead of relying on neural network weight updates, MHL uses a large language model (LLM)-driven workflow that integrates statistical probes, medical knowledge probes, rule synthesis, and code-level iterative refinement to optimize a deterministic and executable decision system. The resulting model is expressed not as opaque parameters, but as versioned pure-Python decision rules that are explicitly interpretable, fully auditable, and clinically grounded. MHL also supports continual learning by starting from previously validated rules and iteratively revising them using updated feature information under data drift or feature evolution. Comprehensive experiments on medical datasets show that MHL achieves performance comparable to state-of-the-art methods while maintaining strong behavior in small-sample and highly imbalanced settings. The results further indicate that this explicit rule update mechanism can help alleviate catastrophic forgetting under feature evolution. Overall, these findings suggest that non-gradient-based heuristic systems offer a transparent and adaptable alternative for high-stakes clinical decision support.",
-      "pdf_url": "https://arxiv.org/pdf/2606.16337v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.16337v1",
-      "published": "2026-06-15T07:43:06Z",
-      "updated": "2026-06-15T07:43:06Z",
-      "categories": [
-        "cs.AI",
-        "cs.HC",
         "cs.LG"
       ]
     },
     {
-      "title": "Embedded Arena: Iterative Optimization via Hardware Feedback",
+      "title": "AI-based Cognitive-linguistic Features for Dementia Assessment in Picture Description",
       "authors": [
-        "Zhihan Zhang",
-        "Alexander Le Metzger",
-        "Jiuyang Lyu",
-        "Chun-Cheng Chang",
-        "Jiayi Shao",
-        "Yujia Liu",
-        "Emmanuel Azuh Mensah",
-        "Edward Wang",
-        "Kurtis Heimerl",
-        "Gregory D. Abowd",
-        "Shwetak Patel",
-        "Natasha Jaques",
-        "Vikram Iyer"
+        "Lingfeng Xu",
+        "Prad Kadambi",
+        "Samuel Goldinger",
+        "Visar Berisha",
+        "Kimberly D. Mueller",
+        "Julie Liss"
       ],
-      "abstract": "Embedded devices from wildlife monitoring stations to clinical wearables require local AI inference due to latency, communication, or privacy constraints. Optimizing models for heterogeneous microcontrollers (MCUs) requires simultaneously satisfying hard physical constraints on memory, power, and temperature while preserving accuracy, a multidimensional optimization that is today performed manually by experts. We ask whether an LLM agent can autonomously navigate this complex, multi-turn pipeline guided by real hardware feedback, and introduce a hardware-in-the-loop agent arena in which the agent iteratively refines both model and firmware -- compiling, flashing, and measuring on real hardware -- to enable closed-loop optimization. Frontier models, including Claude Opus 4.7 and Gemini 3.1 Pro, fail entirely without hardware feedback (0% deployment success), whereas our hardware-in-the-loop formulation achieves the first successful deployment within three iterations and can surpass human expert results within seven. This agentic co-optimization achieves 250x compression for vision models with <3.3% accuracy loss and 400x for audio with <6% Feature Error Rate loss, enabling battery-free operation on a commercial MCU via solar harvesting. We demonstrate practical impact in two real-world systems: an elk-detection camera trap (96.7% accuracy) and a phonetic-transcription wearable (8.44% FER) for child development research.",
-      "pdf_url": "https://arxiv.org/pdf/2606.16190v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.16190v1",
-      "published": "2026-06-15T04:04:23Z",
-      "updated": "2026-06-15T04:04:23Z",
+      "abstract": "Picture descriptions provide valuable insights into several clinical constructs related to cognitive-linguistic abilities. However, operationalizing these constructs into quantitative measures remains challenging, limiting interpretability and clinical utility. We introduced seven constructs tailored to the Cookie Theft picture description task and prompted large language models (LLMs) to evaluate them, generating severity scores and example-based explanations. Among the examined LLMs, Claude 3.5 Sonnet performed the best, producing severity scores that significantly distinguish cognitively impaired individuals from healthy controls. The model achieves a high accuracy of 85% on the ADReSS dataset. Expert evaluation of Claude's scores and explanations yields a 3.99/5 average agreement. The findings demonstrate the potential of LLMs to operationalize clinical constructs and generate interpretable evaluations, offering a promising approach for accessible cognitive screening tools.",
+      "pdf_url": "https://arxiv.org/pdf/2606.18054v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.18054v1",
+      "published": "2026-06-16T15:32:03Z",
+      "updated": "2026-06-16T15:32:03Z",
       "categories": [
-        "cs.AR",
-        "cs.AI"
+        "eess.AS"
       ]
     },
     {
-      "title": "DeepRoot: A KG-Coordinated Multi-Agent System for Therapeutic Reasoning over Historical Medical Texts",
+      "title": "ProvenanceGuard: Source-Aware Factuality Verification for MCP-Based LLM Agents",
       "authors": [
-        "Zijian Carl Ma",
-        "Sean J. Wang",
-        "Sijbren Kramer",
-        "Li Erran Li"
+        "Ander Alvarez",
+        "Santhiya Rajan",
+        "Samuel Mugel",
+        "Rom\u00e1n Or\u00fas"
       ],
-      "abstract": "Historical medical archives and traditional medicines hold immense potential for drug discovery and remain a primary source for current drug development. However, pre-ontological prose and idiosyncratic taxonomies prevent the standardization and medical modernization of the data for use in current biomedical pipelines. Furthermore, no existing LLM agent system, whether tool-calling, retrieval-augmented, or agentic deep-research, can convert such text into verifiable drug-discovery leads at scale. We close this gap with DeepRoot, a multi-agent LLM system that jointly builds and utilizes a verified knowledge graph, showing that grounding and reasoning -- often conflated -- are separable axes the system can compose for therapeutic reasoning. Applied to the Shen Nong Ben Cao Jing, DeepRoot recovers $10$ of $21$ held-out compound-disease treatment pairs at R@$20$ ($47.6\\%$ vs $4.8\\%$ for a raw corpus LLM and $\\sim\\!2.4\\%$ random) and dominates an LLM-as-judge audit for reasoning quality over baseline LLMs and LLMs with direct tool-call access to the same APIs DeepRoot itself queries. Tool-using LLMs hallucinate evidence on $87\\%$ of claims, versus 7-10% for DeepRoot. Graph-only inference hallucinates $0\\%$ but ranks lowest on reasoning coherence; DeepRoot KG+LLM is the only condition to win on both axes, pointing toward a route for systematic mining and repurposing of historical medical knowledge.",
-      "pdf_url": "https://arxiv.org/pdf/2606.15931v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.15931v1",
-      "published": "2026-06-14T17:17:41Z",
-      "updated": "2026-06-14T17:17:41Z",
+      "abstract": "Tool-using LLM agents increasingly use the Model Context Protocol (MCP) to answer from heterogeneous evidence sources, including search, APIs, databases, clinical records, and formulary tools. Standard factuality metrics usually test whether an answer is supported by pooled evidence, missing a provenance-sensitive failure mode: a claim may be supported somewhere while being attributed to the wrong source. We call this cross-source conflation.\n  We introduce ProvenanceGuard, a source-aware verifier for MCP-grounded answers. It consumes captured MCP traces with stable tool IDs, source IDs, and raw outputs; decomposes answers into atomic claims; routes claims to source-specific evidence; checks support with NLI and a token-alignment proxy; compares stated attribution with the routed source; and returns per-claim verdicts plus an answer-level allow/block decision. Blocked answers can be repaired with retrieval-augmented answer revision and re-verified.\n  We evaluate on 281 medical-domain MCP-agent traces. A 266-trace adjudicated subset yields 2,325 LLM-assisted claim labels split by trace; 361 held-out labels are human-verified. On the 40-trace held-out split, ProvenanceGuard achieves block F1 0.802 and source accuracy 0.858 over 260 source-eligible claims, outperforming source-blind baselines that do not emit claim-to-source IDs. On a harder multi-source benchmark it reaches block F1 0.846, while source-plus-relation accuracy drops to 0.229, showing that exact source ownership remains difficult with semantically close sources. Repair-and-reverify resolves all blocked answers in the full trace set, often via conservative fallback. In 50 controlled clinical conflation probes, ProvenanceGuard detects all injected attribution swaps with no retained wrong attribution. These results show that source attribution is an independent axis for factuality verification in MCP-based agents.",
+      "pdf_url": "https://arxiv.org/pdf/2606.18037v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.18037v1",
+      "published": "2026-06-16T15:10:29Z",
+      "updated": "2026-06-16T15:10:29Z",
       "categories": [
-        "cs.MA",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Let Them Steal: Trapping Large Language Model Extraction Attacks with Knowledge Honeypot",
-      "authors": [
-        "Yuyang Dai",
-        "Yushun Dong"
-      ],
-      "abstract": "Large language models deployed as commercial APIs are vulnerable to model extraction attacks, while existing defenses either act too late or degrade utility for legitimate users. We propose \\textbf{Knowledge Trap}, a defense that redirects extraction attacks toward low-transferability knowledge through a \\emph{Honeypot Knowledge Graph} (HKG) and breadcrumb-guided exploration. Instead of blocking queries or perturbing outputs, Knowledge Trap consumes the attacker's limited query budget on knowledge with negligible downstream utility while preserving benign-user performance. Experiments in medical and financial domains show that Knowledge Trap reduces surrogate Agreement by 6.2\\% on average without degrading legitimate-user accuracy, outperforming existing defenses that impose measurable user impact. These results suggest that defending knowledge-space traversal is a practical direction for mitigating LLM extraction attacks.",
-      "pdf_url": "https://arxiv.org/pdf/2606.15810v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.15810v1",
-      "published": "2026-06-14T13:23:48Z",
-      "updated": "2026-06-14T13:23:48Z",
-      "categories": [
-        "cs.CR",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "EHRNote-ChatQA: A Benchmark for Evidence-Grounded Multi-Turn Clinical Question Answering over Longitudinal Discharge Summaries",
-      "authors": [
-        "Jiyoun Kim",
-        "Muhan Yeo",
-        "Eunhye Jang",
-        "Jeewon Yang",
-        "Hangyul Yoon",
-        "Su Ji Lee",
-        "Hee Jo Han",
-        "Hee-Jae Jung",
-        "Doyun Kwon",
-        "Jun young Lee",
-        "Jaehun Lee",
-        "Jung-Oh Lee",
-        "Sunjun Kweon",
-        "Jong Hak Moon",
-        "Daseul Kim",
-        "Minjae Cho",
-        "Edward Choi"
-      ],
-      "abstract": "Discharge summaries are crucial clinical documents containing the context of a patient's overall hospital stay, and are routinely reviewed by medical experts for patient readmission, ongoing care, and diagnostic decision-making. When reviewing them, medical experts often must iteratively synthesize information across multiple summaries while verifying the evidence supporting each answer. Although large language models (LLMs) are increasingly explored for clinical question answering, existing benchmarks do not sufficiently reflect this setting: they often evaluate exam-style medical knowledge or focus on single-turn question answering with limited evidence-grounding evaluation. We introduce EHRNote-ChatQA, the first benchmark for evidence-grounded multi-turn clinical question answering over patients' multiple discharge summaries. Built from de-identified MIMIC-IV discharge summaries, EHRNote-ChatQA contains 967 patient-level multi-turn samples spanning one to five notes and 16,072 medical-expert-verified QA pairs (8,036 content questions, each paired with an evidence-grounding question) across eight clinical categories. The benchmark is constructed through an expert-informed pipeline combining discharge-summary structuring schema, expert-curated multi-turn QA templates, and LLM-based generation, followed by review and revision of every single QA sample by 11 medical experts. Benchmarking 22 open- and closed-source LLMs reveals several challenges, including that LLMs struggle more with evidence grounding than content answering, multi-turn errors compound across turns, and single-turn clinical QA performance does not reliably transfer to this setting. These findings establish EHRNote-ChatQA as a rigorous and practical benchmark for evaluating clinical QA systems. The dataset will be made publicly available through PhysioNet credentialed access.",
-      "pdf_url": "https://arxiv.org/pdf/2606.15735v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.15735v1",
-      "published": "2026-06-14T10:35:19Z",
-      "updated": "2026-06-14T10:35:19Z",
-      "categories": [
+        "cs.AI",
         "cs.CL",
-        "cs.AI"
+        "cs.MA"
       ]
     },
     {
-      "title": "Let LLMs Judge Each Other: Multi-Agent Peer-Reviewed Reasoning for Medical Question Answering",
+      "title": "Reading between the Lines: Leveraging Large Language Models for Global Dementia and Depression Assessment from Clinical Interviews",
       "authors": [
-        "Zaifu Zhan",
-        "Shuang Zhou",
-        "Rui Zhang"
+        "Franziska Braun",
+        "Alea R\u00fcggeberg",
+        "Thomas Ranzenberger",
+        "Hartmut Lehfeld",
+        "Thomas Hillemacher",
+        "Tobias Bocklet",
+        "Korbinian Riedhammer"
       ],
-      "abstract": "Objective: To enhance the accuracy, interpretability, and robustness of large language models (LLMs) in medical question answering (MedQA).\n  Method: We designed a multi-agent peer-reviewed reasoning method in which multiple LLM agents independently generate chain-of-thought reasoning with candidate answers, then act as peer reviewers to evaluate each other's reasoning for factual correctness and logical soundness. The highest-rated reasoning chain is selected to produce the final answer. Experiments were conducted with five state-of-the-art LLMs (Llama-3.1-8B, Qwen2.5-7B, Phi-4, DeepSeek-LLM-7B, GPT-oss-20B) on three benchmark datasets: HeadQA, MedQA-USMLE, and PubMedQA. Performance was compared against single-model chain-of-thought reasoning and chain-of-thought-based majority voting.\n  Results: Peer-reviewed reasoning consistently outperformed both baselines. The best model combination achieved an average accuracy of 0.820 across datasets, exceeding the strongest single model (0.777) and majority voting ensembles (up to 0.789). The method also scaled effectively with more participating models, while peer assessments reliably distinguished high- from low-quality reasoning chains.\n  Conclusion: The proposed multi-agent peer-reviewed reasoning method enables LLMs to act as both solvers and evaluators, yielding superior performance in MedQA. By emphasizing reasoning quality rather than answer agreement alone, this approach improves accuracy, interpretability, and robustness, offering a promising direction for trustworthy biomedical AI systems.",
-      "pdf_url": "https://arxiv.org/pdf/2606.15419v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.15419v1",
-      "published": "2026-06-13T18:09:44Z",
-      "updated": "2026-06-13T18:09:44Z",
+      "abstract": "Dementia and depression are the most prevalent neuropsychiatric disorders in geriatric populations, and their overlapping symptoms pose major challenges for differential diagnosis. In this study, we investigate open-weights Large Language Models (LLMs) for predicting dementia and depression severity from speech samples collected during standardized history taking interviews with 154 German-speaking subjects. We introduce an observer-based Global Depression Scale (GDS-D) aligned with the established Global Deterioration Scale (GDS), enabling parallel global staging of affective and cognitive symptoms. We compare three LLMs (Mistral 3.1, DeepHermes, Qwen3) in two settings: (1) zero-shot prediction and (2) LLM-based feature extraction for Support Vector Regression, using human and pause-enriched transcripts. Results show that LLMs effectively predict depression severity in zero-shot settings (best MAE of 0.60), while dementia assessment benefits substantially from structured feature extraction (best MAE of 0.78), reducing errors by up to 35% over zero-shot baselines. Pause-enriched transcripts achieve competitive performance with human transcriptions, demonstrating the viability of fully automatic screening pipelines for differential neuropsychiatric assessment.",
+      "pdf_url": "https://arxiv.org/pdf/2606.18019v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.18019v1",
+      "published": "2026-06-16T15:01:30Z",
+      "updated": "2026-06-16T15:01:30Z",
       "categories": [
+        "eess.AS",
         "cs.CL",
-        "cs.AI"
+        "cs.SD"
       ]
     },
     {
-      "title": "ReportQA: QA-Based Radiology Report Evaluation",
+      "title": "Fine-tuning LLMs for Passive Depression Severity Estimation from AI Mental Health Dialogue",
       "authors": [
-        "Yiming Shi",
-        "Shaoshuai Yang",
-        "Xi Chen",
-        "Haolin Li",
-        "Hengyu Zhang",
-        "Che Jiang",
-        "Kaiwen Wang",
-        "Xun Zhu",
-        "Dong Xie",
-        "Fei Wang",
-        "Dejing Dou",
-        "Miao Li",
-        "Ji Wu"
+        "Olivier Tieleman",
+        "Ziyi Zhu",
+        "Ting Su",
+        "Samuel J. Bell",
+        "Thomas D. Hull",
+        "Caitlin A. Stamatis"
       ],
-      "abstract": "Radiology report evaluation is essential for advancing automated report generation. Natural language generation metrics have limited clinical relevance. Clinical efficacy (CE) metrics evaluate important medical findings, but focus mainly on presence and cover only a limited set of entities. Due to heavy reliance on manual annotations, it is difficult for CE metrics to extend clinical entities or attributes. In clinical practice, radiology reports serve as a medium for information transfer. Clinicians use them to perform downstream diagnostic tasks without directly inspecting images. Based on this insight, we propose ReportQA, a clinical-related and flexible radiology report evaluation framework, supporting detailed quantitative analysis of radiology report generation systems. We first collect datasets covering multiple imaging modalities and anatomical regions. We then construct knowledge trees of clinical entities and attributes with radiologist guidance, and use large language models (LLMs) to extract structured information from raw reports. Next, we generate QA pairs from predefined templates and apply quality control through self-filtering and report-based filtering. During evaluation, the report is treated as context, and an LLM acts as a judge model to answer the QA pairs. Based on the resulting QA accuracy, we introduce QAScore metric. Compared with existing metrics, QAScore shows better alignment with radiologist judgments. Experiments on multiple state-of-the-art vision-language models reveal that current report-based inference paradigms struggle to learn fine-grained clinical representations and exhibit strong negative prior biases. In contrast, question-driven inference provides a more effective alternative. For reproducibility and extensibility, we release the knowledge trees, structured reports, and QA pairs, along with the pipeline code for QA construction and evaluation.",
-      "pdf_url": "https://arxiv.org/pdf/2606.15037v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.15037v1",
-      "published": "2026-06-13T00:43:03Z",
-      "updated": "2026-06-13T00:43:03Z",
+      "abstract": "Depression is the leading cause of disability worldwide, and early detection of symptom change is essential for timely intervention. Validated instruments such as the Patient Health Questionnaire-9 (PHQ-9) support symptom monitoring at scale, but real-world completion rates are low, introducing response bias and systematic missingness. Passive approaches that infer severity from routinely generated data could close this gap. We address this by predicting PHQ-9 total scores directly from transcripts of conversations between users and an AI mental health application, requiring only conversation text and no additional clinical data. We fine-tune a Qwen3.5-27B backbone with a regression head, augment 3,111 ground-truth labels with pseudolabels generated by a reasoning model (Claude Opus) and iteratively trained intermediate models, for a combined dataset of 6,283 users. On a held-out test set of 842 users, our best model achieves MAE = 2.6, RMSE = 4.0, Pearson r = 0.80, and AUC = 0.91 at the PHQ-9 >= 10 clinical threshold. We also find AUC > 0.87 at every severity threshold from PHQ-9 >= 3 to PHQ-9 >= 24, demonstrating that the model captures depression severity across the full clinical spectrum. This work opens the door to passive, continuous symptom monitoring in AI mental health platforms, without requiring users to complete self-report measures.",
+      "pdf_url": "https://arxiv.org/pdf/2606.17973v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.17973v1",
+      "published": "2026-06-16T14:28:47Z",
+      "updated": "2026-06-16T14:28:47Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Beyond Visual Cues: CoT-Enhanced Reasoning for Semi-supervised Medical Image Segmentation",
+      "authors": [
+        "Yuming Chen",
+        "Yuxin Xie",
+        "Tao Zhou",
+        "Yi Zhou"
+      ],
+      "abstract": "Semi-supervised medical image segmentation has emerged as a dominant research problem in medical image analysis, mitigating annotation scarcity by leveraging consistency regularization on unlabeled data. However, existing approaches operate predominantly via visual pattern matching, relying heavily on pixel-level similarities. This visual-centric dependency often falters in clinical scenarios characterized by the visual-semantic mismatch, where visually similar lesions warrant distinct diagnostic conclusions, thus failing to capture the underlying diagnostic logic used by experts. To address this, we move beyond visual cues and propose CERS (CoT-Enhanced Reasoning Segmentation), a framework that integrates Chain-of-Thought (CoT) reasoning to distinguish pathologically distinct cases. Specifically, we construct a knowledge pool enriched with linguistic reasoning descriptions generated by large language models (LLMs). A semantic-aware reference selection strategy is introduced to identify historical evidence, filtering candidates first by morphology, and then refining them via CoT consistency to eliminate hard negatives. Furthermore, a multi-scale coordinate attention module (MCAM) is designed to effectively fuse this reasoning-derived context into the decoding process. Extensive experiments demonstrate the superiority of CERS against state-of-the-art approaches, particularly in resolving boundary ambiguities and semantic inconsistencies. The code is available at https://github.com/cymasuna/CERS.",
+      "pdf_url": "https://arxiv.org/pdf/2606.17958v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.17958v1",
+      "published": "2026-06-16T14:10:19Z",
+      "updated": "2026-06-16T14:10:19Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "The Slop Paradox: How Synthetic Standardization Erodes Clinical Uncertainty and Cross-Modal Alignment in AI-Rewritten Radiology Reports",
+      "authors": [
+        "Samar Ansari"
+      ],
+      "abstract": "AI-assisted clinical documentation tools increasingly summarize, standardize, and reformat radiology reports using large language models (LLMs). We present a controlled measurement of the resulting information degradation. Using 450 chest X-ray reports from the Indiana University dataset, we generate synthetic versions via three realistic LLM rewriting tasks: EHR summarization, standardized rewriting, and teaching case preparation. We measure entity erosion (via medical NER), hedging collapse (loss of clinical uncertainty language), and cross-modal alignment degradation (via BiomedCLIP image-text similarity). Our central finding is a dissociation between information loss and cross-modal fidelity. EHR summarization is the most destructive at the content level, eroding 51.4% of clinical entities and 43.7% of hedging language, yet it preserves image-text alignment almost entirely (a 2.5% drop). The two tasks meant to produce cleaner training data, standardized rewriting and teaching case preparation, do the reverse: they preserve more entities (26.8% and 29.3% eroded) but cause 14.9-16.5% alignment drops, six to seven times those of EHR summarization. We term this the slop paradox: rewriting that makes clinical text look cleaner for multimodal training is precisely what pulls it away from the image. Contrary to our pre-specified hypothesis, rare pathologies were not preferentially degraded: across nine rare-versus-common comparisons, no difference survived multiple-comparison correction, and nominal differences ran in the opposite direction (common > rare), so contamination is invisible to condition-specific monitoring. The dominant determinant of degradation is the type of AI rewriting task, not the clinical content. These findings bear on multimodal medical AI dataset construction and the governance of AI-assisted clinical documentation.",
+      "pdf_url": "https://arxiv.org/pdf/2606.17791v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.17791v1",
+      "published": "2026-06-16T11:07:48Z",
+      "updated": "2026-06-16T11:07:48Z",
       "categories": [
         "cs.CL",
         "cs.CV"
       ]
     },
     {
-      "title": "Metric Match: A Subset Selection Approach to Evaluating LLM Judge Reliability",
+      "title": "Mind Companion: An Embodied Conversational Agent for Process-Based Psychotherapy",
       "authors": [
-        "Alyssa Unell",
-        "Natalie Dullerud",
-        "Naomi Boneh",
-        "Meena Jagadeesan",
-        "Tatsu Hashimoto",
-        "Nigam Shah",
-        "Sanmi Koyejo"
+        "Sofie Kamber",
+        "Lukas Diebold",
+        "Pascal Riachi",
+        "Stella Brogna",
+        "Andrew Gloster",
+        "Rafael Wampfler"
       ],
-      "abstract": "LLM judges are used to reduce the need for costly human labor in evaluating open-ended text generation. However, the reliability of these judges depends critically on their alignment with human raters -- a property that itself depends on costly human annotations. In this work, we develop a method (Metric Match) for estimating correlation-based reliability metrics of LLM judges from limited annotations. Metric Match selects a subset of samples for human annotation such that the subset matches the population reliability metric with respect to acquired synthetic labels. We empirically show that Metric Match achieves a win-rate of 0.838 against random subset selection across four different correlation metrics and 15 datasets, with an 18.7% decrease in average estimation error and reduces annotation needs by 32.5%. We provide a cost model and highlight a medical case study where our method saves $1,041.67 compared to random selection for expert annotation. Further, we shift our task from reliability estimation to reliability classification of whether a given judge is above a deployment threshold, outperforming random selection with Metric Match. All project code is publicly available, and we additionally provide an installable package for ease of use.",
-      "pdf_url": "https://arxiv.org/pdf/2606.15029v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.15029v1",
-      "published": "2026-06-12T23:54:16Z",
-      "updated": "2026-06-12T23:54:16Z",
+      "abstract": "Access to evidence-based psychotherapy remains limited worldwide, with long waitlists even in high-income regions. Recent advances in large language models (LLMs) offer potential for scalable mental health support when designed with clinical oversight and safety mechanisms. We present Mind Companion, an LLM-based embodied conversational agent integrating multi-layered psychological analysis with process-based therapy principles. The system performs real-time analysis of client statements across fact extraction, psychological flexibility process detection, emotion recognition, and safety monitoring. Analysis results are stored for supervising clinicians to inform therapeutic planning. Response generation incorporates retrieval-augmented generation from evidence-based therapeutic literature and context-aware prompting. Responses are delivered through an embodied avatar with synchronized speech synthesis and animation. We evaluated three LLM configurations (GPT-4.1-mini, GPT-5.2, Claude Sonnet 4.5) against therapist responses from real therapy sessions using automated LLM-judge assessment and expert evaluation with 11 professional psychotherapists. GPT-5.2 achieved higher ratings than human therapist responses across understanding, interpersonal effectiveness, collaboration, and therapeutic alignment in both evaluations, demonstrating the feasibility of LLM-based conversational agents as tools to complement clinical care.",
+      "pdf_url": "https://arxiv.org/pdf/2606.17789v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.17789v1",
+      "published": "2026-06-16T11:05:43Z",
+      "updated": "2026-06-16T11:05:43Z",
       "categories": [
-        "cs.AI"
+        "cs.HC"
       ]
     },
     {
-      "title": "ClinHallu: A Benchmark for Diagnosing Stage-Wise Hallucinations in Medical MLLM Reasoning",
+      "title": "Toward Accessible Psychotherapy Training Using AI-Driven Interactive Patient Avatars",
       "authors": [
-        "Sicheng Yang",
-        "Hangjie Yuan",
-        "Wenjun Zhang",
-        "Jinwang Wang",
-        "Yichen Qian",
-        "Weihua Chen",
-        "Fan Wang",
-        "Lei Zhu"
+        "Pascal Riachi",
+        "Sofie Kamber",
+        "Stella Brogna",
+        "Andrew Gloster",
+        "Rafael Wampfler"
       ],
-      "abstract": "Building trustworthy medical multimodal large language models (MLLMs) is critical for reliable clinical decision support. Existing medical hallucination benchmarks mainly focus on data collection, but often ignore where hallucinations originate within the reasoning process. We find that hallucination sources vary across samples: errors may arise from visual misrecognition, incorrect medical knowledge recall, or flawed reasoning integration. To enable source-level hallucination diagnosis, we introduce ClinHallu, a benchmark for stage-wise hallucination diagnosis in medical MLLM reasoning. ClinHallu contains 7,031 validated instances, where each instance is augmented with a structured reasoning trace decomposed into Visual Recognition, Knowledge Recall, and Reasoning Integration. We also use stage-replacement interventions to measure how correcting specific stages affects the final answer. Beyond evaluation, we show that trace-supervised fine-tuning reduces stage-wise hallucinations. ClinHallu provides a fine-grained hallucination testbed for diagnosing and mitigating reasoning failures in medical MLLMs. The benchmark is publicly available at https://github.com/alibaba-damo-academy/ClinHallu.",
-      "pdf_url": "https://arxiv.org/pdf/2606.14697v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.14697v1",
-      "published": "2026-06-12T17:58:38Z",
-      "updated": "2026-06-12T17:58:38Z",
+      "abstract": "Training psychotherapists in evidence-based interventions such as Acceptance and Commitment Therapy (ACT) requires repeated practice with meaningful feedback, yet opportunities for safe, standardized training are limited by ethical, logistical, and resource constraints. We introduce a system designed to support ACT-oriented psychotherapy training through spoken dialogue with an embodied virtual patient. The system uses large language models to simulate patient behavior conditioned on profiles derived from real therapy sessions and configurable clinical scenarios, while a separate automated evaluator provides turn-by-turn feedback on therapist responses based on established ACT fidelity criteria. Rather than aiming to replace supervision, the system is intended to support deliberate practice by enabling experimentation, reflection, and immediate feedback in low-risk settings. Expert evaluation with practicing psychologists confirmed high realism in patient behavior and demonstrated that immediate turn-by-turn ACT feedback increased therapists' awareness of intervention choices and enabled effective experimentation with alternative responses. Quantitative evaluation across 49 therapy transcripts identified GPT-4o-mini as the optimal feedback model, achieving the lowest mean absolute error (MAE = 6.12) in replicating human supervisor ACT fidelity ratings with statistically significant agreement. This work demonstrates the potential of fidelity-aware simulated patients as a scalable complement to psychotherapy training.",
+      "pdf_url": "https://arxiv.org/pdf/2606.17786v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.17786v1",
+      "published": "2026-06-16T11:02:00Z",
+      "updated": "2026-06-16T11:02:00Z",
       "categories": [
-        "cs.CV",
-        "cs.AI",
+        "cs.HC",
         "cs.CL"
       ]
     },
     {
-      "title": "The Self-Aware Body: A User-Centered Framework for Designing Therapeutic Sonic Interactions",
+      "title": "SegTME-UNI2: A Foundation Model-Based Framework for Generalisable Multiclass Cell Segmentation and LLM-Driven Tumour Microenvironment Characterisation in Histopathology",
       "authors": [
-        "Prithvi Ravi Kantan",
-        "Sofia Dahl",
-        "Erika G. Spaich"
+        "Wan Siti Halimatul Munirah Wan Ahmad",
+        "Faris Syahmi Samidi",
+        "Mohammad Badal Ahmmed",
+        "Vimal Angela Thiviyanathan",
+        "Selvam James Thavaraj",
+        "Anwar P. P. Abdul Majeed"
       ],
-      "abstract": "This chapter presents a framework for designing therapeutic sonic interaction technologies, with a focus on movement sonification: the real-time conversion of bodily motion into sound that serves as feedback during motor rehabilitation. Despite growing evidence for their effectiveness, technologies implementing movement sonification are yet to be systematically adopted as part of clinical practice, potentially due to a lack of standardized development methodologies as well as inadequate integration of clinical stakeholder perspectives into interaction design. The framework addresses these barriers through three interconnected contributions. The first is a conceptual reframing of the design task as the calibration of sonic variability to the perceptual affordances of the listener and the demands of the clinical context. The second is a practical design platform inspired by professional audio mixing workflows, which imposes a structured and learnable signal-flow architecture on the interaction design process and enables rapid iterative exploration. The third is a user-centered development methodology adapted from healthcare intervention science, which grounds design decisions in engagement with the clinicians and patients who will use the resulting systems. The HearWalk biofeedback system for hemiparetic gait rehabilitation illustrates the framework, and the chapter concludes by examining where large language models and AI tools can meaningfully assist each stage of this design process, as well as where human clinical and perceptual expertise remains irreplaceable.",
-      "pdf_url": "https://arxiv.org/pdf/2606.14664v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.14664v1",
-      "published": "2026-06-12T17:34:29Z",
-      "updated": "2026-06-12T17:34:29Z",
+      "abstract": "Characterising the tumour microenvironment (TME) from routine H&E-stained histology images requires simultaneous cell segmentation, feature extraction, and interpretable clinical reporting. We present SEGTME-UNI2, a unified framework addressing these requirements. Its core is UNI2-UPERHOVER, a dual-head segmentation model pairing the UNI2-H pathology foundation model (ViT-Giant, pretrained on >100M tiles from 100K slides) with two parallel UperNet decoders: one for six-class semantic segmentation and one for horizontal-vertical gradient regression enabling watershed-based nuclear instance separation. To address the lack of pixel-level annotations in large real-world repositories, UNI2-UPERHOVER undergoes a three-stage progressive pseudo-label curriculum. Each stage trains a fresh model without weight transfer, driving improvement entirely via increased pseudo-label quality: Stage 1: Uses human-annotated PanNuke (7,901 images, 189,744 nuclei, 0.25 um/pixel). Stage 2: Uses entropy-filtered pseudo-labels from the Stage 1 model on 271,711 TCGA-UT scale-0 patches (0.5 um/pixel). Stage 3: Uses pseudo-labels from the Stage 2 model on all 1,608,060 TCGA-UT patches across six resolution scales (0.5-1.0 um/pixel). Segmentation outputs feed a structured TME feature extraction pipeline computing 20+ per-patch compositional, morphological, spatial entropy, and intercellular distance metrics. These are encoded as JSON and passed to a fine-tuned NVIDIA BioNeMo GPT model to generate clinically interpretable TME narratives. Preliminary validation on held-out PanNuke and TCGA-UT partitions demonstrates framework feasibility and internal consistency. The pseudo-labelled TCGA-UT dataset and UNI2-UPERHOVER checkpoint are publicly released to support large-scale TME profiling and spatial biology research.",
+      "pdf_url": "https://arxiv.org/pdf/2606.17702v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.17702v1",
+      "published": "2026-06-16T09:12:19Z",
+      "updated": "2026-06-16T09:12:19Z",
       "categories": [
-        "cs.HC"
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Learning to Refine Hidden States for Reliable LLM Reasoning",
+      "authors": [
+        "Chia-Hsuan Hsu",
+        "Jui-Ming Yao"
+      ],
+      "abstract": "Large language models show strong reasoning ability, but their internal reasoning process can remain unstable in complex multi-step settings, where early hidden-state errors may propagate to incorrect predictions. We propose ReLAR, a reinforcement-guided latent refinement framework that iteratively updates hidden representations before decoding. ReLAR maintains a compact latent reasoning state and uses learned depth and action controllers to adaptively determine both the number and direction of refinement steps. The controllers are trained with a policy gradient objective based on step-wise likelihood improvement, enabling efficient input-dependent reasoning without explicit chain-of-thought generation. Experiments on medical, mathematical, multi-hop reasoning, and open-ended generation benchmarks show that ReLAR improves accuracy, generation quality, and reasoning stability with substantially lower inference overhead than explicit reasoning baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2606.17524v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.17524v1",
+      "published": "2026-06-16T05:03:27Z",
+      "updated": "2026-06-16T05:03:27Z",
+      "categories": [
+        "cs.LG"
       ]
     }
   ]

@@ -1,8 +1,165 @@
 {
-  "generated_at_utc": "2026-06-18T04:40:29.619285Z",
+  "generated_at_utc": "2026-06-19T04:59:16.582774Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Scalable Training of Spatially Grounded 2D Vision-Language Models for Radiology",
+      "authors": [
+        "Yusuf Salcan",
+        "Simon Ging",
+        "Robin Schirrmeister",
+        "Philipp Arnold",
+        "Elmar Kotter",
+        "Behzad Bozorgtabar",
+        "Thomas Brox"
+      ],
+      "abstract": "We study how to train visually grounded vision-language models (VLMs) for radiology without manual spatial annotations. We introduce RefRad2D, a large-scale bilingual (German/English) dataset of 1.2M CT and MR image-text pairs derived from clinical practice, with task-specific VQA and spatial grounding subsets generated automatically via LLM-based curation and automated segmentation. Trained on this data, our model RadGrounder jointly performs report generation, visual question answering, and spatial grounding via bounding-box detection or segmentation. On external VQA benchmarks (Slake, VQA-RAD), RadGrounder achieves competitive results with specialized medical VLMs. Adding our clinical data to the training mixture improves open-ended VQA over fine-tuning on the downstream datasets alone, showing the transferability of our dataset. Crucially, adding grounding supervision does not degrade language quality, enabling spatially verifiable outputs at no cost to VQA performance.",
+      "pdf_url": "https://arxiv.org/pdf/2606.20477v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.20477v1",
+      "published": "2026-06-18T16:55:26Z",
+      "updated": "2026-06-18T16:55:26Z",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "MedRLM: Recursive Multimodal Health Intelligence for Long-Context Clinical Reasoning, Sensor-Guided Screening, Evidence-Grounded Decision Support, and Community-to-Tertiary Referral Optimization",
+      "authors": [
+        "Aueaphum Aueawatthanaphisut"
+      ],
+      "abstract": "Real-world clinical decision support requires reasoning over heterogeneous and longitudinal patient information rather than answering isolated medical questions. However, current medical large language models and retrieval-augmented generation systems often rely on single-step prompting or retrieval, which can be fragile when clinical evidence is distributed across long electronic health records, medical images, sensor streams, guidelines, and referral constraints. This paper proposes MedRLM, a Recursive Multimodal Health Intelligence framework for long-context clinical reasoning, sensor-guided screening, and community-to-tertiary referral support. Instead of compressing all patient information into one prompt, MedRLM treats the patient case as an external clinical environment that can be recursively inspected, decomposed, retrieved, verified, and synthesized. The framework coordinates specialized agents for clinical text, longitudinal EHR, medical imaging, physiological sensor signals, guideline retrieval, uncertainty auditing, and referral planning. It further introduces a Clinical Evidence Graph Memory to connect patient-specific observations with retrieved evidence, standardized definitions, sensor-derived biomarkers, and referral criteria. A sensor-guided recursive triggering mechanism activates deeper reasoning when abnormal physiological or behavioral patterns are detected, while uncertainty-gated refinement supports clinician review for high-risk or low-confidence cases. We also outline a real-data evaluation design using public and credentialed clinical datasets spanning EHR, radiology, ECG, ICU time series, and referral-proxy outcomes. MedRLM aims to move medical AI from static question answering toward auditable, multimodal, and workflow-aware clinical decision support.",
+      "pdf_url": "https://arxiv.org/pdf/2606.20164v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.20164v1",
+      "published": "2026-06-18T12:30:39Z",
+      "updated": "2026-06-18T12:30:39Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Source-Grounded Data Generation for Text-to-JSON Learning",
+      "authors": [
+        "Sunghee Ahn",
+        "Guijin Son",
+        "Youngjae Yu"
+      ],
+      "abstract": "From financial filings to clinical records, legacy industries rely heavily on long, unstructured documents to store high-value information. Reliably extracting this information into structured, machine-readable representations is a key prerequisite to making the contents accessible to automated systems. JSON is a natural target for such structured extraction, yet constructing reliable and scalable text-to-JSON training data remains challenging. To address this gap, we propose STAGE (Spreadsheet-grounded Text-to-JSON Artifact GEneration), a source-grounded data generation pipeline that constructs reports and JSON schema by using LLMs for scalable synthesis while validating ground-truth values against the underlying spreadsheet. Evaluations on STAGE-Eval, our source-grounded benchmark with an 851-example test set, show that STAGE produces stronger training data than existing approaches. This improves Qwen3-4B exact match from 31.37% to 74.27% and value accuracy from 45.46% to 90.69%.",
+      "pdf_url": "https://arxiv.org/pdf/2606.20072v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.20072v1",
+      "published": "2026-06-18T10:47:22Z",
+      "updated": "2026-06-18T10:47:22Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Confidence Calibration for Multimodal LLMs: An Empirical Study through Medical VQA",
+      "authors": [
+        "Yuetian Du",
+        "Yucheng Wang",
+        "Ming Kong",
+        "Tian Liang",
+        "Qiang Long",
+        "Bingdi Chen",
+        "Qiang Zhu"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) show great potential in medical tasks, but their elicited confidence often misaligns with actual accuracy, potentially leading to misdiagnosis or overlooking correct advice. This study presents the first comprehensive analysis of the relationship between accuracy and confidence in medical MLLMs. It proposes a novel method that combines Multi-Strategy Fusion-Based Interrogation (MS-FBI) with auxiliary expert LLM assessment, aiming to improve confidence calibration in Medical Visual Question Answering (VQA). Experiments demonstrate that our method reduces the Expected Calibration Error (ECE) by an average of 40\\% across three Medical VQA datasets, significantly enhancing MLLMs' reliability. The findings highlight the importance of domain-specific calibration for MLLMs in healthcare, offering a more trustworthy solution for AI-assisted diagnosis.",
+      "pdf_url": "https://arxiv.org/pdf/2606.19950v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.19950v1",
+      "published": "2026-06-18T08:49:11Z",
+      "updated": "2026-06-18T08:49:11Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Prompt, Plan, Extract: Zero-Shot Agentic LLMs Workflows for Lung Pathology Extraction from Clinical Narratives",
+      "authors": [
+        "Aman Pathak",
+        "Cheng Peng",
+        "Mengxian Lyu",
+        "Ziyi Chen",
+        "Reema Solan",
+        "Sankalp Talankar",
+        "Yasir Khan",
+        "Hiren Mehta",
+        "Aokun Chen",
+        "Yi Guo",
+        "Yonghui Wu"
+      ],
+      "abstract": "Information extraction from pathology reports is essential for cancer staging, tumor registry population. Yet key data remains embedded in narrative reports, making manual extraction labor-intensive and error-prone. Traditional supervised Natural Language Processing pipelines address this through fully supervised Named Entity Recognition and Relation Extraction, but require expensive manual annotation and suffer cascading failures when upstream entities are missed. In this study, we developed a zero-shot, agentic workflow, and evaluated five open-source generative Large Language Models (LLMs) to populate 13 College of American Pathologists synoptic fields from lung resection pathology reports. We compared them against a state-of-the-art supervised GatorTron NER-RE baseline using a novel, registry-aligned evaluation framework. The baseline achieved Micro-F1of 0.960, while the best zero-shot model (GPT-OSS-20B) achieved Micro-F1 of 0.893 (recall: 0.949), accurately extracting complex relations like Pathologic Stage without task-specific training. These results suggest that open-source, zero-shot agentic LLMs are a low-cost solution for extracting lung pathology information.",
+      "pdf_url": "https://arxiv.org/pdf/2606.19852v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.19852v1",
+      "published": "2026-06-18T07:00:43Z",
+      "updated": "2026-06-18T07:00:43Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Creating Multilingual Mental Health Dialogue Datasets: Limits of Persona-Based Localization via Nationality and Language",
+      "authors": [
+        "Yunkai Xu",
+        "Saeed Abdullah"
+      ],
+      "abstract": "AI and large language models (LLMs) have emerged as promising tools to address global mental health challenges. Despite the global nature of these challenges, there remains a critical shortage of high-quality datasets for training and evaluating such systems. To mitigate this gap, researchers increasingly generate synthetic clinical personas to simulate user data and test digital mental health support systems. However, most validated personas rely on English-centric contexts. This paper investigates whether similar persona-based methods can be used to generate multilingual mental health datasets. We modified nationality and language parameters in personas to generate clinical dialogues in Mandarin, Bengali, and Hindi. We then examined how different LLMs perform when evaluating the depression severity of these generated multilingual datasets against the baseline in English. Our findings indicate that just adding nationality and language parameters in personas might not be adequate, as it can introduce clinical inconsistency across languages. LLM judge models often exhibit inaccuracies in assessing depression severity in non-English texts, with performance varying across different models. This exposes the systemic limitations of applying English-centric personas to multilingual contexts. Ultimately, our work highlights the urgent need for culturally responsive data generation to ensure equitable mental health systems globally.",
+      "pdf_url": "https://arxiv.org/pdf/2606.19640v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.19640v1",
+      "published": "2026-06-17T22:36:06Z",
+      "updated": "2026-06-17T22:36:06Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Configurable Clinical Information Extraction with Agentic RAG: What Works, What Breaks, and Why",
+      "authors": [
+        "Osman Alperen \u00c7inar-Kora\u015f",
+        "Marie Bauer",
+        "Sameh Khattab",
+        "Merlin Engelke",
+        "Moon Kim",
+        "Stephan Settelmeier",
+        "Shigeyasu Sugawara",
+        "Fabian Freisleben",
+        "Felix Nensa",
+        "Jens Kleesiek"
+      ],
+      "abstract": "Patient contexts span hundreds of heterogeneous documents and thousands of structured data points, yet the document-level metadata that AI systems need for retrieval and triage is absent or incomplete. Standard retrieval-augmented generation fails on this data, mishandling temporal reasoning, cross-document dependencies, and missing metadata. We deploy ACIE (Agentic Clinical Information Extraction) at University Medicine Essen: an on-premise agentic RAG pipeline that reasons over complete patient contexts and grounds every answer in source passages for clinician verification. We quantify the metadata gap, trace the architectural decisions it shaped, and evaluate extraction alongside an independent retrospective lymphoma registry study, in which nuclear-medicine physicians verify every extracted value against its cited sources. Across 7,326 judgments, clinicians accepted 96.5\\% of extractions, with per-type acceptance ranging from 80\\% to 99\\%.",
+      "pdf_url": "https://arxiv.org/pdf/2606.19602v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.19602v1",
+      "published": "2026-06-17T21:12:35Z",
+      "updated": "2026-06-17T21:12:35Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LLM Doesn't Know What It Doesn't Know: Detecting Epistemic Blind Spots via Cross-Model Attribution Divergence on Clinical Tabular Data",
+      "authors": [
+        "Akshat Dasula",
+        "Prasanna Desikan",
+        "Jaideep Srivastava"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly applied to structured clinical data, yet whether they can recognize the limits of their own knowledge on such tasks remains unexplored. We study this question through the lens of cross-model attribution divergence with the goal of reducing epistemic uncertainty for structured tasks, comparing Qwen 2.5 7B and XGBoost on a prediction task via attribution divergence analysis. We report four findings. First, LLM verbalized confidence is epistemically vacuous, it outputs a near-constant (0.856-0.937) regardless of whether accuracy is 49% or 75.3%, tracking prompt format rather than prediction quality. Second, the LLM exhibits an inverse difficulty effect: accuracy drops to 64.8% when XGBoost is 99% correct, but matches XGBoost (73.8% vs. 73.1%) when it is moderately uncertain. Third, few-shot examples and SHAP-derived feature evidence are orthogonal, super-additive interventions: they reduce the Attribution Disagreement Score (ADS) from 1.54 to 0.38 and improve accuracy from 49% to 75.3% without training. Fourth, a cross-model calibrator that determined LLM reliability using attribution divergence signals reduces expected calibration error from 0.254 to 0.080, replacing uninformative verbalized confidence with patient-specific reliability estimates, without accessing model internals or requiring repeated inference. We frame these findings as a cold start problem for LLMs on structured data and outline a path toward genuine epistemic self-awareness.",
+      "pdf_url": "https://arxiv.org/pdf/2606.19509v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.19509v1",
+      "published": "2026-06-17T18:49:44Z",
+      "updated": "2026-06-17T18:49:44Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Trade-offs in Medical LLM Adaptation: An Empirical Study in French QA",
       "authors": [
@@ -50,10 +207,10 @@
         "Shie Mannor"
       ],
       "abstract": "Active feature acquisition (AFA) sequentially selects which features to observe to reach a classification or ranking decision. Its central limitation is reliance on large amount of labeled data to fit probabilistic models guiding acquisition. Large language models (LLMs) supply unsupervised domain knowledge, but are poor sequential planners. Asking one to both know and decide conflates capabilities best kept separate. Here, we develop a framework for zero-shot AFA through disciplined elicitation: asking the LLM only for what it can be trusted to return, the unary deviations and pairwise co-variations that are the sufficient statistics of a Markov random field (MRF). We apply our framework to two settings: binary classification and top-$k$ identification. In practice, the LLM reliably returns only discriminative statistics, what distinguishes the classes rather than each class in isolation, which precludes classical AFA. We apply a maximum-entropy closure that resolves this gauge ambiguity. We evaluate on a cohort of Inflammatory Bowel Disease (IBD) patients, an active clinical setting where diagnostic ambiguity and patient heterogeneity obstruct stable treatment strategies. Our framework outperforms the LLM both on real labels and on its own extracted beliefs. Where it matters most, on the hardest patients, our top-$k$ acquisition policy markedly outperforms all existing methods.",
-      "pdf_url": "https://arxiv.org/pdf/2606.18933v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.18933v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18933v2",
+      "arxiv_url": "https://arxiv.org/abs/2606.18933v2",
       "published": "2026-06-17T11:15:38Z",
-      "updated": "2026-06-17T11:15:38Z",
+      "updated": "2026-06-18T07:16:30Z",
       "categories": [
         "cs.LG",
         "cs.IR",
@@ -142,182 +299,12 @@
         "Jiancheng Yang"
       ],
       "abstract": "The most plausible near-term role of medical LLMs is to assist rather than replace physicians, yet current evaluations often test isolated capabilities: clinical knowledge, EHR system interaction, or patient communication. Physician assistance instead requires coordinating these capabilities within the same interaction, where physicians issue underspecified requests, patients describe symptoms ambiguously, and EHR systems demand precise tool use. We introduce PhysAssistBench, a benchmark for interactive doctor-patient-EHR assistance. Built from real MIMIC-IV cases, PhysAssistBench uses a scalable pipeline to construct agentic patients: interactive, record-grounded agents that turn static EHR records into multi-turn clinical scenarios while preserving clinical factuality. PhysAssistBench provides a curated bilingual evaluation set of 1,296 manually reviewed and physician-validated turns. Experiments with leading LLMs show that current models remain unreliable in this setting, which exposes a key bottleneck for clinical LLMs: reliable assistance requires coordination across knowledge, communication, and systems, not isolated gains in any of them.",
-      "pdf_url": "https://arxiv.org/pdf/2606.18613v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.18613v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18613v2",
+      "arxiv_url": "https://arxiv.org/abs/2606.18613v2",
       "published": "2026-06-17T02:20:29Z",
-      "updated": "2026-06-17T02:20:29Z",
+      "updated": "2026-06-18T12:19:46Z",
       "categories": [
         "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Better Adherence, Richer Context: A Field Evaluation of LLM-Powered Conversational Voice Diaries for Sleep",
-      "authors": [
-        "Amama Mahmood",
-        "Bokyung Kim",
-        "Honghao Zhao",
-        "Molly E. Atwood",
-        "Luis F. Buenaver",
-        "Michael T. Smith",
-        "Chien-Ming Huang"
-      ],
-      "abstract": "Sleep diaries are central to behavioral sleep medicine and cognitive behavioral therapy for insomnia, yet daily completion is difficult to sustain, and static forms often provide limited context for interpreting night-to-night sleep variation. We designed an LLM-powered conversational voice diary that delivers clinically grounded morning and evening sleep diary questions through proactive smart-speaker prompts, structured conversational intake, and adaptive follow-up dialogue. We evaluated the system in a four-week between-subjects field study with 30 university students, comparing it with a text-based mobile diary using matched diary items, reporting windows, and reminder intervals. Compared with the text-based diary, the conversational voice diary showed higher adherence and elicited more detailed contextual self-report about routines, stressors, environmental conditions, and other sleep-related factors. Participants also described the voice diary as easier to integrate into daily routines, despite longer perceived completion time. However, voice-based conversational intake produced lower completeness for some structured diary fields, revealing a trade-off between expressive richness and structured precision. These findings show both the promise and the challenge of using LLM-powered conversational voice assistants for longitudinal health self-report.",
-      "pdf_url": "https://arxiv.org/pdf/2606.18596v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.18596v1",
-      "published": "2026-06-17T01:46:05Z",
-      "updated": "2026-06-17T01:46:05Z",
-      "categories": [
-        "cs.HC",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Beyond AHI: An Interpretable Causal-Discovery-Guided Framework for Sleep Recovery in Connected Health",
-      "authors": [
-        "Saba A. Farahani",
-        "Elahe Khatibi",
-        "Manoj Vishwanath",
-        "Amir M. Rahmani",
-        "Hung Cao"
-      ],
-      "abstract": "Objective sleep assessment relies on polysomnography (PSG), yet clinical impact is often better reflected in patient-reported outcomes (PROs) such as sleepiness and fatigue. Existing summary indices, including the Apnea-Hypopnea Index (AHI), provide limited insight into the multidomain physiology underlying functional recovery. We propose an interpretable, causal-discovery--guided framework for deriving a hierarchical Sleep Recovery Score (SRS) from multimodal PSG. Using two large population cohorts (MESA: n=1540; MrOS: n=825), we apply directed acyclic graph (DAG) learning to identify candidate physiological drivers spanning respiratory burden, hypoxic burden, sleep fragmentation, sleep architecture, and autonomic regulation. Although derived from clinical PSG, these domains map naturally to sensing streams increasingly available in connected health technologies, including wearable ECG, oximetry, and sleep-stage estimation devices. To preserve mechanistic plausibility, we introduce a two-stage screening process that combines physiology-based constraints with constrained LLM-assisted auditing to identify and remove structural confounders and construct-overlapping variables. Across cohorts, these five domains emerge as recurrent physiological domains associated with recovery, and the resulting SRS shows up to 2.5$\\times$ stronger alignment with perceived recovery than AHI. By linking multimodal sleep physiology to patient-centered outcomes through an interpretable, bias-aware, and domain structured framework, this work provides a practical foundation for recovery modeling across both clinical sleep studies and emerging smart and connected health settings.",
-      "pdf_url": "https://arxiv.org/pdf/2606.18506v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.18506v1",
-      "published": "2026-06-16T21:38:40Z",
-      "updated": "2026-06-16T21:38:40Z",
-      "categories": [
-        "cs.LG",
-        "eess.SP",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Possible or Definite? A Benchmark for Evaluating Diagnostic Uncertainty Preservation in Clinical Text",
-      "authors": [
-        "Hongbo Du",
-        "Zixin Lu",
-        "Jiaming Qu"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly used for clinical text tasks such as summarization and revision. While most studies evaluate the fluency and coherence of LLM-generated text, whether LLMs correctly preserve diagnostic uncertainty remains underexplored. In clinical practice, phrases such as ``possible pneumonia'' communicate the strength of available evidence and directly guide decisions about follow-up testing and treatment. Altering these uncertainty expressions can change the clinical meaning entirely. In this paper, we systematically evaluated this problem in two steps. First, we constructed a benchmark of 1,200 clinical documents with 9,184 uncertainty annotations across five levels. Second, we evaluated three LLMs on this benchmark. Our results show that (1) LLMs preserve the original uncertainty cues poorly, often less than half the time; (2) LLMs struggle with nuanced distinctions between adjacent levels. This work reveals a failure mode not captured by standard evaluation metrics and provides implications for the safe deployment of LLMs in clinical workflows.",
-      "pdf_url": "https://arxiv.org/pdf/2606.18471v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.18471v1",
-      "published": "2026-06-16T20:30:53Z",
-      "updated": "2026-06-16T20:30:53Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "From Specification to Execution: AI Assisted Scientific Workflow Management",
-      "authors": [
-        "Komal Thareja",
-        "Hamza Safri",
-        "Rajiv Mayani",
-        "Anirban Mandal",
-        "Ewa Deelman"
-      ],
-      "abstract": "Scientific workflow management systems (WMS) support scalable and reproducible execution of complex pipelines, but workflow design, implementation, and debugging remain largely manual and require significant expertise. Recent approaches using large language models (LLMs) show promise for workflow generation from natural language, but often rely on direct code synthesis, which limits transparency, reproducibility, and integration with workflow systems. We present an AI-assisted approach to scientific workflow management that combines specification-driven workflow generation, automated debugging, and distributed execution. The method introduces a structured specification phase that separates workflow intent, design, and implementation, allowing validation prior to code generation. We also develop an LLM-based debugging agent that diagnoses and resolves failures across multiple system layers. To support distributed execution and user interaction, we integrate Pegasus, a widely used WMS, with a Model Context Protocol (MCP) layer, providing a unified interface for workflow submission, monitoring, and control. We evaluate the approach using a federated learning workflow for medical imaging, chosen for its parallel, iterative, and dependency-intensive structure. The system generated and executed large-scale workflows with thousands of jobs, reduced debugging effort, and allowed non-expert users to construct workflows with expert-level design patterns. These results indicate that end-to-end AI-assisted workflow generation and execution is feasible, and point toward AI-driven platforms for managing the scientific workflow lifecycle.",
-      "pdf_url": "https://arxiv.org/pdf/2606.18425v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.18425v1",
-      "published": "2026-06-16T19:21:09Z",
-      "updated": "2026-06-16T19:21:09Z",
-      "categories": [
-        "cs.SE",
-        "cs.AI",
-        "cs.DC"
-      ]
-    },
-    {
-      "title": "RubricsTree: Scalable and Evolving Open-Ended Evaluation of Personal Health Agents across Health Memory and Medical Skills",
-      "authors": [
-        "Weizhi Zhang",
-        "Zechen Li",
-        "Hamid Palangi",
-        "Ben Graef",
-        "A. Ali Heydari",
-        "Simon A. Lee",
-        "Salman Rahman",
-        "Ray Luo",
-        "Zeinab Esmaeilpour",
-        "Erik Schenck",
-        "Chloe Zhang",
-        "Yamin Li",
-        "Menglian Zhou",
-        "Philip S. Yu",
-        "Daniel McDuff",
-        "Lindsey Sunden",
-        "Mark Malhotra",
-        "Shwetak Patel",
-        "Ahmed A. Metwally"
-      ],
-      "abstract": "The LLM-empowered personal health agents with user health (sensor) metrics have offered a promising pathway to alleviate global disparities in healthcare access. However, large-scale clinical deployment remains constrained by an open-ended evaluation bottleneck: physician annotation is reliable but costly and unscalable, while LLM-as-a-judge evaluators are scalable but subjective, inconsistent, and sometimes clinically misaligned. We introduce RubricsTree, a scalable evaluation framework with an expert-aligned hierarchical taxonomy of over 100 atomic, clinically-verifiable Boolean rubrics, evolving from the insights of 4,000 real user queries through an iterative human-in-the-loop curation protocol with an expertise panel led by an experienced physician. A context-aware adaptive router activates only the relevant auto-weighted rubric subset per query, providing the throughput needed for scalable evaluation with expert-aligned quality. Through a systematic meta-evaluation, we show that RubricsTree (i) substantially exceeds a strong large-scale evaluation baseline in expert alignment on challenging open-ended queries; (ii) reliably penalizes contextually degraded responses; and (iii) when used as structured instructions, text feedback, or training rewards for performance optimization, yields up to ~66% relative gains on HealthBench for Gemini, GPT, and Qwen model families. RubricsTree thus provides a scalable, auditable, and evolving evaluation infrastructure required for the continuous optimization of product-level personal healthcare AI.",
-      "pdf_url": "https://arxiv.org/pdf/2606.18203v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.18203v1",
-      "published": "2026-06-16T17:34:53Z",
-      "updated": "2026-06-16T17:34:53Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "WEQA: Wearable hEalth Question Answering with Query-Adaptive Agentic Reasoning",
-      "authors": [
-        "Yuwei Zhang",
-        "Tong Xia",
-        "Bianca Emmerich",
-        "Yu Yvonne Wu",
-        "Dimitris Spathis",
-        "Xin Liu",
-        "Daniel McDuff",
-        "Cecilia Mascolo"
-      ],
-      "abstract": "Language models are remarkably capable at medical question answering, in some cases surpassing the accuracy of general physicians. However, answering questions about wearable health data remains challenging and understudied, as these ubiquitous sensors produce continuous, high-dimensional, and longitudinal data, which is non-trivial to align with text-centric distributions in LLM pretraining. The diversity of sensor modalities and user intents cannot be effectively handled by a fixed reasoning workflow or a single pretrained foundation model. To address these challenges, we propose WEQA, a query-adaptive agent framework that unifies LLM reasoning with specialized wearable analytical and modeling tools. An LLM controller is employed to synthesize execution plans and dynamically route each query to the appropriate combination of sensor analysis and pretrained models, and perform grounded response auditing with external knowledge. We also curate a benchmark spanning four open wearable datasets comprising analytic and predictive tasks in three different health domains. Experiments show that our framework is 24% more accurate than LLM and agentic baselines, and a blinded study with 12 medical experts and 8 users shows substantial gains in usefulness and clinical soundness.",
-      "pdf_url": "https://arxiv.org/pdf/2606.18147v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.18147v1",
-      "published": "2026-06-16T16:45:56Z",
-      "updated": "2026-06-16T16:45:56Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Towards Understanding and Measuring COGNITIVE ATROPHY in LLM Behaviour",
-      "authors": [
-        "Abeer Badawi",
-        "Moyosoreoluwa Olatosi",
-        "Negin Baghbanzadeh",
-        "Laleh Seyyed-Kalantari",
-        "Frank Rudzicz",
-        "R. Shayna Rosenbaum",
-        "Sara Pishdadian",
-        "Elham Dolatabadi"
-      ],
-      "abstract": "Recent incidents involving LLMs used for mental-health support reveal a critical evaluation gap: surface-level safety scores do not capture how models behave across realistic, emotionally sensitive interactions over time. Existing benchmarks measure knowledge, safety, or static response quality, but miss whether LLM interactions help users keep reflecting, coping, and making decisions themselves. We formalize this missing dimension as COGNITIVE ATROPHY, a process-level behavioural measure in AI-mediated mental-health support distinct from safety and helpfulness. To measure it, we introduce COGNITIVE ATROPHY BENCH, a clinically grounded benchmark built from 1,576 fully human-generated counseling conversations, 15,680 turns, and 42,230 responses from five LLMs. Three clinical and neuropsychology experts developed a 20-attribute schema spanning user context, response behaviour, and global risk flags; six trained clinical reviewers applied it with span-grounded evidence, producing 5,324 reviewer judgments. We further introduce the User-Input Risk Index (UIRI), the Cognitive Atrophy Risk Index (ARI), and trajectory summaries. Across five LLMs, models show a consistent moderate-to-high level of atrophy-aligned behaviour across single and multi-turn settings. While models generally respond to overt safety cues, they adapt less reliably when users seek solutions or decisions. The dominant recurring patterns are directive advice, problem-solving, recommendation responses, topic shifts, and forms of validation that may reinforce dependence rather than reflection. Our work makes COGNITIVE ATROPHY measurable and provides a foundation for auditing model behaviour in sensitive LLM conversations.",
-      "pdf_url": "https://arxiv.org/pdf/2606.18129v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.18129v1",
-      "published": "2026-06-16T16:26:12Z",
-      "updated": "2026-06-16T16:26:12Z",
-      "categories": [
-        "cs.HC",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Agentic AI-based Framework for Mitigating Premature Diagnostic Handoff and Silent Hallucination in Healthcare Applications",
-      "authors": [
-        "Divyansh Srivastava",
-        "Shreya Ghosh",
-        "Anshul Verma",
-        "Rajkumar Buyya"
-      ],
-      "abstract": "Recent advances in Large Language Models (LLMs) and multi-agent systems have driven the rise of Agentic AI, showing promise for medical reasoning. However, open-ended conversational agents remain prone to two critical failure modes: premature diagnostic handoff and silent clinical hallucinations that may go undetected before reaching the patient. In this work, we propose a multi-agent framework that addresses both issues by replacing ``LLM-as-a-judge'' routing with deterministic orchestration constraints. The framework incorporates two safety mechanisms. First, a neuro-symbolic state-tracking gate enforces completeness of the OLDCARTS clinical protocol (Onset, Location, Duration, Character, Aggravating/Alleviating factors, Radiation, Timing, and Severity) by blocking diagnostic transitions until all required dimensions are collected. Second, an epistemic uncertainty quantification (UQ) gate computes semantic entropy (H) across K=5 independent diagnostic samples to identify and intercept divergent outputs before delivery.\n  We evaluate the system using simulated patient agents powered by the llama-3.1-70b-instruct model on 150 test cases. The full architecture achieves 49.3% diagnostic precision, representing an absolute improvement of 11.3 percentage points over an unconstrained baseline. Additionally, we observe a statistically significant negative correlation (r = -0.181, p < 0.05) between OLDCARTS completeness (\u03c3) and semantic entropy (H), suggesting that structured information gathering is associated with reduced diagnostic uncertainty.",
-      "pdf_url": "https://arxiv.org/pdf/2606.18068v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.18068v1",
-      "published": "2026-06-16T15:39:19Z",
-      "updated": "2026-06-16T15:39:19Z",
-      "categories": [
         "cs.AI"
       ]
     }

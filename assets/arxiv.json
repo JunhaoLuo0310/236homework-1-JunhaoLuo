@@ -1,8 +1,153 @@
 {
-  "generated_at_utc": "2026-06-24T04:05:15.271908Z",
+  "generated_at_utc": "2026-06-25T04:05:35.497799Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "SurgAtlas: A Large-Scale Surgical Video-Language Dataset with 2,391 Hours of Open and Minimally Invasive Surgery",
+      "authors": [
+        "Filippos Bellos",
+        "Andre S. Gala-Garza",
+        "Miaowei Wang",
+        "Alyssa M. Hardin",
+        "Ahmad M. Hider",
+        "Yayuan Li",
+        "Jing Bi",
+        "Susan Liang",
+        "Chenliang Xu",
+        "Donald S. Likosky",
+        "Jason J. Corso"
+      ],
+      "abstract": "We introduce SurgAtlas, the largest surgical video-language dataset to date, comprising 15,291 videos (2,391 hours) spanning 18 surgical specialties and over 5,000 procedure types, sourced entirely from publicly available YouTube content. SurgAtlas is also the first surgical video-language dataset to include open surgery at scale, with 6,182 open procedure videos alongside over 9,000 minimally invasive recordings, and the first to establish standardized benchmarks for open-surgery video understanding. We additionally provide an expert-validated subset with verified visual question-answer pairs across diverse open and minimally invasive procedures, serving as a clinically grounded benchmark for surgical reasoning. Compared with existing surgical video-language datasets, SurgAtlas provides one of the most diverse annotation schemas, combining segment-level captions, step- and phase-level descriptions, video-level surgical descriptions, and reasoning-oriented question-answer pairs organized within a hierarchical taxonomy. These annotations are constructed through an automated multi-tier pipeline with LLM-based enrichment and a staged VQA generation framework with explicit groundedness verification. The scale and diversity of SurgAtlas enable training surgical foundation models with broad procedural coverage: we finetune Qwen3-VL-8B through a two-stage captioning-then-instruction pipeline and achieve competitive or state-of-the-art results on multiple established surgical benchmarks, including phase recognition, triplet detection, and reasoning question answering. More broadly, SurgAtlas provides a large native public video corpus that can support future large-scale pretraining of multimodal surgical AI systems and contribute to the development of next-generation foundation models for surgery.",
+      "pdf_url": "https://arxiv.org/pdf/2606.25905v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.25905v1",
+      "published": "2026-06-24T14:53:56Z",
+      "updated": "2026-06-24T14:53:56Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "MedGuards: Multi-Agent System for Reliable Medical Error Detection and Correction",
+      "authors": [
+        "Congbo Ma",
+        "Hu Wang",
+        "Yichun Zhang",
+        "Farah E. Shamout"
+      ],
+      "abstract": "As Large Language Models (LLMs) are increasingly deployed in healthcare settings, accurate error detection and correction in generated or existing text becomes critical, as even minor mistakes can pose risks to patient safety. Existing methods for error detection and correction, including automated checks and heuristic-based approaches, do not generalize well across unseen datasets. In this paper, we propose MedGuards as a medical safety guardrail, which is a new framework that treats medical error detection and correction as a multi-agent in-context learning task. Specialized agents separately detect, localize, and correct errors, while a confidence-guided arbitration mechanism resolves disagreements using reasoning traces and confidence scores. This design enhances interpretability, robustness, and adaptability, without requiring additional training of the base LLMs. Additionally, we introduce the Keyword-Prioritized Correction Score (KPCS), a new evaluation metric that considers whether critical keywords within the reference text are generated correctly, providing a more comprehensive assessment than conventional metrics. Experiments across four multilingual medical datasets consisting of clinical notes demonstrate significant improvements by the proposed framework across several metrics and models. Our aim is to enable safer deployment of LLMs in real-world healthcare applications. For reproducibility, we make our code publicly available at https://github.com/congboma/MedErrBench.",
+      "pdf_url": "https://arxiv.org/pdf/2606.25651v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.25651v1",
+      "published": "2026-06-24T10:07:59Z",
+      "updated": "2026-06-24T10:07:59Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "PolicyAlign: Direct Policy-Based Safety Alignment for Large Language Models",
+      "authors": [
+        "Chang Wu",
+        "Junfeng Fang",
+        "Houcheng Jiang",
+        "Kai Tang",
+        "Pengyu Cheng",
+        "Xiaoxi Jiang",
+        "Guanjun Jiang",
+        "Xiang Wang"
+      ],
+      "abstract": "Safety alignment of large language models (LLMs) typically depends on high-quality supervision data, such as safe demonstrations or preference pairs. However, in real-world deployment, emerging safety requirements are often specified as natural-language policies, while corresponding supervision data may be costly, delayed, or unavailable. This creates a mismatch between rapidly evolving safety policies and conventional data-driven alignment methods. To address this, we propose PolicyAlign, a simple yet effective framework for directly aligning LLMs with safety policies. Given a safety policy, PolicyAlign first synthesizes policy-violating instructions and then performs on-policy self-distillation to internalize policy-guided behavior. To improve training stability and data efficiency, we further introduce Policy-Sensitive Filtering, which selects instructions where the policy induces the largest behavioral shift. Experiments across multiple models show that PolicyAlign consistently improves safety while maintaining low over-refusal and preserving general capabilities. PolicyAlign also generalizes to medical, legal, and financial safety scenarios, highlighting its potential as a scalable and maintainable approach to policy-based LLM safety alignment. The code is released at https://github.com/Qwen-Applications/PolicyAlign.",
+      "pdf_url": "https://arxiv.org/pdf/2606.25442v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.25442v1",
+      "published": "2026-06-24T06:10:33Z",
+      "updated": "2026-06-24T06:10:33Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "BrainAgent: A Large Language Model-Driven Multi-Agent Framework for Autonomous Brain Signal Understanding",
+      "authors": [
+        "Yangxuan Zhou",
+        "Sha Zhao",
+        "Jiquan Wang",
+        "Shijian Li",
+        "Gang Pan"
+      ],
+      "abstract": "Brain-Computer Interfaces (BCIs) and brain signal understanding are pivotal for clinical health and next-generation interactions. Despite this significance, its widespread adoption in real-world scenarios remains restricted, primarily because current analytical paradigms lack sufficient agentic intelligence. First, existing methodologies impose prohibitive technical barriers, requiring extensive specialized expertise. Second, they remain inherently static and task-specific, failing to execute the complex, long-horizon workflows essential for real-world deployment. To accelerate the democratization of brain signal understanding, we draw inspiration from Large Language Models (LLMs) to introduce BrainAgent, an LLM-driven multi-agent framework designed to ground abstract natural language intent into rigorous, executable, and end-to-end processing pipelines. BrainAgent employs a hierarchical architecture where a central supervisor orchestrates specialized sub-agents for adaptive task decomposition and execution. Furthermore, we establish a comprehensive, systematic benchmark for evaluating agentic systems in brain signal analysis. Empirical results demonstrate that BrainAgent effectively automates complex workflows with superior reliability, marking a paradigm shift toward democratized brain signal understanding.",
+      "pdf_url": "https://arxiv.org/pdf/2606.25400v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.25400v1",
+      "published": "2026-06-24T04:54:26Z",
+      "updated": "2026-06-24T04:54:26Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Hybrid-IR: Dual-Path Hybrid Retrieval with Iterative Reasoning for Complex Medical Question Answering",
+      "authors": [
+        "Sheng Wan",
+        "Jiahui Zhang",
+        "Zicheng Zhao",
+        "Shougang Ren"
+      ],
+      "abstract": "Large language models (LLMs) have shown promising performance across a wide range of biomedical applications, including medical question answering (QA), yet they remain prone to hallucinations and outdated knowledge. Although retrieval-augmented generation (RAG) can alleviate this issue by incorporating external documents, there still exist two fundamental limitations. First, medical knowledge is often fragmented across documents, while most RAG methods rely on a single retrieval path, which makes it challenging to jointly preserve fine-grained semantic information and structured global associations. Second, static retrieval strategies are typically insufficient to support deep reasoning that is important in complex medical QA. In this paper, we present a dual-path retrieval framework with an iterative retrieval-reasoning mechanism termed \"Hybrid-IR\" for complex medical QA. The proposed Hybrid-IR integrates graph-based retrieval for exploration of structured knowledge and dense retrieval for fine-grained semantic matching. Moreover, the reasoning trajectory can be progressively refined through an iterative retrieve-reason loop. Experiments on three widely used medical QA benchmarks demonstrate the effectiveness of our Hybrid-IR.",
+      "pdf_url": "https://arxiv.org/pdf/2606.25338v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.25338v1",
+      "published": "2026-06-24T03:09:50Z",
+      "updated": "2026-06-24T03:09:50Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Bridging the Post-discharge Gap: A Traceable Multi-agent Framework for Safe and Continuous Care",
+      "authors": [
+        "Runwei Guan",
+        "Yi Zhou",
+        "Heyi Lin",
+        "Jinjing Zhu",
+        "Mingyuan Hou",
+        "Yang Yang",
+        "Fang Yuan",
+        "Xiaohong Lin",
+        "Shaofeng Liang",
+        "Xuming Hu",
+        "Tao Li",
+        "Tianbin Zhao",
+        "Yutao Yue",
+        "Zhiyuan Wang",
+        "Hui Xiong"
+      ],
+      "abstract": "Post-discharge clinical follow-up is critical for maintaining continuity of care and mitigating long-term health risks. However, traditional follow-up paradigms suffer from shortage of health workforce, fragmented patient histories, and information silos across clinical departments. While large language models have demonstrated potential in medical question-answering, their deployment in continuous care is hindered by hallucination risks and a fundamental inability to reason over longitudinal, patient-specific constraints. Here we present Healink, a memory-enhanced multi-agent framework to support AI-assisted post-discharge follow-up by generating prescription-grounded, traceable responses that improved completeness and perceived clinical utility in retrospective and physician-blinded evaluations. The architecture seamlessly integrates a triage routing mechanism, a unified memory enhancement module utilizing a robust relational database for optimal latency, and a strict constraint-based retrieval-augmented generation engine. By vectorizing historical clinical records and employing weighted similarity functions across diverse phenotypic and intervention dimensions, Healink ensures precise inter-patient and intra-patient case matching while actively preventing cross-departmental drug conflicts. We evaluated Healink on a dataset comprising 400 continuous and 85 highly complex real-world follow-up cases, alongside the webMedQA benchmark. In a rigorous single-blind evaluation conducted by clinical experts, the framework outperformed human physician baselines in both authoritativeness and clinical safety. By generating a traceable, white-box evidence chain, Healink provides a scalable, safe, and highly effective paradigm for intelligent patient management, ultimately enhancing societal healthcare outcomes.",
+      "pdf_url": "https://arxiv.org/pdf/2606.25334v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.25334v1",
+      "published": "2026-06-24T02:57:51Z",
+      "updated": "2026-06-24T02:57:51Z",
+      "categories": [
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "MRI2Rep: Autoregressive Structured Report Generation for 3D Liver MRI",
+      "authors": [
+        "Xinran Li",
+        "Junlin Yang",
+        "Annabella Shewarega",
+        "Zongwei Zhou",
+        "Julius Chapiro",
+        "James S. Duncan",
+        "Lawrence H. Staib"
+      ],
+      "abstract": "Manual reporting of 3D MRI studies is time-consuming, yet end-to-end structured report generation for 3D liver MRI remains underexplored due to volumetric complexity and scarce paired data. We propose MRI2Rep, an autoregressive framework for liver MRI report generation. From 3,929 real-world MRI-report pairs acquired over a 10-year single-institution cohort, a Report-to-Label Canonicalization (RLC) module converts free-text reports into structured, closed-vocabulary diagnostic sequences without lesion-level annotations. On a held-out test set, MRI2Rep achieves 76.0% case-level sensitivity, 29.4% lesion-level F1, compared with no more than 8.3% for adapted medical vision-language baselines, and 82.4% liver-level accuracy. In a blinded reader study, two radiologists rated 75% and 70% of AI-generated reports as clinically acceptable, compared with 95% and 100% for original reports. Our automated LLM-based judge, LLM-Eval, rated 61.8% of AI-generated reports as acceptable, applying a stricter standard and supporting its use as a conservative proxy. To our knowledge, this is the first end-to-end LI-RADS-structured reporting system for 3D liver MRI.",
+      "pdf_url": "https://arxiv.org/pdf/2606.25279v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.25279v1",
+      "published": "2026-06-24T01:31:44Z",
+      "updated": "2026-06-24T01:31:44Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "BenchX: Benchmarking AI Models for Cancer Detection and Localization with Demographic and Protocol Biases",
       "authors": [
@@ -188,125 +333,6 @@
       "arxiv_url": "https://arxiv.org/abs/2606.23884v1",
       "published": "2026-06-22T19:30:14Z",
       "updated": "2026-06-22T19:30:14Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Brain-Adapter: A Dual-Stream Vision-Language MIL Framework for Comprehensive 3D CT Diagnosis of Acute Intracranial Pathologies",
-      "authors": [
-        "Zhenyu Yi",
-        "Zhiyun Song",
-        "Yusong Sun",
-        "Zelin Liu",
-        "Manman Fei",
-        "Zhenhao Li",
-        "Jiaxuan Zhao",
-        "Xu Han",
-        "Lichi Zhang"
-      ],
-      "abstract": "Automated diagnosis of 3D brain CT scans is essential for critical care, yet it remains challenging due to the heavy reliance on manual annotations and the limited semantic understanding of conventional models. While 2D foundation vision-language models (VLMs) have shown remarkable generalization, effectively transferring their representational power to 3D volumes remains an open problem. In this paper, we propose Brain-Adapter, a novel dual-stream multiple instance learning (MIL) framework that leverages pre-trained 2D biomedical VLMs and raw diagnostic reports for robust scan-level multi-label classification. Specifically, we introduce a Text-Conditioned Attention (TCA) mechanism, utilizing raw diagnostic sentences as semantic queries to dynamically align visual cues with specific disease concepts. Concurrently, a parallel visual MIL stream captures global scan characteristics, supervised by structured labels extracted via a Large Language Model (LLM). To ensure representation coherence, a consistency constraint enforces synergy between the two streams. During inference, an Uncertainty-Aware Refinement (UAR) module dynamically calibrates and fuses these dual-stream predictions to resolve ambiguous cases. Extensive experiments demonstrate that our method significantly outperforms state-of-the-art 3D models and standard MIL approaches. By eliminating the reliance on dense annotations, Brain-Adapter provides a highly scalable and clinically viable solution for 3D acute intracranial pathology analysis.",
-      "pdf_url": "https://arxiv.org/pdf/2606.23494v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.23494v1",
-      "published": "2026-06-22T15:41:16Z",
-      "updated": "2026-06-22T15:41:16Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Self-Stigma Is Not a Monolith, but Generic Empathy Is: Persona-Conditioned LLM Support for People Who Use Drugs",
-      "authors": [
-        "Layla Bouzoubaa",
-        "Rezvaneh Rezapour"
-      ],
-      "abstract": "Self-stigma predicts treatment avoidance and disengagement among people who use drugs (PWUD), yet conversational systems aiming to provide support typically treat self-stigma expression as a uniform signal. We present a three-phase, proof-of-concept study of a persona-aware approach to LLM support. Latent Profile Analysis (LPA) on indicator-level features from 1,174 self-stigma expressors on Reddit yields a four-persona typology validated against held-out behavioral and linguistic features. Sequential Bayesian and recurrent neural classifiers recover these personas from limited posting histories, substantially outperforming batch and few-shot LLM baselines (macro-F1 = 0.74 at 30 posts). Evaluation by eight clinical experts across three contemporary LLMs revealed a misalignment: persona-matched responses successfully achieved targeted behavioral shifts, yet raters holistically preferred the generic empathy of the persona-neutral baseline. Our findings suggest that holistic empathy judgments and clinically-aligned response design can pull in opposite directions, and that evaluating LLM-based stigma support requires rubrics capable of decomposing the two.",
-      "pdf_url": "https://arxiv.org/pdf/2606.23387v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.23387v1",
-      "published": "2026-06-22T14:14:57Z",
-      "updated": "2026-06-22T14:14:57Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "EHR-Complex: Benchmarking Medical Agents for Complex Clinical Reasoning",
-      "authors": [
-        "Yitong Qiao",
-        "Lei Liu",
-        "Yue Shen",
-        "Jian Wang",
-        "Jinjie Gu",
-        "Zhixuan Chu",
-        "Kui Ren"
-      ],
-      "abstract": "Clinical agents promise to democratize access to electronic health records (EHRs), yet existing benchmarks fail to reflect the complexity of practical EHR analysis, e.g., often operating on idealized, clean EHRs via static SQL generation rather than interactive execution. In this work, we introduce EHR-Complex, a large-scale benchmark designed for interactive clinical database reasoning. Built on the large MIMIC-IV substrate (365K patients, 31 tables, 500M+ records), EHR-Complex comprises about 52K tasks spanning six clinical intents, supporting both patient-level and population-level queries, where each task requires an agent to interact with a sandboxed environment by executing SQL queries or Python code. Notably, EHR-Complex considers the real-world SQL task complexity for longitudinal multi-table aggregation and compositional reasoning, resulting in 31.93 SQL structural components per query on average. Evaluation results on EHR-Complex reveal the clinical difficulty of these EHR reasoning scenarios, with the top-performing model achieving only 62.3% exact-match accuracy. Pass^k consistency drops below 50% for nearly all evaluated models at k=4, exposing broad stochastic fragility. A fine-grained analysis of more than 3,800 failed trajectories for representative LLMs reveals three dominant failure modes: SQL logic errors, medical-code lookup failures, and semantic misunderstandings. EHR-Complex provides a rigorous testbed for clinical agents and highlights remaining gaps in robust reasoning for large-scale EHR analysis.",
-      "pdf_url": "https://arxiv.org/pdf/2606.23301v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.23301v1",
-      "published": "2026-06-22T13:14:21Z",
-      "updated": "2026-06-22T13:14:21Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "TTFT-Aware Graph Chain-of-Thought:Distance-Indexed Neural A* for Low-Hallucination Multi-Hop Medical Reasoning",
-      "authors": [
-        "Bechir Dardouri",
-        "Ka\u00efs Zhioua",
-        "Yassine Msaddak"
-      ],
-      "abstract": "Hallucinations and opaque reasoning remain unacceptable failure modes for clinical LLMs. We present a production-grade GraphRAG stack that constrains answers to verifiable graph chain-of-thought paths in a heterogeneous, ~700K-node medical knowledge graph powering a fertility assistant. The core idea is targeted navigation: a directed Pruned Landmark Labeling (PLL) oracle provides exact distances for sub-millisecond feasibility checks and simple-path enumeration, while a lightweight AStarNet heuristic operates strictly within the PLL corridor to prioritize clinically plausible expansions. We score and pack a small, diverse set of paths (CUI/semantic-type overlap, length prior, provenance priors) to condition generation, yielding compact prompts and improved Time to First Token (TTFT). On fertility-focused queries, the hybrid (PLL+AStarNet) establishes a better latency/recall Pareto frontier than text-only RAG and single-component baselines, lowers TTFT, and reduces clinician-audited hallucinations while preserving explanation clarity. The result is a practical recipe for explainable, low-hallucination multi-hop medical reasoning ready for real-world deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2606.23108v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.23108v1",
-      "published": "2026-06-22T09:51:28Z",
-      "updated": "2026-06-22T09:51:28Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Physiology-Aware CNN and Zero-Shot Multimodal LLMs for ECG Image Classification: A Comparative Study",
-      "authors": [
-        "Khalil Ahammad",
-        "Derek Abbott",
-        "Mohsen Dorraki"
-      ],
-      "abstract": "Multimodal large language models (LLMs) are increasingly adopted to interpret 12-lead ECG images, though the interpretations often lack validation. However, ECG image understanding significantly differs from general images as it depends on precise waveform morphology, lead relationships and accurate interval measurements. This study investigated whether zero-shot multimodal LLMs can reliably distinguish normal and abnormal ECG images and, in parallel, evaluated CNN-based models for clinically grounded references. Standard 12-lead ECG recordings were rendered as single-page images for a binary normal-abnormal classification task. Three prominent LLMs (GPT-5.2, GPT-4.1, and Gemini-2.5 Pro) were tested using a fixed zero-shot prompt across multiple runs. In parallel, a physiology-aware CNN-based model was developed with the capability to aggregate features from the predefined anatomical lead groups. The model was compared with ResNet18, DenseNet121, VGG16 baselines, and all the models were evaluated on an internal test set and external PTB-XL dataset. Across seeds, CNN-based models demonstrated stable discrimination, with average internal ROC-AUC of 0.92-0.94, and external ROC-AUC of 0.85-0.86. The proposed LeadGroupECG model significantly improved over its backbone internally without compromising external generalization. It remained competitive with other baselines, while consistently highlighting anatomical lead-group contributions. In contrast, zero-shot LLM discrimination remained near-chance (ROC-AUC around 0.5). The PR-AUC improved slightly when ECGs used a grid-based calibration background compared with the grid-free ECGs. Although multimodal LLMs can generate reasonable ECG narratives, their zero-shot diagnostic discrimination remains limited. Therefore, clinically framed, domain-specific architectures remain essential for AI-based ECG interpretation.",
-      "pdf_url": "https://arxiv.org/pdf/2606.22889v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.22889v1",
-      "published": "2026-06-22T05:59:10Z",
-      "updated": "2026-06-22T05:59:10Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "SingGuard: A Policy-Adaptive Multimodal LLM Guardrail with Dynamic Reasoning",
-      "authors": [
-        "SingGuard Team"
-      ],
-      "abstract": "Vision-language models (VLMs) are increasingly deployed in consumer, medical, financial, and enterprise applications. This broad deployment expands the safety surface: risks can arise from multimodal question answering, assistant responses, and cross-modal composition, while moderation policies may vary across products, regions, and deployment stages. Most existing guardrails either rely on fixed taxonomies or target only a narrow set of interaction settings, which limits their adaptability when safety rules change at deployment time. We present \\textbf{SingGuard}, a policy-adaptive multimodal guardrail model family for safety assessment in multimodal conversations. SingGuard treats the active policy as a runtime input: given natural-language rules, it checks the target content against the active policy rule by rule and predicts both the safety label and the triggered rule. To balance efficiency and interpretability, SingGuard supports fast, hybrid, and slow inference regimes along a fast-to-slow reasoning spectrum, ranging from direct safety judgments to policy-grounded deliberation. We further optimize this behavior with fast--slow decoupled reinforcement learning. We also introduce \\textbf{SingGuard-Bench}, a multimodal guardrail benchmark with 56{,}340 examples spanning 80+ fine-grained risk types across multimodal QA, adversarial attack, and dynamic-rule evaluation settings, including cross-modal joint-risk cases where each modality is harmless in isolation but their composition implies unsafe intent. Across six benchmark families (35 datasets), SingGuard achieves state-of-the-art average F1 in every family. Dynamic-rule evaluation further shows improved policy-following accuracy from 0.6465 to 0.7415 under runtime policy shifts. Our code is available at https://github.com/inclusionAI/Sing-Guard.",
-      "pdf_url": "https://arxiv.org/pdf/2606.22873v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.22873v1",
-      "published": "2026-06-22T05:37:43Z",
-      "updated": "2026-06-22T05:37:43Z",
-      "categories": [
-        "cs.CV",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "When Confidence Takes the Wrong Path: Diagnosing Retrieval-State Lock-In in RAG",
-      "authors": [
-        "Sahib Julka"
-      ],
-      "abstract": "The trustworthiness of a retrieval-augmented generation (RAG) system depends on more than the answer it returns, yet many black-box uncertainty methods still read agreement among sampled answers as confidence. That inference fails when repeated samples condition on the same defective retrieval state. The state may be empty, with the model falling back on parametric memory, or populated by a coherent but wrong neighbourhood. In either case, the answers agree because the error is stable. The problem is recognised in deployed RAG, but it has lacked a name, a measurable signature, and a prevalence bound. We supply all three. We name the failure retrieval-state lock-in and diagnose it by separating the three objects a single confidence score conflates: the answer surface, the retrieved evidence, and the retrieval state itself. In an inspectable, ontology-guided knowledge-graph RAG (KG-RAG) system across six question-answering snapshots, we measure the agreement blind spot directly: at five samples per question, 42% of KG-RAG errors and 59% of dense-retrieval errors carry zero answer dispersion, so agreement has nothing to rank, while evidence- and retrieval-state checks still flag most of them. The decomposition supports an auditable decision rule: accepting an answer only when answer, evidence, and retrieval checks all agree that it is low-risk reaches 91.9% pooled precision against a 69.7% accept-all rate. The cost is coverage: it certifies only 7.7% of answers as low-risk. On the clinical calibration domain it reaches 100% precision under an automated judge; this is an in-domain automated-label upper bound, not a clinical safety claim, and still needs human validation. Confidence in RAG is object-specific: when answers agree, the useful question is which part of the pipeline to distrust.",
-      "pdf_url": "https://arxiv.org/pdf/2606.22728v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.22728v1",
-      "published": "2026-06-22T00:08:00Z",
-      "updated": "2026-06-22T00:08:00Z",
       "categories": [
         "cs.CL",
         "cs.AI"

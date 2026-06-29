@@ -1,8 +1,31 @@
 {
-  "generated_at_utc": "2026-06-27T03:58:22.005597Z",
+  "generated_at_utc": "2026-06-29T04:40:09.036268Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "From Black-Box to Clinical Insight: A Multi-Stage Explainable Framework for Speech-Based Cognitive Impairment Detection",
+      "authors": [
+        "Yasaman Haghbin",
+        "Sina Rashidi",
+        "Ali Zolnour",
+        "Fatemeh Taherinezhad",
+        "Ali Fartoot",
+        "Hossein Azadmaleki",
+        "James M Noble",
+        "Maryam Dadkhah",
+        "Maryam Zolnoori"
+      ],
+      "abstract": "Speech-based cognitive impairment detection offers a noninvasive, accessible alternative to costly biomarker assays, yet transformer-based models remain clinically uninterpretable. We propose a multi-stage explainability framework that translates black-box transformer predictions into clinically grounded narratives by integrating SHapley Additive exPlanations (SHAP)-based token attribution, theory-informed linguistic features, and a four-stage LLM reasoning pipeline using LLaMA-3.1-70B-Instruct. Built on the SpeechCARE-Adaptive Gating Network multimodal screening model (F1 = 72.11% on the NIA PREPARE benchmark), the framework maps model outputs to four cognitive-linguistic dimensions, including lexical richness, syntactic complexity, and semantic coherence. Physician evaluation on 70 stratified English samples demonstrated strong alignment with patient-level cognitive profiles, and a System Usability Scale score of 82/100 indicated high potential for clinical workflow integration.",
+      "pdf_url": "https://arxiv.org/pdf/2606.27973v1",
+      "arxiv_url": "https://arxiv.org/abs/2606.27973v1",
+      "published": "2026-06-26T11:21:42Z",
+      "updated": "2026-06-26T11:21:42Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
     {
       "title": "CORTEX: A Structured Reasoning Benchmark for Trustworthy 3D Chest CT MLLMs",
       "authors": [
@@ -63,13 +86,19 @@
     {
       "title": "A Pipeline for Generating Longitudinal Synthetic Clinical Notes Using Large Language Models",
       "authors": [
-        "William Poulett"
+        "William Poulett",
+        "Alice Waterhouse",
+        "Ben Wallace",
+        "Scarlett Kynoch",
+        "Amaia Imaz Blanco",
+        "Michael Spence",
+        "Jonathan Pearson"
       ],
       "abstract": "Synthetic data is increasingly used to enable the development and evaluation of AI systems in domains where access to real-world data is restricted. In healthcare, clinical documentation presents particular challenges due to its sensitivity. This work introduces a synthetic clinical notes pipeline and dataset designed to support the development of clinical AI tools while avoiding the privacy risks associated with real patient data. The dataset is generated using a modular pipeline that combines structured patient generation, semi-structured patient journey simulation, and unstructured clinical note generation using large language models. The pipeline is designed to prioritise internal consistency across longitudinal patient records, while also capturing variation in writing style, note structure, and clinical detail. Additional mechanisms, including LLM-based validation and augmentation steps, are used to improve faithfulness, realism, and diversity of the generated notes. We release a dataset of 70 synthetic patients, each associated with 20-50 clinical notes spanning a full hospital journey. The dataset is provided at multiple levels of validation, enabling users to balance realism and scalability depending on their use case. This dataset supports the development, testing, and evaluation of clinical AI systems, including summarisation tools, coding models, and decision support systems, without reliance on real patient data.",
-      "pdf_url": "https://arxiv.org/pdf/2606.26879v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.26879v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26879v2",
+      "arxiv_url": "https://arxiv.org/abs/2606.26879v2",
       "published": "2026-06-25T11:08:40Z",
-      "updated": "2026-06-25T11:08:40Z",
+      "updated": "2026-06-26T10:20:07Z",
       "categories": [
         "cs.AI"
       ]
@@ -93,7 +122,7 @@
       ]
     },
     {
-      "title": "Boundary-Aware Context Grounding for A Low-Channel EEG Agent",
+      "title": "What the LLM Should Not Say: Boundary-Aware Context Grounding for A Seven-Channel EEG Agent",
       "authors": [
         "Zhiyuan Xu",
         "Yueqing Dai",
@@ -101,10 +130,10 @@
         "Junwen Luo"
       ],
       "abstract": "Large language models (LLMs) can make scientific software easier to use. However, a general model does not automatically know which measurements a particular sensor can support, which algorithms are implemented in the current software, or which conclusions are justified by a computed result. These distinctions are especially important for low-channel electroencephalography (EEG), where sparse spatial coverage and variable signal quality make plausible but unsupported interpretations easy to produce. We present NeuraDock Agent, an open-source architecture that separates a deterministic local EEG engine from a hardware-aware language layer. The numerical engine parses recordings, performs quality control, executes reviewed spectral workflows, and writes machine-readable artifacts. The LLM receives only a compact, allowlisted summary and a versioned context pack. The context describes the seven-channel hardware, reviewed workflows, result fields, implementation boundaries, scientific limits, and reference cases. Raw EEG and dense per-sample arrays remain local\n  We evaluate the system at three levels. First, 12 recordings produced identical structured results over ten numerical repetitions, and a complete Rest/Task run produced identical result, report, and figure hashes over three repetitions. Second, request-capture and failure-injection experiments confirmed the tested data boundary and preservation of local artifacts under HTTP, malformed-output, and connection failures. Third, a boundary-awareness benchmark tested 36 ordinary and adversarial questions under four context ablations and two LLMs, yielding 288 outputs.These results support hardware- and implementation-aware grounding as a practical mechanism for calibrating what an EEG agent accepts, qualifies, or refuses; they do not establish clinical validity or a validated absolute cognitive-load index.",
-      "pdf_url": "https://arxiv.org/pdf/2606.26519v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.26519v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26519v2",
+      "arxiv_url": "https://arxiv.org/abs/2606.26519v2",
       "published": "2026-06-25T01:51:20Z",
-      "updated": "2026-06-25T01:51:20Z",
+      "updated": "2026-06-26T03:13:16Z",
       "categories": [
         "cs.AI"
       ]
@@ -185,11 +214,11 @@
         "Yichun Zhang",
         "Farah E. Shamout"
       ],
-      "abstract": "As Large Language Models (LLMs) are increasingly deployed in healthcare settings, accurate error detection and correction in generated or existing text becomes critical, as even minor mistakes can pose risks to patient safety. Existing methods for error detection and correction, including automated checks and heuristic-based approaches, do not generalize well across unseen datasets. In this paper, we propose MedGuards as a medical safety guardrail, which is a new framework that treats medical error detection and correction as a multi-agent in-context learning task. Specialized agents separately detect, localize, and correct errors, while a confidence-guided arbitration mechanism resolves disagreements using reasoning traces and confidence scores. This design enhances interpretability, robustness, and adaptability, without requiring additional training of the base LLMs. Additionally, we introduce the Keyword-Prioritized Correction Score (KPCS), a new evaluation metric that considers whether critical keywords within the reference text are generated correctly, providing a more comprehensive assessment than conventional metrics. Experiments across four multilingual medical datasets consisting of clinical notes demonstrate significant improvements by the proposed framework across several metrics and models. Our aim is to enable safer deployment of LLMs in real-world healthcare applications. For reproducibility, we make our code publicly available at https://github.com/congboma/MedErrBench.",
-      "pdf_url": "https://arxiv.org/pdf/2606.25651v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.25651v1",
+      "abstract": "As Large Language Models (LLMs) are increasingly deployed in healthcare settings, accurate error detection and correction in generated or existing text becomes critical, as even minor mistakes can pose risks to patient safety. Existing methods for error detection and correction, including automated checks and heuristic-based approaches, do not generalize well across unseen datasets. In this paper, we propose MedGuards as a medical safety guardrail, which is a new framework that treats medical error detection and correction as a multi-agent in-context learning task. Specialized agents separately detect, localize, and correct errors, while a confidence-guided arbitration mechanism resolves disagreements using reasoning traces and confidence scores. This design enhances interpretability, robustness, and adaptability, without requiring additional training of the base LLMs. Additionally, we introduce the Keyword-Prioritized Correction Score (KPCS), a new evaluation metric that considers whether critical keywords within the reference text are generated correctly, providing a more comprehensive assessment than conventional metrics. Experiments across four multilingual medical datasets consisting of clinical notes demonstrate significant improvements by the proposed framework across several metrics and models. Our aim is to enable safer deployment of LLMs in real-world healthcare applications. For reproducibility, we make our code publicly available at https://github.com/congboma/MedGuards.",
+      "pdf_url": "https://arxiv.org/pdf/2606.25651v2",
+      "arxiv_url": "https://arxiv.org/abs/2606.25651v2",
       "published": "2026-06-24T10:07:59Z",
-      "updated": "2026-06-24T10:07:59Z",
+      "updated": "2026-06-26T15:03:28Z",
       "categories": [
         "cs.CL"
       ]
@@ -276,26 +305,6 @@
       "updated": "2026-06-24T02:57:51Z",
       "categories": [
         "cs.MA"
-      ]
-    },
-    {
-      "title": "MRI2Rep: Autoregressive Structured Report Generation for 3D Liver MRI",
-      "authors": [
-        "Xinran Li",
-        "Junlin Yang",
-        "Annabella Shewarega",
-        "Zongwei Zhou",
-        "Julius Chapiro",
-        "James S. Duncan",
-        "Lawrence H. Staib"
-      ],
-      "abstract": "Manual reporting of 3D MRI studies is time-consuming, yet end-to-end structured report generation for 3D liver MRI remains underexplored due to volumetric complexity and scarce paired data. We propose MRI2Rep, an autoregressive framework for liver MRI report generation. From 3,929 real-world MRI-report pairs acquired over a 10-year single-institution cohort, a Report-to-Label Canonicalization (RLC) module converts free-text reports into structured, closed-vocabulary diagnostic sequences without lesion-level annotations. On a held-out test set, MRI2Rep achieves 76.0% case-level sensitivity, 29.4% lesion-level F1, compared with no more than 8.3% for adapted medical vision-language baselines, and 82.4% liver-level accuracy. In a blinded reader study, two radiologists rated 75% and 70% of AI-generated reports as clinically acceptable, compared with 95% and 100% for original reports. Our automated LLM-based judge, LLM-Eval, rated 61.8% of AI-generated reports as acceptable, applying a stricter standard and supporting its use as a conservative proxy. To our knowledge, this is the first end-to-end LI-RADS-structured reporting system for 3D liver MRI.",
-      "pdf_url": "https://arxiv.org/pdf/2606.25279v1",
-      "arxiv_url": "https://arxiv.org/abs/2606.25279v1",
-      "published": "2026-06-24T01:31:44Z",
-      "updated": "2026-06-24T01:31:44Z",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]

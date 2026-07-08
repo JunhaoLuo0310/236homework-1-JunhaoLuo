@@ -1,8 +1,88 @@
 {
-  "generated_at_utc": "2026-07-07T03:56:26.708220Z",
+  "generated_at_utc": "2026-07-08T03:22:38.248417Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Measuring the practice of shared-decision making (OPTION12): An Investigation into Open-sourced Smaller LLMs (OS-sLLMs) for Better Privacy and Sustainability",
+      "authors": [
+        "Tamara Wit",
+        "Lifeng Han",
+        "Carly Heipon",
+        "David Lindevelt",
+        "Anne Stiggelbout",
+        "Suzan Verberne"
+      ],
+      "abstract": "We present LLM4SDM, the first study of open-source smaller language models (OS-sLLMs) for automated assessment of shared decision making (SDM) using the Observer OPTION12 framework. Unlike previous work that relies on large commercial models and the shorter OPTION5 instrument, our study focuses on privacy-preserving locally deployable models and Dutch melanoma consultation transcripts. Using expert-annotated clinical consultations, we evaluate three general-domain and two medical-domain OS-sLLMs during a development-phase pilot study. Results show that general-domain models outperform medical-domain models, which exhibit substantial hallucination and instruction-following failures. Gemma3:12b achieves the strongest agreement with human annotations (Pearson r=0.51, Spearman \\r{ho}=0.59). Item-level and qualitative analyses reveal systematic challenges related to temporal discourse reasoning, conversational role attribution, and evidence grounding. We further introduce a Judge-LLM consensus framework designed to support disagreement resolution among multiple models. Our findings suggest that while current OS-sLLMs cannot replace human annotators, they offer a promising foundation for privacy-preserving human-in-the-loop SDM assessment.",
+      "pdf_url": "https://arxiv.org/pdf/2607.06127v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.06127v1",
+      "published": "2026-07-07T10:37:04Z",
+      "updated": "2026-07-07T10:37:04Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "KOAL: Knowledge-Driven Prostate Cancer Grading with Ordinal-Aware Learning",
+      "authors": [
+        "Zheng Guo",
+        "Jiaqi Cui",
+        "Haocheng Xiong",
+        "Jize Han",
+        "Bo Liu",
+        "Qianwen Zhang",
+        "Rui Chen",
+        "Yan Wang"
+      ],
+      "abstract": "Non-invasive prediction of Gleason Grade Group (GGG) in prostate cancer using multiparametric MRI (mpMRI) is clinically vital for reducing unnecessary biopsies. Existing GGG prediction methods face two major limitations. First, they often overlook non-image information critical for GGG prediction, including age, prostate-specific antigen (PSA), and expert priors embedded in radiology reports. Second, they tend to oversimplify GGG as flat categorical labels, failing to account for its intrinsic hierarchy of primary and secondary Gleason patterns. To this end, we propose a novel Knowledge-Driven Ordinal-Aware Learning (KOAL) framework with three synergistic modules. Specifically, the Clinical-Context Modulation (CCM) module uses clinical variables (e.g., age and PSA) to dynamically modulate discriminative image representations. The Knowledge-Guided Prototype Alignment (KGPA) module leverages an LLM to extract group-specific expert knowledge from training radiology reports and clinical guidelines, producing offline semantic anchors describing grade-specific radiological findings without requiring patient-specific reports at inference. Through prototype contrastive alignment, patient-specific mpMRI representations are matched with these anchors to promote pathology-aligned representation learning. The Hierarchical Ordinal-aware Constraints (HOC) module decouples primary and secondary Gleason pattern prediction and maps their probabilistic outputs to GGG via a Differentiable Bio-logic Mapping Layer (DBML), ensuring pathological grading consistency. Experiments on public PI-CAI and in-house datasets demonstrate that KOAL outperforms state-of-the-art methods. Code is available at: https://github.com/Gother-GZ/KOAL.",
+      "pdf_url": "https://arxiv.org/pdf/2607.06019v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.06019v1",
+      "published": "2026-07-07T09:01:40Z",
+      "updated": "2026-07-07T09:01:40Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Harrison.Rad 1.5 Technical Report: A radiology foundation model that can draft reports from images, priors and clinical context",
+      "authors": [
+        "Suneeta Mall",
+        "Vladimir Nekrasov",
+        "Ashnil Kumar",
+        "Sajith Karunasena",
+        "Aiden Nibali",
+        "Alix Bird",
+        "Mateo Diaz Shine",
+        "Jarrel Seah"
+      ],
+      "abstract": "Imaging demand is growing faster than the radiology workforce can expand, and reporting backlogs cannot be resolved through training and recruitment alone. The most direct opportunity is reducing the time and effort radiologists spend producing reports, a task that requires interpreting images, integrating clinical history and prior studies, and drafting structured findings. We present Harrison.Rad 1.5 (HR1.5), a radiology-specific multimodal large language model that accepts interleaved text and visual inputs and generates structured and unstructured text across plain-film radiology, spanning computed radiography, chest, musculoskeletal, abdominal, spine, and pelvic x-rays, and mammography. HR1.5 is trained through a three-stage pipeline: domain adaptation of a base language model on radiology reports, contrastive vision-encoder training with curriculum-based hard negatives on ~6 million image-report instances, and visual-question-answering fine-tuning on multi-turn conversations. We evaluate it with a Findings-Diagnosis scoring framework that extends RadGraph-XL entity extraction with ontology-based synonym matching and polarity-contradiction detection, benchmarked on RadBench, a simulated FRCR 2B Short Case examination scored against Angoff-method thresholds, ReXGradient, and internal multi-modality datasets. HR1.5 is the only system evaluated to meet the simulated FRCR passing standard and achieves the highest accuracy on closed-format clinical questions, across anatomical regions, on internal multi-body-part and mammography reporting, and on the primary clinically-aligned score for public chest reporting. We further examine explainability and model behaviour, including question-sensitive Grad-CAM heatmaps, attention analysis, and confidence estimation, to support responsible future evaluation toward clinical use, and a framework for clinically grounded assessment of report quality.",
+      "pdf_url": "https://arxiv.org/pdf/2607.05880v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.05880v1",
+      "published": "2026-07-07T06:23:08Z",
+      "updated": "2026-07-07T06:23:08Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Depression Symptoms and Relational Patterns in 187k ChatGPT Histories",
+      "authors": [
+        "Neil K. R. Sehgal",
+        "Dunigan Folk",
+        "Lyle Ungar",
+        "Sharath Chandra Guntuku"
+      ],
+      "abstract": "Large language models are increasingly used as private, always-available conversational systems, but little is known about how people with depressive symptoms use them. Building on CSCW work on disclosure and peer support, we examine ChatGPT as an emerging informal support infrastructure: private, persistent, responsive, and available outside ordinary hours. We analyze 187,093 ChatGPT conversations from 766 participants who completed the PHQ-8, comparing those below the moderate-symptom threshold (score of 10) with those at or above it. Higher-PHQ participants used ChatGPT more for mental-health, interpersonal, loneliness, self-focused, and support-seeking conversations, with pronounced late-night and recurring month-level patterns. Their language contained more first-person singular pronouns and absolutist terms. They more often engaged ChatGPT in high-disclosure contexts, but professional redirection was not higher. Language-based prediction was modest and insufficient for screening (AUROC 0.591). We argue these histories should not be treated as clinical screening data but as evidence LLMs are increasingly used as informal support infrastructure.",
+      "pdf_url": "https://arxiv.org/pdf/2607.05685v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.05685v1",
+      "published": "2026-07-06T23:07:31Z",
+      "updated": "2026-07-06T23:07:31Z",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Toward Trustworthy Large Language Model Agents in Healthcare",
       "authors": [
@@ -213,94 +293,6 @@
       "updated": "2026-07-03T02:24:26Z",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "RadiomicNet: A Hybrid Radiomics-Guided Lightweight Architecture for Interpretable Medical Image Segmentation",
-      "authors": [
-        "Mohammad Amanour Rahman"
-      ],
-      "abstract": "Deep learning has achieved remarkable performance in medical image segmentation, yet it suffers from critical limitations: mathematical intractability, substantial parameter requirements, and lack of clinical interpretability. We propose RadiomicNet, a novel two-stream hybrid architecture that enhances standard deep learning by integrating handcrafted radiomics features directly into the segmentation learning process. The key contribution is the Radiomics Attention Gate (RAG), which leverages Gray-Level Co-occurrence Matrix (GLCM) and Local Binary Pattern (LBP) features to modulate skip-connection attention in a lightweight MobileNetV2-based encoder-decoder, providing ante-hoc interpretability without post-hoc approximations. A novel Radiomics Consistency Loss further enforces alignment between texture complexity and prediction uncertainty, reducing Expected Calibration Error (ECE) from 0.142 to 0.118. RadiomicNet achieves a Dice Similarity Coefficient (DSC) of 0.763 +/- 0.231 on the Breast Ultrasound Images (BUSI) dataset and 0.854 +/- 0.112 on Kvasir-SEG, outperforming U-KAN by 1.2% and 1.8%, respectively (p < 0.05, Wilcoxon signed-rank test), with only 3.27M parameters, 9.5x fewer than standard U-Net and 4.3x fewer than U-KAN. Gradient-based feature importance analysis reveals that GLCM dissimilarity (15.24%), GLCM energy (14.56%), and LBP entropy (11.49%) are the dominant radiomics cues, providing clinically meaningful explanations for segmentation decisions. The proposed approach demonstrates that compact, interpretable models grounded in domain knowledge can deliver state-of-the-art segmentation performance with substantially reduced computational overhead.",
-      "pdf_url": "https://arxiv.org/pdf/2607.02185v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.02185v1",
-      "published": "2026-07-02T13:54:33Z",
-      "updated": "2026-07-02T13:54:33Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A rubric-based controlled comparison of frontier language models on expert-authored clinical reasoning tasks",
-      "authors": [
-        "Samiha A. Ismail",
-        "Fan X. Chen",
-        "Ali Merali"
-      ],
-      "abstract": "Multiple-choice medical benchmarks are increasingly saturated, and recent rubric-based evaluations such as HealthBench have shown that open-ended clinical performance is far from solved - its \"Hard\" subset top score remains 32%. We present a small, deliberately difficult evaluation dataset of five clinician-authored clinical scenarios spanning four specialties (anaesthesia, internal/family medicine, emergency medicine, and obstetrics), each accompanied by an atomic, weighted, MECE rubric (25-62 criteria per task; 184 criteria total) authored from a clinician-drafted golden answer. We evaluate three frontier models: GPT 5.4, Claude Opus 4.7, and Gemini 3.1 Pro. Mean rubric pass rates were 0.47 (Claude), 0.39 (GPT), and 0.37 (Gemini). The central finding is an inversion of clinical priority: the highest-weighted (weight-5, critical) criteria passed at only 32.4-41.7%, while low-stakes weight-1 criteria passed at 80-90%. 56 of 108 critical (weight-5) criteria (52%) were satisfied by no model. Three LLM autoraters reproduced expert met/not-met labels on 92.8-94.7% of 552 graded criteria. We position this as a methods-and-preliminary-findings contribution: the five tasks demonstrate a scalable, defensible pipeline ready to develop into a large-scale benchmark.",
-      "pdf_url": "https://arxiv.org/pdf/2607.02175v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.02175v1",
-      "published": "2026-07-02T13:46:24Z",
-      "updated": "2026-07-02T13:46:24Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "MMIR-TCM: Memory-Integrated Multimodal Inference and Retrieval for TCM Clinical Decision Support",
-      "authors": [
-        "Lihui Luo",
-        "Joongwon Chae",
-        "Ziyan Chen",
-        "Yang Liu",
-        "Siyi Cheng",
-        "Weihan Gao",
-        "Zelin Zeng",
-        "Xiaoming Yin",
-        "Samaneh Beheshti Kashi",
-        "Dongmei Yu",
-        "Lian Zhang",
-        "Jing Sui",
-        "Zeming Liang",
-        "Jiansong Ji",
-        "Peter E. Lobie",
-        "Peiwu Qin"
-      ],
-      "abstract": "Traditional Chinese Medicine (TCM) diagnosis, particularly through tongue inspection, faces persistent challenges in subjectivity and reproducibility. The application of multimodal artificial intelligence to TCM clinical tasks, such as syndrome differentiation and prescription generation, is significantly hampered by the semantic gap between visual tongue features and textual reasoning, as well as the lack of large-scale, standardized datasets. To address these challenges, we introduce MMIR-TCM, a novel framework that emulates the diagnostic process of TCM experts by integrating multimodal large language model(MLLM) with memory-augmented segmentation and retrieval-augmented generation (RAG). Employing a three-stage architecture, MMIR-TCM integrates a training-free Memory-SAM module for robust tongue extraction, a fine-tuned Qwen3-VL model for structured tongue diagnosis generation, and a Qwen3-based RAG component for evidence-grounded clinical decision support generation. The framework was developed and validated using MedTCM, a new large-scale multimodal dataset that we introduce specifically for advanced TCM research. To properly evaluate our framework's clinical accuracy, which existing metrics fail to capture, we also developed TDEU, a domain-specific evaluation metric incorporating semantic understanding and diagnostic importance. Our comprehensive experiments demonstrate that MMIR-TCM significantly outperforms leading models, including GPT-4o and Gemini 2.5 Flash.",
-      "pdf_url": "https://arxiv.org/pdf/2607.01814v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.01814v1",
-      "published": "2026-07-02T07:30:19Z",
-      "updated": "2026-07-02T07:30:19Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Rethinking Speech-LLM Integration for ASR: Effective Joint Speech-Text Training by Interleaving",
-      "authors": [
-        "Ruchao Fan",
-        "Yiming Wang",
-        "Rui Zhao",
-        "Liliang Ren",
-        "Keqi Deng",
-        "Xiaoyang Chen",
-        "Ali Zare",
-        "Bo Ren",
-        "Yuxuan Hu",
-        "Junkun Chen",
-        "Yan Huang",
-        "Yelong Shen",
-        "Jinyu Li"
-      ],
-      "abstract": "Speech-LLM integration has shown promising results by leveraging extensive textual pretraining, yet its specific benefits for automatic speech recognition (ASR) remain unclear. We observe that as supervised ASR training data increases, the contribution of LLM priors becomes less evident, and simple speech-text joint training under-utilizes textual knowledge. We therefore propose Joint Speech-Text Interleaved Pretraining (JSTIP), an ASR-oriented pretraining strategy that constructs word-level and segment-level interleaved speech-text sequences within aligned pairs for speech-LLM architectures that accept continuous inputs. Experiments on 38k hours of ASR data show consistent entity accuracy improvement compared to ASR-only and joint speech-text training baselines. JSTIP achieves on-par entity recognition performance using domain transcription text compared to synthetic speech-text pairs, simplifying domain adaptation. Benefiting from textual pretraining and domain text data, JSTIP is competitive with open-source ASR and Speech-LLM systems in medical entity recognition. The zero-shot speech question answering behaviors further suggest that interleaving reduces the speech-text modality gap and preserves the LLM generative prior, which is likely the reason for the entity improvements on the ASR task.",
-      "pdf_url": "https://arxiv.org/pdf/2607.01733v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.01733v1",
-      "published": "2026-07-02T05:42:01Z",
-      "updated": "2026-07-02T05:42:01Z",
-      "categories": [
-        "cs.CL",
-        "eess.AS"
       ]
     }
   ]

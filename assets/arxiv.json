@@ -1,8 +1,124 @@
 {
-  "generated_at_utc": "2026-07-08T03:22:38.248417Z",
+  "generated_at_utc": "2026-07-09T03:50:01.020660Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "MedPMC: A Systematic Framework for Scaling High-Fidelity Medical Multimodal Data for Foundation Models",
+      "authors": [
+        "Hyunjae Kim",
+        "Dain Kim",
+        "Pan Xiao",
+        "Serina S. Applebaum",
+        "Younjoon Chung",
+        "Xuguang Ai",
+        "Yu Yin",
+        "Roy Jiang",
+        "Yuexi Du",
+        "Yawen Wei",
+        "Yiming Kong",
+        "Tuo Guo",
+        "Zhiyuan Cao",
+        "Mengmeng Du",
+        "Yuelei Fu",
+        "Yan Hu",
+        "Rui Shi",
+        "Gui Yang",
+        "Kevin W. Jin",
+        "Yuntian Liu",
+        "Yuxuan Tian",
+        "Jonathan Marquez",
+        "Zhen Chen",
+        "Sheng Zhang",
+        "Hoifung Poon",
+        "Hua Xu",
+        "Jaewoo Kang",
+        "Qingyu Chen"
+      ],
+      "abstract": "Medicine is inherently multimodal, requiring clinicians to synthesize information across diverse data streams. Yet the development of multimodal foundation models is constrained by limited access to large-scale, high-quality clinical data. Although PubMed Central (PMC) offers a complementary source of expert-authored image-text data, existing PMC-derived resources remain limited in fidelity, reproducibility, and clinical validation. We introduce MedPMC, an automated, continuously updatable framework that transforms permissively licensed literature into high-fidelity infrastructure for medical multimodal models. Applied to 6.1 million PMC articles, MedPMC curated 11 million medical image-text pairs. Component evaluations showed strong performance for initial screening (F1 = 93.2), multi-panel figure detection (F1 = 96.5), figure separation (mAP = 89.8), caption separation and alignment (F1 = 81.4; ROUGE-L = 85.3), and medical figure classification (F1 = 96.5). Manual review by five annotators, three with medical training, found 95.3% of MedPMC images medically relevant, versus 19.7% in a prior PMC-derived dataset. Across 26 benchmarks spanning 11 specialties, a MedPMC-trained CLIP-style model improved average zero-shot AUC by 7.1 percentage points over the strongest architecture-matched biomedical CLIP baseline despite using fewer than half as many image-text pairs. As the vision encoder in a multimodal large language model, it improved medical visual question-answering by 1.9 and 16.9 percentage points across two benchmarks. In 10,524 Yale New Haven Health System dermatology photographs, it improved morphology-to-image retrieval Recall@5 by 11.7 percentage points. These findings show that high-fidelity literature curation strengthens medical multimodal foundation models across benchmark and clinical settings. We publicly release the framework, corpus, benchmarks, and pretrained models.",
+      "pdf_url": "https://arxiv.org/pdf/2607.07673v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.07673v1",
+      "published": "2026-07-08T17:26:49Z",
+      "updated": "2026-07-08T17:26:49Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Naming the Concepts Classifiers Rely On: Language-Anchored Decomposition for Faithful Explanation",
+      "authors": [
+        "Ahsan Habib Akash",
+        "Dipkamal Bhusal",
+        "Stacey Jones",
+        "Donald A. Adjeroh",
+        "Binod Bhattarai",
+        "Prashnna Kumar Gyawali"
+      ],
+      "abstract": "Deep neural networks are widely deployed in high-stakes visual applications where interpretability is critical, yet existing explanations face a trade-off: post-hoc concept methods recover factors that are faithful to a model's behavior but unnamed, while naming and by-design methods attach human-readable concepts only by retraining or altering the classifier. We propose Language-Anchored Decomposition (LAD), a post-hoc framework that delivers concepts which are simultaneously named, faithful, and obtained without modifying the model. For each class, a large language model proposes a concept vocabulary that CLIP-based similarity maps localize across image regions. Inverting standard non-negative matrix factorization, LAD fixes these language-grounded maps as the coefficient matrix and learns only a concept basis that reconstructs the frozen encoder's activations, so naming becomes a structural constraint and the model's own feature geometry determines which concepts are retained. Removing this anchor preserves accuracy but collapses attribution faithfulness. Across natural-image, scene, and medical-imaging benchmarks, LAD produces spatially precise explanations that are decision-relevant under both concept insertion and deletion, while uniquely providing stable, human-interpretable concept names.",
+      "pdf_url": "https://arxiv.org/pdf/2607.07264v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.07264v1",
+      "published": "2026-07-08T10:50:04Z",
+      "updated": "2026-07-08T10:50:04Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Evaluating LLM Robustness Under Domain-Specific Prompt Perturbations in Public Health Applications",
+      "authors": [
+        "Chuqing Zhao",
+        "Haochen Yang"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly applied in public health applications, yet their robustness to non-clinical user inputs remains underexplored. We propose a domain specific robustness benchmark that evaluates LLMs under two perturbation types that commonly arise when non-clinical users interact with health AI systems: misinformation framing (MF), where prompt might be injected by false health claims, and layperson rewriting (LR), where patients describe symptoms in everyday language rather than medical terminology. Our goal is to evaluate the stability of LLMs under these perturbation. Experiments show that MF degrades accuracy by 7.2 pp on average with prediction flip rates of 9-38 percent, even when claims are explicitly labelled as unsupported; LR causes only 1.4 pp degradation. These findings highlight two distinct deployment risks in public health settings: models may produce incorrect outputs when users unintentionally carry misinformation into their queries, and may misinterpret clinically relevant details when patients use informal language. Both risks call for perturbation-aware robustness evaluation beyond clean baseline benchmark",
+      "pdf_url": "https://arxiv.org/pdf/2607.06913v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.06913v1",
+      "published": "2026-07-08T02:04:47Z",
+      "updated": "2026-07-08T02:04:47Z",
+      "categories": [
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "A Multi-Analyst LLM Pipeline for Auditable Rule Discovery Across 68 Public Physiological Corpora",
+      "authors": [
+        "Dovy Paukstys"
+      ],
+      "abstract": "Open physiological corpora are heterogeneous: they use different sensors, labels, sampling rates, recording settings, and clinical endpoints. They can support detector design, but they do not directly specify which detector rules should be built for a new contactless monitoring platform. We report a controlled four-analyst large-language-model (LLM) workflow for converting 68 public physiological corpora, screened for commercial-use compatibility, into an auditable library of candidate rule shapes for prospective validation. Four independent commercial LLM families read the corpus documentation under a controlled prompt and produced 695 candidate rule markers (top-markers). Deduplication retained 649 rule records; a threshold-bounds audit then flagged 51 sanity violations for clamping or curator review. Cross-corpus consolidation produced 436 unique rule shapes. Gate-tagging against two hard invariants, native target-hardware channel availability and no multi-night per-patient personalization, identified 94 build-now detector components across four detector-family buckets. The pipeline does not produce a validated clinical detector. It produces an auditable engineering cascade in which analyst disagreement, threshold checks, curator review, and automated continuous-integration (CI) checks route literature-derived rules toward prospective hardware validation.",
+      "pdf_url": "https://arxiv.org/pdf/2607.06802v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.06802v1",
+      "published": "2026-07-07T20:56:37Z",
+      "updated": "2026-07-07T20:56:37Z",
+      "categories": [
+        "eess.SP",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Healthier LLMs: Retrieval-Augmented Generation for Public Health Question Answering",
+      "authors": [
+        "Felix Feldman",
+        "Joshua Harris",
+        "Timothy Laurence",
+        "Leo Loman",
+        "Ollie Higgins",
+        "Fan Grayson",
+        "Poonam Soma",
+        "Bethany Pace-Bonello",
+        "Michael Borowitz",
+        "Toby Nonnenmacher"
+      ],
+      "abstract": "Large language models (LLMs) achieve promising results on medical question answering benchmarks, yet their use in public health is constrained by hallucinations and the rapid evolution of official guidance. Retrieval-Augmented Generation (RAG) mitigates these risks by grounding responses in an explicitly maintained corpus, but end-to-end performance depends critically on retrieval configuration and on evaluation beyond multiple-choice formats. We extend PubHealthBench, a question answering (QA) benchmark of 7,929 questions derived from UK Government public health guidance, into a retrieval-augmented setting and systematically evaluate retrieval and generation choices. We compare dense, sparse, and hybrid retrieval across multiple embedding models and corpus variants, and show that hybrid retrieval consistently improves recall and ranking quality, with chunk length and topic interacting with ranking performance. Providing retrieved context substantially increases multiple-choice accuracy across a diverse set of LLMs, enabling smaller open-weight models to match or outperform larger models used without retrieval, with gains primarily driven by retrieval quality and careful context selection. To assess realistic free-form answering, we introduce a rubric-based LLM-as-a-judge covering faithfulness, completeness, clarity, and factual consistency, and validate it against dual human annotations. Judge-human agreement is strongest for faithfulness and completeness, while factual consistency and clarity are less reliably reproduced, motivating caution when interpreting those dimensions at scale. Overall, our results highlight retrieval as a primary lever for reliable public health QA and provide practical guidance for building and evaluating RAG systems grounded in official guidance.",
+      "pdf_url": "https://arxiv.org/pdf/2607.06641v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.06641v1",
+      "published": "2026-07-07T14:47:42Z",
+      "updated": "2026-07-07T14:47:42Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
     {
       "title": "Measuring the practice of shared-decision making (OPTION12): An Investigation into Open-sourced Smaller LLMs (OS-sLLMs) for Better Privacy and Sustainability",
       "authors": [
@@ -191,108 +307,6 @@
       "updated": "2026-07-04T12:43:04Z",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Optimizing Large Language Models for Causality Assessment in Pharmacovigilance: Developing a Performance Metric as Objective for Bayesian Hyperparameter Optimization",
-      "authors": [
-        "Nicole Sonne Heckmann",
-        "Arnault-Quentin Vermillet",
-        "S\u00f8ren Norlin M\u00f8lgaard",
-        "Manuela Del Castillo Suero",
-        "Lars Melskens",
-        "Gerard Ompad",
-        "Maurizio Sessa"
-      ],
-      "abstract": "Background: Growing individual case safety report (ICSR) volumes have intensified demand for scalable automated causality assessment. Large Language Models (LLMs) show promise, yet performance on clinically demanding tasks remains suboptimal and inference-time hyperparameter optimization has not been investigated. Objective: To develop a Gaussian Process (GP)-compatible optimization objective and investigate whether temperature optimization improves LLM-expert agreement on Naranjo causality assessment of FAERS ICSRs. Methods: Expert causality assessments were performed on 723 stratified FAERS cases. OpenAI's GPT-5.2 was evaluated using chain-of-thought (CoT) prompting. Four composite metrics were developed: Weighted Cosine Similarity (WCS), Information-Weighted Agreement Score (IWAS), Entropy-Weighted Agreement and Cosine Similarity Score (EWACS), and Consensus-Weighted Cosine Similarity (CWCS) and Bayesian optimization using a GP surrogate with Probability of Improvement (PoI) acquisition was applied across temperature [0, 2]. Results: GPT-5.2 outperformed prior biomedical LLMs at baseline (T = 0), achieving 74.1% agreement on question 5 and 65.4% on question 10 of Naranjo algorithm. Entropy analysis identified these as the sole informative optimization targets. Temperature showed no systematic population-level effect (\\b{eta} = 0.002, p = 0.959). EWACS-guided Bayesian optimization improved causality classification agreement from 45.0% to 72.0% (+27 pp), with the largest gain in Doubtful cases (+42.9 pp). Conclusion: EWACS was identified as the optimal GP-compatible metric. The absence of a universal temperature optimum indicates LLM performance is driven primarily by ICSR content, yet case-specific temperature selection produced meaningful improvements, supporting temperature optimization for LLM-assisted pharmacovigilance.",
-      "pdf_url": "https://arxiv.org/pdf/2607.03704v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.03704v1",
-      "published": "2026-07-04T04:49:14Z",
-      "updated": "2026-07-04T04:49:14Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Amortising Bayesian Experimental Design for Sequential Information Gathering in LLMs",
-      "authors": [
-        "Jakob Hartmann",
-        "James Harvey",
-        "Jhonathan Navott",
-        "Erik Y. Wang",
-        "Luckeciano C. Melo",
-        "Flaviu Cipcigan",
-        "Cheng Zhang",
-        "Alessandro Abate"
-      ],
-      "abstract": "Large language models (LLMs) exhibit strong reasoning and world-knowledge capabilities, yet often struggle to gather information effectively across the multi-turn interactions required in sequential decision-making settings. We introduce Amortised Sequential Information Gathering (ASIG), a fine-tuning approach that amortises Bayesian Experimental Design (BED) into LLM policies via a multi-turn extension of Group Relative Policy Optimisation with an Expected Information Gain reward. Evaluated on the 20 Questions task, ASIG more than doubles the success rate of the 7B base model and reduces inference cost by over $25\\times$ relative to BED-LLM, a competitive inference-time baseline. Applied to MediQ, a medical diagnosis benchmark unseen during training, ASIG improves information-seeking performance at the 7B scale, suggesting that the learned strategies can transfer out of distribution. Our findings show that amortising BED into LLM policies provides an effective and computationally efficient approach to sequential information gathering.",
-      "pdf_url": "https://arxiv.org/pdf/2607.03426v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.03426v1",
-      "published": "2026-07-03T15:38:17Z",
-      "updated": "2026-07-03T15:38:17Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Reinforcement Learning for Evidence-Seeking Diagnostic Reasoning with Large Language Models",
-      "authors": [
-        "Shengyi Hua",
-        "Kangzhe Hu",
-        "Conghui He",
-        "Xiaofan Zhang",
-        "Shaoting Zhang"
-      ],
-      "abstract": "Recent reasoning-centric Large Language Models (LLMs) have made significant strides, yet they predominantly operate on a passive-inference pattern that assumes complete information. In contrast, real-world clinical intelligence is inherently an iterative investigative process requiring strategic evidence acquisition. To bridge this gap, we formalize medical diagnosis as an Iterative Evidence-Seeking Task. We leverage Reinforcement Learning with Verifiable Rewards (RLVR) to elicit intrinsic reasoning within a closed-loop environment, guided by a novel suite of rewards that enforce diagnostic precision and examination consistency. To facilitate this, we introduce the Retrieval-Augmented Generation-based Examination Simulator (RAGES), a high-fidelity clinical oracle that provides realistic, knowledge-grounded follow-up evidence. Empirical results across diverse datasets demonstrate that our framework enables LLMs to transition from passive responders to autonomous assistants. Notably, our model demonstrates comparable performance to larger and reasoning-enhanced baselines, while RAGES proves superior to vanilla LLMs in generating biologically plausible clinical feedback.",
-      "pdf_url": "https://arxiv.org/pdf/2607.02983v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.02983v1",
-      "published": "2026-07-03T05:43:00Z",
-      "updated": "2026-07-03T05:43:00Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Where do LLMs Fall Short in CBT-Guided Affective Reasoning?",
-      "authors": [
-        "Vaishnavi Sinha",
-        "Pooja Guttal",
-        "Pranay Deep Reddy Katike",
-        "Vishal Sinha",
-        "Gerald Ndawula",
-        "Lira Yoon",
-        "Andrea Kleinsmith",
-        "Manas Gaur"
-      ],
-      "abstract": "Cognitive Behavioral Therapy (CBT) provides a structured framework for understanding a user's mental state by examining the interaction between cognitive and behavioral factors. However, out-of-the-box LLMs respond fluently and empathetically, yet collapse into validation & reflection, regardless of what the user actually needs. They know theoretical CBT (scoring up to 96% accuracy on licensing exam questions) but fail to apply it effectively. We explore this gap with a knowledge-guided framework that treats CBT dialogue as controlled affective reasoning: user narratives are decomposed into Beck's Cognitive Conceptualization structure, grounded in clinical SNOMED CT concepts validated via Natural Language Inference, and a Multiple Chain-of-Thought (MCoT) strategy selection between Validation & Reflection, Socratic Questioning, or Alternative Perspectives. To measure whether such guidance actually changes behavior, we introduce the Protocol Leverage Force (F), a behavior-level metric that captures how far an intervention shifts a model away from its default response. Across three open-weight LLMs and 14 RealCBT-derived case studies, evaluated with human experts, valence-arousal trajectories, and linguistic entrainment, F shows that simply introducing protocol definitions via single chain-of-thought prompting fails to change LLM behavior, while MCoT on these definitions guides strategy selection better. Still, the effect stays within 1% (approx. 1.2-1.3%), and all models remain biased toward Validation & Reflection. These results show CBT knowledge alone does not ensure effective application, giving the affective-computing community instrumentation to measure where LLMs fall short.",
-      "pdf_url": "https://arxiv.org/pdf/2607.02885v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.02885v1",
-      "published": "2026-07-03T02:34:08Z",
-      "updated": "2026-07-03T02:34:08Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.HC",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "MedCalc-Pro: Solving Complex Medical Calculations with LLM Agents",
-      "authors": [
-        "Siran Zhao",
-        "Ruihui Hou",
-        "Ziyue Huai",
-        "Chennuo Zhang",
-        "Tong Ruan"
-      ],
-      "abstract": "Current benchmarks for evaluating large language models (LLMs) in medical calculation are largely based on simplified settings, where each patient case corresponds to a single calculator and the required tool is explicitly specified in the query. However, real clinical scenarios often require multiple calculators for joint evaluation, nested-scale calculation, and fuzzy queries that do not directly specify the target calculator. To this end, we propose a new medical calculation benchmark, MedCalc-Pro, which covers three progressively challenging task settings: single-calculator, multi-calculator, and nested-calculator calculation settings. MedCalc-Pro contains 2,268 real-world clinical cases, covering 77 medical calculators across 14 clinical departments. Meanwhile, to address the limited performance of existing frameworks and methods in complex clinical scenarios, we further propose a more generalizable agent framework that supports multi-tool selection and nested-tool calling, while suppressing parameter error propagation through structured validation and evidence review. We conduct systematic comparisons across open-source, closed-source, and medical-specialized LLMs, and the results show that our framework achieves the best performance across all three task settings. This work provides a new benchmark and method for evaluating and applying LLMs in challenging medical calculation scenarios.",
-      "pdf_url": "https://arxiv.org/pdf/2607.02879v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.02879v1",
-      "published": "2026-07-03T02:24:26Z",
-      "updated": "2026-07-03T02:24:26Z",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]

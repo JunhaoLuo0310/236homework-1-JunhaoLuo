@@ -1,8 +1,193 @@
 {
-  "generated_at_utc": "2026-07-09T03:50:01.020660Z",
+  "generated_at_utc": "2026-07-10T03:51:26.941608Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "The complexities of patient-centred conversational artificial intelligence",
+      "authors": [
+        "Jo\u00e3o Matos",
+        "Olivia Buege",
+        "Donny Cheung",
+        "Gary S. Collins",
+        "Paula Dhiman",
+        "Nan Li",
+        "Bingyu Mao",
+        "Benjamin W. Nelson",
+        "Michail Ouroutzoglou",
+        "Paul Varghese",
+        "Jonathan Amar"
+      ],
+      "abstract": "Consumer-facing health chatbots powered by large language models (LLMs) are increasingly used for symptom assessment. However, chatbot development and evaluation often rely on cooperative, articulate, simulated patients. We analysed 2,053 real patient-chatbot conversations and found that communication patterns and expression of emotions vary widely across users. We developed a patient simulator that separately models clinical content, emotional state, conversational strategy, and communication style. In a Turing-inspired evaluation of realism with 15 human graders, simulated conversations were nearly indistinguishable from real ones, with human graders achieving an accuracy of 55%. We used five distinct patient personae, across 1,164 clinician-graded cases, to evaluate the performance of four LLMs in urgency assessment. We found that communication style can significantly alter triage outcomes. Patient-centred conversational artificial intelligence must accommodate communication diversity: systems designed for idealised, rather than realistic, interactions risk underperforming and amplifying health disparities when deployed in the real world.",
+      "pdf_url": "https://arxiv.org/pdf/2607.08625v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.08625v1",
+      "published": "2026-07-09T15:56:55Z",
+      "updated": "2026-07-09T15:56:55Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Towards Precision Therapy in Hepatocellular Carcinoma: A Clinical-Reasoning LLM for Risk Stratification and Treatment Guidance",
+      "authors": [
+        "Peng Cui",
+        "Jitao Wang",
+        "Siyan Xue",
+        "Yao Huang",
+        "Haoming Xia",
+        "Dong Li",
+        "Dengxiang Liu",
+        "Weilin Wang",
+        "Liping Liu",
+        "Leida Zhang",
+        "Yunfu Cui",
+        "Tao Peng",
+        "Daolin Ji",
+        "Haitao Zhao",
+        "Wei Zhang",
+        "Xiaojuan Wang",
+        "Weijie Ma",
+        "Zongren Ding",
+        "Jinlong Li",
+        "Yuan Ding",
+        "Jiajing Zhao",
+        "Zhiyu Chen",
+        "Chengkun Yang",
+        "Ziyue Huang",
+        "Jiaqi Liu",
+        "Fusheng Liu",
+        "Yang Zhou",
+        "Xiaojuan Wang",
+        "Zhongquan Sun",
+        "Shiyun Bao",
+        "Xiaojun Wang",
+        "Ming Yang",
+        "Guangxin Li",
+        "Bin Shu",
+        "Yong Liao",
+        "Hongxuan Li",
+        "Yao Tang",
+        "Shizhong Yang",
+        "Yongyi Zeng",
+        "Yufeng Yuan",
+        "Yinpeng Dong",
+        "Jihui Hao",
+        "Jun Zhu",
+        "Jiahong Dong"
+      ],
+      "abstract": "Hepatocellular carcinoma (HCC) is a common malignancy and a leading cause of cancer-related mortality. Current guidelines and staging systems provide coarse categories, but often miss within-stage heterogeneity and the clinical context in electronic medical records (EMRs). We present HCC-STAR (Hepatocellular Carcinoma Staging, Treatment And pRognosis), a clinically aligned large language model that reads routine EMR narratives and jointly outputs risk score-based staging, ranked guideline-consistent treatments with evidence-based rationales, and individualized survival estimates. We curated about 30,000 HCC cases from SEER and expanded them into EMR-style narrative training data using a clinician-validated, prompt-based augmentation workflow. On this corpus, we developed a knowledge-aligned reasoning framework optimized with a step-verifiable composite reward, moving beyond text-level memorization of clinical guidelines. In a multi-center cohort of 6,668 patients from 12 hospitals in China, HCC-STAR achieved state-of-the-art performance in treatment recommendation and risk stratification compared with clinical guidelines and competitive models, including GPT-5 and Gemini-2.5 Pro. Hypothetical overall-survival analysis showed a median survival of 51 months under adherence to HCC-STAR recommendations, compared with 29 and 32 months under BCLC and CNLC. In clinician-centric evaluations, blinded hepatobiliary specialists rated HCC-STAR's reasoning and evidence-based justifications as trustworthy. The model surpassed resident and attending physicians in treatment accuracy and helped physicians make more accurate decisions faster when used as an assistant. These findings support HCC-STAR as a reliable and verifiable decision-support system for risk stratification and precision therapy in HCC.",
+      "pdf_url": "https://arxiv.org/pdf/2607.08602v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.08602v1",
+      "published": "2026-07-09T15:33:08Z",
+      "updated": "2026-07-09T15:33:08Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "MentalHospital: A Virtual Environment for Evaluating Psychiatric Clinical Encounters",
+      "authors": [
+        "Yuming Yang",
+        "Xiao Sun",
+        "Yuanwei Zou",
+        "Zhengxiao Wu",
+        "Yun Chen",
+        "Jiang Zhong",
+        "Haoyang Zeng",
+        "Jingwang Huang",
+        "Kaiwen Wei"
+      ],
+      "abstract": "Large language models (LLMs) have shown strong performance on isolated psychiatric tasks, including dialogue, diagnosis, and treatment planning, yet existing benchmarks rarely simulate complete psychiatric clinical encounters. We introduce $\\textbf{MentalHospital}$, a virtual evaluation environment for LLM-based psychiatric clinical encounters. MentalHospital instantiates the Subjective Interviewing, Objective Examination, Diagnostic Assessment, and Treatment Planning (S.O.A.P.) workflow, using skill-augmented standardized patients constructed from 1,193 de-identified psychiatric electronic health record (EHR) cases spanning all major ICD-11 categories and 76 disorders. Each encounter is assessed through a dual-track protocol that combines objective comparison against EHR-derived references with subjective assessment of clinical process quality. To scale specialist judgment, we develop $\\textbf{MentalEval}$, five domain-specific evaluators covering communication empathy, interviewing professionalism, clinical-note quality, diagnostic rigor, and treatment appropriateness, trained with rubric-grounded SFT and expert-guided DPO. Survey responses from 22 clinicians support MentalHospital's clinical fidelity (3.88/5), while MentalEval achieves strong expert alignment with an average QWK of 0.944. Benchmarking shows that even the strongest LLM trails clinicians by 37.28 percentage points in objective psychiatric competence, with mental status assessment as a key bottleneck.",
+      "pdf_url": "https://arxiv.org/pdf/2607.08257v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.08257v1",
+      "published": "2026-07-09T09:03:42Z",
+      "updated": "2026-07-09T09:03:42Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LUMI: Tokenizer-Agnostic LLM-Based Lossless Image Compression",
+      "authors": [
+        "Chris Xing Tian",
+        "Chengkai Wu",
+        "Ziyu Wang",
+        "Rongqun Lin",
+        "Kecheng Chen",
+        "Xiandong Meng",
+        "Haoliang Li",
+        "Shiqi Wang",
+        "Siwei Ma"
+      ],
+      "abstract": "Large language model (LLM)-based lossless image compression methods typically represent pixel data through the native text interface of a pretrained model, converting pixel values into token sequences that the LLM processes through its vocabulary head. This design shows that pretrained language models can provide probability estimates for image coding, but it also couples compression to tokenizer behavior, vocabulary-specific numeric tokens, and model-family-specific adaptation. In this paper, we present LUMI (LLM-based Unified Model-agnostic lossless Image compression), a tokenizer-agnostic framework for lossless RGB image compression with frozen LLM backbones. LUMI replaces pixel-as-text tokenization with a pixel embedding module that maps raw intensity and channel information into the continuous embedding space of the LLM. It further introduces intra-patch position encoding to retain two-dimensional spatial structure after flattening, and uses a 256-way prediction head to produce probabilities over the native pixel alphabet. Only the pixel embedding, position encoding, soft-prefix parameters, and prediction head are trained, while the LLM backbone remains fixed. Experiments on natural, medical, and remote-sensing image benchmarks with LLaMA, Qwen, and Gemma backbones show that LUMI provides a unified interface across tokenizer families, achieves competitive compression rates, and improves cross-domain robustness over tokenizer-based LLM compression baselines. These results formulate LLM-based lossless image compression as pixel-space adaptation of frozen foundation models rather than tokenizer-specific language-symbol modeling.",
+      "pdf_url": "https://arxiv.org/pdf/2607.08221v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.08221v1",
+      "published": "2026-07-09T08:16:14Z",
+      "updated": "2026-07-09T08:16:14Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend",
+      "authors": [
+        "Zheng Yu"
+      ],
+      "abstract": "Non-GPU AI accelerators are increasingly adopted as alternatives to general-purpose GPUs for large-model inference, but the real engineering cost of migrating demanding workloads beyond CUDA remains poorly documented. We present a field study of deploying two large inference workloads on a 16-device Huawei Ascend 910 system using CANN and vLLM-Ascend: an LLM-as-a-judge safety and alignment evaluation pipeline based on a W8A8 MoE judge model, DeepSeek-V4-Flash, and a multimodal medical vision--language benchmark based on DeepSeek-V4-Flash-Vision for MMMU and MMMU-Pro. Making these workloads reliable required twelve source-level patches to the vendor inference plugin, disabling several high-throughput features to preserve numerical correctness, and adding operational safeguards for recurring device-level failures. We summarize the main platform limitations in eight categories: incomplete operator and feature support, fragile parallelism, numerical faults in low-level kernels, immature graph compilation, unstable advanced features, limited scalability, weak observability, and ecosystem fragmentation. For each category, we report the symptoms, evidence, and likely causes. We also quantify the integration effort, concurrency behavior, and benchmark quality to show that both workloads were served correctly. Our study provides a reproducible reference for teams evaluating or operating non-GPU accelerators for large-model inference.",
+      "pdf_url": "https://arxiv.org/pdf/2607.08215v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.08215v1",
+      "published": "2026-07-09T08:12:15Z",
+      "updated": "2026-07-09T08:12:15Z",
+      "categories": [
+        "cs.DC"
+      ]
+    },
+    {
+      "title": "A safety-oriented hypothetico-deductive framework for AI-assisted differential diagnosis",
+      "authors": [
+        "Fan Ma",
+        "Mauro Giuffr\u00e8",
+        "Donald Wright",
+        "Kent McCann",
+        "Mark Iscoe",
+        "Lingfei Qian",
+        "Mingyang Jiang",
+        "Chi Wing Ng",
+        "Na Hong",
+        "Huan He",
+        "Cathy Shyr",
+        "Qingyu Chen",
+        "Lee Schwamm",
+        "Lucila Ohno-Machado",
+        "Hua Xu"
+      ],
+      "abstract": "Diagnostic error is a major threat to patient safety, yet current large language model (LLM) systems often treat diagnosis as a one-shot prediction task, lacking safeguards against missed high-risk alternatives or rigorous verification of their reasoning. Here, we present AegisDx, a safety-oriented framework for hypothetico-deductive clinical reasoning. AegisDx coordinates specialized LLM components through role-specific contracts, structured intermediate outputs, evidence-retrieval interfaces, and verification gates to generate broad differential diagnoses, enforce explicit screening for dangerous \"must-not-miss\" conditions, verify reasoning against grounded medical evidence, and structure actionable next steps. We evaluated AegisDx across three layers. On literature-derived case reports from NEJM and JAMA, with GPT-oss-120B as the shared backbone, Top-3 diagnostic accuracy was 59.9% versus 52.1% for the standalone LLM on JAMA cases and 62.7% versus 51.4% on NEJM cases. On cases from Annals of Emergency Medicine, Top-3 accuracy was 85.7% versus 68.6%; against physician-consensus must-not-miss diagnosis sets, AegisDx captured at least one such condition among its top three diagnoses in 78.0% of cases versus 52.0%. In a blinded physician evaluation of 43 real-world emergency department notes from the Yale New Haven Health System compared against GPT-5, AegisDx improved the physician-rated composite safety score from 4.31 to 4.55 on a 5-point scale (adjusted p = 2.1x10^-4), with qualitative gains in must-not-miss identification and reasoning safety. Our findings suggest that engineering diagnostic AI as a safety-oriented reasoning framework, rather than optimizing raw predictive accuracy alone, can provide a safer, more transparent, and clinically meaningful layer of bedside decision support for acute care workflows.",
+      "pdf_url": "https://arxiv.org/pdf/2607.08038v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.08038v1",
+      "published": "2026-07-09T01:30:24Z",
+      "updated": "2026-07-09T01:30:24Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Concretized Proposition Prompting Resolves Composition-Knowledge Dichotomy in Large Language Models",
+      "authors": [
+        "Changhun Lee",
+        "Minguk Jeon",
+        "Jongkyung Shin",
+        "Chiehyeon Lim"
+      ],
+      "abstract": "LLMs often struggle to balance compositionality with knowledgeability, a challenge we define as Composition-Knowledge Dichotomy. To address this, we propose Concretized Proposition Prompting (CPP), a framework that explicitly concretizes propositions relevant to questions. The results demonstrate that CPP significantly enhances reasoning performance, particularly in medical benchmarks where precise knowledge is paramount, while being competitive on math benchmarks where deductive reasoning is prioritized. Additional experiments reveal that CPP is scalable to various foundation models and parameter sizes, being a fundamental paradigm that bridges the gap between composition- and knowledge-based approaches. Consequently, CPP resolves the composition-knowledge dichotomy by providing a solid foundation for logically organized and factually grounded reasoning.",
+      "pdf_url": "https://arxiv.org/pdf/2607.08018v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.08018v1",
+      "published": "2026-07-09T00:49:28Z",
+      "updated": "2026-07-09T00:49:28Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "MedPMC: A Systematic Framework for Scaling High-Fidelity Medical Multimodal Data for Foundation Models",
       "authors": [
@@ -43,6 +228,48 @@
       "categories": [
         "cs.CV",
         "cs.LG"
+      ]
+    },
+    {
+      "title": "Alignment Plausibility: A New Standard for Assuring AI in Healthcare",
+      "authors": [
+        "Gwydion Williams",
+        "Sara Zannone",
+        "Bilal A Mateen"
+      ],
+      "abstract": "Large language models (LLMs) have become significant providers of mental health support, yet they remain products of an attention economy whose operational and commercial targets favour sustained engagement over the friction that effective psychological support often requires. Developers' safety responses have been largely reactive, addressing the most visible and acute harms while subtler, longer-term patterns of risk (e.g., dependency, boundary erosion, the amplification of distorted beliefs) receive less attention. We contend that making LLMs structurally safe requires alignment organised at three levels that mirror how society assures the safety of human clinical practice: 1) explicit value specification grounded in the codified normative commitments of clinical practice; 2) training that embeds those values in the model; and 3) oversight that detects drift and longer-term harm during deployment, much as clinical supervision does for human practice. Organising alignment in this way yields a construct we call alignment plausibility - a structured demonstration that a system's values, training regime, and oversight mechanisms are together consistent with safe and positive outcomes. We propose alignment plausibility as a regulatory construct (by drawing analogy to the established construct of biological plausibility) for AI in health: a principled way to argue for, or against, trust that systems are aligned to positive health outcomes, will cause no harm even where capable of doing so, and will ultimately lead to patient benefit.",
+      "pdf_url": "https://arxiv.org/pdf/2607.07766v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.07766v1",
+      "published": "2026-07-08T15:39:10Z",
+      "updated": "2026-07-08T15:39:10Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Aligning Clinical Needs and AI Capabilities: A Survey on LLMs for Medical Reasoning",
+      "authors": [
+        "Qi Peng",
+        "Jiatong Li",
+        "Sirui Huang",
+        "Yiyang Jiang",
+        "Kaisong Gong",
+        "Ronger Ding",
+        "Shijie Ye",
+        "Changmeng Zheng",
+        "Yi Cai",
+        "Xiaobo Yang",
+        "Jin Huang",
+        "Xiao-Yong Wei",
+        "Qing Li"
+      ],
+      "abstract": "Large language models (LLMs) have emerged as important tools in healthcare, showing growing potential for clinical reasoning and patient care. This survey examines recent progress in medical LLMs, focusing on reasoning applications and requirements. We present a dual-view approach that connects clinical practice with computational methods. On the clinical side, we establish a five-level competency scheme following Miller's Pyramid, progressing from knowledge recall to dynamic case management. On the computational side, we link deductive, inductive, and abductive reasoning patterns to common medical goals and tasks. We also introduce a benchmark dataset spanning five levels of medical reasoning capability and report results on 18 state-of-the-art models, revealing that medical specialist models excel in diagnosis-centric tasks while general models lead in decision support and dialogue. We conclude by discussing current progress and open challenges, including data limitations, hallucination, and grounding issues, and outline directions toward safer, more reliable, and workflow-ready systems.",
+      "pdf_url": "https://arxiv.org/pdf/2607.07761v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.07761v1",
+      "published": "2026-07-08T15:19:37Z",
+      "updated": "2026-07-08T15:19:37Z",
+      "categories": [
+        "cs.AI"
       ]
     },
     {
@@ -130,183 +357,12 @@
         "Suzan Verberne"
       ],
       "abstract": "We present LLM4SDM, the first study of open-source smaller language models (OS-sLLMs) for automated assessment of shared decision making (SDM) using the Observer OPTION12 framework. Unlike previous work that relies on large commercial models and the shorter OPTION5 instrument, our study focuses on privacy-preserving locally deployable models and Dutch melanoma consultation transcripts. Using expert-annotated clinical consultations, we evaluate three general-domain and two medical-domain OS-sLLMs during a development-phase pilot study. Results show that general-domain models outperform medical-domain models, which exhibit substantial hallucination and instruction-following failures. Gemma3:12b achieves the strongest agreement with human annotations (Pearson r=0.51, Spearman \\r{ho}=0.59). Item-level and qualitative analyses reveal systematic challenges related to temporal discourse reasoning, conversational role attribution, and evidence grounding. We further introduce a Judge-LLM consensus framework designed to support disagreement resolution among multiple models. Our findings suggest that while current OS-sLLMs cannot replace human annotators, they offer a promising foundation for privacy-preserving human-in-the-loop SDM assessment.",
-      "pdf_url": "https://arxiv.org/pdf/2607.06127v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.06127v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.06127v2",
+      "arxiv_url": "https://arxiv.org/abs/2607.06127v2",
       "published": "2026-07-07T10:37:04Z",
-      "updated": "2026-07-07T10:37:04Z",
+      "updated": "2026-07-09T11:02:03Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "KOAL: Knowledge-Driven Prostate Cancer Grading with Ordinal-Aware Learning",
-      "authors": [
-        "Zheng Guo",
-        "Jiaqi Cui",
-        "Haocheng Xiong",
-        "Jize Han",
-        "Bo Liu",
-        "Qianwen Zhang",
-        "Rui Chen",
-        "Yan Wang"
-      ],
-      "abstract": "Non-invasive prediction of Gleason Grade Group (GGG) in prostate cancer using multiparametric MRI (mpMRI) is clinically vital for reducing unnecessary biopsies. Existing GGG prediction methods face two major limitations. First, they often overlook non-image information critical for GGG prediction, including age, prostate-specific antigen (PSA), and expert priors embedded in radiology reports. Second, they tend to oversimplify GGG as flat categorical labels, failing to account for its intrinsic hierarchy of primary and secondary Gleason patterns. To this end, we propose a novel Knowledge-Driven Ordinal-Aware Learning (KOAL) framework with three synergistic modules. Specifically, the Clinical-Context Modulation (CCM) module uses clinical variables (e.g., age and PSA) to dynamically modulate discriminative image representations. The Knowledge-Guided Prototype Alignment (KGPA) module leverages an LLM to extract group-specific expert knowledge from training radiology reports and clinical guidelines, producing offline semantic anchors describing grade-specific radiological findings without requiring patient-specific reports at inference. Through prototype contrastive alignment, patient-specific mpMRI representations are matched with these anchors to promote pathology-aligned representation learning. The Hierarchical Ordinal-aware Constraints (HOC) module decouples primary and secondary Gleason pattern prediction and maps their probabilistic outputs to GGG via a Differentiable Bio-logic Mapping Layer (DBML), ensuring pathological grading consistency. Experiments on public PI-CAI and in-house datasets demonstrate that KOAL outperforms state-of-the-art methods. Code is available at: https://github.com/Gother-GZ/KOAL.",
-      "pdf_url": "https://arxiv.org/pdf/2607.06019v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.06019v1",
-      "published": "2026-07-07T09:01:40Z",
-      "updated": "2026-07-07T09:01:40Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Harrison.Rad 1.5 Technical Report: A radiology foundation model that can draft reports from images, priors and clinical context",
-      "authors": [
-        "Suneeta Mall",
-        "Vladimir Nekrasov",
-        "Ashnil Kumar",
-        "Sajith Karunasena",
-        "Aiden Nibali",
-        "Alix Bird",
-        "Mateo Diaz Shine",
-        "Jarrel Seah"
-      ],
-      "abstract": "Imaging demand is growing faster than the radiology workforce can expand, and reporting backlogs cannot be resolved through training and recruitment alone. The most direct opportunity is reducing the time and effort radiologists spend producing reports, a task that requires interpreting images, integrating clinical history and prior studies, and drafting structured findings. We present Harrison.Rad 1.5 (HR1.5), a radiology-specific multimodal large language model that accepts interleaved text and visual inputs and generates structured and unstructured text across plain-film radiology, spanning computed radiography, chest, musculoskeletal, abdominal, spine, and pelvic x-rays, and mammography. HR1.5 is trained through a three-stage pipeline: domain adaptation of a base language model on radiology reports, contrastive vision-encoder training with curriculum-based hard negatives on ~6 million image-report instances, and visual-question-answering fine-tuning on multi-turn conversations. We evaluate it with a Findings-Diagnosis scoring framework that extends RadGraph-XL entity extraction with ontology-based synonym matching and polarity-contradiction detection, benchmarked on RadBench, a simulated FRCR 2B Short Case examination scored against Angoff-method thresholds, ReXGradient, and internal multi-modality datasets. HR1.5 is the only system evaluated to meet the simulated FRCR passing standard and achieves the highest accuracy on closed-format clinical questions, across anatomical regions, on internal multi-body-part and mammography reporting, and on the primary clinically-aligned score for public chest reporting. We further examine explainability and model behaviour, including question-sensitive Grad-CAM heatmaps, attention analysis, and confidence estimation, to support responsible future evaluation toward clinical use, and a framework for clinically grounded assessment of report quality.",
-      "pdf_url": "https://arxiv.org/pdf/2607.05880v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.05880v1",
-      "published": "2026-07-07T06:23:08Z",
-      "updated": "2026-07-07T06:23:08Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Depression Symptoms and Relational Patterns in 187k ChatGPT Histories",
-      "authors": [
-        "Neil K. R. Sehgal",
-        "Dunigan Folk",
-        "Lyle Ungar",
-        "Sharath Chandra Guntuku"
-      ],
-      "abstract": "Large language models are increasingly used as private, always-available conversational systems, but little is known about how people with depressive symptoms use them. Building on CSCW work on disclosure and peer support, we examine ChatGPT as an emerging informal support infrastructure: private, persistent, responsive, and available outside ordinary hours. We analyze 187,093 ChatGPT conversations from 766 participants who completed the PHQ-8, comparing those below the moderate-symptom threshold (score of 10) with those at or above it. Higher-PHQ participants used ChatGPT more for mental-health, interpersonal, loneliness, self-focused, and support-seeking conversations, with pronounced late-night and recurring month-level patterns. Their language contained more first-person singular pronouns and absolutist terms. They more often engaged ChatGPT in high-disclosure contexts, but professional redirection was not higher. Language-based prediction was modest and insufficient for screening (AUROC 0.591). We argue these histories should not be treated as clinical screening data but as evidence LLMs are increasingly used as informal support infrastructure.",
-      "pdf_url": "https://arxiv.org/pdf/2607.05685v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.05685v1",
-      "published": "2026-07-06T23:07:31Z",
-      "updated": "2026-07-06T23:07:31Z",
-      "categories": [
-        "cs.HC",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Toward Trustworthy Large Language Model Agents in Healthcare",
-      "authors": [
-        "Hadi Hasan",
-        "Safaa Salman",
-        "Adam Tai Abou Dargham",
-        "Ammar Mohanna",
-        "Ali Chehab"
-      ],
-      "abstract": "Healthcare appointment scheduling remains a persistent operational bottleneck, driven by manual coordination, fragmented legacy systems, and high administrative overhead. These inefficiencies constrain provider availability and degrade patient access to care. This paper presents CareConnect, a safety-first conversational agent for healthcare logistics automation that leverages large language model (LLM) function calling, retrieval-augmented generation (RAG), and layered deterministic safety guardrails. The system orchestrates eight domain-specific tools to support appointment booking, modification, cancellation, and facility information retrieval, while enforcing strict scope constraints that prohibit medical advice or diagnosis. Safety-critical situations are handled through deterministic short-circuit mechanisms for emergency detection and medical intent refusal. We evaluate CareConnect on a comprehensive benchmark of 680 task-oriented scenarios spanning end-to-end workflows, multi-turn interactions, and edge cases. Experimental results demonstrate a 91.8% task completion rate with a median per-request latency of 2.2 seconds, 96.0% safety compliance on the dedicated safety-critical evaluation subset, and an average operational cost of $0.0324 per appointment, yielding a significant cost reduction compared to manual human scheduling. These findings show that carefully scoped and rigorously safeguarded LLM-based agents can reliably automate complex healthcare operational workflows while maintaining safety guarantees and achieving substantial cost efficiency. The source code and system implementation are publicly available at https://github.com/Hadi-Hsn/CareConnect.",
-      "pdf_url": "https://arxiv.org/pdf/2607.05055v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.05055v1",
-      "published": "2026-07-06T13:29:07Z",
-      "updated": "2026-07-06T13:29:07Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Multi-Large Language Model Orchestrated Severity Assessment of Clinical Records (MOSAIC)",
-      "authors": [
-        "Manuela Del Castillo Suero",
-        "Arnault-Quentin Vermillet",
-        "Nicole Sonne Heckmann",
-        "Darmendra Ramcharran",
-        "Maurizio Sessa"
-      ],
-      "abstract": "Background: Disease severity is a multidimensional construct difficult to capture with rule-based approaches in Electronic Healthcare Records (EHR). Agentic large language model (LLM) systems could synthesise clinical evidence and reason over EHRs, but remain unevaluated for this task. Methods: MOSAIC is a two-phase agentic LLM framework for severity phenotyping, using type 2 diabetes (T2D) as a proof-of-concept. MOSAIC was evaluated on a synthetic cohort (SyntheticMass; open-weight N = 4,886; closed-weight N = 200) against three algorithmic ground truths (DCSI, DiSSCo, Cooper) and against all-cause mortality and incident complications. Open-weight (locally deployable) and proprietary pipelines were also compared. Results: The generated framework spanned domains absent from the comparators, including biomarker-based glycaemic staging, beta-cell function, and social determinants of health. Open-weight MOSAIC matched the proprietary pipeline (closed- vs open-weight weighted kappa = 0.773) and reached moderate agreement with Cooper (kappa = 0.597) and DCSI (kappa = 0.534) and fair agreement with DiSSCo (kappa = 0.320). Agent-based (Type 1) tiers showed significant separation of all-cause mortality (log-rank p < 0.001; crude hazard ratios 1.6-2.4 for non-Baseline tiers), with non-monotonic separation at the upper tiers, and an inverse gradient for incident complications (log-rank p < 0.001) consistent with depletion of susceptibles. Agentic classification also diverged from deterministic execution of the same rubric (MOSAIC Frozen; kappa = 0.428), indicating reasoning beyond fixed rules. Conclusion: MOSAIC shows agentic LLM systems can generate and apply clinically meaningful severity phenotypes from structured EHR data in T2D. Extending it to other diseases with similarly multidimensional severity warrants further research.",
-      "pdf_url": "https://arxiv.org/pdf/2607.05032v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.05032v1",
-      "published": "2026-07-06T13:15:21Z",
-      "updated": "2026-07-06T13:15:21Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Medi-Gemma: A Hybrid Clinical Decision Support System Integrating Deterministic EMR Analytics and Retrieval-Augmented Generation",
-      "authors": [
-        "Mohammed Saim Ahmed Quadri",
-        "Yunzhe Xue",
-        "Justin W. Ady",
-        "Usman Roshan"
-      ],
-      "abstract": "Deploying Large Language Models (LLMs) in high-stakes clinical settings remains limited by structural hallucinations, weak deterministic reasoning over tabular patient data, and omissions in vector retrieval. This paper presents the architecture and validation of Medi-Gemma, a Clinical Decision Support System (CDSS) for wound pathology triage and workflow automation. The platform introduces a decoupled framework that separates clinical perception from data orchestration while preserving traceable reasoning. Medi-Gemma uses a multi-stage pipeline coordinated by a centralized ClinicalOrchestrator. Data requests are handled without generative inference by a DataManager that cleans unstructured Electronic Medical Record (EMR) files through type coercion. Natural language queries are processed by a hierarchical IntentRouter, which routes requests to deterministic analytics paths executed by a PandasQueryEngine or to patient-specific reasoning managed by a ClinicalRAGEngine using a CPU-optimized vector store. A key contribution is the Ground Truth Injection Module, which intercepts patient-specific queries, extracts numeric identification tokens, queries the structured dataframe via Pandas, retrieves the latest validated clinical state, and embeds this snapshot as an overriding context block in the LLM prompt before generation. Safety compliance is enforced by a deterministic ProtocolManager that maps clinical terminology to fixed evidence-based risk pathways, while a SafetyVerifier phrase filter prevents output rule violations. Validation shows that this architecture eliminates semantic context drift, prevents database compilation crashes, and improves factual adherence to backend clinical repositories. These results support Medi-Gemma as a safer pattern for LLM-based clinical decision support where structured data fidelity, retrieval grounding, and deterministic safeguards are essential.",
-      "pdf_url": "https://arxiv.org/pdf/2607.04907v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.04907v1",
-      "published": "2026-07-06T10:36:04Z",
-      "updated": "2026-07-06T10:36:04Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "EEG-SpikeAgent: Agentic Closed-Loop Program Synthesis for Automated EEG Spike Detection",
-      "authors": [
-        "Sonali Santhosh",
-        "Kelly Shuhong Yu",
-        "Eugene Chang",
-        "Jonathan Kim",
-        "Kie Shidara",
-        "Danilo Bernardo"
-      ],
-      "abstract": "Automated detection of interictal epileptiform discharges in scalp electroencephalography (EEG) is clinically important, but recent high-performing deep-learning models often trade interpretability for accuracy. We introduce EEG-SpikeAgent, a closed-loop program-synthesis framework that uses a large language model (LLM) agentic system to generate signal-processing features for spike detection in scalp EEG. The system iteratively proposes one deterministic EEG feature module at a time, executes the resulting code on EEG to generate tabular features, evaluates performance via a tabular classifier, summarizes run-level metrics, and feeds structured diagnostics back to the model for refinement. Across iterations, EEG-SpikeAgent proposes and refines candidate signal features and decision rules informed by model performance. We evaluated EEG-SpikeAgent on VEPISET, a public 29-channel dataset of 4-second epochs containing 2,516 discharge-containing and 22,933 non-discharge epochs. Across five-fold cross-validation with a gradient-boosted tree classifier, agent-generated features achieved an area under the receiver operating characteristic curve of 0.935, balanced accuracy of 0.699, F1 score of 0.557, sensitivity of 0.401, and specificity of 0.996 at the default operating point. At an operating point with sensitivity 0.80, mean precision was 0.470 and mean specificity was 0.900. Artifact-aware feature generation improved balanced accuracy and F1 score over spike-only feature search. These results indicate that LLM-based program synthesis can automate EEG feature engineering in auditable and inspectable code-driven manner for clinical and methodological review.",
-      "pdf_url": "https://arxiv.org/pdf/2607.04558v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.04558v1",
-      "published": "2026-07-06T00:19:41Z",
-      "updated": "2026-07-06T00:19:41Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "WPG-MoE: Weak-Prior-Guided Dense Mixture-of-Experts for User-Level Social Media Depression Detection",
-      "authors": [
-        "Xian Li",
-        "Yuanhe Tian",
-        "Yang Yang",
-        "Guoqing Wang",
-        "Yan Song"
-      ],
-      "abstract": "Online social media posts provide scalable signals for early depression screening, and recent studies mainly improve pre-classification evidence through risk-post selection, symptom grounding, and clinically informed feature construction. However, these screening-stage designs often leave final decisions to a single detector, overlooking how users heterogeneously express depressive risk after screening. A monolithic classifier must average across heterogeneous users, which may dilute localized evidence and cause misclassification, especially for non-self-disclosing users. To address this issue, we propose WPG-MoE, a weak-prior-guided dense mixture-of-experts framework built on a shared large language model (LLM) backbone. WPG-MoE derives user-level weak semantic priors to softly route users to experts matched to different evidence layouts. We formulate this process as learning using privileged information (LUPI): rich LLM-extracted structured evidence guides training-time routing, while inference retains only Patient Health Questionnaire-9 (PHQ-9) template screening and the deployable backbone. Experiments on Chinese and English datasets show that WPG-MoE outperforms strong baselines with interpretable routing behavior.",
-      "pdf_url": "https://arxiv.org/pdf/2607.04350v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.04350v1",
-      "published": "2026-07-05T15:12:43Z",
-      "updated": "2026-07-05T15:12:43Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "CogRad: A Cognitively-Inspired Multi-Agent Framework for Radiology Report Generation",
-      "authors": [
-        "Saif Ur Rehman Khan",
-        "Hasaan Maqsood",
-        "Sebastian Vollmer",
-        "Andreas Dengel",
-        "Muhammad Nabeel Asim"
-      ],
-      "abstract": "Automated radiology report generation (RRG) can ease radiologist workload, yet most existing systems produce a report in a single forward pass, with no mechanism to check a claim against the image or revisit a finding once stated. We present CogRad, a cognitively inspired multi-agent framework that structures generation around four stages of a radiologist's reading process. A Scout agent discovers anatomical regions directly from image patches via slot attention and assigns region and disease-level triage scores; an Investigator agent concentrates representational capacity on the regions Scout flags as suspicious; a Writer agent compiles these signals into a disease gated visual prefix for a large language model; and a Verifier agent supervises training with a visual entailment loss and, at inference, re-examines its own draft sentence by sentence, regenerating any report it judges insufficiently grounded. On CheXpert Plus, CogRad attains a BLEU-4 of 0.316 and a CIDEr of 0.322, the best scores among the methods we compare against. On IU X-Ray, it attains a BLEU-4 of 0.201 and a CIDEr of 0.724, leading every baseline on every standard NLG metric. We further evaluate CogRad with RadGraph F1, CheXbert F1, and a hallucination analysis to assess clinical accuracy beyond standard text-overlap metrics, complemented by ablation studies and Grad-CAM-based visualizations that characterize each agent's contribution and the model's visual grounding.",
-      "pdf_url": "https://arxiv.org/pdf/2607.03853v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.03853v1",
-      "published": "2026-07-04T12:43:04Z",
-      "updated": "2026-07-04T12:43:04Z",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]

@@ -1,8 +1,129 @@
 {
-  "generated_at_utc": "2026-07-12T03:29:32.334625Z",
+  "generated_at_utc": "2026-07-13T03:32:18.930981Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "SAGEAgent: A Self-Evolving Agent for Cost-Aware Modality Acquisition in Multimodal Survival Prediction",
+      "authors": [
+        "Chongyu Qu",
+        "Can Cui",
+        "Zhengyi Lu",
+        "Junchao Zhu",
+        "Tianyuan Yao",
+        "Junlin Guo",
+        "Juming Xiong",
+        "Yanfan Zhu",
+        "Yuechen Yang",
+        "Bennett A. Landman",
+        "Yuankai Huo"
+      ],
+      "abstract": "Does every cancer patient truly need a complete diagnostic workup for accurate survival prediction? In multimodal clinical oncology, diagnostic modalities follow a clinically mandated order of escalating burden -- from demographics collected at intake to genomic profiling requiring specialized tissue analysis. Current multimodal survival methods either assume all modalities are available or passively handle missing data, but none actively reason about whether acquiring the next modality is justified for a given patient along this ordered workflow. We formulate this as a sequential decision problem and propose SAGEAgent (Sequential Acquisition Guided by Experience), a self-evolving LLM-based clinical agent that decides which diagnostic modalities to acquire for each patient, balancing predictive accuracy against clinical invasiveness. SAGEAgent reasons about each patient's evolving diagnostic state through clinical tools that translate numerical predictions into text, an episodic memory that retrieves similar past cases, and a semantic memory that accumulates reusable decision patterns from experience. Experiments on a glioma cohort combining TCGA-LGG, TCGA-GBM, and BraTS with four diagnostic modalities demonstrate that SAGEAgent achieves competitive survival prediction accuracy while reducing average acquisition burden by 55%.",
+      "pdf_url": "https://arxiv.org/pdf/2607.09521v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.09521v1",
+      "published": "2026-07-10T15:32:11Z",
+      "updated": "2026-07-10T15:32:11Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "All Explanations are Wrong, But Many Are Useful: Exploring the Rashomon Explanation Set with Large Language Models",
+      "authors": [
+        "Pan Li"
+      ],
+      "abstract": "Explaining machine-learning models is increasingly important for decision-making and consumer trust, yet it is widely believed to come at a cost: existing Explainable AI (XAI) methods suffer from a persistent accuracy-explainability trade-off. We argue that this trade-off is not fundamental, but an artifact of treating explanation and prediction as separate objectives; when properly coupled, they become complementary, so that equipping a model to explain itself improves, rather than degrades, its accuracy. We introduce the Rashomon Explanation paradigm, which builds a set of faithful, prediction-guiding explanations rather than a single one, and prove that this set is generally non-empty and that explanation fidelity bounds the performance of the models it guides. To explore this set, we propose RashomonLLM, an Explanation-Prediction-Reflection agentic workflow that generates explanations in natural language by iteratively aligning them with predictions, and we prove it converges and recovers the full set. Across customer-churn classification, clinical survival regression, and industrial click-through prediction on large-scale live-streaming logs, RashomonLLM significantly outperforms state-of-the-art prediction and XAI baselines on both accuracy and explanation quality, with gains driven by explanation fidelity and robust to distribution shifts, temporal splits, and seeds. Our framework thus advances business performance while laying the groundwork for consumer trust.",
+      "pdf_url": "https://arxiv.org/pdf/2607.09502v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.09502v1",
+      "published": "2026-07-10T15:16:58Z",
+      "updated": "2026-07-10T15:16:58Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Two Vocabularies, One Phenomenon: Metadata Bias in AI Evidence Synthesis on Fertility Decline",
+      "authors": [
+        "Boyana Buyuklieva",
+        "Veronica-Nicolle Hera"
+      ],
+      "abstract": "Declining fertility is one of the defining policy questions of the next decade, and increasingly, what policymakers know about it is shaped by AI-synthesising the evidence base. But ask such a tool about reproduction and the answer depends on the word you use. The same phenomenon, framed clinically (e.g, infertility, IVF) or socially (e.g., childlessness, fertility intentions), is catalogued with radically different completeness. And the catalogue as much, if not more than the underlying scholarship, is what AI synthesis begins with (Bola\u00f1os et al., 2024). That databases under-index the social sciences, books, and grey literature is well established (Visser et al., 2021). What is new here is holding the topic fixed and asking whether metadata gaps act as a hidden policy filter on a single contested issue: the determinants of (in)fertility.\n  We use two OpenAlex queries on the same phenomenon: a clinical basket (infertility, subfertility, ART, IVF, fecundity; n=101,645) and a social basket (childlessness, social infertility, fertility intentions, reproductive decision-making; n=3,646). We compare them on metadata completeness, open access, output type, and institutional provenance. The social framing is consistently less machine-legible: output skewed to books and dissertations, authorship university -- rather than healthcare-based. Open access rates are essentially equal (43.1% vs 41.3%), so the gap is in indexing depth, not paywalls, suggesting simple OA mandates will not fix it. On this same mixed literature, even before any coverage bias enters the picture, LLM tools already miss more than they catch when asked to extract hypotheses and claims (Uprety et al., 2025); the bias documented here compounds an already-imperfect extraction stage.",
+      "pdf_url": "https://arxiv.org/pdf/2607.09409v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.09409v1",
+      "published": "2026-07-10T13:43:04Z",
+      "updated": "2026-07-10T13:43:04Z",
+      "categories": [
+        "cs.DL"
+      ]
+    },
+    {
+      "title": "Deceptive Grounding: Entity Attribution Failure in Clinical Retrieval-Augmented Generation",
+      "authors": [
+        "Cedric Caruzzo",
+        "Donggeun Yoo",
+        "Tae Soo Kim"
+      ],
+      "abstract": "Retrieval-augmented generation evaluation checks whether model claims are factually grounded in retrieved documents. It does not check whether retrieved evidence is attributed to the correct entity.\n  A clinical RAG response can pass every automated check (zero hallucinations, near-perfect faithfulness, real citations) while presenting drug Y's clinical evidence as evidence about queried drug X. We term this deceptive grounding (DG): a failure invisible to faithfulness, hallucination, and citation checks because every claim is sourced from a real document, about the wrong entity.\n  Using a controlled factorial benchmark across 13 models, we find DG rates spanning 8-87% at peak adversarial conditions. Medical and biomedical fine-tuned models reach up to 86.7%; domain specialization amplifies the failure rather than mitigating it.\n  A controlled ablation identifies the mechanism: removing entity-specific clinical evidence from retrieved documents eliminates entity-attribution failure entirely, shifting all failures to confabulation. The two failure modes respond to the same trigger, taking different paths.\n  Production measurement across 740 drug-disease pairs finds 7.8% overall DG in a deployed RAG system, rising to 13.6% for recently approved drugs. Entity-attribution verification (checking that cited evidence applies to the queried entity) detects DG at 97.0% precision and 98.7% DG recall (IPW-adjusted human gold standard); no existing framework implements it.",
+      "pdf_url": "https://arxiv.org/pdf/2607.09349v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.09349v1",
+      "published": "2026-07-10T12:29:10Z",
+      "updated": "2026-07-10T12:29:10Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "LongMedBench: Benchmarking Medical Agents for Long-Horizon Clinical Decision-Making",
+      "authors": [
+        "Yanzhen Chen",
+        "Zihan Xu",
+        "Xiaocheng Zhang",
+        "Zhiting Fan",
+        "Weiqi Zhai",
+        "Hongxia Xu",
+        "Zuozhu Liu"
+      ],
+      "abstract": "In this work, we introduce LongMedBench, a real-world EHR-based benchmark for long-horizon clinical decision-making. Prior evaluations of LLM-based medical agents have largely emphasized short-context knowledge QA and tool use. However, real-world medical care is inherently longitudinal, and clinicians must aggregate evidence across repeated visits, tests, and evolving treatments. Therefore, long-horizon interaction is essential for realistic assessment. LongMedBench is constructed via a reproducible pipeline that integrates MIMIC-IV admission records and clinical notes into time-series event streams and long-context memory datasets, enabling long-horizon, multi-session interactions between agents and a clinical environment. It comprises 335 patients, with 19.72 inpatient visits per patient on average and 44.91 medical events per visit. Guided by the long-horizon decision process, we propose an evaluation taxonomy with three suites: fact-based QA, temporal reasoning, and long-horizon decision-making. This taxonomy measures how agents understand and leverage historical patient information over extended horizons. Our experiments show that while recent LLMs can make good use of explicit timestamps, they have challenges in implicit time inference; The RAG and agent memory system can improve the performance of information retrieval tasks, but the performance of decision-making tasks is highly dependent on the model's immediate context.",
+      "pdf_url": "https://arxiv.org/pdf/2607.09322v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.09322v1",
+      "published": "2026-07-10T12:04:31Z",
+      "updated": "2026-07-10T12:04:31Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "MedRealMM: A Real-World Multimodal Benchmark for Chinese Online Medical Consultation",
+      "authors": [
+        "Runhan Shi",
+        "Quan Zhou",
+        "Yuqian Xu",
+        "Shuai Yang",
+        "Xin Wu",
+        "Zitong Zhou",
+        "Hui Liu",
+        "Bin Cha",
+        "Zheming Wang",
+        "Liya Li",
+        "Wei Wei",
+        "Haoyuan Hu",
+        "Jun Xu"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly deployed in online medical consultation, yet existing benchmarks remain poorly aligned with real clinical practice. Many rely on synthetic conversations or patient simulators, omit patient-uploaded medical images, or evaluate open-ended clinical responses using multiple-choice or lexical-overlap metrics that poorly reflect clinical quality. We introduce \\textbf{MedRealMM}, a large-scale benchmark for multimodal online medical consultation built from de-identified patient-doctor interactions collected from a nationwide Chinese internet hospital. MedRealMM uses a Multimodal Clinical Challenge Point (MCCP) extraction framework to identify clinically demanding moments in authentic consultation trajectories and converts each into a standardized next-response generation task while preserving the preceding text-image context. Each instance is paired with a case-specific rubric refined by physicians that rewards clinically desirable behaviors and penalizes unsafe, unsupported, or contradictory responses. The current release contains 5,620 real-world multimodal cases spanning 64 clinical departments. We evaluate 19 general-purpose and medical-specialized LLMs, including text-only and multimodal systems. Our results show that image information is critical for reliable clinical performance and that current frontier models remain below the online physician response. Although some frontier models satisfy as many or more positive clinical criteria than physicians, they trigger more negative criteria, indicating that safety-sensitive error avoidance remains a central bottleneck. MedRealMM offers a realistic and reproducible benchmark for evaluating multimodal medical reasoning in real-world online consultation. The dataset will be publicly available on Hugging Face at https://huggingface.co/datasets/jdh-algo/MedRealMM.",
+      "pdf_url": "https://arxiv.org/pdf/2607.09142v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.09142v1",
+      "published": "2026-07-10T06:52:05Z",
+      "updated": "2026-07-10T06:52:05Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ]
+    },
     {
       "title": "The complexities of patient-centred conversational artificial intelligence",
       "authors": [
@@ -244,125 +365,6 @@
       "updated": "2026-07-08T15:39:10Z",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Aligning Clinical Needs and AI Capabilities: A Survey on LLMs for Medical Reasoning",
-      "authors": [
-        "Qi Peng",
-        "Jiatong Li",
-        "Sirui Huang",
-        "Yiyang Jiang",
-        "Kaisong Gong",
-        "Ronger Ding",
-        "Shijie Ye",
-        "Changmeng Zheng",
-        "Yi Cai",
-        "Xiaobo Yang",
-        "Jin Huang",
-        "Xiao-Yong Wei",
-        "Qing Li"
-      ],
-      "abstract": "Large language models (LLMs) have emerged as important tools in healthcare, showing growing potential for clinical reasoning and patient care. This survey examines recent progress in medical LLMs, focusing on reasoning applications and requirements. We present a dual-view approach that connects clinical practice with computational methods. On the clinical side, we establish a five-level competency scheme following Miller's Pyramid, progressing from knowledge recall to dynamic case management. On the computational side, we link deductive, inductive, and abductive reasoning patterns to common medical goals and tasks. We also introduce a benchmark dataset spanning five levels of medical reasoning capability and report results on 18 state-of-the-art models, revealing that medical specialist models excel in diagnosis-centric tasks while general models lead in decision support and dialogue. We conclude by discussing current progress and open challenges, including data limitations, hallucination, and grounding issues, and outline directions toward safer, more reliable, and workflow-ready systems.",
-      "pdf_url": "https://arxiv.org/pdf/2607.07761v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.07761v1",
-      "published": "2026-07-08T15:19:37Z",
-      "updated": "2026-07-08T15:19:37Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Naming the Concepts Classifiers Rely On: Language-Anchored Decomposition for Faithful Explanation",
-      "authors": [
-        "Ahsan Habib Akash",
-        "Dipkamal Bhusal",
-        "Stacey Jones",
-        "Donald A. Adjeroh",
-        "Binod Bhattarai",
-        "Prashnna Kumar Gyawali"
-      ],
-      "abstract": "Deep neural networks are widely deployed in high-stakes visual applications where interpretability is critical, yet existing explanations face a trade-off: post-hoc concept methods recover factors that are faithful to a model's behavior but unnamed, while naming and by-design methods attach human-readable concepts only by retraining or altering the classifier. We propose Language-Anchored Decomposition (LAD), a post-hoc framework that delivers concepts which are simultaneously named, faithful, and obtained without modifying the model. For each class, a large language model proposes a concept vocabulary that CLIP-based similarity maps localize across image regions. Inverting standard non-negative matrix factorization, LAD fixes these language-grounded maps as the coefficient matrix and learns only a concept basis that reconstructs the frozen encoder's activations, so naming becomes a structural constraint and the model's own feature geometry determines which concepts are retained. Removing this anchor preserves accuracy but collapses attribution faithfulness. Across natural-image, scene, and medical-imaging benchmarks, LAD produces spatially precise explanations that are decision-relevant under both concept insertion and deletion, while uniquely providing stable, human-interpretable concept names.",
-      "pdf_url": "https://arxiv.org/pdf/2607.07264v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.07264v1",
-      "published": "2026-07-08T10:50:04Z",
-      "updated": "2026-07-08T10:50:04Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Evaluating LLM Robustness Under Domain-Specific Prompt Perturbations in Public Health Applications",
-      "authors": [
-        "Chuqing Zhao",
-        "Haochen Yang"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly applied in public health applications, yet their robustness to non-clinical user inputs remains underexplored. We propose a domain specific robustness benchmark that evaluates LLMs under two perturbation types that commonly arise when non-clinical users interact with health AI systems: misinformation framing (MF), where prompt might be injected by false health claims, and layperson rewriting (LR), where patients describe symptoms in everyday language rather than medical terminology. Our goal is to evaluate the stability of LLMs under these perturbation. Experiments show that MF degrades accuracy by 7.2 pp on average with prediction flip rates of 9-38 percent, even when claims are explicitly labelled as unsupported; LR causes only 1.4 pp degradation. These findings highlight two distinct deployment risks in public health settings: models may produce incorrect outputs when users unintentionally carry misinformation into their queries, and may misinterpret clinically relevant details when patients use informal language. Both risks call for perturbation-aware robustness evaluation beyond clean baseline benchmark",
-      "pdf_url": "https://arxiv.org/pdf/2607.06913v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.06913v1",
-      "published": "2026-07-08T02:04:47Z",
-      "updated": "2026-07-08T02:04:47Z",
-      "categories": [
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "A Multi-Analyst LLM Pipeline for Auditable Rule Discovery Across 68 Public Physiological Corpora",
-      "authors": [
-        "Dovy Paukstys"
-      ],
-      "abstract": "Open physiological corpora are heterogeneous: they use different sensors, labels, sampling rates, recording settings, and clinical endpoints. They can support detector design, but they do not directly specify which detector rules should be built for a new contactless monitoring platform. We report a controlled four-analyst large-language-model (LLM) workflow for converting 68 public physiological corpora, screened for commercial-use compatibility, into an auditable library of candidate rule shapes for prospective validation. Four independent commercial LLM families read the corpus documentation under a controlled prompt and produced 695 candidate rule markers (top-markers). Deduplication retained 649 rule records; a threshold-bounds audit then flagged 51 sanity violations for clamping or curator review. Cross-corpus consolidation produced 436 unique rule shapes. Gate-tagging against two hard invariants, native target-hardware channel availability and no multi-night per-patient personalization, identified 94 build-now detector components across four detector-family buckets. The pipeline does not produce a validated clinical detector. It produces an auditable engineering cascade in which analyst disagreement, threshold checks, curator review, and automated continuous-integration (CI) checks route literature-derived rules toward prospective hardware validation.",
-      "pdf_url": "https://arxiv.org/pdf/2607.06802v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.06802v1",
-      "published": "2026-07-07T20:56:37Z",
-      "updated": "2026-07-07T20:56:37Z",
-      "categories": [
-        "eess.SP",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Healthier LLMs: Retrieval-Augmented Generation for Public Health Question Answering",
-      "authors": [
-        "Felix Feldman",
-        "Joshua Harris",
-        "Timothy Laurence",
-        "Leo Loman",
-        "Ollie Higgins",
-        "Fan Grayson",
-        "Poonam Soma",
-        "Bethany Pace-Bonello",
-        "Michael Borowitz",
-        "Toby Nonnenmacher"
-      ],
-      "abstract": "Large language models (LLMs) achieve promising results on medical question answering benchmarks, yet their use in public health is constrained by hallucinations and the rapid evolution of official guidance. Retrieval-Augmented Generation (RAG) mitigates these risks by grounding responses in an explicitly maintained corpus, but end-to-end performance depends critically on retrieval configuration and on evaluation beyond multiple-choice formats. We extend PubHealthBench, a question answering (QA) benchmark of 7,929 questions derived from UK Government public health guidance, into a retrieval-augmented setting and systematically evaluate retrieval and generation choices. We compare dense, sparse, and hybrid retrieval across multiple embedding models and corpus variants, and show that hybrid retrieval consistently improves recall and ranking quality, with chunk length and topic interacting with ranking performance. Providing retrieved context substantially increases multiple-choice accuracy across a diverse set of LLMs, enabling smaller open-weight models to match or outperform larger models used without retrieval, with gains primarily driven by retrieval quality and careful context selection. To assess realistic free-form answering, we introduce a rubric-based LLM-as-a-judge covering faithfulness, completeness, clarity, and factual consistency, and validate it against dual human annotations. Judge-human agreement is strongest for faithfulness and completeness, while factual consistency and clarity are less reliably reproduced, motivating caution when interpreting those dimensions at scale. Overall, our results highlight retrieval as a primary lever for reliable public health QA and provide practical guidance for building and evaluating RAG systems grounded in official guidance.",
-      "pdf_url": "https://arxiv.org/pdf/2607.06641v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.06641v1",
-      "published": "2026-07-07T14:47:42Z",
-      "updated": "2026-07-07T14:47:42Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Measuring the practice of shared-decision making (OPTION12): An Investigation into Open-sourced Smaller LLMs (OS-sLLMs) for Better Privacy and Sustainability",
-      "authors": [
-        "Tamara Wit",
-        "Lifeng Han",
-        "Carly Heipon",
-        "David Lindevelt",
-        "Anne Stiggelbout",
-        "Suzan Verberne"
-      ],
-      "abstract": "We present LLM4SDM, the first study of open-source smaller language models (OS-sLLMs) for automated assessment of shared decision making (SDM) using the Observer OPTION12 framework. Unlike previous work that relies on large commercial models and the shorter OPTION5 instrument, our study focuses on privacy-preserving locally deployable models and Dutch melanoma consultation transcripts. Using expert-annotated clinical consultations, we evaluate three general-domain and two medical-domain OS-sLLMs during a development-phase pilot study. Results show that general-domain models outperform medical-domain models, which exhibit substantial hallucination and instruction-following failures. Gemma3:12b achieves the strongest agreement with human annotations (Pearson r=0.51, Spearman \\r{ho}=0.59). Item-level and qualitative analyses reveal systematic challenges related to temporal discourse reasoning, conversational role attribution, and evidence grounding. We further introduce a Judge-LLM consensus framework designed to support disagreement resolution among multiple models. Our findings suggest that while current OS-sLLMs cannot replace human annotators, they offer a promising foundation for privacy-preserving human-in-the-loop SDM assessment.",
-      "pdf_url": "https://arxiv.org/pdf/2607.06127v2",
-      "arxiv_url": "https://arxiv.org/abs/2607.06127v2",
-      "published": "2026-07-07T10:37:04Z",
-      "updated": "2026-07-09T11:02:03Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

@@ -1,8 +1,153 @@
 {
-  "generated_at_utc": "2026-07-14T02:53:28.483291Z",
+  "generated_at_utc": "2026-07-15T02:52:34.360376Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Open-KNEAD: Knowledge-grounded Nutrition Estimation via Agentic Decomposition",
+      "authors": [
+        "Bruce Coburn",
+        "Jingbo Yue",
+        "Jinge Ma",
+        "Siddeshwar Raghavan",
+        "Gautham Vinod",
+        "Fengqing Zhu"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) are increasingly used for dietary assessment from meal images, where retrieval-augmented grounding was shown to sharpen nutrition estimates. However, we find this premise no longer holds for current MLLMs. A modern MLLM's direct estimate now matches or surpasses the full retrieval pipeline. This raises a question: if retrieval no longer improves the overall estimate, can it still deliver the two things clinicians value, accurate portions and a traceable, item-by-item record? We pursue this while preserving what matters for clinical adoption: minimal user burden (a single, unannotated meal image), explainability (an auditable record), and privacy (locally hosted inference). We introduce Open-KNEAD, a knowledge-grounded agentic framework for meal nutrition estimation that is training-free and locally deployable. Each decomposed food item is grounded to a Food and Nutrient Database for Dietary Studies (FNDDS) code via selective, nutrient-aware retrieval, composing an auditable per-item record. Across two open MLLM families and three cuisines, Open-KNEAD improves portion estimates over both prior grounding methods and direct estimation in most backbone-dataset settings. An agent-internal recipe-prior step further recovers the invisible cooking-added energy that biases estimates on non-US cuisine. The advantage is largest on the dietitian-verified ACETADA dataset, where the local open agent surpasses the direct portion estimates of two frontier closed models by roughly $30\\%$ and $53\\%$, all while keeping every meal image on local hardware. We release the Open-KNEAD framework and its agent-ready FNDDS knowledge base.",
+      "pdf_url": "https://arxiv.org/pdf/2607.12911v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.12911v1",
+      "published": "2026-07-14T15:48:25Z",
+      "updated": "2026-07-14T15:48:25Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Evaluating Large Language Models on Misconceptions in Multi-Turn Medical Conversations",
+      "authors": [
+        "Monica Munnangi",
+        "Saiph Savage"
+      ],
+      "abstract": "Patients seeking medical information often ask questions that embed incorrect assumptions or misconceptions. In such cases, safe medical communication requires not only answering the question, but identifying and correcting the underlying false belief. These interactions naturally unfold over multiple turns, a pattern now mirrored in interactions with LLMs. Yet current evaluation frameworks do not capture model behavior in these settings, where misconceptions can emerge, persist, or evolve over the course of a conversation. Whether LLMs can reliably correct such misconceptions over time remains largely unexamined. To study this, we introduce ThReadMed-QA, a multi-turn medical dialogue dataset of 2,437 patient-physician conversation threads comprising 8,204 question-answer pairs, derived from real patient interactions on AskDocs. This dataset enables systematic evaluation of whether models can detect and correct misconceptions under a multi-turn context. We evaluate five LLMs using a rubric-based LLM-as-a-Judge framework that scores responses based on their ability to identify and correct misconceptions. Our experiments reveal a consistent pattern: even frontier models that can address misconceptions in a single interaction degrade substantially over subsequent turns. GPT-5 and Claude-Haiku correct these false presuppositions around 85% on initial questions but drop to roughly 50% within two follow-ups. An oracle analysis replacing prior model outputs with physician responses shows that much of the degradation is driven by error propagation, while performance remains imperfect even under correct context. Even when models tend to correct misconceptions initially, their performance degrades substantially over later turns, leading to inconsistent and potentially unsafe guidance in patient-facing settings and highlighting the need for evaluation frameworks that capture multi-turn behavior.",
+      "pdf_url": "https://arxiv.org/pdf/2607.12884v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.12884v1",
+      "published": "2026-07-14T15:30:37Z",
+      "updated": "2026-07-14T15:30:37Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Evidence-Grounded AI for Musculoskeletal Care",
+      "authors": [
+        "Wenjie Li",
+        "Yujie Zhang",
+        "Fanrui Zhang",
+        "Haoran Sun",
+        "Renhao Yang",
+        "Junjun He",
+        "Weiran Huang",
+        "Yuanfeng Ji",
+        "Chenrun Wang",
+        "Kailing Wang",
+        "Hongcheng Gao",
+        "Kaipeng Zhang",
+        "Hanyu Wang",
+        "Angela Lin Wang",
+        "Xingqi He",
+        "Yilin Huang",
+        "Shiyi Yao",
+        "Lilong Wang",
+        "Yankai Jiang",
+        "Yirong Chen",
+        "Chenglong Ma",
+        "Jiyao Liu",
+        "Ming Hu",
+        "Gen Li",
+        "Yidong Xu",
+        "Chengyu Zhuang",
+        "Jiawei Liu",
+        "Yin Zhang",
+        "Lequan Yu",
+        "Lu Chen",
+        "Yinpeng Dong",
+        "Lei Liu",
+        "Carlos Gutierrez Sanroman",
+        "Yu Qiao",
+        "Weijie Ma",
+        "Xiaosong Wang",
+        "Lei Wang"
+      ],
+      "abstract": "Musculoskeletal diseases are among the leading causes of disability worldwide and create the greatest global need for rehabilitation. Because recovery, remodelling and degeneration often unfold over months to years, musculoskeletal care requires longitudinal management that repeatedly integrates evolving patient evidence, external medical knowledge and stage-specific functional goals. In routine practice, this evidence is fragmented across visits, departments and hospital systems, limiting individualized, evidence-based care. Here we report OrthoPilot, a clinical artificial intelligence system powered by a large language model that integrates hospital data streams with authoritative external knowledge for continuous musculoskeletal management. OrthoPilot autonomously retrieves real-time imaging, laboratory, pathology and order data and converts evolving patient states into evidence-based decisions from admission diagnosis to rehabilitation planning. We established a specialist-validated benchmark from real-world electronic health records spanning 1,000 disease codes. In a reader study across the complete care pathway, OrthoPilot was compared with 81 orthopaedic physicians and surpassed experts with 25 years of experience in diagnostic reasoning, clinical decision-making and management planning. It also outperformed all evaluated intelligent systems across 60 external clinical centres. In a prospective study of 1,870 complex cases, OrthoPilot increased full-chain management success by 10.6%. During an 8-month randomised deployment involving 8,240 inpatients, it increased cumulative cases per bed by 9.7% and improved patient-reported access to health information. These results move clinical AI from predicting isolated events toward executing longitudinal management across complete musculoskeletal care pathways.",
+      "pdf_url": "https://arxiv.org/pdf/2607.12527v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.12527v1",
+      "published": "2026-07-14T09:03:26Z",
+      "updated": "2026-07-14T09:03:26Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Evaluating Health Misinformation in Low-Resource Languages: Integrating Small Language Models with a Culturally-Sensitive Responsible NLP Framework (Bangla as a Case Study)",
+      "authors": [
+        "Farnaz Farid",
+        "Raihan Alam",
+        "Al Al-Areqi",
+        "Farhad Ahamed",
+        "Muhammad Hassan Khan",
+        "Sadia Hossain",
+        "Irena Veljanova",
+        "Anika Tabassum Binte Hossain"
+      ],
+      "abstract": "Artificial Intelligence (AI) technologies, while serving as a foundational enabler for modern social media and digital health services, exert a bivalent effect by simultaneously acting as a combatant against and a spread vector for misinformation. A prevalent challenge in mitigating this issue arises in non-English contexts and low socioeconomic classes, where limited data hinders the training of AI models for effective detection. Consequently, culturally and linguistically diverse (CALD) communities struggle to access trustworthy health information through AI-driven tools. Current AI tools underperform due to a lack of training data and are largely unable to consider language nuances and traditions in non-English contexts. This research addresses these gaps by proposing a CALD-friendly AI-based health misinformation detector and providing a dashboard for medical professionals to analyse this misinformation, a critical step toward mitigating a growing concern among CALD populations. To this end, we conduct a series of experiments using a Bangla-translated health misinformation dataset to evaluate the performance of various Small Language Models (SLMs). SLMs are particularly relevant in this context given the frequent underperformance of Large Language Models (LLMs), which often stems from insufficient domain-specific knowledge and the prohibitive costs of resource-intensive fine-tuning. The results demonstrate that Phi-4 is the superior model, achieving an ideal balance between precision and recall in claim extraction. Then, to mitigate the limitations of SLMs, we design and test a novel health misinformation detection framework grounded in Responsible Natural Language Processing (NLP), which incorporates cultural sensitivity, potential for harm, and communication quality, thereby providing a holistic lens for evaluating misinformation in low-resource languages.",
+      "pdf_url": "https://arxiv.org/pdf/2607.12336v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.12336v1",
+      "published": "2026-07-14T04:34:05Z",
+      "updated": "2026-07-14T04:34:05Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY",
+        "cs.ET",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "From Many to Meaningful: Feature-Guided Zero-Shot Chronic Kidney Disease Screening Using Large Language Models",
+      "authors": [
+        "Muhammad Ashad Kabir",
+        "Sirajam Munira"
+      ],
+      "abstract": "Early screening of chronic kidney disease (CKD) is essential for preventing irreversible progression; however, many machine learning (ML)-based screening methods remain difficult to deploy in community and resource-limited screening settings due to their reliance on large labeled datasets, resource-intensive pathology tests, or high-dimensional clinical features, and limited robustness to population and distributional shifts. This study examines the feasibility of using large language models (LLMs) for early-stage CKD screening in a zero-shot setting, without dataset-specific training. We propose a feature-guided zero-shot framework that evaluates LLM performance using a selected set of clinically meaningful, readily available community-based features, rather than exhaustive clinical inputs. Feature selection was guided by ML-based analysis to identify a compact, clinically relevant subset of variables. Tabular patient records were subsequently serialized into text using standardized prompt templates to enable zero-shot inference. The zero-shot performance of four LLMs (LLaMA-3, Qwen-3, Mistral, and GPT-4o-mini) was evaluated using both the full feature set and the selected subset. Generalizability was assessed across three heterogeneous CKD datasets spanning three countries. Across models and datasets, the selected feature set yielded consistent and statistically significant improvements in balanced accuracy and probability estimates, achieving performance levels suitable for screening purposes. These findings suggest that LLMs can support clinically meaningful, training-free CKD screening using minimal community-accessible patient features, offering a practical complement to conventional ML methods in real-world screening contexts.",
+      "pdf_url": "https://arxiv.org/pdf/2607.12260v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.12260v1",
+      "published": "2026-07-14T02:00:58Z",
+      "updated": "2026-07-14T02:00:58Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Agentic systems for breast cancer treatment recommendations",
+      "authors": [
+        "Vinicius Anjos de Almeida",
+        "N\u00edcolas Henrique Borges",
+        "Leonardo Vicenzi",
+        "Helena Kociolek",
+        "Sarah Miri\u00e3 de Castro Rocha",
+        "Frederico Nassif Gomes",
+        "J\u00falia Cristina Ferreira Ribeiro",
+        "Lucas Emanuel Silva e Oliveira"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly being explored for clinical decision support, but their reliability in complex oncology treatment planning remains unclear. We evaluated agentic LLM systems for breast cancer treatment recommendation generation using 72 real clinical cases across stages I to IV and 1,147 case-specific rubrics generated through Asymmetric Information Rubric Generation (AIRG), in which the rubric generator had access to real clinical decisions unavailable to the evaluated models. Seven pipelines were compared, including single-LLM baselines, tool-augmented systems, and multi-agent architectures with fact checking and autonomous subagent spawning. The best-performing configuration, Claude Opus 4.8 with the D&C+SA pipeline, achieved a global score of 0.594 $\\pm$ 0.025. Tool use and increased agent autonomy had mixed effects, improving performance in some settings but degrading it in others. Performance varied by clinical domain and disease stage, and oncologist-led error analysis revealed persistent clinically relevant failures, including incorrect or missing recommendations, flawed justifications, citation errors, outdated claims, and overconfidence. These findings suggest that agentic LLM systems can generate clinically relevant breast cancer recommendations, but remain insufficient for unsupervised clinical use.",
+      "pdf_url": "https://arxiv.org/pdf/2607.12051v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.12051v1",
+      "published": "2026-07-13T18:09:50Z",
+      "updated": "2026-07-13T18:09:50Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "RAGU: A Multi-Step GraphRAG Engine with a Compact Domain-Adapted LLM",
       "authors": [
@@ -39,7 +184,10 @@
       "published": "2026-07-13T12:15:27Z",
       "updated": "2026-07-13T12:15:27Z",
       "categories": [
-        "cs.IR"
+        "cs.IR",
+        "cs.AI",
+        "cs.CL",
+        "cs.DB"
       ]
     },
     {
@@ -190,127 +338,6 @@
       "categories": [
         "cs.CL",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "SAGEAgent: A Self-Evolving Agent for Cost-Aware Modality Acquisition in Multimodal Survival Prediction",
-      "authors": [
-        "Chongyu Qu",
-        "Can Cui",
-        "Zhengyi Lu",
-        "Junchao Zhu",
-        "Tianyuan Yao",
-        "Junlin Guo",
-        "Juming Xiong",
-        "Yanfan Zhu",
-        "Yuechen Yang",
-        "Bennett A. Landman",
-        "Yuankai Huo"
-      ],
-      "abstract": "Does every cancer patient truly need a complete diagnostic workup for accurate survival prediction? In multimodal clinical oncology, diagnostic modalities follow a clinically mandated order of escalating burden -- from demographics collected at intake to genomic profiling requiring specialized tissue analysis. Current multimodal survival methods either assume all modalities are available or passively handle missing data, but none actively reason about whether acquiring the next modality is justified for a given patient along this ordered workflow. We formulate this as a sequential decision problem and propose SAGEAgent (Sequential Acquisition Guided by Experience), a self-evolving LLM-based clinical agent that decides which diagnostic modalities to acquire for each patient, balancing predictive accuracy against clinical invasiveness. SAGEAgent reasons about each patient's evolving diagnostic state through clinical tools that translate numerical predictions into text, an episodic memory that retrieves similar past cases, and a semantic memory that accumulates reusable decision patterns from experience. Experiments on a glioma cohort combining TCGA-LGG, TCGA-GBM, and BraTS with four diagnostic modalities demonstrate that SAGEAgent achieves competitive survival prediction accuracy while reducing average acquisition burden by 55%.",
-      "pdf_url": "https://arxiv.org/pdf/2607.09521v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.09521v1",
-      "published": "2026-07-10T15:32:11Z",
-      "updated": "2026-07-10T15:32:11Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "All Explanations are Wrong, But Many Are Useful: Exploring the Rashomon Explanation Set with Large Language Models",
-      "authors": [
-        "Pan Li"
-      ],
-      "abstract": "Explaining machine-learning models is increasingly important for decision-making and consumer trust, yet it is widely believed to come at a cost: existing Explainable AI (XAI) methods suffer from a persistent accuracy-explainability trade-off. We argue that this trade-off is not fundamental, but an artifact of treating explanation and prediction as separate objectives; when properly coupled, they become complementary, so that equipping a model to explain itself improves, rather than degrades, its accuracy. We introduce the Rashomon Explanation paradigm, which builds a set of faithful, prediction-guiding explanations rather than a single one, and prove that this set is generally non-empty and that explanation fidelity bounds the performance of the models it guides. To explore this set, we propose RashomonLLM, an Explanation-Prediction-Reflection agentic workflow that generates explanations in natural language by iteratively aligning them with predictions, and we prove it converges and recovers the full set. Across customer-churn classification, clinical survival regression, and industrial click-through prediction on large-scale live-streaming logs, RashomonLLM significantly outperforms state-of-the-art prediction and XAI baselines on both accuracy and explanation quality, with gains driven by explanation fidelity and robust to distribution shifts, temporal splits, and seeds. Our framework thus advances business performance while laying the groundwork for consumer trust.",
-      "pdf_url": "https://arxiv.org/pdf/2607.09502v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.09502v1",
-      "published": "2026-07-10T15:16:58Z",
-      "updated": "2026-07-10T15:16:58Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Two Vocabularies, One Phenomenon: Metadata Bias in AI Evidence Synthesis on Fertility Decline",
-      "authors": [
-        "Boyana Buyuklieva",
-        "Veronica-Nicolle Hera"
-      ],
-      "abstract": "Declining fertility is one of the defining policy questions of the next decade, and increasingly, what policymakers know about it is shaped by AI-synthesising the evidence base. But ask such a tool about reproduction and the answer depends on the word you use. The same phenomenon, framed clinically (e.g, infertility, IVF) or socially (e.g., childlessness, fertility intentions), is catalogued with radically different completeness. And the catalogue as much, if not more than the underlying scholarship, is what AI synthesis begins with (Bola\u00f1os et al., 2024). That databases under-index the social sciences, books, and grey literature is well established (Visser et al., 2021). What is new here is holding the topic fixed and asking whether metadata gaps act as a hidden policy filter on a single contested issue: the determinants of (in)fertility.\n  We use two OpenAlex queries on the same phenomenon: a clinical basket (infertility, subfertility, ART, IVF, fecundity; n=101,645) and a social basket (childlessness, social infertility, fertility intentions, reproductive decision-making; n=3,646). We compare them on metadata completeness, open access, output type, and institutional provenance. The social framing is consistently less machine-legible: output skewed to books and dissertations, authorship university -- rather than healthcare-based. Open access rates are essentially equal (43.1% vs 41.3%), so the gap is in indexing depth, not paywalls, suggesting simple OA mandates will not fix it. On this same mixed literature, even before any coverage bias enters the picture, LLM tools already miss more than they catch when asked to extract hypotheses and claims (Uprety et al., 2025); the bias documented here compounds an already-imperfect extraction stage.",
-      "pdf_url": "https://arxiv.org/pdf/2607.09409v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.09409v1",
-      "published": "2026-07-10T13:43:04Z",
-      "updated": "2026-07-10T13:43:04Z",
-      "categories": [
-        "cs.DL"
-      ]
-    },
-    {
-      "title": "Deceptive Grounding: Entity Attribution Failure in Clinical Retrieval-Augmented Generation",
-      "authors": [
-        "Cedric Caruzzo",
-        "Donggeun Yoo",
-        "Tae Soo Kim"
-      ],
-      "abstract": "Retrieval-augmented generation evaluation checks whether model claims are factually grounded in retrieved documents. It does not check whether retrieved evidence is attributed to the correct entity.\n  A clinical RAG response can pass every automated check (zero hallucinations, near-perfect faithfulness, real citations) while presenting drug Y's clinical evidence as evidence about queried drug X. We term this deceptive grounding (DG): a failure invisible to faithfulness, hallucination, and citation checks because every claim is sourced from a real document, about the wrong entity.\n  Using a controlled factorial benchmark across 13 models, we find DG rates spanning 8-87% at peak adversarial conditions. Medical and biomedical fine-tuned models reach up to 86.7%; domain specialization amplifies the failure rather than mitigating it.\n  A controlled ablation identifies the mechanism: removing entity-specific clinical evidence from retrieved documents eliminates entity-attribution failure entirely, shifting all failures to confabulation. The two failure modes respond to the same trigger, taking different paths.\n  Production measurement across 740 drug-disease pairs finds 7.8% overall DG in a deployed RAG system, rising to 13.6% for recently approved drugs. Entity-attribution verification (checking that cited evidence applies to the queried entity) detects DG at 97.0% precision and 98.7% DG recall (IPW-adjusted human gold standard); no existing framework implements it.",
-      "pdf_url": "https://arxiv.org/pdf/2607.09349v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.09349v1",
-      "published": "2026-07-10T12:29:10Z",
-      "updated": "2026-07-10T12:29:10Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "LongMedBench: Benchmarking Medical Agents for Long-Horizon Clinical Decision-Making",
-      "authors": [
-        "Zihan Xu",
-        "Yanzhen Chen",
-        "Xiaocheng Zhang",
-        "Zhiting Fan",
-        "Weiqi Zhai",
-        "Hongxia Xu",
-        "Zuozhu Liu"
-      ],
-      "abstract": "In this work, we introduce LongMedBench, a real-world EHR-based benchmark for long-horizon clinical decision-making. Prior evaluations of LLM-based medical agents have largely emphasized short-context knowledge QA and tool use. However, real-world medical care is inherently longitudinal, and clinicians must aggregate evidence across repeated visits, tests, and evolving treatments. Therefore, long-horizon interaction is essential for realistic assessment. LongMedBench is constructed via a reproducible pipeline that integrates MIMIC-IV admission records and clinical notes into time-series event streams and long-context memory datasets, enabling long-horizon, multi-session interactions between agents and a clinical environment. It comprises 335 patients, with 19.72 inpatient visits per patient on average and 44.91 medical events per visit. Guided by the long-horizon decision process, we propose an evaluation taxonomy with three suites: fact-based QA, temporal reasoning, and long-horizon decision-making. This taxonomy measures how agents understand and leverage historical patient information over extended horizons. Our experiments show that while recent LLMs can make good use of explicit timestamps, they have challenges in implicit time inference; The RAG and agent memory system can improve the performance of information retrieval tasks, but the performance of decision-making tasks is highly dependent on the model's immediate context.",
-      "pdf_url": "https://arxiv.org/pdf/2607.09322v2",
-      "arxiv_url": "https://arxiv.org/abs/2607.09322v2",
-      "published": "2026-07-10T12:04:31Z",
-      "updated": "2026-07-13T07:55:03Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MedRealMM: A Real-World Multimodal Benchmark for Chinese Online Medical Consultation",
-      "authors": [
-        "Runhan Shi",
-        "Quan Zhou",
-        "Yuqian Xu",
-        "Shuai Yang",
-        "Xin Wu",
-        "Zitong Zhou",
-        "Hui Liu",
-        "Bin Cha",
-        "Zheming Wang",
-        "Liya Li",
-        "Wei Wei",
-        "Haoyuan Hu",
-        "Jun Xu"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly deployed in online medical consultation, yet existing benchmarks remain poorly aligned with real clinical practice. Many rely on synthetic conversations or patient simulators, omit patient-uploaded medical images, or evaluate open-ended clinical responses using multiple-choice or lexical-overlap metrics that poorly reflect clinical quality. We introduce \\textbf{MedRealMM}, a large-scale benchmark for multimodal online medical consultation built from de-identified patient-doctor interactions collected from a nationwide Chinese internet hospital. MedRealMM uses a Multimodal Clinical Challenge Point (MCCP) extraction framework to identify clinically demanding moments in authentic consultation trajectories and converts each into a standardized next-response generation task while preserving the preceding text-image context. Each instance is paired with a case-specific rubric refined by physicians that rewards clinically desirable behaviors and penalizes unsafe, unsupported, or contradictory responses. The current release contains 5,620 real-world multimodal cases spanning 64 clinical departments. We evaluate 19 general-purpose and medical-specialized LLMs, including text-only and multimodal systems. Our results show that image information is critical for reliable clinical performance and that current frontier models remain below the online physician response. Although some frontier models satisfy as many or more positive clinical criteria than physicians, they trigger more negative criteria, indicating that safety-sensitive error avoidance remains a central bottleneck. MedRealMM offers a realistic and reproducible benchmark for evaluating multimodal medical reasoning in real-world online consultation. The dataset will be publicly available on Hugging Face at https://huggingface.co/datasets/jdh-algo/MedRealMM.",
-      "pdf_url": "https://arxiv.org/pdf/2607.09142v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.09142v1",
-      "published": "2026-07-10T06:52:05Z",
-      "updated": "2026-07-10T06:52:05Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.CV"
       ]
     }
   ]

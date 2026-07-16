@@ -1,8 +1,29 @@
 {
-  "generated_at_utc": "2026-07-15T02:52:34.360376Z",
+  "generated_at_utc": "2026-07-16T03:13:43.844291Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Towards Enhancing 3D Spatial Reasoning in Medical Multimodal Large Language Models",
+      "authors": [
+        "Zhuoyuan Fu",
+        "Zeshang Li",
+        "Yiqiong Zhang",
+        "Hangui Lin",
+        "Yan Shu",
+        "Yan Li",
+        "Binyang Li",
+        "Yaru Zhao"
+      ],
+      "abstract": "While Multimodal Large Language Models (MLLMs) have demonstrated remarkable success in 2D medical image understanding, their extension to 3D volumetric imaging remains hindered by prohibitive annotation costs and dataset opacity. Current data formats, predominantly consisting of rigid Visual Question Answering (VQA) pairs or unstructured final clinical reports, typically fail to capture explicit clinical reasoning. To address this limitation, we introduce a large-scale structured reasoning dataset constructed via a novel slice-wise data synthesis paradigm. Inspired by the genuine diagnostic workflow of radiologists, this paradigm models visual cognition by decomposing the complex 3D reading process, translating global clinical priors into fine-grained, per-slice observations that are subsequently synthesized into an interpretable Chain-of-Thought (CoT). Crucially, this synthesized reasoning framework enforces essential clinical principles: sequential spatial tracking, multi-slice spatial awareness for artifact mitigation, and differential exclusion. To validate this approach, we instruction-tune a standard 2D-pretrained MLLM baseline using the synthesized data to enhance its volumetric comprehension. Comprehensive evaluations across multiple 3D medical benchmarks demonstrate that our method yields significant performance improvements over the 2D baseline. Furthermore, the resulting model exhibits robust spatial reasoning capabilities and rivals resource-intensive native 3D architectures, effectively bridging the performance gap. Ultimately, this data-centric strategy unlocks deep volumetric understanding and highly interpretable clinical logic without requiring computationally expensive 3D-specific pre-training. The complete repository, including datasets and training workflows, is publicly available at https://github.com/2020420145009/hounsfield.",
+      "pdf_url": "https://arxiv.org/pdf/2607.13860v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.13860v1",
+      "published": "2026-07-15T14:05:58Z",
+      "updated": "2026-07-15T14:05:58Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "Open-KNEAD: Knowledge-grounded Nutrition Estimation via Agentic Decomposition",
       "authors": [
@@ -79,10 +100,10 @@
         "Lei Wang"
       ],
       "abstract": "Musculoskeletal diseases are among the leading causes of disability worldwide and create the greatest global need for rehabilitation. Because recovery, remodelling and degeneration often unfold over months to years, musculoskeletal care requires longitudinal management that repeatedly integrates evolving patient evidence, external medical knowledge and stage-specific functional goals. In routine practice, this evidence is fragmented across visits, departments and hospital systems, limiting individualized, evidence-based care. Here we report OrthoPilot, a clinical artificial intelligence system powered by a large language model that integrates hospital data streams with authoritative external knowledge for continuous musculoskeletal management. OrthoPilot autonomously retrieves real-time imaging, laboratory, pathology and order data and converts evolving patient states into evidence-based decisions from admission diagnosis to rehabilitation planning. We established a specialist-validated benchmark from real-world electronic health records spanning 1,000 disease codes. In a reader study across the complete care pathway, OrthoPilot was compared with 81 orthopaedic physicians and surpassed experts with 25 years of experience in diagnostic reasoning, clinical decision-making and management planning. It also outperformed all evaluated intelligent systems across 60 external clinical centres. In a prospective study of 1,870 complex cases, OrthoPilot increased full-chain management success by 10.6%. During an 8-month randomised deployment involving 8,240 inpatients, it increased cumulative cases per bed by 9.7% and improved patient-reported access to health information. These results move clinical AI from predicting isolated events toward executing longitudinal management across complete musculoskeletal care pathways.",
-      "pdf_url": "https://arxiv.org/pdf/2607.12527v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.12527v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12527v2",
+      "arxiv_url": "https://arxiv.org/abs/2607.12527v2",
       "published": "2026-07-14T09:03:26Z",
-      "updated": "2026-07-14T09:03:26Z",
+      "updated": "2026-07-15T08:15:19Z",
       "categories": [
         "cs.AI"
       ]
@@ -323,21 +344,6 @@
       "updated": "2026-07-11T06:15:03Z",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Faithful by Design: Evaluating and Improving LLM-Generated Clinical Trial Summaries for Multi-Stakeholder Audiences",
-      "authors": [
-        "Robert Williams"
-      ],
-      "abstract": "Large language models are increasingly used to summarize clinical trial results for healthcare providers, patients, and payers, but their tendency to hallucinate poses significant risks in this high-stakes context. This study introduces a benchmark evaluation framework for measuring the faithfulness of LLM-generated clinical trial summaries across three stakeholder audiences. The framework consists of 200 stratified trials drawn from the Aggregate Analysis of ClinicalTrials.gov database, evaluated using audience-specific prompt templates and a six-dimension faithfulness annotation schema. Baseline measurements were established for GPT-4o, Claude Sonnet 4.6, and Gemini 2.5 Flash across 1,800 generated summaries scored using a cross-encoder natural language inference (NLI) model. Unsupported Claims was identified as the dominant failure mode across all three models, with a mean annotation score of 1.55 out of three. A knowledge-graph-augmented retrieval system was developed and evaluated against the baseline, producing statistically significant improvements in NLI-based faithfulness scores (entailment +0.0125, faithfulness +0.0130, p < 0.0001). Improvement pathways were model-dependent, with GPT-4o improving primarily through contradiction reduction while Claude Sonnet 4.6 and Gemini 2.5 Flash improved through increased entailment.",
-      "pdf_url": "https://arxiv.org/pdf/2607.09932v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.09932v1",
-      "published": "2026-07-10T19:29:26Z",
-      "updated": "2026-07-10T19:29:26Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]

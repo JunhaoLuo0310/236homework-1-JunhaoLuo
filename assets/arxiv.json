@@ -1,8 +1,94 @@
 {
-  "generated_at_utc": "2026-07-21T03:19:31.416662Z",
+  "generated_at_utc": "2026-07-22T03:17:51.213485Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "From Operations to Elderly Care Outcomes: A Thematic Review of Industrial Engineering and Decision-Support Approaches",
+      "authors": [
+        "Shayan Farhang Pazhooh",
+        "Fereshteh Parvaresh"
+      ],
+      "abstract": "The rapid growth of the global aging population presents severe challenges to healthcare systems, necessitating efficient, equitable, and patient-centered care models. While Industrial Engineering and Operations Research (OR) provide robust optimization and decision-support tools to address these multidimensional complexities, current applications often remain fragmented. This paper presents a thematic review of 30 seminal studies at the intersection of OR and elderly care, categorizing the literature into home healthcare operations, polypharmacy management, and clinical chronotherapy. Our analysis highlights a significant methodological evolution from static, deterministic models toward dynamic and stochastic frameworks integrated with artificial intelligence (AI). Despite these advancements, a critical translational gap persists: the current OR literature is heavily dominated by process-level optimizations, such as staff routing, and struggles to translate these operational efficiencies into measurable clinical outcomes. Furthermore, holistic models bridging the transition between hospital and community care remain critically underexplored. To develop resilient and smart healthcare systems, this study proposes a conceptual framework that shifts the research focus from isolated operational tasks to integrated, multi-level decision-making. We emphasize the critical need for robust systems analysis, human-inclusive design, and the smartification of care through emerging digital technologies - including digital twins and large language models - to successfully bridge the gap between theoretical operational metrics and tangible patient-level health outcomes.",
+      "pdf_url": "https://arxiv.org/pdf/2607.19075v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.19075v1",
+      "published": "2026-07-21T13:07:28Z",
+      "updated": "2026-07-21T13:07:28Z",
+      "categories": [
+        "math.OC",
+        "cs.AI",
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "Quality Action Assurance: Multimodal Verification of Examiner Claims in VR OSCEs",
+      "authors": [
+        "Harry Rogers",
+        "Sally Shiels",
+        "Ashley Tomlinson",
+        "James Thomas",
+        "James Aylward",
+        "Nathan Gauge",
+        "Helen Higham",
+        "Alison Noble"
+      ],
+      "abstract": "Objective Structured Clinical Examinations (OSCEs) are the gold standard for assessing clinical competence, yet scoring remains vulnerable to examiner subjectivity, fatigue, and cognitive bias. Standard examiner validation via inter-rater statistics lacks explanatory power regarding the source of errors, as it neither analyzes examiner reasoning nor verifies examiner claims against actual events. Thus, we introduce Quality Action Assurance (QAA), a multimodal framework that verifies examiner claims in Virtual Reality (VR) pediatric OSCEs by comparing actions claimed by examiners against the true sequence of events, constructed from video, VR logs, and actor data. QAA combines a constrained temporal action alignment model, which performs action localization and actor source attribution, with a large language model that extracts examiner claims and checks them against the record. Across a 5-fold cross-validation, QAA achieves 99.2% $\\pm$ 0.7% Actor F1 and 93.4% $\\pm$ 1.9% W@16 for temporal alignment. Overall, QAA detects examiner errors with 70.0% precision and 76.7% recall, improving factual correctness from 39.2% to 79.2%, enabling fairer OSCE assessment.",
+      "pdf_url": "https://arxiv.org/pdf/2607.19063v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.19063v1",
+      "published": "2026-07-21T12:51:42Z",
+      "updated": "2026-07-21T12:51:42Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Biological Amnesia in ICU Time-Series Prediction: A Drift-Adaptive Two-Stream Architecture with Temporal Retrieval",
+      "authors": [
+        "Fatema Ferdous Tamanna",
+        "K. M. Merajul Arefin",
+        "Md. Abdul Masud"
+      ],
+      "abstract": "Background: Clinical decision support systems degrade silently as treatment protocols evolve, yet standard adaptation methods treat models as monolithic blocks, unable to distinguish stable patient physiology from shifting institutional practice. Methods: We propose an adaptive clinical intelligence architecture for ICU intervention prediction that structurally decouples physiological from treatment representations, confining parameter updates to the treatment stream upon a dual distributional and accuracy trigger. Automated audit logs record which treatment features drove each adaptation event and how their importance shifted. At inference, an attribution-driven Temporal RAG module grounds each prediction in patient-specific, era-matched PubMed evidence anchored to the patient's dominant physiological features. Experiments used 84,792 MIMIC-IV stays (2008-2022) under strict chronological split. Results: Drift localised entirely to the treatment stream, validating the structural prior. Selective adaptation improved vasopressor and septic shock discrimination and calibration over the static source model. A fully retrained baseline yielded marginally higher aggregate discrimination but missed 26 septic shock cases the framework correctly identified, with none in the reverse direction; retrieval consistency with the pre-adaptation source model was preserved by the framework but degraded substantially in the retrained baseline. Conclusions: Structurally constraining adaptation to drifting components while preserving stable physiological representations enables clinical AI to evolve with practice without distorting learned patient biology. This architecture offers a template for governable, interpretable deployment of adaptive models in high-stakes clinical environments.",
+      "pdf_url": "https://arxiv.org/pdf/2607.19020v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.19020v1",
+      "published": "2026-07-21T12:07:36Z",
+      "updated": "2026-07-21T12:07:36Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.IR",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "OntoBook: Ontology-Grounded Synthetic Textbooks for Medical Encoder Pretraining",
+      "authors": [
+        "Rian Touchent",
+        "\u00c9ric de la Clergerie"
+      ],
+      "abstract": "We present OntoBook, a method that converts medical ontology structure into pretraining signal for encoder language models. Our approach has three stages: random walks through ontology graphs capture hierarchical and causal relations between medical codes, a large language model reformulates these walks into fluent textbook-style prose, and the resulting text is used to train ModernCamemBERT, a 149M-parameter French encoder, with two objectives on the same data: masked language modeling and relation prediction between code pairs. On three French medical coding benchmarks (FRACCO, Cantemist-FR, Distemist-FR), OntoBook achieves significant improvements over MLM-only pretraining, with +2.5 micro-F1 on FRACCO and +8.0 micro-F1 on Distemist. We find that alignment between objectives is necessary: misaligned training, where each task uses different data, causes a 30-point degradation. We release 1.3 million LLM-reformulated medical textbooks across three French ontologies (CIM-10, CCAM, ATC) and pretrained model checkpoints.",
+      "pdf_url": "https://arxiv.org/pdf/2607.18927v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.18927v1",
+      "published": "2026-07-21T10:11:10Z",
+      "updated": "2026-07-21T10:11:10Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Evaluating medical AI under missing information: same-provider judges and human raters change apparent safety",
+      "authors": [
+        "Koyar Afrasyab"
+      ],
+      "abstract": "Readiness stress-testing of medical AI has focused on closed-ended and multimodal benchmarks. We extend it to open-ended clinical conversation under missing information, where safe behavior means recognizing absent information and qualifying, clarifying, or not over-committing - and where the evaluator becomes part of the measurement. We stress-test four models - three flagships (Claude Opus 4.8, GPT-5.5, Grok 4.3) and one mid-tier model (Gemini 3.5 Flash) - by deleting the latter half of the final user turn in HealthBench conversations, grading responses with a four-provider LLM-judge panel and a blinded clinician-anchored reference. Two evaluator-facing results are robust. First, judge choice materially changes apparent safety: inter-judge agreement is only moderate (Fleiss' kappa = 0.65), and after adjusting for each judge's general leniency (vote-level logistic regression), a positive same-provider association remains (exact permutation p = 0.04; GPT-5.5 ~ +0.10 on the probability scale) - large enough to change which model appears to over-commit least once its own-provider judge is excluded. Second, LLM judges are more permissive than clinicians on a blinded 50-item subsample: all four are significantly more lenient than the stricter independent clinician (crediting appropriate uncertainty on 66-84% of items vs 52%), and three of four than the author-influenced consensus (Grok directional only; judge-vs-consensus kappa = 0.20-0.43). On the author-audited clinical-underdetermined subset the permissiveness gap widened and the point-estimate model ordering held. A closed-ended MedQA anchor confirms accuracy is high and option-order effects are within a +/-5-point equivalence region for three of four models, so the safety gap is about calibration, not knowledge. We release the harness, prompts, per-item outputs, judge panel, perturbation audit, and human-annotation protocol.",
+      "pdf_url": "https://arxiv.org/pdf/2607.18828v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.18828v1",
+      "published": "2026-07-21T08:05:35Z",
+      "updated": "2026-07-21T08:05:35Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "Testing Retrieval-Augmented Generation Systems with Chunk Coverage",
       "authors": [
@@ -122,6 +208,45 @@
       ]
     },
     {
+      "title": "Agentic Calibration of Grey-Box Simulation Models: An LLM-Driven Alternative",
+      "authors": [
+        "David G\u00f3mez-Guill\u00e9n",
+        "Mireia Diaz",
+        "Josep Lluis Arcos",
+        "Jes\u00fas Cerquides"
+      ],
+      "abstract": "Calibration of grey-box simulation models is a constrained optimization problem in which model evaluations are expensive, the parameter space can be high-dimensional, and the search must respect plausibility constraints. Although the simulation code is fully available to the analyst, the joint effect of multiple parameters remains difficult to predict analytically. Classical optimizers such as Nelder--Mead (NM) are simple to deploy but sample-inefficient, particularly under constraints. Modern Bayesian Optimization methods achieve competitive solutions with far fewer evaluations but require non-trivial modeling machinery for constraint handling. We introduce an agentic calibration method in which a large language model acts as the optimizer, with constraints incorporated as a plain-language section of the system prompt. We evaluate the agentic method, NM, and Bayesian Optimization (BO) on an anal cancer simulation model under both unconstrained and clinically constrained calibration. Under unconstrained calibration, the agentic method achieves substantially lower best error than BO and NM, while requiring fewer model evaluations. Under constrained calibration, the agentic method reaches comparable error levels and both outperform NM. These results are obtained at the cost of increased inference time per iteration. Agentic calibration achieves competitive performance with substantially fewer model evaluations, and constraint handling is essentially free at the modeller-facing interface through simple textual specifications rather than additional modelling machinery. The main trade-off lies in increased per-iteration inference cost, making the approach particularly suitable when simulation time dominates. Beyond performance, the per-iteration rationale makes the search auditable and explainable, so its decisions can be scrutinised and justified to third parties.",
+      "pdf_url": "https://arxiv.org/pdf/2607.18308v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.18308v1",
+      "published": "2026-07-17T13:34:26Z",
+      "updated": "2026-07-17T13:34:26Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "TD-DPO: Difference-Aware Preference Optimization for Mitigating Sycophancy in Clinical Autism Intervention Dialogue",
+      "authors": [
+        "Shuzhong Lai",
+        "Junhong Lai",
+        "Chenxi Li",
+        "Qing Zhou",
+        "Haifeng Li",
+        "Gang Pan",
+        "Lin Yao",
+        "Yueming Wang"
+      ],
+      "abstract": "The sycophancy of large language models can increase the safety risk in intervention dialogue for autistic children. Supervised fine-tuning can somewhat reduce sycophancy, but relying solely on positive examples is often insufficient to identify and correct failure patterns. We observe that sycophancy behaviors can often be localized to a limited span within the model response. In this regime, sequence-level preference optimization can over-update preference-irrelevant tokens and degrade intervention ability. To address this, we propose the \\textbf{M}inimal \\textbf{E}dit \\textbf{D}ata \\textbf{A}ugmentation (MEDA) strategy to construct controlled, stable, minimal edit preference pairs and \\textbf{T}oken-level \\textbf{D}ifference \\textbf{D}irect \\textbf{P}reference \\textbf{O}ptimization (TD-DPO), which upweights difference tokens between chosen and rejected responses while downweighting shared tokens to suppress background drift. Extensive experiments across multiple backbones and evaluators show that TD-DPO achieves a better trade-off between sycophancy mitigation and intervention ability retention in our offline settings, highlighting its potential as a practical alignment approach for autism intervention.",
+      "pdf_url": "https://arxiv.org/pdf/2607.18304v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.18304v1",
+      "published": "2026-07-17T05:25:48Z",
+      "updated": "2026-07-17T05:25:48Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
       "title": "LLM4EHR: Aligning Clinical Time Series with Medical Event Sequences via Large Language Models",
       "authors": [
         "Jingteng Li",
@@ -138,159 +263,6 @@
       "updated": "2026-07-16T20:40:04Z",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Large Language Models as Unified Multimodal Learners for Clinical Prediction",
-      "authors": [
-        "Ajay Madhavan Ravichandran",
-        "Bilgin Osmandoja",
-        "Klemens Budde",
-        "Klaus Netter",
-        "Tobias Strapatsas",
-        "Aljoscha Burchardt",
-        "Sebastian M\u00f6ller",
-        "Roland Roller"
-      ],
-      "abstract": "Electronic health records combine free-text clinical narratives with structured measurements such as vital signs, laboratory values, and comorbidities. Yet most clinical prediction systems still rely on task-specific fusion architectures, pairing dedicated encoders for each modality with learned combination mechanisms that must be re-engineered for every new task and clinical setting. We propose a simpler alternative: convert all patient data, regardless of modality, into a single natural language sequence and fine-tune a pretrained language model end-to-end, with no architectural modification for fusion. We evaluate this approach across three clinically distinct prediction tasks: in-hospital mortality on MIMIC-III, graft failure prediction using longitudinal data from a German transplant center, and emergency triage classification from ambulance records - comparing encoder-based (ModernBERT) and decoder-based (Llama 3.1, Gemma, DeepSeek-R1-Qwen, Qwen3) fine-tuning against established multimodal baselines and, for graft failure, a gradient boosting model currently used in clinical practice for post-transplant patient management. Across all three tasks, unified textual serialization matches or exceeds task-specific multimodal baselines, and outperforms the clinically deployed gradient boosting system on graft failure prediction. These results indicate that a single serialization-based paradigm, without bespoke fusion architectures, is sufficient for multimodal clinical prediction - substantially reducing system complexity while matching or exceeding specialized designs.",
-      "pdf_url": "https://arxiv.org/pdf/2607.15380v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.15380v1",
-      "published": "2026-07-16T18:28:23Z",
-      "updated": "2026-07-16T18:28:23Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Symbal: Detecting Systematic Misalignments in Model-Generated Captions",
-      "authors": [
-        "Maya Varma",
-        "Jean-Benoit Delbrouck",
-        "Sophie Ostmeier",
-        "Akshay Chaudhari",
-        "Curtis Langlotz"
-      ],
-      "abstract": "Multimodal large language models (MLLMs) often introduce errors when generating image captions, resulting in misaligned image-text pairs. Our work focuses on a class of captioning errors that we refer to as systematic misalignments, where a recurring error in MLLM-generated captions is closely associated with the presence of a specific visual feature in the paired image. Given a vision-language dataset with MLLM-generated captions, our aim in this work is to detect such errors, a task we refer to as systematic misalignment detection. As our first key contribution, we present Symbal, which utilizes a structured, dual-stage setup with off-the-shelf foundation models to identify systematic misalignments and summarize results in natural language. As our second key contribution, we introduce SymbalBench, a benchmark designed to evaluate automated methods on our proposed task. SymbalBench consists of 1.7 million image-text pairs from two domains (natural and medical images), organized into 420 vision-language datasets with annotated systematic misalignments. Symbal exhibits strong performance on this benchmark, correctly identifying systematic misalignments in 63.8% of datasets, a nearly 4x improvement over the closest baseline. We supplement our evaluations on SymbalBench with real-world evaluations, showing that (1) Symbal can accurately surface systematic misalignments in captions generated by four MLLMs and (2) Symbal is a powerful tool for auditing off-the-shelf image-caption datasets. Ultimately, our novel task, method, and benchmark can aid users with auditing MLLM-generated captions and identifying critical errors, without requiring access to the underlying MLLM. Code is available at https://github.com/Stanford-AIMI/Symbal.",
-      "pdf_url": "https://arxiv.org/pdf/2607.15216v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.15216v1",
-      "published": "2026-07-16T17:18:37Z",
-      "updated": "2026-07-16T17:18:37Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Self-Evolving Human-Centered Framework for Explainable Depression Symptom Annotation",
-      "authors": [
-        "Hoang-Loc Cao",
-        "Van Pham",
-        "Truong Thanh Hung Nguyen",
-        "Phuc Truong Loc Nguyen",
-        "Phuc Ho",
-        "Veronica Whitford",
-        "Hung Cao"
-      ],
-      "abstract": "Annotation quality is a major bottleneck in building reliable and explainable artificial intelligence (XAI) systems for mental health research. In depression-related datasets, labels are often assigned without structured evidence, symptom-level justification, or traceable alignment with the criteria of the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision (DSM-5-TR), limiting both transparency and downstream model interpretability. We propose a self-evolving, expert-in-the-loop annotation framework for Major Depressive Disorder (MDD) that combines large language model (LLM)-assisted labeling with expert verification. The framework is intended to support the construction of explainable, DSM-5-TR-aligned datasets rather than to perform clinical diagnosis. It operates in three stages: candidate evidence selection from textual records, criterion-level DSM-5-TR analysis, and case-level synthesis that produces label-level diagnostic and severity annotations. A dual-memory architecture, composed of Example Memory and Reflection Memory, is designed to internalize expert feedback and iteratively improve future annotations without retraining. We describe this mechanism and leave its evaluation across multiple feedback cycles to future work. In addition to final labels, the framework exports clinical evidence, reasoning traces, and edit histories, enabling comprehensive auditability. In a pilot study using expert-reviewed samples, the proposed approach improves annotation consistency and explainability while reducing manual revision effort.",
-      "pdf_url": "https://arxiv.org/pdf/2607.15202v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.15202v1",
-      "published": "2026-07-16T16:59:54Z",
-      "updated": "2026-07-16T16:59:54Z",
-      "categories": [
-        "cs.AI",
-        "cs.HC",
-        "cs.MA",
-        "cs.MM"
-      ]
-    },
-    {
-      "title": "Cura 1T: Specialized Model for Agentic Healthcare",
-      "authors": [
-        "actAVA AI",
-        ":",
-        "Haolin Chen",
-        "Leon Qi",
-        "Steve Brown",
-        "Deon Metelski",
-        "Tao Xia",
-        "Joonyul Lee",
-        "Qixuan Wang",
-        "Kevin Riley",
-        "Frank Wang",
-        "Weiran Yao"
-      ],
-      "abstract": "Healthcare spans high-stakes communication, expert reasoning, and workflow execution, yet specialized LLMs that cover these use cases together remain limited. A healthcare model must handle patient consultation, clinical reasoning over text and images, interactive diagnosis, and electronic health record (EHR) tool use. These capabilities fail in different ways, and a narrow update for one task can degrade another. We present Cura 1T, a healthcare-specialized LLM trained through a human-gated self-evolution loop. In each evolution round, a training agent plans a target capability, trains the model, evaluates benchmark trajectories, and refines the data mixture from observed failures. This data-centered loop improves the model through targeted synthetic and curated examples rather than a single generic medical-data update. Across the healthcare evaluation suite, Cura 1T ranks at or near the top among frontier baselines, while remaining competitive on out-of-domain reasoning and agentic benchmarks.",
-      "pdf_url": "https://arxiv.org/pdf/2607.15314v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.15314v1",
-      "published": "2026-07-15T22:05:23Z",
-      "updated": "2026-07-15T22:05:23Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MamaBench: Benchmarking LLM Robustness in Maternal and Child Health Diagnosis through Counterfactual Clinical Perturbation",
-      "authors": [
-        "Thanni Adewuyi",
-        "Anuoluwa Sotome",
-        "Samuel Okoko",
-        "Angel Ezendu",
-        "Oluwafunke Akinbuwa",
-        "Oluwaseun Odunsi",
-        "Oluwasegun Oguntuase",
-        "Ifeoma Nwabueze",
-        "Abiodun Adereni"
-      ],
-      "abstract": "Large language models achieve strong scores on medical benchmarks, yet these benchmarks evaluate each question in isolation, providing no measure of whether a system can distinguish clinically similar presentations requiring different interventions. We introduce MamaBench, the first counterfactual benchmark for maternal and paediatric AI: 434 expert-authored clinical narratives in 217 pairs across 371 pathologies, evaluated via the Bias Trap Rate (BTR), the conditional probability that a model fails the counterfactual given success on the base case. We propose Evidence-Anchored RAG (EA-RAG), a three-stage retrieval method that replaces aggregate similarity with an evidence coverage objective through clinical parameter extraction, coverage auditing, and contrastive sub-queries. Across eight configurations of four frontier LLMs, base accuracy overstates robust accuracy by 16-28 percentage points in every model. EA-RAG achieves 20.3% BTR and 65.0% robust accuracy on Claude Sonnet 4.6, a 5.5 percentage point BTR reduction without degrading base accuracy. The residual 20% BTR confirms that counterfactual robustness in clinical AI remains an open challenge. Keywords: counterfactual evaluation, clinical AI, maternal healthcare, retrieval-augmented generation, diagnostic robustness",
-      "pdf_url": "https://arxiv.org/pdf/2607.14385v2",
-      "arxiv_url": "https://arxiv.org/abs/2607.14385v2",
-      "published": "2026-07-15T21:56:19Z",
-      "updated": "2026-07-19T14:47:36Z",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "NeuroGRIP: Retrieval-Augmented Graph Refinement for Knowledge-Grounded EEG Seizure Diagnosis",
-      "authors": [
-        "Lincan Li",
-        "Zheng Chen",
-        "Yushun Dong"
-      ],
-      "abstract": "Seizure diagnosis from EEG signals is a critical yet persistently challenging task, due to the complicated neural dynamics and the spurious connections in inter-channel modeling. While spatial-temporal graph neural networks (STGNNs) have advanced EEG brain network representation learning, the resulting graph structures suffer from low clinical plausibility and limited interpretability due to their purely data-driven nature. To this end, we introduce NeuroGRIP, a retrieval-augmented graph refinement framework that incorporates external medical knowledge to calibrate noisy EEG graphs. We first construct a large-scale, domain-specific knowledge base derived from authoritative clinical guidelines. Leveraging large language models, we extract structured biomedical entities and relations to form a textual knowledge graph (KG), which serves as external knowledge source of clinical priors. Our framework performs alignment-aware query construction by projecting STGNN-generated EEG node embeddings into the semantic space of KG. Semantic queries are then executed via FAISS-based similarity search over knowledge triplets to retrieve relation evidence. Each predicted edge is assigned a confidence score based on retrieved similarity, relation type, and source reliability, enabling us to prune medically implausible edges from the originally predicted graph. Extensive experiments on TUSZ and CHB-MIT demonstrate that NeuroGRIP not only improves seizure detection accuracy but also enhances interpretability by grounding each prediction in clinically validated knowledge. This work provides the first unified framework that tightly couples brain dynamics with external medical expertise via retrieval-augmented reasoning, paving the way for knowledge-enhanced, explainable clinical diagnosis. The code is available at: https://github.com/LincanLi-X/NeuroGRIP.",
-      "pdf_url": "https://arxiv.org/pdf/2607.14314v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.14314v1",
-      "published": "2026-07-15T19:20:29Z",
-      "updated": "2026-07-15T19:20:29Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "MonteRET: AI Agent Enhancing Multimodal LLMs with Multi-granularity Knowledge Retrieval for Chest CT Report Generation",
-      "authors": [
-        "Yi Lin",
-        "Yihao Ding",
-        "Elana Benishay",
-        "Elefterios Trikantzopoulos",
-        "David Nauheim",
-        "Hanley Ong",
-        "Jiang Bian",
-        "Hua Xu",
-        "Yuzhe Yang",
-        "George Shih",
-        "Yifan Peng"
-      ],
-      "abstract": "Automated chest CT report generation remains challenging because clinically faithful reporting requires both whole-volume understanding and accurate description of localized anatomical findings. Here we developed and retrospectively evaluated MonteRET, a region-aware retrieval-enhanced framework for generating chest CT findings sections. MonteRET integrates global CT features with region-level anatomical representations, retrieves clinically relevant knowledge using predicted medical conditions and region-level vision-language alignment, and refines initial reports through a knowledge-guided report rewriting agent. We trained our model on a public cohort with 24,128 CT scans from RadGenome-ChestCT. We evaluated MonteRET on the public RadGenome-ChestCT test set of 1,564 CT scans and an external cohort of 82 CT scans from NewYork-Presbyterian/Weill Cornell Medical Center. MonteRET improved report quality, semantic similarity, and clinical efficacy compared with a matched baseline and several state-of-the-art methods. Gains were most pronounced for recall, suggesting fewer omitted findings. Human expert evaluation by radiology residents also favored MonteRET.",
-      "pdf_url": "https://arxiv.org/pdf/2607.14264v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.14264v1",
-      "published": "2026-07-15T18:17:13Z",
-      "updated": "2026-07-15T18:17:13Z",
-      "categories": [
-        "cs.CV",
-        "cs.CL"
       ]
     }
   ]

@@ -1,282 +1,363 @@
 {
-  "generated_at_utc": "2026-07-26T03:31:06.522974Z",
+  "generated_at_utc": "2026-07-29T03:14:21.148680Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
     {
-      "title": "MedGame: Storytelling Gamification Empowered by Large Language Models for Medical Education",
+      "title": "A Cost-Effective Multimodal LLM Reasoning Framework for Question Answering over Irregular Clinical Time Series",
       "authors": [
-        "Qian Wu",
-        "Xinrong Zhou",
-        "Zizhan Ma",
-        "Kai Chen",
-        "Zheyao Gao",
-        "Xun Lin",
-        "Hongqiu Wu",
-        "Longfei Gou",
-        "Yixiao Liu",
-        "Ann Sin Nga Lau",
-        "Qi Dou"
+        "Frank Nie",
+        "Ethan B Liu",
+        "Yuan Zhu",
+        "Wei Fan",
+        "Jindong Han"
       ],
-      "abstract": "Large Language Models (LLMs) show promise for medical education, but most existing systems focus on localized interactions such as question answering or single-turn feedback, rather than organizing an entire clinical case into a decision-centered learning trajectory. We introduce \\textit{MedGame}, a framework that transforms static clinical cases into structured, executable storytelling games. MedGame uses a dual-engine design: a Medical Narrative Designer synthesizes case-grounded clinical storylines with states and decision nodes, while a Story Director converts them into dependency-aware multimodal orchestration plans rendered by our released interactive platform. We construct MedGame Bench, a 5,000-case benchmark and evaluation protocol for Medical Narrative Generation and Story Direction. Experiments show that task-specific fine-tuning substantially improves open-source LLMs on MedGame Bench and narrows the gap with commercial models. A pilot student study further shows that learners perceive MedGame as more engaging and useful than text-only alternatives.",
-      "pdf_url": "https://arxiv.org/pdf/2607.21570v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.21570v1",
-      "published": "2026-07-23T17:50:28Z",
-      "updated": "2026-07-23T17:50:28Z",
+      "abstract": "Question answering (QA) over irregular clinical time series (ICTS) plays a pivotal role in a wide range of healthcare applications. Although recent multimodal time-series large language models (LLMs) have shown considerable promise in general-purpose time-series QA, they remain poorly equipped to model the sparsity, asynchrony, and irregular sampling patterns of clinical observations. To fill this gap, we propose ClinPRISM, a cost-effective multimodal LLM reasoning framework for question answering over ICTS data. First, we devise an irregularity-aware multi-scale encoder to capture sparse clinical evidence at diverse temporal scales. Then, we propose a temporal evidence distiller to integrate representations across these scales and compress them into a small number of LLM-compatible tokens. Moreover, we introduce a progressive alignment strategy that sequentially aligns the irregular trajectories with the LLM's textual embedding space. To facilitate training, we construct 30,000 clinical time series paired with multi-scale descriptions, together with 41,000 instruction-tuning instances spanning 11 tasks. Using a 4-billion-parameter LLM backbone, ClinPRISM achieves state-of-the-art performance on the held-out evaluation benchmark while using only 16 time-series tokens and achieving an average inference latency of 0.15 seconds per question.",
+      "pdf_url": "https://arxiv.org/pdf/2607.25947v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.25947v1",
+      "published": "2026-07-28T16:33:41Z",
+      "updated": "2026-07-28T16:33:41Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Evaluating Multi-Turn Multimodal Diagnostic Reasoning on Challenging Real-World Clinical Cases",
+      "authors": [
+        "Rui Yang",
+        "Weihao Xuan",
+        "Yi Lin",
+        "Zhuhan Bao",
+        "Jonathan Chong Kai Liew",
+        "Matthew Yu Heng Wong",
+        "Nicol\u00e1s Lescano",
+        "Nikita R. Paripati",
+        "Emily Ling-Lin Pai",
+        "Jiarui Liu",
+        "Heli Qi",
+        "Heng-Jui Chang",
+        "Benny Kai Guo Loo",
+        "Huitao Li",
+        "Kunyu Yu",
+        "Yufan Wang",
+        "Chuan Hong",
+        "Shijian Lu",
+        "Douglas Teodoro",
+        "Naoto Yokoya",
+        "Ross Koppel",
+        "Mona Diab",
+        "Hua Xu",
+        "David W. Bates",
+        "Nan Liu",
+        "Yifan Peng"
+      ],
+      "abstract": "Clinical diagnostic evaluation should not only assess whether models can provide correct diagnoses, but also reflect the realities of clinical practice, including progressive disclosure of multimodal information, dynamic updating of diagnostic hypotheses, and continuous refinement of clinical reasoning. However, existing evaluations of multimodal large language models (MLLMs) typically rely on single-turn or isolated tasks, making it difficult to fully capture the complexity of real-world clinical diagnosis. To bridge this gap, we developed ClinMM-Bench, the largest multi-turn multimodal clinical diagnostic evaluation benchmark to date. ClinMM-Bench contains 1,089 challenging real-world clinical cases and 3,760 medical images across eight specialties. We systematically evaluated 15 representative MLLMs using a two-level evaluation framework that assessed both diagnostic accuracy and diagnostic reasoning quality. Results showed that proprietary models achieved the highest overall diagnostic accuracy, but the proportion of completely correct diagnoses remained limited across all models. In terms of diagnostic reasoning quality, current models can identify plausible diagnostic directions but still have considerable limitations in generating reliable diagnostic reasoning. Error analysis further identified five representative failure modes: information synthesis failure, knowledge mapping error, perception error, premature closure, and visual hallucination.",
+      "pdf_url": "https://arxiv.org/pdf/2607.25933v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.25933v1",
+      "published": "2026-07-28T16:19:03Z",
+      "updated": "2026-07-28T16:19:03Z",
       "categories": [
         "cs.CL",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Toward Generalizable Cognitive Impairment Detection with Speech-Based Multimodal Large Language Models",
-      "authors": [
-        "Yingchao Huang",
-        "Xin Wang",
-        "Yuhan Su",
-        "Shanshan Yao"
-      ],
-      "abstract": "Cognitive impairment (CI) is a growing public health concern. Early and accurate diagnosis is critical for enabling timely intervention and improving patient outcomes. Speech-based CI detection has emerged as a promising non-invasive approach, as speech signals encode both linguistic and acoustic markers associated with cognitive decline. Recent advances in large language models (LLMs) further strengthen the potential of speech-based assessment by enabling more expressive representation learning and improved generalization across diverse speakers, recording devices, and clinical environments. Moreover, multimodal learning by jointly modeling linguistic and acoustic features allows for a more comprehensive characterization of cognitive and behavioral changes related to CI, leading to more reliable detection. In this work, we propose a multimodal CI detection framework based on open-source LLMs that integrates speech audio and corresponding transcripts while preserving patient privacy. Acoustic embeddings are extracted directly from speech signals, while textual embeddings are generated from automatically transcribed speech. These modality-specific embeddings are then concatenated to create a combined feature vector and used for downstream classification, without requiring access to raw or sensitive patient data. The proposed approach is evaluated on the ADReSS20 and ADReSSo21 benchmark datasets. Experimental results show that the proposed multimodal framework achieves an CI classification accuracy of 92.4% and consistently outperforms single-modality baselines. Our work establishes a new state-of-the-art for CI identification, with the proposed method demonstrating superior cross-dataset generalization. This advance highlights the power of an LLM-based multimodal framework that fuses linguistic and acoustic data to enable robust, scalable, and non-invasive screening.",
-      "pdf_url": "https://arxiv.org/pdf/2607.21496v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.21496v1",
-      "published": "2026-07-23T16:43:12Z",
-      "updated": "2026-07-23T16:43:12Z",
-      "categories": [
-        "eess.SP",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Scaling Up Formal Representation of Clinical Trial Protocols in Ensemble Logic Using LLMs: A Preliminary Study",
-      "authors": [
-        "Yan Huang",
-        "Xubing Hao",
-        "Xiaojin Li",
-        "Rashmie Abeysinghe",
-        "Xiaoqian Jiang",
-        "Licong Cui",
-        "Guo-Qiang Zhang"
-      ],
-      "abstract": "The reliance on unstructured free text for documenting clinical trial protocols creates a significant barrier to automated reasoning, cohort discovery, and trial simulation. The lack of formal structure obscures critical temporal phenotypes, such as dynamic eligibility criteria and event timing constraints. Although Temporal Ensemble Logic (TEL) offers an expressive framework for modeling these elements, manual encoding remains a prohibitive bottleneck. We introduce the CT-TEL workflow: a scalable pipeline leveraging Large Language Models (LLMs) to translate narrative clinical protocols into TEL formulas. We applied CT-TEL to generate logical models for 23 real-world trials from ClinicalTrials.gov. We evaluated translation fidelity via a back-translation approach, using LLMs to convert TEL formulas back into natural language and measuring semantic similarity against source texts. The resulting semantic retention suggests that LLMs may offer a pathway for mapping informal protocols to computable logic, providing preliminary evidence toward scalable clinical trial emulation within the emerging \"Symbolic Biomedicine\" paradigm championed by the corresponding author.",
-      "pdf_url": "https://arxiv.org/pdf/2607.21307v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.21307v1",
-      "published": "2026-07-23T13:31:05Z",
-      "updated": "2026-07-23T13:31:05Z",
-      "categories": [
-        "cs.LO",
-        "cs.AI",
-        "cs.ET"
-      ]
-    },
-    {
-      "title": "Automated Synthesis and Adversarial Validation of Executable Causal Research Pipelines",
-      "authors": [
-        "Irena Girshovitz",
-        "Dan Zeltzer",
-        "Ran Gilad-Bachrach"
-      ],
-      "abstract": "While automated research systems promise to accelerate empirical analysis, they are prone to silent failures: instances in which analysis code executes successfully yet relies on invalid causal assumptions. We present the Artificial Intelligence (AI)-based Epidemiology Research Assistant (ARA), a framework that makes these failures visible by explicitly encoding causal design principles, study-specific assumptions, and methodological constraints. ARA integrates protocol construction, synthetic data generation, and adversarial validation into a unified pipeline. The framework translates natural language research questions into structured causal protocols and executable analysis code by first constructing a protocol and then generating synthetic datasets using Structural Causal Models (SCMs) with known ground-truth effects. This synthetic-data step can also support pipeline development when access to confidential data, such as medical data, is restricted. The generated analysis is then evaluated under controlled violations of identification assumptions. We evaluate ARA on the Automated Causal Reasoning Benchmark, assessing recovery of identification strategies, causal quantities, treatment and outcome variables, and consistency between generated code and approved protocol. Protocol construction and adversarial validation did not consistently improve numerical agreement with benchmark estimates compared with standard LLM-based generation. However, they changed the failure mode: instead of silently returning causal estimates, ARA often surfaced protocol concerns, diagnostic failures, incomplete inference, or downgraded non-causal interpretations. These findings suggest that validity-first automated science systems should be evaluated not only by answer accuracy, but also by whether they indicate when causal claims are unwarranted.",
-      "pdf_url": "https://arxiv.org/pdf/2607.21173v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.21173v1",
-      "published": "2026-07-23T10:59:16Z",
-      "updated": "2026-07-23T10:59:16Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Auditing Evidence Use in Medical LLM Diagnosis",
-      "authors": [
-        "Junchi Liao",
-        "Jiawen Deng",
-        "Fuji Ren"
-      ],
-      "abstract": "Medical LLMs are often evaluated by whether they select the correct diagnosis, but diagnostic accuracy alone does not show whether the model used the case evidence appropriately. We present a behavioral audit of evidence use in medical diagnosis. For each case, we decompose patient information into evidence units, score candidate diagnoses under controlled evidence subsets, and mine low-order interactions in diagnostic margins. Because medical evidence is diagnosis-relative, the audit separates interaction discovery from failure assignment: large or negative interactions can reflect plausible differential diagnosis, while suspicious interactions require robustness checks and clinical review. We evaluate five open-weight LLMs on DDXPlus, CupCase, and MedCase. Across datasets, faithful support and differential conflict or cancellation account for most interaction strength, showing that many evidence interactions are clinically plausible rather than failures. In a DDXPlus-focused blinded five-reviewer 130-item enriched review sample, invalid or shortcut-like cases concentrate in negated or absent findings and clinically local evidence. These results show that accuracy can hide candidate evidence-use failures and motivate role-aware audits for medical LLM evaluation.",
-      "pdf_url": "https://arxiv.org/pdf/2607.20848v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.20848v1",
-      "published": "2026-07-23T02:20:15Z",
-      "updated": "2026-07-23T02:20:15Z",
-      "categories": [
         "cs.AI"
       ]
     },
     {
-      "title": "Enhancing Explainable Cardiac Diagnosis with Guide-Grounded Multimodal LLMs",
+      "title": "Agentic AI in medicine: architectures, applications, evaluation, and challenges for clinical translation",
       "authors": [
-        "Hai-Nam Duy Vuong",
-        "Duy-Anh Bui",
-        "Trong-Nghia Nguyen",
-        "Kim-Ngan Thi Nguyen",
-        "Trang Mai Xuan",
-        "Tien-Cuong Nguyen",
-        "Van-Dem Pham",
-        "Thien Van Luong"
+        "Zheng Tong",
+        "Yang Liu",
+        "Wanshu Fan",
+        "Jing Qin",
+        "Zhongbin Han",
+        "Haifan Gong",
+        "Congyu Liao",
+        "Xiaofeng Liu",
+        "Cong Wang"
       ],
-      "abstract": "The electrocardiogram (ECG) is a cornerstone of cardiac as- sessment, yet clinical deployment of deep learning models remains con- strained by limited interpretability and the hallucination risk of large language models (LLMs). Existing CNN+Grad-CAM+multimodal LLM frameworks can generate ECG reports, but their explanations are often only weakly grounded in established diagnostic criteria, reducing trust- worthiness and reproducibility. We propose a guide-grounded multimodal framework that explicitly anchors report generation in curated clinical knowledge. A convolutional neural network (CNN) and Grad-CAM first produce class probabilities and class-specific heatmaps from 12-lead ECG images. In parallel, authoritative ECG textbooks and guideline materials are distilled offline into a structured ECG Interpretation Guide, which is injected as a fixed knowledge block for every sample. Conditioned on the ECG image, Grad-CAM overlay, CNN-derived fact pack, and the in- jected guide, a multimodal LLM generates structured diagnostic reports with guideline-consistent terminology and criteria usage. Experiments on the full PTB-XL test set demonstrate that guide grounding improves se- mantic quality and perceived consistency of generated reports while pre- serving competitive classification performance. In particular, our method increases the average BERTScore of generated impressions from 0.818 to 0.953 relative to a strong CNN+Grad-CAM+MLLM baseline, indicat- ing closer alignment with reference reports. These findings suggest that injecting a distilled interpretation guide into the multimodal prompting pipeline offers a practical pathway to reduce hallucinations and enhance the clinical plausibility of LLM-based ECG explanations, bringing ex- plainable cardiac diagnosis closer to real-world deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2607.20814v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.20814v1",
-      "published": "2026-07-23T01:00:10Z",
-      "updated": "2026-07-23T01:00:10Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Development of an automated, reliable, and clinically meaningful artificial intelligence (AI) tool for diagnosing cardiac disease from conventional cardiovascular magnetic resonance (CMR) images",
-      "authors": [
-        "Sina Amirrajab",
-        "Volker Vehof",
-        "Michael Bietenbeck",
-        "Nuriye Akyol",
-        "Redouane Bouras",
-        "Khuraman Isgandarova",
-        "Alexandru Zlibut",
-        "Philipp Stalling",
-        "Ali Yilmaz"
-      ],
-      "abstract": "Aims: Cardiovascular magnetic resonance (CMR) imaging enables non-invasive assessment of myocardial structure, function, and pathology, but requires substantial experience in interpretation of CMR images that could be supported by artificial intelligence (AI)-based models. However, use of AI models for enhanced CMR reading is limited by labor-intensive data curation, suboptimal model performance, and unclear implementation pathways. Methods and results: We developed an automated data curation pipeline for CMR-based cardiovascular disease (CVD) diagnosis, integrating open-source locally-run large language models (LLMs) to extract diagnostic labels from narrative CMR reports and preprocessing multimodal imaging data, including cine and late-gadolinium-enhancement (LGE) CMR sequences. Three vision foundation models (DINO, VST, UMedPT) were fine-tuned across these modalities in a two-stage approach. The dataset comprised hypertrophic cardiomyopathy (HCM), dilated cardiomyopathy (DCM), ischemic cardiomyopathy (ICM), cardiac amyloidosis (CA), and normal controls (NOR). A total of 988 curated cases were randomly divided into 742 for training and 246 for validation. Fine-tuned AI-models achieved high discriminative diagnostic performance on an independent test set comprising 1067 patients , with individual AUC-ROC values of up to 0.937 for the correct diagnosis of HCM and 0.945 for cardiac amyloidosis. Ensemble strategies combining multiple models and modalities further improved AI-based diagnostic accuracy and robustness, achieving the highest overall diagnostic performance for HCM (AUC=0.959, CI [0.936-0.978]), CA (AUC=0.966, CI [0.939-0.986]), NOR (AUC=0.872, CI [0.852-0.894]), DCM (AUC=0.848, CI [0.808-0.885]) and ICM (AUC=0.840, CI [0.809-0.868]). All training and inference code, along with the trained model weights, are publicly available on https://github.com/sinaamirrajab/CMR_CVD.",
-      "pdf_url": "https://arxiv.org/pdf/2607.20087v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.20087v1",
-      "published": "2026-07-22T12:36:56Z",
-      "updated": "2026-07-22T12:36:56Z",
+      "abstract": "Large language models and multimodal foundation models are enabling medical artificial intelligence (AI) systems to move beyond isolated prediction and undertake multistep clinical tasks that require planning, tool use, memory, iterative correction, and coordination among specialized agents. However, the scope of agentic AI in medicine remains unsettled, and current evaluation practices are not yet aligned with the requirements of clinical use. We conducted a scoping review with systematic evidence mapping across five electronic sources, screened 1,649 exportable records, and provisionally included 557 unique studies that met predefined criteria for goal-directed task execution, tool use, interaction with external resources, feedback-based refinement, or multi-agent collaboration. The included studies describe single agents that use external tools, workflows supported by retrieval and external knowledge, multimodal agents, and multi-agent systems applied to medical question answering, image interpretation, electronic health record analysis, drug safety, and clinical trial prediction. The evidence base remains dominated by public benchmarks, simulated settings, retrospective datasets, and small-scale expert evaluation. Process reliability, evidence traceability, uncertainty, safety, workflow impact, and external validity are evaluated less consistently. Clinical translation will depend on clearer definitions, reproducible evaluation, auditable oversight, interoperable system design, and prospective validation in real-world clinical workflows.",
+      "pdf_url": "https://arxiv.org/pdf/2607.25489v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.25489v1",
+      "published": "2026-07-28T09:25:25Z",
+      "updated": "2026-07-28T09:25:25Z",
       "categories": [
         "cs.CV"
       ]
     },
     {
-      "title": "Reference-Free Evaluation of Reasoning in Open-Ended Question Answering",
+      "title": "PatientAgentBench: A Benchmark Framework for Evaluating Patient-Facing Health AI Agents",
       "authors": [
-        "Guneet Singh Kohli",
-        "Yuxiang Zhou",
-        "Michael Sejr Schlichtkrull",
-        "Gregory E Dean",
-        "Maria Liakata"
+        "Korosh Vatanparvar",
+        "Ashutosh Joshi",
+        "Maria Xenochristou",
+        "Mohammad Abuzar Hashemi",
+        "Prasad Kasu",
+        "Deepak Bansal",
+        "Daniel Lopez-Martinez",
+        "Anchal Nema",
+        "Ramya Ganesan",
+        "Will Kimbrough",
+        "Alex Woody",
+        "Yadunandana Rao",
+        "Dilek Hakkani-Tur",
+        "Wilko Schulz-Mahlendorf"
       ],
-      "abstract": "AI-generated answers in high-stakes domains are often fluent but difficult to verify, especially when they contain multi-step reasoning rather than a single final answer. We propose a reasoning-based, reference-free framework for auditing LLM-generated outputs. The method decomposes a generated reasoning trace into segments, labels local premise-target relations using Natural Language Inference (NLI), and organizes these relations into a hypergraph. A deterministic backward AND-OR search then assigns segment-level audit labels that indicate how each segment is grounded within the generated response. We evaluate the framework in two settings: deductive mathematical reasoning with Hard2Verify, and open-ended medical reasoning with UroReason, a new physician-annotated benchmark of LLM reasoning traces from real clinical cases. Across these settings, our NLI-hypergraph audit provides a more reliable reference-free evaluation signal than direct LLM-as-judge baselines. In the clinical setting, state-of-the-art LLM judges often fail to identify problematic reasoning segments, over-accepting fluent but weakly grounded responses. Our results show that QA evaluation should account for how inferential relations compose across a reasoning trace, rather than relying only on final answers or LLMs as verifiers. UroReason will be made available through an API, and our code will be released as open source.",
-      "pdf_url": "https://arxiv.org/pdf/2607.19678v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.19678v1",
-      "published": "2026-07-22T02:27:51Z",
-      "updated": "2026-07-22T02:27:51Z",
+      "abstract": "Health AI is evolving from answering questions to agentic systems that converse with patients, reason about health records, and act on their behalf. Primary care guards against diagnostic errors and unsafe care; agents assisting in this domain warrant evaluation against the same risks. Current benchmarks focus on medical knowledge, assessed through isolated question-answering or clinician-facing tasks. PatientAgentBench benchmarks patient-facing agentic healthcare; it evaluates a foundation model, wrapped in an agent with a sandbox of healthcare tools, conversing with a simulated patient. Each conversation is scored by an LLM-as-a-Jury across six dimensions via over a hundred conversation-agnostic, clinician-grounded criteria. To validate alignment, licensed clinicians annotated shared conversations, yielding 79-93% adjacent agreement between jury and expert raters, on par with or exceeding clinician inter-rater agreement. We benchmarked 10 models across four families on the same 1,200 scenarios and found clinical gaps. Triage quality is the most discriminating dimension: pass rates rise from 32% for the weakest models to 88% for the strongest, with agents often acting on administrative requests without clinical screening. Clinical safety and workflow accuracy follow the same pattern: the weakest models fail often, fabricating unexecuted actions, while frontier models fail on only 1-3% of cases, from unverified tool outputs and omitted crisis resources in an emergency. More capable models narrow these gaps but do not close them; the strongest scores only 4.25 of 5 overall. These failures surface only in sustained, tool-using conversations against realistic patient records, confirming that static benchmarks are insufficient as healthcare agentic systems gain autonomy. We release the framework as a reproducible, clinician-validated evaluation standard to help the field close this gap.",
+      "pdf_url": "https://arxiv.org/pdf/2607.25485v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.25485v1",
+      "published": "2026-07-28T09:24:04Z",
+      "updated": "2026-07-28T09:24:04Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Cardiologent: Multi-Agent Clinical Decision Support for Patient-Level Arrhythmia Assessment, Urgency, and Management",
+      "authors": [
+        "Sukju Oh",
+        "Moo-Yong Rhee",
+        "Jae-Sik Jang",
+        "Sukkyu Sun"
+      ],
+      "abstract": "The same episode of atrial fibrillation is a minor finding in a healthy adult and grounds for anticoagulation in an elderly patient with hypertension: identical signal, opposite decision. Naming the rhythm is only the start; what determines a patient's outcome is the judgement that follows -- what the arrhythmia is across the whole record, what it means for this patient, and what should be done about it. Recent work pairing large language models with the ECG stops short of this, reading one recording without assembling a patient-level finding; and agentic systems built around it either receive the arrhythmia a device has already detected or target a different diagnostic task, stopping before the decision this task requires. We formulate patient-level arrhythmia decision support as a task and present Cardiologent, a multi-agent system that spans it from detection to decision. An agent for each signal -- a single ECG lead and the photoplethysmogram a wearable acquires -- grounds its window reading in measured features rather than a bare label; the readings are assembled into the patient's rhythm profile and, with the patient's own data, reasoned against clinical guidelines retrieved for the case, with a critic checking each conclusion against the guideline it cites. We evaluate the clinical decision rather than the report, across integrated diagnosis, clinical significance, and urgency and management. Cardiologent scores highest on every axis, first on every patient-level task under both cardiologists and an at-scale LLM judge -- whose agreement with the cardiologists (ICC 0.74, 0.66) matches theirs with each other (0.67). Because each conclusion traces to a cited guideline and is validated against expert cardiologists, it yields decisions a clinician can audit rather than act on blindly -- a step toward use in continuous monitoring.",
+      "pdf_url": "https://arxiv.org/pdf/2607.25340v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.25340v1",
+      "published": "2026-07-28T06:43:39Z",
+      "updated": "2026-07-28T06:43:39Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "CADENCE: A Cardiac Atom Dictionary for Interpretable Neural Concept Extraction from ECG Foundation Models",
+      "authors": [
+        "Yixuan Duan",
+        "Arjun Naik",
+        "Sadeer Al-Kindi",
+        "Wei Qiu"
+      ],
+      "abstract": "Foundation models for 12-lead electrocardiograms (ECGs) transfer well across clinical tasks, but the physiological knowledge encoded in their representations remains opaque. We present CADENCE, a framework that decomposes an ECG foundation model into a human-interpretable, queryable dictionary of physiological concepts. Using a BatchTopK sparse autoencoder, CADENCE factorizes Layer-6 embeddings from more than nine million ECG tokens into 8,192 sparse cardiac atoms. These atoms align better than individual dense embedding dimensions with clinical phenotypes and waveform morphology, recovering arrhythmias, conduction abnormalities, infarction and repolarization patterns, chamber and axis findings, and lead- and beat-phase-specific waveform primitives. At Layer 6, the best atoms achieve mean AUROCs of 0.88 for clinical phenotypes and 0.90 for morphology, versus 0.78 and 0.83 for the best dense dimensions. Sparse atom probes match or outperform dense probes for phenotype, morphology, and age prediction while attributing each prediction to a small set of interpretable atoms; phenotype AUROC improves from 0.93 to 0.95. Atom-space geometry recovers physiologically coherent relationships, and targeted atom ablation selectively changes frozen downstream outputs. An automated LLM pipeline generates and quantitatively validates atom descriptions by predicting held-out activations. On independent external ECG datasets, CADENCE recovers overlapping concepts and maintains consistent phenotype-prediction performance. CADENCE provides a scalable framework for discovering and auditing the physiological knowledge encoded by ECG foundation models.",
+      "pdf_url": "https://arxiv.org/pdf/2607.25244v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.25244v1",
+      "published": "2026-07-28T03:38:03Z",
+      "updated": "2026-07-28T03:38:03Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "MyoCardBench: A Real-World Data Benchmark for Evaluating Large Language Models in Clinically Authentic Cardiovascular Care Scenarios",
+      "authors": [
+        "Xiao Li",
+        "Mouxiao Bian",
+        "Zhaodi Wu",
+        "Sijie Ren",
+        "Juechen Chen",
+        "Lu Lu",
+        "Jingru Ding",
+        "Yun Zhong",
+        "Jie Xu",
+        "Yixiu Liang",
+        "Junbo Ge"
+      ],
+      "abstract": "Background: Most medical large language model (LLM) benchmarks focus on examination knowledge or isolated tasks and may not reflect the longitudinal, multimodal, and safety-critical workflow of cardiovascular care. Objective: To develop MyoCardBench, a real-world benchmark spanning the cardiovascular care continuum, and assess LLM performance across clinical dimensions and specialist tasks. Methods: MyoCardBench includes 2,263 items from 13 task-specific datasets derived from de-identified cardiovascular records and examination data. Sixteen cardiology physicians conducted annotation and reference construction, followed by cross-review from two senior cardiologists. Seven LLMs generated 15,841 outputs under standardized zero-shot settings. Open-ended tasks were evaluated using key-point coverage and holistic clinical quality, while CardioEthics was scored by accuracy. Results: GPT-5.4 achieved the highest macro-average (62.55) and item-weighted mean (62.19), followed by Gemini 3.1 Pro (59.95) and Qwen 3.6 27B (59.72). GPT-5.4 ranked first in all three dimensions. CardioAuxReport performed best (86.38), whereas CardioECGRead (17.25) and CardioEthics (17.34) were lowest. The largest gaps between holistic clinical quality and key-point coverage occurred in CardioComm (52.71), CardioEmergRescue (52.05), and CardioTreatPlan (48.80). Conclusions: To our knowledge, MyoCardBench is the largest real-world, multi-task benchmark for LLM evaluation across the cardiovascular care continuum and offers the broadest coverage of clinically authentic cardiology scenarios reported to date. It provides a rigorous framework for identifying model strengths, clinically important omissions, and priorities for future development.",
+      "pdf_url": "https://arxiv.org/pdf/2607.25186v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.25186v1",
+      "published": "2026-07-28T01:39:52Z",
+      "updated": "2026-07-28T01:39:52Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Grounded in Consensus, In Step With Emerging Science: A Consensus-Anchored Multi-Corpus Clinical Chatbot for Long COVID",
+      "authors": [
+        "Yining Wu",
+        "Philip DiGiacomo",
+        "Ying Ding",
+        "William Brode"
+      ],
+      "abstract": "Long COVID (LC) poses a challenge for clinical decision support because relevant evidence is distributed across sources with different update cycles, evidentiary roles, and levels of clinical maturity. We present a clinician-facing chatbot that organizes four sources within a retrieval-augmented workflow: expert-curated consensus guidance, current PubMed literature, registered interventional trials, and evidence from living systematic reviews. Consensus guidance is always included to frame responses, while the remaining sources are retrieved in parallel when selected by the user. In an exploratory automated evaluation on 50 clinician-facing questions, our chatbot showed comparable mean ratings to OpenEvidence, with numerically higher scores and lower score variability in an LLM-judged comparison.",
+      "pdf_url": "https://arxiv.org/pdf/2607.25038v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.25038v1",
+      "published": "2026-07-27T19:57:23Z",
+      "updated": "2026-07-27T19:57:23Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "ClinFusion: A Vision-Centric Multimodal LLM System for Holistic Medical Understanding",
+      "authors": [
+        "Hangjie Yuan",
+        "Yichen Qian",
+        "Zhiwei Tang",
+        "Xianzhe Xu",
+        "Lirong Wu",
+        "Sicheng Yang",
+        "Jinwang Wang",
+        "Pengju Wang",
+        "Zhitao Zeng",
+        "Yizeng Han",
+        "Yan Xing",
+        "Shengxuan Luo",
+        "Tao Feng",
+        "Qing Xie",
+        "Weigen Yao",
+        "Yi Yang",
+        "Zuozhu Liu",
+        "Jiasheng Tang",
+        "Shaocheng Wang",
+        "Jitao Wang",
+        "Jiahong Dong",
+        "Weihua Chen",
+        "Feng Xu",
+        "Fan Wang"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) hold immense potential to revolutionize clinical practice, yet deploying them in the medical domain is fundamentally a vision-centric challenge: models must absorb knowledge from heterogeneous 2D and 3D medical images, and evaluation protocols must align with radiologists' clinical practice and provide an accurate, fine-grained and factualness-driven assessment. In this paper, we introduce ClinFusion, a vision-centric MLLM designed for holistic medical understanding that systematically addresses these limitations. We propose a compositional and cascaded vision encoder architecture featuring a Cascade Spatial-Aware Locality Fusion operator that unifies diverse 2D and native 3D medical image understanding within a fused encoder. We further introduce a vision-grounded evaluation framework, including MedIF-Bench for instruction-following assessment and a region-of-interest-grounded method for clinically aligned and factualness-driven report generation evaluation. We show that ClinFusion sets a new state-of-the-art across a comprehensive suite of 2D and 3D multimodal medical benchmarks---spanning visual question answering, report generation, and instruction following---as well as textual medical tasks, outperforming leading open-source medical MLLMs (\\textit{e.g.}, Hulu-Med, Lingshu) on 20 out of 24 benchmarks and demonstrating multimodal capabilities better than powerful proprietary models such as GPT-5.2 and Gemini-3-Flash on 13 out of 16 benchmarks, and can be further augmented with agentic tool use for retrieval-augmented and tool-assisted clinical workflows. A blinded evaluation by board-certified radiologists confirms that ClinFusion produces the highest-ranked reports, and validates our RoI-grounded metric as achieving the strongest correlation with expert judgment among all automatic evaluation metrics examined.",
+      "pdf_url": "https://arxiv.org/pdf/2607.24743v2",
+      "arxiv_url": "https://arxiv.org/abs/2607.24743v2",
+      "published": "2026-07-27T17:59:49Z",
+      "updated": "2026-07-28T10:52:57Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Closed-Loop Validation-Repair for Healthcare Interoperability: A Multi-Model Study of Schema Compliance in Clinical LLMs",
+      "authors": [
+        "Jianru Shen"
+      ],
+      "abstract": "Healthcare interoperability requires AI systems to produce structured outputs conforming to standardized schemas including ICD-10 for diagnostic coding, CPT for procedure billing, and HL7 FHIR for data exchange. While large language models demonstrate clinical reasoning capabilities, their integration into electronic health record systems faces a critical barrier: schema noncompliance. We evaluate three open-source models, Qwen2.5 7B, Llama 3.1 8B, and Gemma2 9B, via local deployment across 320 clinical scenarios spanning ten medical specialties, yielding 960 model-scenario pairs assessed under paired baseline and validation-repair conditions. First, schema noncompliance is consistent across the three model families, with baseline compliance rates ranging from 85.9 to 91.6 percent despite varying architectures and training data, suggesting shared gaps in medical training corpora rather than model-specific limitations. Second, 96 percent of validator-detected failures are representation-level format violations such as alternative medical abbreviations and code prefixes, indicating models follow clinical writing conventions but lack awareness of healthcare IT standards. Third, the validation-repair framework achieves 99.0 percent overall compliance, ranging from 98.4 to 99.4 percent across models, with most errors resolving within one or two iterations. Exact McNemar p-values below 0.001 and absolute improvements of 7.8 to 12.5 percentage points across model sizes confirm statistical significance. These results support closed-loop validation-repair as an effective system-level safeguard for healthcare interoperability, improving schema-level readiness for downstream clinical system integration.",
+      "pdf_url": "https://arxiv.org/pdf/2607.24371v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.24371v1",
+      "published": "2026-07-27T12:45:27Z",
+      "updated": "2026-07-27T12:45:27Z",
       "categories": [
         "cs.CL",
-        "cs.AI",
-        "cs.LG"
+        "cs.AI"
       ]
     },
     {
-      "title": "From Operations to Elderly Care Outcomes: A Thematic Review of Industrial Engineering and Decision-Support Approaches",
+      "title": "Superpixel-Based QUBO for Scalable Quantum-Enhanced Medical Image Segmentation",
       "authors": [
-        "Shayan Farhang Pazhooh",
-        "Fereshteh Parvaresh"
+        "Mohammad Chalhoub",
+        "Mahdi Chehimi",
+        "Laia Domingo",
+        "Omar Alhussein",
+        "Ahmed Farouk",
+        "Saif Al-Kuwari"
       ],
-      "abstract": "The rapid growth of the global aging population presents severe challenges to healthcare systems, necessitating efficient, equitable, and patient-centered care models. While Industrial Engineering and Operations Research (OR) provide robust optimization and decision-support tools to address these multidimensional complexities, current applications often remain fragmented. This paper presents a thematic review of 30 seminal studies at the intersection of OR and elderly care, categorizing the literature into home healthcare operations, polypharmacy management, and clinical chronotherapy. Our analysis highlights a significant methodological evolution from static, deterministic models toward dynamic and stochastic frameworks integrated with artificial intelligence (AI). Despite these advancements, a critical translational gap persists: the current OR literature is heavily dominated by process-level optimizations, such as staff routing, and struggles to translate these operational efficiencies into measurable clinical outcomes. Furthermore, holistic models bridging the transition between hospital and community care remain critically underexplored. To develop resilient and smart healthcare systems, this study proposes a conceptual framework that shifts the research focus from isolated operational tasks to integrated, multi-level decision-making. We emphasize the critical need for robust systems analysis, human-inclusive design, and the smartification of care through emerging digital technologies - including digital twins and large language models - to successfully bridge the gap between theoretical operational metrics and tangible patient-level health outcomes.",
-      "pdf_url": "https://arxiv.org/pdf/2607.19075v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.19075v1",
-      "published": "2026-07-21T13:07:28Z",
-      "updated": "2026-07-21T13:07:28Z",
+      "abstract": "Quadratic unconstrained binary optimization (QUBO) has emerged as a powerful framework for medical computing problems. Binary decision variables naturally represent clinical choices, making QUBO formulations well-suited for quantum annealing hardware. However, a fundamental scalability challenge limits practical deployment: problem size grows rapidly with input dimensionality, creating computational bottlenecks that restrict applications to simplified scenarios. This paper addresses this challenge through hierarchical problem reduction, as demonstrated in medical image segmentation, where pixel-level QUBO formulations create over 65,000 variables for a 256x256 image, forcing existing approaches to downsample to 42x42 resolution and discard 97% of pixel information. A superpixel-based QUBO framework is proposed using simple linear iterative clustering (SLIC) to group pixels into perceptually meaningful regions, then formulate segmentation as QUBO over a region adjacency graph (RAG) combining min-cut and smoothness objectives. Validation on INbreast mammography breast cancer images demonstrates a 4.2% improvement in segmentation quality (mean IoU 0.76 vs 0.73) with 33 computational speedup (0.67s vs 21.97s) and a 97.3% reduction in problem size (1764 to 48 variables), all achieved while processing full-resolution images rather than downsampled versions. The reduced problem size also fits well within current quantum annealer connectivity limits, removing the embedding overhead that has historically blocked direct deployment of pixel-level QUBO segmentation on quantum hardware.",
+      "pdf_url": "https://arxiv.org/pdf/2607.24288v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.24288v1",
+      "published": "2026-07-27T11:37:40Z",
+      "updated": "2026-07-27T11:37:40Z",
       "categories": [
-        "math.OC",
-        "cs.AI",
-        "cs.CY"
+        "cs.CV",
+        "cs.NI",
+        "quant-ph"
       ]
     },
     {
-      "title": "Quality Action Assurance: Multimodal Verification of Examiner Claims in VR OSCEs",
+      "title": "Guiding Language Models to Be More Empathetic: Culturally Sensitive Mental Health Advice Generation Through Human-LLM Collaboration",
       "authors": [
-        "Harry Rogers",
-        "Sally Shiels",
-        "Ashley Tomlinson",
-        "James Thomas",
-        "James Aylward",
-        "Nathan Gauge",
-        "Helen Higham",
-        "Alison Noble"
+        "Fatema Tuj Johora Faria",
+        "Mukaffi Bin Moin",
+        "Md. Mahfuzur Rahman",
+        "Khan Md Hasib",
+        "Jubayer Al Mahmud",
+        "M. F. Mridha"
       ],
-      "abstract": "Objective Structured Clinical Examinations (OSCEs) are the gold standard for assessing clinical competence, yet scoring remains vulnerable to examiner subjectivity, fatigue, and cognitive bias. Standard examiner validation via inter-rater statistics lacks explanatory power regarding the source of errors, as it neither analyzes examiner reasoning nor verifies examiner claims against actual events. Thus, we introduce Quality Action Assurance (QAA), a multimodal framework that verifies examiner claims in Virtual Reality (VR) pediatric OSCEs by comparing actions claimed by examiners against the true sequence of events, constructed from video, VR logs, and actor data. QAA combines a constrained temporal action alignment model, which performs action localization and actor source attribution, with a large language model that extracts examiner claims and checks them against the record. Across a 5-fold cross-validation, QAA achieves 99.2% $\\pm$ 0.7% Actor F1 and 93.4% $\\pm$ 1.9% W@16 for temporal alignment. Overall, QAA detects examiner errors with 70.0% precision and 76.7% recall, improving factual correctness from 39.2% to 79.2%, enabling fairer OSCE assessment.",
-      "pdf_url": "https://arxiv.org/pdf/2607.19063v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.19063v1",
-      "published": "2026-07-21T12:51:42Z",
-      "updated": "2026-07-21T12:51:42Z",
+      "abstract": "Despite recent advances in large language models (LLMs), their ability to generate empathetic mental health counseling responses in low-resource languages remains largely unexplored. To address this gap, we curate 625 authentic mental health cases from three complementary sources: (1) publicly available Facebook posts discussing mental health concerns, (2) transcripts from the Bangladeshi television program \"Ami Akhon Ki Korbo\", and (3) anonymized student questionnaire responses covering diverse emotional and psychological challenges. Based on these cases, we build an evaluation corpus comprising advice written by licensed clinical psychologists and responses generated by three modern proprietary LLMs: GPT-4o Mini, Claude 4.5 Haiku, and Gemini 2.5 Pro. We further propose the Role-Playing Reflective Chain-of-Thought Advisory Framework (RP-RCAF), a task-specific prompting strategy that combines expert-authored few-shot examples with structured self-reflection to produce supportive, culturally aware, and ethically aligned counseling through a compassionate advisor persona. We also introduce the Grok 4-Based Response Evaluation and Scoring Framework (G-REFS), which integrates automated assessment with expert psychologist validation across emotional sensitivity, cultural appropriateness, linguistic clarity, and ethical soundness. Experimental results show that RP-RCAF consistently outperforms conventional prompting across all evaluated models and produces responses that more closely align with professional psychological counseling.",
+      "pdf_url": "https://arxiv.org/pdf/2607.23538v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.23538v1",
+      "published": "2026-07-26T08:27:19Z",
+      "updated": "2026-07-26T08:27:19Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "The Mirage of LLM Guardrails: A Case Study in AI-Assisted Medical Note Manipulation",
+      "authors": [
+        "Davis Yadav",
+        "Amulya Yadav"
+      ],
+      "abstract": "The rapid deployment of large language models (LLMs) in healthcare settings makes the reliability of their built-in guardrails against malicious queries a question of urgent practical consequence. Yet the robustness of these mechanisms against deliberate misuse (in the healthcare context) remains poorly understood. In this paper, we investigate this question empirically, using AI-assisted medical note manipulation as a concrete case study. We make four novel contributions. First, we develop a reproducible manipulation pipeline that takes publicly available seed medical note templates and use commercial LLMs to produce customized manipulated notes by substituting patient names, provider identities, dates, and medical conditions across multiple model families, input formats, and prompt phrasings. Second, we conduct a systematic empirical evaluation of LLM guardrail robustness for medical note manipulation. Our experimental results reveal substantial weaknesses and inconsistencies in contemporary commercial LLM guardrails, including low refusal rates for several model families. Third, we utilize a combination of automated metrics and human annotation-based metrics to assess the correctness of requested manipulations. Fourth, we conduct a user-study to assess the believability of manipulated medical notes, finding that the best manipulations are visually indistinguishable from original documents to human raters. Finally, we discuss implications for responsible guardrail design in LLMs, AI safety policies, and the broader ethics of deploying LLMs in healthcare settings.",
+      "pdf_url": "https://arxiv.org/pdf/2607.24859v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.24859v1",
+      "published": "2026-07-26T07:46:28Z",
+      "updated": "2026-07-26T07:46:28Z",
+      "categories": [
+        "cs.CR"
+      ]
+    },
+    {
+      "title": "RareLens: Towards End-to-End Rare Disease Care via Aligning Divergent Large Language Model Reasoning",
+      "authors": [
+        "Xi Chen",
+        "Hongru Zhou",
+        "Shiyu Feng",
+        "Hanyu Zhou",
+        "Huahui Yi",
+        "Rongsheng Wang",
+        "Tiancheng He",
+        "Kun Wang",
+        "Pingping Liu",
+        "Qiankun Li",
+        "Sicheng Lin",
+        "Huiying Ou",
+        "Xiaohong Zheng",
+        "Tianying Zang",
+        "Zhuohang Wu",
+        "Leheng Jiang",
+        "Kexin Cao",
+        "Wenhan Zhang",
+        "ChengYi Li",
+        "Zhiyang Wang",
+        "Songlin Li",
+        "Benyou Wang",
+        "Ningbei Yin",
+        "Shaoting Zhang",
+        "Weili Fu",
+        "Jian Li",
+        "Kang Li"
+      ],
+      "abstract": "Rare diseases collectively affect an estimated 3.5% to 5.9% of the population, yet more than 70% of patients are misdiagnosed and many endure years of evaluation before a diagnosis is reached, because early presentations are nonspecific and relevant expertise is scarce and unevenly distributed. Artificial intelligence could provide support, but existing systems address isolated stages of care, overwhelmingly diagnosis. They typically depend on the results of downstream investigations, and they treat the variability between models as noise to be eliminated. Here we present RareLens, a system that supports clinical decision-making across the entire rare disease trajectory by exploiting this variability. When heterogeneous large language models evaluate the same case, they generate divergent but complementary reasoning, which RareLens aligns and calibrates into a single convergent, actionable decision at each stage. Four coordinated modules perform primary-visit risk screening, diagnosis, treatment planning and prognosis. Developed and evaluated on RareBench, a real-world dataset of 157,525 cases spanning all 33 Orphanet categories and more than 7,000 conditions, RareLens outperformed every frontier model tested, including GPT-5, DeepSeek-R1, Claude-3.7-Sonnet and Gemini-2.5-Pro, at each stage. It achieved an area under the curve of 0.917 for screening and top-1 accuracies of 65.5% and 89.8% for diagnosis and treatment. In an external study spanning 1,287 cases and 23 physicians, autonomous RareLens and physicians assisted by RareLens both substantially outperformed unaided physicians. These findings indicate that aligning divergent model reasoning, rather than scaling a single model, offers a generalizable strategy for high-uncertainty clinical decision-making.",
+      "pdf_url": "https://arxiv.org/pdf/2607.23290v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.23290v1",
+      "published": "2026-07-25T16:58:10Z",
+      "updated": "2026-07-25T16:58:10Z",
       "categories": [
         "cs.AI"
       ]
     },
     {
-      "title": "Biological Amnesia in ICU Time-Series Prediction: A Drift-Adaptive Two-Stream Architecture with Temporal Retrieval",
+      "title": "Toward Automated Detection of Documentation Inconsistencies in Electronic Health Records",
       "authors": [
-        "Fatema Ferdous Tamanna",
-        "K. M. Merajul Arefin",
-        "Md. Abdul Masud"
+        "Jian Lu",
+        "Panyu Chen",
+        "Miriam Treggiari",
+        "Robert Blessing",
+        "Danyang Zhuo",
+        "Chunhua Weng",
+        "William W. Stead",
+        "Anru R. Zhang"
       ],
-      "abstract": "Background: Clinical decision support systems degrade silently as treatment protocols evolve, yet standard adaptation methods treat models as monolithic blocks, unable to distinguish stable patient physiology from shifting institutional practice. Methods: We propose an adaptive clinical intelligence architecture for ICU intervention prediction that structurally decouples physiological from treatment representations, confining parameter updates to the treatment stream upon a dual distributional and accuracy trigger. Automated audit logs record which treatment features drove each adaptation event and how their importance shifted. At inference, an attribution-driven Temporal RAG module grounds each prediction in patient-specific, era-matched PubMed evidence anchored to the patient's dominant physiological features. Experiments used 84,792 MIMIC-IV stays (2008-2022) under strict chronological split. Results: Drift localised entirely to the treatment stream, validating the structural prior. Selective adaptation improved vasopressor and septic shock discrimination and calibration over the static source model. A fully retrained baseline yielded marginally higher aggregate discrimination but missed 26 septic shock cases the framework correctly identified, with none in the reverse direction; retrieval consistency with the pre-adaptation source model was preserved by the framework but degraded substantially in the retrained baseline. Conclusions: Structurally constraining adaptation to drifting components while preserving stable physiological representations enables clinical AI to evolve with practice without distorting learned patient biology. This architecture offers a template for governable, interpretable deployment of adaptive models in high-stakes clinical environments.",
-      "pdf_url": "https://arxiv.org/pdf/2607.19020v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.19020v1",
-      "published": "2026-07-21T12:07:36Z",
-      "updated": "2026-07-21T12:07:36Z",
+      "abstract": "Objective: To characterize the kinds of internal documentation inconsistencies a general-domain large language model (LLM) can surface from real-world discharge summaries, and to identify recurring failure modes that limit reliability at scale.\n  Materials and Methods: We applied a two-stage LLM pipeline---open-ended candidate identification (Gemini 2.5 Pro) followed by context-grounded verification (Gemini 2.5 Flash)---to 3,000 randomly sampled MIMIC-IV-Note discharge summaries. A subset of the pipeline output was then reviewed manually by clinical experts.\n  Results: Our pipeline surfaced 3,460 candidate inconsistencies, affecting 69.7% of admissions. Representative examples spanned demographics, allergies, procedures, diagnoses, laboratory, medications, and care-planning domains, with direct implications for clinical reasoning or patient safety. Expert review also revealed recurring failure modes that arise when verification requires temporal reasoning, evolving-diagnosis context, or knowledge of outpatient-prescribing conventions the model does not natively possess.\n  Discussion: Detection is highly context-dependent: many flagged pairs require anchoring each statement to its source section and clinical domain, then assessing whether the conflict reflects a true contradiction or missing context. We propose a graded ontology spanning strict contradiction and ambiguity, with a schema characterizing each flagged case by category, section, domain, and inconsistency axis.\n  Conclusion: This formative study establishes a methodological foundation and conceptual framework to guide subsequent validated, large-scale EHR-inconsistency analysis.",
+      "pdf_url": "https://arxiv.org/pdf/2607.22954v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.22954v1",
+      "published": "2026-07-24T23:43:35Z",
+      "updated": "2026-07-24T23:43:35Z",
       "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.IR",
-        "q-bio.QM"
-      ]
-    },
-    {
-      "title": "OntoBook: Ontology-Grounded Synthetic Textbooks for Medical Encoder Pretraining",
-      "authors": [
-        "Rian Touchent",
-        "\u00c9ric de la Clergerie"
-      ],
-      "abstract": "We present OntoBook, a method that converts medical ontology structure into pretraining signal for encoder language models. Our approach has three stages: random walks through ontology graphs capture hierarchical and causal relations between medical codes, a large language model reformulates these walks into fluent textbook-style prose, and the resulting text is used to train ModernCamemBERT, a 149M-parameter French encoder, with two objectives on the same data: masked language modeling and relation prediction between code pairs. On three French medical coding benchmarks (FRACCO, Cantemist-FR, Distemist-FR), OntoBook achieves significant improvements over MLM-only pretraining, with +2.5 micro-F1 on FRACCO and +8.0 micro-F1 on Distemist. We find that alignment between objectives is necessary: misaligned training, where each task uses different data, causes a 30-point degradation. We release 1.3 million LLM-reformulated medical textbooks across three French ontologies (CIM-10, CCAM, ATC) and pretrained model checkpoints.",
-      "pdf_url": "https://arxiv.org/pdf/2607.18927v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.18927v1",
-      "published": "2026-07-21T10:11:10Z",
-      "updated": "2026-07-21T10:11:10Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Evaluating medical AI under missing information: same-provider judges and human raters change apparent safety",
-      "authors": [
-        "Koyar Afrasyab"
-      ],
-      "abstract": "Readiness stress-testing of medical AI has focused on closed-ended and multimodal benchmarks. We extend it to open-ended clinical conversation under missing information, where safe behavior means recognizing absent information and qualifying, clarifying, or not over-committing - and where the evaluator becomes part of the measurement. We stress-test four models - three flagships (Claude Opus 4.8, GPT-5.5, Grok 4.3) and one mid-tier model (Gemini 3.5 Flash) - by deleting the latter half of the final user turn in HealthBench conversations, grading responses with a four-provider LLM-judge panel and a blinded clinician-anchored reference. Two evaluator-facing results are robust. First, judge choice materially changes apparent safety: inter-judge agreement is only moderate (Fleiss' kappa = 0.65), and after adjusting for each judge's general leniency (vote-level logistic regression), a positive same-provider association remains (exact permutation p = 0.04; GPT-5.5 ~ +0.10 on the probability scale) - large enough to change which model appears to over-commit least once its own-provider judge is excluded. Second, LLM judges are more permissive than clinicians on a blinded 50-item subsample: all four are significantly more lenient than the stricter independent clinician (crediting appropriate uncertainty on 66-84% of items vs 52%), and three of four than the author-influenced consensus (Grok directional only; judge-vs-consensus kappa = 0.20-0.43). On the author-audited clinical-underdetermined subset the permissiveness gap widened and the point-estimate model ordering held. A closed-ended MedQA anchor confirms accuracy is high and option-order effects are within a +/-5-point equivalence region for three of four models, so the safety gap is about calibration, not knowledge. We release the harness, prompts, per-item outputs, judge panel, perturbation audit, and human-annotation protocol.",
-      "pdf_url": "https://arxiv.org/pdf/2607.18828v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.18828v1",
-      "published": "2026-07-21T08:05:35Z",
-      "updated": "2026-07-21T08:05:35Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Testing Retrieval-Augmented Generation Systems with Chunk Coverage",
-      "authors": [
-        "Jinhan Kim",
-        "Samuele Pasini",
-        "Paolo Tonella"
-      ],
-      "abstract": "Retrieval-Augmented Generation (RAG)-based systems\\footnote{For brevity, RAG-based systems are referred to as RAG systems throughout this paper.} are increasingly deployed in high-stakes settings where correct behaviour depends not only on the language model but also on the retrieval component that selects external documents at inference time. While existing RAG evaluation metrics assess retrieval and generation quality on a per-query basis, typically relying on query-level test oracles such as reference answers or relevance annotations, they provide limited insight into whether a test suite adequately exercises the retrieval behaviour of the system as a whole. In this paper, we introduce Chunk Coverage (CC), an oracle-independent test adequacy criterion for testing the retrieval component of RAG systems. CC measures the fraction of corpus chunks that are retrieved at least once across a test suite, providing a structural view of which parts of the retrieval space have been exercised. We further show how CC can be used to guide test selection and generation by prioritising queries that expand coverage of previously unexercised retrieval regions. We evaluate CC on clinical and financial RAG system scenarios. CC-guided testing reaches 50% of attainable coverage 1.7x faster than random selection and 4.2x faster than redundancy-biased strategies. Moreover, CC improves fault detection effectiveness (APFD) by 10% to 25% over random, indicating earlier discovery of distinct retrieval faults. These results show that CC captures retrieval diversity relevant to effective testing without requiring test oracles.",
-      "pdf_url": "https://arxiv.org/pdf/2607.18155v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.18155v1",
-      "published": "2026-07-20T16:53:05Z",
-      "updated": "2026-07-20T16:53:05Z",
-      "categories": [
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "Judge-dependent safety gains and model-specific helpfulness costs of evidence-sufficiency prompting in clinical LLMs",
-      "authors": [
-        "Koyar Afrasyab"
-      ],
-      "abstract": "Background: LLM judges increasingly score whether clinical language models give overconfident answers under incomplete evidence, yet whether a measured \"safety gain\" reflects real behavior change or the judge's calibration is unresolved. Using a structured evidence-sufficiency prompt as a test case, we asked whether it reduces unsafe overconfident answers, how far that effect depends on the scoring judge, and what it costs in helpfulness.\n  Methods: In a retrospective public-data benchmark (Real-POCQi, HealthBench, MedRBench), four models (GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Grok 4.3) answered a fully paired common panel (1,200 cells) with a standard prompt and the wrapper. The pre-specified endpoint was the paired reduction in unsafe overconfidence scored by the primary judge (GPT-5.4-nano); secondary analyses added a different-family judge (Claude Sonnet 5), a correctness judge, matched scaffold controls, and a blinded three-clinician review.\n  Results: Unsafe overconfidence fell from 49.3% to 24.7%, a paired reduction of 24.7 points (95% CI 21.8-27.7; p<0.001), robust in direction across models and paraphrases. Magnitude was judge-dependent: Sonnet agreed on direction but nearly halved the effect (+13.1 points), with one-directional disagreement. Blinded clinicians characterized the primary judge as a high-sensitivity (1.00), low-specificity (0.55) screen, not a calibrated rate. The gain carried a model-specific helpfulness cost (correct diagnosis 80.3% to 50.3%): near-free for GPT-5.5, near-total for Gemini (-58 points). Matched scaffold controls showed genuine behavior change, not judge circularity.\n  Conclusions: LLM-judged clinical safety effects should be reported as directional and relative, anchored to human review and evaluated jointly with helpfulness, not as calibrated absolute rates. This does not establish clinical deployment readiness.",
-      "pdf_url": "https://arxiv.org/pdf/2607.18086v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.18086v1",
-      "published": "2026-07-20T15:53:02Z",
-      "updated": "2026-07-20T15:53:02Z",
-      "categories": [
-        "cs.AI"
+        "cs.CL",
+        "stat.AP"
       ]
     }
   ]

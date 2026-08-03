@@ -1,8 +1,71 @@
 {
-  "generated_at_utc": "2026-08-02T03:29:26.352949Z",
+  "generated_at_utc": "2026-08-03T03:31:12.059368Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "IyawoBench v2.0: Extended Diagnostic Evaluation of Large Language Model Clinical Triage in Nigerian Primary Care",
+      "authors": [
+        "Anthonio Oladimeji Gabriel",
+        "Dimeji Olawuyi"
+      ],
+      "abstract": "Large language models are being deployed as clinical triage tools in low and middle income countries where trained physicians are scarce. Existing safety metrics, however, produce misleading confidence: models scoring 100% on binary \"did not send an emergency home\" safety measures may nevertheless exhibit systematic failure modes that render them undeployable at scale. We present IyawoBench v2.0, an extended diagnostic evaluation of large language model clinical triage on 200 synthetic vignettes derived from 1,200 real patient encounters at 19 Nigerian primary health centres. We introduce a formal mathematical framework comprising fourteen definitions and two theorems that decompose triage safety into three distinct failure modes: Conservative Escalation Bias, Systematic Downgrade Bias, and Middle-Tier Instability. We propose the Escalation Bias Index and Expected Deployment Cost as novel metrics that expose failure modes hidden by conventional accuracy and sensitivity scores. Evaluated on three frontier models (Claude Sonnet 4.6, Llama 3.3 70B, Llama 3.1 8B) plus five naive baselines, we show that: (1) all three models exhibit at least one formal failure mode; (2) traditional sensitivity metrics conceal a 77 percentage point under-triage gap in Llama 3.1 8B; (3) the optimal model varies across three deployment scenarios (Emergency-Focused, System-Sustainability, Balanced), demonstrating that single-ranking benchmarks are inadequate for LMIC clinical AI selection. IyawoBench v2.0 provides both a rigorous benchmark and a diagnostic framework transferable to any triage-style clinical AI evaluation. All code, data, and analysis pipelines are publicly available.",
+      "pdf_url": "https://arxiv.org/pdf/2607.29085v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.29085v1",
+      "published": "2026-07-31T07:11:55Z",
+      "updated": "2026-07-31T07:11:55Z",
+      "categories": [
+        "cs.CY"
+      ]
+    },
+    {
+      "title": "CyberNeuro: A Privacy-Preserving Agentic Workbench for Cohort-Scale Neuroimage and Clinical Data Analysis",
+      "authors": [
+        "Ran Ren",
+        "Junhong Tong",
+        "Yunxi Kong",
+        "Yiyao Chen",
+        "Yucheng Li",
+        "Kunhao Zhou",
+        "Shaoqi Wang",
+        "Yuxiang Tao",
+        "Shuheng Cao",
+        "Zhihao Fan",
+        "Marissa DiPiero",
+        "Tingting Dan",
+        "Guorong Wu"
+      ],
+      "abstract": "Despite tremendous success in neuroimaging methodology, making large-scale, high-dimensional datasets ready for AI/ML applications remains a critical operational bottleneck. Conventional workflows require extensive manual effort across metadata curation, pipeline execution, post-processing quality control, and data management, a burden that disproportionately excludes laboratories with limited manpower and computational infrastructure. To address this real-world barrier, there is an urgent need for scalable, cost-effective computational platforms that democratize advanced neuroimaging analytics and accelerate discoveries in mental health and clinical translation. Capitalizing on multi-agent LLM breakthroughs, we introduce CyberNeuro, an agentic workbench with a tailored local LLM-model ('WandaMind') for automated neuroimaging and health-data analysis. Driven by four dedicated agents (Planner, Validator, Dispatcher, and Reporter) communicating via a secure MCP bridge and a pinned execution layer, CyberNeuro enables researchers to execute complex workflows using natural language while maintaining clinical-grade data privacy. On the public NeuroBench suite, CyberNeuro increases held-out domain accuracy from 40% to 69% over the baseline model. Beyond automated metrics, the platform integrates a human-in-the-loop verification panel to ensure rigorous biomedical quality control. Across the same end-to-end 10-batch cohort workflow suite, the local WandaMind configuration completed all tasks with an estimated aggregate token count of about 10.6% using WandaMind and 61.7% using cloud providers of token usage, compared to Neuroclaw, respectively. The platform and its production-ready modules are available at https://wanda-cyberbench.com.",
+      "pdf_url": "https://arxiv.org/pdf/2607.28841v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.28841v1",
+      "published": "2026-07-30T21:10:04Z",
+      "updated": "2026-07-30T21:10:04Z",
+      "categories": [
+        "cs.MA",
+        "cs.SE"
+      ]
+    },
+    {
+      "title": "EarlyDx: An Admission-Anchored Benchmark for Open-Ended Generation of Evidence-Supported ED-Encounter Diagnoses",
+      "authors": [
+        "Jiahui Li",
+        "Ruili Fang",
+        "Zishuai Liu",
+        "Yutong Guo",
+        "Nan Yang",
+        "Wenzhan Song",
+        "Jin Lu",
+        "Fei Dou"
+      ],
+      "abstract": "Clinical diagnosis at hospital admission must be made rapidly from limited, incomplete evidence. Existing diagnosis-prediction benchmarks are poorly suited to this setting: they restrict prediction to closed code sets, exclude free-text notes, and supervise with discharge diagnoses that incorporate the full inpatient course. We introduce EarlyDx, a large-scale benchmark for open-ended early diagnosis, built from 154,834 emergency department encounters in MIMIC-IV. Each encounter is restricted to records available at admission time $t_0$ and supervised by the diagnoses recorded during the ED encounter rather than at discharge. An LLM auditor further verifies every free-text label as supported, partially supported, or unsupported by that evidence; the primary evaluation scores only fully supported labels. Under a semantic LLM-as-judge protocol, no evaluated system --- frontier general, medical-specialized, or in-domain post-trained --- synthesizes admission-time evidence reliably. Zero-shot models score largely by extraction, recovering only 3-31% of diagnoses that must be inferred rather than read from the record; post-training raises inference-dependent recall to 56%, but a sizeable margin remains, and on time-critical conditions no system attains a clinician's balance of sensitivity and precision. We release the full construction and evaluation pipeline at here.",
+      "pdf_url": "https://arxiv.org/pdf/2607.28788v1",
+      "arxiv_url": "https://arxiv.org/abs/2607.28788v1",
+      "published": "2026-07-30T19:27:36Z",
+      "updated": "2026-07-30T19:27:36Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "ScaFE: Data-Efficient Scar Classification with LLM-Generated Clinical Feature Programs",
       "authors": [
@@ -217,64 +280,6 @@
       "categories": [
         "cs.CV",
         "cs.MM"
-      ]
-    },
-    {
-      "title": "SCALPEL: Semantic Cross-modal Alignment via LLM-Powered Encoder Learning for Medical Vision-Language Representation",
-      "authors": [
-        "Yunzhan Fu",
-        "Enyu Bao",
-        "Xiangyu Shen",
-        "Yihao Wu",
-        "Chunbo Jiang",
-        "Fangli Guan",
-        "Liqi Yan"
-      ],
-      "abstract": "Vision-language pre-training (VLP) serves as a cornerstone for medical multimodal representation learning. However, existing medical VLP frameworks are often constrained by the limited context windows and shallow representational capacities of lightweight text encoders when processing lengthy, terminology-dense clinical reports. While integrating medical large language models (LLMs) offers unprecedented clinical reasoning capabilities, it introduces three major bottlenecks: (i) the anisotropic representational collapse of generative LLMs under standard contrastive objectives, (ii) the prohibitive memory overhead of joint end-to-end training with large batch sizes, and (iii) the medical hallucinations induced by vanilla contrastive losses that ignore fine-grained anatomical laterality and negation modifiers. To address these challenges, we propose \\textbf{SCALPEL}, a \\textbf{S}emantic \\textbf{C}ross-modal \\textbf{A}lignment framework via \\textbf{L}LM-\\textbf{P}owered \\textbf{E}ncoder \\textbf{L}earning. First, Clinical Report Contrastive fine-tuning converts a generative LLM into an isotropic encoder via domain-specific clinical text adaptation. Second, an asymmetric alignment strategy leverages offline feature caching to enable efficient training. Critically, we formulate an Anatomy-Negation Aware Objective that explicitly penalizes mismatched image-text pairs involving laterality confusion or false negations. Extensive experiments across MIMIC-CXR, CheXpert, and IU X-Ray benchmarks demonstrate that SCALPEL achieves state-of-the-art performance in cross-modal retrieval, zero-shot disease classification and medical visual question answering.",
-      "pdf_url": "https://arxiv.org/pdf/2607.26885v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.26885v1",
-      "published": "2026-07-29T13:12:32Z",
-      "updated": "2026-07-29T13:12:32Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "LLM-Guided Initialization for Accelerated Hybrid Quantum-Classical Medical Image Classification",
-      "authors": [
-        "Riza Alaudin Syah",
-        "Irwan Alnarus Kautsar",
-        "Haza Nuzly Bin Abdull Hamed"
-      ],
-      "abstract": "Variational quantum algorithms often encounter barren plateaus, where cost gradients decay rapidly with increasing circuit depth, undermining the trainability of parameterized quantum circuits. This paper evaluates AdaInit (Adaptive Initialization), proposed by Zhuang and Cunningham, which uses large language models to propose initial parameters for quantum neural networks. We study a simplified single-query AdaInit variant paired with GPU-accelerated simulation in NVIDIA CUDA-Q and apply it to binary classification on the DMR-IR mammography dataset. AdaInit delivers 14.6 times higher gradient variance at initialization than random initialization (0.0095 vs. 0.0006), producing 160 times faster convergence (1.1s vs. 176 s) while maintaining the same classification accuracy of 61.4 percent. We provide theoretical analysis grounded in the geometry of parameterized circuit landscapes and show empirically that LLM-guided initialization places the optimizer in trainable regions of parameter space. Beyond performance, our results indicate that a single LLM query can yield informative parameters without iterative refinement, suggesting a low-overhead path to improved trainability. The findings validate AdaInit in a medical imaging setting and demonstrate its compatibility with GPU-accelerated quantum backends for practical speedups.",
-      "pdf_url": "https://arxiv.org/pdf/2607.27262v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.27262v1",
-      "published": "2026-07-29T07:24:48Z",
-      "updated": "2026-07-29T07:24:48Z",
-      "categories": [
-        "quant-ph",
-        "cs.AI",
-        "cs.ET",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "GuideSkill: Evolving Executable LLM Agent Skills for Guideline-Grounded Clinical Reasoning",
-      "authors": [
-        "Lang Cao",
-        "Yuhao Shen",
-        "Tianyang Luo",
-        "Simo Du",
-        "Hao Peng",
-        "Yue Guo"
-      ],
-      "abstract": "Clinical practice guidelines (CPGs) encode diagnostic criteria, but LLM systems typically retrieve guideline text or absorb it through training rather than execute its rules. We introduce GuideSkill, an external reasoning layer that compiles disease-specific criteria into executable functions returning ordinal diagnostic-support scores. GuideSkill-Zero is initialized from guidelines, while GuideSkill-Evo uses case--diagnosis pairs to refine covered skills and add missing diagnoses. At inference, an LLM proposes a differential diagnosis, grounds the features required by each matched skill, and fuses its ranking with the executed skill scores. Across four benchmarks and four backbones, GuideSkill-Zero improves macro-average accuracy over guideline RAG by 13.45% on average. GuideSkill-Evo achieves the highest macro-average for every backbone, improves over direct inference by 18.49% relatively, and increases gold-label skill coverage from 56.5% to 99.5%. On Qwen3.5-9B, it also exceeds the strongest parameter-update baseline by 11.16% without updating the backbone. Expert evaluation further indicates that GuideSkill produces clinically sound and broadly acceptable skills, suggesting that its initialized and evolved rules are reliable and practically meaningful. These results support executable skills as a model-agnostic mechanism for combining guideline-derived procedures with case-derived diagnostic patterns.",
-      "pdf_url": "https://arxiv.org/pdf/2607.26160v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.26160v1",
-      "published": "2026-07-28T18:10:33Z",
-      "updated": "2026-07-28T18:10:33Z",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]

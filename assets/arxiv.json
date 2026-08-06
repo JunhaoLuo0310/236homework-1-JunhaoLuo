@@ -1,285 +1,298 @@
 {
-  "generated_at_utc": "2026-08-03T03:31:12.059368Z",
+  "generated_at_utc": "2026-08-06T03:12:37.762482Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
     {
-      "title": "IyawoBench v2.0: Extended Diagnostic Evaluation of Large Language Model Clinical Triage in Nigerian Primary Care",
+      "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek across Specialist Domains",
       "authors": [
-        "Anthonio Oladimeji Gabriel",
-        "Dimeji Olawuyi"
+        "Ayoub Kirouane",
+        "Christos Petrocheilos"
       ],
-      "abstract": "Large language models are being deployed as clinical triage tools in low and middle income countries where trained physicians are scarce. Existing safety metrics, however, produce misleading confidence: models scoring 100% on binary \"did not send an emergency home\" safety measures may nevertheless exhibit systematic failure modes that render them undeployable at scale. We present IyawoBench v2.0, an extended diagnostic evaluation of large language model clinical triage on 200 synthetic vignettes derived from 1,200 real patient encounters at 19 Nigerian primary health centres. We introduce a formal mathematical framework comprising fourteen definitions and two theorems that decompose triage safety into three distinct failure modes: Conservative Escalation Bias, Systematic Downgrade Bias, and Middle-Tier Instability. We propose the Escalation Bias Index and Expected Deployment Cost as novel metrics that expose failure modes hidden by conventional accuracy and sensitivity scores. Evaluated on three frontier models (Claude Sonnet 4.6, Llama 3.3 70B, Llama 3.1 8B) plus five naive baselines, we show that: (1) all three models exhibit at least one formal failure mode; (2) traditional sensitivity metrics conceal a 77 percentage point under-triage gap in Llama 3.1 8B; (3) the optimal model varies across three deployment scenarios (Emergency-Focused, System-Sustainability, Balanced), demonstrating that single-ranking benchmarks are inadequate for LMIC clinical AI selection. IyawoBench v2.0 provides both a rigorous benchmark and a diagnostic framework transferable to any triage-style clinical AI evaluation. All code, data, and analysis pipelines are publicly available.",
-      "pdf_url": "https://arxiv.org/pdf/2607.29085v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.29085v1",
-      "published": "2026-07-31T07:11:55Z",
-      "updated": "2026-07-31T07:11:55Z",
+      "abstract": "Modern Greek is absent from NVIDIA's Nemotron retrieval models and from major multilingual retrieval benchmarks, despite being important for retrieval-augmented generation (RAG) in legal, energy, financial, and medical applications. We present an end-to-end adaptation of the Nemotron retrieval stack for Modern Greek, including corpus mining, synthetic supervision, retrieval model training, reranker adaptation, reader fine-tuning, and a new benchmark called HERA. Our study shows that a parameter-free BM25 baseline outperforms several off-the-shelf multilingual dense retrieval models on specialist Greek corpora. After fine-tuning on 65,773 Greek retrieval pairs, a Nemotron 1B embedder improves nDCG@10 from 0.362 to 0.835 and substantially outperforms its unadapted counterpart. The learned language competence transfers to general-domain Greek, although the advantage over BM25 remains domain-dependent. We further adapt a cross-encoder reranker and demonstrate consistent improvements across specialist domains. Finally, we LoRA-tune a Nemotron 30B-A3B mixture-of-experts reader for grounded generation, increasing judged answer correctness from 29.4% to 66.9% while significantly improving faithfulness and citation quality. We also introduce HERA, the first large-scale Greek benchmark for retrieval-augmented generation, and release our adapted models and benchmark to support future research on Greek-language RAG systems.",
+      "pdf_url": "https://arxiv.org/pdf/2608.05138v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.05138v1",
+      "published": "2026-08-05T17:56:40Z",
+      "updated": "2026-08-05T17:56:40Z",
       "categories": [
-        "cs.CY"
+        "eess.AS",
+        "cs.AI",
+        "cs.CL"
       ]
     },
     {
-      "title": "CyberNeuro: A Privacy-Preserving Agentic Workbench for Cohort-Scale Neuroimage and Clinical Data Analysis",
+      "title": "CARVE: Cross-Slice Anisotropic Reallocation of Visual Evidence for Efficient 3D Medical Volume Understanding",
       "authors": [
-        "Ran Ren",
-        "Junhong Tong",
-        "Yunxi Kong",
-        "Yiyao Chen",
-        "Yucheng Li",
-        "Kunhao Zhou",
-        "Shaoqi Wang",
-        "Yuxiang Tao",
-        "Shuheng Cao",
-        "Zhihao Fan",
-        "Marissa DiPiero",
-        "Tingting Dan",
-        "Guorong Wu"
+        "Zhenyu Yi",
+        "Qiang Hu",
+        "Zhenhao Li",
+        "Jiaxuan Zhao",
+        "Yusong Sun",
+        "Lichi Zhang"
       ],
-      "abstract": "Despite tremendous success in neuroimaging methodology, making large-scale, high-dimensional datasets ready for AI/ML applications remains a critical operational bottleneck. Conventional workflows require extensive manual effort across metadata curation, pipeline execution, post-processing quality control, and data management, a burden that disproportionately excludes laboratories with limited manpower and computational infrastructure. To address this real-world barrier, there is an urgent need for scalable, cost-effective computational platforms that democratize advanced neuroimaging analytics and accelerate discoveries in mental health and clinical translation. Capitalizing on multi-agent LLM breakthroughs, we introduce CyberNeuro, an agentic workbench with a tailored local LLM-model ('WandaMind') for automated neuroimaging and health-data analysis. Driven by four dedicated agents (Planner, Validator, Dispatcher, and Reporter) communicating via a secure MCP bridge and a pinned execution layer, CyberNeuro enables researchers to execute complex workflows using natural language while maintaining clinical-grade data privacy. On the public NeuroBench suite, CyberNeuro increases held-out domain accuracy from 40% to 69% over the baseline model. Beyond automated metrics, the platform integrates a human-in-the-loop verification panel to ensure rigorous biomedical quality control. Across the same end-to-end 10-batch cohort workflow suite, the local WandaMind configuration completed all tasks with an estimated aggregate token count of about 10.6% using WandaMind and 61.7% using cloud providers of token usage, compared to Neuroclaw, respectively. The platform and its production-ready modules are available at https://wanda-cyberbench.com.",
-      "pdf_url": "https://arxiv.org/pdf/2607.28841v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.28841v1",
-      "published": "2026-07-30T21:10:04Z",
-      "updated": "2026-07-30T21:10:04Z",
-      "categories": [
-        "cs.MA",
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "EarlyDx: An Admission-Anchored Benchmark for Open-Ended Generation of Evidence-Supported ED-Encounter Diagnoses",
-      "authors": [
-        "Jiahui Li",
-        "Ruili Fang",
-        "Zishuai Liu",
-        "Yutong Guo",
-        "Nan Yang",
-        "Wenzhan Song",
-        "Jin Lu",
-        "Fei Dou"
-      ],
-      "abstract": "Clinical diagnosis at hospital admission must be made rapidly from limited, incomplete evidence. Existing diagnosis-prediction benchmarks are poorly suited to this setting: they restrict prediction to closed code sets, exclude free-text notes, and supervise with discharge diagnoses that incorporate the full inpatient course. We introduce EarlyDx, a large-scale benchmark for open-ended early diagnosis, built from 154,834 emergency department encounters in MIMIC-IV. Each encounter is restricted to records available at admission time $t_0$ and supervised by the diagnoses recorded during the ED encounter rather than at discharge. An LLM auditor further verifies every free-text label as supported, partially supported, or unsupported by that evidence; the primary evaluation scores only fully supported labels. Under a semantic LLM-as-judge protocol, no evaluated system --- frontier general, medical-specialized, or in-domain post-trained --- synthesizes admission-time evidence reliably. Zero-shot models score largely by extraction, recovering only 3-31% of diagnoses that must be inferred rather than read from the record; post-training raises inference-dependent recall to 56%, but a sizeable margin remains, and on time-critical conditions no system attains a clinician's balance of sensitivity and precision. We release the full construction and evaluation pipeline at here.",
-      "pdf_url": "https://arxiv.org/pdf/2607.28788v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.28788v1",
-      "published": "2026-07-30T19:27:36Z",
-      "updated": "2026-07-30T19:27:36Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "ScaFE: Data-Efficient Scar Classification with LLM-Generated Clinical Feature Programs",
-      "authors": [
-        "Ruman Wang",
-        "Hangting Ye"
-      ],
-      "abstract": "Classifying pathological scars from clinical photographs requires distinguishing keloids from hypertrophic scars despite limited expert-labeled data and substantial acquisition variation across hospitals. End-to-end image models remain data-dependent, whereas sending photographs to a hosted vision-language model (VLM) may conflict with local data-governance requirements and yields decisions that are difficult to reproduce and audit. We introduce ScaFE (Scar Feature Engineering), which transfers clinical knowledge from a large language model (LLM) into deterministic, executable feature programs instead of asking the model to diagnose images. A web-enabled LLM retrieves clinical evidence and synthesizes programs that measure visually assessable scar attributes. Candidate programs execute in a restricted local environment, and only aggregate validation statistics and feature-level SHAP summaries are returned for iterative repair and refinement; raw images and patient-level outputs remain local. A lightweight Random Forest then operates on the resulting structured representation. On 600 photographs from three hospitals under leave-one-site-out evaluation, ScaFE achieves 81.0% site-macro balanced accuracy, exceeding the strongest baseline, BiomedCLIP, by 10.0 percentage points. With only 10% of the development data, ScaFE retains 72.0% balanced accuracy and an 11.8-point lead. Iterative refinement also raises the executable-program rate from 66.7% to 95.0%, with verified evidence for 91.7% of the final features. These results show that LLM knowledge can support data-efficient, cross-site medical image classification through local and auditable feature programs rather than direct VLM decisions.",
-      "pdf_url": "https://arxiv.org/pdf/2607.28538v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.28538v1",
-      "published": "2026-07-30T17:05:20Z",
-      "updated": "2026-07-30T17:05:20Z",
+      "abstract": "Slice-based MLLMs leverage mature 2D encoders by representing 3D volumes as sequences of 2D slices. However, this slice-wise formulation produces thousands of visual tokens that burden the LLM backbone, many of which capture overlapping visual evidence across adjacent slices. To understand how effectively a growing visual token budget improves performance, we perform scaling analyses on two 3D medical VQA benchmarks and find diminishing returns: cost keeps rising while accuracy saturates, and improving in-plane resolution is more effective than adding slices at comparable budgets. The budget should therefore be allocated more selectively rather than simply enlarged, yet most token compression methods are designed for 2D images or videos, where redundancy arises from spatial layout or temporal motion rather than from near-duplicate content along the depth axis. We present CARVE, a training-free framework that compresses visual tokens prior to LLM inference and casts token reduction as budget-constrained 2.5D allocation. CARVE partitions the depth axis into coherent windows and allocates tokens non-uniformly according to normalized cross-slice evidence. Under a shared budget, CARVE builds spatial anchors on representative slices and retrieves locally varying evidence from the full volume, then merges remaining eligible tokens into nearby anchors within each window. Removing roughly 80% of the visual tokens on Hulu-Med-7B, CARVE leads all compression baselines on every AMOS-MM report-generation metric, with 6.2 points higher retention of full-token quality than the strongest baseline, and preserves 98.1% of full-token performance across three VQA benchmarks.",
+      "pdf_url": "https://arxiv.org/pdf/2608.04515v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.04515v1",
+      "published": "2026-08-05T06:49:49Z",
+      "updated": "2026-08-05T06:49:49Z",
       "categories": [
         "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "RESPClinBench: Benchmarking Multimodal Clinical Decision-Making and Longitudinal Disease Management in Respiratory Specialty Care",
+      "authors": [
+        "Mouxiao Bian",
+        "Zhi Chen",
+        "Ruiyao Chen",
+        "Lu Lu",
+        "Hengrui Liang",
+        "Chaoyi Huang",
+        "Yiluo Lin",
+        "Jingru Ding",
+        "Yun Zhong",
+        "Yuming Su",
+        "Jie Xu"
+      ],
+      "abstract": "Background: Respiratory specialty care requires multimodal interpretation, longitudinal risk assessment, guideline-concordant intervention, and whole-course management, which are poorly represented by examination-oriented medical benchmarks. Objective: To develop RESPClinBench, a real-world scenario-based benchmark for respiratory clinical decision-making, and evaluate seven contemporary large language models across AECOPD-PIM and PNBIM. Methods: RESPClinBench cases were adapted from de-identified respiratory clinical data. Three attending-level respiratory physicians revised cases, reference answers, and atomic clinical-action points, while one senior respiratory specialist performed cross-review and final adjudication. AECOPD-PIM comprised 427 open-ended COPD cases, and PNBIM comprised 196 multimodal pulmonary nodule cases combining chest CT with structured clinical information. Seven models generated 4,361 responses through standardized API inference with temperature 0 and a maximum output length of 8192 tokens. An automated framework calculated the final score as the arithmetic mean of atomic-action recall and rubric-based LLM-as-a-Judge assessment. Results: Across 623 cases, the mean final score was 68.58. Qwen3.6-27B ranked first overall at 71.22, Qwen3.5-397B-A17B led PNBIM at 72.48, and Qwen3.6-27B led AECOPD-PIM at 71.11. Imaging hallucination and serious medical risk occurred in 31.85% and 8.16% of PNBIM responses; medication-safety risk and serious medical risk occurred in 26.93% and 1.44% of AECOPD-PIM responses. Conclusions: RESPClinBench identifies task-specific limitations in multimodal pulmonary nodule assessment and longitudinal COPD management. Combining explicit clinical-action coverage, holistic evaluation, and independent safety flags provides a clinically grounded basis for model selection and prospective validation.",
+      "pdf_url": "https://arxiv.org/pdf/2608.04514v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.04514v1",
+      "published": "2026-08-05T06:49:30Z",
+      "updated": "2026-08-05T06:49:30Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Equitable System-Prompt Selection via Constrained Mixed-Strategy GroupDRO",
+      "authors": [
+        "Mengyu Xu",
+        "Qiaoxin Yang",
+        "Zhihan Liu",
+        "Ruiyao Xu",
+        "Zachary Liu",
+        "Kezhen Chen",
+        "Chongyang Gao"
+      ],
+      "abstract": "Large language models are increasingly used for information seeking, yet semantically equivalent questions phrased in different ways can receive answers of considerably different quality. System prompts are widely employed to steer response behavior, but they are typically optimized for average-case quality, so some question phrasings may still receive incomplete or low-quality answers. To address this, we formulate a constrained mixed-strategy GroupDRO framework for system-prompt selection. Instead of optimizing the system-prompt text, the framework assigns weights to system prompts in an existing pool to minimize the worst-case information-quality loss across evaluation metrics and groups, while constraining the mean loss to stay close to that of average-based selection. Because pool generation and selection are decoupled, the method applies to any system-prompt pool and can leverage an ensemble of complementary system prompts rather than a single one. Across five LLMs on two bilingual medical and consumer-finance benchmarks, the constrained method reduces the Overall Mean, Worst 25% Mean, and Worst by 13.1%, 13.2%, and 13.7% on average relative to no mitigation while keeping overall quality close to Average selection. Its multi-prompt weights reveal complementarity across metric-group pairs. Code and data are available at https://github.com/Rainxu09/equitable-system-prompt-selection.",
+      "pdf_url": "https://arxiv.org/pdf/2608.04339v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.04339v1",
+      "published": "2026-08-05T01:35:08Z",
+      "updated": "2026-08-05T01:35:08Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CE",
+        "stat.ML"
+      ]
+    },
+    {
+      "title": "A Comparative Study of Feature Selection Methods for EHR Diagnosis Codes in Opioid Use Disorder Prediction",
+      "authors": [
+        "Zihan Ding",
+        "Yinan Liu",
+        "Tengfei Ma",
+        "Rachel Wong",
+        "George Leibowitz",
+        "Benjamin Littenberg",
+        "Xia Zheng",
+        "Richard N. Rosenthal",
+        "Fusheng Wang"
+      ],
+      "abstract": "Feature selection is a critical step in electronic health record (EHR)-based predictive modeling, where input variables are often high-dimensional, sparse, noisy, and redundant. Large feature sets not only increase computational burden and overfitting risk, but also make model interpretation difficult, leading to limited usefulness in clinical settings. In this study, we focus on diagnosis-related features and compare five feature selection paradigms for opioid use disorder (OUD) prediction: recurrence enrichment, NTK-motivated early gradient sensitivity, LightGBM-SHAP, Elastic Net, and large language model (LLM)-guided semantic selection. We use a unified preprocessing and evaluation framework and assess each method by downstream predictive performance, resampling stability, and representation of infrequent diagnosis codes. Our results demonstrate that performance improves with larger feature budgets with diminishing returns beyond a moderate size. NTK sensitivity provides the best overall balance of accuracy and stability, and LLM-guided selection contributes complementary clinically meaningful signals despite lower standalone performance.",
+      "pdf_url": "https://arxiv.org/pdf/2608.04180v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.04180v1",
+      "published": "2026-08-04T19:37:29Z",
+      "updated": "2026-08-04T19:37:29Z",
+      "categories": [
         "cs.LG"
       ]
     },
     {
-      "title": "AIx4Soccer: A Unified Platform Architecture for Football Club Management and Structured Athlete Development",
+      "title": "CARE-Bench: Benchmarking Patient-Facing LLM Triage",
       "authors": [
-        "Frederico Falconi Costa",
-        "Salvador Cesar Costa",
-        "Fabricio F. Costa"
+        "Yining Hua",
+        "Hongbin Na",
+        "Cyrus Ayubcha"
       ],
-      "abstract": "Football clubs, academies, and federations operate a growing but fragmented portfolio of digital tools: separate systems for video analysis, GPS/performance tracking, medical records, scouting, and administration. This fragmentation is most acute outside the elite European clubs that can afford integration, producing a digital divide that disadvantages grassroots clubs in developing markets such as Brazil, paradoxically the world's largest exporter of professional players. This paper presents, at a conceptual level, the architecture of \"AIx4Soccer One Platform,\" a multi-tenant cloud SaaS operating system that unifies club-management workflows and embeds a structured athlete-development methodology, the PDI Framework (Plano de Desenvolvimento Individual / Individual Development Plan). We describe two companion components: \"Tak Tik,\" a certified two-sided marketplace connecting clubs with video analysts under a 75%/25% (analyst/platform) revenue split, and the PDI/TBIL methodology, which links development plans to video evidence and periodic review. As Materials and Methods, we state explicit requirements and give a formal, implementation-independent specification of the platform's proposed future substrate: an event-centric semantic data model in which every fact is a typed, immutable event in an append-only log that induces a growing knowledge graph. We situate the design against the literature on athlete-development frameworks, sports-analytics workflows, two-sided-market economics, and multi-tenant SaaS patterns, and discuss youth data-protection obligations (Brazil's LGPD and 2025 Digital ECA; the EU GDPR), algorithmic-fairness risks in talent evaluation, and why small, domain-specific models, rather than frontier LLMs, are the appropriate intelligence layer. This is a design and early-deployment paper, not an empirical evaluation, making no efficacy claims.",
-      "pdf_url": "https://arxiv.org/pdf/2607.28531v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.28531v1",
-      "published": "2026-07-30T17:02:58Z",
-      "updated": "2026-07-30T17:02:58Z",
+      "abstract": "Patient-facing medical LLMs and agents increasingly answer symptom questions before clinician contact, where the key safety question is what action the user should take next. We introduce CARE-Bench, a source-grounded benchmark that evaluates sequential patient-facing triage as a four-label per-turn current-action task. CARE-Bench contains 500 cases and 1,059 evaluated patient-disclosure prefixes reconstructed from medical dialogue, consultation, and follow-up-question sources. We evaluate 11 models on 269 held-out rounds under unprompted and minimally prompted open-ended protocols, using a fixed GPT-5.5 mapper to code each response into the four-label action space. Unprompted macro-F1 remains low, ranging from 31.2 to 50.4. Prompting improves 10 of 11 models, with prompted macro-F1 ranging from 46.9 to 63.4, but substantial threshold errors remain. Prompted models often recommend care before needed clarification is obtained; when the correct action was to ask for more information, only 33.5% of prompted outputs preserved the step. The persistence of these errors after prompting suggests that patient-facing triage is not a simple prompting problem and supports explicit evaluation of action timing before deployment.",
+      "pdf_url": "https://arxiv.org/pdf/2608.03731v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.03731v1",
+      "published": "2026-08-04T14:26:45Z",
+      "updated": "2026-08-04T14:26:45Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "DiagLoop: A Counterfactual Data Flywheel with Stage-Localized Reinforcement for Diagnostic LLMs",
+      "authors": [
+        "Jian Zhang",
+        "Bingyi Wang",
+        "Yizhi Liu"
+      ],
+      "abstract": "Causal diagnostic models must explain how conclusions follow from evidence because diagnoses guide repairs and treatments. Yet serious cases are scarce, records rarely contain reasoning paths, and data transfer poorly across configurations, complicating local deployment. We present DiagLoop, a counterfactual data flywheel that converts codified physical relations or clinical guidelines, authored once per mechanism family, into training supervision beyond recorded cases. A training-only teacher proposes counterfactual worlds by varying causes, contexts, and observations, while an independent hybrid checker admits only valid worlds. The student reasons through symptom abstraction, causal-chain construction, and root-cause attribution. Stage-specific criteria identify its earliest failure. For nonterminal failures, a bounded repair probes downstream competence, and the resulting weakness profile guides subsequent data generation. Stage-localized reinforcement learning updates only the model-generated continuation, while replay and preservation reduce forgetting. The same criteria govern admission, attribution, reward, and regeneration through checks separate from the proposer. Using only synthesized scenarios and no case-level expert reasoning annotations, the resulting 8B model improves strict path correctness over the strongest conventional baseline. Gains are 11.6 points across eight industrial systems and 5.5 points across ten disease categories. Gains over a deranged-routing control are 3.9 and 2.3 points, respectively. The model also exceeds the evaluated proprietary references in both domains, even when they receive few-shot examples or the specification in context.",
+      "pdf_url": "https://arxiv.org/pdf/2608.03674v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.03674v1",
+      "published": "2026-08-04T13:49:41Z",
+      "updated": "2026-08-04T13:49:41Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "CausalOPD: First-Wrong-Step Supervision for Distilling Causal Chain Reasoning",
+      "authors": [
+        "Jian Zhang",
+        "Bingyi Wang",
+        "Yizhi Liu"
+      ],
+      "abstract": "Many critical reasoning tasks, including clinical diagnosis, legal judgment, and industrial fault diagnosis, require step-dependent causal chains in which early errors propagate and correct conclusions can mask invalid reasoning. Although large language models perform well on such tasks, privacy, latency, and controllability motivate distillation into locally deployable models. Standard trajectory imitation does not correct process errors on the student's own rollout distribution. We propose CausalOPD, a curriculum online process distillation framework. A knowledge-augmented teacher first provides trajectories grounded in domain-specific causal rules, entity relations, and structural constraints. The student then generates on-policy trajectories, and the teacher identifies the first wrong step, defined as the earliest transition that verifiably violates available constraints. Starting from the verified prefix, short-horizon reinforcement learning repairs this localized failure. A causal-stage curriculum advances from evidence-level to mechanism-level and conclusion-level errors, following their propagation order. Across three domains, CausalOPD improves average path correctness by 23.4 percentage points over sequence-level online process distillation and reduces the right-label-wrong-reasoning rate from 15.7% to 4.4%. The domain-specific 8B students also surpass both evaluated proprietary references in path correctness across all domains.",
+      "pdf_url": "https://arxiv.org/pdf/2608.03673v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.03673v1",
+      "published": "2026-08-04T13:49:12Z",
+      "updated": "2026-08-04T13:49:12Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Learning Clinical-Trial Strategy: Offline Policy Training for Decision Agents",
+      "authors": [
+        "William Bolton",
+        "Philip Torr"
+      ],
+      "abstract": "Clinical development is sequential decision-making under uncertainty, where a sponsor must plan a portfolio of experiments from heterogeneous evidence. We study this setting by framing oncology clinical development as an offline decision-making problem in which an agent predicts the next six-month trial portfolio of an oncology drug program from information available at the decision date. To support this, we construct a temporal dataset that combines 31.7k heterogeneous public data records, including trial registries, regulatory reviews, sponsor filings, utilization data, and epidemiology, into 881 offline decision episodes across 45 historical programs. We compare four offline objectives: behavioral cloning, reward-weighted behavioral cloning, learned-reward training, and value-based implicit Q-learning against four frontier LLM agents that share a common date-gated retrieval scaffold across held-out drug, sponsor, drug-class, and temporal splits. Models trained offline outperform the non-fine-tuned baselines, particularly in the post-August 2025 contamination-clean holdout. Reward-weighted behavioral cloning performs the best, obtaining 46.2% indication F1 and 14.2% strict F1 against 25.0% and 2.1%, respectively, for the best-performing tool agent on each metric. These results suggest that structured offline learning can teach agents to plan clinical experiments.",
+      "pdf_url": "https://arxiv.org/pdf/2608.03606v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.03606v1",
+      "published": "2026-08-04T12:58:17Z",
+      "updated": "2026-08-04T12:58:17Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "AI-Assisted Peer Review Across Research Communities: From Reviewer AI Policies to LLM Review Quality",
+      "authors": [
+        "Alexander M. Fichtl",
+        "Lukas Ellinger",
+        "Josefin Kelber",
+        "Kry\u0161tof Ol\u00edk",
+        "Georg Groh"
+      ],
+      "abstract": "AI-assisted peer review is increasingly discussed and adopted as a tool to support the scientific publishing process, yet there is little systematic understanding of how publication venues regulate its use or of how capable current AI review systems are. We address these questions by first surveying reviewer-facing AI policies across 111 leading AI/NLP conferences and medical journals, revealing substantial regulation differences between the two communities. Second, we evaluate AI-generated peer reviews at ICLR 2026 and Nature Communications using a novel dataset comprising original manuscript submissions and several hundred human- and machine-generated reviews. We compare reviews produced by open-source and proprietary models using complementary evaluation metrics, including LLM-as-a-Judge, score alignment, granularity, and overlap with human reviewers' concerns. Our results show that current LLMs can generate detailed and fluent reviews but exhibit systematic weaknesses, such as overly positive recommendations, generic criticism, and uneven evidence grounding. We demonstrate that aggregate quality scores alone can overestimate review quality and argue for multi-dimensional evaluation of AI-generated peer reviews.",
+      "pdf_url": "https://arxiv.org/pdf/2608.03581v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.03581v1",
+      "published": "2026-08-04T12:34:47Z",
+      "updated": "2026-08-04T12:34:47Z",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LLM-Assisted Review Prioritization for German Statutory Health Insurance Websites: A Multi-Stage Corpus Audit",
+      "authors": [
+        "Martin M\u00f6ller"
+      ],
+      "abstract": "Background: German statutory health insurance (SHI) funds publish web portfolios that exceed continuous specialist review capacity. Their content can shape health and benefit expectations. Generic AI-text detection does not identify medical, benefit, legal, or editorial review needs. Objective: To characterize a multi-stage workflow that prioritizes substantive review needs while separating AI-provenance signals from quality claims. Methods: We analyzed 56,198 pages from 84 SHI websites or sub-sites. The workflow combined deterministic screening, model-assisted triage and in-depth review, minimum evidence checks, temporal-validity safeguards, and paired-model comparison. It is reproducibility-bounded, not a validated detector. Production code is proprietary; reproducibility rests on frozen derived tables and paired-comparison artifacts. The 300-page lower-priority check was a single-model, risk-enriched routing stress test, not a human-reference evaluation. Results: All pages received a review state. The workflow generated 35,998 review records and routed 21,452 to case review. The workload concentrated in transparency, legal framing, medical content, contradictions, and AI-related failure-mode signals. A quoted passage was locatable in captured page text for 31,347 records, confirming literal occurrence rather than factual correctness. The routing stress test surfaced a signal on 100/300 pages (33.3% within the sample). Across 182 matched cases, two models agreed in 75.8% (kappa = 0.532; 95% CI 0.415-0.649). Conclusions: The workflow produces a prioritized workload, not error prevalence or final legal, medical, or insurer-level findings. It neither proves AI authorship nor validates autonomous detection. Paired-model agreement quantifies consistency, not correctness or sufficient triage performance; public claims require human adjudication.",
+      "pdf_url": "https://arxiv.org/pdf/2608.03500v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.03500v1",
+      "published": "2026-08-04T11:42:31Z",
+      "updated": "2026-08-04T11:42:31Z",
       "categories": [
         "cs.CY"
       ]
     },
     {
-      "title": "When Specifications Conflict: A Symmetry-Based Framework for Measuring LLM Preferences",
+      "title": "TimeRLM: Recursive Language Models Enable Precise Anomaly Localization in Long-Context Time-Series",
       "authors": [
-        "Tairan Wang",
-        "Liang Zhou",
-        "Zikang Zhan",
-        "Pingchuan Yan"
+        "Nicolas Zumarraga",
+        "Lorenzo Steno",
+        "Ning Wang",
+        "Max Rosenblattl",
+        "Thomas Kaar",
+        "Maxwell A. Xu",
+        "Kevin O'Sullivan",
+        "Markus Kreft",
+        "Elgar Fleisch",
+        "Paul Schmiedmayer",
+        "Patrick Langer",
+        "Robert Jakob"
       ],
-      "abstract": "Large language models (LLMs) are increasingly required to integrate multiple sources of information that may be inconsistent or conflicting. However, there is still a lack of controllable and attributable methods for analyzing how models resolve conflicts between competing specifications. We propose a controlled experimental framework for studying model preferences under conflicting specifications. By constructing specifications with explicit conflicts, the framework enables model choices between competing specifications to be directly observed and analyzed. A symmetry-based design further reduces confounding factors, allowing preferences across representation types to be compared systematically.\n  We evaluate the framework on an executable mathematical benchmark with 550 conflict instances spanning 11 function families, comparing four representation types: pure natural language, formal language, naturalized formal language, and input--output examples. Results show systematic preference patterns rather than random behavior, with a consistent ordering: $ \\text{Formal} \\approx \\text{Naturalized Formal} > \\text{Pure Natural Language} > \\text{Input--Output Examples} $. Example effects further depend on model capability and function family.\n  We extend the framework to heterogeneous specification conflicts in Boolean algebra, code generation, and the clinical domain, demonstrating its applicability across diverse tasks and specification forms. The framework provides a unified approach for measuring how LLMs resolve conflicts between competing sources of information.",
-      "pdf_url": "https://arxiv.org/pdf/2607.28384v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.28384v1",
-      "published": "2026-07-30T15:42:32Z",
-      "updated": "2026-07-30T15:42:32Z",
+      "abstract": "Precise anomaly localization over long-context time series is a crucial task in monitoring applications across clinical care, industrial operations, financial services, and logistics, where brief evidence may hide inside long spans of high-frequency data. Time-Series Language Models (TSLMs) are able to ingest time series data and verbalize findings on anomalies in natural language; however, recent benchmarks report a decrease in retrieval performance at long contexts, mirroring failure modes in text, vision, and audio. In the text domain, Recursive Language Models (RLMs) can recover much of this lost performance by keeping context external to the large language model (LLM), allowing the model to query it through code. We present TimeRLM, an RLM formulation for time-series that sequentially manipulates the signal using code and vision capabilities. We further introduce AnomalyXL, a synthetic long-context anomaly localization benchmark with programmatically injected anomalies that require precise retrieval. We implement five different task categories and two variants: AnomalyXL-MCQ and AnomalyXL-Localize. TimeRLM outperforms every evaluated TSLM and single-pass baseline on four of the five AnomalyXL-Localize tasks, reaching 0.682 IoU on localization and 0.745 on classify-with-evidence, versus at most 0.329 and 0.072 across all baselines. We post-train TimeRLM using reinforcement learning. The resulting model further improves performance and requires approximately one-third as many agent interaction turns as its untrained base model to produce a final answer. On unseen real-world ECG, sleep and software observability recordings, the post-trained TimeRLM retains or improves performance, surpassing TSLMs despite being trained exclusively on synthetic data. Our findings suggest recursive interaction with time-series is an effective approach for long-horizon retrieval.",
+      "pdf_url": "https://arxiv.org/pdf/2608.03391v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.03391v1",
+      "published": "2026-08-04T09:40:45Z",
+      "updated": "2026-08-04T09:40:45Z",
       "categories": [
-        "cs.AI"
+        "cs.LG"
       ]
     },
     {
-      "title": "PathView-Bench: Can Multimodal Large Language Models Achieve Fine-grained Multiscale Understanding of Pathology Images?",
+      "title": "MoEGen: Mixture-of-Experts for Instance-Adaptive LoRA Generation",
       "authors": [
-        "Zongyi Chen",
-        "Yu Liang",
-        "Jie Lin",
-        "Liansheng Wang"
+        "Yiming Zeng",
+        "Lei Lu",
+        "Zexin Li",
+        "Zhuochun Li",
+        "Shuoqiu Li",
+        "Shuyi Liao",
+        "Xidong Wu",
+        "Zeyu Zhang",
+        "Minmei Wang",
+        "Yu Zhao",
+        "Tingting Yu",
+        "Shangqian Gao"
       ],
-      "abstract": "Multimodal large language models (MLLMs) are increasingly used to analyze pathology images. However, dominant multimodal benchmarks in pathology mainly score final diagnostic answers, captions, or reports. These evaluations provide limited insight into whether a model understands the multiscale visual content needed for pathology reasoning and decision-making. We introduce PathVU, a vision-anchored benchmark for fine-grained and multiscale visual understanding in computational pathology. Built from 23 public pathology imaging datasets with human-supervised labels and spatial annotations, PathVU evaluates MLLM understanding in two fields of view: Region FOV for high-resolution local regions and Slide FOV for macro whole-slide views. By converting raw annotations into deterministic task targets, PathVU enables programmatic scoring of region localization, visual recognition, quantity estimation, spatial reasoning, and insufficient-context judgment. The benchmark contains 14 VQA-style tasks, 61,673 images, and 308,070 samples across 28 organs and 7,253,526 annotations. Evaluating 18 representative general-purpose, medical-domain, and pathology-oriented MLLMs, we observe substantial limitations even in advanced models on fine-grained visual tasks across multiscale pathology images. PathVU provides a reproducible basis for developing and evaluating pathology MLLMs with explicit multiscale visual understanding.",
-      "pdf_url": "https://arxiv.org/pdf/2607.28318v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.28318v1",
-      "published": "2026-07-30T14:53:51Z",
-      "updated": "2026-07-30T14:53:51Z",
+      "abstract": "Parameter-efficient fine-tuning (PEFT) enables efficient adaptation of large language models, but existing MoE-based PEFT methods typically improve capacity by storing multiple full LoRA experts, causing adapter storage to grow linearly with the number of experts and restricting adaptation to a fixed expert pool. We ask whether MoE-based PEFT can produce instance-specific adaptations without explicitly storing a separate LoRA module for each expert. To address this gap, we propose MoEGen, an adaptation framework that shifts MoE-based PEFT from expert selection to expert-conditioned parameter generation. Instead of storing each expert as a full LoRA adapter, MoEGen represents each expert as a small learnable vector, termed an expert code. It routes each input over these vectors and uses their weighted combination to condition a lightweight hypernetwork that generates input-specific low-rank updates. This design decouples expert capacity from adapter storage while enabling instance-conditioned adaptation. Experiments on eight commonsense reasoning benchmarks show consistent improvements over strong static and MoE-based PEFT baselines across three backbones. MoEGen also performs strongly in joint medical and legal-domain adaptation.",
+      "pdf_url": "https://arxiv.org/pdf/2608.03275v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.03275v1",
+      "published": "2026-08-04T07:51:30Z",
+      "updated": "2026-08-04T07:51:30Z",
       "categories": [
-        "cs.AI"
+        "cs.CL"
       ]
     },
     {
-      "title": "Bridging Probabilistic LLMs and Deterministic Statistical Validation: The PROVE Multi-Agent Framework for Clinical Trial Reporting",
+      "title": "NeuroMosaic: Anatomically Grounded Multimodal Large Language Modeling for Molecularly Aware Glioma Reasoning from 3D MRI and Clinical Narratives",
       "authors": [
-        "Zhaohua Lu",
-        "Cheng Zheng",
-        "Yuanyuan Han"
+        "Yantong Liu",
+        "Zheyu Zhang",
+        "Runpeng Liu",
+        "Mu Xitang",
+        "Seong-Yoon Shin",
+        "Hyun-Ae Lee"
       ],
-      "abstract": "Ensuring the accuracy and consistency of clinical trial Tables, Figures, and Listings (TFLs) remains a major challenge in regulatory reporting. Independent programming and manual review are essential quality-control practices, but cross-output verification still depends heavily on reviewer inspection and may miss structural, logical, or arithmetic discrepancies. Large language models (LLMs) can help interpret varied table language and navigate lengthy study documents, but they are not reliable substitutes for programmed statistical checks. We introduce PROVE (Programmatic Reporting and Output Verification Engine), an auditable framework that uses optional LLM and retrieval support for table interpretation while reserving numerical and logical decisions for programmed validators. PROVE links findings to source evidence, supports cross-output consistency checks, and allows LLM use to be enabled or disabled based on study requirements. We evaluated PROVE using ten replicated synthetic oncology reporting packages generated from raw data through SDTM, ADaM, and TFL outputs, with paired clean and discrepancy-injected packages; each replicate included 15 randomly injected discrepancies. We examined two table-label settings: exact labels matching the validator vocabulary and labels with similar clinical meaning but different wording. Within the implemented rule classes, all automated PROVE variants achieved perfect classification in the exact-label setting. In the label-variation setting, LLM-assisted semantic matching improved overall recall from 0.588 to 0.993 and overall F1 from 0.735 to 0.996 compared with exact-match, fuzzy lexical, and embedding-similarity variants. These findings suggest that LLMs are most useful for interpreting real-world variation in TFL wording and formatting, while executable checks should remain responsible for final numerical validation.",
-      "pdf_url": "https://arxiv.org/pdf/2607.28218v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.28218v1",
-      "published": "2026-07-30T13:52:58Z",
-      "updated": "2026-07-30T13:52:58Z",
+      "abstract": "Multimodal medical large language models remain structurally weak for neuro-oncology because volumetric evidence is compressed into generic visual tokens and diagnostic conclusions often lack an auditable link to MRI regions. We present NeuroMosaic, a 3D multimodal language model that converts multi-sequence brain MRI into anatomy-indexed regional tokens, aligns them with clinical narrative and molecular concepts, and generates evidence-linked outputs. The architecture combines a multi-resolution volumetric tokenizer, a neuroanatomical graph router, a molecular concept memory, and selective risk control. Across four glioma cohorts, NeuroMosaic achieved an internal subtype macro-F1 of 0.827 and external macro-F1 values of 0.784, 0.761, and 0.742. On UPenn-GBM, it improved over the strongest matched-input baseline by 3.6 percentage points (95% CI: 1.8 to 5.4, adjusted p = 0.0018), with IDH, 1p/19q, and MGMT AUROCs of 0.918, 0.861, and 0.781. Evidence pointing accuracy reached 0.703, and targeted evidence deletion reduced correct-answer probability by 0.187, compared with 0.046 for random deletion. These results establish anatomy-indexed routing as a measurable mechanism for accurate, grounded, and calibrated volumetric medical-language reasoning.",
+      "pdf_url": "https://arxiv.org/pdf/2608.03187v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.03187v1",
+      "published": "2026-08-04T06:26:50Z",
+      "updated": "2026-08-04T06:26:50Z",
       "categories": [
-        "stat.AP"
+        "cs.NE"
       ]
     },
     {
-      "title": "The MADRS Pipeline: Supporting Depression Assessment in Clinical Trials",
+      "title": "Activation-Guided Neuron Intervention to Induce Alzheimer's-Related Computational Language Phenotypes in a Large Language Model",
       "authors": [
-        "Mila Fodor",
-        "Katalin \u00d3csai",
-        "Francesco Periti",
-        "Rien Sonck",
-        "Alex Boudreau"
+        "Rui He",
+        "Ercong Nie",
+        "Hong Jiang",
+        "Iris E. Sommer",
+        "Philipp Homan",
+        "Wolfram Hinzen"
       ],
-      "abstract": "Depression is a major mental disorder for which diagnosis relies primarily on clinical assessments. Automated methods to support its detection via the psychiatric MADRS scale are getting more and more attention. While existing solutions primarily focus on detecting the disorder from different text sources (e.g., online text, social media), there is still limited support for clinical trials, where clinical assessments are conducted through structured interviews based on standard guidelines such as SIGMA. In this work, we develop a LLM pipeline specifically designed to support clinicians in supporting the assessment of depression in patients enrolled in clinical trials. Our pipeline converts audio interviews into transcripts, maps them into the ten MADRS symptom items, estimates their severity, and identify problematic clinical ratings associated with them. Evaluation on real clinical interviews shows a strong overall correlation of 0.867 with expert ratings, providing interpretable support for future assessments in clinical trials.",
-      "pdf_url": "https://arxiv.org/pdf/2607.28190v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.28190v1",
-      "published": "2026-07-30T13:27:56Z",
-      "updated": "2026-07-30T13:27:56Z",
+      "abstract": "Changes in spontaneous speech provide an early signal of cognitive dysfunction in Alzheimer's disease (AD) that large language models (LLMs) can detect. However, detection alone cannot establish whether the underlying model representations contribute functionally to behavior. We introduce an activation-guided intervention framework using Qwen3-8B. The framework identifies feed-forward neurons with higher activation rates for AD than control transcripts and modulates their output contributions during generation by scaling the corresponding down-projection weights. This yielded nine edited variants differing in intervention direction, magnitude, and scope. The original and edited models completed the same 12-turn neuropsychological battery, assessed through blinded human ratings and computational linguistic measures. Amplifying AD-associated neurons produced graded impairments in story recall, verbal fluency, working memory, procedural discourse, scene construction, and coreference resolution. Attenuation largely preserved performance and selectively improved several outcomes. Amplification also reduced lexical surprisal, idea density, syntactic complexity, and discourse quantity, broadly paralleling changes reported in human AD speech. These findings show that neurons identified solely from clinical language differences can influence behavior across multiple cognitive domains, providing proof of concept for an AD-related computational phenotype and a controlled framework for experimentally examining links between language and broader cognitive dysfunction.",
+      "pdf_url": "https://arxiv.org/pdf/2608.03067v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.03067v1",
+      "published": "2026-08-04T03:28:37Z",
+      "updated": "2026-08-04T03:28:37Z",
       "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Can Agents Deceive? Evaluating Reasoning and Deception in ParliamentBench using a Social Deduction Game",
-      "authors": [
-        "Niklas Bauer",
-        "Lars Benedikt Kaesberg",
-        "Akiko Aizawa",
-        "Jan Philip Wahle",
-        "Bela Gipp",
-        "Terry Ruas"
-      ],
-      "abstract": "As large language models (LLMs) are deployed as agents in high-stakes settings, such as medical and legal systems, understanding their deceptive capabilities is fundamental to safety. Controlled social deduction games provide a reproducible proxy for isolating and evaluating these complex adversarial behaviors. We present the open-source benchmark framework ParliamentBench based on the game Secret Hitler to evaluate LLMs in scenarios that require deception, persuasion, and reasoning under information asymmetry. We evaluate 16 LLMs across 1,600 simulated matches playing each other, playing against humans, and compare them against a large set of online games. We introduce three novel metrics that isolate social deduction, reasoning, and deceptive consistency. Our experiments reveal that frontier models achieve strong performance across cooperative and deceptive roles, with a strong top-four cluster (GPT-5.4, Kimi K2.5, Grok 4.1 Fast, and DeepSeek 3.1 Terminus), whereas the weakest models fall short of random (33%) and simple algorithmic (45%) baselines. Most LLMs struggle to maintain a consistent deceptive persona throughout an entire game, with deception retention dropping below 50%.",
-      "pdf_url": "https://arxiv.org/pdf/2607.28146v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.28146v1",
-      "published": "2026-07-30T12:54:17Z",
-      "updated": "2026-07-30T12:54:17Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Benchmarking Foundation and Large Language Models for Few-Shot Medical Image Segmentation",
-      "authors": [
-        "Jinghong Liu",
-        "Yuchuan Deng",
-        "Fanping Liu",
-        "Meng Huang",
-        "Xirong Li"
-      ],
-      "abstract": "Few-shot medical image segmentation (FS-MIS) aims to segment novel regions of interest (ROIs) from a few annotated support examples. Despite rapid progress, existing FS-MIS solutions span diverse paradigms but are evaluated under inconsistent settings, leaving their relative effectiveness unclear. We introduce FAME, a unified benchmark for evaluating FS-MIS solutions, covering specialists, SAM-based methods, CLIP-based methods, and MLLM-based methods. FAME contains 14,958 test samples across 7 anatomical sites, 9 imaging modalities, and 14 ROI categories, and evaluates models under zero-shot and ten-shot settings with additional assessment of target-absence recognition and generalization under covariate and semantic shifts. Our evaluation reveals several findings. First, effective few-shot segmentation depends on how models exploit support examples: direct visual adaptation generally outperforms prompt-based strategies. Second, increasing support examples improves performance only when models can effectively utilize them. Third, semantic transfer remains substantially more challenging than imaging-domain adaptation, and strong localization ability does not necessarily imply reliable target-absence recognition. We hope FAME provides a comprehensive understanding of current FS-MIS solutions and facilitates the development of more effective and reliable few-shot medical segmentation methods.",
-      "pdf_url": "https://arxiv.org/pdf/2607.27856v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.27856v1",
-      "published": "2026-07-30T08:34:36Z",
-      "updated": "2026-07-30T08:34:36Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "LoMeVQA: A Comprehensive Benchmark for Longitudinal Medical VQA",
-      "authors": [
-        "Zhilin Wu",
-        "Zhangkai Ni",
-        "Chengmei Yang",
-        "Longzhen Yang",
-        "Yihang Liu",
-        "Ying Wen",
-        "Lianghua He"
-      ],
-      "abstract": "In clinical practice, patients often undergo multiple imaging examinations over successive visits, yielding longitudinal data. Modeling such temporal information is crucial for reliable assessment of disease progression and treatment response. However, despite the rapid advancement of multimodal large language models (MLLMs), longitudinal medical visual reasoning remains largely underexplored. To fill this gap, we propose LoMeVQA, a comprehensive benchmark consisting of 206K longitudinal visual question answering (VQA) pairs for temporal medical image analysis. LoMeVQA covers five tasks: progress classification, progress description, progress report generation, differential region grounding, and differential region description. To construct the dataset, we develop an automated pipeline that (1) organizes patient records chronologically, (2) extracts clinically meaningful entities via a medical knowledge graph, and (3) models their temporal evolution to guide large language models in generating high-quality longitudinal VQA pairs. Extensive evaluations demonstrate that both general-purpose and medical-domain MLLMs perform poorly on LoMeVQA, revealing substantial limitations in temporal reasoning. To address these limitations, we introduce MedLong-8B, which achieves state-of-the-art performance across all tasks. Beyond benchmarking, we conduct detailed analyses that uncover key failure modes and shed light on how to improve longitudinal medical visual reasoning. Our data is available at: https://github.com/pepperbubble/LoMeVQA",
-      "pdf_url": "https://arxiv.org/pdf/2607.27806v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.27806v1",
-      "published": "2026-07-30T07:45:58Z",
-      "updated": "2026-07-30T07:45:58Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Belief Coevolution in a Social Network of Generalist and Specialist Large Language Models",
-      "authors": [
-        "Germans Savcisens",
-        "Samantha Dies",
-        "Courtney Maynard",
-        "Tina Eliassi-Rad"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly deployed in multi-agent environments. However, the processes by which beliefs form and propagate among interacting LLMs remain poorly understood. We introduce CoevolveSim, a framework for studying belief diffusion within networked LLM populations. CoevolveSim allows us to isolate and study three factors: domain specialization, social-role assignment, and social network structure. Within this framework, generalist and specialist LLM agents exchange and revise beliefs. In each round, an LLM agent observes a summary of its neighbors' beliefs before updating its own. We run 1,280 controlled simulations spanning four scenarios, two network structures, and 20 medical-indication statements. We find that persona-style role assignment and network structure reshape individual belief revision but have minimal effect on population-level consensus. In contrast, introducing (finetuned) specialist LLMs more than doubles the shift in consensus and gives rise to consistent asymmetries in exerted influence. We further show that simple persistence-based opinion-dynamics models reproduce collective outcomes in all-generalist LLM populations, whereas heterogeneous LLM populations require population-level belief composition to reproduce consensus and agent identity to predict individual belief transitions. Our results indicate that realistic simulation of belief diffusion in multi-agent LLM systems requires a diverse set of underlying LLMs, not persona prompting alone.",
-      "pdf_url": "https://arxiv.org/pdf/2607.27512v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.27512v1",
-      "published": "2026-07-29T23:02:37Z",
-      "updated": "2026-07-29T23:02:37Z",
-      "categories": [
-        "cs.CL",
-        "cs.MA",
-        "cs.SI"
-      ]
-    },
-    {
-      "title": "Same Facts, Different Diagnosis: Measuring and Mitigating Narrative Anchoring in Clinical Language Models",
-      "authors": [
-        "Prabhjot Singh",
-        "Pritam Deka",
-        "Vijay Chennareddy"
-      ],
-      "abstract": "Large language models used for clinical diagnostic reasoning are sensitive to sociolinguistic register, not just clinical content. We term this failure mode Narrative Anchoring: identical clinical facts expressed in different registers cause diagnostic outputs to diverge. Unlike prior demographic-bias work, which manipulates explicit identity tokens such as race or income, our benchmark isolates register as the sole channel of variation, with no demographic marker present in any form. We construct a dataset of 1,000 USMLE clinical vignettes, each rewritten into three sociolinguistically distinct personas under an independently audited fact-preservation guarantee, verified by a separate model that never sees the generation prompt. Across seven language models spanning three architecture families and scales, Narrative Anchoring is statistically significant under direct prompting in every model tested, with a Narrative Anchoring Gap of 0.064 to 0.151. Chain-of-thought reasoning and explicit debiasing instructions reduce the bias only partially, and their apparent gains are frequently confounded by accuracy collapse. We introduce NarrativeShield, a three-agent pipeline that structurally extracts and verifies clinical facts before diagnostic reasoning begins, reducing the Narrative Anchoring Gap to near-zero ($-0.004$ to $0.037$) and achieving the lowest rate of severely unstable decisions (DSS $<$ 0.8) of any method across all models, at a modest and mechanistically expected accuracy cost for most models. A stress test using a non-instruction-tuned base model shows that executing a debiasing intervention at all is gated by zero-shot instruction-following ability, not prompt content alone. We release our dataset, human-validated for fact preservation, as a standalone resource for studying register-based clinical bias.",
-      "pdf_url": "https://arxiv.org/pdf/2607.27384v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.27384v1",
-      "published": "2026-07-29T18:43:47Z",
-      "updated": "2026-07-29T18:43:47Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "PanDent: Toward Comprehensive Tooth-Level Structure-Language Consistency in Dental Radiology",
-      "authors": [
-        "Xiaohan Li",
-        "Xinyu Liu",
-        "Chang Liu",
-        "Sum Wing Au Yeung",
-        "Jun Liu",
-        "Yixuan Yuan",
-        "Hui Chen"
-      ],
-      "abstract": "Accurate evaluation of multimodal large language models (MLLMs) in dental panoramic radiography (orthopantomogram, OPG) is limited by the lack of fine-grained, clinically reliable benchmarks that reflect expert interpretation. This work introduces PanDent, a large-scale, clinically grounded OPG benchmark built upon fine-grained, expert-validated tooth-level annotations. The dataset comprises 9,524 high-quality OPGs, each associated with comprehensive structured annotations produced by experienced dentists and further validated by an oral and maxillofacial radiologist, providing clinically reliable supervision for tooth-level diagnosis and reasoning. Clinically consistent radiology reports are constructed from expert-validated findings using clinician-defined reporting logic, establishing explicit correspondence between structured clinical evidence and free-text descriptions. This design enables evaluation of whether MLLMs generate reports that are not only linguistically coherent but also clinically consistent with expert-validated tooth-level findings. Experiments are conducted on diverse MLLMs, including state-of-the-art (SOTA) proprietary models, general-domain open-source models, and medical-specific models. Results show that current MLLMs can generate fluent reports, yet fail to produce clinically consistent descriptions, exhibiting substantial errors in fine-grained localization and tooth-level diagnosis. Fine-tuning on PanDent significantly improves structure-language consistency, substantially enhancing visual localization accuracy and diagnostic correctness, and bringing model outputs closer to expert dental interpretation. These results establish PanDent as a rigorous benchmark for evaluating tooth-level clinical reasoning in MLLMs and a valuable resource for clinically grounded dental AI.",
-      "pdf_url": "https://arxiv.org/pdf/2607.27378v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.27378v1",
-      "published": "2026-07-29T18:36:07Z",
-      "updated": "2026-07-29T18:36:07Z",
-      "categories": [
-        "cs.CV",
-        "cs.MM"
+        "cs.CL"
       ]
     }
   ]

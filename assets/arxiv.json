@@ -1,298 +1,314 @@
 {
-  "generated_at_utc": "2026-08-06T03:12:37.762482Z",
+  "generated_at_utc": "2026-08-13T02:26:00.030664Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
     {
-      "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek across Specialist Domains",
+      "title": "A corpus-specific clinical RAG system matches or outperforms newer frontier LLMs on HealthBench",
       "authors": [
-        "Ayoub Kirouane",
-        "Christos Petrocheilos"
+        "Praveen Reddy",
+        "Charuta Mandke",
+        "Suvrankar Datta",
+        "Sarah Khan",
+        "Siddharth Reddy Anthireddy",
+        "Shitij Arora",
+        "Vishal Singh"
       ],
-      "abstract": "Modern Greek is absent from NVIDIA's Nemotron retrieval models and from major multilingual retrieval benchmarks, despite being important for retrieval-augmented generation (RAG) in legal, energy, financial, and medical applications. We present an end-to-end adaptation of the Nemotron retrieval stack for Modern Greek, including corpus mining, synthetic supervision, retrieval model training, reranker adaptation, reader fine-tuning, and a new benchmark called HERA. Our study shows that a parameter-free BM25 baseline outperforms several off-the-shelf multilingual dense retrieval models on specialist Greek corpora. After fine-tuning on 65,773 Greek retrieval pairs, a Nemotron 1B embedder improves nDCG@10 from 0.362 to 0.835 and substantially outperforms its unadapted counterpart. The learned language competence transfers to general-domain Greek, although the advantage over BM25 remains domain-dependent. We further adapt a cross-encoder reranker and demonstrate consistent improvements across specialist domains. Finally, we LoRA-tune a Nemotron 30B-A3B mixture-of-experts reader for grounded generation, increasing judged answer correctness from 29.4% to 66.9% while significantly improving faithfulness and citation quality. We also introduce HERA, the first large-scale Greek benchmark for retrieval-augmented generation, and release our adapted models and benchmark to support future research on Greek-language RAG systems.",
-      "pdf_url": "https://arxiv.org/pdf/2608.05138v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.05138v1",
-      "published": "2026-08-05T17:56:40Z",
-      "updated": "2026-08-05T17:56:40Z",
-      "categories": [
-        "eess.AS",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "CARVE: Cross-Slice Anisotropic Reallocation of Visual Evidence for Efficient 3D Medical Volume Understanding",
-      "authors": [
-        "Zhenyu Yi",
-        "Qiang Hu",
-        "Zhenhao Li",
-        "Jiaxuan Zhao",
-        "Yusong Sun",
-        "Lichi Zhang"
-      ],
-      "abstract": "Slice-based MLLMs leverage mature 2D encoders by representing 3D volumes as sequences of 2D slices. However, this slice-wise formulation produces thousands of visual tokens that burden the LLM backbone, many of which capture overlapping visual evidence across adjacent slices. To understand how effectively a growing visual token budget improves performance, we perform scaling analyses on two 3D medical VQA benchmarks and find diminishing returns: cost keeps rising while accuracy saturates, and improving in-plane resolution is more effective than adding slices at comparable budgets. The budget should therefore be allocated more selectively rather than simply enlarged, yet most token compression methods are designed for 2D images or videos, where redundancy arises from spatial layout or temporal motion rather than from near-duplicate content along the depth axis. We present CARVE, a training-free framework that compresses visual tokens prior to LLM inference and casts token reduction as budget-constrained 2.5D allocation. CARVE partitions the depth axis into coherent windows and allocates tokens non-uniformly according to normalized cross-slice evidence. Under a shared budget, CARVE builds spatial anchors on representative slices and retrieves locally varying evidence from the full volume, then merges remaining eligible tokens into nearby anchors within each window. Removing roughly 80% of the visual tokens on Hulu-Med-7B, CARVE leads all compression baselines on every AMOS-MM report-generation metric, with 6.2 points higher retention of full-token quality than the strongest baseline, and preserves 98.1% of full-token performance across three VQA benchmarks.",
-      "pdf_url": "https://arxiv.org/pdf/2608.04515v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.04515v1",
-      "published": "2026-08-05T06:49:49Z",
-      "updated": "2026-08-05T06:49:49Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "RESPClinBench: Benchmarking Multimodal Clinical Decision-Making and Longitudinal Disease Management in Respiratory Specialty Care",
-      "authors": [
-        "Mouxiao Bian",
-        "Zhi Chen",
-        "Ruiyao Chen",
-        "Lu Lu",
-        "Hengrui Liang",
-        "Chaoyi Huang",
-        "Yiluo Lin",
-        "Jingru Ding",
-        "Yun Zhong",
-        "Yuming Su",
-        "Jie Xu"
-      ],
-      "abstract": "Background: Respiratory specialty care requires multimodal interpretation, longitudinal risk assessment, guideline-concordant intervention, and whole-course management, which are poorly represented by examination-oriented medical benchmarks. Objective: To develop RESPClinBench, a real-world scenario-based benchmark for respiratory clinical decision-making, and evaluate seven contemporary large language models across AECOPD-PIM and PNBIM. Methods: RESPClinBench cases were adapted from de-identified respiratory clinical data. Three attending-level respiratory physicians revised cases, reference answers, and atomic clinical-action points, while one senior respiratory specialist performed cross-review and final adjudication. AECOPD-PIM comprised 427 open-ended COPD cases, and PNBIM comprised 196 multimodal pulmonary nodule cases combining chest CT with structured clinical information. Seven models generated 4,361 responses through standardized API inference with temperature 0 and a maximum output length of 8192 tokens. An automated framework calculated the final score as the arithmetic mean of atomic-action recall and rubric-based LLM-as-a-Judge assessment. Results: Across 623 cases, the mean final score was 68.58. Qwen3.6-27B ranked first overall at 71.22, Qwen3.5-397B-A17B led PNBIM at 72.48, and Qwen3.6-27B led AECOPD-PIM at 71.11. Imaging hallucination and serious medical risk occurred in 31.85% and 8.16% of PNBIM responses; medication-safety risk and serious medical risk occurred in 26.93% and 1.44% of AECOPD-PIM responses. Conclusions: RESPClinBench identifies task-specific limitations in multimodal pulmonary nodule assessment and longitudinal COPD management. Combining explicit clinical-action coverage, holistic evaluation, and independent safety flags provides a clinically grounded basis for model selection and prospective validation.",
-      "pdf_url": "https://arxiv.org/pdf/2608.04514v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.04514v1",
-      "published": "2026-08-05T06:49:30Z",
-      "updated": "2026-08-05T06:49:30Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Equitable System-Prompt Selection via Constrained Mixed-Strategy GroupDRO",
-      "authors": [
-        "Mengyu Xu",
-        "Qiaoxin Yang",
-        "Zhihan Liu",
-        "Ruiyao Xu",
-        "Zachary Liu",
-        "Kezhen Chen",
-        "Chongyang Gao"
-      ],
-      "abstract": "Large language models are increasingly used for information seeking, yet semantically equivalent questions phrased in different ways can receive answers of considerably different quality. System prompts are widely employed to steer response behavior, but they are typically optimized for average-case quality, so some question phrasings may still receive incomplete or low-quality answers. To address this, we formulate a constrained mixed-strategy GroupDRO framework for system-prompt selection. Instead of optimizing the system-prompt text, the framework assigns weights to system prompts in an existing pool to minimize the worst-case information-quality loss across evaluation metrics and groups, while constraining the mean loss to stay close to that of average-based selection. Because pool generation and selection are decoupled, the method applies to any system-prompt pool and can leverage an ensemble of complementary system prompts rather than a single one. Across five LLMs on two bilingual medical and consumer-finance benchmarks, the constrained method reduces the Overall Mean, Worst 25% Mean, and Worst by 13.1%, 13.2%, and 13.7% on average relative to no mitigation while keeping overall quality close to Average selection. Its multi-prompt weights reveal complementarity across metric-group pairs. Code and data are available at https://github.com/Rainxu09/equitable-system-prompt-selection.",
-      "pdf_url": "https://arxiv.org/pdf/2608.04339v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.04339v1",
-      "published": "2026-08-05T01:35:08Z",
-      "updated": "2026-08-05T01:35:08Z",
+      "abstract": "General-purpose large language models (LLMs) have recently been reported to match or exceed specialized clinical AI tools on medical benchmarks, but such comparisons draw on a narrow set of systems and on benchmarks developed largely in high-income settings. We evaluate VITA, a retrieval-augmented generation (RAG) system purpose-built for contextual knowledge retrieval in India and other low- and middle-income (LMIC) settings. VITA retrieves from a curated corpus of disease-specific guidelines, India-specific antimicrobial resistance data, national formulary constraints, and resource-limited care protocols; its architecture and corpus are proprietary, but the benchmark, the physician-written rubrics, and our full response and scoring outputs are public for independent verification. On 4,023 English-language HealthBench questions (80.5% of the benchmark), scored with a GPT-4.1 judge, VITA ranked first with 51.9% of possible rubric points, ahead of GPT-5.4 (46.1%), o4-mini (44.3%), Gemini 3.1 Pro (42.6%), and Claude Sonnet 4.6 (37.3%), and scored highest on 45.4% of questions. To test robustness to newer models and judge lineage, a 500-question subset was re-run against current-generation models (GPT-5.5, Claude Opus 4.8, Gemini 3.5 Pro, Grok 4.3) and graded by a neutral open-weight judge (DeepSeek-V4-Pro) sharing no lineage with any system tested. Here the gap narrowed to parity: VITA and GPT-5.5 were statistically indistinguishable on mean per-question score, while VITA led on points-weighted score and won the most questions. VITA's advantages in accuracy and completeness persisted under the neutral judge; its communication scores were lower. These results indicate that a purpose-built clinical RAG system remains competitive with frontier LLMs on an open benchmark, consistent with corpus specificity as a design variable that improves grounding at some cost to communication polish.",
+      "pdf_url": "https://arxiv.org/pdf/2608.12138v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.12138v1",
+      "published": "2026-08-12T14:55:46Z",
+      "updated": "2026-08-12T14:55:46Z",
       "categories": [
         "cs.CL",
         "cs.AI",
-        "cs.CE",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "A Comparative Study of Feature Selection Methods for EHR Diagnosis Codes in Opioid Use Disorder Prediction",
-      "authors": [
-        "Zihan Ding",
-        "Yinan Liu",
-        "Tengfei Ma",
-        "Rachel Wong",
-        "George Leibowitz",
-        "Benjamin Littenberg",
-        "Xia Zheng",
-        "Richard N. Rosenthal",
-        "Fusheng Wang"
-      ],
-      "abstract": "Feature selection is a critical step in electronic health record (EHR)-based predictive modeling, where input variables are often high-dimensional, sparse, noisy, and redundant. Large feature sets not only increase computational burden and overfitting risk, but also make model interpretation difficult, leading to limited usefulness in clinical settings. In this study, we focus on diagnosis-related features and compare five feature selection paradigms for opioid use disorder (OUD) prediction: recurrence enrichment, NTK-motivated early gradient sensitivity, LightGBM-SHAP, Elastic Net, and large language model (LLM)-guided semantic selection. We use a unified preprocessing and evaluation framework and assess each method by downstream predictive performance, resampling stability, and representation of infrequent diagnosis codes. Our results demonstrate that performance improves with larger feature budgets with diminishing returns beyond a moderate size. NTK sensitivity provides the best overall balance of accuracy and stability, and LLM-guided selection contributes complementary clinically meaningful signals despite lower standalone performance.",
-      "pdf_url": "https://arxiv.org/pdf/2608.04180v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.04180v1",
-      "published": "2026-08-04T19:37:29Z",
-      "updated": "2026-08-04T19:37:29Z",
-      "categories": [
+        "cs.HC",
+        "cs.IR",
         "cs.LG"
       ]
     },
     {
-      "title": "CARE-Bench: Benchmarking Patient-Facing LLM Triage",
+      "title": "From Safety Documentation to Safety Knowledge Support: An Evidence-Grounded LLM Framework for Medical Devices",
       "authors": [
-        "Yining Hua",
-        "Hongbin Na",
-        "Cyrus Ayubcha"
+        "Tuhinangshu Gangopadhyay",
+        "Rasmus Adler",
+        "Peter Liggesmeyer",
+        "Jan Reich"
       ],
-      "abstract": "Patient-facing medical LLMs and agents increasingly answer symptom questions before clinician contact, where the key safety question is what action the user should take next. We introduce CARE-Bench, a source-grounded benchmark that evaluates sequential patient-facing triage as a four-label per-turn current-action task. CARE-Bench contains 500 cases and 1,059 evaluated patient-disclosure prefixes reconstructed from medical dialogue, consultation, and follow-up-question sources. We evaluate 11 models on 269 held-out rounds under unprompted and minimally prompted open-ended protocols, using a fixed GPT-5.5 mapper to code each response into the four-label action space. Unprompted macro-F1 remains low, ranging from 31.2 to 50.4. Prompting improves 10 of 11 models, with prompted macro-F1 ranging from 46.9 to 63.4, but substantial threshold errors remain. Prompted models often recommend care before needed clarification is obtained; when the correct action was to ask for more information, only 33.5% of prompted outputs preserved the step. The persistence of these errors after prompting suggests that patient-facing triage is not a simple prompting problem and supports explicit evaluation of action timing before deployment.",
-      "pdf_url": "https://arxiv.org/pdf/2608.03731v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.03731v1",
-      "published": "2026-08-04T14:26:45Z",
-      "updated": "2026-08-04T14:26:45Z",
+      "abstract": "Medical devices are becoming more software-intensive, connected, and AI-enabled. Their development requires risk-management evidence aligned with ISO 14971 and, for software, IEC 62304. This evidence must be kept consistent across requirements, design decisions, software changes, verification results, complaints, and post-market data. These tasks are costly and depend on scarce safety and domain experts.\n  Large language models (LLMs) may reduce parts of this effort because medical-device safety work is highly document-based. However, current LLM-based safety-engineering studies often address isolated methods, rely on generic prompting or public examples, and provide limited support for source links, traceability, uncertainty handling, lifecycle updates, and recorded expert review. This limits their use in regulated medical-device development.\n  This paper argues that the central research problem is not safety-text generation, but source-linked safety-knowledge support. We propose an evidence-grounded framework that connects device artifacts, controlled knowledge storage and retrieval, method-specific generation of candidate safety items, critique and uncertainty checks, and recorded expert review. The framework prepares, links, checks, and updates candidate safety artifacts for expert decision-making. It does not decide whether a device is safe and does not provide regulatory approval. We also outline an evaluation strategy using non-public or newly built medical-device case studies and expert reference analyses to assess coverage, correctness, relevance, traceability, duplicate rate, unsupported claims, and review effort.",
+      "pdf_url": "https://arxiv.org/pdf/2608.12025v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.12025v1",
+      "published": "2026-08-12T13:05:49Z",
+      "updated": "2026-08-12T13:05:49Z",
       "categories": [
+        "cs.SE",
         "cs.AI"
       ]
     },
     {
-      "title": "DiagLoop: A Counterfactual Data Flywheel with Stage-Localized Reinforcement for Diagnostic LLMs",
+      "title": "Philosophical vertigo with artificial intelligence",
       "authors": [
-        "Jian Zhang",
-        "Bingyi Wang",
-        "Yizhi Liu"
+        "Thomas A. Pollak",
+        "Hamilton Morrin",
+        "Murray Shanahan"
       ],
-      "abstract": "Causal diagnostic models must explain how conclusions follow from evidence because diagnoses guide repairs and treatments. Yet serious cases are scarce, records rarely contain reasoning paths, and data transfer poorly across configurations, complicating local deployment. We present DiagLoop, a counterfactual data flywheel that converts codified physical relations or clinical guidelines, authored once per mechanism family, into training supervision beyond recorded cases. A training-only teacher proposes counterfactual worlds by varying causes, contexts, and observations, while an independent hybrid checker admits only valid worlds. The student reasons through symptom abstraction, causal-chain construction, and root-cause attribution. Stage-specific criteria identify its earliest failure. For nonterminal failures, a bounded repair probes downstream competence, and the resulting weakness profile guides subsequent data generation. Stage-localized reinforcement learning updates only the model-generated continuation, while replay and preservation reduce forgetting. The same criteria govern admission, attribution, reward, and regeneration through checks separate from the proposer. Using only synthesized scenarios and no case-level expert reasoning annotations, the resulting 8B model improves strict path correctness over the strongest conventional baseline. Gains are 11.6 points across eight industrial systems and 5.5 points across ten disease categories. Gains over a deranged-routing control are 3.9 and 2.3 points, respectively. The model also exceeds the evaluated proprietary references in both domains, even when they receive few-shot examples or the specification in context.",
-      "pdf_url": "https://arxiv.org/pdf/2608.03674v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.03674v1",
-      "published": "2026-08-04T13:49:41Z",
-      "updated": "2026-08-04T13:49:41Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "CausalOPD: First-Wrong-Step Supervision for Distilling Causal Chain Reasoning",
-      "authors": [
-        "Jian Zhang",
-        "Bingyi Wang",
-        "Yizhi Liu"
-      ],
-      "abstract": "Many critical reasoning tasks, including clinical diagnosis, legal judgment, and industrial fault diagnosis, require step-dependent causal chains in which early errors propagate and correct conclusions can mask invalid reasoning. Although large language models perform well on such tasks, privacy, latency, and controllability motivate distillation into locally deployable models. Standard trajectory imitation does not correct process errors on the student's own rollout distribution. We propose CausalOPD, a curriculum online process distillation framework. A knowledge-augmented teacher first provides trajectories grounded in domain-specific causal rules, entity relations, and structural constraints. The student then generates on-policy trajectories, and the teacher identifies the first wrong step, defined as the earliest transition that verifiably violates available constraints. Starting from the verified prefix, short-horizon reinforcement learning repairs this localized failure. A causal-stage curriculum advances from evidence-level to mechanism-level and conclusion-level errors, following their propagation order. Across three domains, CausalOPD improves average path correctness by 23.4 percentage points over sequence-level online process distillation and reduces the right-label-wrong-reasoning rate from 15.7% to 4.4%. The domain-specific 8B students also surpass both evaluated proprietary references in path correctness across all domains.",
-      "pdf_url": "https://arxiv.org/pdf/2608.03673v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.03673v1",
-      "published": "2026-08-04T13:49:12Z",
-      "updated": "2026-08-04T13:49:12Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Learning Clinical-Trial Strategy: Offline Policy Training for Decision Agents",
-      "authors": [
-        "William Bolton",
-        "Philip Torr"
-      ],
-      "abstract": "Clinical development is sequential decision-making under uncertainty, where a sponsor must plan a portfolio of experiments from heterogeneous evidence. We study this setting by framing oncology clinical development as an offline decision-making problem in which an agent predicts the next six-month trial portfolio of an oncology drug program from information available at the decision date. To support this, we construct a temporal dataset that combines 31.7k heterogeneous public data records, including trial registries, regulatory reviews, sponsor filings, utilization data, and epidemiology, into 881 offline decision episodes across 45 historical programs. We compare four offline objectives: behavioral cloning, reward-weighted behavioral cloning, learned-reward training, and value-based implicit Q-learning against four frontier LLM agents that share a common date-gated retrieval scaffold across held-out drug, sponsor, drug-class, and temporal splits. Models trained offline outperform the non-fine-tuned baselines, particularly in the post-August 2025 contamination-clean holdout. Reward-weighted behavioral cloning performs the best, obtaining 46.2% indication F1 and 14.2% strict F1 against 25.0% and 2.1%, respectively, for the best-performing tool agent on each metric. These results suggest that structured offline learning can teach agents to plan clinical experiments.",
-      "pdf_url": "https://arxiv.org/pdf/2608.03606v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.03606v1",
-      "published": "2026-08-04T12:58:17Z",
-      "updated": "2026-08-04T12:58:17Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "AI-Assisted Peer Review Across Research Communities: From Reviewer AI Policies to LLM Review Quality",
-      "authors": [
-        "Alexander M. Fichtl",
-        "Lukas Ellinger",
-        "Josefin Kelber",
-        "Kry\u0161tof Ol\u00edk",
-        "Georg Groh"
-      ],
-      "abstract": "AI-assisted peer review is increasingly discussed and adopted as a tool to support the scientific publishing process, yet there is little systematic understanding of how publication venues regulate its use or of how capable current AI review systems are. We address these questions by first surveying reviewer-facing AI policies across 111 leading AI/NLP conferences and medical journals, revealing substantial regulation differences between the two communities. Second, we evaluate AI-generated peer reviews at ICLR 2026 and Nature Communications using a novel dataset comprising original manuscript submissions and several hundred human- and machine-generated reviews. We compare reviews produced by open-source and proprietary models using complementary evaluation metrics, including LLM-as-a-Judge, score alignment, granularity, and overlap with human reviewers' concerns. Our results show that current LLMs can generate detailed and fluent reviews but exhibit systematic weaknesses, such as overly positive recommendations, generic criticism, and uneven evidence grounding. We demonstrate that aggregate quality scores alone can overestimate review quality and argue for multi-dimensional evaluation of AI-generated peer reviews.",
-      "pdf_url": "https://arxiv.org/pdf/2608.03581v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.03581v1",
-      "published": "2026-08-04T12:34:47Z",
-      "updated": "2026-08-04T12:34:47Z",
+      "abstract": "Large language models are already adept at engaging users in long, emotionally salient conversations across ordinary and existential domains. They are also capable of inducing a potent sense of connection with a human-like entity, even when the user knows their interlocutor is artificial. For some users, these conversations can unsettle assumptions about mind, reality, agency and authority, producing forms of ontological shock and epistemic destabilisation in which inherited criteria become newly available for doubt or revision. Independent of direct use, exposure to public discourse about AI and the disorienting pace of their evolution might extend this destabilisation by changing the cultural background against which artificial minds are encountered and interpreted. We describe this condition as philosophical vertigo: a loosening of the ordinary criteria by which people stabilise meaning and orient themselves to reality. Drawing on philosophy, psychiatry, cognitive science, AI safety and religious studies, we outline pathways through which philosophical vertigo may arise, become affectively saturated, and eventually propagate through human-AI interaction and online communities. Against this background, clinical reports of AI-associated delusions can be seen as sentinel events making visible themes and mechanisms that may also operate at a population level in less severe or non-clinical forms. We argue that AI systems themselves will increasingly participate in the reconstruction of our shared epistemic environment because they readily supply narrative material and personalised interpretive scaffolding at precisely the moment when users' conceptual assumptions may already be loosened. We conclude by considering possible trajectories for the ecology of belief and shared reality, and proposing philosophical corrigibility as a civic response for navigating this emerging social condition.",
+      "pdf_url": "https://arxiv.org/pdf/2608.11955v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.11955v1",
+      "published": "2026-08-12T11:40:50Z",
+      "updated": "2026-08-12T11:40:50Z",
       "categories": [
         "cs.CY",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Quantifying the Relationship Between Clinical Safety and Environmental Impact in Therapeutic LLMs",
+      "authors": [
+        "Alireza A. Safaei",
+        "Laura M. Vowels",
+        "Matthew J. Vowels",
+        "Apoorv Jha",
+        "Shekoufeh Rahimi"
+      ],
+      "abstract": "The deployment of large language models (LLMs) in mental health contexts raises questions about the relationship between clinical safety and environmental cost. In this paper, we examine this relationship by combining K-Bench clinical safety scores with EcoLogits life-cycle assessment estimates across 47 supported model configurations. We evaluate model performance and environmental impact across four dimensions: energy use, carbon emissions, water consumption, and abiotic depletion. The results indicate a non-linear trade-off at the upper end of the safety distribution: a 2.61 percentage-point increase in clinical safety score corresponded to an approximately 60-fold increase in estimated energy use per million output tokens. Row-level analyses further suggest that additional test-time compute did not consistently improve clinical safety and, in some configurations, was associated with lower clinical safety scores. These findings suggest that relying solely on larger models or additional inference-time computation may be an inefficient strategy for improving safety in therapeutic AI systems. We discuss the implications for sustainable deployment and highlight dynamic model selection, including model cascading, as a potential approach for reducing environmental impact while preserving clinical performance in higher-risk cases.",
+      "pdf_url": "https://arxiv.org/pdf/2608.11830v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.11830v1",
+      "published": "2026-08-12T09:14:26Z",
+      "updated": "2026-08-12T09:14:26Z",
+      "categories": [
+        "cs.CY",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Rubric Dropout: A Simple Way to Mitigate Reward Hacking in Rubric-as-Reward RL",
+      "authors": [
+        "Minglai Yang",
+        "Xinyu Guo",
+        "Utkarsh Tyagi",
+        "Mian Zhang",
+        "Razvan Dumitru",
+        "Sunjie Hou",
+        "Yunzhong He",
+        "Daniel Yue Zhang",
+        "Ying Liu"
+      ],
+      "abstract": "Reinforcement learning against rubrics, lists of criteria graded by an LLM judge, has become a standard way to post-train language models on tasks with no deterministic answer. The rubric, however, is a fixed proxy for quality, never a complete description of it, and a policy trained against it long enough will learn to exploit the difference. We measure this directly. Training Qwen3-8B with Group Relative Policy Optimization (GRPO) on medical and science rubrics and grading out-of-distribution (OOD) benchmarks with both the training judge and a stronger gold judge, we find that the two scores diverge during training. The training judge's score keeps climbing while the gold judge's score peaks and then falls, by 3 points on HealthBench-Hard and by 22 points on ResearchQA. A judge with a fixed bias would shift the gold curve by a constant, not send it down while the training score rises, so the divergence is reward hacking, not judge noise. We propose Rubric Dropout, a one-line fix borrowed from neuron dropout. At every step, we randomly drop a subset of the rubric's criteria before computing the reward, so the policy never optimizes the same rubric twice. The dropped subset is shared across each rollout group, so GRPO's group-relative advantages stay comparable, and evaluation always uses the full rubric. Comparing no dropout against dropout at 30% and 50% on both benchmark pairs, dropout raises the OOD gold score at every matched checkpoint (+1 to +2 points on HealthBench-Hard, +6 to +7 points on ResearchQA), lowers the two hacking measures we track, and costs nothing in domain. Sweeping the dropout fraction shows a broad 30-50% sweet spot, while the natural alternative, reweighting criteria by how useful they are to training, performs worse than no intervention at all in our setting.",
+      "pdf_url": "https://arxiv.org/pdf/2608.11669v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.11669v1",
+      "published": "2026-08-12T05:29:21Z",
+      "updated": "2026-08-12T05:29:21Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Social Chain of Thought: A Multi-Agent Architecture Grounded in Medical Differential Diagnosis Methodology",
+      "authors": [
+        "Del Coburn",
+        "Scott Sanner",
+        "Dan Silver"
+      ],
+      "abstract": "Medical diagnostic reasoning is a high-impact use case for LLMs that carries significant implications for the health and wellbeing of users. When OpenAI (2026) reports that more than 5% of ChatGPT messages globally are healthcare-related, the transparency of these systems becomes a serious design concern. This is especially true for complex cases, where differential diagnosis often requires integrating multiple forms of specialist reasoning. Existing work has proposed multi-agent approaches to medical diagnosis, but it remains unclear when such systems are needed, why they help, and where they outperform monolithic inference. We introduce Social Chain of Thought (SCoT),a multi-round pipeline for medical differential diagnosis that structures multi-agent interaction as a deliberative framework for collabora. tive LLM reasoning. Evaluating SCoT against single-agent baselines, one-agent pipeline ablations, and best-of-n scaling, we show that its recall advantage is not reproduced by monolithic inference alone. SCoT is most successful in the hardest diagnostic cases, where multiple rounds of specialist conversation help recover ground-truth diagnoses and converge on a higher-recall differential.",
+      "pdf_url": "https://arxiv.org/pdf/2608.11420v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.11420v1",
+      "published": "2026-08-11T20:38:03Z",
+      "updated": "2026-08-11T20:38:03Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Who Are You Explaining To? A Multi-Agent System for Audience-Aware XAI Narratives",
+      "authors": [
+        "Francesco Musicco",
+        "Danilo Danese",
+        "Giuseppe Fasano",
+        "Angela Lombardi",
+        "Alberto Carlo Maria Mancino",
+        "Tommaso Di Noia"
+      ],
+      "abstract": "Feature-attribution methods such as SHAP provide useful evidence about individual model predictions, but their numerical outputs are rarely sufficient for audiences with different expertise, goals, and risks of misinterpretation. In medical AI, the same local explanation must reach patients, clinicians, and data scientists through markedly different forms of communication, and naive verbalization through large language models (LLMs) is prone to weak grounding, conflation of attribution with causal language, and outputs that are persuasive without being faithful to the underlying model evidence. We introduce XstrAI, an audience-aware multi-agent framework that treats local explanations as fixed evidence and structures how it is communicated to each target reader. Each prediction case is encoded as an immutable structured representation, shared identically across audiences so the underlying evidence remains fixed. Generation is factored into three specialized LLM agents responsible for audience-aware planning, linguistic realization, and validation for grounding, attribution consistency, communicative risk, and audience appropriateness, with a bounded revision loop triggered on detected inconsistencies. We evaluate XstrAI on diabetes and stroke risk prediction against 11 baselines, ranging from direct verbalization to a re-implementation of a state-of-the-art narrator. The evaluation combines an intra-narrative regime measuring fidelity to SHAP evidence with an extra-narrative regime assessing audience appropriateness through reference corpora, multi-family LLM judges, and a survey with target readers. In both evaluations, XstrAI's narratives are consistently assigned to their intended audience by independent judges, and preferred over all baselines on Clinician and Patient audiences, with competitive performance on Data Scientist, where audience-conditioned single-prompt baselines lead.",
+      "pdf_url": "https://arxiv.org/pdf/2608.11033v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.11033v1",
+      "published": "2026-08-11T15:10:34Z",
+      "updated": "2026-08-11T15:10:34Z",
+      "categories": [
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "CARE: Confidence-Aware Reasoning for Reliable Medical VQA",
+      "authors": [
+        "Yuetian Du",
+        "Yucheng Wang",
+        "Zhenyuan Chen",
+        "Luyuan Chen",
+        "Rongyu Zhang",
+        "Jinjian Zhang",
+        "Wei Zhou",
+        "Zhijie Xu",
+        "Ming Kong",
+        "Zhan Zhou",
+        "Jie Liu",
+        "Qiang Zhu"
+      ],
+      "abstract": "Reinforcement Fine-Tuning (RFT) has enabled medical Multimodal Large Language Models (MLLMs) to produce Chain-of-Thought (CoT) reasoning for visual question answering, yet these models suffer from $\\textit{confidence miscalibration}$---a systematic gap between expressed certainty and actual diagnostic accuracy that undermines clinical trust. We propose $\\textbf{CARE}$, a $\\textbf{C}$onfidence-$\\textbf{A}$ware medical $\\textbf{RE}$asoning framework that jointly optimizes accuracy and calibration through a dual-stage pipeline. First, a scalable Medical-CoT synthesis provides structured cold-start data for Supervised Fine-Tuning. Second, Group Relative Policy Optimization (GRPO) with a novel $\\textbf{Confidence-Aware Reward (CAR)}$ mechanism ties the model's confidence to diagnostic correctness within the reward signal. Across three Medical VQA benchmarks, $\\textbf{CARE}$ achieves the highest diagnostic accuracy while obtaining the lowest Expected Calibration Error and Hallucination Rate, establishing a foundation for trustworthy clinical decision support. Our code is available at https://github.com/anotherbricki/CARE.",
+      "pdf_url": "https://arxiv.org/pdf/2608.10964v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.10964v1",
+      "published": "2026-08-11T14:28:52Z",
+      "updated": "2026-08-11T14:28:52Z",
+      "categories": [
+        "cs.CV",
         "cs.AI"
       ]
     },
     {
-      "title": "LLM-Assisted Review Prioritization for German Statutory Health Insurance Websites: A Multi-Stage Corpus Audit",
+      "title": "ConfTriage: A Calibration-Aware LLM Triage Framework for Pulmonary Nodule Malignancy with Selective Specialist Deferral",
       "authors": [
-        "Martin M\u00f6ller"
+        "Md Rabiul Islam",
+        "Samir Abdaljalil",
+        "Erchin Serpedin",
+        "Hasan Kurban"
       ],
-      "abstract": "Background: German statutory health insurance (SHI) funds publish web portfolios that exceed continuous specialist review capacity. Their content can shape health and benefit expectations. Generic AI-text detection does not identify medical, benefit, legal, or editorial review needs. Objective: To characterize a multi-stage workflow that prioritizes substantive review needs while separating AI-provenance signals from quality claims. Methods: We analyzed 56,198 pages from 84 SHI websites or sub-sites. The workflow combined deterministic screening, model-assisted triage and in-depth review, minimum evidence checks, temporal-validity safeguards, and paired-model comparison. It is reproducibility-bounded, not a validated detector. Production code is proprietary; reproducibility rests on frozen derived tables and paired-comparison artifacts. The 300-page lower-priority check was a single-model, risk-enriched routing stress test, not a human-reference evaluation. Results: All pages received a review state. The workflow generated 35,998 review records and routed 21,452 to case review. The workload concentrated in transparency, legal framing, medical content, contradictions, and AI-related failure-mode signals. A quoted passage was locatable in captured page text for 31,347 records, confirming literal occurrence rather than factual correctness. The routing stress test surfaced a signal on 100/300 pages (33.3% within the sample). Across 182 matched cases, two models agreed in 75.8% (kappa = 0.532; 95% CI 0.415-0.649). Conclusions: The workflow produces a prioritized workload, not error prevalence or final legal, medical, or insurer-level findings. It neither proves AI authorship nor validates autonomous detection. Paired-model agreement quantifies consistency, not correctness or sufficient triage performance; public claims require human adjudication.",
-      "pdf_url": "https://arxiv.org/pdf/2608.03500v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.03500v1",
-      "published": "2026-08-04T11:42:31Z",
-      "updated": "2026-08-04T11:42:31Z",
+      "abstract": "Pulmonary nodule malignancy prediction typically depends on image-trained specialist deep learning (DL) models that require substantial annotated imaging data and task-specific training. We investigate whether a generalist large language model (LLM), reading only a faithful natural-language rendering of standard nodule attributes, can serve as a calibrated triage layer. We propose ConfTriage, a confidence-calibrated method built on three pillars: language as the modality, calibration as the safety mechanism, and a selective specialist DL backstop for low-confidence cases. We prove two guarantees: a finite-sample combined-error bound yielding an explicit per-threshold operational certificate, and an oracle inequality showing that excess risk over the Bayes-optimal deferral classifier is controlled by the L1 calibration error of the LLM probability. A controlled seven-way input ablation across five frontier LLMs on LIDC-IDRI shows that natural-language descriptions dominate the diagnostic signal, while low-level image statistics are essentially diagnostically vacuous. ConfTriage achieved an F1 score of 88.22% and an AUC of 0.92, resolving 76.5% of cases using zero-shot LLM inference alone and referring only uncertain cases to the specialist DL backstop. These results demonstrate that clinically meaningful diagnostic information can be captured through structured radiological descriptions and leveraged by calibrated LLMs for selective referral. The framework suggests a practical pathway for combining generalist LLM prediction with specialist AI models in medical decision-support systems. Source code is publicly available at https://github.com/rabiul-ai/ConfTriage.",
+      "pdf_url": "https://arxiv.org/pdf/2608.10885v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.10885v1",
+      "published": "2026-08-11T13:02:41Z",
+      "updated": "2026-08-11T13:02:41Z",
       "categories": [
-        "cs.CY"
+        "cs.CV"
       ]
     },
     {
-      "title": "TimeRLM: Recursive Language Models Enable Precise Anomaly Localization in Long-Context Time-Series",
+      "title": "Rethinking LLM Verification: Evidence Structure, Uncertainty, and Selective Refinement",
       "authors": [
-        "Nicolas Zumarraga",
-        "Lorenzo Steno",
-        "Ning Wang",
-        "Max Rosenblattl",
-        "Thomas Kaar",
-        "Maxwell A. Xu",
-        "Kevin O'Sullivan",
-        "Markus Kreft",
-        "Elgar Fleisch",
-        "Paul Schmiedmayer",
-        "Patrick Langer",
-        "Robert Jakob"
+        "Uma Ranjan",
+        "Kunal Tilaganji",
+        "Aditya Koul",
+        "Anurag Mahipal",
+        "Dashpreet Singh",
+        "Hriday Rana",
+        "Manan Jain",
+        "Sidharth Gupta",
+        "Ajo Babu George",
+        "Vineeth Balasubramanian",
+        "Nagarajan Natarajan",
+        "Amit Sharma"
       ],
-      "abstract": "Precise anomaly localization over long-context time series is a crucial task in monitoring applications across clinical care, industrial operations, financial services, and logistics, where brief evidence may hide inside long spans of high-frequency data. Time-Series Language Models (TSLMs) are able to ingest time series data and verbalize findings on anomalies in natural language; however, recent benchmarks report a decrease in retrieval performance at long contexts, mirroring failure modes in text, vision, and audio. In the text domain, Recursive Language Models (RLMs) can recover much of this lost performance by keeping context external to the large language model (LLM), allowing the model to query it through code. We present TimeRLM, an RLM formulation for time-series that sequentially manipulates the signal using code and vision capabilities. We further introduce AnomalyXL, a synthetic long-context anomaly localization benchmark with programmatically injected anomalies that require precise retrieval. We implement five different task categories and two variants: AnomalyXL-MCQ and AnomalyXL-Localize. TimeRLM outperforms every evaluated TSLM and single-pass baseline on four of the five AnomalyXL-Localize tasks, reaching 0.682 IoU on localization and 0.745 on classify-with-evidence, versus at most 0.329 and 0.072 across all baselines. We post-train TimeRLM using reinforcement learning. The resulting model further improves performance and requires approximately one-third as many agent interaction turns as its untrained base model to produce a final answer. On unseen real-world ECG, sleep and software observability recordings, the post-trained TimeRLM retains or improves performance, surpassing TSLMs despite being trained exclusively on synthetic data. Our findings suggest recursive interaction with time-series is an effective approach for long-horizon retrieval.",
-      "pdf_url": "https://arxiv.org/pdf/2608.03391v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.03391v1",
-      "published": "2026-08-04T09:40:45Z",
-      "updated": "2026-08-04T09:40:45Z",
+      "abstract": "Large language models (LLMs) often rely on shortcuts rather than systematic reasoning, raising safety concerns in medical applications. Allowing models to abstain when uncertain improves reliability but introduces a coverage accuracy tradeoff. We propose a two-stage framework for medical hypothesis verification in multiple-choice settings that manages this tradeoff through targeted ontology grounding, applied only when the model abstains. We show that abstention is not random but reflects genuine uncertainty, with abstained predictions associated with lower confidence. Across two frontier models (GPT-5.5, accessed via the Azure OpenAI API, and DeepSeek-R1), the proposed framework improves question-level accuracy by 9.6 percentage points (82.9% to 92.5%) and hypothesis-level accuracy by 4.2 percentage points (92.0% to 96.2%). Our experiments conducted on MedReason and MedQA show that abstention can be repurposed as a control signal for selective reasoning refinement, achieving knowledge-graph-level performance without explicit knowledge graph construction.",
+      "pdf_url": "https://arxiv.org/pdf/2608.10725v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.10725v1",
+      "published": "2026-08-11T09:43:14Z",
+      "updated": "2026-08-11T09:43:14Z",
       "categories": [
+        "cs.CV",
+        "cs.SC"
+      ]
+    },
+    {
+      "title": "MedUP: Awakening Unified Understanding and Perception in Medical Vision-Language Models",
+      "authors": [
+        "Yuan Wang",
+        "Hualiang Wang",
+        "Yixin Chen",
+        "Songtao Jiang",
+        "Shujian Gao",
+        "Jiaming Lin",
+        "Siming Fu",
+        "Jian Wu",
+        "Zuozhu Liu"
+      ],
+      "abstract": "Medical Vision-Language Models (Med-VLMs) excel at verbalizing visual content, yet precise visual perception, segmentation, and grounding remain challenging. Existing approaches either verbalize regions as coordinate strings or rely on external modules that decouple perception from understanding, creating representation gaps for region-language alignment. We present MedUP, a Med-VLM that natively unifies perception and understanding within a shared token space. At its core lies UniMedTok, a region tokenizer that encodes masks as discrete tokens in the LLM vocabulary, enabling the model to seamlessly interleave mask tokens with text. We curate UniMed-Train, a 1.84M-instance corpus spanning text-guided segmentation, region-grounded understanding, medical VQA and CoT-based segmentation, and introduce UniMed-Bench for unified evaluation. Extensive experiments show that MedUP outperforms native, agentic, and dual-decoder Med-VLMs across all tasks while remaining competitive with specialist segmentors, demonstrating the strong potential of unified understanding and perception modeling.",
+      "pdf_url": "https://arxiv.org/pdf/2608.10635v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.10635v1",
+      "published": "2026-08-11T08:22:13Z",
+      "updated": "2026-08-11T08:22:13Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "RadFusion: Towards Threshold-Controllable Radiology Report Generation",
+      "authors": [
+        "Ying Jin",
+        "Noel C. F. Codella",
+        "John Corring",
+        "Mu Wei",
+        "Dinei Florencio",
+        "Eric Horvitz"
+      ],
+      "abstract": "Automated radiology report generation is advancing rapidly in response to the shortage of radiologists, yet unlike a perception model, existing generation models offer no control over the sensitivity-specificity trade-off of their diagnostic content. Such control is essential because clinical scenarios diverge: emergency triage prioritizes sensitivity to reduce missed findings, whereas confirmatory interpretation emphasizes specificity to limit unnecessary interventions. A single fixed report can neither adapt to these scenarios nor support the ROC-based validation widely expected for regulatory clearance. We introduce RadFusion, a framework that equips report generation with threshold controllability. Our method fuses a multi-label classifier, which provides per-disease confidence scores, with a VQA-based report generator, which describes medical findings in detail; an LLM then rewrites the report so that its stated diagnoses follow the classifier's decisions at the selected threshold while staying grounded in the generator's descriptions. On MIMIC-CXR, the performance of RadFusion conforms to the classifier's ROC curve: sweeping the threshold and mapping the reports back to class labels reproduces the classifier's validated ROC performance. This conformance makes generated reports quantitatively evaluable through ROC analysis, strengthening the case for regulatory clearance, and enables operating-point selection that matches report behavior to clinical context. Moreover, combining the two model types improves diagnostic accuracy over uncontrolled generation: sensitivity increases by 6.9% at matched specificity, and specificity by 20.7% at matched sensitivity. These results show that RadFusion makes report generation clinically adaptable, quantitatively verifiable, and diagnostically more reliable.",
+      "pdf_url": "https://arxiv.org/pdf/2608.10505v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.10505v1",
+      "published": "2026-08-11T05:23:48Z",
+      "updated": "2026-08-11T05:23:48Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Expert-Guided g-computation with Large Language Models for Estimating Causal Effects on Timings: Applications to Hospital Quality Improvement",
+      "authors": [
+        "Patrick Vossler",
+        "Jialin Ouyang",
+        "F. Richard Guo",
+        "Anran Huang",
+        "Ali Shojaie",
+        "Lucas Zier",
+        "Fan Xia",
+        "Jean Feng"
+      ],
+      "abstract": "Hospital quality improvement (QI) programs routinely face multiple candidate interventions to optimize hospital flow, but existing methods struggle to estimate and rank the causal effects of such interventions. This work focuses on one of the most standard hospital metrics, the average length of stay (LOS), and its causal estimand, the average time saved. To characterize this causal effect, qualitative approaches rely on expert judgment to map patient trajectories, making them susceptible to cognitive biases; quantitative approaches rely on data-driven models, which fail when interventions are hypothetical with no historical data or have complex causal mechanisms that require clinical reasoning rather than data alone. We propose expert-guided g-computation, or egg-computation, which combines the complementary strengths of both approaches by connecting the Gantt charts commonly used to map patient trajectories with the causal DAG literature. We introduce a causal model over Gantt charts and establish identification using a variant of g-computation that seeks expert input only for components unidentifiable from data. To make egg-computation practical, we develop an LLM-assisted pipeline that reliably scales up expert reasoning. In simulations, egg-computation outperforms conventional causal inference methods when patients have diverse causal structures and intervention mechanisms. In a study of eleven candidate QI interventions at an urban safety-net hospital, the LLM pipeline generated graphs and time-saving estimates highly concordant with those of human experts. Beyond healthcare, egg-computation is a broadly applicable framework for estimating the average time saved for candidate interventions whose causal mechanisms can be represented using Gantt charts.",
+      "pdf_url": "https://arxiv.org/pdf/2608.10339v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.10339v1",
+      "published": "2026-08-11T00:42:58Z",
+      "updated": "2026-08-11T00:42:58Z",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "stat.AP"
+      ]
+    },
+    {
+      "title": "Logit-Boundary Geometric Belief Interfaces and Sparse Sheaf-Enclave Protocols: A Self-Contained Substrate for Secure Network Electronic Health Record (EHR) Interoperability",
+      "authors": [
+        "Alvin Spivey",
+        "Yu Huang"
+      ],
+      "abstract": "Electronic health-record interoperability is a boundary problem: legacy systems, generative models, terminology services, identity systems, and human reviewers may each expose rich internal states, while operational exchange requires a narrow shared interface of typed claims, bounded uncertainty, provenance, and explicit admission or abstention. This paper details a mathematical and engineering architecture for that interface. The organizing idea is the logit boundary: a discovery model may propose pre-threshold scores over a local categorical decision, but a deterministic judgment substrate decides whether the proposal is admissible, requires review, or must be quarantined before any Fast Healthcare Interoperability Resources (FHIR) transaction is constructed. The resulting Geometric Belief Interface (GBI) combines finite boundary semantics, local Dirichlet evidence, cellular-sheaf and mapping-cone diagnostics, advisory geometric audit charts, and a Decentralized Cryptographic Sheaf-Enclave (DCSE) protocol sketch for fail-closed deployment. The framework does not establish clinical truth, global representation alignment, or end-to-end safety; it defines certificate-producing checks at a model-to-system boundary. A companion frozen synthetic benchmark, GBI BoundaryBench v0.1, evaluated Qwen3-4B-Instruct-2507 on 256 held-out tasks across three evidence modes (768 canonical executions). All executions completed, but none produced an output accepted by the benchmark contract: 369 were rejected during safe parsing and 399 during schema validation, yielding zero coverage and deterministic quarantine. This empirical result is deliberately narrow - one 4B open-weight model under one frozen interface - and is reported as evidence about the admission boundary, not as a general claim about LLM capability or clinical safety. A Julia appendix verifies numerical certificates using standard libraries.",
+      "pdf_url": "https://arxiv.org/pdf/2608.10300v2",
+      "arxiv_url": "https://arxiv.org/abs/2608.10300v2",
+      "published": "2026-08-10T23:10:53Z",
+      "updated": "2026-08-12T02:20:03Z",
+      "categories": [
+        "cs.AI",
+        "cs.CR",
         "cs.LG"
       ]
     },
     {
-      "title": "MoEGen: Mixture-of-Experts for Instance-Adaptive LoRA Generation",
+      "title": "Locally Deployable Small Language Models for Emergency Department Decision Support: A Systematic Benchmark of Fine-Tuning Strategies",
       "authors": [
-        "Yiming Zeng",
-        "Lei Lu",
-        "Zexin Li",
-        "Zhuochun Li",
-        "Shuoqiu Li",
-        "Shuyi Liao",
-        "Xidong Wu",
-        "Zeyu Zhang",
-        "Minmei Wang",
-        "Yu Zhao",
-        "Tingting Yu",
-        "Shangqian Gao"
+        "Qingfeng Zhang",
+        "Yuanxiong Guo",
+        "Yanmin Gong"
       ],
-      "abstract": "Parameter-efficient fine-tuning (PEFT) enables efficient adaptation of large language models, but existing MoE-based PEFT methods typically improve capacity by storing multiple full LoRA experts, causing adapter storage to grow linearly with the number of experts and restricting adaptation to a fixed expert pool. We ask whether MoE-based PEFT can produce instance-specific adaptations without explicitly storing a separate LoRA module for each expert. To address this gap, we propose MoEGen, an adaptation framework that shifts MoE-based PEFT from expert selection to expert-conditioned parameter generation. Instead of storing each expert as a full LoRA adapter, MoEGen represents each expert as a small learnable vector, termed an expert code. It routes each input over these vectors and uses their weighted combination to condition a lightweight hypernetwork that generates input-specific low-rank updates. This design decouples expert capacity from adapter storage while enabling instance-conditioned adaptation. Experiments on eight commonsense reasoning benchmarks show consistent improvements over strong static and MoE-based PEFT baselines across three backbones. MoEGen also performs strongly in joint medical and legal-domain adaptation.",
-      "pdf_url": "https://arxiv.org/pdf/2608.03275v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.03275v1",
-      "published": "2026-08-04T07:51:30Z",
-      "updated": "2026-08-04T07:51:30Z",
+      "abstract": "Deploying large language models (LLMs) for decision support in emergency departments (EDs) faces two major challenges: privacy risks of transmitting patient data to closed-source commercial LLMs and the lack of systematic evaluation of fine-tuning strategies for locally deployable open-source small language models (SLMs). We benchmarked eight open-source SLMs using zero-shot prompting, prefix tuning, Low-Rank Adaptation (LoRA), and full fine-tuning on three ED tasks: triage level prediction, specialist referral recommendation, and diagnosis prediction. Using 2,083 MIMIC-IV-ED cases and Claude Haiku 4.5 and Claude Sonnet 4.5 as baselines, we found that LoRA fine-tuned open-source SLMs outperform commercial baselines on triage level prediction and specialist referral recommendation, while diagnosis prediction remains challenging for open-source SLMs. Confusion matrix analysis further shows that fine-tuned open-source SLMs can detect highest-severity patients missed by the commercial baselines. These results demonstrate that locally deployable SLMs can achieve clinically competitive performance for ED decision support.",
+      "pdf_url": "https://arxiv.org/pdf/2608.10273v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.10273v1",
+      "published": "2026-08-10T22:15:21Z",
+      "updated": "2026-08-10T22:15:21Z",
       "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "NeuroMosaic: Anatomically Grounded Multimodal Large Language Modeling for Molecularly Aware Glioma Reasoning from 3D MRI and Clinical Narratives",
-      "authors": [
-        "Yantong Liu",
-        "Zheyu Zhang",
-        "Runpeng Liu",
-        "Mu Xitang",
-        "Seong-Yoon Shin",
-        "Hyun-Ae Lee"
-      ],
-      "abstract": "Multimodal medical large language models remain structurally weak for neuro-oncology because volumetric evidence is compressed into generic visual tokens and diagnostic conclusions often lack an auditable link to MRI regions. We present NeuroMosaic, a 3D multimodal language model that converts multi-sequence brain MRI into anatomy-indexed regional tokens, aligns them with clinical narrative and molecular concepts, and generates evidence-linked outputs. The architecture combines a multi-resolution volumetric tokenizer, a neuroanatomical graph router, a molecular concept memory, and selective risk control. Across four glioma cohorts, NeuroMosaic achieved an internal subtype macro-F1 of 0.827 and external macro-F1 values of 0.784, 0.761, and 0.742. On UPenn-GBM, it improved over the strongest matched-input baseline by 3.6 percentage points (95% CI: 1.8 to 5.4, adjusted p = 0.0018), with IDH, 1p/19q, and MGMT AUROCs of 0.918, 0.861, and 0.781. Evidence pointing accuracy reached 0.703, and targeted evidence deletion reduced correct-answer probability by 0.187, compared with 0.046 for random deletion. These results establish anatomy-indexed routing as a measurable mechanism for accurate, grounded, and calibrated volumetric medical-language reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2608.03187v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.03187v1",
-      "published": "2026-08-04T06:26:50Z",
-      "updated": "2026-08-04T06:26:50Z",
-      "categories": [
-        "cs.NE"
-      ]
-    },
-    {
-      "title": "Activation-Guided Neuron Intervention to Induce Alzheimer's-Related Computational Language Phenotypes in a Large Language Model",
-      "authors": [
-        "Rui He",
-        "Ercong Nie",
-        "Hong Jiang",
-        "Iris E. Sommer",
-        "Philipp Homan",
-        "Wolfram Hinzen"
-      ],
-      "abstract": "Changes in spontaneous speech provide an early signal of cognitive dysfunction in Alzheimer's disease (AD) that large language models (LLMs) can detect. However, detection alone cannot establish whether the underlying model representations contribute functionally to behavior. We introduce an activation-guided intervention framework using Qwen3-8B. The framework identifies feed-forward neurons with higher activation rates for AD than control transcripts and modulates their output contributions during generation by scaling the corresponding down-projection weights. This yielded nine edited variants differing in intervention direction, magnitude, and scope. The original and edited models completed the same 12-turn neuropsychological battery, assessed through blinded human ratings and computational linguistic measures. Amplifying AD-associated neurons produced graded impairments in story recall, verbal fluency, working memory, procedural discourse, scene construction, and coreference resolution. Attenuation largely preserved performance and selectively improved several outcomes. Amplification also reduced lexical surprisal, idea density, syntactic complexity, and discourse quantity, broadly paralleling changes reported in human AD speech. These findings show that neurons identified solely from clinical language differences can influence behavior across multiple cognitive domains, providing proof of concept for an AD-related computational phenotype and a controlled framework for experimentally examining links between language and broader cognitive dysfunction.",
-      "pdf_url": "https://arxiv.org/pdf/2608.03067v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.03067v1",
-      "published": "2026-08-04T03:28:37Z",
-      "updated": "2026-08-04T03:28:37Z",
-      "categories": [
-        "cs.CL"
+        "cs.CL",
+        "cs.AI"
       ]
     }
   ]

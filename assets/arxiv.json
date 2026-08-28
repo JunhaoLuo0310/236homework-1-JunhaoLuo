@@ -1,8 +1,120 @@
 {
-  "generated_at_utc": "2026-08-27T08:37:30.673335Z",
+  "generated_at_utc": "2026-08-28T10:49:47.711027Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Making Clinical Language Models Auditable: Concept-Guided Fine-Tuning for Robust Prediction",
+      "authors": [
+        "Jin Mu",
+        "Guanhua Chen"
+      ],
+      "abstract": "Clinical language models can achieve strong in-hospital accuracy yet fail under deployment shifts because they exploit note-specific artifacts (e.g., templates, separators, boilerplate) that do not reflect patient state. We propose CAST (Concept-guided Artifact Suppression Tuning), an SAE-based framework for auditable clinical text classification. CAST uses Sparse Autoencoders to expose sparse, human-auditable features from intermediate Transformer activations, labels SAE latents with an LLM-assisted interpretation pipeline and ICD-10 retrieval constraints, suppresses verified artifact latents via residual subtraction during fine-tuning, and provides post-hoc per-concept attributions for auditing model decisions. On MIMIC-IV discharge-note mortality prediction, CAST improves over its corresponding fine-tuned encoder baselines and remains competitive with strong LLM baselines, while producing a feature-level audit trail of the clinical concepts that support each prediction and the artifact concepts suppressed during training.",
+      "pdf_url": "https://arxiv.org/pdf/2608.27397v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.27397v1",
+      "published": "2026-08-27T17:28:35Z",
+      "updated": "2026-08-27T17:28:35Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "DocTalkBN: A Novel Dataset of Expert Telemedicine Conversations in Bengali",
+      "authors": [
+        "Anik Saha",
+        "Fahmida Sultana Naznin",
+        "Sadatul Islam Sadi",
+        "Ananya Shahrin Promi",
+        "Wahid Al Azad Navid",
+        "Rifat Shahriyar"
+      ],
+      "abstract": "Reliable medical conversational AI requires authentic expert--patient interaction data, yet such datasets remain scarce, especially for low-resource languages such as Bengali. We present DocTalkBN, a large-scale multimodal dataset of real-world expert telemedicine conversations in Bengali, collected from nationally broadcast telemedicine programs featuring board-certified physicians. DocTalkBN contains 557.63 hours of paired audio and text, 1,515 multi-turn patient calls, 10,274 host--doctor question--answer exchanges, totaling 1.7M tokens, spanning 26 medical specialties. Unlike prior resources derived from medical forums, written health content, or synthetic data, our dataset preserves the spontaneity, contextual richness, and spoken characteristics of authentic medical interactions in a low-resource setting. To support benchmark-driven research, we further construct three downstream tasks from the corpus, medical triage classification, advice safety evaluation, and medical named entity recognition, and benchmark a diverse set of large language models and encoder-based baselines. Our results show that DocTalkBN is a practically useful resource, particularly for clinically grounded reasoning tasks. We release this resource to facilitate future research on reliable medical NLP and safer, more culturally grounded healthcare systems for low-resource languages. Our source codes and dataset are publicly available at https://anonymous.4open.science/r/doctalk.",
+      "pdf_url": "https://arxiv.org/pdf/2608.27110v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.27110v1",
+      "published": "2026-08-27T13:25:17Z",
+      "updated": "2026-08-27T13:25:17Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "From Reasoning to Pixels: Grounded Medical Multimodal LLMs for VQA and Segmentation",
+      "authors": [
+        "Haowen Gu",
+        "Gensheng Pei",
+        "Junzhu Mao",
+        "Qiong Wang",
+        "Mingwu Ren",
+        "Yazhou Yao"
+      ],
+      "abstract": "Although Multimodal Large Language Models (MLLMs) have demonstrated impressive performance in Medical Visual Question Answering (Med-VQA), their reliance on global image features often lacks precise pixel-level grounding, thereby limiting clinical trustworthiness. To bridge the semantic gap between high-level clinical reasoning and spatial localization, we propose \\textsc{\\textsc{MedREAL}} (\\textbf{Med}ical \\textbf{RE}asoning-driven \\textbf{A}nswering and \\textbf{L}ocalization), a unified framework that seamlessly aligns linguistic reasoning with spatial grounding. Specifically, \\textsc{MedREAL} introduces \\textbf{S}eg \\textbf{A}nchored \\textbf{R}easoning \\textbf{P}ooling (SARP) to distill task-relevant semantic evidence directly from \\texttt{[SEG]} tokens within the MLLM's hidden states. Furthermore, a \\textbf{R}easoning-to-\\textbf{V}isual (R2V) fusion mechanism is proposed to effectively inject these reasoning-aware features into a segmentation pipeline for accurate mask decoding. To facilitate this paradigm, we construct MedRAVS-13K, a comprehensive dataset comprising 13,824 expertly validated samples across four diverse imaging modalities. Extensive experiments demonstrate that \\textsc{MedREAL} significantly outperforms state-of-the-arts, achieving 68.49\\% gIoU and 70.47\\% cIoU on benchmark evaluations. By generating evidence masks that are strictly consistent with textual diagnoses, \\textsc{MedREAL} provides a robust, interpretable framework for reasoning-driven medical image analysis.",
+      "pdf_url": "https://arxiv.org/pdf/2608.26856v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.26856v1",
+      "published": "2026-08-27T09:23:16Z",
+      "updated": "2026-08-27T09:23:16Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Preserving General Capabilities during Domain Specialization with Uncertainty-Calibrated MOPD",
+      "authors": [
+        "Ziyuan Liu",
+        "Jiao Ou",
+        "Jian Liang",
+        "Ruiming Tang",
+        "Cheng Luo"
+      ],
+      "abstract": "Specializing large language models to vertical domains improves domain-specific behavior but often degrades general capabilities such as reasoning, coding, instruction following, and creative writing. We study this domain--general trade-off in Multi-Teacher On-Policy Distillation (MOPD), where a specialized student is supervised on its own sampled trajectories by domain and general teachers. Standard MOPD faces two limitations: ordinary on-policy sampling rarely exposes tokens with large positive teacher--student advantages, while the advantage sign alone does not establish whether the resulting update direction is reliable. We propose uncertainty-calibrated MOPD to address these limitations. Dual-temperature sampling broadens the candidate trajectory pool, and positive-advantage-density filtering selects trajectories with stronger positive learning signals. Centered log-likelihood (CLL) filtering then computes an entropy-calibrated teacher-endorsement score and probabilistically retains token updates according to direction--endorsement consistency. Experiments on role-playing and medical-domain specialization show that our method improves the general-capability average over standard MOPD by $4.73\\%$ and $10.84\\%$, respectively, while maintaining vertical-domain performance. Ablations and diagnostic analyses further confirm that the gains do not merely result from a larger rollout budget and that the proposed trajectory- and token-level mechanisms address their intended failure modes.",
+      "pdf_url": "https://arxiv.org/pdf/2608.26735v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.26735v1",
+      "published": "2026-08-27T07:28:00Z",
+      "updated": "2026-08-27T07:28:00Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Benchmarking Clinical Decision Pathway Adherence in Large Language Models",
+      "authors": [
+        "Nuo Chen",
+        "Xinyang Jiang",
+        "Zilong Wang",
+        "Zhifei Zhang",
+        "Xiaoye Qu",
+        "Jiajun Deng",
+        "Yulan Guo",
+        "Cairong Zhao"
+      ],
+      "abstract": "Following clinical decision pathways (CDPs) defined by clinical practice guidelines is essential for safe and reliable medical decision-making. However, existing medical large language model (LLM) benchmarks mainly evaluate final-answer accuracy, providing limited evaluation of models' ability to adhere to guidelines. To address this gap, we introduce MEGA-CDP, a benchmark for evaluating whether medical LLMs can generate guideline-adherent CDPs using provided guidelines as references. MEGA-CDP is constructed from 2,274 English and Chinese clinical practice guidelines through a guideline-to-case pipeline, yielding 42,353 clinical cases with explicit reference CDPs. It supports both single-turn vignette and multi-turn interactive settings, and introduces a CDP-oriented evaluation framework for measuring pathway consistency. Experiments on 16 representative LLMs show that reliable clinical decision support remains challenging for current models, demonstrating the need for CDP-oriented evaluation and the value of MEGA-CDP for advancing guideline adherence in medical LLMs.",
+      "pdf_url": "https://arxiv.org/pdf/2608.26592v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.26592v1",
+      "published": "2026-08-27T04:17:12Z",
+      "updated": "2026-08-27T04:17:12Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Surgical Alignment in Knowledge Graph Training for Clinical Diagnosis with Large Language Models",
+      "authors": [
+        "Saksham Khatwani",
+        "He Cheng",
+        "Majid Afshar",
+        "Dmitriy Dligach",
+        "Yanjun Gao"
+      ],
+      "abstract": "Biomedical knowledge graphs (KGs) offer structured medical knowledge that can ground large language model (LLM) reasoning in clinical diagnosis application, yet how KG signal should be integrated into LLMs remains an open question. We present a systematic study spanning five KG task formulations, three training paradigms, two KGs, and three base LLMs. At the task level, all paradigms improve over the non-finetuned baseline, but methods with comparable in-domain accuracy show substantially different knowledge transfer behavior. We introduce Gradient Intervention Density (GID) and Gradient Distortion (GD) to measure how broadly an optimizer modifies the pretrained model. GID and GD together reveal a clear divide: KG-judgment training under KL regularization produces sparse, localized updates (a regime we term as surgical alignment), while task-specific SFT produces dense ones. A controlled ablation shows that the objective and KL contribute to sparsity independently, and the paradigms that produce sparse updates also improve reasoning quality, even when their in-domain accuracy is lower than task-specific SFT. Assessing KG-LLM integration thus requires complementing accuracy with optimization-geometry diagnostics. Our implementation can be found at https://github.com/LARK-NLP-Lab/Surgical-Alignment.",
+      "pdf_url": "https://arxiv.org/pdf/2608.26587v1",
+      "arxiv_url": "https://arxiv.org/abs/2608.26587v1",
+      "published": "2026-08-27T03:57:52Z",
+      "updated": "2026-08-27T03:57:52Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "Large Language Model Few-Shot Prompting with Dilemma Training Outperforms Human Surrogates in Predicting Patient Preferences",
       "authors": [
@@ -182,125 +294,6 @@
       "updated": "2026-08-25T08:35:04Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Graph-Supervised Hierarchical Clinical Alignment for Radiology Report Generation with Large Language Models",
-      "authors": [
-        "Yingshu Li",
-        "Yunyi Liu",
-        "Zhanyu Wang",
-        "Zailong Chen",
-        "Lingqiao Liu",
-        "Lei Wang",
-        "Luping Zhou"
-      ],
-      "abstract": "Radiology report generation (RRG) has recently benefited from large language models, which substantially improve report fluency. However, clinically faithful generation remains challenging because current supervision is still imposed mostly at the report level. This creates a granularity mismatch: radiology reports are composed of disease-grounded findings, while existing methods are trained mainly with whole-report objectives. To address this problem, we propose Graph-Supervised Hierarchical Clinical Alignment, which reformulates image-report supervision as a hierarchical clinical alignment problem. Our method structures this alignment as a disease-conditioned process, where supervision is decomposed into two levels: Disease-Centric Alignment for fine-grained disease-specific correspondence, and Global Clinical Semantic Alignment for report-level semantic coherence. A clinical knowledge graph is used as a training-time-only structural prior that defines disease-specific supervision units and their clinical relationships, introducing no additional overhead at inference. Because standard contrastive alignment could produce false negatives when studies share overlapping pathologies, we combine instance-conditioned discriminative matching with disease-conditioned soft regularization, enabling fine-grained yet clinically consistent cross-modal representations. Experiments on MIMIC-CXR, IU-Xray, and COV-CTR show that our method consistently improves performance on both conventional and clinical metrics. Notably, our 3B model surpasses several prior systems with larger 7B/13B backbones, suggesting that improving supervision structure, rather than increasing model size, can be more effective for RRG.",
-      "pdf_url": "https://arxiv.org/pdf/2608.24121v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.24121v1",
-      "published": "2026-08-25T06:32:26Z",
-      "updated": "2026-08-25T06:32:26Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "DRRG: A Discrete Diffusion Framework for Radiology Report Generation",
-      "authors": [
-        "Shaoyang Zhoua",
-        "Yingshu Li",
-        "Yunyi Liu",
-        "Lijun Pu",
-        "Lingqiao Liu",
-        "Lei Wang",
-        "Luping Zhou"
-      ],
-      "abstract": "Purpose: Automatic radiology report generation (RRG) has been widely explored to improve reporting accuracy and reduce radiologists' workload. Most existing methods rely on autoregressive (AR) frameworks that generate reports token by token and cannot revise earlier content, making them prone to error propagation and inconsistent with the iterative refinement process of radiological reporting. In contrast, discrete diffusion large language models (DLLMs) generate text through iterative denoising, naturally enabling report refinement. However, DLLMs have not been extensively investigated for RRG. In this study, we developed and evaluated a discrete diffusion framework for RRG that enables iterative refinement rather than conventional left-to-right autoregressive decoding.\n  Materials and methods: We developed DRRG, a DLLM-based framework that formulates RRG as iterative masked-token denoising. DRRG incorporates a clinical-entities-aware complementary mask to improve token supervision coverage and emphasize clinically important entities, together with a concept-conditioning module that injects image-derived clinical concepts into visual representations. DRRG was trained and evaluated on MIMIC-CXR and CheXpert Plus.\n  Results: On MIMIC-CXR, DRRG achieved BLEU-4 of 0.210, CheXpert-F1 of 0.549, RadGraph-F1 of 0.281, GREEN of 0.360, and RaTEScore of 0.604, outperforming the compared methods on most reported metrics, despite employing a substantially smaller LLM decoder. On CheXpert Plus, DRRG achieved the highest BLEU-4 (0.119) and CheXpert-F1 (0.347) among the compared methods.\n  Conclusion: Discrete diffusion provides an effective alternative to autoregressive radiology report generation by enabling iterative, bidirectional report refinement. Incorporating clinically focused masking and image-derived concept conditioning improves report quality and clinical consistency.",
-      "pdf_url": "https://arxiv.org/pdf/2608.24105v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.24105v1",
-      "published": "2026-08-25T06:07:02Z",
-      "updated": "2026-08-25T06:07:02Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Boot-and-Feedback Framework for Generalist-Expert Model Collaboration in Breast Ultrasound Diagnosis",
-      "authors": [
-        "Ming Cheng",
-        "Hongyu Sun",
-        "Zhaolin Chen",
-        "Jun Liu",
-        "Hossein Rahmani",
-        "Qiuhong Ke"
-      ],
-      "abstract": "Breast ultrasound (BUS) is widely used for breast cancer diagnosis yet remains operator-dependent. While deep learning shows promise, ensuring diagnostic reliability and interpretability is challenging. Recent Multimodal Large Language Models (MLLMs) often generate spurious descriptions due to limited domain knowledge, which mislead downstream expert models and compromise clinical validity. To address these challenges, we propose the Boot-and-Feedback (BooF) model collaboration framework for synergistic MLLM-expert interaction. Specifically, in the Boot Stage, the MLLM is guided by the BI-RADS lexicon and preliminary benign-malignant vision-expert predictions, enabling it to transfer general reasoning to BUS analysis while avoiding hallucinations. Subsequently, the Feedback Stage integrates these descriptions with visual features via a lightweight Attention-Gated Cross-Modality Fusion Module. This allows the expert to leverage textual feedback while adaptively filtering noise. Extensive experiments on multiple BUS datasets demonstrate that BooF substantially outperforms state-of-the-art methods in terms of diagnostic accuracy and interpretability.",
-      "pdf_url": "https://arxiv.org/pdf/2608.23974v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.23974v1",
-      "published": "2026-08-25T02:07:05Z",
-      "updated": "2026-08-25T02:07:05Z",
-      "categories": [
-        "cs.CV",
-        "cs.MM"
-      ]
-    },
-    {
-      "title": "An Echo Chamber of One: Should AI Psychosis Be a Distinct Clinical Entity?",
-      "authors": [
-        "Joshua Au Yeung",
-        "Hamilton Morrin",
-        "Vincent Ng",
-        "Zeljko Kraljevic",
-        "Richard Dobson"
-      ],
-      "abstract": "\"AI psychosis\" has entered public and clinical discourse as a label for the onset or exacerbation of psychotic symptoms, most commonly delusions, following intensive interaction with large language model (LLM)-based chatbots. Current evidence is limited to media reports, case reports, and early observational data, yet the scale of potential exposure is considerable, and public concern has prompted responses from industry and regulators. We examine whether AI-associated psychosis warrants recognition as a distinct clinical entity, drawing on clinical and technical viewpoints. We outline the proposed mechanism: LLM sycophancy, a tendency to agree with and flatter users that is reinforced through preference-based fine-tuning, combines with increasingly anthropomorphic design to create a bidirectional \"echo chamber of one\" capable of amplifying and co-constructing unusual beliefs. We then weigh arguments for and against nosological recognition. Potential benefits include improved case identification, tailored interventions, standardised research criteria, post-market surveillance, and pressure on developers and regulators to act. Reasons for caution include the risk of prematurely reifying a syndrome from anecdotal evidence, the possibility that existing diagnostic constructs already accommodate AI use as a contributing factor, the unproven causal claim in the term itself, stigma, and the risk that a psychosis-centric label obscures a broader spectrum of AI-associated mental health harms. We conclude with recommendations for clinicians, developers, researchers, and regulators, including a \"technological history\" in psychiatric assessment, pre-deployment benchmarking for sycophancy and delusion reinforcement, and post-deployment surveillance. Regardless of whether AI-associated psychosis earns a place in psychiatric nosology, the phenomenon it describes demands coordinated attention now.",
-      "pdf_url": "https://arxiv.org/pdf/2608.23937v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.23937v1",
-      "published": "2026-08-25T00:53:46Z",
-      "updated": "2026-08-25T00:53:46Z",
-      "categories": [
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "Gated Activation Steering for Reducing Sycophancy & Hallucination in Medical Question Answering",
-      "authors": [
-        "Himanshu Tripathi",
-        "Subash Neupane",
-        "Shaswata Mitra",
-        "Sudip Mittal",
-        "Noorbakhsh Amiri Golilarz",
-        "Shahram Rahimi"
-      ],
-      "abstract": "Sycophancy and hallucination are persistent failure modes of Large Language Models (LLMs) across domains. However, it becomes particularly consequential in clinical question answering, where responses must remain grounded in the provided context and robust to user pressure. Hallucination can introduce information that is unsupported by the context, while sycophancy can cause a model to abandon a previously correct answer when challenged by the user. Existing approaches, such as prompt-based safeguards and always-on activation steering, often address these behaviors separately or apply interventions broadly across turns, which can unnecessarily deteriorate responses that were already correct. To address these limitations within a single framework, we employ Inference Time Intervention (ITI) to jointly control both behaviors by learning separate steering directions for hallucination and sycophancy from contrastive clinical pairs and applying them to causally verified attention heads. During runtime, behavior-specific gates then determine when intervention is needed: the hallucination component mitigates unsupported claims, while the sycophancy component mitigates answer shifts caused by user pressure. We evaluate this framework on clinical questions grounded in EHR data while keeping the model weights frozen. Across all evaluation settings, we conducted 15,900 model-response runs. Across 600 pressure trajectories for the 4-billion-parameter model, the unsteered model caved in 570 cases. At the same time, gated steering helped it last longer in 551 of them. It held its ground under pressure at levels comparable to those of models with more than 100 billion parameters, showing that targeted inference-time steering can improve robustness without intervening at every turn.",
-      "pdf_url": "https://arxiv.org/pdf/2608.23666v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.23666v1",
-      "published": "2026-08-24T17:22:34Z",
-      "updated": "2026-08-24T17:22:34Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Future Querying: Can LLMs Serve as Implicit Medical World Models?",
-      "authors": [
-        "Siri Willems",
-        "James Butterworth",
-        "Lore Goetschalckx",
-        "Peter Vrancx",
-        "Philippe Modard",
-        "Elke Giets",
-        "Ludovic Denoyer"
-      ],
-      "abstract": "Traditional clinical prediction models rely on task-specific pipelines and curated, structured data, which scale poorly and underutilize unstructured text. To address this, we introduce future querying, a paradigm that probes whether large language models (LLMs) can function as implicit medical world models by evaluating their ability to answer time-indexed clinical queries about a patient's future. Our framework operates on unstructured clinical documentation using endpoint-agnostic training, enabling a single model to answer diverse clinical queries over patient trajectories without manual feature engineering or task-specific retraining. We show that small, locally fine-tuned open-weight models can match or approach larger proprietary systems, making the framework suitable for privacy-preserving, on-premise deployment. Evaluated on a new synthetic medical reports dataset and real ICU notes from the MIMIC-IV dataset, our results provide encouraging evidence that LLMs can capture aspects of clinical dynamics.",
-      "pdf_url": "https://arxiv.org/pdf/2608.23248v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.23248v1",
-      "published": "2026-08-24T13:41:12Z",
-      "updated": "2026-08-24T13:41:12Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]

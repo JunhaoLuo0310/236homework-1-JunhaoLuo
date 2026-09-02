@@ -1,8 +1,91 @@
 {
-  "generated_at_utc": "2026-09-01T04:32:44.443696Z",
+  "generated_at_utc": "2026-09-02T03:55:41.369580Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "RadMatch: Auditable Radiology Report Evaluation via Finding-Level Matching",
+      "authors": [
+        "Charles Corbi\u00e8re",
+        "L\u00e9o Machado",
+        "Aubin Charley",
+        "Baptiste Callard",
+        "Pierre Manceron",
+        "Corentin Dancette"
+      ],
+      "abstract": "As AI systems are increasingly used to draft radiology reports, reliably evaluating their clinical quality remains a critical challenge. Large language model (LLM)-based metrics are now the best-correlated with radiologist judgment, yet they output a single opaque score that neither a clinician nor a model builder can easily interpret or audit. We introduce RadMatch, a multi-stage, LLM-based metric that decomposes report comparison into a structured finding-level matching with significance-aware scoring and error characterization across seven clinical attribute dimensions (status, location, severity, morphology, certainty, longitudinal comparison, and measurement). The main score is the actionable-error count, both interpretable and auditable. Candidate findings are graded correct, partial, or incorrect, and unmatched findings are counted as missed or hallucinated. Triage and actionable safety recall/precision and per-subset views add complementary, deployment-oriented lenses. Across two expert benchmarks, RadMatch is the most clinically aligned metric, matching inter-radiologist agreement on ReXVal and more than doubling the best prior metric on the harder RadEvalExpert. Relying only on few-shot prompting, it is designed to extend to other modalities and anatomies. We will release RadMatch as open-source code with an interactive dashboard for inspecting results.",
+      "pdf_url": "https://arxiv.org/pdf/2609.01470v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.01470v1",
+      "published": "2026-09-01T16:05:17Z",
+      "updated": "2026-09-01T16:05:17Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Investigating Linear Probe Robustness to Linguistic Register, Medical Specialty, and Corpus Shifts in Medical QA",
+      "authors": [
+        "Nishant Mishra",
+        "Ameen Abu-Hanna",
+        "Iacer Calixto"
+      ],
+      "abstract": "Linear classifiers trained on hidden states of a large language model (LLM), linear probes, can flag factual errors from a single forward pass. Geometrically, that implies that true and false statements separate along a stable direction in hidden state space, i.e., the truth direction. Prior work disagrees on whether this generalises across input shifts, but the disagreement is hard to interpret because cross-dataset probe transfer experiments confound several kinds of input change at once. We isolate three such variables in medical question-answering (QA): writing style (register), domain (medical specialty), and corpus (dataset). We build a benchmark using 500 MedQA entries, each rewritten into four styles (textbook, patient, clinical note, colloquial), annotated with clinical specialty, and grouped with two other exam corpora, MedMCQA and MMLU-medical, for cross-dataset evaluation. Probing four open-weight LLMs (2--8B), we find that the truth direction is largely robust to writing style (mean $\u0394_\\text{register} \\approx 0.10$ AUROC on held-out facts) and to medical specialty ($\u0394_\\text{specialty} \\approx 0.03$), but degrades unevenly across corpora: by $0.12$ AUROC on MMLU-medical and by $0.21$ on MedMCQA, roughly twice the register gap. The register result replicates with a second generator and carries over to human-written patient questions. The truth direction is therefore largely stable within the medical domain but breaks under some corpus shifts, and question format does not explain the break, which suggests that the signal a linear probe recovers is partly bound to dataset structure rather than to medical knowledge alone.",
+      "pdf_url": "https://arxiv.org/pdf/2609.01361v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.01361v1",
+      "published": "2026-09-01T15:01:47Z",
+      "updated": "2026-09-01T15:01:47Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "ClinTraceBench: Source-Verifiable Longitudinal Clinical Reasoning over EHR-Derived Dialogues",
+      "authors": [
+        "Huimin Wang",
+        "Zhengyi Zhao",
+        "Yutian Zhao"
+      ],
+      "abstract": "Clinical LLM assistants must reason over multi-visit patient trajectories, yet whether the compact history representations used to scale them---retrieval, structured timelines, LLM summaries, agentic memory---preserve the longitudinal signal clinical reasoning needs has not been measured. We introduce ClinTraceBench: 385 MIMIC-IV-derived verified dialogues with event-ID provenance, a nine-task taxonomy (T1--T9), and L0--L4 deterministic + L5 human-audit validation (98.92\\% agreement). We evaluate eight history representation strategies---a no-context floor, \\textit{last-visit-only}, \\textit{full-context}, BGE-M3 \\textit{dense-retrieval}, two compression schemes, and two agentic-memory systems (\\textit{Mem0}, \\textit{A-Mem})---across four backbones (DeepSeek-V3, GPT-4o-mini, Haiku~4.5, Sonnet~4.6) on 6{,}271 questions: 32 cells, 200{,}672 predictions. Four findings: (SP4) a controlled T3 injection probe isolates compression-induced \\textit{relation} loss---with the attribution sentence present \\textit{before} construction, \\textit{Mem0}, \\textit{A-Mem} and \\textit{llm-summary} still recover only 0--5.3\\% of the injected positives; (SP1) compressed strategies pay an aggregation tax on multi-visit trends and cross-patient comparisons; (SP2) the blind-to-full gap spans $+29.8$~pp (GPT-4o-mini) to $+62.7$~pp (Haiku); (SP3) abstention scales non-monotonically with context length. On the Pareto frontier Haiku dominates Sonnet under \\textit{full-context} (\\$25.76 vs.\\ \\$106.21), inverting the ``biggest backbone wins'' heuristic.",
+      "pdf_url": "https://arxiv.org/pdf/2609.01111v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.01111v1",
+      "published": "2026-09-01T11:51:37Z",
+      "updated": "2026-09-01T11:51:37Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Toward Workflow-Aware Benchmarking for Healthcare NLP Agents",
+      "authors": [
+        "Junyi Yao",
+        "Baichuan Li",
+        "Zihao Zheng",
+        "Jiayu Long"
+      ],
+      "abstract": "Large language model (LLM) agents are increasingly proposed for healthcare tasks such as clinical documentation, evidence retrieval, patient messaging, and care coordination. Yet many evaluations remain limited to static medical question answering or one-shot generation, under-representing longitudinal state, interruptions, and human handoffs. We introduce an episode-level evaluation protocol for healthcare NLP agents. The protocol separates evidence across model, agent, and simulated-workflow behavior; specifies a five-field episode schema; and defines annotation and scoring for state continuity, evidence traceability, and escalation decisions. It is instantiated as four task templates: documentation update, evidence retrieval, patient messaging, and triage handoff. The protocol does not claim to measure clinical outcomes or deployment value. Instead, it supplies a reproducible intermediate evaluation layer between static benchmarks and prospective workflow studies, with an explicit cost-sensitive treatment of missed versus unnecessary escalation.",
+      "pdf_url": "https://arxiv.org/pdf/2609.00296v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.00296v1",
+      "published": "2026-08-31T19:41:58Z",
+      "updated": "2026-08-31T19:41:58Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "NSIDDx: A Design Framework for Neuro-Symbolic, Practitioner-First Differential Diagnosis in Low-Resource Settings",
+      "authors": [
+        "Aarav Singh"
+      ],
+      "abstract": "LLM-based diagnostic systems achieve high semantic accuracy on benchmarks, but open-ended evaluation on clinically uncommon presentations reveals a systematic gap between headline accuracy and verifiable clinical reliability. We evaluate an LLM+rare-disease-RAG pipeline across two cohorts and show that the paradigm produces confident outputs that are frequently unverifiable and systematically resistant to clinician interrogation. We present NSIDDx (Neuro-Symbolic Integrated Differential Diagnosis System), a design framework arguing that DDx systems in low-resource settings must treat the clinician as an active reasoning agent. We instantiate this through a neuro-symbolic pipeline with ternary symptom encoding, contradiction detection, audit strings, and practitioner override - running offline on consumer hardware. We distill five design principles for clinician-in-the-loop clinical NLP and invite the prospective studies needed to validate the claim at scale.",
+      "pdf_url": "https://arxiv.org/pdf/2609.00256v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.00256v1",
+      "published": "2026-08-31T18:58:59Z",
+      "updated": "2026-08-31T18:58:59Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "DIASENTINEL: An Auditable Multi-Agent System for Guideline-Grounded Diabetes Risk Screening",
       "authors": [
@@ -194,96 +277,6 @@
       "arxiv_url": "https://arxiv.org/abs/2608.30188v1",
       "published": "2026-08-31T03:13:47Z",
       "updated": "2026-08-31T03:13:47Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Automatic Conversion of NICE Guidelines to an Executable Computational Model Using Large Language Models",
-      "authors": [
-        "Ashvin Gupta",
-        "Denys Prociuk",
-        "Alessandra Russo",
-        "Brendan C. Delaney"
-      ],
-      "abstract": "Introduction: NICE guidelines provide evidence-based recommendations for clinical care but remain largely in unstructured natural language. Existing approaches to converting them into computable representations often focus on individual diseases, require substantial manual encoding, and do not scale. Large language models (LLMs) may enable much of this translation to be automated. Methods: We present an end-to-end approach that converts textual clinical guidelines into executable models capable of generating explainable, patient-specific recommendations. A stepwise LLM-based transformation with in-context examples produces human-inspectable intermediate artifacts. We apply the approach to NICE pancreatic and lung cancer guidelines, use expert review to assess rule alignment, and evaluate the executable pancreatic cancer model on 20 patient vignettes. Results: Expert review showed strong alignment between the source guidelines and generated executable models. Most discrepancies were partial omissions rather than incorrect logic, while hallucinated or fundamentally incorrect rules were rare. On the patient vignettes, the executable model achieved an F1 score of 82.5%. Conclusion: LLMs can transform natural-language NICE guidelines into interpretable, executable models that preserve guideline structure, support transparent inspection and modification, and generate patient-specific recommendations. These findings demonstrate the feasibility of scalable automated generation of computable clinical guidelines.",
-      "pdf_url": "https://arxiv.org/pdf/2608.30022v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.30022v1",
-      "published": "2026-08-30T20:28:03Z",
-      "updated": "2026-08-30T20:28:03Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Error Detection for PET/CT Radiology Reports: Domain-Specific vs Large Language Models",
-      "authors": [
-        "Hermione Warr",
-        "Harry Anthony",
-        "Lilli J Freischem",
-        "Yasin Ibrahim",
-        "Daniel R McGowan",
-        "Konstantinos Kamnitsas"
-      ],
-      "abstract": "Errors in radiology reports can adversely affect patient treatment, yet automated report quality assurance remains challenging because errors are often subtle and require domain expertise to detect. Although large language models (LLMs) have recently been proposed for radiology report verification, their ability to detect clinically meaningful errors beyond chest X-ray datasets remains under-explored. To this end, we present the first systematic evaluation of language models for PET/CT report error detection, comparing compact domain-specific models with SOTA open-weight LLMs. We collected 30,633 oncology FDG PET/CT reports from 23 radiologists over 10 years. We trained domain-specific BERT models to detect clinically motivated synthetic reporting errors and evaluated alongside zero-/few-shot Qwen3-32B, Gemma-3-27B and Llama-3.3-70B on a held-out benchmark of 11,500 reports. A 15M-parameter model achieved 94.4% balanced accuracy with a 5.8% false-positive rate, compared with 84.0% for the strongest prompted LLM. Task-specific adaptation of Llama-3.3-70B closed this performance gap (94.4%) but retained substantially greater computational requirements. Our results suggest that domain-specific training matters more than model scale for PET/CT report error detection, supporting compact models as an accurate and computationally efficient approach to automated radiology report quality assurance.",
-      "pdf_url": "https://arxiv.org/pdf/2608.30021v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.30021v1",
-      "published": "2026-08-30T20:23:01Z",
-      "updated": "2026-08-30T20:23:01Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Generating Clinical Vignettes that Preserve Cognitive Formulations",
-      "authors": [
-        "Amit Oren",
-        "Nimrod Hertz-Palmor",
-        "Dean Ariel",
-        "Guy Laban"
-      ],
-      "abstract": "Large language models can generate fluent clinical case vignettes, but fluency alone does not ensure fidelity to a specifiable clinical structure. We introduce FORMA, a theory-grounded framework that compiles a cognitive model of a disorder into a directed weighted graph, samples a person-specific configuration of that graph, and validates whether the generated vignette preserves the specified components and causal links. We instantiate FORMA on Posttraumatic Stress Disorder using the Ehlers and Clark cognitive model, generating 16,500 vignettes across 500 personas, 11 generation models, and three ablation conditions. Evaluation combines an external edge-recovery probe, two clinical experts, a scaled LLM judge, and a clinician user study with 100 licensed practitioners. The cognitive graph is recoverable from full-condition vignettes (MCC = +0.41, AUC = 0.70) but not from zero-shot generation (MCC = +0.01, AUC = 0.50). Experts rate full vignettes substantially higher than zero-shot alternatives, and clinicians perceive them to be human-written 85% of the time, compared with 22% for zero-shot. FORMA also reduces demographic disparity in perceived quality by 1.5-7x. These results show that cognitive formulation can serve as an auditable specification for scalable synthetic clinical text generation. A repository with the data and code is available online: https://github.com/Amit-Oren/FORMA.",
-      "pdf_url": "https://arxiv.org/pdf/2608.29995v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.29995v1",
-      "published": "2026-08-30T19:40:24Z",
-      "updated": "2026-08-30T19:40:24Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Review Before Trust: Source-Grounded Integrity Gates for AI-Assisted Personal Health Records",
-      "authors": [
-        "Nora Girda",
-        "Adrian Groza"
-      ],
-      "abstract": "Large language models can convert medical documents into structured data, but plausible output may still be unsupported by the source. Persisting such output in a longitudinal health record, a record that accumulates patient information over time, therefore creates an integrity risk: unverified data may influence later summaries, trends, or preventive-care computations. We introduce an evidence-gated trust-promotion model that keeps generated data provisional until a deterministic monitor verifies it against the source document. The monitor admits a candidate for a specified downstream use only when the source contains a unique supporting quotation, the relevant fields occur within the same laboratory row, and the required provenance is preserved. The generator cannot approve its own output, missing or ambiguous evidence causes refusal, and refused candidates remain available for human review rather than being silently discarded. We implement the model in Medical DataCloud, a personal health-record application, and evaluate it through automated tests and a replay of saved extraction outputs. All 22 conformance and mutation tests pass. The replay covers nine historical laboratory PDF reports containing 102 manually labelled rows. The reports produce 97 numeric candidates: schema validation accepts all 97, an earlier packet-level evidence check accepts 94, and the hardened quotation- and row-level policy admits 72 while retaining 25 for review. The study evaluates system integrity rather than clinical correctness or clinical safety. The results demonstrate the technical feasibility of an enforceable boundary that prevents generated claims from authorizing their own reuse in a longitudinal health record.",
-      "pdf_url": "https://arxiv.org/pdf/2608.29965v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.29965v1",
-      "published": "2026-08-30T18:51:43Z",
-      "updated": "2026-08-30T18:51:43Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "En-ViMedNER: An English-Vietnamese Parallel Biomedical Corpus with UMLS Semantic Type Annotations",
-      "authors": [
-        "Nhu Vo",
-        "Phuong Nguyen",
-        "Nu Uyen Phuong Le",
-        "Inigo Jauregi Unanue",
-        "Dung D. Le",
-        "Massimo Piccardi",
-        "Wray Buntine"
-      ],
-      "abstract": "Biomedical Named Entity Recognition (NER) is fundamental to healthcare AI applications, including clinical decision support and medical information extraction. While corpora with Unified Medical Language System (UMLS) annotations, such as MedMentions, have driven progress in English biomedical NER, no comparable resource exists for Vietnamese. This paper presents En-ViMedNER, the first English-Vietnamese parallel biomedical NER corpus annotated with UMLS semantic types, which are language-neutral codes providing a shared cross-lingual label space and ensuring direct comparability with existing UMLS-based resources. The corpus contains 4,392 PubMed abstract pairs, 44,892 English-Vietnamese sentence pairs, and 202,949 aligned entity-mention pairs across 21 semantic types adapted from the MedMentions ST21pv dataset. To balance quality and scalability, we have constructed the corpus through automatic translation, expert post-editing, LLM-assisted label projection, and human verification and adjudication. We characterize En-ViMedNER as a large-scale silver-standard corpus with a human-audited and consensus-corrected mini-test subset. We evaluate En-ViMedNER in two settings: (i) Vietnamese-input/Vietnamese-output biomedical NER and (ii) English-input/Vietnamese-output cross-lingual NER. For Vietnamese NER, we benchmark Vietnamese-supervised encoder models, English-supervised multilingual encoder models, and prompt-based LLMs. The best model achieves an F1 score of 52.70 on the test set and 53.78 on the mini-test set. For cross-lingual NER, we benchmark encoder-decoder models and prompt-based LLMs. The best model achieves an F1 score of 45.44 on the mini-test set. We publicly release our corpus, corpus construction pipeline, and baseline models to facilitate future Vietnamese biomedical NLP research.",
-      "pdf_url": "https://arxiv.org/pdf/2608.29890v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.29890v1",
-      "published": "2026-08-30T16:40:18Z",
-      "updated": "2026-08-30T16:40:18Z",
       "categories": [
         "cs.CL"
       ]

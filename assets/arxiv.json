@@ -1,8 +1,113 @@
 {
-  "generated_at_utc": "2026-09-02T03:55:41.369580Z",
+  "generated_at_utc": "2026-09-03T03:54:13.724321Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Untangling the Mechanisms of Misleading Context in Medical Question Answering",
+      "authors": [
+        "Robin Linzmayer",
+        "No\u00e9mie Elhadad"
+      ],
+      "abstract": "Large language models now answer medical questions with expert-level performance. However, the context these systems act on can be misleading, and misleading context can corrupt a model's medical judgment. To understand how misleading context corrupts this judgment, we examine the model's susceptibility to the context, disclosure of it, mechanism of corrupted reasoning, and monitorability of the decision. On the medical reasoning subset of MedMisBench, a clinician-reviewed question-answering benchmark of 8,627 questions, we inject two types of misleading context cues, fabricated evidence and a bare assertion. We test three reasoning models, two that expose their full reasoning trace and one frontier model that exposes only its response. All three are more susceptible to the assertion than to the fabricated evidence, adopting the asserted answer 10 to 27 points more often. The misleading cues are disclosed in 81 to 98% of traces but only 7 to 90% of responses, and the assertion is disclosed less often than evidence based cues. Resampling from reasoning traces without disclosure shows the two cues corrupt reasoning differently, evidence entering early and accumulating while the assertion redirects the conclusion near its end. An LLM monitor catches 78% of corrupted decisions at 5% false positives when reading an open model's trace with guidance, against at most 32% from any response. The misleading context that models are most susceptible to is disclosed least, and was caught reliably only from an open reasoning trace, which frontier providers withhold.",
+      "pdf_url": "https://arxiv.org/pdf/2609.02754v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.02754v1",
+      "published": "2026-09-02T15:55:56Z",
+      "updated": "2026-09-02T15:55:56Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "A Physics-Consistent Benchmark for Contact-Rich Human-Robot Interaction in Assistive Care",
+      "authors": [
+        "Chengxiao He",
+        "Shanghai Yuan",
+        "Liuqun Fan",
+        "Shenzhen Zhu"
+      ],
+      "abstract": "Conventional task-level evaluation asks whether a robot policy completes a specified action, but can miss failures that emerge only during physical human contact. This limitation is critical in contact-rich assistive tasks, where meaningful evaluation requires a physically responsive human, interaction-quality assessment beyond task success, and a leak-free observer-scorer protocol. We introduce a physics-consistent benchmark for contact-rich human-robot interaction, instantiated in robot-assisted bathing. The benchmark combines a deformable, passively responding human, physics-aware scores alongside task-level success, and a frozen vision-only / scorer-only evaluation protocol. To establish physical validity, region-wise simulated responses are calibrated against force-indentation measurements from Franka impedance pushes on a medical-care manikin. Under a frozen T1-T7 protocol with 140 runs per method, an LLM-augmented state machine (State Machine) achieves 72.9% task success but drops to 56.4% after correct-region and force-safety screening; VoxPoser produces lighter and more stable contact but completes only 27.9% of trials; and zero-shot pi0.5 achieves 0.7% task success with no correct-region or safety-gated successes. These results show that task completion alone does not imply physically valid contact and motivate physics-aware screening before deployment of contact-rich assistive robot policies.",
+      "pdf_url": "https://arxiv.org/pdf/2609.02402v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.02402v1",
+      "published": "2026-09-02T10:14:32Z",
+      "updated": "2026-09-02T10:14:32Z",
+      "categories": [
+        "cs.RO"
+      ]
+    },
+    {
+      "title": "Improving Health Literacy through Lay Summarization of Radiological Reports: An Evaluation of BioNER and Retrieval-Augmented Generation",
+      "authors": [
+        "Egecan \u00c7elik Evgin",
+        "\u0130lknur Karadeniz",
+        "Olcay Taner Y\u0131ld\u0131z"
+      ],
+      "abstract": "Radiology reports are written primarily for clinicians, and their specialized terminology often makes them difficult for patients to interpret. As a result, many patients turn to publicly available Large Language Models (LLMs) to help explain their reports, despite well-documented risks of factual inaccuracies and hallucinations. Automated lay-summary generation has emerged as a promising alternative, yet the effectiveness of retrieval-enhanced and clinically informed approaches for radiology-specific communication remains underexplored. This study investigates the extent to which Retrieval-Augmented Generation (RAG) and Named Entity Recognition (NER) improve the quality, factual consistency, and readability of automatically generated lay summaries compared with standard LLM-based generation. We develop a framework combining NER-based extraction of clinically relevant findings with a RAG mechanism for contextual grounding, evaluated across few-shot and fine-tuned variants of two models (Qwen, BioBART). Results show that NER consistently improves readability and overall quality, while RAG alone offers no benefit and can introduce hallucinations from irrelevant retrieved terms. Combining RAG with NER degrades performance in few-shot settings but improves readability when fine-tuned. Fine-tuned BioBART with NER achieves the best overall performance, highlighting entity-aware extraction as the primary driver of improved patient-friendly summaries.",
+      "pdf_url": "https://arxiv.org/pdf/2609.02396v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.02396v1",
+      "published": "2026-09-02T10:06:13Z",
+      "updated": "2026-09-02T10:06:13Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Candidate Generation and Definition-Guided Verification for Sentence-Level Depression Symptom Recognition",
+      "authors": [
+        "Weiming Li",
+        "Catarina Barata",
+        "Miguel Constante",
+        "Joao Sanches"
+      ],
+      "abstract": "Sentence-level recognition of depression symptoms is challenging because similar expressions can differ in symptom relevance, and language-model inference is insufficiently grounded in diagnostic definitions. This study proposes a two-stage framework separating symptom-candidate generation from definition-grounded verification. A contrastively fine-tuned sentence encoder generates a symptom candidate per sentence, and a fine-tuned language model verifies whether the candidate is present or absent using the sentence, its context, and a candidate-specific diagnostic definition, checking its judgment against that definition before answering. Evaluated against encoder, inference-based, medical, and general LLM baselines and a matched single-stage supervised classifier, the proposed pipeline attains the best accuracy and F1 scores of all methods, with rationales matching expert-authored annotations. A preliminary clinical audit indicates moderate alignment with diagnostic definitions, with explanation quality strongly dependent on prediction correctness. The results support decomposing symptom recognition into candidate generation and definition-grounded verification, though performance remains limited for rare categories.",
+      "pdf_url": "https://arxiv.org/pdf/2609.01833v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.01833v1",
+      "published": "2026-09-01T20:08:03Z",
+      "updated": "2026-09-01T20:08:03Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Interpretable Symptom Vectors for Depression in a Large Language Model",
+      "authors": [
+        "Fangyi Zhu",
+        "Ajay Subramanian",
+        "Allison Constant",
+        "Camille Wang",
+        "Ravish Gupta",
+        "Corey J. Keller"
+      ],
+      "abstract": "Patients with depression present with diverse symptom profiles, yet clinical practice routinely reduces this variation to a single severity score. Large language models (LLMs) can potentially capture various symptoms and their severity from patient speech. However, how depressive symptoms are represented inside LLMs remains poorly understood, limiting clinical trust. To examine whether internal model activations match clinician judgment, we analyzed the residual stream of Gemma-3-27B-PT using mechanistic interpretability techniques. Recording activations across symptom descriptions drawn from validated clinical instruments, we found that symptom groups geometrically separated the most at layer 21 across multiple distance metrics. Using Semantic Projection, we then projected held-out naturalistic text onto Symptom Vectors constructed from these instruments. The resulting per-symptom coefficients preserved clinician-annotated rank ordering across mood, somatic, and suicidality axes. Furthermore, a single depression vector in Layer 21 separates held-out depressive from non-depressive text (AUC = 0.789), which can be used as an emotional valence gate that restricts symptom projection to depressive speech. These results reveal a decorrelated, clinician-aligned symptom signal readable directly from internal activations, offering a mechanistic foundation for interpretable depression-assessment tools.",
+      "pdf_url": "https://arxiv.org/pdf/2609.01832v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.01832v1",
+      "published": "2026-09-01T20:07:03Z",
+      "updated": "2026-09-01T20:07:03Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG",
+        "q-bio.NC"
+      ]
+    },
+    {
+      "title": "AlphaRAD: Grounded Zero-Shot Classification in Chest Radiology via $\u03b1$-Corrected Binary Cross Entropy and Factorized Latent Supervision",
+      "authors": [
+        "Jianzhong You",
+        "Yuan Gao",
+        "Chris McIntosh"
+      ],
+      "abstract": "Vision-Language Pretrained Models (VLPMs) offer a scalable path to open-vocabulary chest radiology understanding, yet two aspects remain underexplored: how structured clinical semantics extracted from medical reports can reduce in-batch noise during contrastive learning, and how cross-modal fusion can be designed to produce more faithful spatial grounding without added complexity. We introduce AlphaRAD, addressing these opportunities through two contributions. First, we construct a large-scale structured medical concept space from medical reports parsed by a Large Language Model for training, thereby mitigating in-batch learning noise and removing heuristic pair matching in contrastive learning, and thus naturally positioning AlphaRAD as a medical concept discriminator trained via $\u03b1$-Corrected Binary Cross-Entropy. Second, we propose FLaS (Factorized Latent Supervision), an extremely simple yet effective cross-modal feature fusion module that factorizes VLPM representations into independent subspaces, using dedicated alignment supervision to enhance the expressiveness of spatial grounding without introducing additional model parameters. Through extensive empirical validation, AlphaRAD shows strong zero-shot generalization across diverse chest radiology tasks. Notably, it establishes state-of-the-art average performance across 16 classification benchmarks, while achieving individual state-of-the-art results via distinct gains on 7 grounding/phrase grounding and 3 segmentation datasets.",
+      "pdf_url": "https://arxiv.org/pdf/2609.01757v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.01757v1",
+      "published": "2026-09-01T18:24:50Z",
+      "updated": "2026-09-01T18:24:50Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
     {
       "title": "RadMatch: Auditable Radiology Report Evaluation via Finding-Level Matching",
       "authors": [
@@ -162,123 +267,6 @@
       "categories": [
         "cs.CL",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Evidence-Bounded Mental Health Reasoning from Heterogeneous Speech Protocols",
-      "authors": [
-        "Chengyuan Gao",
-        "Jiang Wu",
-        "Tao Lu",
-        "Jiayan Guo",
-        "Mingkun Xu",
-        "Tianyi Zang",
-        "Shangyang Li"
-      ],
-      "abstract": "Computational mental health screening using multimodal speech and text has shown great promise. However, existing models often assume all clinical speech protocols carry equivalent evidentiary validity. In reality, heterogeneous protocols, from free interviews to fixed reading tasks, support fundamentally different evidence. Forcing uniform reasoning flattens these boundaries, causing models to hallucinate symptoms from irrelevant text or overclaim support. Even advanced long chain-of-thought LLMs fail to resolve this issue, as free-form reasoning can exacerbate boundary violations. To address this, we reformulate multimodal screening as an evidence-bounded reasoning problem. We introduce the Evidence Package Benchmark, integrating 1,870 packages across six heterogeneous sources with explicit modality masks and evidence permissions. We further propose EviBound, a protocol-aware evidence control framework. Unlike direct LLM prompting, EviBound uses a profile-aware planner to restrict reasoning scope, orchestrates evidence tools via five-way acoustic consensus, and enforces a boundary critic to suppress unsupported claims. Empirical results show EviBound achieves a held-out test Depression AUROC of 0.8658, exceeding the strongest direct omni-modal baseline by +0.0811 AUROC while maintaining zero claim violations. Our work moves beyond unconstrained accuracy toward evidence-consistent, protocol-aware systems for safer clinical NLP research.",
-      "pdf_url": "https://arxiv.org/pdf/2608.31014v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.31014v1",
-      "published": "2026-08-31T15:58:22Z",
-      "updated": "2026-08-31T15:58:22Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Evidence, Logic, and Compliance: Multi-Agent Structured Graph Reasoning with Expert Arbitration for Medical Referral",
-      "authors": [
-        "Qi Peng",
-        "Yi Cai",
-        "Jialin Cui",
-        "Tong Zhu",
-        "Yujuan Ding",
-        "Qingbao Huang",
-        "Tao Wang",
-        "Jiayuan Xie",
-        "Changmeng Zheng",
-        "Qing Li"
-      ],
-      "abstract": "Medical referral (directing patients to the appropriate hospital department) is a complex decision-making process requiring the synthesis of multimodal data, including patient narratives, laboratory indicators, and radiology imaging. While Large Language Models (LLMs) have advanced medical dialogue systems, they struggle with real-world referral tasks due to two primary limitations: (1) Information Overload, where models fixate on high-frequency disease terms while overlooking subtle but critical urgency indicators; and (2) Unstructured Collaboration, where existing multi-agent frameworks rely on loose dialogue that leads to semantic drift and confirmation bias. To address these challenges, we introduce MASGR (Multi-Agent Structured Graph Reasoning), a framework that treats referral not as a classification task but as a structured graph construction problem. MASGR deploys specialized agents to extract evidence from distinct modalities and coordinates them through a clinical reasoning graph. This graph forces agents to establish explicit logical connections between conflicting evidence. Furthermore, we integrate a knowledge-guided arbitration mechanism that prioritizes patient safety rules over standard diagnostic classification. Extensive experiments on real-world medical records demonstrate that MASGR significantly outperforms state-of-the-art LLMs and existing multi-agent systems, particularly in complex cases requiring the balancing of chronic disease management and emergency intervention. The AI contribution lies in the Multi-Agent Structured Graph Reasoning framework that transforms unstructured multi-agent dialogue into a verifiable logical graph construction. The engineering application is demonstrated through its deployment in a complex healthcare decision-making system to optimize the precision of complex medical referrals.",
-      "pdf_url": "https://arxiv.org/pdf/2608.30938v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.30938v1",
-      "published": "2026-08-31T15:11:05Z",
-      "updated": "2026-08-31T15:11:05Z",
-      "categories": [
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "SingProbe Technical Report",
-      "authors": [
-        "Sing Team"
-      ],
-      "abstract": "Runtime guardrails are essential for reliable large language model (LLM) deployment, yet existing approaches typically rely on independent, external models that introduce additional inference cost, delayed safety signals, and a capacity mismatch with increasingly capable base models. To address these issues, we introduce SingProbe, a lightweight intrinsic runtime guard that directly reuses hidden states produced during LLM inference and operates alongside autoregressive decoding. Within a unified framework, SingProbe continuously predicts query intent, response safety, and hallucination risk at the token level with negligible additional guardrail inference overhead, offering a \"free-lunch\" solution. We further introduce SingStreamBench, a benchmark designed to assess whether streaming guardrails remain inactive on benign prefixes while promptly detecting emerging unsafe content. Extensive experiments show that SingProbe achieves competitive or superior performance compared with substantially larger standalone guardrails and specialized hallucination detectors, with only $\\approx$2M parameters and $<0.5\\%$ extra overhead. Beyond passive detection, we also show that SingProbe scores can anticipate future generation risk and guide constrained safe decoding. We further extend this paradigm to medical generation through SingProbe-Med, which selectively activates risk-directed decoding interventions only when clinically relevant risks emerge. Together, these results demonstrate that internal model representations provide an effective and efficient interface for generation-time monitoring and control.",
-      "pdf_url": "https://arxiv.org/pdf/2608.30703v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.30703v1",
-      "published": "2026-08-31T12:42:11Z",
-      "updated": "2026-08-31T12:42:11Z",
-      "categories": [
-        "cs.CR",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Dense Clinical Contrasts Enhance Medical Knowledge Updating in Large Language Models",
-      "authors": [
-        "Yangmin Huang",
-        "Shu Quan",
-        "He Geng",
-        "Xin Ye",
-        "Qianyun Du",
-        "Zhiyang He",
-        "Jiaxue Hu",
-        "Xiaodong Tao"
-      ],
-      "abstract": "Medical knowledge changes continually, making large language models vulnerable to relying on outdated yet clinically plausible information. We study whether the format of supervision affects medical knowledge updating under a matched training-budget setting. We introduce SEER-Bench, a temporally anchored oncology-staging benchmark curated from the latest versioned SEER Research Data release, and render identical medical update events from NCCN oncology guidelines into four supervision formats: EMQ, MSQ, FITB, and SAQ. Across SEER-Bench and HealthBench Professional, EMQ gives the most stable external transfer and retention among same-budget SFT variants. With EMQ supervision, the updated 4B model produces competitive results on temporally anchored oncology staging, reaching 64.8% answer accuracy and 59.6% rationale accuracy on SEER-Bench. Diagnostic analyses suggest that EMQ exposes denser clinical contrast signals while preserving discriminative representations with smaller movement from the base model. These results show that medical knowledge updating depends not only on the update algorithm, but also on how knowledge is structured as supervision.",
-      "pdf_url": "https://arxiv.org/pdf/2608.30405v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.30405v1",
-      "published": "2026-08-31T07:59:15Z",
-      "updated": "2026-08-31T07:59:15Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Quantitative Evidence Mining for Plausibility-Aware Biomedical AI",
-      "authors": [
-        "Negin Sadat Babaiha",
-        "Stefan Geissler",
-        "Marie-Christine Simon",
-        "Martin Hofmann-Apitius",
-        "Marc Jacobs"
-      ],
-      "abstract": "Biomedical artificial intelligence (AI) systems increasingly extract, organize, and reuse scientific claims from literature, clinical trials, and regulatory documents. But automatic extraction alone does not make a claim reliable evidence: a claim becomes useful only when it can be traced to its source, linked to the quantitative details that support it, and read within its biomedical context and uncertainty. This matters as large language models (LLMs) and increasingly autonomous systems drive evidence synthesis, knowledge graph (KG) construction, and decision support. Many text-mining and LLM pipelines remain relation-centric: they capture entities and relations such as Drug--TREATS--Disease, but drop the dose, effect size, population, comparator, uncertainty, and conditions under which a claim holds. Such relations can look actionable yet remain hard to verify, compare, or reuse. In this perspective, we argue for a shift toward quantitative evidence mining---extracting values, units, measured entities and properties, context, uncertainty, provenance, and plausibility as structured evidence units that populate evidence-aware KGs and can be checked for source grounding, unit consistency, completeness, and biological plausibility. We outline a framework for plausibility-aware AI that treats extracted claims not as final answers but as auditable evidence objects, making clear what was measured, how much it changed, in which setting, with what uncertainty, and from which source. The central risk is not only incorrect extraction, but claims that look like evidence while lacking the structure needed to trust them.",
-      "pdf_url": "https://arxiv.org/pdf/2608.30393v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.30393v1",
-      "published": "2026-08-31T07:48:25Z",
-      "updated": "2026-08-31T07:48:25Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "GPAgentBench-2K: Benchmarking Large Language Model Agents in Complex Clinical Action Space",
-      "authors": [
-        "Boqi Chen",
-        "Xudong Liu",
-        "Yunke Ao",
-        "Heejin Do",
-        "Jianing Qiu"
-      ],
-      "abstract": "Large Language Models (LLMs) show great potential as clinical agents, yet existing benchmarks reduce clinical workflows to static predictions or unconstrained Markov Decision Processes (MDPs) with coarse action sets. To address this, we introduce GPAgentBench-2K, the first Constrained MDP (CMDP) LLM-agent benchmark for primary-care clinical decision-making, constructed from expert-validated records of real-world GP encounters. Our environment models a full spectrum of six foundational clinical actions, imposes a topological workflow prior over the action space, and operationalizes safety-informed abstention as a first-class outcome. Evaluating 16 state-of-the-art LLMs reveals a significant performance degradation as the action space scales. Crucially, we uncover a clinical quality-safety gap: even frontier models with the highest diagnosis accuracy violate safety constraints in over half of high-risk cases. Finally, we establish a reference point using Constrained Group Relative Policy Optimization (C-GRPO), and show that while explicitly modeling constraints improves performance over unconstrained RL methods, it remains far from clinically acceptable safety.",
-      "pdf_url": "https://arxiv.org/pdf/2608.30188v1",
-      "arxiv_url": "https://arxiv.org/abs/2608.30188v1",
-      "published": "2026-08-31T03:13:47Z",
-      "updated": "2026-08-31T03:13:47Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

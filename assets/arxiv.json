@@ -1,19 +1,115 @@
 {
-  "generated_at_utc": "2026-09-06T03:58:57.463848Z",
+  "generated_at_utc": "2026-09-07T03:58:25.509995Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "A Structured Debate-Mixture-of-Agents Framework for Complex Clinical Diagnostic Decision Support",
+      "authors": [
+        "Chang Xia",
+        "Leilei Ouyang",
+        "Huimin Wang",
+        "Yong Zhao",
+        "Kang Li"
+      ],
+      "abstract": "Large language models (LLMs) show potential for medical tasks, but their single-turn question-answer format does not reflect how clinical diagnosis is performed in practice. As a result, they remain limited in complex diagnostic settings. We developed Debate-Mixture-of-Agents (DMoA), a novel multi-agent framework that structures role-based interaction to support iterative diagnostic reasoning. Base models and DMoA were evaluated on 297 rare disease cases and 1,719 challenging cases. Across both datasets, DMoA improved most likely diagnosis accuracy by 10.21 percentage points and safety rate by 11.36 percentage points over GPT-4o baseline. Ablation experiments showed that the gains were not simply due to the use of more models or longer outputs, but also reflected the contribution of the structured workflow. Further analyses examined how framework design, base model choice, and token budget affected performance. DMoA performed better with a 4*2 structure, stronger base models, and a larger token budget. These findings demonstrate the potential of DMoA for clinical tasks and suggest further investigation of multi-agent frameworks.",
+      "pdf_url": "https://arxiv.org/pdf/2609.05069v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.05069v1",
+      "published": "2026-09-04T12:28:31Z",
+      "updated": "2026-09-04T12:28:31Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "MMTClinic: Multimodal, Multilingual Time Series Question Answering and Reasoning Benchmark for Clinical Domain",
+      "authors": [
+        "Sourav Malakar",
+        "Harshit Nigam",
+        "Akash Ghosh",
+        "Sriparna Saha",
+        "Amlan Chakrabarti",
+        "Saptarsi Goswami",
+        "Priti Singh"
+      ],
+      "abstract": "Time-series data in clinical settings is crucial for capturing dynamic changes in a patient's health over time, enabling timely diagnosis, personalized treatment, and early detection of critical events. However, the development of clinically reliable and linguistically inclusive medical AI systems remains a significant challenge, primarily due to the lack of multimodal, multilingual, and time-series-grounded benchmarks that reflect the complexity of real-world clinical scenarios. To fill this gap, we present MMTClinic, a benchmark designed to evaluate large language models (LLMs) on complex reasoning and question-answering tasks involving clinical time-series. MMTClinic combines text, medical images, and multivariate physiological signals and includes 30,000 QA pairs (15,000 multiple choice questions (MCQs) and 15,000 open-ended questions) across five languages: English, Hindi, Bengali, Marathi, and Tamil. These questions cover three important clinical tasks---mortality prediction, heart rate forecasting, and SOFA score estimation. We evaluate 13 state-of-the-art LLMs in zero-shot, few-shot, and chain-of-thought settings. Our evaluation reveals notable differences in model performance across tasks, languages, and modalities, highlighting current limitations in clinical reasoning capabilities. MMTClinic provides a valuable resource for advancing multilingual, multimodal, and time-series-aware medical AI research. The dataset will be made publicly available on successful acceptance of the work.",
+      "pdf_url": "https://arxiv.org/pdf/2609.04842v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.04842v1",
+      "published": "2026-09-04T07:59:19Z",
+      "updated": "2026-09-04T07:59:19Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Retinal OCTA Phenotyping with LLM Reporting for Alzheimer's Disease",
+      "authors": [
+        "Progga Paromita Dutta",
+        "Jeba Maliha",
+        "Md Rafiul Kabir"
+      ],
+      "abstract": "Early identification of Alzheimer's disease (AD) remains challenging because established assessment methods can be costly, resource-intensive, or unsuitable for population-scale screening. Optical coherence tomography angiography (OCTA) provides non-invasive visualization of retinal microvasculature, but existing approaches often require diagnostic labels and provide limited measurement-level interpretation. We present an explainable OCTA pipeline that integrates annotation-aware vessel segmentation, layer-specific vascular biomarker extraction, label-free phenotyping, and measurement-grounded LLM reporting. Using 117 ROSE-1 images from 39 subjects, we apply annotation-matched segmentation models to superficial vascular complex (SVC), deep vascular complex (DVC), and combined SVC+DVC representations. The models achieve ROC-AUC values of 0.916-0.970 and Dice scores of 0.695-0.781. Six density and fractal-dimension biomarkers form subject-level profiles for exploratory clustering. Analysis of nine held-out subjects identifies an internally consistent lower-density, lower-fractal-dimension phenotype, although the absence of diagnostic labels prevents clinical interpretation. Reports generated using GPT, Gemini, and Llama are evaluated for measurement grounding, citation faithfulness, and diagnostic caution. Overall, the framework provides a transparent, non-diagnostic connection between retinal vascular measurements, exploratory phenotyping, and evidence-linked interpretation for Alzheimer's research.",
+      "pdf_url": "https://arxiv.org/pdf/2609.04689v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.04689v1",
+      "published": "2026-09-04T03:38:55Z",
+      "updated": "2026-09-04T03:38:55Z",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "PetQA: Benchmarking Veterinary Knowledge and Clinical Reasoning",
+      "authors": [
+        "Taegyun Kim",
+        "Youngwook Ham",
+        "Jungwook Rhim",
+        "Ju-Hyun An",
+        "Sungkyu Park",
+        "Kunwoo Park"
+      ],
+      "abstract": "We introduce PetQA, a Korean long-form question-answering (QA) benchmark for evaluating veterinary knowledge and clinical reasoning in large language models (LLMs) and large vision-language models (LVLMs). PetQA contains 10,076 text-only and 8,751 multimodal QA pairs derived from real-world questions about dogs and cats, paired with answers from expert veterinarians. Its test split, PetQA-Bench, further includes annotations for question types and clinical conditions. We evaluate eighteen models using ROUGE, BERTScore, and LLM-as-a-judge metrics for factuality and helpfulness under three settings: zero-shot inference, retrieval-augmented generation (RAG), and supervised fine-tuning (SFT). The benchmarking results provide an overview of the strengths and limitations of current models in addressing veterinary clinical queries and highlight the need for more effective adaptation methods to develop clinically reliable AI systems for veterinary care. To facilitate broader use, we additionally provide translated versions of PetQA-Bench in five languages.",
+      "pdf_url": "https://arxiv.org/pdf/2609.04598v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.04598v1",
+      "published": "2026-09-04T00:54:04Z",
+      "updated": "2026-09-04T00:54:04Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "REFINE: LLM Refinement over Budgeted Text-Attributed Graphs for Personalized Medical Concept Representation",
+      "authors": [
+        "Mohsen Nayebi Kerdabadi",
+        "Arya Hadizadeh Moghaddam",
+        "Dongjie Wang",
+        "Zijun Yao"
+      ],
+      "abstract": "Learning rich medical concept representations is essential for EHR prediction. Text-attributed knowledge graphs (TKGs) provide a natural foundation by organizing heterogeneous medical relations together with textual semantics. However, most existing encoders process concepts uniformly across patients, despite the fact that a code's meaning and predictive value depend on patient-specific clinical context and trajectory. Learning patient-personalized concept representations from TKGs introduces two key challenges: (1) deciding how much KG context to incorporate for each observed code, and (2) aligning semantic information with the patient-specific relational structure. We propose REFINE, a KG-aware budgeted LLM graph refinement framework for patient-personalized medical concept encoding. Starting from a global TKG, REFINE constructs patient-specific temporal graphs. A sequential reinforcement learning policy selects a personalized KG expansion budget for each observed code. The resulting patient graph is processed by a heterogeneous GNN to capture relation-aware structural dependencies, while a frozen LLM uses graph-aware soft prompts to semantically refine concept representations. Experiments on MIMIC-III and MIMIC-IV show that REFINE consistently improves diverse EHR backbones, outperforms strong baselines, and demonstrates robust gains across component ablation, KG selection, and data insufficiency.",
+      "pdf_url": "https://arxiv.org/pdf/2609.04415v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.04415v1",
+      "published": "2026-09-03T19:29:22Z",
+      "updated": "2026-09-03T19:29:22Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "LLM4CKD: Large Language Models for Early Stage Chronic Kidney Disease Screening",
       "authors": [
         "Muhammad Ashad Kabir",
         "Sirajam Munira"
       ],
-      "abstract": "Early screening of chronic kidney disease (CKD) is critical for timely intervention, yet most machine learning (ML) and deep learning (DL) approaches require labeled data and model training, limiting their use in real-world screening settings. This study evaluates the effectiveness of large language models (LLMs) for CKD screening under zero-shot and few-shot in-context learning settings and compares them with traditional ML and DL methods. We propose a framework that uses clinically selected tabular features and structured prompt templates to enable LLM-based inference without task-specific training. LLM performance is evaluated across multiple prompt styles, feature configurations, and data settings, and compared with standard ML, DL, and tabular foundation model (TFM) baselines, and existing CKD screening tools. The results show that LLMs can achieve competitive performance using only a small number of examples, often matching or outperforming traditional approaches in low-data settings. However, their performance remains model-dependent and less stable as input complexity increases. In contrast, ML, DL, and TFM models show more consistent improvement with larger training data. Overall, the findings highlight a trade-off between data efficiency and stability, suggesting that LLMs may serve as a flexible complementary approach for CKD screening when labeled data are limited.",
-      "pdf_url": "https://arxiv.org/pdf/2609.04013v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.04013v1",
+      "abstract": "Early screening of chronic kidney disease (CKD) is critical for timely intervention, yet most machine learning (ML) and deep learning (DL) approaches require labeled data and model training, limiting their use in real-world screening settings. This study evaluates the effectiveness of large language models (LLMs) for CKD screening under zero-shot and few-shot in-context learning settings and compares them with traditional ML and DL methods. We propose a framework that uses clinically selected tabular features and structured prompt templates to enable LLM-based inference without task-specific training. LLM performance is evaluated across multiple prompt styles, feature configurations, and data settings, and compared with standard ML, DL, and tabular foundation model (TFM) baselines, and existing CKD screening tools. The results show that LLMs can achieve competitive performance using only a small number of examples, often matching or outperforming traditional approaches in low-data settings. However, their performance remains model-dependent and less stable as input complexity increases. In contrast, ML, DL, and TFM models show more consistent improvement with larger training data. Overall, the findings highlight a trade-off between data efficiency and stability, suggesting that LLMs may serve as a flexible complementary approach for CKD screening when labeled data are limited. To facilitate further research and reproducibility, the code has been made publicly available at https://github.com/akabircs/LLM4CKD",
+      "pdf_url": "https://arxiv.org/pdf/2609.04013v2",
+      "arxiv_url": "https://arxiv.org/abs/2609.04013v2",
       "published": "2026-09-03T15:53:20Z",
-      "updated": "2026-09-03T15:53:20Z",
+      "updated": "2026-09-04T09:08:39Z",
       "categories": [
         "cs.AI",
         "cs.LG"
@@ -129,16 +225,16 @@
     {
       "title": "Counterfactual Fairness Audits of Multi-Step Clinical LLM Agents Require a Measured Per-Action Instability Floor",
       "authors": [
-        "Rohith Reddy Bellibaltu",
+        "Rohith Reddy Bellibatlu",
         "Manpreet Singh",
         "Deepak Parashar",
         "Rahul Joshi"
       ],
       "abstract": "Counterfactual audits are the standard tool for checking whether a clinical agent treats demographically distinct but clinically identical patients differently. They report a flip rate: how often an action changes when only the patient descriptor changes. We show that this quantity is uninterpretable on its own. Re-running an identical condition ten times over sixteen vignettes (same narrative, same descriptor string, nothing varied) moved a clinical agent's action in 8.7% of outcome-vignette cells, and instability was heterogeneous across actions by a factor of eight, from 0.022 for ICU escalation to 0.179 for controlled-substance caution. No demographic contrast in our data was distinguishable from that floor. A second model gives a pooled floor of 6.7% and ranks the six actions almost identically (Spearman 0.94, exact p=0.017), so the floor is not one system's artefact. Majority-vote aggregation over five draws removes 39% of it and then flattens, and a null simulation attributes the residue to heterogeneous per-cell rates, so replication mitigates without eliminating. Any counterfactual fairness estimate reported without a per-action floor beside it therefore cannot be read as evidence of disparity. The measurements were taken with FairMedAgent, an evaluation harness for disparity in the actions of clinical LLM agents whose estimand, the within-range counterfactual flip rate, counts only flips between actions a published decision rule admits and a clinician has adjudicated. That estimand requires band adjudication, which is under way; no disparity result is claimed here. Each synthetic vignette runs a six-stage trajectory (five model-facing decisions around a deterministic environment step) under fixed-form conditions spanning race, sex, age, insurance, English proficiency, and their intersections. The harness, the floor protocol, and every analysis script are released.",
-      "pdf_url": "https://arxiv.org/pdf/2609.03221v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.03221v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.03221v2",
+      "arxiv_url": "https://arxiv.org/abs/2609.03221v2",
       "published": "2026-09-02T23:38:17Z",
-      "updated": "2026-09-02T23:38:17Z",
+      "updated": "2026-09-04T13:47:56Z",
       "categories": [
         "cs.CL",
         "cs.LG"
@@ -176,96 +272,6 @@
       "updated": "2026-09-02T10:14:32Z",
       "categories": [
         "cs.RO"
-      ]
-    },
-    {
-      "title": "Improving Health Literacy through Lay Summarization of Radiological Reports: An Evaluation of BioNER and Retrieval-Augmented Generation",
-      "authors": [
-        "Egecan \u00c7elik Evgin",
-        "\u0130lknur Karadeniz",
-        "Olcay Taner Y\u0131ld\u0131z"
-      ],
-      "abstract": "Radiology reports are written primarily for clinicians, and their specialized terminology often makes them difficult for patients to interpret. As a result, many patients turn to publicly available Large Language Models (LLMs) to help explain their reports, despite well-documented risks of factual inaccuracies and hallucinations. Automated lay-summary generation has emerged as a promising alternative, yet the effectiveness of retrieval-enhanced and clinically informed approaches for radiology-specific communication remains underexplored. This study investigates the extent to which Retrieval-Augmented Generation (RAG) and Named Entity Recognition (NER) improve the quality, factual consistency, and readability of automatically generated lay summaries compared with standard LLM-based generation. We develop a framework combining NER-based extraction of clinically relevant findings with a RAG mechanism for contextual grounding, evaluated across few-shot and fine-tuned variants of two models (Qwen, BioBART). Results show that NER consistently improves readability and overall quality, while RAG alone offers no benefit and can introduce hallucinations from irrelevant retrieved terms. Combining RAG with NER degrades performance in few-shot settings but improves readability when fine-tuned. Fine-tuned BioBART with NER achieves the best overall performance, highlighting entity-aware extraction as the primary driver of improved patient-friendly summaries.",
-      "pdf_url": "https://arxiv.org/pdf/2609.02396v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.02396v1",
-      "published": "2026-09-02T10:06:13Z",
-      "updated": "2026-09-02T10:06:13Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Candidate Generation and Definition-Guided Verification for Sentence-Level Depression Symptom Recognition",
-      "authors": [
-        "Weiming Li",
-        "Catarina Barata",
-        "Miguel Constante",
-        "Joao Sanches"
-      ],
-      "abstract": "Sentence-level recognition of depression symptoms is challenging because similar expressions can differ in symptom relevance, and language-model inference is insufficiently grounded in diagnostic definitions. This study proposes a two-stage framework separating symptom-candidate generation from definition-grounded verification. A contrastively fine-tuned sentence encoder generates a symptom candidate per sentence, and a fine-tuned language model verifies whether the candidate is present or absent using the sentence, its context, and a candidate-specific diagnostic definition, checking its judgment against that definition before answering. Evaluated against encoder, inference-based, medical, and general LLM baselines and a matched single-stage supervised classifier, the proposed pipeline attains the best accuracy and F1 scores of all methods, with rationales matching expert-authored annotations. A preliminary clinical audit indicates moderate alignment with diagnostic definitions, with explanation quality strongly dependent on prediction correctness. The results support decomposing symptom recognition into candidate generation and definition-grounded verification, though performance remains limited for rare categories.",
-      "pdf_url": "https://arxiv.org/pdf/2609.01833v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.01833v1",
-      "published": "2026-09-01T20:08:03Z",
-      "updated": "2026-09-01T20:08:03Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Interpretable Symptom Vectors for Depression in a Large Language Model",
-      "authors": [
-        "Fangyi Zhu",
-        "Ajay Subramanian",
-        "Allison Constant",
-        "Camille Wang",
-        "Ravish Gupta",
-        "Corey J. Keller"
-      ],
-      "abstract": "Patients with depression present with diverse symptom profiles, yet clinical practice routinely reduces this variation to a single severity score. Large language models (LLMs) can potentially capture various symptoms and their severity from patient speech. However, how depressive symptoms are represented inside LLMs remains poorly understood, limiting clinical trust. To examine whether internal model activations match clinician judgment, we analyzed the residual stream of Gemma-3-27B-PT using mechanistic interpretability techniques. Recording activations across symptom descriptions drawn from validated clinical instruments, we found that symptom groups geometrically separated the most at layer 21 across multiple distance metrics. Using Semantic Projection, we then projected held-out naturalistic text onto Symptom Vectors constructed from these instruments. The resulting per-symptom coefficients preserved clinician-annotated rank ordering across mood, somatic, and suicidality axes. Furthermore, a single depression vector in Layer 21 separates held-out depressive from non-depressive text (AUC = 0.789), which can be used as an emotional valence gate that restricts symptom projection to depressive speech. These results reveal a decorrelated, clinician-aligned symptom signal readable directly from internal activations, offering a mechanistic foundation for interpretable depression-assessment tools.",
-      "pdf_url": "https://arxiv.org/pdf/2609.01832v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.01832v1",
-      "published": "2026-09-01T20:07:03Z",
-      "updated": "2026-09-01T20:07:03Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG",
-        "q-bio.NC"
-      ]
-    },
-    {
-      "title": "AlphaRAD: Grounded Zero-Shot Classification in Chest Radiology via $\u03b1$-Corrected Binary Cross Entropy and Factorized Latent Supervision",
-      "authors": [
-        "Jianzhong You",
-        "Yuan Gao",
-        "Chris McIntosh"
-      ],
-      "abstract": "Vision-Language Pretrained Models (VLPMs) offer a scalable path to open-vocabulary chest radiology understanding, yet two aspects remain underexplored: how structured clinical semantics extracted from medical reports can reduce in-batch noise during contrastive learning, and how cross-modal fusion can be designed to produce more faithful spatial grounding without added complexity. We introduce AlphaRAD, addressing these opportunities through two contributions. First, we construct a large-scale structured medical concept space from medical reports parsed by a Large Language Model for training, thereby mitigating in-batch learning noise and removing heuristic pair matching in contrastive learning, and thus naturally positioning AlphaRAD as a medical concept discriminator trained via $\u03b1$-Corrected Binary Cross-Entropy. Second, we propose FLaS (Factorized Latent Supervision), an extremely simple yet effective cross-modal feature fusion module that factorizes VLPM representations into independent subspaces, using dedicated alignment supervision to enhance the expressiveness of spatial grounding without introducing additional model parameters. Through extensive empirical validation, AlphaRAD shows strong zero-shot generalization across diverse chest radiology tasks. Notably, it establishes state-of-the-art average performance across 16 classification benchmarks, while achieving individual state-of-the-art results via distinct gains on 7 grounding/phrase grounding and 3 segmentation datasets.",
-      "pdf_url": "https://arxiv.org/pdf/2609.01757v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.01757v1",
-      "published": "2026-09-01T18:24:50Z",
-      "updated": "2026-09-01T18:24:50Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "RadMatch: Auditable Radiology Report Evaluation via Finding-Level Matching",
-      "authors": [
-        "Charles Corbi\u00e8re",
-        "L\u00e9o Machado",
-        "Aubin Charley",
-        "Baptiste Callard",
-        "Pierre Manceron",
-        "Corentin Dancette"
-      ],
-      "abstract": "As AI systems are increasingly used to draft radiology reports, reliably evaluating their clinical quality remains a critical challenge. Large language model (LLM)-based metrics are now the best-correlated with radiologist judgment, yet they output a single opaque score that neither a clinician nor a model builder can easily interpret or audit. We introduce RadMatch, a multi-stage, LLM-based metric that decomposes report comparison into a structured finding-level matching with significance-aware scoring and error characterization across seven clinical attribute dimensions (status, location, severity, morphology, certainty, longitudinal comparison, and measurement). The main score is the actionable-error count, both interpretable and auditable. Candidate findings are graded correct, partial, or incorrect, and unmatched findings are counted as missed or hallucinated. Triage and actionable safety recall/precision and per-subset views add complementary, deployment-oriented lenses. Across two expert benchmarks, RadMatch is the most clinically aligned metric, matching inter-radiologist agreement on ReXVal and more than doubling the best prior metric on the harder RadEvalExpert. Relying only on few-shot prompting, it is designed to extend to other modalities and anatomies. We will release RadMatch as open-source code with an interactive dashboard for inspecting results.",
-      "pdf_url": "https://arxiv.org/pdf/2609.01470v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.01470v1",
-      "published": "2026-09-01T16:05:17Z",
-      "updated": "2026-09-01T16:05:17Z",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]

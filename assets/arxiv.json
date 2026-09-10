@@ -1,8 +1,118 @@
 {
-  "generated_at_utc": "2026-09-09T04:06:47.373108Z",
+  "generated_at_utc": "2026-09-10T04:04:36.866109Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Emergency Department Revisit Quality Review Screening: Exploring Human Decision-Making and Artificial Intelligence Support",
+      "authors": [
+        "Jonathan A. Handler",
+        "Marlene I. Robles-Granda",
+        "Jacob E. Mefford",
+        "Jeremy S. McGarvey",
+        "Gregory S. Podolej",
+        "Colleen J. Klein",
+        "Matthew D. Dalstrom",
+        "William F. Bond"
+      ],
+      "abstract": "Background: Emergency Department (ED) return visits are commonly reviewed for quality assurance, but are often limited (e.g., to revisits within 48-72 hours) to increase actionable finding yield while minimizing chart review burden. Those limitations may lead to missed quality improvement opportunities.\n  Methods: We conducted an exploratory, retrospective study of randomly selected ED visits to a multihospital health system having an ED revisit within 1-14 days to the same health system. Given only each visit's primary diagnosis, raters (2-3 clinicians and GPT-4 large language model [LLM]) assessed characteristics of the diagnosis pairs, including the \"target\": whether a pair warranted further assessment. Informed by rater response analyses, an algorithm leveraging an LLM-populated knowledge graph (\"KGA\") was created to automatically screen for potentially concerning pairs, then preliminarily assessed.\n  Results: 99 diagnosis pairs were included. GPT-4 responses poorly correlated to clinician raters, rating nearly all (94%) pairs as warranting follow-up (4.4-13.3 times more than clinicians). However, prompt engineering was minimal. Among clinician raters, revisit medical gravity was consistently significantly associated with the target, while a differential diagnosis/complication composite was significantly associated on unadjusted, but not adjusted (though less powered) analysis. The KGA achieved 83-100% positive predictive value for at least one clinician rater determining further assessment was warranted based on the diagnosis pair.\n  Conclusion: These results can inform next steps for improving screening with LLMs like ChatGPT. Further research is warranted to validate this preliminary work's finding that the KGA may enable enhancing the scope and yield of screening without substantially increasing reviewer workload.",
+      "pdf_url": "https://arxiv.org/pdf/2609.10421v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.10421v1",
+      "published": "2026-09-09T16:37:35Z",
+      "updated": "2026-09-09T16:37:35Z",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "OntologyAligner: Ontology-Aligned Retrieval and Hierarchy-Guided Large Language Model Reranking for Biomedical Ontology Normalization",
+      "authors": [
+        "Jie Song",
+        "Zhichuan Xu",
+        "Ziyu Lu",
+        "Meng Xiao",
+        "Cheng Bi",
+        "Yuxin Zhang",
+        "Xin Zheng",
+        "Xiaoran Li",
+        "Qiongfang Cao",
+        "Hao Yang",
+        "Bairong Shen"
+      ],
+      "abstract": "Biomedical ontology normalization maps free-text expressions to standardized concepts, enabling consistent integration and analysis of biomedical data. This task remains challenging because lexical variation and subtle distinctions among hierarchically related concepts can obscure concept boundaries. We present OntologyAligner, a three-stage framework that combines ontology-aligned retrieval, large language model candidate reranking, and selective hierarchy-guided refinement. We also construct PhenoNormBench, a unified benchmark comprising 13,390 samples from seven Human Phenotype Ontology datasets. OntologyAligner achieved state-of-the-art performance on HPO normalization, with 88.78% Macro Top-1 Accuracy and 86.75% Micro Top-1 Accuracy, exceeding the strongest baseline by 4.85 and 5.07 percentage points, respectively. Ablation analyses showed complementary contributions from all three stages, and sensitivity analyses demonstrated stability across candidate-set sizes and model backbones. Applications to MONDO, MEDIC, and NCBITaxon further established portability to other ontologies. OntologyAligner offers a generalizable framework for accurate mapping of biomedical text to structured ontology concepts. PhenoNormBench and the code are publicly available at https://github.com/zhelishisongjie/OntologyAligner.",
+      "pdf_url": "https://arxiv.org/pdf/2609.10055v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.10055v1",
+      "published": "2026-09-09T11:30:25Z",
+      "updated": "2026-09-09T11:30:25Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "When Auditors Fabricate: Batch-Size Degradation and Confident Hallucination in LLM Detection of Planted Document Contamination",
+      "authors": [
+        "Karan Parekh",
+        "Sanjana Pendyala Ravinder",
+        "Sana Mhapsekar",
+        "Medina Maloku"
+      ],
+      "abstract": "Large language models are increasingly proposed as automated auditors of document quality, yet their reliability as detectors of planted errors is poorly characterised. We construct a contaminated corpus of 150 academic papers spanning supply chain management and medical research, injecting 450 known contaminants of three types: typographical corruption, semantic reversal, and absurd out-of-context insertion. We then evaluate Google Gemini 3.0 Pro's ability to recover a 180-contaminant answer-key subset across 60 documents under three prompting regimes of increasing scale: single document, small batch, and large batch. Detection holds at small scale and then collapses: 50% recovery on single documents, 60% on small batches, and 2.8% on large batches. The failure mode at scale is not abstention but fabrication. Rather than reporting incomplete processing, the model produced confident findings including invented contaminants of its own, absurdities such as \"telepathic squirrel\" and \"quantum-powered toaster\" that mimic the style of the planted material but do not appear in any document. Detection also varies by contamination type: absurd insertions were recovered at 75% in completed evaluations, while semantic reversals and typographical corruptions were each recovered at only 50%. The corruptions most likely to occur in the wild, plausible ones, are the ones most often missed. We conclude that LLM document auditing degrades not gracefully but deceptively, and outline the harness such systems require: bounded batch sizes, direct content injection, and mechanical verification of every reported finding against source text.",
+      "pdf_url": "https://arxiv.org/pdf/2609.09696v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.09696v1",
+      "published": "2026-09-09T04:29:45Z",
+      "updated": "2026-09-09T04:29:45Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "TEFM: Token-Efficient Faithful Modeling for Structured Data",
+      "authors": [
+        "Zhichao Hou",
+        "Lingdao Sha",
+        "Xueyu Mao",
+        "Yang Liu",
+        "Peijie Qiu",
+        "Rui Song"
+      ],
+      "abstract": "In this paper, we solve two fundamental obstacles in applying LLMs to critical domains: token efficiency and faithfulness. To address both constraints jointly, we present TEFM (Token-Efficient Faithful Modeling), a framework designed for structured data analysis in critical domains. TEFM achieves token efficiency by compressing lengthy structured observations into compact Behavioral Code tokens, dramatically reducing token consumption with minimal information loss. Moreover, TEFM enables faithful rationalization through a dual-fidelity objective that jointly optimizes code-level reconstruction and prediction-level fidelity, identifying minimal sufficient feature subsets grounded in input data. Comprehensive experiments across various domain datasets and model backbones (Qwen3, Gemma-2, Phi-4) show that TEFM achieves competitive classification accuracy with dramatic token reduction (approximately 1\\% token retention in clinical and 2\\% in security domains) while producing faithful rationales.",
+      "pdf_url": "https://arxiv.org/pdf/2609.09552v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.09552v1",
+      "published": "2026-09-09T00:14:29Z",
+      "updated": "2026-09-09T00:14:29Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Auditable Emergency Triage for Maternal and Newborn Care in India",
+      "authors": [
+        "Shobhit Jagga",
+        "Aman Dalmia",
+        "Niharika Priyadarshini",
+        "Neelima Devadas",
+        "Amrita K Prasen",
+        "Nikhil Nalin",
+        "Santhosh SJ",
+        "Sreeram Nurani Ramasubramanian",
+        "Muhammed Afeer K",
+        "Anubhav Arora"
+      ],
+      "abstract": "At Noora Health, our nurses answer more than 50,000 medical queries per month on our WhatsApp-based service that provides caregivers with on-demand support. Their most time-critical task is emergency triage: deciding which queries need immediate in-person attention. To support them, we built a system that uses a large language model (LLM) to classify whether a message is an emergency and provide a rationale for interpretability. But the system was opaque: analyzing mistakes meant reading reasoning chains for each message, which is infeasible at our scale. Prompt changes meant re-running a full evaluation to prevent regressions, which was both costly and operationally challenging. Clinicians follow a decision tree to make this call, but it was never documented or passed to the model, which relied on a flat list of danger signs. To address these issues, we decomposed triage into two steps: an LLM extracts canonical symptoms and patient context from the query using a clinician-authored vocabulary, and a deterministic rule engine captures the scenarios that indicate an emergency. We show that the new system raised recall from 0.565 to 0.810 and F1 from 0.606 to 0.702, with structured rules driving most of the accuracy gains while the decomposition provides auditability: clinical experts can inspect each stage of the new system to see whether the query was mistranslated, symptoms were incorrectly extracted, patient context was wrongly inferred, or the necessary rules were missing. They can add new rules independently without causing regressions and avoid running costly evaluations. Since deployment, the new system has triaged 152,421 patient queries and flagged 28,535 (18.7%) as emergencies. The over-escalation rate has been 17.8%, without any increase in missed emergencies. Clinicians have also added 48 new rules since deployment, evidence of the faster correction loop we set out to build.",
+      "pdf_url": "https://arxiv.org/pdf/2609.09356v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.09356v1",
+      "published": "2026-09-08T18:45:01Z",
+      "updated": "2026-09-08T18:45:01Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ]
+    },
     {
       "title": "The Audit Decides the Verdict: Instrument Effects Rival Demographic Bias in LLM Decision Audits",
       "authors": [
@@ -186,122 +296,12 @@
         "Wei Zhang"
       ],
       "abstract": "Accurate segmentation of pulmonary lesions is essential for effective clinical diagnosis and treatment strategies. Existing segmentation approaches often lack task-specific semantic guidance, as text-based annotations typically offer coarse localization of lesions, leading to inadequate delineation of lesion boundaries and poor performance on small-scale lesions. To address this, we propose CGSM, a Concept-Guided Segmentation Model that integrates LLM-generated and clinically reviewed concepts into the segmentation process. Specifically, we design a Concept-Visual Alignment Module (CVAM) to activate relevant tokens within the concepts that align with visual features, enhancing the interaction between textual and visual information. In addition, we introduce a Concept Modulated Decoder (CM-Decoder), which uses concepts from CVAM as modulation signals to facilitate the adaptive fusion of image and text features, improving the segmentation accuracy. Extensive experiments on two public datasets show that CGSM achieves state-of-the-art performance, with results of 91.59% Dice and 84.49% mIoU on the QaTa-COV19 dataset, demonstrating its effectiveness in pulmonary lesion segmentation.",
-      "pdf_url": "https://arxiv.org/pdf/2609.07004v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.07004v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.07004v2",
+      "arxiv_url": "https://arxiv.org/abs/2609.07004v2",
       "published": "2026-09-07T03:55:43Z",
-      "updated": "2026-09-07T03:55:43Z",
+      "updated": "2026-09-09T03:19:50Z",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "HealthLoopQA: A Context-Aware Question Answering Benchmark for Interpreting Wearable Monitoring Data in Diabetes Care",
-      "authors": [
-        "Yuchen Niu",
-        "Yanan Ma",
-        "Srinivasan Nandakumar",
-        "Maolin Chen",
-        "Viktor Schlegel",
-        "Kexin Wei",
-        "Ling Cheng",
-        "Anna Bird",
-        "Anil Anthony Bharath",
-        "Siew-Kei Lam"
-      ],
-      "abstract": "As medical wearables become integrated into daily chronic disease care, effectively interpreting longitudinal monitoring data is essential for patients and clinicians to understand health trends, detect safety-critical events, and make informed decisions. While large language models (LLMs) show promise for transforming this streaming physiological data into personalized health insights, evaluating their reasoning capability and analytical rigor in diverse monitoring tasks remains a fundamental challenge. Existing medical wearable question answering (QA) benchmarks primarily assess short-horizon classification or statistical summaries, largely ignoring the long-term patterns, therapeutic and behavioural contexts, and potential system failures inherent in real-world deployments. To address this, we introduce HealthLoopQA, a comprehensive diagnostic benchmark for evaluating LLM reasoning over continuous diabetes monitoring data. Grounded in a novel taxonomy of eleven atomic reasoning abilities, HealthLoopQA comprises 127 tasks and over 1,500 QA instances spanning process mining, anomaly detection, and prediction over 30-day horizons. To systematically evaluate safety awareness, we complement real-world datasets with a fault-injected simulation testbed modeling diverse device malfunctions and cyber-physical attacks to generate physiologically plausible hazard scenarios. Evaluating state-of-the-art LLMs across prompting and agentic frameworks reveals severe limitations in complex temporal pattern mining. Furthermore, we identify a broader phenomenon of In-context Laziness under long-context prompting, highlighting critical open challenges in deploying LLMs for rigorous long-horizon medical reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2609.06976v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.06976v1",
-      "published": "2026-09-07T03:11:34Z",
-      "updated": "2026-09-07T03:11:34Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "A visual large language foundational model for medical image recognition using clinician-oriented social media",
-      "authors": [
-        "Lingxuan Hou",
-        "Yuhua Xie",
-        "Yue Hu",
-        "Yan Zhuang",
-        "Junqi Li",
-        "Chengzhi Xia",
-        "Binh Phu Nguyen",
-        "Abubakar Siddique",
-        "Minh Nguyen",
-        "Yao Hou",
-        "Yanju Bao",
-        "Kexin Liu",
-        "Ke Chen",
-        "Jianjun Sun",
-        "Zeqi Li",
-        "Trung Nguyen",
-        "Jiangli Lin"
-      ],
-      "abstract": "Large language models (LLMs) have demonstrated strong capabilities across diverse domains, showing considerable potential in medicine. However, their application in medical settings remains limited by the scarcity of visual question answering (VQA) datasets that capture clinical reasoning and explicit image-text alignment. Here, we leverage de-identified medical images and expert commentaries shared on clinician-oriented social media. By combining an advanced LLM with clinician-in-the-loop verification, we established a rigorous pipeline to construct ThoughtMed-1M, a long-form medical VQA dataset containing over one million VQA pairs and designed to capture structured clinical logic and medical image-text alignment. To demonstrate its utility, we developed a FOundational LLM Trained on ThoughtMed-1M (FOLTMed). FOLTMed achieved state-of-the-art performance across 42 medical VQA benchmark datasets, with a macro accuracy of 85.4%, and generated more clinically coherent responses on the ThoughtMed-1M test set. It outperformed state-of-the-art models by 3--5% across factuality and similarity metrics, highlighting a scalable paradigm for advancing research on clinically grounded multimodal LLMs.",
-      "pdf_url": "https://arxiv.org/pdf/2609.06914v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.06914v1",
-      "published": "2026-09-07T01:30:34Z",
-      "updated": "2026-09-07T01:30:34Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "When Retain Constraints Conflict: Mitigating Forget-Retain Interference in Tabular Data",
-      "authors": [
-        "Zijie Liu",
-        "Jinhao Duan",
-        "Bingqi Shang",
-        "Xinming An",
-        "Sijia Liu",
-        "Tianlong Chen"
-      ],
-      "abstract": "Machine unlearning aims to remove the influence of designated training data while preserving model utility, but its behavior on tabular data remains underexplored. This gap is important because tabular prediction is widely used in high-stakes domains and is increasingly adapted to language models through record serialization and schema-aware prompting. We identify a key challenge that distinguishes tabular unlearning from unlearning in free-form text or other modalities: schema-induced forget-retain overlap. In serialized tabular data, records share fixed column-name/value slots, similar attribute ranges, and common output spaces. Consequently, a forget row may have nearby retain rows that rely on the same high-signal attributes, causing retain preservation to oppose the update required for forgetting. Motivated by this failure mode, we propose Conflict-Aware Unlearning (CAU), a schema-aware approach that reduces forget-retain interference by relaxing preservation constraints on retained rows that most conflict with the forget set. Across sample-level and feature-level unlearning on clinical and non-medical tabular tasks, CAU more closely matches a retraining oracle while maintaining predictive utility and retain-region behavior. Our results show that reliable tabular LLM unlearning depends not only on the forgetting objective, but also on how retain constraints are constructed.",
-      "pdf_url": "https://arxiv.org/pdf/2609.06786v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.06786v1",
-      "published": "2026-09-06T19:08:32Z",
-      "updated": "2026-09-06T19:08:32Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "DrugReason: Dynamic Multi-View Reasoning over Knowledge Graph and Language Evidence for Drug Repurposing",
-      "authors": [
-        "Zijie Liu",
-        "Hongxuan Li",
-        "Zhen Tan",
-        "Jinhao Duan",
-        "Baixiang Huang",
-        "Zunpeng Liu",
-        "Kai Shu",
-        "Tianlong Chen"
-      ],
-      "abstract": "Drug repurposing aims to identify new therapeutic uses for existing compounds and, compared with de novo drug discovery, offers a faster and more cost-effective path to clinical translation. However, the space of candidate drug-disease pairs is enormous and their underlying relationships often depend on complex multi-hop biological mechanisms, making it difficult to reliably predict which pairs represent true therapeutic relationships. Existing approaches tackle this from two directions: knowledge graph-based methods organize curated biomedical evidence into structured relational networks for grounded multi-hop reasoning, while LLM-based methods leverage pretrained knowledge to generate flexible mechanistic rationales. Yet neither is sufficient alone - KGs are confined to observed graph structure while LLMs lack factual grounding and risk hallucination. To address this gap, we propose DrugReason, a multi-view reasoning framework that integrates grounded KG reasoning with LLM-generated mechanistic inference for drug repurposing. DrugReason adaptively routes diverse reasoning paths to specialized experts conditioned on the query context, while a cross-expert distillation objective enables knowledge sharing without sacrificing expert specialization. Experiments on PharmaDB, DDInter, and DrugBank show that DrugReason improves average performance over strong single-view reasoning baselines and achieves competitive or superior results compared with graph-based alternatives, while providing interpretable routing-based predictions.",
-      "pdf_url": "https://arxiv.org/pdf/2609.06779v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.06779v1",
-      "published": "2026-09-06T18:54:26Z",
-      "updated": "2026-09-06T18:54:26Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Beyond the Flag: Clinical Framing Closes the Moderation Gap in Suicide Risk Measurement",
-      "authors": [
-        "Shreyas Krishnan",
-        "Gun Ahn",
-        "Jungjin Kim"
-      ],
-      "abstract": "Moderation APIs are built to flag policy-violating content, not to measure graded clinical risk. But a platform's duty does not end at detection: the response owed to passive distress differs sharply from the response owed to active planning with means access, and emerging regulation (e.g., California Senate Bill 243) is turning that distinction into a compliance requirement. We therefore ask how well deployed safety signals recover clinically meaningful severity. We release a benchmark of 516 r/SuicideWatch posts rated by a licensed psychiatrist on a four-level ordinal schema (Indicator, Ideation, Behavior, Attempt) grounded in the Columbia Suicide Severity Rating Scale, and evaluate moderation APIs, prompted LLMs, and supervised baselines under seven ordinal-aware metrics. Three findings. Vendor moderation APIs separate low- from high-severity posts well (0.860 high-risk F1) but measure severity poorly (0.395 macro F1), systematically over-predicting the most severe category. Clinically grounded zero-shot prompting recovers much of that gap (0.562 macro F1), and expert-authored framing (not fine-tuning, added reasoning, or naive multi-agent aggregation) is the effective lever. The value of reasoning depends on register: it hurts on long, noisy Reddit posts and helps on short, clinician-authored statements. We argue graded severity, not a binary flag, is what a proportionate duty of care requires, and release our evaluation framework to support that measurement.",
-      "pdf_url": "https://arxiv.org/pdf/2609.06263v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.06263v1",
-      "published": "2026-09-05T21:16:16Z",
-      "updated": "2026-09-05T21:16:16Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

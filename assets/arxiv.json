@@ -1,8 +1,145 @@
 {
-  "generated_at_utc": "2026-09-10T04:04:36.866109Z",
+  "generated_at_utc": "2026-09-11T04:02:11.979270Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "The widening evaluation gap in medical large language model research 2023 to 2026",
+      "authors": [
+        "Raad Bin Tareaf",
+        "Murad Al-Rajab",
+        "Samia Loucif"
+      ],
+      "abstract": "Large language models are superseded every few quarters; clinical evidence takes years. We asked whether medical research is keeping pace with the systems it evaluates. PubMed returned 11,628 records for January 2023 to June 2026 across fourteen clinical domains, growing 45-fold; 2.5% used a randomised, controlled or prospective design. Evaluation lag, from a study's newest named model release to its own publication, widened from 1.33 to 6.08 quarters. Because discontinued models age mechanically, we benchmarked this against a counterfactual holding model composition fixed: migration to newer systems offset only 56% of the drift (95% CI 50-65). Randomised trials evaluated models a median 4.6 quarters older than other designs (P = 3 x 10^-19), yet among studies naming a model still under development no design differed from any other; 62% of randomised trials evaluated a discontinued family. Rigour and currency are in tension, and that tension reflects model selection rather than research timelines.",
+      "pdf_url": "https://arxiv.org/pdf/2609.11770v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.11770v1",
+      "published": "2026-09-10T16:25:01Z",
+      "updated": "2026-09-10T16:25:01Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Cross-Lingual Clinical Annotation Projection as Constrained Text Generation: A Six-Language Study",
+      "authors": [
+        "\u00c1lvaro Rey-Blanes",
+        "Francisco J. Moreno-Barea",
+        "Francisco J. Veredas"
+      ],
+      "abstract": "Background: To determine whether cross-lingual clinical annotation projection can be formulated as a text-preserving, document-level generative task that produces verifiable character-level annotations for multilingual clinical corpus construction, and to characterize its robustness and computational trade-offs relative to candidate-based projection pipelines. Methods: We developed a constrained LLM projection workflow that inserts entity tags directly into immutable target-language text, followed by deterministic validation and character-offset reconstruction. We evaluated it alongside supervised candidate-span projection and hybrid ML-LLM refinement for transferring Spanish Disease, Symptom, and Procedure annotations into six languages. Evaluation used MultiClinAI gold standard with strict span matching and character-overlap F1 Results: Direct LLM projection achieved the strongest and most consistent performance. GLM 5.2 obtained a mean Strict F1 of 0.9201 across 18 language-entity combinations, while locally deployable Gemma4:31B achieved 0.9133. The best LLM configuration improved Strict F1 over the previous state of the art in all 18 settings, by 0.0564-0.1512, yielding 55,416 grounded mentions with reconstructed offsets. Conclusions: Direct LLM-based projection enables high-quality multilingual clinical annotation transfer and provides a practical approach for extending clinical NLP resources to languages with fewer annotated datasets and language-specific tools. Combined with local inference and deterministic validation, it can substantially reduce expert time and cost for multilingual clinical corpus construction.",
+      "pdf_url": "https://arxiv.org/pdf/2609.11450v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.11450v1",
+      "published": "2026-09-10T12:17:52Z",
+      "updated": "2026-09-10T12:17:52Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LLMs as Post-hoc Auditors of Physiological Plausibility in Symbolic Regression: A Clinician-Evaluated Case Study",
+      "authors": [
+        "Jorge L\u00f3pez-Varela",
+        "J. Ignacio Hidalgo",
+        "Jos\u00e9-Manuel Mu\u00f1oz",
+        "Omar Costilla-Reyes",
+        "Esther Maqueda",
+        "Jesus Moreno-Fernandez",
+        "Tom\u00e1s Gonz\u00e1lez-Vidal",
+        "J. Manuel Velasco",
+        "Oscar Garnica"
+      ],
+      "abstract": "Genetic Programming and its variants, such as grammatical evolution, are widely used in Symbolic Regression to derive mathematical expressions from multivariate data. In addition to predictive accuracy, models are appreciated for their potential to provide interpretability, offering explicit equations that relate input variables to outcomes. However, achieving interpretability and plausibility remains challenging, as evolved models may be complex or scientifically inconsistent. In this study, we explore whether Large Language Models, can assist in improving the explainability of Symbolic Regression models generated by evolutionary computation methods. Building upon our previous work on estimating body fat percentage using grammar-based Genetic Programming , we investigate the use of LLMs as post-processing tools to analyze and rank evolved expressions according to their interpretability and medical plausibility. Four symbolic expressions are analysed by three LLMs over three repeated runs, and the resulting interpretations and rankings are assessed by a panel of three clinicians. Across the three LLMs, comparative model-ranking outputs received more favorable clinician assessments than isolated term-level interpretations. However, the LLMs also produced physiologically and mathematically questionable explanations, indicating that they are better suited to comparative auditing under expert oversight than to autonomous validation.\\blfootnote{The present work is an extended version of a paper submitted into a journal.",
+      "pdf_url": "https://arxiv.org/pdf/2609.11431v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.11431v1",
+      "published": "2026-09-10T12:03:33Z",
+      "updated": "2026-09-10T12:03:33Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Can LLMs Follow Medical Expert Logic? A Benchmark for Hierarchical Logical Consistency in Risk-of-Bias Assessment",
+      "authors": [
+        "Jiayu Huang",
+        "Zichen Tang",
+        "Qianhui Ling",
+        "Zemin Kuang",
+        "Haihong E"
+      ],
+      "abstract": "Evidence-based medicine demands strict logical consistency, yet current evaluations of large language models (LLMs) prioritize superficial label matching over genuine reasoning. We introduce LogiMed-RoB, a benchmark grounded in Cochrane Risk of Bias (RoB) 2.0 expert logic, comprising 860 randomized controlled trials (RCTs) and 14,820 queries. It evaluates models under the Hierarchical Logical Consistency (HLC) framework across four dimensions: Atomic Consistency, Domain Consistency, Aggregation Consistency, and Evidential Faithfulness. Experiments on 10 state-of-the-art LLMs reveal a catastrophic Error Compounding Effect: despite the top model reaching 98.88% Atomic Consistency, its end-to-end consistency collapses to 45.13%, with several open-weight architectures plummeting to nearly 0%. We further uncover a systematic evidence-reasoning gap: even when models retrieve high-quality evidence, they fail to deduce correct outcomes in 18.63-40.05% of cases, while Blind Guess Rates reach 48.28%. LogiMed-RoB demonstrates that high outcome accuracy can conceal critical reasoning flaws, underscoring the necessity of white-box logical verification for clinical deployment.",
+      "pdf_url": "https://arxiv.org/pdf/2609.11185v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.11185v1",
+      "published": "2026-09-10T07:46:41Z",
+      "updated": "2026-09-10T07:46:41Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "MOSAIC: Query-Aware Exploration Policy Adaptation for GraphRAG",
+      "authors": [
+        "EunKyeong Lee",
+        "Kyeong-Jin Oh",
+        "Jinwon Kim",
+        "Hye Woo Lee",
+        "Minsang Song",
+        "Hyeongjun Jang",
+        "Junyoung Youn"
+      ],
+      "abstract": "Graph Retrieval-Augmented Generation (GraphRAG) can connect evidence distributed across a corpus graph, but most systems use largely shared exploration procedures across queries. This creates a structural mismatch: direct facts may need compact local neighborhoods, comparisons need balanced coverage of multiple targets, and mediated questions may require deeper paths through weakly related connectors. We present Mosaic, a training-free framework that formulates GraphRAG retrieval as a per-query control problem. An LLM analyzer converts query-specific evidence requirements into a bounded policy over seed selection, graph traversal, stopping, and evidence selection, while the corpus graph, indexes, scoring functions, grounding procedure, and answer generator remain shared.\n  On GraphRAG-Bench, Mosaic achieves query-weighted Answer Correctness of 76.97 on Medical and 64.33 on Novel, improving over the strongest previously reported overall results by 5.13 and 4.43 points. On Medical, it reaches 95.1 Evidence Recall and 86.1 Context Relevancy. Controlled comparisons on an identical graph and generator show that no fixed narrow, medium, or wide policy is consistently optimal; Mosaic improves by 9.96 points over the strongest canonical fixed policy. Relative to Fixed Wide, it evaluates 81.9% fewer paths and retains 47.2% fewer evidence items. Transfer experiments on HotpotQA, MuSiQue, and 2WikiMultiHopQA further show that the policy interface can be applied without benchmark-specific retriever training.",
+      "pdf_url": "https://arxiv.org/pdf/2609.11065v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.11065v1",
+      "published": "2026-09-10T04:12:18Z",
+      "updated": "2026-09-10T04:12:18Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Evaluating Scaffolding-Oriented Multi-Agent Large Language Model System for Clinical Interview Training",
+      "authors": [
+        "Luming Yang",
+        "Haoxian Liu",
+        "Siqing Li",
+        "Rong Jia",
+        "Yue Xiao",
+        "Guanhua Chen",
+        "Li Lu"
+      ],
+      "abstract": "Clinical education must prepare medical students to conduct safe and coherent patient interviews under conditions of uncertainty. Traditional standardized patient (SP) training is resource-intensive and difficult to scale. We developed a scaffolding-oriented multi-agent Large Language Model (LLM) AI Standardized Patient (AI-SP) training platform1. The system includes a patient agent for simulated dialog, a tutor agent providing Socratic prompts without disclosing diagnostic information, and a turn-level evaluator agent that monitors clinical progress without revealing summative scores. In a randomized controlled study (N = 100 medical students), participants were assigned to either a multi-agent (MA) scaffolding condition or a control condition. All students completed two learning sessions under their assigned condition followed by an examination conducted in a patient only environment. Performance was assessed using a standardized Objective Structured Clinical Examination (OSCE) based rubric. While no significant difference was observed in final diagnostic accuracy between groups, the multi-agent AI standardized patient system improved final examination scores compared to the control group utilizing structured progressive information disclosure; the most substantial and consistent improvements were observed in communication, the expression of empathy, and specific history-taking behaviors. These findings suggest that specialized LLM agents enhance the process quality of simulated clinical interviews without artificially inflating examination outcomes. To support future research, we release a multi-expert annotated dataset comprising transcripts, checklist annotations, turn-level evaluations, and OSCE-aligned scoring outcomes. This resource aims to facilitate the development of pedagogically grounded AI-SP systems and advance research on AI-supported clinical reasoning training.",
+      "pdf_url": "https://arxiv.org/pdf/2609.10939v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.10939v1",
+      "published": "2026-09-10T00:56:03Z",
+      "updated": "2026-09-10T00:56:03Z",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Towards a Deterministic Math Solver for Clinical Language Models",
+      "authors": [
+        "Felipe Ocampo Osorio",
+        "Sebasti\u00e1n Andr\u00e9s Cajas Ordo\u00f1ez",
+        "Maximin Lange",
+        "Rafi Al Attrach",
+        "Sahil Kapadia",
+        "Zakaria Laouabdia Sellami",
+        "Angelo Antonio Talio",
+        "Leo Anthony Celi"
+      ],
+      "abstract": "Large language models are unreliable at arithmetic, which is a problem for clinical calculators where a single numerical error changes the recommendation. The standard response is to hardcode each calculator as a validated function, one at a time. We test an alternative: the model does not calculate. Instead, it writes case-specific Python that a restricted local executor runs as a deterministic solver, and the model's task reduces to deciding how to use it. We evaluate this Program-Solve interface on MedCalc-Bench Verified (1,100 cases, 55 calculators) against direct model arithmetic and a hand-written 22-calculator library, using Qwen2.5-7B and Qwen2.5-32B-AWQ, after auditing the benchmark's formulas against current clinical guidelines and flagging 16 of 55 with version, use or coefficient concerns. With formulas and gold variables supplied and both routes reading the whole note, handing off to the solver is not a reliable advantage at 7B (75.31% against 72.02%, a paired +3.29 points with a 95% calculator-cluster interval of [-3.49, 10.38]) but is one at 32B (90.53% against 83.47%, +7.05 [0.47, 14.60], clear of zero). The hand-written library is exact on its 440 supported cases but abstains elsewhere (40.0% overall). Adding an executor thus helps some open-weight models more than others even under matched formula, variable and note access, and is not a substitute for verified formulas or reliable variable extraction either way.",
+      "pdf_url": "https://arxiv.org/pdf/2609.10728v1",
+      "arxiv_url": "https://arxiv.org/abs/2609.10728v1",
+      "published": "2026-09-09T18:22:44Z",
+      "updated": "2026-09-09T18:22:44Z",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ]
+    },
     {
       "title": "Emergency Department Revisit Quality Review Screening: Exploring Human Decision-Making and Artificial Intelligence Support",
       "authors": [
@@ -168,140 +305,6 @@
       "updated": "2026-09-07T21:05:36Z",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "Reasoning Beyond Transcription: Audio Language Models on Child Stuttering Speech",
-      "authors": [
-        "Chibuzor Okocha",
-        "Christan Grant",
-        "Zoey Liu"
-      ],
-      "abstract": "Child speech differs from adult speech in acoustics, prosody, and linguistic structures. Speech disfluencies (such as repetitions) further challenge automatic understanding. While Audio Language Models (ALMs) show strong semantic reasoning from speech audio, their ability to reason about disfluent child speech in mixed-speaker settings remains unexplored. We investigate this through two tasks: child-focused semantic summarization and speech entailment. Experiments use recordings of children who stutter in mixed speaker interviews without explicit speaker separation. Models are instruction-guided to focus on the child, preserve clinically relevant disfluencies, and avoid adult-speech leakage. Evaluation combines LLM-based judges and reference-based metrics, anchored by transcript-oracle baselines to isolate errors. Results show that while ALMs extract high-level meaning from stuttered speech, reasoning degrades significantly with increased",
-      "pdf_url": "https://arxiv.org/pdf/2609.07968v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.07968v1",
-      "published": "2026-09-07T20:44:38Z",
-      "updated": "2026-09-07T20:44:38Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Perspectives on Cross-Lingual Consistency in LLMs for Medical Questions",
-      "authors": [
-        "Minh Duc Bui",
-        "Mario Sanz-Guerrero",
-        "Abteen Ebrahimi",
-        "Sagi Shaier",
-        "Peter Herbert Kann",
-        "Manuel Mager",
-        "Katharina von der Wense"
-      ],
-      "abstract": "Should multilingual LLMs answer medical questions consistently across input languages, or adapt responses to cultural cues? Existing multilingual medical benchmarks usually assume that medically correct answers should remain consistent across languages and treat cross-lingual variation as model error. In contrast, cultural adaptation research argues that appropriate medical answers may legitimately differ across contexts. We review the multilingual medical NLP literature through these two perspectives, we identify three gaps: limited stakeholder perspectives (e.g., of medical professionals), a lack of empirical evidence on which approach better serves users, and no benchmarks capable of distinguishing universally correct from culture-specific cases. To address the first gap, we survey 356 participants across three stakeholder groups (medical, NLP, and anthropology professionals) in three countries (Germany, Spain, and the United States). Anthropologists consistently favor adaptation, while medical and NLP respondents remain divided, with notable divergence between U.S. and European medical professionals. LLMs prompted with profession and country personas fail to reproduce this variation, overestimating cross-lingual consistency preference among NLP and medical personas. We conclude that neither consistency nor adaptation can currently be considered clearly preferable, highlighting the need for empirical evidence on which approach better serves users across cultural contexts.",
-      "pdf_url": "https://arxiv.org/pdf/2609.07687v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.07687v1",
-      "published": "2026-09-07T16:06:50Z",
-      "updated": "2026-09-07T16:06:50Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "ObGynLongBench: Revealing the Evidence-to-EHR Gap in Longitudinal EHR Decision-Making",
-      "authors": [
-        "Jun Xiang",
-        "Zhijie Bao",
-        "Rong Hu",
-        "Kaizhou Qin",
-        "Wei Chen",
-        "Zhongyu Wei"
-      ],
-      "abstract": "The application of large language models (LLMs) to personalized medical assistants has garnered growing interest. However, existing medical benchmarks largely rely on static question answering with pre-selected evidence, leaving unclear whether LLMs can make reliable clinical decisions from real longitudinal electronic health records (EHRs). To bridge this gap, we introduce ObGynLongBench, a rule-grounded long-context EHR benchmark for obstetric and gynecologic decision-making, comprising 1,500 clinical decision-point cases from 976 real pregnancy EHR histories and traceable rules. Each case is anchored to a patient, a pregnancy-timeline point, and a pre-decision information boundary, enabling Evidence-only, Visit-level EHR, and History-level EHR evaluation. Evaluating 17 LLMs reveals a substantial Evidence-to-EHR Gap: models perform well when evidence is directly provided, but accuracy drops when evidence must be extracted from same-day records or full pre-decision EHR histories. Further analyses identify evidence utilization as a key bottleneck: performance decreases with longer EHR contexts and more complex evidence requirements, and earlier failures often predict later failures within the same patient history. Finally, active-search agents perform best among EHR access strategies, highlighting patient-specific evidence utilization as a central challenge for reliable personalized medical assistants. Resources are available at https://github.com/xiangjun2003/ObgynLongbench.",
-      "pdf_url": "https://arxiv.org/pdf/2609.07601v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.07601v1",
-      "published": "2026-09-07T15:12:36Z",
-      "updated": "2026-09-07T15:12:36Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Same Problem, Different Field: Cross-Domain Solution Import via Domain-Stripped Computational Fingerprints",
-      "authors": [
-        "Eryk Kulikowski"
-      ],
-      "abstract": "The same underlying computational problem is solved across unrelated fields under different names: recursive Bayesian state estimation appears as a \"Kalman filter\" in control, \"Bayesian forecasting\" in pharmacokinetics, and \"data assimilation\" in geoscience. Topical and citation-based scientific embeddings cannot see this shared problem. We distill each paper once into a domain- and method-name-stripped faceted computational fingerprint, a free-text mechanism skeleton plus controlled computational facets. We define a tunable, facet-selectable distance over it. The goal is solution import: surface cross-field pairs solving the same problem, so a bespoke implementation can be swapped for another field's standard, specialized solver. On a benchmark of 18 method families across 109 papers, the skeleton lifts cross-domain retrieval average precision over the abstract from 0.222 to 0.513, and the whole fingerprint reaches 0.557. Strikingly, four trained scientific embedders all fall below plain abstract+TF-IDF: they encode topical and citation similarity, the wrong signal for this task. The gain is the representation: the abstract-to-skeleton swap lifts every embedder, and the pipeline is one cached LLM call per paper plus a cheap embedder. An interventional re-skin / math-edit test shows the fingerprint tracks the computation, not the field. On a 501-paper wild corpus, known twins dominate the top of the ranking (23 of the top 30); with planted pairs excluded from the results, three blind LLM judges rate 3 of the top 5 and 8 of the top 30 pairs genuine import candidates, and 0 of 30 random ones. The human verification is the four executed imports: in one, an open standard solver reproduces a bespoke clinical dosing engine's output. We release the benchmark, the code, and the distillation prompt.",
-      "pdf_url": "https://arxiv.org/pdf/2609.07595v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.07595v1",
-      "published": "2026-09-07T15:06:22Z",
-      "updated": "2026-09-07T15:06:22Z",
-      "categories": [
-        "cs.DL",
-        "cs.CL",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "EmoMed: An Emotionally-Aware Agent for Multimodal Medical Support with Real-Time Information Retrieval",
-      "authors": [
-        "Ivan Nasonov",
-        "Nikita Glazkov",
-        "Ivan Makovetskiy",
-        "Mikhail Mozikov",
-        "Daniil Sukhorukov",
-        "Andrey Savchenko",
-        "Ilya Makarov"
-      ],
-      "abstract": "We present EmoMed - a multimodal medical consultation agent that adapts its responses based on users' emotional states while maintaining clinical accuracy. The system processes text and medical images, detects affect indicators (anxiety, confusion, urgency) from user input, and adjusts response tone, structure, and detail level accordingly. To ensure factual reliability, the agent grounds clinical information through a dual retrieval mechanism: web-based fact-checking and an API-connected, continuously updated medical knowledge base. We evaluate our approach across seven state-of-the-art language models (GPT-4/5, Qwen3, Llama 4, Gemini 2.5, Grok4, Claude3) using comprehensive metrics including LLM-as-judge assessments, MedQA style accuracy tests, BERT Score, safety/helpfulness ratings, and multimodal medical benchmarks. The results demonstrate that emotionally adaptive responses consistently outperform neutral baseline across evaluation dimensions, without compromising clinical accuracy. A controlled user study validated these findings, with participants reporting improved perceived empathy and communication clarity, while maintaining trust in factual accuracy. Source code: https://github.com/NasonovIvan/EmoMed-Agent",
-      "pdf_url": "https://arxiv.org/pdf/2609.07194v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.07194v1",
-      "published": "2026-09-07T08:19:03Z",
-      "updated": "2026-09-07T08:19:03Z",
-      "categories": [
-        "cs.AI",
-        "cs.CY",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "SIFTING: A Novel LLM-Based Framework for Structured and Transparent Information Extraction from Clinical Free-Text Reports, with Application to Tumor Staging in Lung Cancer",
-      "authors": [
-        "Mirco Hess",
-        "Gerben van Veenendaal",
-        "Joris Wakkie",
-        "Yiwen Soo",
-        "Malcolm H. Lawson",
-        "John D. Maclay",
-        "Arjun Nair",
-        "Neal Navani"
-      ],
-      "abstract": "Background: Large language models (LLMs) show promise for extracting information from clinical free-text documents, but their outputs are often unstructured and lack traceability, complicating validation and adoption in clinical workflows. In this work we introduce SIFTING, an LLM-based framework designed to address these shortcomings.\n  Methods: SIFTING combines the language comprehension capabilities of LLMs with segment-level processing and structured prompts with strict output control, linking findings to the source text to enable both accurate and transparent information extraction. To demonstrate its capabilities, we applied the framework to the task of extracting tumor T-stage information from 130 lung cancer radiology reports (SIFTING-T-stage). A compact 4-bit quantized version of the open-source LLM Llama-3.3-70B (35 GB) was used in a fully self-hosted setup, providing full control over data and model. Performance was evaluated against a reference standard created by four clinical experts and compared with a range of LLMs as used in a conventional single-prompt approach, using bootstrap resampling to estimate confidence intervals.\n  Results: SIFTING-T-stage achieved an accuracy of 90% (95% CI: 84-95) against the reference standard. We found its performance to be comparable to even the largest state-of-the-art LLMs with reasoning capabilities and to be interchangeable with clinical experts (p < 0.001), while at the same time offering full traceability through source text references.\n  Conclusion: SIFTING enables accurate, structured, and traceable information extraction from clinical free-text documents. It ensures data control, reproducibility, and verifiable outputs that can support clinical validation and workflow integration.",
-      "pdf_url": "https://arxiv.org/pdf/2609.07185v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.07185v1",
-      "published": "2026-09-07T08:15:19Z",
-      "updated": "2026-09-07T08:15:19Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "CGSM: Concept-Guided Segmentation Model for Precise Pulmonary Lesion Delineation",
-      "authors": [
-        "Changheng Lin",
-        "Wenjie Zhang",
-        "Yushan Lu",
-        "Xinyue Yan",
-        "Xiao Jia",
-        "Wei Zhang"
-      ],
-      "abstract": "Accurate segmentation of pulmonary lesions is essential for effective clinical diagnosis and treatment strategies. Existing segmentation approaches often lack task-specific semantic guidance, as text-based annotations typically offer coarse localization of lesions, leading to inadequate delineation of lesion boundaries and poor performance on small-scale lesions. To address this, we propose CGSM, a Concept-Guided Segmentation Model that integrates LLM-generated and clinically reviewed concepts into the segmentation process. Specifically, we design a Concept-Visual Alignment Module (CVAM) to activate relevant tokens within the concepts that align with visual features, enhancing the interaction between textual and visual information. In addition, we introduce a Concept Modulated Decoder (CM-Decoder), which uses concepts from CVAM as modulation signals to facilitate the adaptive fusion of image and text features, improving the segmentation accuracy. Extensive experiments on two public datasets show that CGSM achieves state-of-the-art performance, with results of 91.59% Dice and 84.49% mIoU on the QaTa-COV19 dataset, demonstrating its effectiveness in pulmonary lesion segmentation.",
-      "pdf_url": "https://arxiv.org/pdf/2609.07004v2",
-      "arxiv_url": "https://arxiv.org/abs/2609.07004v2",
-      "published": "2026-09-07T03:55:43Z",
-      "updated": "2026-09-09T03:19:50Z",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]

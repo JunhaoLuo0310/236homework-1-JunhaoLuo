@@ -1,8 +1,113 @@
 {
-  "generated_at_utc": "2026-10-04T05:18:52.230412Z",
+  "generated_at_utc": "2026-10-05T05:02:02.424491Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Single-Pass Uncertainty Heads for Claim-Level Hallucination Detection in Persian Medical Language Models",
+      "authors": [
+        "Mehrdad Ghassabi",
+        "Pedram Rostami",
+        "Hamidreza Baradaran Kashani",
+        "Sadra Hakim",
+        "Audrina Ebrahimi"
+      ],
+      "abstract": "Hallucination detection is particularly important for medical language models, but repeated-sampling approaches are expensive and existing uncertainty-head resources do not directly transfer to a new backbone and language. We adapt the LLM Uncertainty Head (LUH) framework to Aya-Expanse-8B-based Persian medical models, using Gaokerena-V and Gaokerena-R as two previously developed backbones. We first examine response variability on a 168-question Iranian medical entrance examination and observe substantially lower five-run consistency for Gaokerena-V than for Aya-Expanse-8B, whereas Gaokerena-R is comparable to Aya-Expanse-8B. We then construct two paired claim-level hallucination datasets directly in Persian, containing 1,600 responses for each backbone, and train lightweight claim-level heads on frozen backbone attention maps and token probabilities. On held-out test splits, the heads obtain PR-AUCs of 0.4820 and 0.4652, corresponding to 2.30 and 2.66 times their respective random baselines, and ROC-AUCs of 0.7852 and 0.7810. The heads require neither retrieval nor repeated sampling at inference time. These results provide an initial study of single-pass claim-level uncertainty estimation for Persian medical language models; the test splits are small and the labels are automatically generated.",
+      "pdf_url": "https://arxiv.org/pdf/2610.03482v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.03482v1",
+      "published": "2026-10-02T15:50:46Z",
+      "updated": "2026-10-02T15:50:46Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "RASPER: Reward-Aligned Summarization of Clinical Notes for EHR Outcome Prediction",
+      "authors": [
+        "Arya Hadizadeh Moghaddam",
+        "Mohsen Nayebi Kerdabadi",
+        "Chen Chen",
+        "Dongjie Wang",
+        "Zijun Yao"
+      ],
+      "abstract": "Unstructured discharge notes in Electronic Health Records (EHRs) often carry signal complementary to structured medical codes, holding patient-specific evidence that standardized cohort-level codes alone cannot capture. However, this evidence in notes is frequently buried in lengthy, noisy text that is not intentionally written with any specific clinical prediction in mind. Summarization is an obvious mitigation, but generic summaries, tuned for fluency rather than the outcome, routinely omit decisive evidence while retaining plausible but uninformative detail. To this end, we propose RASPER, a Reward-Aligned Summarizer for Prediction in EHR, that optimizes note summarization directly against the downstream clinical task. RASPER employs a tunable LLM-based summarizer to extract task-relevant evidence from discharge notes and trains it via reinforcement learning from prediction feedback, using a reward derived from the downstream predictor's loss. To ground the summarizer, a longitudinal encoder converts structured codes into soft prompts that incorporate each patient's clinical context into note summarization. By rewarding the quality of the resulting multimodal prediction, RASPER encourages the summarizer to retain patient-specific evidence that complements, rather than duplicates, information captured by structured codes. RASPER consistently outperforms strong baselines on both readmission prediction and medication recommendation across MIMIC-III and MIMIC-IV.",
+      "pdf_url": "https://arxiv.org/pdf/2610.02979v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.02979v1",
+      "published": "2026-10-02T08:10:22Z",
+      "updated": "2026-10-02T08:10:22Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Clinical Concept Centers in LLMs",
+      "authors": [
+        "Aishik Nagar",
+        "Abhishek Vaidyanathan",
+        "Arun-Kumar Kaliya-Perumal",
+        "Elijah Tzen Hsuen Boey",
+        "Stefan Winkler"
+      ],
+      "abstract": "Large language models are increasingly used in clinical settings. However, research into the reliability and performance of these models has focused almost entirely on the language substrate, scoring what the model says. Mechanistic interpretability has found that the latent space carries a higher fidelity of representation than the text: internal representations not only encode substantially more than the output verbalizes, but the stated reasoning also systematically omits features that causally drive the answer. An evaluation of model behavior in terms of mechanistic interpretability has not been explored in clinical decision support. In this work, we extend behavioral evaluation into the latent space and ask whether clinical concepts exist as locatable, causally used representations inside open-weight LLMs. We find dedicated clinical concept centers in the latent space of all eleven open models we test. These concept centers are interpretable, firing only on their aligned clinical narratives, and meaningfully and causally drive model behavior in both constrained and open-ended settings. They are not just analytical representations, but circuits that can be utilized in clinical practice, and we explore their use from the perspective of both evaluation and performance. From the evaluation standpoint, models stay internally coherent and keep using the relevant concept centers even under adversarial role-based priming, while aligned priming improves downstream clinical performance. From a performance perspective, we simulate realistic deployment settings and find that steering models along these centers leads to meaningful downstream improvements. Finally, we conduct a blinded clinician validation and find the activation and usage of these concept centers predicts clinicians preferences.",
+      "pdf_url": "https://arxiv.org/pdf/2610.02829v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.02829v1",
+      "published": "2026-10-02T05:22:12Z",
+      "updated": "2026-10-02T05:22:12Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Decoupling Memory from Context: Structured Memory for Token-Efficient Test-Time Continual Learning",
+      "authors": [
+        "Yehya Farhat",
+        "Michael Desmond",
+        "Anastasios Kyrillidis"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly deployed in enterprise, scientific, and medical applications, where agents must incorporate domain-specific knowledge and adapt from experience. Context engineering offers a practical alternative to weight updates by improving model behavior through instructions, strategies, and evidence supplied at inference time. However, adapting context online typically requires a costly trial-and-error process, while queries are often processed independently, preventing useful experience from carrying forward. Memory systems address this limitation by retaining information across interactions, but approaches that continually append information to a shared context face increasing token costs, context-window limits, and performance degradation as the context expands. We introduce a unified formulation of context optimization and show that an agent memory system update can be interpreted as an optimization update procedure over the model's context. This perspective attempts to provide a principled framework for studying memory design and its efficiency. We then propose GraphMemory, a lightweight graph-based memory that accumulates, refines, organizes, and connects reusable strategies. For each query, GraphMemory retrieves only the relevant subgraph, enabling online context adaptation without exposing the model to the entire memory. Under bounded retrieval, the amount of retrieved memory remains constant as the number of processed examples grows. Experiments show that GraphMemory achieves competitive downstream performance while using approximately 81-85% fewer memory-construction tokens than our baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2610.02687v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.02687v1",
+      "published": "2026-10-02T02:07:32Z",
+      "updated": "2026-10-02T02:07:32Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Large language models exhibit unreliable updating of clinical judgment as patient evidence evolves",
+      "authors": [
+        "Min Zeng",
+        "Rui Zhang"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly explored for clinical reasoning, but whether they appropriately revise judgments as patient evidence evolves remains unclear. We evaluated longitudinal belief updating using matched intensive-care trajectories from electronic health records. Across diverse LLMs, conditioning on a preceding judgment more often increased than reduced prediction error when estimates changed, replicated for a second endpoint. Controlled interventions revealed two failure modes. First, with preceding assessment fixed, models responded more strongly to worsening than matched improving respiratory evidence; this asymmetry persisted after headroom normalization at moderate and strong evidence levels. Second, with current evidence fixed, increasing prior risk from 10% to 90% shifted estimates by 26.2 percentage points, demonstrating causal influence of prior model beliefs. Prompting did not restore reliable updating. Evidence-Validated Longitudinal Update (EVLU) identified fewer, more reliable revisions, revealing a reliability-coverage trade-off. These findings establish longitudinal belief updating as a distinct dimension of LLM reliability.",
+      "pdf_url": "https://arxiv.org/pdf/2610.02684v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.02684v1",
+      "published": "2026-10-02T02:05:01Z",
+      "updated": "2026-10-02T02:05:01Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Fisher-Guided Submodular Data Selection for Continual Pre-Training of Large Language Models",
+      "authors": [
+        "Zhenghao Zhao",
+        "Gaowen Liu",
+        "Zhiling Lan",
+        "Yan Yan"
+      ],
+      "abstract": "Data selection is already a central bottleneck in large-language-model training, where web-scale corpora are noisy and token budgets are finite. In continual pre-training (CPT), it becomes a forgetting-control problem: a poorly chosen target-domain corpus can overwrite capabilities encoded in the pretrained checkpoint. Existing CPT practice either scores candidates with parameter-agnostic scalars such as perplexity, or mitigates forgetting by spending many extra general-domain replay tokens. Neither strategy directly asks how training on a candidate will move the model parameters. We show that loss-based selection causes the post-CPT Fisher diagonal to drift downward on exactly the high-Fisher coordinates the pretrained model had committed to, while leaving low-Fisher coordinates largely untouched. This asymmetry exposes a parameter-space mechanism for catastrophic forgetting. Motivated by this observation, we propose a Fisher-aware CPT selector that decomposes each candidate's gradient into an anchor component, which measures perturbation along committed parameter directions, and a frontier component, which measures update capacity in unconstrained low-Fisher subspaces. We aggregate these signals with a log-determinant submodular objective and optimize it in a single pass using a scalable streaming data selection pipeline. On TinyLlama-1.1B and Llama-3.1-8B CPT over medical data, our selector improves target-domain quality while bounding forgetting on held-out pretraining benchmarks. Most importantly, it is substantially more token-efficient than forgetting-aware replay. 1B selected tokens already outperform the replay strategy trained with 10B tokens on both adaptation and forgetting, giving a 10x token-efficiency advantage.",
+      "pdf_url": "https://arxiv.org/pdf/2610.02593v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.02593v1",
+      "published": "2026-10-01T23:44:09Z",
+      "updated": "2026-10-01T23:44:09Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Counterfactual Auditing of Bias in Open-Source Large Language Models for Clinical Triage",
       "authors": [
@@ -165,117 +270,6 @@
       "updated": "2026-09-30T22:35:13Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Can LLMs Reason Over Long Horizons? An Empirical Evaluation of Context Strategies for Longitudinal Clinical Reasoning",
-      "authors": [
-        "Taye Akinrele",
-        "Noorbakhsh Amiri Golilarz",
-        "Subash Neupane",
-        "Sudip Mittal",
-        "Shahram Rahimi"
-      ],
-      "abstract": "Longitudinal clinical reasoning requires large language models (LLMs) to identify and integrate relevant evidence distributed across extended patient histories. Although long-context models can process increasingly large amounts of information, providing more history does not necessarily make relevant evidence more accessible or improve reasoning. We compare five context strategies (Full, Recent, Episodic, Semantic, and Hybrid) on MedLoCoMo across four open-weight LLMs, examining answer correctness, robustness to query-evidence distance, and abstention on questions with unsupported premises. Episodic and Hybrid generally achieve the strongest overall accuracy, while Recent Context degrades most as supporting evidence becomes more distant; Episodic and Hybrid maintain the highest accuracy at long distances. Analysis of adversarial questions further shows that strong performance on answerable questions does not necessarily translate to successful abstention when the available history does not support the requested conclusion. These findings show that reliable longitudinal reasoning depends not only on how much history an LLM can access, but critically on how relevant evidence is selected and presented for reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2610.00562v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.00562v1",
-      "published": "2026-09-30T18:36:19Z",
-      "updated": "2026-09-30T18:36:19Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis",
-      "authors": [
-        "Tian Xia",
-        "Minghao Liu",
-        "Yiqing Liang",
-        "Laixi Shi",
-        "Jiayun Wang"
-      ],
-      "abstract": "Multimodal large language models (MLLMs) are rapidly advancing clinical diagnosis, yet their adaptation pipelines remain anchored to accuracy-based objectives. Clinical data are heavily class-imbalanced: a constant-majority predictor can score above 90% accuracy while being clinically useless. We therefore evaluate and optimize for AUROC, a threshold-free score that ranks positives above negatives and is invariant to class balance. We focus on prompt optimization in MLLMs. Reflective methods such as GEPA use a binary scores matrix with one row per evaluation instance and one column per candidate prompt; cells record per-instance correctness, so the column average is accuracy and drives candidate selection. We introduce pair-level Pareto prompt evolution (Ranking-PE), which replaces each correctness row with a pairwise-ordering row over (positive, negative) instance pairs: the cell is 1 if the candidate scores the positive higher than the paired negative. The column average then equals empirical AUROC (by the Wilcoxon-Mann-Whitney identity). We apply this swap at all three layers the prompt evolution search reads from - the scores matrix that decides Pareto dominance, the per-example feedback to the reflection LM, and final candidate selection - at no extra model calls and with no surrogate loss. Across three diseases on MIMIC, accuracy-based prompt evolution can degrade ranking; Ranking-PE reverses this, beating the accuracy-based recipe by +5.8 AUROC pp on fine-tuned Qwen3-VL-8B and +16.2 pp on MedGemma-4B. Ablations examine each design component and show that a medical-grade visual backbone - via vision-encoder-tuned SFT or medical pretraining - is a prerequisite that prompt search cannot replace - our recipe extends reflective prompt evolution from text-only data to multimodal clinical decision-making.",
-      "pdf_url": "https://arxiv.org/pdf/2609.40361v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.40361v1",
-      "published": "2026-09-30T17:59:56Z",
-      "updated": "2026-09-30T17:59:56Z",
-      "categories": [
-        "cs.LG",
-        "cs.CL",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Trust Is Not a Score: Runtime Assurance Contracts for High-Risk AI Agents",
-      "authors": [
-        "Serhii Zabolotnii"
-      ],
-      "abstract": "Benchmarks, audits, and agent protocols describe performance, permissions, and repair, but not how observed evidence should change an agent's authority during a consequential task. We call this the assurance-transition gap. We propose a Runtime Assurance Contract (RAC), a policy-level formal schema binding autonomy boundaries, component eligibility, evidence state, transition policy, human-review capacity, and non-compensatory gates. Under RAC, soft metrics may inform routing, whereas a failed or unknown mandatory gate forces retry, switch, escalation, deferral, or stop; aggregate performance cannot authorize action. We define the contract, an evidence record, a permission rule, and five invariants, and illustrate them in clinical, industrial, and judicial failure probes. We then report a deterministic failure-injection study in agentic coding: 280 constructed cases evaluated by a gate conjunction, a score-only rule, and a restricted protocol baseline. At the published example weights and threshold, the score rule admits 80 of 100 block-required injections and all 40 review-required injections. Tuned in hindsight, it matches the conjunction on this corpus. For positive weights, a positive threshold, binary risk signals, zero-signal controls, and an injected case firing each signal alone, we show that exact agreement holds if and only if the threshold does not exceed the smallest weight. A separate set of 18 hand-authored traces checks version-pinned evidence and review transitions against simpler policy variants. In a further prospective synthetic holdout of 24 episodes, two blinded LLM judges assign identical labels to all 72 action attempts; RAC and a separately implemented full stateful baseline both match these labels. These studies test mechanisms on synthetic cases; they establish neither deployed safety nor cross-domain effectiveness.",
-      "pdf_url": "https://arxiv.org/pdf/2609.39717v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.39717v1",
-      "published": "2026-09-30T13:28:42Z",
-      "updated": "2026-09-30T13:28:42Z",
-      "categories": [
-        "cs.AI",
-        "cs.CY",
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "From Given to Gathered Evidence: Agentic Learning for Longitudinal Medical Reasoning",
-      "authors": [
-        "Minye Shao",
-        "Chaohui Yu",
-        "Yixuan Wu",
-        "Fan Wang",
-        "Ling Shao",
-        "Yang Long"
-      ],
-      "abstract": "Foundation models can serve as clinical agents through tool-use harnesses. However, conventional medical benchmarks assess reasoning over preselected evidence rather than the ability to seek it across clinical records and longitudinal imaging. We propose CASE: a series of role-specific Clinical Agents for Seeking Evidence, together with a tool-use harness and an agentic post-training framework for compact vision-language policy models. We further introduce a longitudinal multimodal benchmark built on UK Biobank, comprising 50,401 clinical questions derived from real-world ICD-10-coded diagnoses of 4,739 participants. Each question links to a patient-specific environment containing clinical context and multi-sequence MRI from baseline and follow-up visits, where agents autonomously select which visits, organs, modalities, slices, and specialist tools to inspect and compare. Supervised fine-tuning transfers evidence-seeking workflows from 14,734 frontier-model interaction trajectories, followed by agentic reinforcement learning on the learner's own environment interactions. Privileged on-policy self-distillation and rubric-based LLM feedback refine evidence-to-conclusion reasoning without prescribing tool sequences. Experiments show that CASE moves beyond question-answer imitation toward transferable investigation policies, strengthening evidence-grounded longitudinal reasoning. Under matched evaluation conditions, our Qwen3-VL-8B based agent achieves over 16% and 10% relative improvements in answer accuracy over GPT-5.4 and Claude Opus 4.8. Code will be available at https://github.com/VinyehShaw/CASE.",
-      "pdf_url": "https://arxiv.org/pdf/2609.39566v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.39566v1",
-      "published": "2026-09-30T12:01:45Z",
-      "updated": "2026-09-30T12:01:45Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "EHR-RobustGym: Benchmarking and Training Agents for Robust Clinical Reasoning",
-      "authors": [
-        "Yitong Qiao",
-        "Yancheng Jin",
-        "Lei Liu",
-        "Yue Shen",
-        "Jian Wang",
-        "Jinjie Gu",
-        "Zhixuan Chu"
-      ],
-      "abstract": "In hospital workflows, electronic health records (EHRs) are often noisy, and may not contain the evidence needed to confirm events or measurements referenced in a clinical query. Even when database retrieval succeeds, clinical agents can overlook such discrepancies and return plausible but unsupported answers. We introduce EHR-RobustGym, a scalable and interactive environment for evaluating and training robust clinical agents grounded in noisy EHRs. Built on MIMIC-IV hospital records (365K patients, 31 tables, and over 500M records), EHR-RobustGym comprises 5,486 Clean-Noise pairs spanning six clinical intents and both patient-level and population-level queries. The pairs test robustness to Record-level, Value-level, and Query-level noise, while interactive SQL/Python execution and outcome verification support trajectory collection and training. Evaluating multiple LLMs reveals substantial robustness gaps: average task success across proprietary and large-scale open-weight models drops from 62.2% on Clean questions to 37.9% on Noise questions. At k=4, pass^k consistency falls below 50% for most evaluated models, exposing instability in clinical task completion. Supervised fine-tuning and reinforcement learning in EHR-RobustGym improve performance, with gains generalizing to five external EHR benchmarks. Together, these results position EHR-RobustGym as a testbed for evaluating and improving the evidence-grounded robustness of clinical agents.",
-      "pdf_url": "https://arxiv.org/pdf/2609.39371v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.39371v1",
-      "published": "2026-09-30T09:23:10Z",
-      "updated": "2026-09-30T09:23:10Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Structure vs. Chain-of-Thought: Evaluating LLM Criteria Extraction for Depression Severity",
-      "authors": [
-        "Xinkai Chen"
-      ],
-      "abstract": "A large language model (LLM) can rate depression severity directly from a social media post or mark which clinical criteria the post shows and let code turn the count into a label. The latter is easier to audit because a clinician can check each marked criterion. We compare these approaches on two Reddit corpora using three LLMs (from 9B to frontier scale) and two questionnaires (PHQ-9, BDI-II), and measure agreement with quadratic weighted kappa. For the two frontier models, criteria extraction scores above chain-of-thought on one corpus only when its decision thresholds are fitted on labeled data. Neither model's gain is significant, with or without recalibrating chain-of-thought on the same labels. With thresholds fixed a priori from PHQ-9's criteria, extraction shows no gain on either corpus, even where models mark over two criteria per post. The 9B model behaves differently on a corpus from depression communities. It labels most posts severe, whether prompted directly or with chain-of-thought, while the a priori rule beats both without labels. After chain-of-thought is recalibrated on the same labels, no significant gap remains, consistent with a calibration effect. Yet higher ordinal agreement does not ensure better detection of severe cases. PHQ-9 criteria extraction misses most severe posts, and moving from direct prompting to chain-of-thought and then to extraction increases misses in nearly all comparisons. On the primary corpus, a relabeled stress dataset, a model using that dataset's own features, including word counts from the text, is not significantly different from frontier criteria extraction under the a priori rule.",
-      "pdf_url": "https://arxiv.org/pdf/2609.39049v1",
-      "arxiv_url": "https://arxiv.org/abs/2609.39049v1",
-      "published": "2026-09-30T05:57:26Z",
-      "updated": "2026-09-30T05:57:26Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
       ]
     }
   ]

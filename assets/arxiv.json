@@ -1,10 +1,117 @@
 {
-  "generated_at_utc": "2026-10-07T05:21:27.719754Z",
+  "generated_at_utc": "2026-10-08T05:30:26.499126Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
     {
-      "title": "Incidental information contaminates patient notes and disrupts clinical reasoning in large language models",
+      "title": "Sensitive-Topic Leakage Through LLM Routing Metadata: Measurement and Mitigation",
+      "authors": [
+        "Teng-Ruei Chen"
+      ],
+      "abstract": "LLM routers pick a cheap or expensive model per request by its content, and many gateways and some cloud platforms can log that choice with content logging off. We measure this privacy channel beyond token counts, accounting for noisy labels and repeated prompts. We run pre-registered studies on 1.7 million real requests (WildChat-1M, LMSYS-Chat-1M) with two cost/quality routers and a domain router, survey eleven systems' logging, and test post-processing defenses. At matched length, the shift's direction depends on category and router. For RouteLLM at the 50% operating point, harassment and self-harm requests reach the strong model 19 points less often than comparable ones on prompts unseen in exploration, medical requests (exploratory: LLM labels failed their gate) 31 points less often on distinct prompts (both post hoc), and sexual requests 10 points more often (secondary); the other router's four are negative. Twenty RouteLLM decisions separate frequent medical askers with AUC 0.71, exploratory and below the pre-registered primary endpoint's 0.75 (domain router: 0.92, an upper estimate). Per-category length-matched parity with accurate labels removes the gap on real traffic, costing at most 0.2 accuracy points on RouterBench (post hoc), where routers' gaps on sensitive subjects (13-42 points, pre-registered) exceed those of an oracle routing by realized accuracy gain (1-11, post hoc). Per-conversation stickiness, per-user budget bands, and pooled parity fail, the last as categories' shifts differ in size or sign. A post hoc exact per-user rate hides only even-prefix strong counts and forfeits most self-assessed routing value; it preserves odd-position decisions, from which a post hoc log attack reaches AUC 0.73 after 20 RouteLLM requests (exploratory).",
+      "pdf_url": "https://arxiv.org/pdf/2610.09981v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.09981v1",
+      "published": "2026-10-07T12:47:37Z",
+      "updated": "2026-10-07T12:47:37Z",
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "CircuitATLAS: Agentic reasoning over a systems neuroscience knowledge graph for target discovery in circuitopathies",
+      "authors": [
+        "Gabriel Ocana-Santero",
+        "Marko Tvrdic"
+      ],
+      "abstract": "Drug discovery for neurological disease has traditionally centered on the molecules altered by disease. But the molecules that cause pathology are not necessarily the best points from which to reverse it. Here, we ask which otherwise unaltered molecular control points can be engaged to restore pathological neural circuits toward functional states. We present CircuitATLAS, a provenance-grounded systems-neuroscience knowledge graph and agentic framework for target discovery in circuitopathies. It structures literature-derived relationships across diseases, phenotypes, electrophysiology, circuits, brain regions, cell types and molecular effectors, while deliberately excluding direct disease-gene and disease-protein edges to reduce shortcut reasoning. The graph contains 3.83 million nodes and 7.66 million edges, including 5.31 million LLM-extracted relations, and incorporates structured datasets such as the Human Cell Atlas and new multimodal in vivo measurements. We then introduce an agentic workflow that reasons from measurable disease phenotypes through their circuit and cellular substrates to molecular interventions, therapeutic feasibility and clinical constraints. Finally, we introduce a human-governed in vivo lab-in-the-loop linking hypothesis generation to experimental iteration. Within this framework an agent nominated ATP1A3, the neuronal alpha3 Na+/K+-ATPase, as a control point on cortical excitability; interneuron-restricted expression of ATP1A3 abolished the beta- and gamma-band response to a focal 4-aminopyridine challenge in vivo, and the validated target was then carried into a structure-guided small-molecule campaign terminating in a defined assay to resolve the direction of modulation. CircuitATLAS thus provides a framework for discovering therapeutics based not only on what is molecularly disrupted in disease, but on what can be controlled to restore circuit function.",
+      "pdf_url": "https://arxiv.org/pdf/2610.09643v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.09643v1",
+      "published": "2026-10-07T08:19:27Z",
+      "updated": "2026-10-07T08:19:27Z",
+      "categories": [
+        "q-bio.QM",
+        "cs.AI",
+        "q-bio.NC"
+      ]
+    },
+    {
+      "title": "Quantifying Volumetric Risk: Class-Aware Asymmetric Weighted Conformal Prediction for 3D Medical Image Segmentation",
+      "authors": [
+        "Shadi Alijani",
+        "Fereshteh Aghaee Meibodi",
+        "Homayoun Najjaran"
+      ],
+      "abstract": "Reliable volumetric segmentation is critical for clinical diagnostics, yet foundation models such as MedSAM remain deterministic and lack calibrated uncertainty under distribution shift. Existing conformal prediction methods offer statistical guarantees but are frequently applied in 2D and assume symmetric error distributions, so they do not capture the class-specific biases that arise in 3D multi-class segmentation. We propose Class-Aware Asymmetric Weighted Conformal Prediction (CA-WCP), which combines latent-space density-ratio weighting for covariate shift with directional quantiles for the lower and upper volume bounds, and scales each bound by a class-specific asymmetry factor derived from validation-set false-positive and false-negative rates. We prove that CA-WCP retains the weighted-exchangeability marginal coverage guarantee for every class, and we evaluate it on 3D brain tumor segmentation (BraTS 2020) and on a synthetic multi-organ CT benchmark constructed under covariate shift. On both benchmarks the 95\\% Clopper--Pearson interval for the observed coverage of CA-WCP contains the nominal 90\\% level for every semantic class, while interval width is reduced by 8--14\\% relative to symmetric weighted conformal prediction. We further encode the calibrated intervals into structured prompts for a multimodal large language model to produce uncertainty-conditioned radiology reports, linking distribution-shift-aware uncertainty quantification to interpretable clinical communication.",
+      "pdf_url": "https://arxiv.org/pdf/2610.09392v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.09392v1",
+      "published": "2026-10-07T03:51:16Z",
+      "updated": "2026-10-07T03:51:16Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Multi-Objective Aligned Small Language Model Framework for SUD Patient Dialogue Generation",
+      "authors": [
+        "Thushara Manjari Naduvilakandy",
+        "Hyeju Jang",
+        "Mohammad Al Hasan"
+      ],
+      "abstract": "Substance Use Disorder (SUD) counseling requires patient responses that reflect underlying cognitive states such as beliefs, coping strategies, and readiness for change. Although large language models (LLMs) can generate fluent text, they often fail to produce cognitively coherent and clinically realistic patient behavior, especially under ethical and data-scarce clinical settings. Moreover, deploying frontier-scale LLMs in healthcare applications presents practical challenges including high computational cost, latency, privacy concerns, and limited deployability in resource-constrained environments, motivating the need for cognitively aligned small language models (SLMs). We propose a cognitively grounded framework for SUD patient dialogue generation that explicitly models and aligns latent cognitive components with patient histories and counselor questions. Our pipeline consists of two stages: cognitive component detection and cognitive component-aligned dialogue generation. To enable effective learning with smaller models, we combine knowledge distillation from high-capacity teacher models, preference optimization from human-annotations, and attention-guided reward shaping. Extensive evaluations using automatic scores like BERTScore, ROUGE, METEOR and BLEU, and LLM-as-judge hit-metrics against both human and teacher-model references show that cognitively informed fine-tuning substantially improves cognitive realization and alignment over a generic instruction-tuned baselines and mental health domain specific SLMs, with particularly strong gains for open-ended cognitive components.",
+      "pdf_url": "https://arxiv.org/pdf/2610.09209v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.09209v1",
+      "published": "2026-10-06T23:10:21Z",
+      "updated": "2026-10-06T23:10:21Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Frozen Models, Evolving Expertise: Model-Agnostic Learning from Deployment Experience for Multimodal Medical AI",
+      "authors": [
+        "Yexiao He",
+        "Yucheng Tang",
+        "Pengfei Guo",
+        "Yufan He",
+        "Andriy Myronenko",
+        "Can Zhao",
+        "Ang Li",
+        "Daguang Xu",
+        "Dong Yang"
+      ],
+      "abstract": "Large language models (LLMs) and vision-language models (VLMs) are usually frozen after deployment, so they do not learn from the cases they solve. This is especially concerning in medicine, where new clinical evidence, updated guidelines, and new therapies can change established practice. Fine-tuning can update the model, but it requires access to model weights and additional training. Parameter-free methods avoid training, but they may overfit a fixed validation set, lack reliable domain knowledge, or lose visual details by saving experience only as text. To address these limitations, we present a model-agnostic framework that allows frozen LLMs and VLMs to learn from deployment experience through three forms of external expertise: a Skill that guides reasoning and tool use, a Knowledge Memory that stores reliable facts supported by earlier cases or trusted external evidence, and a Multimodal Knowledge Base that keeps visual examples and guides the model to relate each retrieved case to the current image. Instead of relying on a fixed validation set, a validation strategy keeps an update only if it helps on new cases without degrading performance on earlier ones. Across six benchmarks covering clinical diagnosis, clinical workflows, medical reasoning, and medical and non-medical visual reasoning, and with four open-weight and closed-source base models, our framework improves performance during online deployment by up to 34.2% over the base model on medical tasks, generalizes to unseen cases, transfers to other models without further optimization, and works in non-medical domains.",
+      "pdf_url": "https://arxiv.org/pdf/2610.09146v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.09146v1",
+      "published": "2026-10-06T21:41:27Z",
+      "updated": "2026-10-06T21:41:27Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "BEACON-SP: Ontology-Grounded GraphRAG Framework for Clinical Suicide Risk Assessment",
+      "authors": [
+        "Kemal Davaslioglu",
+        "Nathan Conger",
+        "Sastry Kompella",
+        "Yalin E. Sagduyu",
+        "Nathaniel D. Bastian"
+      ],
+      "abstract": "We present BEACON-SP, an ontology-grounded Graph Retrieval-Augmented Generation (GraphRAG) framework for clinician-facing decision support in behavioral health settings such as suicide prevention, where effective assessment requires integrating heterogeneous clinical, behavioral, social, and temporal evidence. BEACON-SP combines patient knowledge graphs with ontology-guided retrieval to support multi-hop reasoning across diagnoses, medications, risk and protective factors, life events, and temporal relationships. The framework is enabled by a comprehensive suicide prevention ontology that integrates the Three-Step Theory, the Integrated Motivational-Volitional Model, and the Suicide Social Determinants of Health Ontology into a unified representation of patient risk factors. We construct ontology-grounded patient knowledge graphs and evaluate BEACON-SP for clinician-facing question answering. Compared with a vector-based retrieval-augmented generation (RAG) baseline on a 1,500-query benchmark spanning 15 clinical categories and 100 patients, BEACON-SP improves completeness, clinical relevance, and evidence grounding under a corrected comparative evaluation protocol, with a small gain on factual accuracy. In paired criterion-level comparisons, GraphRAG is preferred in 76.4% of cases. These results demonstrate the potential of ontology-guided GraphRAG to provide structured, contextualized patient evidence for clinical decision support.",
+      "pdf_url": "https://arxiv.org/pdf/2610.09026v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.09026v1",
+      "published": "2026-10-06T19:23:51Z",
+      "updated": "2026-10-06T19:23:51Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Large language models are vulnerable to incidental information in clinical documentation and reasoning",
       "authors": [
         "Krithik Vishwanath",
         "Brandon Ye",
@@ -15,10 +122,10 @@
         "Eric K. Oermann"
       ],
       "abstract": "Large language models (LLMs) are increasingly relied upon to support ambient documentation and clinical reasoning. Here we examine the impact of a failure mode shared between these two applications by assessing their sensitivity to information incidental to the patient encounter. In 576 patient-clinician dialogues, we found that frontier models inserted small-talk exchanges into 35% of notes, while mean quality scores changed by at most 0.20 points on five-point scales. In 3.7% of frontier notes, models misattributed the asides or used them clinically. In 57 mock recorded consultations, background speech from a separate patient encounter at -10 dB leaked into 48.2% of transcripts, with contamination detected in 5.3% of downstream notes generated by four open-weight models. We propose a dual encoding hypothesis of clinical reasoning and distraction in LLMs, with preliminary evidence that LLM components associated with disruption by incidental information also support clinical reasoning. These findings support evaluating resistance to incidental information before clinical use, with safeguards that prevent contamination while preserving clinical reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2610.08585v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.08585v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.08585v2",
+      "arxiv_url": "https://arxiv.org/abs/2610.08585v2",
       "published": "2026-10-06T15:55:29Z",
-      "updated": "2026-10-06T15:55:29Z",
+      "updated": "2026-10-07T13:16:20Z",
       "categories": [
         "cs.CL"
       ]
@@ -168,123 +275,6 @@
       "updated": "2026-10-06T00:59:31Z",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Closing Ambient Clinical Documentation Gaps with Automated Provider Queries",
-      "authors": [
-        "Joseph Paul Cohen",
-        "Raj Shah",
-        "Han-Chin Shing",
-        "Fang Wang",
-        "Susan Nguyen",
-        "Chaitanya Shivade",
-        "Jack Moriarty"
-      ],
-      "abstract": "Provider queries are clarifying requests sent by clinical documentation specialists to physicians to close gaps in the clinical note and ensure accurate billing. Prior work automates note drafting, ICD-10 coding, and order extraction assuming a complete transcript, leaving these gaps unaddressed. We study whether an LLM can automate the query loop, termed DAU (Draft, Ask, Update), across those three tasks. An audit of 3,000 real visits identifies the sources of missing documentation, from which we build five transcript-degradation benchmarks on public data. Analyzing 21k clarification turns on real conversations, we find useful-question predictors are task-specific: oracle confidence dominates, but note completeness needs only simple recall questions while ICD-10 coding needs harder, multi-option ones. About 9% of turns hurt performance, driven by redundant questions and non-answers that still trigger a rewrite. Deployment depends on learning \"when not\" as much as \"what to\" ask.",
-      "pdf_url": "https://arxiv.org/pdf/2610.07502v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.07502v1",
-      "published": "2026-10-05T23:07:16Z",
-      "updated": "2026-10-05T23:07:16Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "PsyCIDRA: A Dual-Agent Framework for Psychiatric Interviewing and Diagnostic Reasoning",
-      "authors": [
-        "Milad Mohammadi",
-        "Fatemeh Akrami Shamsabadi",
-        "Zahra Mohseni",
-        "Amirhossein Safdarian",
-        "Malekfarhad Malek",
-        "Hadi Moradi",
-        "Hesham Faili"
-      ],
-      "abstract": "Large language models show promise in clinical reasoning, but psychiatric interviewing requires guiding an evolving conversation. Their ability to carry out this interactive assessment remains less studied. We present PsyCIDRA, a dual-agent framework linking free-form psychiatric interviewing with diagnostic reasoning for expert review. Its interviewer agent uses tools to maintain working notes, load expert-written skills, and retrieve ICD-11 references to guide inquiry. Its diagnostic reasoning agent then receives the completed interview transcript and reports hypotheses alongside supporting, conflicting, and missing evidence, withholding a final hypothesis when none is sufficiently supported. Using patient profiles generated with PsyCPG, we first evaluate PsyCIDRA in simulation. Across four models on 53 evaluation cases, it achieves higher diagnostic agreement than direct prompting. On 81 held-out simulated cases, rank-1 accuracy is 60.5% versus 51.9%. In a blinded study of 101 human participants in separate arms, PsyCIDRA agrees with psychologists on whether to propose a diagnostic hypothesis in 79.6% of cases, compared with 65.4% for direct prompting. Together, these findings support the potential of LLM agents to assist psychiatric assessment through free-form dialogue. By examining diagnostic reasoning, interview quality, and safety together, this study contributes to understanding the capabilities and limitations of psychiatric interview agents.",
-      "pdf_url": "https://arxiv.org/pdf/2610.07473v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.07473v1",
-      "published": "2026-10-05T22:40:24Z",
-      "updated": "2026-10-05T22:40:24Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Kurate: Scalable Scientific Quality Analysis",
-      "authors": [
-        "Matthew J. Vowels",
-        "Jamie Cummins"
-      ],
-      "abstract": "Scientific search systems can find papers that are relevant to a question, but they generally do not assess the quality of the evidence that those papers provide. We present Kurate, a system that uses large language models (LLMs) to assess the quality of published studies. Kurate uses both the paper and its related documents (e.g., the study's trial registration and protocol), and links each of its judgments to the passage of text on which that judgment is based. We applied Kurate to a corpus of 4,347 papers (3,913 of which report randomized trials) and scored each paper on 8 dimensions of study design and reporting: specifically, statistical power, causal identification, preregistration, selective reporting, measurement validity, analysis prespecification, reporting transparency, and conflict of interest and funding. Across the corpus, we found that papers most often exhibited issues with statistical power, selective reporting, and analysis prespecification, although average quality differed between clinical areas. When compared against expert annotations of 60 held-out clinical-trial documents, the information Kurate extracted matched the expert label in 221/242 protocol scorepoints and 294/370 results-publication scorepoints, with AC1 0.94 and 0.81, respectively. Using a well-reputed, high quality clinical trial as a worked example, we show how a single paper's overall grade breaks down into separate judgments, with each linked to specific evidence from the trial's registration, protocol, and published report. Together, these results show that large-scale quality assessment of this kind is feasible, and that it can be used to address meta-scientific research questions.",
-      "pdf_url": "https://arxiv.org/pdf/2610.07306v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.07306v1",
-      "published": "2026-10-05T19:44:07Z",
-      "updated": "2026-10-05T19:44:07Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "TIDE 2.0: an open, model-agnostic engine for keyed de-identification of clinical notes",
-      "authors": [
-        "Jose D. Posada",
-        "Somalee Datta",
-        "Priya Desai"
-      ],
-      "abstract": "Clinical notes capture most of what is documented about a patient's care, but they cannot be used for research until protected health information (PHI) is removed. De-identification is often treated as a detection problem. Detection alone is not sufficient: redaction strips clinical content along with identifiers, date blanking destroys the temporal intervals needed for longitudinal analysis, and assigning a fresh random surrogate at each occurrence breaks links between a patient's notes. We present TIDE 2.0, an MIT-licensed engine with two separable stages: an interchangeable recognizer and a keyed anonymizer. Both run on hardware the institution owns. Surrogates are generated cryptographically with no stored linkage table. Dates shift by a per-patient, interval-preserving offset; each value receives the same surrogate across all occurrences under a given key; and a release produced under a new key cannot be linked to earlier releases. We also release TIDE2-Sentry, a recognizer distilled from a large language model. On two gold-annotated corpora from two institutions, the default configuration reached span-level recall of 0.88 in-domain and 0.77 on the second institution's corpus, at precision 0.88 and 0.87. We report recall and precision per category alongside these aggregates. The engine is open source, and the recognizer is available under a gated research-use agreement, so institutions can run, inspect and extend both within their own environments.",
-      "pdf_url": "https://arxiv.org/pdf/2610.07224v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.07224v1",
-      "published": "2026-10-05T18:31:40Z",
-      "updated": "2026-10-05T18:31:40Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MedPrune: Topology-Efficient Multimodal Multi-Agent Communication Evolution for Medical VQA Tasks",
-      "authors": [
-        "Jiuheng Wan",
-        "Runze Li",
-        "Chen Chen",
-        "Tingyuan Hu",
-        "Daiyang Yu",
-        "Yimin Jing",
-        "Taolin Zhang",
-        "Richang Hong"
-      ],
-      "abstract": "While medical multimodal large language models (Med-MLLMs) advance medical visual question answering (VQA), existing clinical workflow-inspired multi-agent frameworks suffer from interaction patterns and excessive computational overhead caused by redundant communication topologies. In this paper, we propose MedPrune, an efficient medical multimodal multi-agent collaboration framework that dynamically prunes both nodes and edges from the communication topology to enhance reasoning ability and token efficiency. Specifically, we first formulate the diagnostic process as a heterogeneous communication graph, where nodes represent specialist agents from various departments and edges capture intra- and inter-departmental interactions. Building on this graph, we introduce two sparsification mechanisms to enable adaptive collaborative evolution: (1) Heterogeneous Node Sparsification, which eliminates task-irrelevant specialist agents irrelevant to the current multimodal question via reinforcement learning-driven topological optimization, and (2) Heterogeneous Edge Sparsification, which selectively retains only the most diagnostically salient intra- and inter-departmental connections by jointly optimizing task performance and topological complexity. Extensive medical VQA experiments under full-set and few-shot training settings prove MedPrune surpasses multi-agent baselines and boosts token efficiency with strong adversarial robustness.",
-      "pdf_url": "https://arxiv.org/pdf/2610.06695v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.06695v1",
-      "published": "2026-10-05T16:55:58Z",
-      "updated": "2026-10-05T16:55:58Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Aligning Multimodal Patient Evidence with Biomedical Knowledge Graphs for Clinical LLMs",
-      "authors": [
-        "Jiawen Du",
-        "Arshan Ali Khan",
-        "Chenhao Zhang",
-        "Zachary Plotkin",
-        "Li Shen",
-        "Qi Long",
-        "Yun Li",
-        "Can Chen",
-        "Tianlong Chen",
-        "Nicholas Konz"
-      ],
-      "abstract": "Clinical questions often depend on linking a patient's multimodal evidence to external biomedical knowledge, yet existing predictive systems rarely represent such links explicitly, so they can neither be traced to their evidence sources nor removed to measure their contributions. We present MM-KG (Multimodal Knowledge Graph), which represents heterogeneous, multimodal patient observations and biomedical concepts as separate layers in one typed graph, joined by explicit alignment edges. First, modality-specific harmonizers convert EHR text, imaging, genomic, and biospecimen data into typed observations mapped to UMLS concepts, which a route-prioritized aligner links to a biomedical knowledge graph. Query-conditioned retrieval then selects a compact subgraph for downstream use by a large language model or a graph neural network. We build MM-KGs for MIMIC-IV and ADNI, and evaluate them with a 2x2 design that separates patient evidence, biomedical knowledge, and their interaction. On questions that require both sources, neither source alone performs far above chance, whereas their combination yields a drug-controlled AUROC interaction of +0.194 on MIMIC and +0.299 on ADNI. On held-out five-candidate ranking, MM-KG outperforms MindMap by +0.131 Hits@1 and leads an adapted GraphCare on the items that require consulting the patient, and deleting the single answer-bearing relation from the retrieved packet returns Hits@1 to the no-knowledge baseline. Finally, query-conditioned retrieval reaches 0.731 AUROC with 6.8x less context than the strongest generic policy, whereas static knowledge graph context gives no consistent gain on ordinary outcome prediction. Knowledge graphs thus benefit clinical LLMs not as background context but as explicit links between multimodal patient evidence and the relation a question requires, and MM-KG makes these links retrievable, traceable, and testable.",
-      "pdf_url": "https://arxiv.org/pdf/2610.06685v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.06685v1",
-      "published": "2026-10-05T16:51:11Z",
-      "updated": "2026-10-05T16:51:11Z",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
       ]
     }
   ]

@@ -1,8 +1,184 @@
 {
-  "generated_at_utc": "2026-10-08T05:30:26.499126Z",
+  "generated_at_utc": "2026-10-09T05:34:19.608411Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Detecting Spin in Clinical Trials with Large Language Models",
+      "authors": [
+        "Tja\u0161 Ajdovec",
+        "Marko Robnik-\u0160ikonja",
+        "Simon \u0160uster"
+      ],
+      "abstract": "Spin in clinical trials includes reporting practices that distort the presentation of results. This is particularly critical in medicine, where spin is present in more than 50% of randomized controlled trials that fail to reach statistical significance. The comparison of primary and reported outcomes is crucial for detecting several types of spin, including outcome switching. We used 300 pairs of outcomes labeled with semantic similarity to develop a system for automatic detection of outcome switching. We evaluated baseline text similarity models and open-source LLMs using generated similarity scores and the Youden index to determine the classification threshold. The proposed approach involves prompt engineering, classification based on token probabilities, and majority voting for the final decision. The results on the test set of 2,496 examples with an F1 score of 0.78 and an accuracy of 0.90 outperform baseline text similarity models but trail behind fine-tuned versions of BERT. We used LLMs to generate natural language explanations for the classified instances and manually assessed their quality.",
+      "pdf_url": "https://arxiv.org/pdf/2610.11845v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.11845v1",
+      "published": "2026-10-08T12:33:52Z",
+      "updated": "2026-10-08T12:33:52Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "BioBigBird: A Sparse Attention Model for Long-Range Dependency Processing in Biomedical Text",
+      "authors": [
+        "Roshan Balaji",
+        "Pavan Kumar S",
+        "Vasudev Gupta",
+        "Sreejith N",
+        "Keerthana Sridhar",
+        "Nirav Bhatt"
+      ],
+      "abstract": "While domain-specific Large Language Models (LLMs) have encoded vast biomedical knowledge, their limited context windows often hinder a deep understanding of nuanced relationships within and across texts. To address this limitation, we introduce BioBigBird, a bidirectional language model pre-trained on extensive biomedical literature and clinical data, specifically designed to handle long-range dependencies. BioBigBird leverages a sparse attention mechanism to process sequences up to 4096 tokens, and its training incorporates a multi-stage process to mitigate noise from the large-scale pre-training corpus. We further enhance its performance by employing a multi-task learning (MTL) framework that jointly optimizes for Named Entity Recognition and Relation Extraction. Comprehensive evaluations on the BLURB benchmark reveal that our MTL-enhanced BioBigBird achieves highly competitive results against state-of-the-art models. Our work contributes an effective methodology for developing powerful, long-context language models for specialized domains, demonstrating the value of extended sequence processing for complex text analysis. Our models are publicly available at https://huggingface.co/collections/bisectgroup/biobigbird.",
+      "pdf_url": "https://arxiv.org/pdf/2610.11430v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.11430v1",
+      "published": "2026-10-08T07:54:12Z",
+      "updated": "2026-10-08T07:54:12Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "MedBenchAgent: Towards Systematic Automation of Medical VLM Benchmark Construction",
+      "authors": [
+        "Yulin Fu",
+        "Junren Wang",
+        "Guangjing Yang",
+        "Zhangyuan Yu",
+        "Wanran Sun",
+        "Jiabao Zhou",
+        "Jin Yin",
+        "Qicheng Lao"
+      ],
+      "abstract": "Large-scale construction of medical vision-language model (VLM) benchmarks is increasingly feasible with richly annotated imaging datasets and large language models (LLMs), yet existing automation largely focuses on generating evaluation items within predefined benchmark specifications. We study the broader problem of automatically deriving the specification itself: what to evaluate, which annotations support each task, and how to translate this evidence into reliable evaluation items. We formulate benchmark construction as constrained compilation, in which the benchmark specification is progressively derived from evaluation requirements, heterogeneous annotations, and medical knowledge. Based on this formulation, we introduce MedBenchAgent, a multi-agent framework with a Benchmark Intermediate Representation (BIR) that encodes task definitions, evidence mappings, evaluation protocols, and item specifications across construction stages. MedBenchAgent separates planning, which derives and verifies the specification, from instantiation, which constructs and audits items under the locked specification. MedBenchAgent achieves a Task-Space F1 of 90.9%, outperforming direct task induction (79.2-80.0%) and prior-guided induction (85.1%); 994 of 1,000 sampled items from correctly identified tasks pass human audit. We further demonstrate portability to a specialized medical domain and evaluate twelve VLMs, revealing task- and setting-specific variation obscured by aggregate scores. These results establish constrained compilation as a scalable and auditable framework for medical VLM benchmark construction beyond question generation.",
+      "pdf_url": "https://arxiv.org/pdf/2610.11312v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.11312v1",
+      "published": "2026-10-08T06:17:33Z",
+      "updated": "2026-10-08T06:17:33Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "How to post-train on a surrogate: Envelope sampling mitigates reward hacking",
+      "authors": [
+        "Sanjit Dandapanthula",
+        "Shuvom Sadhuka",
+        "Samir Khan",
+        "Michael Oberst",
+        "Aaditya Ramdas",
+        "Alexandra Chouldechova"
+      ],
+      "abstract": "Large language models (LLMs) are commonly post-trained against LLM judges and other cheap surrogates because the true reward, such as human preference, is too expensive to query at scale. This practice often leads to reward hacking, where reinforcement learning against a miscalibrated surrogate leads to undesirable side effects. In this work, we study a setting in which a small number $n$ of model outputs are annotated with ground-truth labels (e.g., from expert review) and used to recalibrate the LLM judge before optimizing against it. Prior approaches to judge recalibration are costly or heuristic, and it is known that on-policy sampling fails when the surrogate is miscalibrated on a rare set of outputs. In this work, we propose envelope sampling, a theoretically-grounded method for judge recalibration that seeks to minimize an upper bound on the regret of the post-trained model under the assumption that the human reward and re-calibrated reward lie in an $L^2$ ball around the judge. We give practical algorithms to sample from the envelope by rejection or by fine-tuning against a modified reward, and experiments on clinical note generation and on a controlled sycophancy task show that recalibrating on envelope samples mitigates reward hacking where recalibrating on base-model samples does not.",
+      "pdf_url": "https://arxiv.org/pdf/2610.11281v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.11281v1",
+      "published": "2026-10-08T05:48:31Z",
+      "updated": "2026-10-08T05:48:31Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ME"
+      ]
+    },
+    {
+      "title": "Towards Automated Clinical Behavioral Coding with Large Language Models: A Case study Using BOSCC recordings of Children",
+      "authors": [
+        "Jordan Prescott",
+        "Aditya Kommineni",
+        "Tiantian Feng",
+        "Megan Micheletti",
+        "Alyssa Viggiano",
+        "Luis Angeles",
+        "Anfeng Xu",
+        "Lynn Perry",
+        "Catherine Lord",
+        "Daniel Messinger",
+        "Shrikanth Narayanan"
+      ],
+      "abstract": "Autism spectrum disorder (ASD) is a neurodevelopmental condition characterized by differences in social communication and by restricted interests and repetitive behaviors. Treatment interventions often target social-communication skills, creating a need for reliable measures of behavioral change. The Brief Observation of Social Communication Change (BOSCC) is a validated treatment-response measure based on brief play and social-communication interactions between a child and trained examiner. The BOSCC coding process is resource-intensive and requires trained experts, motivating the automation of coding in order to improve scalability and accessibility. In this work, we evaluate general-purpose large language models (LLMs) for predicting speech-related BOSCC codes from different input representations. We compare transcript, diarized-transcript, and targeted audio conditions across 163 in-house recordings. LLMs are able to perform well in assessing verbal exchange, but do not perform as well when identifying atypical speech patterns. Additionally, performance varies considerably across scoring decisions, with no consistent pattern across diagnosis groups. An audit of model predictions indicates that applying the BOSCC coding criteria and interpreting ambiguous speech evidence remain challenges.",
+      "pdf_url": "https://arxiv.org/pdf/2610.11106v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.11106v1",
+      "published": "2026-10-08T02:24:54Z",
+      "updated": "2026-10-08T02:24:54Z",
+      "categories": [
+        "eess.AS"
+      ]
+    },
+    {
+      "title": "Clinician use of language models diverges from how the models are evaluated",
+      "authors": [
+        "Krithik Vishwanath",
+        "Haitong Lin",
+        "Anton Alyakin",
+        "Jin Vivian Lee",
+        "D. Brock Hewitt",
+        "Jie J. Yao",
+        "William Robert Small",
+        "Hammad A. Khan",
+        "Cordelia Orillac",
+        "Aakaash Varma",
+        "Brandon Ye",
+        "Daniel Alexander Alber",
+        "Gustavo Stolovitzky",
+        "Batia Wiesenfeld",
+        "Oded Nov",
+        "Wei Wu",
+        "Kang Zhang",
+        "Yindalon Aphinyanaphongs",
+        "Tim Requarth",
+        "Eric Karl Oermann",
+        "The International Digital Twin Consortium in Healthcare",
+        "Medicine"
+      ],
+      "abstract": "Large language model (LLM) assistants are being deployed to clinicians across health systems, and judgments about their readiness rest largely on benchmark scores, most of them derived from examination questions or curated cases. A benchmark predicts performance in deployment only to the extent that its items resemble real use, yet whether benchmarks reflect the work these systems receive has rarely been measured. Here we analyze 127,833 queries sent by 6,342 physicians, advanced practice providers and nurses in 35 specialties to an institutional assistant during an eight-month roll-out. We characterize each query with RCQ-Map, a clinician-validated framework grounded in taxonomies of clinical questions and of LLM evaluation, which records its task, intent, answerability, missing information and potential harm. Documentation and administration (36.2%) and knowledge retrieval (28.9%) made up nearly two-thirds of use, and diagnosis 3.7%; more than a third of queries could not be answered well as posed. Applying RCQ-Map to 58 public benchmarks drawn from major evaluation suites and frontier model reports, which we assemble into the Clinical AI Benchmark Atlas, showed that the median benchmark contained no documentation requests and shared 31% of the task mix of real use, less than an even spread across task categories would. Benchmarks in suites designed to resemble clinical practice were individually no closer to real use than those used in frontier model reports. Benchmark scores therefore say little about how clinical AI performs on most of the work it is actually given, and evaluation should be matched to real clinical use.",
+      "pdf_url": "https://arxiv.org/pdf/2610.11069v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.11069v1",
+      "published": "2026-10-08T01:29:04Z",
+      "updated": "2026-10-08T01:29:04Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Budgeted Multi-Source Counterfactual Annotation for Off-Policy Evaluation",
+      "authors": [
+        "Biao Xiang",
+        "Ali Eshragh",
+        "Yuexing Li",
+        "Kai Wang"
+      ],
+      "abstract": "Off-policy evaluation (OPE) estimates the value of a target policy from logged data, but limited behavior-policy coverage can force high-variance reweighting or reward-model extrapolation. Counterfactual annotations can add evidence about unobserved actions, yet practical sources, including domain experts and large language models (LLMs), may be costly, biased, or noisy. We study budgeted acquisition of such annotations for contextual-bandit OPE. Given source-specific costs and error profiles, we formulate an integer allocation problem over context-action pairs and annotation sources to minimize the component of estimator variance that depends on the annotation plan. We characterize when annotations are valuable through a first-annotation threshold and local annotation-value regimes. For the coupled multi-source problem, we develop a majorization-minimization algorithm with dynamic-programming subroutines that monotonically improves the objective. Experiments in synthetic clinical and LLM-annotated education bandits show that our allocation method reduces fixed-profile mean squared error (MSE) by 20.58% and 10.77%, respectively, relative to no annotation.",
+      "pdf_url": "https://arxiv.org/pdf/2610.10974v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.10974v1",
+      "published": "2026-10-07T22:55:15Z",
+      "updated": "2026-10-07T22:55:15Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.OC"
+      ]
+    },
+    {
+      "title": "Coverage-Aware Reasoning with Medical Tokens for Diagnosis Prediction",
+      "authors": [
+        "Kaisong Zhang",
+        "Haotian Fang",
+        "Junmeng Zhou",
+        "Hang Lv",
+        "Yulan Pan",
+        "Yanchao Tan"
+      ],
+      "abstract": "Large language models (LLMs) offer promising potential for next-visit diagnosis prediction, owing to their ability to integrate longitudinal clinical evidence and reason over it in natural language. However, reinforcement learning for LLM reasoning commonly rewards each trajectory according to the correctness of its final answer. In next-visit diagnosis prediction, multiple diagnoses can be simultaneously valid, but independently rewarding one diagnosis per trajectory does not distinguish repeated hits from coverage of different diagnoses. The policy can therefore concentrate on a few correct diagnoses, leaving others uncovered. Meanwhile, LLM tokenizers can split ICD codes into several generic tokens with limited clinical meaning, requiring multiple decoding steps to predict each diagnosis and hindering reasoning over a large disease vocabulary. To address both challenges, we propose CARing, a framework that represents diagnoses with compositional Semantic IDs (SIDs) and optimizes reasoning trajectories for multi-label coverage. Concretely, we first encode ontology-enriched disease semantics into compact SIDs through residual quantization, and ground the resulting SID tokens in natural language and longitudinal EHR contexts through multi-task alignment and reasoning-enriched training to unlock transferable LLM reasoning. CARing further improves unordered multi-label prediction through a coverage reward for reinforcement learning and multi-positive supervision. At inference time, the model supports both efficient direct constrained decoding and multi-chain reasoning with rank fusion. On MIMIC-III and MIMIC-IV, CARing exceeds all EHR-trained baselines in weighted F1 and attains the highest top-k recall at every reported cutoff, including R@30 of 46.04% and 46.52% in reasoning mode. Our codes and logs are available at https://github.com/zmlxzyh/CARing-Codes-Logs.",
+      "pdf_url": "https://arxiv.org/pdf/2610.10641v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.10641v1",
+      "published": "2026-10-07T14:39:18Z",
+      "updated": "2026-10-07T14:39:18Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Sensitive-Topic Leakage Through LLM Routing Metadata: Measurement and Mitigation",
       "authors": [
@@ -128,153 +304,6 @@
       "updated": "2026-10-07T13:16:20Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "MedZERO: Self-Evolving Agents for Open-Ended Medical Reasoning Through Controlled Knowledge Accumulation",
-      "authors": [
-        "Xilin Dang",
-        "Weilin Ruan",
-        "Xue Yang",
-        "Jinghao Wang",
-        "Xiaowei Hu",
-        "Jinpeng Li",
-        "Pheng-Ann Heng"
-      ],
-      "abstract": "Large language models (LLMs) have shown promise in medical question answering and clinical reasoning, yet their improvement remains constrained by static parametric knowledge and costly expert supervision. Self-evolving agents offer a promising alternative by enabling models to improve through iterative task generation and problem-solving. However, most existing self-evolving methods are designed for easily verifiable domains such as mathematics and coding, where solutions can be checked by exact answers or executable programs. Medical reasoning is fundamentally different: it is open-ended, knowledge-intensive, and often only partially verifiable. We present MedZERO, a self-evolving framework for open-ended medical reasoning. MedZERO couples an Examiner that generates frontier medical question-option pairs with a Reasoner that solves them through evidence-grounded multi-turn reasoning with external knowledge tools. To support reliable, continual improvement, MedZERO adopts controlled knowledge accumulation, which maintains temporary exploratory knowledge and curated persistent knowledge in reasoning. We evaluate MedZERO on five public medical reasoning benchmarks using 4B- and 8B-scale base models under open-ended evaluation. Across all settings, MedZERO consistently outperforms the underlying base models and prior self-evolving baselines, achieving up to 13.7 average accuracy-point gains over the next-best self-evolving baseline.",
-      "pdf_url": "https://arxiv.org/pdf/2610.08327v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.08327v1",
-      "published": "2026-10-06T13:25:55Z",
-      "updated": "2026-10-06T13:25:55Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Symphony for Text Generation: Benchmarking Clinical Note Generation",
-      "authors": [
-        "Daniel Varab",
-        "Victor Petr\u00e9n Bach Hansen",
-        "Asbj\u00f8rn W. Helge",
-        "Kevin Pelgrims",
-        "Mathias Baltzersen",
-        "Adrian Young-San Roessler",
-        "Vanessa Klungtvedt",
-        "Maximilian Brand",
-        "Lasse Krogsb\u00f8ll",
-        "Henrik Cullen",
-        "Lars Maal\u00f8e"
-      ],
-      "abstract": "Ambient documentation systems are rapidly gaining adoption, yet their impact on clinical note quality remains poorly characterized. We introduce MedConv, a multilingual dataset of 300 clinical encounters in English, Danish, and German, and use it alongside the Ambient Clinical Intelligence benchmark (ACI-BENCH) to compare Corti, a clinical AI platform, with two leading, accessible ambient scribe software applications built on general-purpose AI. We present a controlled clinical evaluation framework that combines entailment metrics with LLM-judged pairwise comparisons across eight dimensions adopted from PDSQI-9. Results show that Corti's API-based text-generation infrastructure is on par with or outperforms leading commercial scribes. We further show that Corti's configurable API provides the flexibility necessary to fine-tune quality dimensions for specific documentation use cases. We present the evaluation methodology and release a dataset to support future reproducible comparison of ambient documentation systems.",
-      "pdf_url": "https://arxiv.org/pdf/2610.08161v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.08161v1",
-      "published": "2026-10-06T11:13:02Z",
-      "updated": "2026-10-06T11:13:02Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "SAGE: Semantic Anchor-Guided Evolution for Grounded Medical QA Data Synthesis",
-      "authors": [
-        "Chuan Li",
-        "Chengyu Wang",
-        "Cen Chen",
-        "Ye Lyu",
-        "Mingyuan Fan",
-        "Ming Gao"
-      ],
-      "abstract": "Developing reliable models for clinical tasks, such as Medical Question Answering (QA), is severely constrained by the limited availability of high-quality, expert-annotated training data. This challenge is exacerbated by stringent privacy requirements and the impracticality of utilizing large open-source corpora or proprietary cloud APIs within resource-limited clinical settings. To address these obstacles, we introduce SAGE (\\textit{Semantic Anchor-Guided Evolution}), a novel data synthesis framework that enables small, locally deployed models to generate high-quality medical training data. SAGE leverages lightweight, publicly available taxonomies such as MeSH as semantic anchors, imposing a structured prior to effectively guide and ground the data generation process. At its core, SAGE iteratively interleaves atomic (individual concept-based) and associative (relation-based) synthesis, bootstrapping training data from minimal seeds. This approach eliminates the need for large collections of medical documents or reliance on external APIs, providing a practical solution for on-premises data creation. Extensive experiments across multiple medical question-answering benchmarks demonstrate that models fine-tuned with SAGE-synthesized data consistently outperform those trained using self-derived or conventional document-based paradigms, highlighting tangible improvements in data efficiency and resource utilization for medical LLM development. Code is available at https://github.com/DIaacKr/SAGE.",
-      "pdf_url": "https://arxiv.org/pdf/2610.08093v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.08093v1",
-      "published": "2026-10-06T10:23:16Z",
-      "updated": "2026-10-06T10:23:16Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Language Carries the Expert's Impression: Instrument-Anchored LLM Judges Transfer Counseling-Quality Assessment and Beat In-Domain Training",
-      "authors": [
-        "Tobias Hallmen",
-        "Elisabeth Andr\u00e9"
-      ],
-      "abstract": "Automatic assessment of communication quality in dyadic counseling conversations is bottlenecked by data: expert-rated corpora are small and expensive to grow. We study cross-domain transfer of expert overall-impression prediction across three German corpora of simulated counseling (two general-practice medical, one school-related parent-teacher; $n=195$ expert-rated sessions, one corpus after scale equating). Training on the other domains beats training in-domain: leave-one-domain-out transfer reaches nested Spearman $\u03c1= 0.54$ against $\\le 0.48$ within the target domain, a paired session-level gap of $+0.15$ that holds at $+0.12$ when the training-set sizes are matched, so it is not simply data volume. The decisive features are session-level construct scores from small open-weight LLMs reading the two-speaker transcript, with the constructs largely derived from the experts' rating instruments: the instrument-derived battery lifts a single judge from $0.32$ to $0.41$ over generic dialogue qualities, judges from three model families ensemble to $0.51$ language-only, and a nonverbal-dyadic block adds $+0.03$ more, not separable from noise at this sample size. We also price the recording setup: one corpus lost its per-speaker audio, 16% of its diarised segments carry the wrong speaker, and repair is worth $+0.07$ there. At practically attainable corpus sizes, the expert's overall impression is carried by what is said, and by other communication programs' data more than by one's own.",
-      "pdf_url": "https://arxiv.org/pdf/2610.08055v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.08055v1",
-      "published": "2026-10-06T09:53:25Z",
-      "updated": "2026-10-06T09:53:25Z",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Multimodal Knowledge Distillation for Gastric Adenocarcinoma Classification from Whole-Slide Images",
-      "authors": [
-        "Shrihari Dumbre",
-        "Bikash Santra"
-      ],
-      "abstract": "Gastric adenocarcinoma (GA) is a leading cause of cancer-related mortality worldwide, and accurate histopathological subtype classification from whole-slide images (WSIs) is essential for effective treatment planning. While multimodal approaches that integrate pathology report text with WSIs can improve classification, existing methods often depend on computationally expensive transformer architectures and large language models. We propose a multimodal knowledge distillation (MKD) framework that combines a pretrained WSI image encoder and a clinical text encoder using Low-Rank Multimodal Fusion (LMF) to efficiently model cross-modal interactions during training. Each WSI is represented as a bag of patches paired with a slide-level diagnostic caption. The teacher model learns fused image-text representations for subtype classification, while the student model distills this knowledge to enable accurate image-only inference. We evaluate our method on the PatchGastric benchmark dataset and achieve at least 3.35% higher mean accuracy than state-of-the-art approaches, without relying on transformer-based fusion, multi-task learning, or large language models. The source code is available at https://github.com/helomelo1/MKD-LMF.",
-      "pdf_url": "https://arxiv.org/pdf/2610.07913v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.07913v1",
-      "published": "2026-10-06T07:56:54Z",
-      "updated": "2026-10-06T07:56:54Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "ApexQuant: Data-Free Elastic Quantization by Residual Re-Isotropization",
-      "authors": [
-        "Aksel Fristrup",
-        "Sumit Pandey",
-        "Ankit Kariryaa"
-      ],
-      "abstract": "We introduce ApexQuant, a calibration-free quantization method that recursively re-quantizes the residual error, serving as a refinement layer on top of existing quantizers. We establish that a fresh random rotation returns each residual to the uniform distribution on the hypersphere, which characterizes the rate of progressive error decay across successive passes. This result lets us determine, before any weight is read, how many passes a layer needs for a target weight-space error. Every prefix is itself a valid lower-rate model, so one artifact serves several precisions. We instantiate ApexQuant with three interchangeable stages, scalar, $E_8$ and trellis, and validate it on four open-weight LLMs and on Earth-observation and medical domains where in-distribution data is often unattainable as imagery arrives under restrictive licences or due to patient material under privacy constraints. Progressive re-isotropization comes within a few percent of full precision at four bits and gives the best two-bit arm we measure, in a completely data-free setting.",
-      "pdf_url": "https://arxiv.org/pdf/2610.07904v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.07904v1",
-      "published": "2026-10-06T07:49:55Z",
-      "updated": "2026-10-06T07:49:55Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Cite What You Explore: Budget-Aware LLM Reasoning over Medical KGs with Verifiable Evidence",
-      "authors": [
-        "Chen Chen",
-        "Dongjie Wang",
-        "Mei Liu",
-        "Zijun Yao"
-      ],
-      "abstract": "Post-discharge risk prediction from electronic health records (EHRs) is difficult because many dependencies that link discharge-time observations to downstream complications, such as comorbidity cascades and drug-disease interactions, are absent from the record. External medical knowledge graphs (KGs) can supply these missing dependencies, but tracing them demands three properties: KG exploration must remain cost-bounded, retrieved evidence must be differentiated by source quality, and the resulting rationale must be citable for retrospective review. Large language models (LLMs) can plan and verify over structured evidence, making them natural candidates for KG reasoning, but existing LLM-based methods do not satisfy these three properties jointly. In this paper, we propose BAR, a Budget-Aware LLM Reasoning framework over medical KGs with three contributions. First, BAR refines the raw KG into disease-specific evidence graphs whose edges carry support scores and provenance records, turning the KG into a quality-annotated reasoning space rather than a static feature source. Second, an LLM then reasons over this graph through a plan-navigate-verify loop that decomposes the question into steps, retrieves evidence under a patient-specific budget, and revises when verification fails. Third, a reasoning policy is trained with a reward that compares predictions with and without acquired evidence, combined with acquisition cost and citation-integrity terms. Across 8 diseases and 3 prediction horizons on MIMIC-III and MIMIC-IV, BAR improves AUPRC by 3.4 points over the strongest baseline, raises citation precision from 59.8% to 77.9%, and consumes only 62-65% of the budget cap.",
-      "pdf_url": "https://arxiv.org/pdf/2610.07739v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.07739v1",
-      "published": "2026-10-06T04:36:07Z",
-      "updated": "2026-10-06T04:36:07Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Unanimously Wrong: Certified Abstention from How Medical LLM Consensus Forms",
-      "authors": [
-        "Xiaoyang Wang",
-        "Tianrui Wang",
-        "Christopher C. Yang"
-      ],
-      "abstract": "In clinical practice, agreement among independent experts is treated as evidence of reliability, and multi-round consensus has become a core mechanism of agentic medical question-answering systems. When such a system must decide whether to trust its own answer, the prevailing signal is again agreement, now among the sampled answers. But agreement is a fragile proxy for correctness. A system can be unanimously wrong, returning the same incorrect answer on every sample, and on these questions agreement-based signals carry no information. The cause is that these signals read only the final state of the consensus and discard how it was reached. Agreement that was reached by resolving disagreement with evidence looks identical, at the end, to agreement that was present from the first sample because every sample shares one misconception. ProbeGuard is a certified abstention framework that bases the abstention decision on how the consensus formed. Process features trace agreement trajectories, minority persistence, and retrieval saturation. For unanimous votes, rationale semantic entropy checks whether the reasons behind the vote cohere, and an active probe retrieves counter-evidence and measures whether the consensus survives. A stratified Learn-then-Test calibration then converts these scores into a distribution-free bound on selective risk. We evaluate ProbeGuard on three medical QA benchmarks and a hard-frontier reference, with a published multi-round agentic RAG substrate, against six abstention baselines. On MedQA, 13.4% of unanimous votes are wrong, and no agreement-based signal can flag them. Process signals raise the discrimination of correct from incorrect consensus from chance to 0.696 AUROC. The certified rule answers six in ten unanimous-layer questions at an observed selective risk of 9.0%, and nine in ten once in-domain calibration data accumulate.",
-      "pdf_url": "https://arxiv.org/pdf/2610.07570v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.07570v1",
-      "published": "2026-10-06T00:59:31Z",
-      "updated": "2026-10-06T00:59:31Z",
-      "categories": [
-        "cs.AI"
       ]
     }
   ]

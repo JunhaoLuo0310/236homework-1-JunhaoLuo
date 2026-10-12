@@ -1,8 +1,45 @@
 {
-  "generated_at_utc": "2026-10-11T05:09:23.868122Z",
+  "generated_at_utc": "2026-10-12T05:23:04.962646Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "CliQ-RRG: Clinical-Knowledge Guided Disease-aware Visual-Textual Alignment for QA-Style Radiology Report Generation",
+      "authors": [
+        "Chandravardhan Singh Raghaw",
+        "Shahid Shafi Dar",
+        "Arnav Nishith Sharma",
+        "Shrey Modi",
+        "Nagendra Kumar"
+      ],
+      "abstract": "Radiology reports are essential for diagnostic reasoning and patient care, yet their manual preparation is time-consuming and cognitively demanding. Automatic radiology report generation (RRG) offers a scalable alternative, but existing models often produce lengthy, unstructured narratives that overlook diagnostic cues and multi-view information. We present Clinical-Knowledge Guided Disease-aware Visual-Textual Alignment for QA-Style Radiology Report Generation (CliQ-RRG), a unified two-stage framework for interpretable and clinically grounded reporting. In Stage 1, CliQ-RRG employs a Disease-aware Visual-Textual Alignment module that aligns image and text representations using predicted disease embeddings, reinforced by a Prior-Guided Attention Module (PrAM) to capture multi-view dependencies across current and prior scans. In Stage 2, GraphRAG-guided retrieval augments intermediate textual representations with graph-grounded clinical evidence, and a large language model restructures them into concise, interpretable question-answer (QA) pairs with diagnostic summaries. Experiments on two public chest X-ray benchmarks demonstrate that CliQ-RRG consistently outperforms prior methods across both lexical and clinical metrics, generating accurate and clinically coherent QA-style radiology reports. Code is available at: https://github.com/chandravardhan-singh-raghaw/CliQ-RRG.",
+      "pdf_url": "https://arxiv.org/pdf/2610.13059v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.13059v1",
+      "published": "2026-10-09T06:13:25Z",
+      "updated": "2026-10-09T06:13:25Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "r/ADHD: Community-Based Understandings of Time Management Challenges in Digital Environments",
+      "authors": [
+        "Shizhao Liu",
+        "Lei Cao",
+        "Celia T. Lee",
+        "Nikash Shanbhag",
+        "Renkai Ma",
+        "Kai Lukoff"
+      ],
+      "abstract": "Community accounts of ADHD can complement clinical understandings by foregrounding members' own definitions of time-management difficulties and support. We used human-led, LLM-assisted thematic analysis to examine 5,379 relevant r/ADHD posts from 2020 to 2025. Across five challenge and nine strategy themes, members described difficulties beginning intended tasks, disengaging from digital media, and sustaining support. Tools often demanded the self-regulation they were meant to support, while lost time and tool breakdown carried guilt and self-blame. Members drew on people, routines, and environments alongside digital tools, often seeking advice and recognition from peers. These accounts broaden the design problem to include the practical and emotional work of sustaining support. They motivate tools that reduce this burden and evaluations that consider recovery after distraction and emotional costs alongside task outcomes.",
+      "pdf_url": "https://arxiv.org/pdf/2610.12629v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.12629v1",
+      "published": "2026-10-08T18:47:38Z",
+      "updated": "2026-10-08T18:47:38Z",
+      "categories": [
+        "cs.HC"
+      ]
+    },
     {
       "title": "Detecting Spin in Clinical Trials with Large Language Models",
       "authors": [
@@ -264,46 +301,6 @@
       "updated": "2026-10-06T21:41:27Z",
       "categories": [
         "cs.AI"
-      ]
-    },
-    {
-      "title": "BEACON-SP: Ontology-Grounded GraphRAG Framework for Clinical Suicide Risk Assessment",
-      "authors": [
-        "Kemal Davaslioglu",
-        "Nathan Conger",
-        "Sastry Kompella",
-        "Yalin E. Sagduyu",
-        "Nathaniel D. Bastian"
-      ],
-      "abstract": "We present BEACON-SP, an ontology-grounded Graph Retrieval-Augmented Generation (GraphRAG) framework for clinician-facing decision support in behavioral health settings such as suicide prevention, where effective assessment requires integrating heterogeneous clinical, behavioral, social, and temporal evidence. BEACON-SP combines patient knowledge graphs with ontology-guided retrieval to support multi-hop reasoning across diagnoses, medications, risk and protective factors, life events, and temporal relationships. The framework is enabled by a comprehensive suicide prevention ontology that integrates the Three-Step Theory, the Integrated Motivational-Volitional Model, and the Suicide Social Determinants of Health Ontology into a unified representation of patient risk factors. We construct ontology-grounded patient knowledge graphs and evaluate BEACON-SP for clinician-facing question answering. Compared with a vector-based retrieval-augmented generation (RAG) baseline on a 1,500-query benchmark spanning 15 clinical categories and 100 patients, BEACON-SP improves completeness, clinical relevance, and evidence grounding under a corrected comparative evaluation protocol, with a small gain on factual accuracy. In paired criterion-level comparisons, GraphRAG is preferred in 76.4% of cases. These results demonstrate the potential of ontology-guided GraphRAG to provide structured, contextualized patient evidence for clinical decision support.",
-      "pdf_url": "https://arxiv.org/pdf/2610.09026v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.09026v1",
-      "published": "2026-10-06T19:23:51Z",
-      "updated": "2026-10-06T19:23:51Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Large language models are vulnerable to incidental information in clinical documentation and reasoning",
-      "authors": [
-        "Krithik Vishwanath",
-        "Brandon Ye",
-        "Anton Alyakin",
-        "John E. Markert",
-        "Aaron Hsieh",
-        "Micha\u0142 Ma\u0144kowski",
-        "Eric K. Oermann"
-      ],
-      "abstract": "Large language models (LLMs) are increasingly relied upon to support ambient documentation and clinical reasoning. Here we examine the impact of a failure mode shared between these two applications by assessing their sensitivity to information incidental to the patient encounter. In 576 patient-clinician dialogues, we found that frontier models inserted small-talk exchanges into 35% of notes, while mean quality scores changed by at most 0.20 points on five-point scales. In 3.7% of frontier notes, models misattributed the asides or used them clinically. In 57 mock recorded consultations, background speech from a separate patient encounter at -10 dB leaked into 48.2% of transcripts, with contamination detected in 5.3% of downstream notes generated by four open-weight models. We propose a dual encoding hypothesis of clinical reasoning and distraction in LLMs, with preliminary evidence that LLM components associated with disruption by incidental information also support clinical reasoning. These findings support evaluating resistance to incidental information before clinical use, with safeguards that prevent contamination while preserving clinical reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2610.08585v2",
-      "arxiv_url": "https://arxiv.org/abs/2610.08585v2",
-      "published": "2026-10-06T15:55:29Z",
-      "updated": "2026-10-07T13:16:20Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

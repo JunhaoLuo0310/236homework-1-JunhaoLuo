@@ -1,8 +1,199 @@
 {
-  "generated_at_utc": "2026-10-15T04:04:53.645460Z",
+  "generated_at_utc": "2026-10-16T04:00:55.716565Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "MindEval2: Clinically Grounded Patients and Rubrics for Evaluating Language Models in Mental Health Support",
+      "authors": [
+        "John Mendon\u00e7a",
+        "Daniel Tschernutter",
+        "Jos\u00e9 Pombal",
+        "Areti Vassilopoulos",
+        "Catarina Botelho",
+        "Ignacio Sarasua",
+        "Maya D'Eon",
+        "Nuno Guerreiro",
+        "Ricardo Rei"
+      ],
+      "abstract": "With people increasingly turning to AI chatbots for mental health support, the need to evaluate these tools is becoming more pressing. Recent benchmarks attempt to mimic a realistic setting by simulating multi-turn interactions with synthetic patients and evaluating them with an LLM-as-a-judge. However, the usefulness of these methods is limited because simulated patients can be overly forthcoming and self-reflective, and judgments typically involve opaque Likert scales with unclear practical utility. To bridge these gaps, we introduce MindEval2, an evaluation framework that consists of two components: Mental Health Quality Rubrics (MHQR), for evaluation, and MindSim, for patient simulation. For MHQR, we collaborate with PhD-level psychologists to develop a set of rubrics that break down response quality into explicit operational criteria that are more interpretable and actionable than existing evaluation taxonomies. MindSim, in turn, is an LLM harness that combines carefully-designed patient profiles with tools, enabling more varied, challenging, and realistic interactions than existing baselines. The harness also contains a memory component that is updated between each interaction, enabling MindEval2 to model the longitudinal aspect of mental health. We evaluate 18 proprietary and open-weight models on MindEval2, finding that while frontier models have largely improved on issues related to surface level quality and boundaries, guidance calibration remains the dominant failure mode across all models, accounting for most of the quality gap.",
+      "pdf_url": "https://arxiv.org/pdf/2610.22314v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.22314v1",
+      "published": "2026-10-15T17:51:01Z",
+      "updated": "2026-10-15T17:51:01Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "AI Consilium: a Benchmark of LLM Clinical Multidisciplinary Second Opinions",
+      "authors": [
+        "Alexey A. Bokov",
+        "Ivan I. Panin",
+        "Nikolay B. Nechaev",
+        "Mikhail Yu. Valkov",
+        "Valeria Yu. Chernina",
+        "Natalia Gombolevskaya",
+        "Ayyaz Hussain",
+        "Vladimir M. Agafonov",
+        "Victor A. Gombolevskiy",
+        "Aleksandr V. Nesterov",
+        "Iaroslav R. Bespalov",
+        "Ivan V. Oseledets",
+        "Dmitry V. Dylov"
+      ],
+      "abstract": "Large language models (LLMs) can generate differential diagnoses for complex cases, but a useful second opinion must also be factually grounded, clinically coherent, actionable, and safe. We developed a multidimensional benchmark using 300 diagnostically resolved NEJM--MedQA cases: 110 for physician reference ratings and Judge calibration and 190 for held-out evaluation. Eight single-model pipelines generated independent role-specific opinions and interactive-consilium reports under free-form and structured clinical-reasoning conditions. A physician-calibrated LLM Judge evaluated 3,040 final reports and the corresponding structured primary-role outputs. Model identity separated report quality more strongly than response format. Structured final reports had higher overall mean scores in seven of eight model pipelines, with their clearest advantage in management (2.740 vs. 2.436). Compared with the structured pre-consilium primary-role opinion, the complete structured synthesis had higher pooled scores across all five shared criteria, with the largest increases in problem prioritization, factual grounding, and reasoning coherence. GPT-5.6-Sol led every evaluated component and reached consensus in the fewest review rounds. These findings show that the benchmark can distinguish model capability, the contribution of multidisciplinary synthesis, criterion-specific effects of response structure, deliberation dynamics, and inference requirements within one common-case evaluation.",
+      "pdf_url": "https://arxiv.org/pdf/2610.22298v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.22298v1",
+      "published": "2026-10-15T17:46:37Z",
+      "updated": "2026-10-15T17:46:37Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Documenting Trofinetide Treatment Phenotypes in Rett Syndrome with a Dual-LLM Consensus Pipeline",
+      "authors": [
+        "Daniel Palacios",
+        "Guantong Qi",
+        "Mikael Guzman Karlsson",
+        "Shawntel K. David",
+        "Mohammed Sameeruddin",
+        "Bernhard Suter",
+        "Zhandong Liu",
+        "Davut Pehlivan",
+        "Hu Chen"
+      ],
+      "abstract": "Objective: Trofinetide, approved in 2023 as the first Rett syndrome treatment, lacks scalable real-world monitoring because chart review is labor-intensive. We developed a dual large language model (LLM) consensus pipeline to extract 18 treatment-response phenotypes, comprising 4 adverse effects, 13 Rett clinical features, and medication refusal, from clinical notes. Materials and Methods: We analyzed 26,763 notes from 108 patients with confirmed sustained trofinetide exposure at Texas Children's Hospital. The pipeline filters notes by keyword, classifies each through two LLMs requiring consensus, and aggregates a patient-by-timepoint matrix. Architecture and prompt were selected on a diarrhea development set, then frozen and applied to the other 17 phenotypes with the phenotype definition substituted, as an out-of-sample test. The reported prompt comparison scores 183 expert-labeled cells. Results: A prompt requiring diarrhea to be active and severe performed best (84.2 $\\pm$ 0.0% accuracy; F1 = 0.674), 47 percentage points above regular-expression matching ($p < 0.0001$). Expert reviewers judged six of the pipeline's calls per phenotype, three positive and three negative, and agreed with 90.2% (92/102). The 13 Rett clinical features are manifestations of the disorder itself rather than adverse effects of trofinetide. Gross and fine motor impairment, language/communication, and stereotypy were documented present in 92-100% of patients at every visit. Discussion: In-context LLM extraction captured multi-domain treatment responses. The outcome is documented presence at each visit, not a direction-of-change judgment. Conclusion: Coupling in-context LLM reasoning with a consensus architecture offers a scalable alternative to keyword and regular-expression extraction for real-world evidence, adapting to new phenotypes and medications through configuration alone.",
+      "pdf_url": "https://arxiv.org/pdf/2610.22062v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.22062v1",
+      "published": "2026-10-15T15:24:47Z",
+      "updated": "2026-10-15T15:24:47Z",
+      "categories": [
+        "q-bio.QM",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "MedPAO-VL: Interpretable and Protocol-Compliant Agent for Structured Radiology Report Generation",
+      "authors": [
+        "Shrish Shrinath Vaidya",
+        "Gowthamaan Palani",
+        "Minmini Selvam",
+        "Gokulraja Srinivasaraja",
+        "Ganapathy Krishnamurthi"
+      ],
+      "abstract": "Despite the remarkable generalization capabilities of Large Language Models, generating clinically accurate and structured radiology reports from medical images remains a significant challenge. Current end-to-end approaches function as black boxes, prone to factual hallucinations and generating ungrounded findings. This lack of reliability and failure to adhere to domain-specific structuring protocols, fundamentally limits their clinical utility. We present MedPAO-VL, a multimodal agent that shifts the paradigm from monolithic generation to explainable, iterative, protocol-compliant structured report generation. Unlike deterministic models, our plan-act-observe loop functions as a goal-oriented agent: it first perceives the Chest X-Ray through an explainable vision module designed to capture inherent diagnostic uncertainty, then iteratively refines the generated report by observing semantic discrepancies and self-correcting its generation for better alignment with visually detected clinical findings. Evaluation of our framework demonstrates that this agentic reasoning improves clinical correctness and completeness, achieving an expert-rated accuracy score of 3.5/5 and a structural score of 4.3/5. By prioritizing pathology specific explainability and iterative refinement over opaque end-to-end mapping, MedPAO-VL offers a transparent and clinically viable alternative for automated structured radiology report generation.",
+      "pdf_url": "https://arxiv.org/pdf/2610.21794v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.21794v1",
+      "published": "2026-10-15T12:46:06Z",
+      "updated": "2026-10-15T12:46:06Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Tool-Augmented Large Language Models for Reliable Medical Calculation from Patient Notes",
+      "authors": [
+        "Yang Zhong",
+        "Ling Luo",
+        "Xuanlyu Zhu",
+        "Yanhua Wang",
+        "Yuanyuan Sun",
+        "Jian Wang",
+        "Hongfei Lin"
+      ],
+      "abstract": "Medical calculators translate raw patient observations into clinically actionable values and scores. However, applying these calculators directly to free-form patient notes requires precise variable extraction combined with the exact execution of complex formulas, scoring rules, and output conventions. Relying solely on direct large language model (LLM) prompting is unreliable in this context, as rule recall, parameter extraction, arithmetic reasoning, and formatting become entangled within a single generative step. To address these limitations, we propose a tool-augmented LLM framework for reliable medical calculation from patient notes. The framework retrieves and structures calculator specifications, generates reusable executable tools, and uses a constrained extractor to map each patient note to calculator-ready inputs. The tools then perform deterministic calculation, separating clinical language understanding from rule execution and arithmetic. Evaluated on the MedCalc-Bench dataset, our method achieves 86.73% final-answer accuracy, outperforming the one-shot prompting and supervised fine tuning-only baselines by 24.0 and 17.27 percentage points. Ablation and error analyses show that these performance gains are primarily driven by rule-grounded tool synthesis and schema-constrained extraction, whereas remaining failures are concentrated in clinical-semantic extraction and benchmark-specific output contracts. By grounding calculator logic in executable tools, the proposed approach alleviates arithmetic hallucinations and improves the computational reliability of the final clinical outputs.",
+      "pdf_url": "https://arxiv.org/pdf/2610.21477v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.21477v1",
+      "published": "2026-10-15T08:18:50Z",
+      "updated": "2026-10-15T08:18:50Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Incentivizing Tool-Use Reinforcement Learning for Post-Arrival Emergency Care Prediction",
+      "authors": [
+        "Pengfei Hu",
+        "Chenwei Wu",
+        "Qiao Jin",
+        "Jun Deng",
+        "Zhiyong Lu",
+        "Liyue Shen",
+        "Yue Ning"
+      ],
+      "abstract": "Large language models (LLMs) can reason over both structured measurements and free-text records, which makes them attractive for emergency department (ED) prediction. However, most existing LLMs still fall short of conventional ML methods like trees on EHR-based prediction tasks. Our controlled analysis traces this gap to two weaknesses: LLMs do not select informative features, and they misjudge what numerical values imply for risk even when given the right features. We propose TIR-EC, a tool-integrated reinforcement learning framework that addresses both. TIR-EC exposes EHR feature groups as tools the LLM can call. It trains the LLM with rewards from a gradient-boosted tree teacher, which provides a reference set of informative tools and a graded risk target. TIR-EC also distills task-specific clinical skills into the model weights through a reverse curriculum that gradually removes the skills from the prompt during RL process. Evaluation on three clinical prediction tasks shows that our 4B agent achieves the highest macro F1 of all compared models, outperforms conventional ML baselines, and is competitive with much larger frontier LLMs. Further analysis shows that TIR-EC selects more useful evidence with fewer tool calls and combines measurements more effectively.",
+      "pdf_url": "https://arxiv.org/pdf/2610.21449v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.21449v1",
+      "published": "2026-10-15T07:53:54Z",
+      "updated": "2026-10-15T07:53:54Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Making every stage of medical device document assessment with large language models deterministic",
+      "authors": [
+        "Ryosuke Suzuki"
+      ],
+      "abstract": "To show that a medical device complies with regulation, experts judge whether documents and records meet each requirement and record the judgment for others to verify. For each assessment item that experts define, large language models could prepare a preliminary assessment: a label such as Satisfied or Not satisfied, a reason and quoted evidence. We sent fourteen commercial deployments of such models (seven models from three providers, through six routes) the same request repeatedly, with the deterministic sampling settings each accepted; every deployment returned differing assessments for at least one request, and in twelve the label changed. Reducing reasoning where the interface allows it did not reduce the variation, and prompts of retrieved passages removed it only for the smallest models. The same open-weight model was reproducible or not depending only on how it was served. A pipeline we built to be deterministic at every stage -- text extraction and optical character recognition (OCR), chunking, embedding, indexing, retrieval and inference -- returned byte-identical output at each stage across reruns, interruptions, edits, machines of one graphics processing unit (GPU) model and days, for blood glucose meter and infusion pump documents. OCR, embedding and approximate retrieval varied when their own serving was not made invariant, and outputs changed with the GPU model and with the inference engine's scheduling settings, which therefore belong in the recorded configuration. End-to-end determinism is achievable and gives a testable basis for audit and change control.",
+      "pdf_url": "https://arxiv.org/pdf/2610.21300v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.21300v1",
+      "published": "2026-10-15T05:45:20Z",
+      "updated": "2026-10-15T05:45:20Z",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "TRACER: A Multimodal Harness for Patient Care in Hospitals",
+      "authors": [
+        "Zane Durante",
+        "Paul Tang",
+        "Keshigeyan Chandrasegaran",
+        "Amit Kaushal",
+        "Shrinidhi Kowshika Lakshmikanth",
+        "Feolu Kolawole",
+        "Yu Jun Zheng",
+        "Yifan Geng",
+        "Shobhit Agarwal",
+        "Kevin Schulman",
+        "Juan Carlos Niebles",
+        "Ehsan Adeli",
+        "Arnold Milstein",
+        "Li Fei-Fei"
+      ],
+      "abstract": "Continuous video and clinical records provide complementary information for understanding how patient behavior evolves over a hospital stay. A central challenge is how to represent behavior across the entire stay while preserving access to fine-grained visual and clinical evidence. We introduce TRACER, a training-free multimodal harness that constructs minute-level action records from video and combines them with clinical records into hourly reports. The harness equips an LLM agent with tools to query this hierarchy, inspect relevant video, and retrieve clinical records. To evaluate TRACER, we construct two benchmarks. The first contains 397 annotated one-minute clips spanning 15 atomic actions; the second poses 144 clinician-informed multiple-choice questions, grounded in 264 hours of video and clinical records from two ICU patients. TRACER achieves up to 84.8% accuracy for action detection and 61.0% QA accuracy versus 49.3% for the strongest baseline using the same backbone. Across 280 patients spanning approximately 60,000 camera-hours, TRACER identifies significantly less purposeful activity in patients with a positive delirium assessment during their stay than in those without (p < 0.0001). Our results show that combining continuous video with clinical records can support understanding of patient behavior over time and across patient cohorts without training on protected health data.",
+      "pdf_url": "https://arxiv.org/pdf/2610.21266v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.21266v1",
+      "published": "2026-10-15T05:00:47Z",
+      "updated": "2026-10-15T05:00:47Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Amortizing Sequential Experimental Design in Reasoning LLMs",
+      "authors": [
+        "Anita Kriz",
+        "Antonin Berthon",
+        "Nicol\u00e1s Astorga",
+        "Mihaela van der Schaar"
+      ],
+      "abstract": "Despite their extensive pretraining knowledge and strong reasoning capabilities, large language models (LLMs) struggle to adaptively gather information in experimental design tasks. We study how to amortize sequential Bayesian experimental design (BED) into an LLM by explicitly training the reasoning that guides action selection using information-gain rewards. Our approach specifies the experimental generative model independently of the LLM's own beliefs, allowing us to optimize expected information gain under a model of our choosing. We investigate the design choices for amortization, including alternative generative-model constructions, reward estimation, hypothesis-space specification, multi-step objectives, and computational costs relative to training- and inference-time BED baselines. On Twenty Questions, the resulting policies improve information acquisition and task performance, outperform inference- and training-time BED baselines at substantially lower computational cost, and generalize to unseen categories. We further demonstrate positive transfer from Twenty Questions training to Medi-Q, a real-world clinical dialogue benchmark. These results suggest that information gathering can be learned as a generalizable reasoning skill in LLMs.",
+      "pdf_url": "https://arxiv.org/pdf/2610.20832v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.20832v1",
+      "published": "2026-10-14T19:15:58Z",
+      "updated": "2026-10-14T19:15:58Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
     {
       "title": "Taking the PULSE of Medical Reasoning: Step-Level Retrieval Timing for Knowledge-Grounded Inference",
       "authors": [
@@ -107,193 +298,6 @@
       "arxiv_url": "https://arxiv.org/abs/2610.18605v1",
       "published": "2026-10-13T15:57:56Z",
       "updated": "2026-10-13T15:57:56Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "How Reliable Are System-One Decisions in Medicine? A Comparative Study of Jev, Jev-like Models, and LLMs",
-      "authors": [
-        "Yanrui Du",
-        "Danyang Zhao",
-        "Sendong Zhao",
-        "Wenhao Li",
-        "Yibo Gao",
-        "Haochun Wang",
-        "Zhuoer Xu",
-        "Shiwen Cui",
-        "Bing Qin"
-      ],
-      "abstract": "Jev has attracted considerable attention for its rapid, generalizable decision-making, yet its medical reliability remains under explored. To address this gap, our study compares various types of system-one decision models across 15 medical datasets comprising 8,742 instances under a unified protocol. Beyond accuracy, we assess decision stability and the ability to recognize unreliable decisions. Our results show that Jev rivals leading models on primarily text-driven tasks but is less effective on numerically driven tasks, revealing a distinct capability boundary. Under question-format variations, Jev demonstrates strong robustness, achieving the lowest decision reversal rate and relatively small accuracy fluctuations. Among evaluated open-source alternatives, only StartLux exhibits comparable robustness. But these strengths do not extend to reliable abstention awareness: most evaluated models show limitations in both recognizing missing correct answers and using optional abstention. Moreover, we find that Jev's probability-based answer selection can be improved by changing how decisions are scored: normalizing option-wise binary scores yields higher retained accuracy than choice scoring. Taken together, our findings provide early guidance for improving and applying decision models in medicine.",
-      "pdf_url": "https://arxiv.org/pdf/2610.18529v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.18529v1",
-      "published": "2026-10-13T15:15:46Z",
-      "updated": "2026-10-13T15:15:46Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "How Safe Is ChatGPT Health Advice? Evidence from Real User Conversations in Four Global South Countries",
-      "authors": [
-        "Shreyasi Roy Chowdhury",
-        "Kiran Garimella"
-      ],
-      "abstract": "People increasingly bring their health questions to ChatGPT, yet safety evaluations of LLM health advice rest almost entirely on clinician-authored vignettes, synthetic prompts, or simulated user profiles. The gap is widest for the Global South, where concerns about demographic bias and unsafe recommendations are well documented but have never been tested on real usage. We present, to our knowledge, the first demographically grounded safety evaluation of real-world health conversations with ChatGPT. From a consent-based data-donation corpus of 202,590 conversations from 1,252 users in India, Nigeria, Brazil, and Pakistan (December 2022 to February 2026), each linked to self-reported age and gender, we identify 15,555 health conversations, classify their health intent using an LLM classifier adapted from an established taxonomy, and score response safety under both a context-blind and a user-context-aware rubric. Roughly one in five health conversations receives a high-risk rating. Risk concentrates in symptom and condition queries and recurs through identifiable failure modes: unsafe medication or dosage guidance, harmful self-diagnosis, missing safety warnings, encouraging over-reliance on the model, and failure to refer users to professionals. Supplying the user's own accumulated context raises the high-risk share by 13-17 percentage points, and about one in four conversations rated safe in isolation turns out to be unsafe for the specific person asking. Safety evaluations built on synthetic cases are likely to miss these harms.",
-      "pdf_url": "https://arxiv.org/pdf/2610.18465v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.18465v1",
-      "published": "2026-10-13T14:30:12Z",
-      "updated": "2026-10-13T14:30:12Z",
-      "categories": [
-        "cs.CY",
-        "cs.CL",
-        "cs.HC"
-      ]
-    },
-    {
-      "title": "Prompt or Policy? Optimizing Physician Slate Presentations with LLM User Simulators",
-      "authors": [
-        "Andrei Niculae",
-        "Adrian Cosma",
-        "Emilian Radoi"
-      ],
-      "abstract": "Choosing the right physician is a key challenge for patients seeking medical care. Physician recommendation systems identify relevant doctors, but patients still find it difficult to compare their profiles to make a decision. We formulate slate presentation optimization: given a patient's medical case and a fixed, ranked list of physicians, we generate short, case-specific summaries that make doctors easier to compare, while remaining grounded in the information in their profiles. To optimize physician presentations without relying on real patient interactions, we develop an offline framework that uses persona-conditioned LLMs to simulate patient choices. We generate patient personas from attributes extracted from each medical case and evaluate presentations for factual accuracy, relevance, naturalness and simulated patient choice. We also use a second LLM judge, unseen during optimization, to assess simulator-specific overfitting. We compare automatic prompt-level optimization with GEPA, parameter-level optimization with GRPO, and their combination across two model sizes. GRPO substantially outperforms GEPA in satisfying the full set of constraints, and its gains in simulated conversion persist under the unseen judge. GEPA alone brings smaller improvements, but using its optimized prompt to initialize GRPO speeds up training and achieves the highest simulated conversion. These results show that prompt-level and parameter-level optimization play complementary roles in improving how physician recommendations are presented.",
-      "pdf_url": "https://arxiv.org/pdf/2610.18309v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.18309v1",
-      "published": "2026-10-13T12:52:47Z",
-      "updated": "2026-10-13T12:52:47Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "PAINT: A Framework for Multilingual Pain Representation from Medical Licensing Exams to Real-World Clinical Texts",
-      "authors": [
-        "Boya Zhang",
-        "Yuanchao Ma",
-        "Jiageng Wu",
-        "Krittaphas Chaisutyakorn",
-        "Rodrigo Gameiro",
-        "Ahram Han",
-        "Chien-Yu Huang",
-        "Nikhil Jaiswal",
-        "Marianna Leite",
-        "Miriam Mora-Mau",
-        "Jaime Pineda-Moreno",
-        "Siena Placino",
-        "Ryohei Yamamoto",
-        "Yugang Jia",
-        "Jie Yang",
-        "Leo Anthony Celi",
-        "Douglas Teodoro"
-      ],
-      "abstract": "Pain is one of the most common and clinically important symptoms, reflecting disease onset, progression, and treatment response. However, pain is difficult to accurately capture and interpret from medical text, as its expression varies across languages, documentation types, and patient demographics, and is often embedded in terminology, negation, temporality, and contextual descriptions. Existing pain-related studies remain largely monolingual or limited to narrow clinical settings. In this study, we introduce PAINT, a multilingual framework for studying pain representation across medical exams and real-world clinical texts. PAINT includes nine pain-focused dataset partitions spanning English, Spanish, Portuguese, and Japanese, with clinician annotations in all four languages. We curated a structured schema covering pain relevance, pain presence, anatomical location, pain descriptors, and demographic information. To capture multilingual pain representations, we leverage large language models (LLMs) and adopt an ensemble strategy to improve performance. Ten clinicians across four languages validate the labels: the ensemble reaches macro-F1 of 0.91-1.00 on pain relevance and pain presence and 92-100% accuracy on demographics, with inter-annotator $\u03ba$ of 0.82-1.00. We release the WorldMedQA-Pain ensemble labels, the extraction pipeline, validation scripts, and clinician annotation sheets for publicly licensed corpora, providing a foundation for pain-centered clinical NLP and for studying pain documentation across languages and healthcare contexts.",
-      "pdf_url": "https://arxiv.org/pdf/2610.18269v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.18269v1",
-      "published": "2026-10-13T12:28:53Z",
-      "updated": "2026-10-13T12:28:53Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "inLoRA-MINT: Internal Representations for Auditing Training Data in Domain-adapted LLMs",
-      "authors": [
-        "Gonzalo Mancera",
-        "Julian Fierrez",
-        "Aythami Morales",
-        "Ruben Tolosana",
-        "Daniel DeAlcala",
-        "Francisco Jurado"
-      ],
-      "abstract": "This work investigates the application of the Membership Inference Test (MINT) to large language models (LLMs) fine-tuned with LoRA, aiming to determine whether specific samples were used during training and address concerns about data privacy, leakage, and transparency. Building on our previous LoRA-MINT framework, which relies exclusively on perplexity under a strict black-box setting, we propose an approach based on intermediate model representations, including activations and parameter-dependent signals. These representations enable a MINT classifier to distinguish training from non-training samples without requiring full access to model parameters.\n  We evaluated the method on four LLMs (Qwen, Phi-4, DeepSeek-V3, and LLaMA 3.2-3B) fine-tuned on three datasets covering medical, mathematical, and academic reasoning tasks. Results show consistent performance across architectures and domains, achieving scores between 95% and 98%, with robustness to variations in model configurations and data distributions. The proposed approach enables efficient auditing of sensitive training data and supports data provenance and compliance with emerging privacy and AI governance regulations. Although our experiments focus on LoRA-based fine-tuning, the methodology can be extended to other LLM adaptation techniques and, more broadly, to other AI models.",
-      "pdf_url": "https://arxiv.org/pdf/2610.18051v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.18051v1",
-      "published": "2026-10-13T09:40:58Z",
-      "updated": "2026-10-13T09:40:58Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Capacity over TFLOPS: Memory-Centric Deployment of Large Clinical Language Models on Consumer CPUs",
-      "authors": [
-        "Eli Yune",
-        "Umer Majeed",
-        "Mahesh Balan"
-      ],
-      "abstract": "The dominant barrier to running large clinical language models at the point of care is not arithmetic throughput but graphics memory: consumer GPUs cap at 4-16 GB, while the working set of a 27-billion-parameter model in 4-bit precision is 17-25 GB. We argue that the edge node should be treated as capacity-enabled (system RAM) rather than compute-limited (GPU VRAM), and we test this on commodity hardware. Using an INT4 build of a 27B open model as an architecture-faithful stand-in for a 27B medical model, we measure the memory footprint, inference latency, energy, and federated communication cost of a fully CPU-based pipeline driven by synthetic Fast Healthcare Interoperability Resources (FHIR) prompts. On two independent consumer machines (a desktop-class machine with 67 GB of RAM and a 6 GB GPU, and a mobile workstation with 34 GB of RAM and a 4 GB GPU) the model loads entirely into system RAM (37% and 60% utilization, respectively) while both GPUs are out-of-memory before the first step. Inference runs at overnight-batch speed (0.6-2.4 tokens/s for the 27B model), and federated fine-tuning would transmit only a 22.6 MB low-rank adapter, a 99.96% reduction over full weights. The capacity result is independent of CPU microarchitecture, RAM size, operating system, and GPU. We further identify an open, CPU- and NPU-optimized inference runtime as the natural production path for this approach, indicating a privacy-preserving and broadly deployable route for on-premises clinical AI. All data is synthetic; this is a research artifact and not a medical device.",
-      "pdf_url": "https://arxiv.org/pdf/2610.17551v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.17551v1",
-      "published": "2026-10-13T01:22:36Z",
-      "updated": "2026-10-13T01:22:36Z",
-      "categories": [
-        "cs.DC"
-      ]
-    },
-    {
-      "title": "Reinforcement Learning In Partially Verifiable Environments for Colon Cancer Treatment Planning",
-      "authors": [
-        "Li-Ching Chen",
-        "Andr\u00e9s Franco Valiente",
-        "Yuta Ishiyama",
-        "Zachary R. Chalmers",
-        "William Chen",
-        "Kelsey Natsuhara",
-        "Taema Brinjikji",
-        "Madhumita Sushil",
-        "Travis Zack",
-        "Julian C. Hong"
-      ],
-      "abstract": "Clinical decision-making is a sequential process of information collection, clinical inference, and forecasting under partial observability, often without a uniquely correct treatment decision. Large language models (LLMs) have demonstrated strong medical question-answering capabilities but extending these advances to clinical reasoning remains challenging because many clinical tasks are only partially verifiable. Recent clinical reinforcement learning (RL) work has therefore largely focused on diagnostic endpoints, where correctness can be more directly verified. Oncology treatment decision making is a particularly challenging instance of this problem that extends beyond medical question-answering in which multiple decision trajectories can be clinically defensible for the same partially observed patient state. We formulate oncology treatment planning as an interactive RL problem under partial observability and construct patient-specific, process-aware rewards from decision processes observed in real world clinical records. The agent must learn to sequentially acquire information from a structured patient representation before committing to a first-line treatment recommendation, and is evaluated on information gathering, treatment selection, and reasoning alignment. Using GRPO and GDPO to optimize Llama-3.1-8B-Instruct within this environment, RL substantially improves the base policy beyond frontier model capabilities. The GDPO-trained policy increases Mean@3 scalar clinical reward by $79.60\\%$ over base Llama and exceeds GPT-5.2 by $18.82\\%$ under the same interactive environment, while reducing query count during training. Overall, our results show that patient-specific, partially verifiable rewards can provide an effective learning signal for interactive clinical RL when both the patient state and the underlying clinical decision process are only partially observed.",
-      "pdf_url": "https://arxiv.org/pdf/2610.17426v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.17426v1",
-      "published": "2026-10-12T21:39:21Z",
-      "updated": "2026-10-12T21:39:21Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Learning to Detect Shifts in Unstructured Data Streams via Monitoring-by-Betting",
-      "authors": [
-        "Siyu Zhou",
-        "Jialin Ouyang",
-        "Fan Xia",
-        "Adarsh Subbaswamy",
-        "Drew Prinster",
-        "Suchi Saria",
-        "Augusto Garcia-Agundez",
-        "Sarah Pollet",
-        "Jinoos Yazdany",
-        "Patrick Vossler",
-        "Jean Feng"
-      ],
-      "abstract": "Continuous monitoring of generative AI systems requires detecting distribution shifts in the unstructured data they ingest and generate. Existing monitoring methods typically control false alarms by requiring the discrepancy measure used to detect shifts to be *pre-specified*. However, for unstructured data, pre-specification creates a sensitivity--breadth trade-off: a narrowly defined measure is sensitive to the anticipated shift but may miss unexpected changes, whereas a broadly defined measure may detect a wider range of shifts but with reduced sensitivity. Although adaptively hypothesizing the shift direction can overcome this limitation, such data-dependent adaptation generally invalidates conventional false-alarm guarantees. We reconcile adaptivity with statistical validity through testing-by-betting, reframing sequential changepoint detection as a betting game in which the bettor continually updates its hypothesized shift direction, or witness function, as new observations arrive. We introduce *asymptotic e-detectors*, which approximate the pre-change distribution using a calibration set of size $m$, and prove that they asymptotically control the average run length to a false alarm as $m$ increases. Empirically, calibration sets as small as $m=30$ provide effective control. We then develop adaptive monitoring strategies ranging from black-box bettors that learn from embeddings to interpretable bettors based on LLM-proposed concepts. Across three real-world datasets, including data from a clinical AI scribe deployment, adaptive monitors detect shifts faster than fixed monitors at the same false-alarm level. Further, when the true shifts are sparse and interpretable, LLM-concept monitors provide the fastest and most interpretable detection, while also guiding root-cause diagnosis for complex shifts.",
-      "pdf_url": "https://arxiv.org/pdf/2610.17399v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.17399v1",
-      "published": "2026-10-12T21:05:26Z",
-      "updated": "2026-10-12T21:05:26Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ML"
-      ]
-    },
-    {
-      "title": "UMCR: Universal Medical Concept Recognition through Guideline Integration and Agentic Linking",
-      "authors": [
-        "Fabrice Lamarche",
-        "Amal Zouaq"
-      ],
-      "abstract": "Medical Concept Recognition is the task of extracting and grounding spans in medical text to entries in a standard ontology. Current methods are generally developed towards a single ontology and source text type (clinical notes, drug labels, etc.) The central challenge is therefore to build methods that adapt to any target ontology without requiring ontology-specific retraining. More recent approaches like REAL and AutoPCR make direct use of Large Language Models and can theoretically adapt to any ontology choice but suffer from a lack of generalization. We propose UMCR, a pipeline that allows extraction and linking to any target ontology using any source text variety, utilizing direct guideline integration and an agentic linking module. We evaluate our method on the recent MedPath benchmark, covering a wide variety of medical text types and vocabularies, and show that our method achieves strong performance across these tasks. This ability unlocks interoperability in the healthcare domain, allowing for extraction and alignment between different medical standards. Our method also reduces dependence on parametric LLM memory, thanks to improved interaction with the target ontology compared to other proposed approaches.",
-      "pdf_url": "https://arxiv.org/pdf/2610.17363v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.17363v1",
-      "published": "2026-10-12T20:19:56Z",
-      "updated": "2026-10-12T20:19:56Z",
       "categories": [
         "cs.CL"
       ]

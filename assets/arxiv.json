@@ -1,8 +1,133 @@
 {
-  "generated_at_utc": "2026-10-18T03:58:25.867860Z",
+  "generated_at_utc": "2026-10-19T04:07:06.339792Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery",
+      "authors": [
+        "Shicheng Liu",
+        "Krista Opsahl-Ong",
+        "Andrew Drozdov",
+        "Julian Killingback",
+        "Arnav Singhvi",
+        "Ronak Pradeep",
+        "Michael Bendersky",
+        "James C. Dickerson",
+        "Monica S. Lam"
+      ],
+      "abstract": "Reproducible and analytically robust research findings are essential to scientific progress, but evaluating these properties typically requires costly manual effort. We investigate whether LLM agents can help automate reproduction and robustness analysis, using a medical case study grounded in the Surveillance, Epidemiology, and End Results (SEER) database, a widely used U.S. cancer registry underlying tens of thousands of published studies. First, we introduce SEER-Repro, a benchmark of 20 published SEER-based papers together with the data and resources required to reproduce their findings. Second, we create an AI agent that successfully reproduces 77.4% of 2,190 atomic claims, while providing executable baselines for further analysis. Third, we develop an agentic analysis pipeline to test the robustness of the medical findings by identifying analytical choices underlying each finding, proposing defensible alternatives, and rerunning the analysis to determine whether those choices affect the conclusion. Across published papers in SEER-Repro, our pipeline identifies potentially consequential analytical choices in 9.5% of fully reproduced findings and flags them for expert review. These results show how LLM agents can support scientific review by reproducing findings, systematically testing their robustness, and directing expert attention toward potentially consequential analytical choices.",
+      "pdf_url": "https://arxiv.org/pdf/2610.23845v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.23845v1",
+      "published": "2026-10-16T17:57:55Z",
+      "updated": "2026-10-16T17:57:55Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Recognizing Study Lineage Is Not Enough: Over-Crediting Same-Trial Evidence in LLM-Based Medical Verification",
+      "authors": [
+        "Mukand Krishna",
+        "Anoushka Harit",
+        "Chenghao Xiao",
+        "Zhongtian Sun"
+      ],
+      "abstract": "Publication count is not study count. A model can identify shared trial lineage correctly in a direct task yet over-credit a second publication from the same trial when aggregating evidence. We evaluate this behavior in medical LLM verification using 14 source-audited clinical families and five model conditions. The families span provenance, clinical applicability, result direction, and composition; the provenance families provide the direct lineage tests. Recognition and aggregation are separate stateless calls, and repeated calls assess within-input stability. Across all three original provenance families, GPT-5.5 identifies the independent update in 10/10 recognition calls per family but over-credits the same-trial report in 5/5 separate aggregation calls per family. Selected Qwen3-4B and Ministral-3-8B conditions show the same cross-task contrast. A study-grouping instruction reduces GPT-5.5 over-credit from 4/5 to 0/5 in each later pure-provenance family. Other model conditions show mixed behavior, and rejected outputs limit several comparisons. The results identify a behavioral gap between elicited lineage recognition and evidence aggregation. The code and data artifacts are available at https://anonymous.4open.science/r/study-lineage-review-artifact.",
+      "pdf_url": "https://arxiv.org/pdf/2610.23721v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.23721v1",
+      "published": "2026-10-16T16:42:10Z",
+      "updated": "2026-10-16T16:42:10Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "On the possibilities and limitations of LLM-based multi-agent systems for multi-criteria decision-making in healthcare operations management",
+      "authors": [
+        "Marco Boresta",
+        "Tommaso Giovannelli",
+        "Sepehr Namirad",
+        "Giulia Riccardi"
+      ],
+      "abstract": "Multi-criteria models for healthcare operations need weights that express how stakeholders trade off patient waiting time, provider workload, and operating cost, but these weights are difficult to quantify. Teams of large language model (LLM) agents, each prompted to represent a stakeholder, have been used to supply them. We propose a framework for assessing the reliability of LLM-generated preferences as inputs to multi-objective optimization and quantifying how their uncertainty affects decisions. We study explicit preferences by asking agents to rate the importance of the criteria in an outpatient appointment scheduling problem, and implicit preferences by inferring trade-offs from the agents' pairwise choices between emergency department configurations. The computational experiments show that the explicit preferences respond to the clinic's operating conditions and differ across roles, but deliberation among the agents can erase these differences, whereas simple averaging preserves them. The pairwise choices used to reveal the agents' implicit preferences depend largely on which option is presented first, and we find limited evidence that a statistical model using contextual information alongside presentation order predicts the agents' choices on new comparison pairs better than a model using presentation order alone. We then formulate robust weighted-sum optimization models to account for preference uncertainty. In most cases, these models select different schedules or configurations from those obtained using average preference weights. These results indicate that LLM-generated preferences need an audit of this kind before they are used as optimization weights in healthcare decision support.",
+      "pdf_url": "https://arxiv.org/pdf/2610.23673v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.23673v1",
+      "published": "2026-10-16T16:05:15Z",
+      "updated": "2026-10-16T16:05:15Z",
+      "categories": [
+        "math.OC",
+        "cs.AI",
+        "cs.MA"
+      ]
+    },
+    {
+      "title": "Enhancing RAG-based Medical VQA with Gated Multimodal Representations",
+      "authors": [
+        "Daniela Jimenez-Pano",
+        "Hugo Jair Escalante",
+        "Delia Iraz\u00fa Hern\u00e1ndez-Far\u00edas"
+      ],
+      "abstract": "Medical Vision-Language Models (Med-LVLMs) have shown strong performance in Medical Visual Question Answering (MVQA), yet they may still produce factually inconsistent responses. Retrieval-Augmented Generation (RAG) can mitigate this issue by incorporating external clinical evidence; however, retrieval is often guided by a single modality, potentially overlooking the joint semantics of medical images and clinical questions. We introduce a multimodal RAG framework that learns a joint query representation through a Gated Multimodal Unit, enabling evidence retrieval to leverage information from both modalities while keeping the underlying Med-LVLM frozen. We evaluate the proposed approach on benchmark datasets. Results show that the multimodal query representation consistently outperforms a reference Med-LVLM and remains competitive with state-of-the-art methods. Our findings demonstrate the potential of multimodal query representations for more effective evidence retrieval in Medical VQA.",
+      "pdf_url": "https://arxiv.org/pdf/2610.23588v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.23588v1",
+      "published": "2026-10-16T15:07:33Z",
+      "updated": "2026-10-16T15:07:33Z",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Self-Reflective Chain-of-Thought (SRCoT): Evidence-Based Text Generation via a Closed-Loop Retrieve--Reflect--Revise Pipeline on Edge LLMs",
+      "authors": [
+        "Fabian Broszio",
+        "Michael Hoffmann",
+        "Adrian Paschke"
+      ],
+      "abstract": "Large language models (LLMs) can generate fluent outputs that lack source support or conflict with local operational constraints. We introduce Self-Reflective Chain-of-Thought (SRCoT), a modular architecture that organizes generation as a closed Retrieve--Reflect--Revise loop. SRCoT separates environment state, persistent knowledge, accumulated experience, and short-term memory into provenance-labeled stores. BM25 retrieval supplies local context; subsequent passes expose intermediate drafts, missing-information markers, follow-up queries, and optional claim--evidence mappings. These artifacts inform retrieval, revision, clarification, or abstention decisions. We examine the architecture through qualitative, trace-based case studies in two fully synthetic settings: emergency medical services and Munich-Sim, an emergency-operations simulation. Local prototype runs on an Apple M4-family laptop with 128 GB memory illustrate source-labeled documentation, explicit gap marking, and structured dispatch-style outputs. The traces also reveal provenance-assignment errors, incomplete evidence coverage, and unsafe assumptions that remain possible despite prompting constraints. These cases demonstrate report-level inspectability and local execution, not comparative superiority, hallucination reduction, clinical validity, or operational safety. The architecture separates retrieval and control from the model interface, but behavior across different models remains to be evaluated. SRCoT is a research proof of concept requiring human review, with its principal contribution lying in an inspectable control procedure rather than a new model.",
+      "pdf_url": "https://arxiv.org/pdf/2610.23311v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.23311v1",
+      "published": "2026-10-16T11:14:52Z",
+      "updated": "2026-10-16T11:14:52Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Trajectory-Guided Steering: Mitigating Spurious Feature Bias in Clinical Classification",
+      "authors": [
+        "Fardin Ahsan Sakib",
+        "Ziwei Zhu",
+        "Ozlem Uzuner"
+      ],
+      "abstract": "Large language models rely on spurious features in clinical classification: swapping a single gender token in clinical notes alters gender-irrelevant diagnoses in up to 53.5% of cases. Existing inference-time corrections either need counterfactual data built around the specific spurious feature or behave unpredictably. We observe that how a model's preference between answers evolves across layers, its prediction trajectory, indicates for each document whether a correction is likely to help. We propose Trajectory-Guided Steering (TGS), which decides from the trajectory alone whether to correct each prediction and in which direction, with no counterfactual data and no knowledge of the spurious feature. On 16 clinical classification tasks from i2b2, TGS fixes 17.7% of errors while breaking only 1.3% of correct predictions and stays net-positive across all tested hyperparameter settings; all baselines are net-negative or near zero. The same corrections reduce reliance on the spurious feature: on the most affected diseases, gender-swap inconsistency falls sharply (hypertension 53.5% -> 38.0%, diabetes 35.1% -> 21.5%). Applying the correction to every document instead raises breaks on correct positive predictions from 0.1% to 6.4%, so per-document selection is essential. TGS also transfers to three model families and three other clinical and biomedical datasets.",
+      "pdf_url": "https://arxiv.org/pdf/2610.22618v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.22618v1",
+      "published": "2026-10-15T20:22:04Z",
+      "updated": "2026-10-15T20:22:04Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "The Model Knows Better: Defending Medical Multi-Agent Systems Against Prompt Injection",
+      "authors": [
+        "Fardin Ahsan Sakib",
+        "Ziwei Zhu",
+        "Ozlem Uzuner"
+      ],
+      "abstract": "Medical multi-agent systems, in which LLM agents discuss a case, are increasingly studied for clinical decision support. Prompt injection, text that an attacker adds to a model's input, can manipulate LLMs into wrong decisions. How it affects these systems, and how to protect them, remains unclear. Across two systems, two model families and three benchmarks, a single injected passage succeeds in up to 61% of cases, and collaboration does not consistently protect against it. Existing defenses help only partly: they miss injections that look like ordinary clinical text. Yet when asked to check the injected text against the patient's findings, a model that followed the injection usually rejects it. We therefore propose a training-free defense that verifies the clinical judgments behind the system's decision. Following clinical practice, it separates the patient's findings from clinical judgments, such as diagnoses, recommendations and instructions, and checks each judgment against the findings alone, so the decision rests only on supported judgments. Our defense outperforms all baselines on every benchmark, lowering attack success on MedQA to 4-7% while maintaining accuracy on cases without an attack, and remains effective with a medical model and against defense-aware and adaptive attacks.",
+      "pdf_url": "https://arxiv.org/pdf/2610.22594v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.22594v1",
+      "published": "2026-10-15T19:43:57Z",
+      "updated": "2026-10-15T19:43:57Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
     {
       "title": "MindEval2: Clinically Grounded Patients and Rubrics for Evaluating Language Models in Mental Health Support",
       "authors": [
@@ -174,132 +299,6 @@
       "categories": [
         "cs.CV",
         "cs.AI"
-      ]
-    },
-    {
-      "title": "Amortizing Sequential Experimental Design in Reasoning LLMs",
-      "authors": [
-        "Anita Kriz",
-        "Antonin Berthon",
-        "Nicol\u00e1s Astorga",
-        "Mihaela van der Schaar"
-      ],
-      "abstract": "Despite their extensive pretraining knowledge and strong reasoning capabilities, large language models (LLMs) struggle to adaptively gather information in experimental design tasks. We study how to amortize sequential Bayesian experimental design (BED) into an LLM by explicitly training the reasoning that guides action selection using information-gain rewards. Our approach specifies the experimental generative model independently of the LLM's own beliefs, allowing us to optimize expected information gain under a model of our choosing. We investigate the design choices for amortization, including alternative generative-model constructions, reward estimation, hypothesis-space specification, multi-step objectives, and computational costs relative to training- and inference-time BED baselines. On Twenty Questions, the resulting policies improve information acquisition and task performance, outperform inference- and training-time BED baselines at substantially lower computational cost, and generalize to unseen categories. We further demonstrate positive transfer from Twenty Questions training to Medi-Q, a real-world clinical dialogue benchmark. These results suggest that information gathering can be learned as a generalizable reasoning skill in LLMs.",
-      "pdf_url": "https://arxiv.org/pdf/2610.20832v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.20832v1",
-      "published": "2026-10-14T19:15:58Z",
-      "updated": "2026-10-14T19:15:58Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Taking the PULSE of Medical Reasoning: Step-Level Retrieval Timing for Knowledge-Grounded Inference",
-      "authors": [
-        "Danyang Zhao",
-        "Sendong Zhao",
-        "Yanrui Du",
-        "Haochun Wang",
-        "Ming Ma",
-        "Wenhao Li",
-        "Jingbo Wang",
-        "Jiatong Liu",
-        "Bing Qin"
-      ],
-      "abstract": "Reliable medical reasoning requires LLMs to dynamically access external biomedical evidence to improve factual trustworthiness and reasoning accuracy. However, indiscriminate retrieval can introduce noise and latency, raising a critical retrieval-timing problem: at each reasoning step, the system must decide whether the model's internal knowledge is reliable or external evidence is needed. We propose PUlSE, a lightweight probing method that uses the model's internal representations as intrinsic signals for step-level retrieval control. Our posterior trajectory analysis reveals that erroneous steps exhibit substantially higher inter-layer volatility than correct ones, suggesting unstable internal knowledge. Based on this finding, PUlSE trains a compact probe on inter-layer geometric features to detect factual errors upon step completion, and uses it as an adaptive trigger for retrieval and step regeneration. Across four medical benchmarks, PUlSE-timed retrieval matches exhaustive per-step retrieval in accuracy while reducing retrieval calls by 72%, and can transfer to an unseen legal domain, indicating potential domain-agnostic generality. Overall, our study provides an initial step toward shifting retrieval-trigger design from surface-level confidence estimates to internal activation dynamics for adaptive access.",
-      "pdf_url": "https://arxiv.org/pdf/2610.20292v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.20292v1",
-      "published": "2026-10-14T14:47:03Z",
-      "updated": "2026-10-14T14:47:03Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "HEM-Med: A Hierarchical Agentic Memory Framework for Safe Multi-Center Medication Recommendation",
-      "authors": [
-        "Min Xiao",
-        "Jin Li",
-        "Shoujin Wang",
-        "Yeguang Zhen",
-        "Yishuo Li",
-        "Wenpeng Lu"
-      ],
-      "abstract": "Medication recommendation (MR) is critical for clinical decision support. While existing MR methods are mostly designed for single-center learning, where only one independent hospital is involved, multi-center MR with hospitals of different scales has become increasingly demanding in practice. In multi center settings, abundant data from large medical centers can improve recommendation performance for low-resource centers. Despite a few preliminary attempts on this task, two critical gaps remain. Gap 1: Existing multi-center methods fail to disentangle transferable cross-hospital clinical experience from hospital-specific prescribing patterns, limiting clinical feasibility and physician acceptance. Gap 2: They commonly overlook multi label safety constraints of MR, including drug-drug interaction risks and local formulary feasibility, which are essential for safe real-world deployment. To address these gaps, we propose HEM-Med, a novel hierarchical agentic memory framework for multi-center MR. To address Gap 1, we design a disentangled hierarchical memory module that builds patient-level medication context attribution records and disentangles them into cross hospital experience memory and hospital-specific residual memory. To address Gap 2, we introduce a safety-aware medication set generation module, which integrates dual-level experience retrieval with safety-aware set decoding to produce clinically relevant, safer, and locally adaptive medication recommendations. Experiments on a real-world multi-center eICU dataset show that HEM-Med outperforms representative transfer learning, LLM-based, and MR baselines in terms of both recommendation accuracy and safety.",
-      "pdf_url": "https://arxiv.org/pdf/2610.20191v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.20191v1",
-      "published": "2026-10-14T13:39:34Z",
-      "updated": "2026-10-14T13:39:34Z",
-      "categories": [
-        "cs.AI",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "PRISMATIC : Prescription Risk Inspection System for Multi-Agent Treatment Interaction in Clinical Decision-Making",
-      "authors": [
-        "Ziyang Ling",
-        "Shuyu Lu",
-        "Ziyi Chen"
-      ],
-      "abstract": "Medical prescribing errors for multimorbid patients, who require complex drug regimens, are a major patient safety concern. These errors often stem from fragmented decision-making across medical specialties, a critical coordination failure that leads to adverse drug events and rehospitalizations. To address this coordination challenge, we introduce PRISMATIC, a multi-agent architecture where specialized agents, each representing a workflow role, collaboratively generate and refine treatment plans. Operating on a blackboard architecture, the system first structures patient information from clinical notes, then iteratively develops safe, rational, and interpretable drug regimens. The agents' collaboration is governed by two novel adaptive coordination mechanisms: (1) Dynamic Self-Updating Weight Adjustment (DSWA), a long-term mechanism that adjusts the influence weights of agents based on historical case outcomes, enabling the system to adapt and trust more reliable specialists over time. (2) Discrepancy Feedback Precise Calibration (DFPC), a short-term mechanism where agents provide iterative feedback to resolve disagreements and eliminate prescription conflicts for the current patient. Experiments on patient records from the MIMIC-IV database show that PRISMATIC significantly reduces drug conflicts, improves prescription coverage, and enhances treatment consistency compared to strong LLM baselines. Our work demonstrates that structuring clinical co-treatment as a multi-agent coordination problem offers a promising path toward safer and more coherent multidisease management.",
-      "pdf_url": "https://arxiv.org/pdf/2610.19762v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.19762v1",
-      "published": "2026-10-14T08:17:05Z",
-      "updated": "2026-10-14T08:17:05Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Learning When to Trust Medical Knowledge: Regression-Safe Routing for Clinical Reasoning",
-      "authors": [
-        "Hui Zhang",
-        "Yujia Zeng",
-        "Yuhao Xin"
-      ],
-      "abstract": "Clinical reasoning LLMs need external medical knowledge, but retrieved evidence and reasoning chains can be outdated, poisoned, or hallucinated. Harmful knowledge can cause regression: changing a correct answer into an incorrect one. We construct a medical knowledge-poisoning benchmark covering retrieved evidence and reasoning chains, with seven attack families filtered by a three-judge \"subtle-but-wrong\" vote and paired clean exams that separate poisoning effects from question difficulty. No fixed knowledge-use strategy is robust across these settings: strong RAG methods trade robustness to poisoned evidence against accuracy when evidence is useful. We formulate knowledge use as per-instance routing and introduce Med-TrustRouter, a lightweight controller that keeps the solver frozen. From leakage-free runtime signals, it estimates each action's expected correctness gain and uncertainty, preserving the base answer unless another action is confidently better. Across seven medical reasoning settings, Med-TrustRouter achieves 78.9 macro and 69.2 worst-case accuracy, matching the strongest competitor on macro accuracy while substantially improving the worst-case floor. Its gains transfer across solvers and evidence judges, unlike a hand-coded router using the same signals. Similar performance across linear, tree, and neural action-value heads suggests that the benefit comes from routing rather than estimator complexity. These results support learning when to trust external knowledge for robust clinical reasoning.",
-      "pdf_url": "https://arxiv.org/pdf/2610.19663v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.19663v1",
-      "published": "2026-10-14T06:39:13Z",
-      "updated": "2026-10-14T06:39:13Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Beyond ICD Codes: Semantic IDs for Generative Medical Coding",
-      "authors": [
-        "Yihang Cheng",
-        "Qian Zhang",
-        "Yonghui",
-        "Huang",
-        "Baoshuo Kan",
-        "Junyi Shen"
-      ],
-      "abstract": "Generative approaches to automatic International Classification of Diseases (ICD) coding use large language models (LLMs) to predict ICD codes from clinical documents. However, original ICD code strings are not ideal generation targets because the ICD hierarchy does not always reflect clinical relationships, and LLMs struggle to interpret and generate these codes. We introduce SemICD, a framework that trains LLMs to generate Semantic IDs (SIDs) instead. SemICD constructs SIDs by hierarchically clustering embeddings of textual code profiles, allowing semantically related codes to share prefixes while each complete SID uniquely identifies one ICD code. To align the SID tokens with clinical semantics, we employ two auxiliary tasks for bidirectional generation between textual code profiles and SIDs. Experiments on MIMIC-III and MIMIC-IV with four LLMs show that SemICD outperforms direct code generation, improving Micro-F1 by 1.34-8.00 points. Our code is available at https://github.com/youwillbethebest/SemICD.",
-      "pdf_url": "https://arxiv.org/pdf/2610.19301v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.19301v1",
-      "published": "2026-10-13T23:20:07Z",
-      "updated": "2026-10-13T23:20:07Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "From Hindsight to Foresight: Dissecting Clinical Evidence Acquisition in Large Language Models",
-      "authors": [
-        "Ziyang Ling"
-      ],
-      "abstract": "Large language models (LLMs) often diagnose full sight, static clinical cases well yet struggle in foresight, dynamic diagnosis. Prior work has improved this limitation by quantifying the information models acquire and by developing stronger follow-up strategies to improve diagnostic accuracy. In contrast, we introduce a distinctive hindsight to systematically dissect why LLMs fail to acquire diagnostically critical evidence, tracing the failure from evidence identification, utilization and downstream diagnostic updating through not only diagnostic accuracy, but also evidence coverage, trajectory dynamics, and elicited probability and information entropy. Starting experiments from the breakdown at the level of capabilities, to the diagnosis of the pre-event state before the evidence arrives, and to the post-event state transition after the evidence arrives, our research has revealed the profound limitations and internal causes existing in the dynamic diagnostic process. At the same time, we have also conducted sufficient verification and generalization experiments to prove that these limitations are widespread. Together, these findings shift the central challenge from whether LLMs possess relevant clinical knowledge to whether they can identify, acquire, and effectively use the right evidence under clinical diagnosis and conduct a more detailed mechanism analysis to identify the exact location of the capability gap.",
-      "pdf_url": "https://arxiv.org/pdf/2610.18605v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.18605v1",
-      "published": "2026-10-13T15:57:56Z",
-      "updated": "2026-10-13T15:57:56Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

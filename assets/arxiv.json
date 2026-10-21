@@ -1,8 +1,136 @@
 {
-  "generated_at_utc": "2026-10-20T04:19:53.540041Z",
+  "generated_at_utc": "2026-10-21T04:08:54.288376Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "VGL-stGen: Learning a shared multimodal model for lung histology and spatial transcriptomics",
+      "authors": [
+        "Haenara Shin",
+        "Dongjoo Lee",
+        "Sungwoo Bae",
+        "Kwon Joong Na",
+        "Daeseung Lee",
+        "Hongyoon Choi"
+      ],
+      "abstract": "VGL-stGen is a multimodal large language model adapted from a pretrained medical vision-language model using paired lung H&E and spatial transcriptomics with single-cell references. Training integrates image-expression and expression-cell-type pairs, and gene-conditioned pseudo-labels transfer transcriptomic cell-type supervision to histology images. One deployed checkpoint supports thirteen evaluated tasks spanning tissue and cell-type classification, gene prediction and conditional expression completion from combinations of histology, cell identity and observed gene expression. Task-specific decoding produces categorical labels, gene lists and structured expression levels. For conditional completion, fixing queried gene identities and predicting their levels autoregressively improves structured prediction. Controlled adaptation shows that restricting supervision to requested expression-level tokens can further improve image-conditioned completion. Image-permutation experiments indicate that correctly paired histology adds information beyond observed expression. External classification relies partly on computational references with shared annotation lineage, and some H&E sources were exposed during cancer training or model development. Within these conditions, VGL-stGen demonstrates how a medical vision-language backbone can learn from spatial transcriptomics and histology to connect tissue morphology and molecular states through shared generative modeling.",
+      "pdf_url": "https://arxiv.org/pdf/2610.28266v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.28266v1",
+      "published": "2026-10-20T14:22:47Z",
+      "updated": "2026-10-20T14:22:47Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "q-bio.QM"
+      ]
+    },
+    {
+      "title": "Africa-Papers: A 10-Billion-Token Multi-Domain Academic Corpus for African Foundation Language Models",
+      "authors": [
+        "Mich-Seth Owusu"
+      ],
+      "abstract": "Large Language Models (LLMs) depend fundamentally on the diversity, depth, and factual rigor of their pre-training corpora. However, contemporary foundational pre-training datasets (such as The Pile, S2ORC, and Dolma) exhibit a severe structural omission: African scientific, medical, legal, and agricultural scholarship constitutes less than 0.5% of global pre-training tokens. Consequently, state-of-the-art models suffer from systematic failure modes when reasoning about tropical epidemiology, localized smallholder agro-ecologies, regional economic governance, and indigenous linguistic structures. To resolve this representation deficit and advance African intellectual sovereignty in artificial intelligence, we introduce Africa-Papers, the largest curated multi-domain Pan-African academic pre-training corpus to date. Comprising over 844,807 full-text papers spanning 10.15 billion tokens across 879 Parquet shards, Africa-Papers unifies four primary scientific streams: (1) continental peer-reviewed journals indexed in DOAJ across 31 African nations, (2) the CGIAR CGSpace agricultural repository, (3) African-authored and African-focused STEM/AI preprints on arXiv, and (4) open-access international publications by scholars affiliated with African institutions indexed via OpenAlex. The entire corpus is processed into layout-aware, clean Markdown preserving section hierarchies, mathematical equations, and tabular data, accompanied by exact BPE token counts and a standardized 8-domain taxonomy. We release Africa-Papers openly on the Hugging Face Hub under the AfriSpeech organization to accelerate continual pre-training and domain evaluation for foundation models globally.",
+      "pdf_url": "https://arxiv.org/pdf/2610.28173v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.28173v1",
+      "published": "2026-10-20T13:14:58Z",
+      "updated": "2026-10-20T13:14:58Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Contextual Candour: Role-Aware Graduated Disclosure for LLMs over Mixed-Sensitivity Contexts",
+      "authors": [
+        "Devansh Srivastav",
+        "David Pape",
+        "Samira Abedini",
+        "Lea Sch\u00f6nherr"
+      ],
+      "abstract": "LLMs increasingly operate over mixed-sensitivity contexts, where they must reason over information ranging from public to confidential while disclosing only what the user is authorised to receive. Existing approaches enforce access control as a binary decision: either fully answering or refusing, without regulating how much or what kind of information is revealed if access is granted, leading to over-refusal or unintended leakage. We introduce graduated disclosure, an access-control formulation in which the level of detail and sensitivity in a model's response is calibrated to the user's authorisation rather than treated as a grant-or-deny decision. We model graduated disclosure as a disclosure-aware generation problem and propose a reward-based optimisation framework that shapes responses toward level-appropriate abstractions while penalising unauthorised factual leakage, including paraphrases and approximations. We evaluate our approach on enterprise and clinical benchmarks and compare it with prompt-based, gating, and supervised baselines. Experiments show that our method substantially reduces information leakage while preserving correctness and utility. These results suggest that disclosure control must be integrated into the generation process itself to enable secure yet useful LLM deployments.",
+      "pdf_url": "https://arxiv.org/pdf/2610.28067v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.28067v1",
+      "published": "2026-10-20T11:50:25Z",
+      "updated": "2026-10-20T11:50:25Z",
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Corpus Quality Improves, Retrieval Utility Does Not: An Ablation of Preprocessing and Refinement in a Speech-to-QA Pipeline",
+      "authors": [
+        "Wonsup Shin",
+        "Jingu Kim"
+      ],
+      "abstract": "Practitioners building training corpora with a pipeline of language models keep a preprocessing or refinement (post-process) stage when switching it on raises the corpus quality. We ablate a production pipeline that turns conference speech into question-answer pairs. The preprocessing stage rewrites the transcript, and the refinement stage filters the generated pairs. Switching each on and off gives four corpora from the same 40 Korean medical and finance sessions. On the corpus itself, quality rises as the stages switch on. Four LLM judges and six human domain experts rank the four corpora the same way, and the fully refined corpus leads by +0.18 and +0.22 on a 1-5 scale. We then ask whether that gain carries downstream. We supply each corpus to six models at inference and measure retrieval accuracy. The ranking does not hold. Enabling the transcript rewrite lowers retrieval accuracy by 0.061, the only stage effect that survives correction for multiple comparisons. That stage also reads the whole session, so it almost doubles the cost of one. With both stages on, accuracy does not change. An equivalence test we declared in advance confirms this. The corpus itself is clearly valuable. It lifts retrieval accuracy from 0.231 to 0.748 in every model and domain we test. More than a third of its pairs carry knowledge that neither of two frontier models produces on its own. On our data, the null does not come from weak corpora. A rising score on a rubric of this kind did not predict what the corpus holds for a model.",
+      "pdf_url": "https://arxiv.org/pdf/2610.27652v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.27652v1",
+      "published": "2026-10-20T05:11:32Z",
+      "updated": "2026-10-20T05:11:32Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "EviDial: When Correct Depression Predictions Lack Evidence",
+      "authors": [
+        "Junjie Xu",
+        "Jin Zhu",
+        "Yuzhe Yang",
+        "Luhan Wang",
+        "Xingjiao Wu",
+        "Daoguo Dong",
+        "Jing Yang",
+        "Wenxin Wu",
+        "Liang He"
+      ],
+      "abstract": "Depression dialogue benchmarks commonly assess models by comparing predicted symptom labels with clinical scale scores. However, a prediction may agree with a benchmark label even when the dialogue lacks enough evidence to justify it. We introduce EviDial, a benchmark that distinguishes label agreement from evidence-grounded assessment. EviDial comprises 382 depression dialogues from three sources and 2,744 participant-symptom cells, each classified as having absent, partial, conflicting, or sufficient evidence. Because evidence sufficiency lacks a directly observable gold standard, we derive calibrated evidence references from multiple judgments using generalizability theory, many-facet Rasch measurement, and random-effects latent class analysis. Our audit reveals that 82.8% of participant-symptom cells lack sufficient textual evidence for the corresponding symptom assessment, with substantial variation across sources. Across model families and prompting strategies, 69.2%-96.9% of predictions judged correct by benchmark labels are nonetheless unsupported by sufficient dialogue evidence. Further analyses show that strong agreement among LLM evaluators need not reflect independent evidence judgments, underscoring the need to calibrate automated reference panels. These findings demonstrate that label-based evaluation can overestimate evidence-grounded performance by conflating agreement with clinical labels and support in the observed dialogue. EviDial provides a measurement layer for separating these constructs and auditing LLM-based depression assessment more faithfully.",
+      "pdf_url": "https://arxiv.org/pdf/2610.27541v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.27541v1",
+      "published": "2026-10-20T02:56:09Z",
+      "updated": "2026-10-20T02:56:09Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Conversational AI for Perceived Cognitive Decline Screening in Older Adults",
+      "authors": [
+        "Nikita Gautam",
+        "Moana Sargent",
+        "Kaitlyn Sievers",
+        "Ashley Sylvara",
+        "Doina Caragea",
+        "Heather Bailey",
+        "Tianjun Sun"
+      ],
+      "abstract": "Early detection of cognitive decline in older adults remains challenging due to the resource demands of standard neuropsychological assessments. Chatbot-based Intelligent Cognitive Assistants (ICAs) provide a scalable alternative by eliciting open-ended responses rich in linguistic, semantic, and autobiographical cues. This study evaluates whether ICA question-answer (Q/A) interviews with older adults can screen for participant-reported perceived cognitive decline and related cognitive, functional, and personality outcomes. We compare traditional machine learning, frozen transformer embeddings, fine-tuned transformers, and large language model (LLM) reasoning strategies across Global Q/A, Single Q/A confidence averaging, and Aggregated Q/A pipelines. Among text-based methods, Gemini 3.1 Flash Lite (1-example-per-class, Aggregated Q/A) achieved the highest held-out test performance (0.742 accuracy, 0.739 balanced accuracy, 0.728 macro-F1). Given the small test set (n = 31), these results are interpreted descriptively. Frozen clinical transformer embeddings with a random forest head led non-LLM text methods, whereas fine-tuned models showed limited generalization. Models utilizing structured questionnaires, cognitive tasks, and personality traits outperformed text-based models in classification. Continuous regression analyses revealed modest predictive signals for AD8, FAQ, IQCODE, neuroticism, and conscientiousness. Exploratory prompt-level analyses identified both direct symptom-related and indirect autobiographical questions with strong test metrics, though sample sizes varied across prompts. These findings indicate that ICA chatbot interviews capture meaningful signals of perceived cognitive decline, supporting scalable screening research. Larger, clinically diverse cohorts with validated clinical outcomes are needed for clinical translation.",
+      "pdf_url": "https://arxiv.org/pdf/2610.27344v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.27344v1",
+      "published": "2026-10-19T22:21:05Z",
+      "updated": "2026-10-19T22:21:05Z",
+      "categories": [
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "Does Multi-Agent Collaboration Reduce Hallucination in Clinical Tasks?",
+      "authors": [
+        "Won Seok Jang",
+        "Harry Bhaskar Joshi",
+        "Hong Yu"
+      ],
+      "abstract": "Multi-agent LLM systems improve performance on clinical tasks, and that improvement is often read as evidence of a more trustworthy system. However, the two are not the same claim. A clinician acts on the stated reasoning and not only on the conclusion, so whether collaboration reduces hallucination, and what decides when it does, has to be measured in the reasoning too. Yet most evaluations score only the final answer. We evaluate four systems (a single-LLM baseline and three multi-agent topologies) across four models and three clinical tasks, scoring hallucination, under a factuality and faithfulness taxonomy, inside the rationale each system generates and reporting it alongside the task metric. We report that collaboration buys task performance but not lower hallucination as a rule, and no topology is reliably better than another. The effect differs by model: of the $36$ model--system--task comparisons, $12$ are large enough to resolve --- four decreases and eight increases, with no model on both sides. What sets the level, and the direction of any change, is the model rather than the topology or the number of agents. A self-correction experiment is consistent with this: shown its own flagged errors, every model except Llama-3.2-3B-Instruct reduces hallucination; the one model for which collaboration lowers hallucination gains the most, and Llama-3.2-3B-Instruct, the model whose hallucination it amplifies most, does not reduce its hallucination at all. We find that collaboration redistributes what its models can already do; it does not supply what they cannot.",
+      "pdf_url": "https://arxiv.org/pdf/2610.27027v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.27027v1",
+      "published": "2026-10-19T15:08:17Z",
+      "updated": "2026-10-19T15:08:17Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
     {
       "title": "LeakBench: Auditing Reward Hacking through Prediction-Time Leakage in Clinical Modeling Agents",
       "authors": [
@@ -149,149 +277,6 @@
       "published": "2026-10-18T10:26:14Z",
       "updated": "2026-10-18T10:26:14Z",
       "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "ClinSDT: LLM-Encoded Clinical Semantic Guidance for Sepsis Treatment via Decision Transformer",
-      "authors": [
-        "Yanyan Wu",
-        "Guanyu Zhu",
-        "Changbin Zhao",
-        "Jin Zhang",
-        "Dexu Yu",
-        "Tianmin Sun",
-        "Jining Luan",
-        "Chunxiao Li",
-        "Hanwen Du",
-        "Youhua Li"
-      ],
-      "abstract": "Offline sepsis treatment aims to learn treatment policies from retrospective ICU trajectories. Decision Transformer-based methods provide a natural sequence modeling framework for this task, but they mainly rely on raw physiological states and historical clinician actions. Such raw trajectory tokens may not explicitly capture clinical semantics that clinicians use in practice, such as patient severity, recent treatment response, and current risk priorities. To address this limitation, we propose ClinSDT, an LLM-assisted Decision Transformer framework for offline sepsis treatment. ClinSDT uses a frozen LLM as a semantic bridge rather than a treatment decision maker. It constructs three clinical semantic views from ICU trajectories, namely Profile, Context, and Advisory, and inserts their encoded representations as independent tokens into a Decision Transformer policy. To support policy refinement and rollout, ClinSDT further trains a Treatment-Response Forecaster to estimate the next physiological state, SAPS-II change, and predictive uncertainty from state-action inputs. In the second training stage, the forecaster screens local counterfactual treatment candidates, and only low-uncertainty candidates with lower predicted SAPS-II increase are distilled into the policy after semantic regeneration. During inference, ClinSDT performs closed-loop treatment rollout by refreshing semantic inputs from the currently available patient state. Experiments on MIMIC-III and MIMIC-IV show that ClinSDT achieves consistent relative improvements over representative imitation learning, offline reinforcement learning, and Decision Transformer baselines under the same rollout protocol. Code and data are available at https://github.com/KAG778/ClinSDT.",
-      "pdf_url": "https://arxiv.org/pdf/2610.25121v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.25121v1",
-      "published": "2026-10-18T08:57:28Z",
-      "updated": "2026-10-18T08:57:28Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CasePlay: Self-Play Reinforcement Learning from Case Reports for Medical Reasoning",
-      "authors": [
-        "Hao Wang",
-        "Zihan Wang",
-        "Kai Wu",
-        "Jian Yao",
-        "Yiwen Ye",
-        "Yongcan Luo",
-        "Dapeng Wu",
-        "Jiale Chen",
-        "Haihua Yang"
-      ],
-      "abstract": "Reinforcement learning (RL) is a promising way to improve the clinical reasoning abilities of large language models (LLMs), but current pipelines often rely on expert-labeled questions or costly synthetic-data generation. Meanwhile, the medical literature offers a wealth of high-quality unlabeled documents, including clinical case reports that trace the full clinical course from initial presentation to final treatment decisions. We study whether document-grounded self-play can convert these reports into effective RL training signals. We identify two challenges that limit existing self-play methods in this setting: knowledge-point fixation}, where the proposer repeatedly asks about a narrow set of salient clues in a source report, and difficulty-quality mismatch, where appropriately difficult questions may still be poorly formed or shallow, limiting their value for reasoner training. To address these challenges, we propose CasePlay, a self-play framework with two key components: (a) a Knowledge-Conditioned Proposer, which anchors question generation to case-specific knowledge points so that questions draw on a broader range of evidence from the source report; and (b) a Rubric-Judge Reasoner, which augments answer-accuracy feedback with rubric-based quality feedback on clue integration, reasoning depth, and option quality, guiding the proposer toward reasoning-intensive questions that better support reasoner training. Extensive experiments across seven medically related benchmarks demonstrate that CasePlay outperforms existing self-play baselines and improves the SFT warm-start model by 3.1 points on average, highlighted by a 6.3-point gain on LiveClin. This approach offers an effective path toward continually improving medical reasoning ability through self-play RL.",
-      "pdf_url": "https://arxiv.org/pdf/2610.24952v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.24952v1",
-      "published": "2026-10-18T02:06:35Z",
-      "updated": "2026-10-18T02:06:35Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Medical Fine-Tuning Reshapes, Not Reduces, Patient-Facing AI Risk: A Rubric-Based, LLM-Judge Evaluation Framework",
-      "authors": [
-        "Savan Doshi"
-      ],
-      "abstract": "Patient-facing medical question answering with large language models (LLMs) is moving from research demonstrations to production deployments, yet evaluation remains anchored on factual correctness. Factuality is necessary but not sufficient: a response can be factually grounded and still issue a directive that, if acted on, would harm the patient. We introduce a risk-sensitive evaluation framework that scores responses by the presence and severity of six categories of risk-bearing language (treatment directives, contraindications, dosage expressions, urgency-triage cues, high-alert medication mentions, and overconfident assertions), anchored on published clinical harm taxonomies. Severity is classified by a three-judge LLM ensemble. We apply this framework to six 7-9B instruction-tuned models, three general (Mistral-7B, Phi-3.5-mini, Llama-3.1-8B) and three medically adapted (BioMistral-7B, OpenBioLLM-Llama3-8B, Med42-Llama3-8B), on 200 real patient questions from the K-QA benchmark. Two findings emerge. First, ensemble risk-bearing language is statistically independent of factual hallucination rate (pooled Spearman $\u03c1= -0.065$, $n = 300$, 95% CI $[-0.18, +0.05]$; distance correlation $= 0.10$, independence test $p = 0.24$). Second, medical fine-tuning does not reduce aggregate risk but reshapes it: continued-pretraining adaptations (BioMistral, OpenBioLLM) consistently suppress high-alert medication mentions while amplifying overconfident assertions, whereas clinical instruction-tuning (Med42) suppresses dosing only, without amplifying overconfidence. Per-category Krippendorff $\u03b1$ is fair to good for the four linguistically anchored categories (0.53-0.71) and low for the two clinical-judgment-dependent categories (0.19, 0.31), indicating where automatic safety evaluation is and is not yet reliable. We release the rubric, judge prompts, and evaluation code.",
-      "pdf_url": "https://arxiv.org/pdf/2610.24807v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.24807v1",
-      "published": "2026-10-17T18:24:54Z",
-      "updated": "2026-10-17T18:24:54Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Trust the Edge, Doubt the Arrow: Auditing Validation Signals for Text-Mined Clinical Causal Knowledge Graphs",
-      "authors": [
-        "Su Lan",
-        "Shicheng Zhou",
-        "Yiqi Wang",
-        "Yanming Zhu",
-        "Xuefei Yin",
-        "Alan Wee-Chung Liew"
-      ],
-      "abstract": "Clinical causal retrieval-augmented generation systems increasingly use knowledge graphs (KGs) mined from notes, yet extracted assertions remain candidates that require audit for patient-level EHR support and direction. We construct a directed candidate graph from 328,839 MIMIC-IV discharge summaries using LLM extraction and UMLS normalization, and evaluate three signals against SemMedDB: within-admission co-occurrence lift, cross-admission diagnosis-coding temporal precedence, and literature corroboration. Lift filters unsupported co-mentions and provides useful EHR support, but not causal proof. Coding order is a weak direction signal: among the 686 candidates where it commits, it reaches 54.2% agreement with SemMedDB, below the extractor's 69.4% on the same subset. Literature corroboration supplies independent direction evidence but covers only 30.4% of candidate relations. A MIMIC-III replication yields the same pattern: extractor direction remains stable (70.5%), whereas coding-order direction is near chance (50.9%). Thus, text-mined clinical causal candidate KGs are best treated as EHR-supported but direction-uncertain. In a leakage-controlled causal QA benchmark, lift-only retrieval achieves 35.7% accuracy; conservative causal demotion achieves 37.2% while reducing evidence-unsupported answers from 17.3% to 6.1% at fixed retrieval recall. We release code, aggregate summaries, and scripts to regenerate restricted outputs.",
-      "pdf_url": "https://arxiv.org/pdf/2610.24390v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.24390v1",
-      "published": "2026-10-17T02:46:57Z",
-      "updated": "2026-10-17T02:46:57Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Screening LLM Judges Without Ground Truth: A Preliminary Evaluation of an AI Dental Hygiene Coach",
-      "authors": [
-        "William DeShong",
-        "Barath Kannan",
-        "Auberon Palma",
-        "Brenda Bradshaw",
-        "James F. Leathrum,",
-        "Yuzhong Shen"
-      ],
-      "abstract": "Evaluating a fine-tuned coaching model with expert graders is slow and expensive, and an LLM judge cannot be trusted without ground truth. We present a staged pipeline that screens candidate LLM judges and student models before expert review, using explicit decision rules at each stage: judge output audit, similarity with hosted judges, bias checks, and decision robustness. We demonstrate it on an AI dental hygiene coach. The case study uses synthetic, clinically unvalidated training and reference data to demonstrate the operation of the pipeline, rather than to establish the clinical performance of the resulting models. Two fine-tuned small language models (Granite-4.1-8B and Qwen3-8B), each trained at three data sizes, were scored on seven metrics by five judges (three local, two hosted). Two local judges, Qwen3.8-27B and Gemma-4-31B-it, were not distinguishable from the agreement between the hosted judges on six of seven metrics by rank correlation, and Qwen3.8-27B was the most similar to the hosted judges overall. No judge met our criterion for favoring its own model family or training-data source. The student comparison did not separate the two models on any metric under the pipeline's rule, so the choice of Granite-4.1-8B, which led in 29 of 35 judge-by-metric cells, is a lean that depends partly on truncated Qwen3-8B outputs. The pipeline also surfaced problems that raw scores hid, including the truncated outputs and hallucination flags from one hosted judge that no other judge corroborated. No dental hygiene expert has graded these responses, so the findings are preliminary and the pipeline's final stage, anchoring to expert judgement, is proposed but not performed.",
-      "pdf_url": "https://arxiv.org/pdf/2610.24335v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.24335v1",
-      "published": "2026-10-17T00:02:02Z",
-      "updated": "2026-10-17T00:02:02Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Pronouncing Hard Words: Phoneme Adaptation of a Pretrained Conversational Text to Speech Model",
-      "authors": [
-        "Yashish M. Siriwardena",
-        "Dinesh K. Gnanasekaran",
-        "Tanmay Laud",
-        "Shinji Watanabe",
-        "Subhabrata Mukherjee",
-        "Shanil Puri"
-      ],
-      "abstract": "Voice agents built as cascaded automatic speech recognition (ASR)->large language model (LLM)-> text-to-speech (TTS) pipelines increasingly rely on conversational TTS: streaming, context conditioned models that adapt delivery to dialogue history. Such models are natural and expressive but offer little explicit control over how rare, trust-critical drug names are pronounced, because these entities are too infrequent, and their vocabulary too fast-growing, to be covered by any amount of pre-, mid-, or post-training. We retrofit phoneme controllability onto a pretrained conversational TTS model without any pre/mid-training, using an ARPAbet vocabulary exten-sion, continued phoneme-augmented supervised fine-tuning (SFT), and a training-free inference-time acoustic-biasing step. On a 7,500 clip clinical drug-pronunciation evaluation, our model raises strict Gemini-judged correctness from 54.6% (no phoneme augmentation) to 90.7%, outperforming every conversational and stateless TTS baseline on the automatic metric. Because no training stage sees a drug name, the entire evaluation is out-of-domain, so the gains reflect learned pronunciation rather than memorization. In a blinded, randomized human study, adult listeners judge 84% of our clips correct, versus 82% for the strongest baseline, with overlapping confidence intervals on a stratified subset. Across all 250 matched clips, Gemini agrees with the human majority on 84.8% of binary labels (k{appa}=0.57).",
-      "pdf_url": "https://arxiv.org/pdf/2610.24164v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.24164v1",
-      "published": "2026-10-16T19:41:23Z",
-      "updated": "2026-10-16T19:41:23Z",
-      "categories": [
-        "cs.CL",
-        "eess.AS"
-      ]
-    },
-    {
-      "title": "Continual Test-Time Learning with Evolution Strategies",
-      "authors": [
-        "Guangya Hao",
-        "Yiting Duan",
-        "Longyan Tan",
-        "Yunbo Long",
-        "Hao Wu",
-        "Ge Zheng",
-        "Alexandra Brintrup",
-        "Zhuokai Zhao"
-      ],
-      "abstract": "Large language models increasingly operate in open-ended environments, where they are expected to continually adapt to evolving tasks and distributions, often without access to external supervision. Existing continual learning approaches rely on external supervision, such as labeled data, demonstrations, or reward signals, which can be costly or unavailable in practice. Test-time adaptation removes this dependence by learning from self-generated supervision, but existing methods derive that supervision from the single policy being updated, so once the policy drifts, its own learning signal drifts with it, leading to policy collapse, degraded reasoning, and catastrophic forgetting. In this paper, we propose \\textbf{Evolution Strategy Reinforcement Learning (ESRL)}, a continual test-time learning framework that draws its self-generated supervision from a population of policies instead of the single policy being trained. ESRL perturbs an anchor policy in parameter space to form a population of nearby policies, samples one trajectory from each, and aggregates their answers into label-free group-relative learning signals for the central student. The anchor is held fixed within each block and refreshed from the student at block boundaries, so the population stays centered on a stable yet current policy and continues to supply diverse and reliable supervision as the student moves. In single-task test-time adaptation across mathematical reasoning, general knowledge, and medical domains, ESRL improves average accuracy by up to 31.7% relative to the base model and 16.6% relative to the strongest test-time adaptation baseline. Notably, ESRL substantially reduces catastrophic forgetting and achieves the strongest final performance in continual learning.",
-      "pdf_url": "https://arxiv.org/pdf/2610.24137v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.24137v1",
-      "published": "2026-10-16T19:07:34Z",
-      "updated": "2026-10-16T19:07:34Z",
-      "categories": [
-        "cs.LG",
         "cs.CL"
       ]
     }

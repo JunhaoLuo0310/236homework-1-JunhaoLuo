@@ -1,8 +1,170 @@
 {
-  "generated_at_utc": "2026-10-25T04:06:52.843306Z",
+  "generated_at_utc": "2026-10-26T04:10:50.225470Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "When Should I Trust This? Designing and Evaluating Factuality Indicators for LLM-based Chatbots",
+      "authors": [
+        "Greta Warren",
+        "Jessica Heal",
+        "Sila Eser",
+        "Denise M. Leto",
+        "Christine M. Lehane",
+        "Isabelle Augenstein"
+      ],
+      "abstract": "Generative AI systems increasingly mediate how people seek information, yet communicating AI factuality to laypeople remains challenging. Through a mixed-methods investigation involving interviews (N=8), a survey (N=1,000), and an experiment (N=5,151), we examine how people evaluate AI-generated information for gardening, mathematical, and medical queries, and how factuality indicators (confidence and sources) shape perceptions. Our interviews and survey show people selectively verify AI responses using external and AI-provided evidence, moderated by contextual factors. Although confidence-indicators affected trust and accuracy perceptions, people hold diverse, ambiguous interpretations of AI confidence. Sources were viewed as crucial, yet users raised concerns about source reliability and verification effort. Our experiment showed that confidence and source-based indicators influenced initial perceptions, but effects disappeared once participants learned the response's correctness. Medical queries elicited skepticism regardless of indicator. Findings motivate helping users interpret model confidence and integrating source information into the interface to support calibrated trust in AI-supported information-seeking.",
+      "pdf_url": "https://arxiv.org/pdf/2610.32883v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.32883v1",
+      "published": "2026-10-23T16:49:14Z",
+      "updated": "2026-10-23T16:49:14Z",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "From archive to resource: bringing legacy data back to life at scale with large language models",
+      "authors": [
+        "C. H. Vieira-Vieira",
+        "I. Schneider Chernov",
+        "A. Serra",
+        "M. Correa Marrero",
+        "P. L. Bhavani Mohan",
+        "G. Duchateau-Nguyen",
+        "T. Y. Doktorova",
+        "A. Kreuchwig"
+      ],
+      "abstract": "Pharmaceutical companies maintain vast archives of legacy preclinical study reports that contain study-context details, such as fasting, anesthesia, and laboratory instrumentation, that are rarely captured in structured data formats, yet they can correlate with clinical pathology parameters values and limit the reuse of historical data. This work demonstrates practical, scalable solutions to recover such descriptors from heterogeneous report texts using large language model (LLM)-based extraction pipelines developed independently by two industry teams. The pipelines identify and normalize metadata fields and return verbatim evidence with page and section reference, hasting human verification and iterative refinement. Evaluation of over 400 documents against expert-curated reference values showed high agreement across a broad set of metadata fields. Performance was strongest for consistently reported items and lower for descriptors subject to linguistic or report structure variability. Extraction time has shrunk from 25 minutes in the manual benchmark to 1.6 minutes. As a concrete biological demonstration, we show that fasting status extracted from report text was associated with species- and analyte-specific shifts in clinical chemistry parameters, illustrating how recovered metadata can improve selection of historical controls. Key strengths of the approach are scalability, traceability, and the ability to recover information missing from current industry standards. Main limitations are dependence on source-report quality and initial expert effort to define and refine schemas. These results establish how LLMs can convert heterogeneous, unstructured legacy reports into evidence-grounded, reusable and structured metadata, leading to better experimental comparability, and thus enabling reliable data pooling or informed virtual control selection.",
+      "pdf_url": "https://arxiv.org/pdf/2610.32616v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.32616v1",
+      "published": "2026-10-23T13:34:54Z",
+      "updated": "2026-10-23T13:34:54Z",
+      "categories": [
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "ALLMTS: Automated LLM-based Medical Triage System",
+      "authors": [
+        "Micha\u0142 Remigiusz Janiszewski",
+        "Artur Stopa",
+        "\u0141ukasz Lenkiewicz",
+        "Wojciech Achtelik",
+        "Bartosz Gonczarek"
+      ],
+      "abstract": "Telephone triage is a safety critical task: from a brief intake note, a nurse must decide whether a caller needs an ambulance, an emergency department, an appointment, or self care at home. Queried directly, large language models (LLMs) are unreliable: they over-escalate routine cases and cannot justify their recommendations against an auditable clinical standard. We present the Automated LLM-based Medical Triage System (ALLMTS), which grounds every disposition in the same commercially maintained telehealth guidelines nurses use. Rather than asking an LLM to triage, ALLMTS makes it execute the guideline: it selects the appropriate guideline and evaluates its triage assessment questions. The disposition follows deterministically from the first positive answer, using the same traversal rule a nurse follows. We evaluate ALLMTS on 566 synthetic, expert-validated scenarios spanning 14 dispositions and designed to test specific guideline questions. ALLMTS achieves 0.95 accuracy, compared with 0.47 for a raw-LLM baseline. On a curated 50-scenario subset released as an open benchmark, ALLMTS reaches 0.98 accuracy, on par with the 0.944 correct disposition rate that a five nurse expert panel recorded on those same scenarios. Critically, on that subset the baselines have over-triage rates of up to 0.50 (0.44 on the full dataset), whereas ALLMTS reduces the over-triage rate to at most 0.02 while maintaining low under-triage. These results support coupling LLM language understanding with executable clinical guidelines for triage from intake notes.",
+      "pdf_url": "https://arxiv.org/pdf/2610.32469v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.32469v1",
+      "published": "2026-10-23T10:39:56Z",
+      "updated": "2026-10-23T10:39:56Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Decoupling Patient Personas and Clinical Workflows: A Dual-Agent Approach to Realistic Medical Dialogue Generation",
+      "authors": [
+        "Qiyuan Li",
+        "Xiaomei Guo",
+        "Chao Gao",
+        "Haijiang Liu",
+        "Deyu Chen",
+        "Caicai Guo",
+        "Jinguang Gu"
+      ],
+      "abstract": "Pre-consultation medical dialogues are essential for collecting comprehensive patient information, but are costly to obtain at scale due to privacy and ethical constraints. Existing LLM-based synthesis methods often rely on prompt engineering or rigid rules, limiting their ability to balance clinical relevance with realistic patient diversity. We propose CoRPS-Dial, a controllable dual-agent framework for pre-consultation medical dialogue synthesis that integrates patient personas with guideline-aligned clinical workflow rules. CoRPS-Dial generates dialogues through interactions between a persona-driven patient agent and a process-guided doctor agent, followed by post-hoc quality control for role consistency, workflow completeness, and textual consistency. Experiments on coronary heart disease demonstrate that CoRPS-Dial improves alignment between synthetic and real dialogues in information coverage, clinical compliance, and dialogue naturalness. Downstream fine-tuning experiments further confirm the utility of the generated synthetic data for medical dialogue tasks. These results highlight the effectiveness of CoRPS-Dial for clinically grounded and controllable medical dialogue synthesis.",
+      "pdf_url": "https://arxiv.org/pdf/2610.32443v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.32443v1",
+      "published": "2026-10-23T10:07:35Z",
+      "updated": "2026-10-23T10:07:35Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports",
+      "authors": [
+        "Hongkang Chu",
+        "Yifan Shen",
+        "Tianjiao Yu",
+        "Zhuoqing Zhong",
+        "Jianguo Cao",
+        "Meihuan Huang",
+        "Xu Cao"
+      ],
+      "abstract": "Although Large Language Models (LLMs) have demonstrated potential in clinical documentation, generating the rigorous, evidence-based reasoning required for unprecedented, atypical, and rare disease case reports remains a significant challenge. We present MedCaseAgent, an end-to-end agentic reasoning paradigm that bridges this gap by synthesizing publication-quality reports from unstructured clinical notes. MedCaseAgent leverages a hierarchical structure, integrating patient-level data mining with iterative, tool-integrated reasoning. By dynamically querying medical literature and knowledge bases, the agent maintains high clinical fidelity and assesses case novelty. The framework is inherently modular, supporting various backbone LLMs in a plug-and-play fashion. To facilitate this research, we release MedCase-150K, a large-scale multimodal clinical case-report corpus, and MedCase-Bench, a robust temporally held-out evaluation suite. We also introduce an open-source model post-trained from Qwen3.5-9B and optimized specifically for this task. Under both LLM-judged and rule-based evaluation, MedCaseAgent outperforms existing general-purpose and specialized medical LLMs and agents. Blinded expert reviews and ablations further support the system's clinical relevance and evidence grounding.",
+      "pdf_url": "https://arxiv.org/pdf/2610.32258v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.32258v1",
+      "published": "2026-10-23T07:14:59Z",
+      "updated": "2026-10-23T07:14:59Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "The LLENS Platform for On-Premises Large Language Model Agents in a Japanese University Hospital: Development and Evaluation Study",
+      "authors": [
+        "Ken Enda",
+        "Jien Saito",
+        "Masami Mukai",
+        "Feng Han",
+        "Emir Turkes",
+        "Tatsumi Kusakabe",
+        "Reona Umeki",
+        "Kazuhiro Sumiyoshi",
+        "Mitsuya Numata",
+        "Takumi Tanikawa",
+        "Akira Endoh",
+        "Kenji Hirata",
+        "Atsushi Yoshida",
+        "Kohsuke Kudo",
+        "Shinya Tanaka"
+      ],
+      "abstract": "Large language model agents that use tools could take on part of the electronic health record and desk work that occupies physicians' time, but in many hospitals the medical information systems run inside closed networks, so the model and the agent harness must also sit inside. We designed, implemented, and deployed LLENS, a clinical support AI agent platform that runs inside the closed network of Hokkaido University Hospital on one host with 8 NVIDIA H200 GPUs, the open-weight model Kimi K2.6 (~1 trillion parameters), and a web application rebuilt from Open WebUI. The harness has 10 components, including page image reading, full-text attachment input, a path-addressed document tree without a vector index, a network-isolated sandbox, artifact return, self-checking of generated output, subagents, and saved procedures. Kimi K2.6 was chosen from 3 open-weight candidates and scored 480/500 on the 2026 Japanese Medical Licensing Examination; it generated 119 tokens/s for one user and served 16 concurrent requests at 908 tokens/s in total. On 180 questions over hospital documents (3 seeds each), mean accuracy was 10.7% with no documents, 81.3% with fixed retrieval (top 10 chunks of one lexical search), and 97.2% with interactive access, in which the model reads with document tools and the sandbox (15.9 percentage points above fixed retrieval, 95% CI 10.9-21.3); the difference lay in filtering/counting questions (16.7% vs 87.8%). Five scenarios with synthetic data ran on combinations of the components: needlestick injury response, batch adverse event grading, scanned referral letter transcription, falls data aggregation and plotting, and investigation of 3 topics by subagents. The platform has run on the hospital network since September 14, 2026.",
+      "pdf_url": "https://arxiv.org/pdf/2610.32151v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.32151v1",
+      "published": "2026-10-23T04:34:26Z",
+      "updated": "2026-10-23T04:34:26Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Understanding Communication Failures in Multi-Agent LLM Systems",
+      "authors": [
+        "Priya Pitre",
+        "Jun Hou",
+        "Yi Fang",
+        "Naren Ramakrishnan",
+        "Xuan Wang"
+      ],
+      "abstract": "Multi-agent LLM systems aim to improve reasoning through debate, evidence sharing, and mutual correction, but interaction can also introduce failures that final accuracy alone cannot explain. Agents may converge too early, ignore dissent, suppress correct minority answers, or preserve a wrong framing across rounds. We present a corpus-grounded taxonomy of communication failures, built from 3,211 failed multi-round trajectories across medical QA, coding, finance, multi-hop reasoning, ethics, and embodied text tasks. Using this taxonomy, we analyze failure distributions across datasets and system designs, round-level error dynamics, recovery hardness, majority transitions, minority-signal suppression, and self-reported confidence. We find that failures are dominated by recovery/correction and consensus/decision problems rather than isolated first-round mistakes, with many emerging after agents first observe peer responses. Based on these findings, we recommend stronger disagreement handling, evidence verification, minority-signal preservation, and recovery checks before finalization.",
+      "pdf_url": "https://arxiv.org/pdf/2610.32060v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.32060v1",
+      "published": "2026-10-23T01:55:07Z",
+      "updated": "2026-10-23T01:55:07Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "AusClinBench: a deterministically scored benchmark of large language models against current Australian clinical policy",
+      "authors": [
+        "Daniel S. Epstein"
+      ],
+      "abstract": "AI models already inform clinical decisions and draft notes in Australian clinical software, usually without the practitioner being told which model is used. Existing medical benchmarks are written for other jurisdictions. We wrote 142 questions from Australian guidelines and schedules across five domains (PBS authority, MBS billing, Ahpra obligations, triage red flags, immunisation and screening), each with one verifiable answer scored by exact match. Each question ran blind and with the governing clause supplied, which separates failure to recall the current rule from failure to apply it. We tested 28 models between July and October 2026. Blind accuracy ranged from 51.5% to 92.7%, and the highest-scoring models could not be separated. Of 791 failed model-question pairs, 684 (86%) were wrong blind and right with the clause. Confident-error rates ranged from 6.6% to 47.8%. On five immunisation questions where the guideline gives no directive, 82% of answers stated one. On 20 Aboriginal and Torres Strait Islander health questions, models did no worse overall, but on a few the wrong answers gave the rule for the general population, an older rule or another country's rule. We propose treating the model as an ingredient of a clinical product, with a minimum standard on local rules that sits beside product evaluation. The keys are one general practitioner's and are not yet independently reviewed. The benchmark measures base models, not clinical products, and does not license any model for clinical use.",
+      "pdf_url": "https://arxiv.org/pdf/2610.31993v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.31993v1",
+      "published": "2026-10-22T23:25:04Z",
+      "updated": "2026-10-22T23:25:04Z",
+      "categories": [
+        "cs.CY",
+        "cs.CL"
+      ]
+    },
     {
       "title": "How Ground Truth Shapes Retrieval Scores: Evidence-Aware Evaluation of a Retrieval-Augmented Generation System for Breast Lesions",
       "authors": [
@@ -11,13 +173,13 @@
         "Mateus C. Dias",
         "Tha\u00eds Gaud\u00eancio",
         "Yuri Malheiros",
-        "Barufaldi"
+        "Bruno Barufaldi"
       ],
       "abstract": "Purpose: To describe an evidence-aware retrieval evaluation protocol for a clinical retrieval-augmented generation (RAG) system over breast lesion management literature, addressing the dependence of retrieval scores on annotation coverage. Methods: An 18-document corpus and an 18-query development benchmark, with one Yes/No or WH-question per document, were used. Retrieval combined dense embeddings, BM25, and cross-encoder reranking. Chunk sizes of 128 to 1024 tokens, overlaps of 0 to 20%, and four retriever configurations were evaluated. Relevance was defined by evidence spans mapped to all containing chunks, treating overlapping chunks with equivalent evidence as relevant. Retrieval was evaluated using R-Precision, Recall@K, MRR, and nDCG@K. Separately, generation was assessed on a 512-token index at K=1 to 5 using DeepEval claim-level metrics, with deepseek-v4-pro as the LLM judge, and BLEU/ROUGE metrics. Results: The selected hybrid retriever, using 384-token chunks and 20% overlap, retrieved accepted evidence in the top three results for 17 of 18 queries. Recall@3, R-Precision, MRR@3, and nDCG@3 each reached 0.94. Ground-truth curation increased evidence spans from 25 to 37 and accepted chunk targets from 36 to 51 without changing retrieval rankings. Conclusion: Cross-encoder reranking achieved the highest retrieval scores. Expanded relevance annotations increased recognized evidence without changing rankings, highlighting annotation sensitivity. The small development set and retrieval-informed curation require independent validation, including radiologist assessment of evidence sufficiency.",
-      "pdf_url": "https://arxiv.org/pdf/2610.31606v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.31606v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31606v2",
+      "arxiv_url": "https://arxiv.org/abs/2610.31606v2",
       "published": "2026-10-22T17:36:14Z",
-      "updated": "2026-10-22T17:36:14Z",
+      "updated": "2026-10-23T02:23:25Z",
       "categories": [
         "cs.CL",
         "cs.AI"
@@ -129,159 +291,6 @@
       "published": "2026-10-22T13:34:29Z",
       "updated": "2026-10-22T13:34:29Z",
       "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "A Visual Grounding Benchmark for Retinal OCT with Multimodal Large Language Models",
-      "authors": [
-        "Ronald Fecso",
-        "Jos\u00e9 Morano",
-        "Botond Fazekas",
-        "Paul Widmann-Sedlnitzky",
-        "Dorota Himel",
-        "Laetita Hinterhuber",
-        "Virginia Mares",
-        "Andreas Pollreisz",
-        "Hrvoje Bogunovi\u0107"
-      ],
-      "abstract": "Multimodal large language models (MLLMs) can answer clinical questions about medical images, but trustworthy use requires visual grounding: models should localize the pathology they report rather than rely on spurious shortcuts. Whether MLLMs can visually ground clinical findings in retinal optical coherence tomography (OCT), the most widely used imaging modality in ophthalmology, remains largely unexplored. To address this gap, we introduce RetinaGroundBench, the first benchmark for biomarker visual grounding in retinal OCT. It comprises 815 B-scans exhaustively annotated by ophthalmologists with 4,537 bounding boxes covering 13 biomarkers across 8 diseases. Because MLLMs often fragment a single lesion into multiple partial predictions, we propose AggIoU, a metric that evaluates whether the union of overlapping predicted boxes covers the annotated region. Across 27 open-source MLLMs (0.8-38B parameters), we find that visual grounding remains largely unsolved: the best general-purpose model achieves a macro F1 of just 23.7%, with consistently low recall, despite reaching up to 73% balanced accuracy on biomarker presence questions. To narrow this gap, we developed RetGrounder, an MLLM fine-tuned using an OCT-specific strategy integrating grounding and textual information. Despite its relatively small size (8B), RetGrounder improves grounding F1 to 33.9%, a 43% relative improvement. Our benchmark provides a reference point for measuring progress in the field of OCT diagnosis with MLLMs.",
-      "pdf_url": "https://arxiv.org/pdf/2610.31205v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.31205v1",
-      "published": "2026-10-22T12:54:19Z",
-      "updated": "2026-10-22T12:54:19Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "RetiJev: Fast and Source-Grounded Ophthalmic Decision Models",
-      "authors": [
-        "Bo Liu",
-        "Lianyu Wang",
-        "Meng Wang",
-        "Ching-Yu Cheng",
-        "Huazhu Fu"
-      ],
-      "abstract": "Ophthalmic clinical decision support requires fast, accurate, and privacy-preserving inference, yet autoregressive large language models (LLMs) incur substantial latency and computational overhead for decisions among predefined actions. We therefore investigate a decision-oriented alternative to generative reasoning. Specifically, we first introduce RetiJev-Data, a source-grounded ophthalmology corpus comprising 78,158 clinical-decision and diagnosis questions derived from articles in PubMed Central and a MeSH vocabulary covering 531 eye diseases, and 50,074 guideline-grading questions spanning 11 grading systems, along with a 24,662-question evaluation benchmark. Based on this, we develop RetiJev, a family of 0.8B-9B decision models that directly score candidate answers without autoregressive decoding. Across all model sizes, RetiJev outperforms both a 27B LLM and the commercial Jev 1.13 decision model on guideline grading by 10.4-23.0 points. RetiJev-9B further achieves the highest accuracy on clinical decisions, improving over both baselines by 5.4-6.5 points while matching them on diagnosis. It answers a case in 158 ms on one GPU, 3.5x faster than LLM generation and 470x faster than reasoning. Models are released at https://github.com/Awenbocc/RetiJev.",
-      "pdf_url": "https://arxiv.org/pdf/2610.30947v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.30947v1",
-      "published": "2026-10-22T08:59:47Z",
-      "updated": "2026-10-22T08:59:47Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "From Clinical Judgment to Checkable Rules: Clinician-Led Guardrails for Mental-Health Chatbots",
-      "authors": [
-        "Chenhan Lyu",
-        "Kit Wislocki",
-        "Sarah Elizabeth Stoeckl",
-        "Maitreyi Sinha",
-        "Amir Rahmani"
-      ],
-      "abstract": "Large language models (LLMs) deployed in mental-health contexts can be evaluated for safety failures, but the resulting judgments are often difficult to inspect or explain. Common approaches to improving safety rely on prompt engineering, LLM-as-a-Judge, and Constitutional AI. In this work, we describe a clinician-led alternative in which two clinicians define, finalize, and adjudicate the four safety checks of a rule base, which is formally verified for internal consistency and applied as a guardrail over LLM outputs. Here and in the title, clinician-led refers to this rule base, not to the fact extractor or the uncertainty default, which are ours. Every verdict of the resulting verification layer is recomputable from a named rule and sixteen facts. Against an LLM judge matched in model, revision, quantization, rule text, and decoding but without the layer's computed 988/911 fact, the largest disagreement class, the satisfied-rule class, is structured: the Llama-3.3-70B judge, on its primary prompt, demands a crisis resource from 55 of the 65 replies (84.6%) that already contain one, while the same model, asked as a fact extractor, reports a recognized resource present on 54 of the 55. The verification layer never raises that demand, by construction. We report with equal prominence where this judge is stronger: fewer false crisis alarms on the one reference-scored check. We also report the measured cost (a specification revision raised block-class outcomes on held-out boundary prompts of an over-refusal benchmark from 6.0% to 16.0%, chiefly by changing fact extraction), the clinicians' decision to keep our uncertainty default, and the analysis of the result. The contribution is not a safer verdict. It is a guardrail whose disagreements with the judge localize to named rules and facts and whose measured costs trace to named facts and the uncertainty default.",
-      "pdf_url": "https://arxiv.org/pdf/2610.30690v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.30690v1",
-      "published": "2026-10-22T04:02:51Z",
-      "updated": "2026-10-22T04:02:51Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "Large language models show systematic failures in incorporating evolving medical knowledge",
-      "authors": [
-        "Min Zeng",
-        "Zaifu Zhan",
-        "Kai Yu",
-        "Rui Zhang"
-      ],
-      "abstract": "Medical knowledge evolves as clinical guidelines revise recommendations, yet whether large language models (LLMs) faithfully incorporate such changes remains unclear. We introduce ChronoEvo, comprising 1,709 recommendation-level revisions across 12 forms of medical knowledge change, to distinguish recognition of revised guidance from incorporation into clinical recommendations. In the primary model, 90.8% of responses recognized revisions and 80.2% were clinically correct, but only 58.5% fully incorporated guidance, yielding a 32.3-percentage-point recognition-incorporation gap. This dissociation persisted across 14 models and was corroborated by two clinicians' adjudicated assessment of 300 responses, yielding a 40.3-percentage-point gap in the validation sample. Changes in recommendation strength and patient eligibility were associated with retention of outdated guidance. A revision-salience intervention reduced outdated-content retention and improved clinical correctness but did not significantly improve full incorporation. These findings identify faithful incorporation of evolving medical knowledge as a distinct challenge for clinical LLM reliability, even when updated guideline evidence is available.",
-      "pdf_url": "https://arxiv.org/pdf/2610.30631v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.30631v1",
-      "published": "2026-10-22T02:53:44Z",
-      "updated": "2026-10-22T02:53:44Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Better Reasoning, Not Just Bigger Models: A Structure-Grounded Framework for Efficient and Reliable Inference",
-      "authors": [
-        "Amirhossein Aghaei",
-        "Liangyan Li",
-        "Shiyi Yang",
-        "Shaohua Wang",
-        "Yan Wang"
-      ],
-      "abstract": "Scaling large language models has substantially improved linguistic fluency, yet reliable autonomous agents require more than fluent generation. In multi-turn inference, current agentic systems often produce semantically plausible but structurally ungrounded reasoning, especially under incomplete observations. We propose Structure-Grounded Uncertainty Reduction (SGUR), a training-free framework that complements token-level generation with active uncertainty reduction over structured hypothesis spaces. SGUR represents incomplete observations as a query graph and aligns them with candidate hypothesis graphs through a prior-weighted partial graph matching mechanism, where database-derived empirical priors assign greater importance to decision-relevant relations rather than treating all graph edges uniformly. The resulting inference state is iteratively refined by an active information-gain strategy that selects the next most informative node to query, systematically pruning the candidate space. We instantiate SGUR on a challenging PrimeKG-derived sequential medical diagnosis benchmark, demonstrating that structural grounding can partially substitute for model scale: starting from only two observed symptoms, SGUR achieves 92.5% Hit@3, outperforming the strongest Graph-RAG baseline by 9.4 percentage points while using approximately 5x fewer tokens. Notably, SGUR enables smaller backbone models to match or exceed the performance of models up to 10x larger, suggesting that structural grounding provides a more robust and efficient paradigm for scaling agent performance than relying exclusively on increasing model size.",
-      "pdf_url": "https://arxiv.org/pdf/2610.30611v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.30611v1",
-      "published": "2026-10-22T02:20:21Z",
-      "updated": "2026-10-22T02:20:21Z",
-      "categories": [
-        "cs.AI",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "Agent Mosaic: Recognizing Confidentiality Leaks in Agentic LLM Systems",
-      "authors": [
-        "Daniel Ruiz",
-        "Luca Luceri",
-        "Emilio Ferrara"
-      ],
-      "abstract": "Modern LLM agents can retrieve information from accessible documents, and then disclose a sensitive conclusion assembled from them. This mosaic effect creates a critical risk for agents operating over confidential data. We quantify its realization with 30 synthetic cybersecurity, medical, and military examples, yielding 10,800 final answers from three LLM agents in controlled simulation and 1,440 answers from live agents in two open-source harnesses. Even under benign queries designed to be answerable from one document, GPT-5.6-Sol, the best performing model tested, discloses forbidden composites in 7.08% of answers (95% CI: 3.75-10.67%) in simulation, with worse disclosure rates in live harnesses. Adding visible classification headers and explicit aggregation rules reduces pooled disclosure rates substantially, yet unsafe disclosures persist in 32.37% of simulated answers (95% CI: 28.33-36.19%) across all intents despite these safeguards. Furthermore, increased refusals do not guarantee confidentiality, since significant refusals reveal the prohibited conclusion regardless. These results point to a troubling conclusion: sensitive data leaks via mosaic-style events are an observed confidentiality failure mode in the evaluated settings at non-negligible rates. They motivate stronger controls on what agents may infer and disclose in sensitive data environments with mixed-clearance users.",
-      "pdf_url": "https://arxiv.org/pdf/2610.30418v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.30418v1",
-      "published": "2026-10-21T20:25:11Z",
-      "updated": "2026-10-21T20:25:11Z",
-      "categories": [
-        "cs.CR",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "SIM-UT: A User Simulation based Evaluation Framework for Medical Triage Chatbots",
-      "authors": [
-        "Deepali Mittal",
-        "Dheeraj Mundhra",
-        "Yulia Sidorova",
-        "Tersia de Kock",
-        "Oli Munns",
-        "Sofie S Meyer"
-      ],
-      "abstract": "LLM-based chat agents are increasingly used for complex, multi-turn, multilingual medical triage in low- and middle-income countries (LMICs), yet evaluation methods focus on single-turn, English-only benchmarks that primarily test the chatbots' knowledge. In practice, users are often confused, overwhelmed, or emotionally vulnerable, giving unclear, misspelled single-word answers or long messages in regional dialects, and the context of a conversation can shift rapidly. We propose SIM-UT (Simulation of User Behaviour for Triage), a multi-turn, simulation-based evaluation method that identifies ecologically valid, contextually relevant failure modes of LLM-based triage chat agents. Using SIM-UT, we evaluated three real-world WhatsApp-based health chatbots: a respiratory screening programme in India, a hearing health support programme in South Africa, and a diabetes and lifestyle coaching agent in Kenya. We compared a medically fine-tuned open model (MedGemma) against general-purpose frontier models (ChatGPT and Claude) across 5,000+ multilingual simulated conversation turns grounded in the personas, constraints, and communication patterns of the real user populations, over 2-4 iterative rounds. A key failure mode emerged in both model families: de-escalation risk. The agents initially identified medical emergencies correctly, but when the user minimised the symptoms without introducing new clinical information, they de-escalated, exhibiting clinically dangerous sycophancy, for example agreeing that vaginal bleeding in pregnancy was \"not a problem\" or that decreased fetal movements at 32 weeks \"can be normal\". We recommend user simulation-based behavioural evaluation, grounded in real user context and covering adversarial and edge cases, as standard practice for triage chatbots in production, so that safeguards can be added before deployment or in subsequent iterations.",
-      "pdf_url": "https://arxiv.org/pdf/2610.30412v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.30412v1",
-      "published": "2026-10-21T20:14:16Z",
-      "updated": "2026-10-21T20:14:16Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Text-Only LLM Correctors Break Correct Transcripts: A Repair-Damage Analysis of Audio Grounding in ASR Error Correction",
-      "authors": [
-        "Vasiliy Kudryavtsev",
-        "Kirill Borodin",
-        "Nikita Vasiliev",
-        "Mikhail Gorodnichev",
-        "Grach Mkrtchian"
-      ],
-      "abstract": "LLM correctors of ASR output are judged by aggregate WER, which hides what they fix and what they break. We decompose every WER change exactly into repaired tokens, damaged tokens and insertions, and use this to ask what the source audio adds to a corrector. We compare correction with and without the audio, for the model's own draft and for the output of an independent recogniser, on three corpora. With Gemini 2.5 Flash, text-only correction of its own draft breaks 13-32% of already-correct transcripts; with the audio, 1-3%. Damage falls in both settings. Repair falls against the own draft and rises against the recogniser. On medical dictation, kept insertions cancel the gain in net WER. The open-weight Voxtral, which rarely edits, does not show this pattern. Prompts differ between the two arms, so the contrasts bound the effect of the audio and do not isolate it.",
-      "pdf_url": "https://arxiv.org/pdf/2610.30385v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.30385v1",
-      "published": "2026-10-21T19:45:31Z",
-      "updated": "2026-10-21T19:45:31Z",
-      "categories": [
-        "cs.SD",
         "cs.CL"
       ]
     }

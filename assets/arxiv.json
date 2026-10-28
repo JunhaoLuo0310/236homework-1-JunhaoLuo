@@ -1,8 +1,75 @@
 {
-  "generated_at_utc": "2026-10-27T04:30:05.552469Z",
+  "generated_at_utc": "2026-10-28T05:01:00.280587Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "OpenGray: a benchmark for evaluating the decisions of radiotherapy planning agents",
+      "authors": [
+        "Humza Nusrat",
+        "Kundan Thind"
+      ],
+      "abstract": "Background and purpose: Radiotherapy planning agents based on large language models (LLMs) decide when to submit a plan or request review but are evaluated mainly by dose. This study developed OpenGray, a benchmark of planning tasks with known correct decisions. Materials and methods: OpenGray adds tasks with known answers to the OpenKBP-Opt head-and-neck dataset, including two contradictions with dose goals proven incompatible and a feasible control with a stored plan meeting every hard goal. Four systems, from a rule-based planning script to a full LLM agent, were evaluated on 30 patients, the LLM-based ones with a commercial (Terra) and a local (Ministral 3 8B) LLM. Decisions, achieved dose, problem recognition, and technical failures were recorded and also read from logs of 39 stereotactic radiosurgery runs of SAGE, a clinical LLM agent. Results: With Terra, the script preceded by an LLM review and the full agent had decision accuracies of 95.4% and 92.1%, respectively, yet escalated only 50% (95% confidence interval, 25-75%) and 25% (10-40%) of overlap contradictions, which required arithmetic on the anatomy. All four systems submitted every feasible control, but 24% of these plans missed a hard goal that the stored plan had met. In four SAGE runs, one goal failed at every attempt; the agent identified it in every reply but had no action for stopping. Conclusions: Favorable aggregate scores concealed specific decision failures. Planning agents should be evaluated on their decisions as well as their dose and given an explicit action for stopping and requesting review.",
+      "pdf_url": "https://arxiv.org/pdf/2610.37081v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.37081v1",
+      "published": "2026-10-27T11:42:47Z",
+      "updated": "2026-10-27T11:42:47Z",
+      "categories": [
+        "cs.AI",
+        "physics.med-ph"
+      ]
+    },
+    {
+      "title": "MedConstBench: Benchmarking How Constitutions Steer LLMs in Medical Ethics",
+      "authors": [
+        "Yibo Yang",
+        "Zerui Huang",
+        "Haomiao Yang",
+        "Zixia Wang"
+      ],
+      "abstract": "As large language models advance rapidly, they are increasingly used to answer medical questions, and many such models are now deployed locally. Once a model is deployed, its behavior is governed mainly by the ethical policy written into its constitution. However, most existing work focuses on factual correctness rather than the trade-off between competing ethical values. Even benchmarks that do evaluate ethics treat it as a fixed property of the model rather than as a variable, so how a constitution reshapes medical-ethics behavior remains largely unexplored. We introduce MedConstBench, a medical-ethics benchmark that treats the deployment constitution as a controlled variable, is organized around Beauchamp's four principles, and is scored by human-calibrated multi-model peer review. It includes MedDilemma, our own dataset of clinical dilemmas, and supports a systematic analysis of how constitutions steer LLMs. Evaluating ten open-source LLMs under four constitutions, we find that the effect of a constitution is dimension-selective and model-dependent, and that no constitution is universally optimal. Motivated by these findings, we propose a do-no-harm adaptive selector that chooses a constitution per model, matching the per-model oracle while guaranteeing a worst-case floor and generalizing to unseen models at low cost.",
+      "pdf_url": "https://arxiv.org/pdf/2610.36513v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.36513v1",
+      "published": "2026-10-27T02:17:13Z",
+      "updated": "2026-10-27T02:17:13Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "OA-RAG: Ontology-based Agentic RAG for Faithful LLM Reasoning",
+      "authors": [
+        "Hui Yang",
+        "Jiaoyan Chen",
+        "Yongsheng Gao"
+      ],
+      "abstract": "Large language models (LLMs) perform well across many real-world tasks but remain prone to hallucination, limiting their reliability in domains such as biomedicine and healthcare, where answers must be grounded in established knowledge. Retrieval-augmented generation (RAG) mitigates this problem by incorporating external information, but often overlooks logical relationships and relies heavily on the LLM's own reasoning, which can compromise answer faithfulness. We propose OA-RAG, an agent that integrates formal reasoning with LLM reasoning, drawing on both the logical structure and informal annotations of domain ontologies. For each answer, OA-RAG reports the ontology observations used as evidence and a model-assessed grounding level (entailed, supported, related, or unrelated) that characterises the strength of that evidence. Across benchmarks derived from three large-scale ontologies and six real-world medical question-answering tasks, OA-RAG achieves the best overall performance among the evaluated ontology-fine-tuned and popular RAG methods, with particularly strong results on reasoning-intensive tasks. The reported grounding levels also offer a useful indication of answer reliability, with stronger grounding generally associated with higher accuracy. Finally, our results demonstrate the value of ontologies as knowledge sources: OA-RAG is competitive with, and sometimes outperforms, domain-specific RAG systems that draw on sources such as textbooks.",
+      "pdf_url": "https://arxiv.org/pdf/2610.36335v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.36335v1",
+      "published": "2026-10-26T22:04:58Z",
+      "updated": "2026-10-26T22:04:58Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Ontology-guided multi-agent reasoning for explainable differential diagnosis",
+      "authors": [
+        "Roxana Ramona Szomiu",
+        "George Ursu",
+        "Adrian Groza"
+      ],
+      "abstract": "Effective differential diagnosis depends on well structured and unambiguous patient case descriptions, since incomplete or ambiguous clinical information readily leads to diagnostic errors and inconsistent reasoning. Large Language Models (LLMs) have recently shown promising capabilities in medical question answering and clinical reasoning; however, even when achieving competitive performance on medical benchmarks, they often rely on pattern recognition learned from training data rather than grounded clinical evidence, and can generate plausible yet unsupported diagnostic conclusions. Their reasoning remains largely opaque, making it difficult for clinicians to assess the evidence and rationale behind a given recommendation. To address this gap, we propose an ontology-guided, multiagent differential diagnosis framework that replicates the iterative reasoning process of physicians. The framework grounds diagnostic inference in a structured, expert-curated medical knowledge base, enabling interpretation of symptoms, clinical findings, or disease relationships, while decomposing diagnosis into explicit, auditable reasoning steps. This ontology-based grounding constrains inference to evidence-backed associations, reducing hallucination and improving diagnostic transparency, traceability, and consistency. The system then identifies the most discriminative missing symptoms and generates targeted follow-up questions to reduce uncertainty through a process that mirrors to clinical inquiry. Together, these components improve the reliability, explainability, and diagnostic accuracy of AI-assisted differential diagnosis. The source code is publicly available.",
+      "pdf_url": "https://arxiv.org/pdf/2610.36325v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.36325v1",
+      "published": "2026-10-26T21:55:26Z",
+      "updated": "2026-10-26T21:55:26Z",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ]
+    },
     {
       "title": "Patient-specific rubric-based evaluation of large language models across longitudinal cancer care",
       "authors": [
@@ -30,6 +97,26 @@
       "updated": "2026-10-26T17:56:26Z",
       "categories": [
         "cs.AI"
+      ]
+    },
+    {
+      "title": "MedJev: Evaluating Zero-Shot System-One Decision Making in Medicine",
+      "authors": [
+        "Simon A. Lee",
+        "Jiahang Sha",
+        "Moonseong Jeong",
+        "Yunbei Pan",
+        "Jeffrey N. Chiang"
+      ],
+      "abstract": "System One decision models such as Jev answer structured questions in a single forward pass without generating text, offering fast and computationally efficient clinical decision support. We evaluate MedJev, an open System One model that runs locally on a laptop, across ten medical benchmarks spanning medical knowledge, diagnosis, and patient level prediction using MIMIC IV and MIMIC IV ED. We compare MedJev against zero shot LLM baselines, published GPT results, and supervised models. MedJev achieves accuracies of 72.5 percent on MedQA, 75.4 percent on USMLE, and 80.1 percent on NEJM, approaching published GPT 4 performance while maintaining well calibrated confidence estimates (ECE 0.028 to 0.063). On patient level tasks, MedJev achieves an AUROC of 0.926 for In Hospital Mortality, exceeding XGBoost (0.902), but underperforms supervised models on operational outcomes such as ED Triage Admission (0.745 vs. 0.809). Patient level predictions also exhibit substantial miscalibration (In Hospital Mortality ECE 0.286). We introduce a lightweight, two parameter recalibration method that adapts predictions to local patient populations using 50 to 200 labeled examples, reducing ECE to 0.007. Our findings establish open System One models as a promising zero shot baseline for medical AI, combining competitive predictive performance with low computational cost and efficient local calibration. We release our code and evaluation harness to support future research.",
+      "pdf_url": "https://arxiv.org/pdf/2610.36006v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.36006v1",
+      "published": "2026-10-26T16:08:29Z",
+      "updated": "2026-10-26T16:08:29Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
       ]
     },
     {
@@ -208,100 +295,6 @@
       "updated": "2026-10-25T17:36:47Z",
       "categories": [
         "physics.med-ph"
-      ]
-    },
-    {
-      "title": "MIS-VQA: An Annotation-Driven Surgical Vision-Language Dataset for Complex Surgical Understanding",
-      "authors": [
-        "Mohamed Hamdy",
-        "Iheb Zouari",
-        "Fatmaelzahraa Ahmed",
-        "Muraam Abdel-Ghani",
-        "Muhammed Arsalan",
-        "Ponnuthurai Suganthan",
-        "Khalid Al-Jalham",
-        "Abdulaziz Al-Ali",
-        "Shidin Balakrishnan"
-      ],
-      "abstract": "Modern surgical AI increasingly requires multimodal understanding rather than isolated perception, yet existing datasets remain largely limited to single-task supervision such as recognition or templated question answering. Current medical VQA resources often rely on synthetic templates, lack natural descriptive supervision, or provide sparse annotations that hinder reasoning about spatial relations and procedural context. We introduce MIS-VQA, a surgical vision-language dataset generated through an annotation-driven pipeline that converts heterogeneous surgical annotations into structured textual scene representations. Using EndoVis18 and CholecT50, we transform phase, instrument, interaction, triplet, and segmentation labels into unified contexts that guide large language models to generate clinically coherent question-answer pairs. MIS-VQA supports four response types-concise and detailed descriptions, perception-level grounding, and multi-step reasoning-enabling hierarchical evaluation from atomic visual grounding to compositional reasoning. To address annotation sparsity, we incorporate confidence-filtered segmentation and cross-annotation consistency checks, enabling spatially grounded supervision at scale. MIS-VQA establishes a unified benchmark for surgical vision-language understanding with spatial supervision and multi-tier reasoning evaluation. To demonstrate its utility, we introduce LLaVA-SurgXpert, a family of surgical vision-language models with visual encoders to analyze how visual representations influence multimodal reasoning. Experiments show consistent improvements over existing surgical VQA baselines while revealing capability gaps between perceptual grounding and higher-level reasoning hidden in prior benchmarks.",
-      "pdf_url": "https://arxiv.org/pdf/2610.34210v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.34210v1",
-      "published": "2026-10-25T10:56:26Z",
-      "updated": "2026-10-25T10:56:26Z",
-      "categories": [
-        "cs.CV",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Fed-Universe: A Semantic-Geometric-Topological-Human (S-G-T-H) Stack for Negotiated Alignment in Federated Systems",
-      "authors": [
-        "Ting Xu",
-        "Henry Leung"
-      ],
-      "abstract": "Conventional federated learners implicitly optimize for global means, creating a \"one-size-fits-all\" paradigm that inevitably suppresses the minority under cross-site heterogeneity. To bridge this critical gap, we present Fed-Universe, a generalizable Semantic-Geometric-Topological-Human (S-G-T-H) architecture that transforms passive averaging into an active negotiation for decentralized alignment. The S-layer deploys an edge-capable LLM as a semantic surrogate to translate heterogeneous inputs into standardized patient profile prompts. The G-layer enforces geometric quality assurance (GQA) via a mapping f: Theta -> Q from the statistical parameter space to a physically interpretable quality domain, employing a cosine similarity gate to retain minority updates based on physical geometry rather than statistical proximity. The T-layer executes topological Pareto control, identifying a sensitivity-based knee point (lambda_k) to balance multi-objective aggregation without majority degradation. Finally, the H-layer operationalizes a cognitive twin dynamic to mirror the user's real-time psychological state, dynamically adapting human-computer interaction modes via active intent alignment. To ground this theoretical architecture empirically, we validated the S-G-T core on a binational synthetic clinical network simulation. This proof-of-concept demonstrated a \"zero-sum escape\": a minority node (<3% data volume) achieved utility parity (loss reduction from 0.857 to 0.340) alongside dominant hubs. Our Fed-Universe framework is being expanded along two focused pillars: institutional multimodal alignment (Fed-Ultra) and individual cognitive intent alignment (Fed-Human).",
-      "pdf_url": "https://arxiv.org/pdf/2610.34009v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.34009v1",
-      "published": "2026-10-25T02:43:50Z",
-      "updated": "2026-10-25T02:43:50Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "HerHealthGPT: An Evidence-Grounded Conversational AI System for Women's Reproductive Health Copy title",
-      "authors": [
-        "Hassan Saeed Hassan Albattra",
-        "Mazen Mohammed Bahgat",
-        "Rahatara Ferdousi",
-        "Hana Essam Sayed Ahmed Amrya",
-        "Mariam Mousa"
-      ],
-      "abstract": "\"Why is my period late?\" Sometimes, the most useful response begins with another question. Yet conversational AI systems may respond to incomplete health queries without seeking essential context or grounding their guidance in verifiable evidence. This paper introduces HerHealthGPT, an evidence-grounded conversational AI system designed to address these challenges in women's reproductive health. HerHealthGPT integrates retrieval-augmented generation (RAG), context-aware clarification, and source validation within an interactive web interface. Rather than responding immediately to incomplete queries, the system maintains conversational context, asks targeted follow-up questions, checks for premature conclusions, and grounds its responses in retrieved evidence. We evaluate the AI components using 540 English messages derived from 90 reproductive-health cases and conduct a prototype questionnaire study with 30 adults. Evidence retrieval improves concern-category accuracy from 54.1% to 59.3% compared with fine-tuning alone. The clarification router achieves 85.6% recall and 86.2% specificity on constructed targets. In the user study, 83.3% of participants preferred the retrieval-enabled configuration, while 25 of 30 considered its follow-up questions relevant. These findings suggest that integrating evidence retrieval with interactive clarification offers a promising approach to more transparent, context-aware reproductive-health information systems, while further clinical validation remains necessary.",
-      "pdf_url": "https://arxiv.org/pdf/2610.33931v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.33931v1",
-      "published": "2026-10-24T21:44:56Z",
-      "updated": "2026-10-24T21:44:56Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Ranking Is Not Deciding: Benchmark Shortcuts and Operating-Point Collapse in Query-Time RAG Poisoning Defenses",
-      "authors": [
-        "Pushkal Kumar",
-        "Arvin Sahaym"
-      ],
-      "abstract": "Query-time filters that screen each retrieved document before it reaches the generator are the dominant published defense against retrieval-augmented generation poisoning, and they report near-perfect detection on domain benchmarks. We show that this performance is predicted by how the poison set was built rather than by what the filter reads: removing a single construction cue destroys the deployed decision before it destroys the ranking. Two label-free statistics of a poison set and its clean corpus profile the cue: containment, how often the target question appears verbatim in the poison, and length overlap. PoisonedRAG's released code prepends the target question to every inserted passage. Of the 21 published defense evaluations we survey, 8 verifiably run poison built this way and 5 substitute a length cue; separately, 12 report no false-positive rate at the operating point they deploy. Deleting only that prefix from the attack authors' own passages (0.93 still retrieved for their target) takes RAGuard, a published content filter we re-implement, from AUROC 0.953 to 0.758 and its miss rate from 0.191 to 0.763. Across four corpora, four attack families and ten per-document defenses on one shared candidate set, the profile predicts where detection saturates. Padding medical poison to clean length with word-shuffled filler that carries no content takes TrustRAG's set-level stage from a miss rate of 0.000 to 0.827, and one learned scorer of ours from 0.000 to 0.986 (0.321 at a matched 5% false-positive rate) while its AUROC holds at 0.953. The ranking survives; the decision does not. A defense-aware attacker defeats our own scorer, so we claim no defense. A detection result is evidence only when it is reported with its poison set's construction profile and the false-positive rate at the threshold actually deployed; we release the script that computes the profile.",
-      "pdf_url": "https://arxiv.org/pdf/2610.33849v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.33849v1",
-      "published": "2026-10-24T18:40:31Z",
-      "updated": "2026-10-24T18:40:31Z",
-      "categories": [
-        "cs.CR",
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "EdgeDeID: A 0.6B Clinical De-identifier Trained Without Real Patient Data",
-      "authors": [
-        "Sina Daneshgar",
-        "Raya Namazi",
-        "Amirali Khosravi",
-        "Pouria Rouzrokh",
-        "Bardia Khosravi"
-      ],
-      "abstract": "De-identifying clinical notes with a hosted language model discloses the information the step is meant to protect. We present EdgeDeID, a 0.6B-parameter decoder-only de-identifier that runs locally and is trained without real patient text: three LLM teachers write synthetic notes, a single labeler re-annotates them into one convention, and the model learns to emit a typed XML schema of the identifiers it finds. On a 100-note synthetic in-domain benchmark with manually verified annotations it reaches 0.994 micro-F1 and leaves no missed identifier in 99% of notes, against 0.857 and 12% for the strongest of eight off-the-shelf systems. Quantized, it runs on CPU in 615 MB. Of three additions to supervised training, only a verifier adapter helps: it separates complete from incomplete outputs of other systems at 0.94 AUROC, whereas reinforcement learning with a recall-weighted reward and a rule-based post-processing layer leave in-domain results unchanged. On MIMIC ICU nursing notes F1 falls to 0.48. The errors follow two properties our synthetic notes lack, telegraphic style and low identifier density, and three hand-written in-context examples recover 0.08 F1 without annotated target data.",
-      "pdf_url": "https://arxiv.org/pdf/2610.33839v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.33839v1",
-      "published": "2026-10-24T18:20:52Z",
-      "updated": "2026-10-24T18:20:52Z",
-      "categories": [
-        "cs.CL",
-        "cs.CR",
-        "cs.LG"
       ]
     }
   ]

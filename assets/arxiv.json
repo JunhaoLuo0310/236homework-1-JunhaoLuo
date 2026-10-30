@@ -1,300 +1,302 @@
 {
-  "generated_at_utc": "2026-10-29T05:14:16.485954Z",
+  "generated_at_utc": "2026-10-30T05:13:31.329501Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
     {
-      "title": "OpenGray: a benchmark for evaluating the decisions of radiotherapy planning agents",
+      "title": "Advancing Clinical Genomic Analysis with a Skill-Centred Agent",
       "authors": [
-        "Humza Nusrat",
-        "Kundan Thind"
+        "Qiaoyu Zheng",
+        "Weike Zhao",
+        "Yanjie Fan",
+        "Ye Cao",
+        "Mengqi Jiang",
+        "Xiao Zhou",
+        "Xiaoman Zhang",
+        "Pengcheng Qiu",
+        "Yongguo Yu",
+        "Yanfeng Wang",
+        "Ya Zhang",
+        "Chaoyi Wu",
+        "Weidi Xie"
       ],
-      "abstract": "Background and purpose: Radiotherapy planning agents based on large language models (LLMs) decide when to submit a plan or request review but are evaluated mainly by dose. This study developed OpenGray, a benchmark of planning tasks with known correct decisions. Materials and methods: OpenGray adds tasks with known answers to the OpenKBP-Opt head-and-neck dataset, including two contradictions with dose goals proven incompatible and a feasible control with a stored plan meeting every hard goal. Four systems, from a rule-based planning script to a full LLM agent, were evaluated on 30 patients, the LLM-based ones with a commercial (Terra) and a local (Ministral 3 8B) LLM. Decisions, achieved dose, problem recognition, and technical failures were recorded and also read from logs of 39 stereotactic radiosurgery runs of SAGE, a clinical LLM agent. Results: With Terra, the script preceded by an LLM review and the full agent had decision accuracies of 95.4% and 92.1%, respectively, yet escalated only 50% (95% confidence interval, 25-75%) and 25% (10-40%) of overlap contradictions, which required arithmetic on the anatomy. All four systems submitted every feasible control, but 24% of these plans missed a hard goal that the stored plan had met. In four SAGE runs, one goal failed at every attempt; the agent identified it in every reply but had no action for stopping. Conclusions: Favorable aggregate scores concealed specific decision failures. Planning agents should be evaluated on their decisions as well as their dose and given an explicit action for stopping and requesting review.",
-      "pdf_url": "https://arxiv.org/pdf/2610.37081v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.37081v1",
-      "published": "2026-10-27T11:42:47Z",
-      "updated": "2026-10-27T11:42:47Z",
+      "abstract": "Clinical genomic analysis requires experts to integrate evolving guidelines, databases, and computational evidence. As sequencing has become increasingly accessible, this complex and labor-intensive process has become a major bottleneck to the timely use of genomic information in clinical decision-making. To fill this gap, we developed ClinGeX, a large-language-model agent that composes 105 curated executable skills through task-specific retrieval and dependency-aware orchestration. On 223 temporally held-out benchmark cases, ClinGeX achieved 71.7\\% macro-averaged task-level concordance with expert reference classifications, compared with 45.7\\% for the strongest comparator. In a three-condition, counterbalanced human-AI collaboration study, 45 clinical genomic professionals assessed 135 clinically derived cases under routine (no AI assistance), DeepSeek-assisted and ClinGeX-assisted conditions. ClinGeX assistance increased raw case-level concordance across criterion-level variant analysis, genomic interpretation in rare disease and molecular oncology decision-making (51.1\\%, 57.8\\%, 64.4\\% versus 15.6\\%, 31.1\\%, 20.0\\% in comparator conditions) and reduced reported interpretation time in all scenarios. During an exploratory one-month real-world non-interventional assessment, 11 experienced professionals submitted feedback on 96 self-selected analysis episodes and reported frequent conclusion adoption and time savings. These findings support executable domain skills as a promising approach to augment specialist genomic interpretation.",
+      "pdf_url": "https://arxiv.org/pdf/2610.40556v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.40556v1",
+      "published": "2026-10-29T17:40:24Z",
+      "updated": "2026-10-29T17:40:24Z",
       "categories": [
         "cs.AI",
-        "physics.med-ph"
+        "q-bio.GN"
       ]
     },
     {
-      "title": "MedConstBench: Benchmarking How Constitutions Steer LLMs in Medical Ethics",
+      "title": "Agentic LLM reasoning in pediatric diabetes outcome prediction from multimodal medical records",
       "authors": [
-        "Yibo Yang",
-        "Zerui Huang",
-        "Haomiao Yang",
-        "Zixia Wang"
+        "Daniel Palacios",
+        "Guantong Qi",
+        "Anna Kadi",
+        "Natali Borrego",
+        "Sukru Aras",
+        "Michael L. Ferm",
+        "Elizabeth Kubota-Mishra",
+        "Maria J. Redondo",
+        "Zhandong Liu",
+        "Mustafa Tosur",
+        "Hu Chen"
       ],
-      "abstract": "As large language models advance rapidly, they are increasingly used to answer medical questions, and many such models are now deployed locally. Once a model is deployed, its behavior is governed mainly by the ethical policy written into its constitution. However, most existing work focuses on factual correctness rather than the trade-off between competing ethical values. Even benchmarks that do evaluate ethics treat it as a fixed property of the model rather than as a variable, so how a constitution reshapes medical-ethics behavior remains largely unexplored. We introduce MedConstBench, a medical-ethics benchmark that treats the deployment constitution as a controlled variable, is organized around Beauchamp's four principles, and is scored by human-calibrated multi-model peer review. It includes MedDilemma, our own dataset of clinical dilemmas, and supports a systematic analysis of how constitutions steer LLMs. Evaluating ten open-source LLMs under four constitutions, we find that the effect of a constitution is dimension-selective and model-dependent, and that no constitution is universally optimal. Motivated by these findings, we propose a do-no-harm adaptive selector that chooses a constitution per model, matching the per-model oracle while guaranteeing a worst-case floor and generalizing to unseen models at low cost.",
-      "pdf_url": "https://arxiv.org/pdf/2610.36513v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.36513v1",
-      "published": "2026-10-27T02:17:13Z",
-      "updated": "2026-10-27T02:17:13Z",
+      "abstract": "Large language model (LLM) agents are proposed for clinical prediction but are untested in pediatrics, where cohorts are small and outcomes are uncommon. Using records from 2,489 youth with type 2 diabetes (T2D) and 4,018 with type 1 diabetes (T1D), spanning structured data, note-derived social determinants and, in T1D, continuous glucose monitoring data, we predicted seven T2D outcomes, four also in T1D, at 24 months from 18 months of follow-up. CEDAR (Clinical Evidence-Driven Agent for Risk-prediction), an evidence-citing, self-auditing LLM pipeline, outperformed trained machine learning in both cohorts (pooled area under the receiver operating characteristic curve 0.815 versus 0.656 to 0.700 in T2D and 0.756 versus 0.603 to 0.631 in T1D), most on the sparsely screened outcomes. Only 4 of 70,246 values it cited did not match the chart. Reading only the evidence and reasoning cited by CEDAR, two pediatric endocrinologists reached the same prediction as CEDAR in about nine of ten cases, agreeing with each other on 90.5%.",
+      "pdf_url": "https://arxiv.org/pdf/2610.40379v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.40379v1",
+      "published": "2026-10-29T16:23:47Z",
+      "updated": "2026-10-29T16:23:47Z",
       "categories": [
-        "cs.AI",
+        "q-bio.QM",
         "cs.CL"
       ]
     },
     {
-      "title": "OA-RAG: Ontology-based Agentic RAG for Faithful LLM Reasoning",
+      "title": "Radiology Guideline-derived Decision Graph for Efficient Clinical Decision Support",
       "authors": [
-        "Hui Yang",
-        "Jiaoyan Chen",
-        "Yongsheng Gao"
+        "Xuewen Zhou",
+        "Zhen Chen"
       ],
-      "abstract": "Large language models (LLMs) perform well across many real-world tasks but remain prone to hallucination, limiting their reliability in domains such as biomedicine and healthcare, where answers must be grounded in established knowledge. Retrieval-augmented generation (RAG) mitigates this problem by incorporating external information, but often overlooks logical relationships and relies heavily on the LLM's own reasoning, which can compromise answer faithfulness. We propose OA-RAG, an agent that integrates formal reasoning with LLM reasoning, drawing on both the logical structure and informal annotations of domain ontologies. For each answer, OA-RAG reports the ontology observations used as evidence and a model-assessed grounding level (entailed, supported, related, or unrelated) that characterises the strength of that evidence. Across benchmarks derived from three large-scale ontologies and six real-world medical question-answering tasks, OA-RAG achieves the best overall performance among the evaluated ontology-fine-tuned and popular RAG methods, with particularly strong results on reasoning-intensive tasks. The reported grounding levels also offer a useful indication of answer reliability, with stronger grounding generally associated with higher accuracy. Finally, our results demonstrate the value of ontologies as knowledge sources: OA-RAG is competitive with, and sometimes outperforms, domain-specific RAG systems that draw on sources such as textbooks.",
-      "pdf_url": "https://arxiv.org/pdf/2610.36335v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.36335v1",
-      "published": "2026-10-26T22:04:58Z",
-      "updated": "2026-10-26T22:04:58Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Ontology-guided multi-agent reasoning for explainable differential diagnosis",
-      "authors": [
-        "Roxana Ramona Szomiu",
-        "George Ursu",
-        "Adrian Groza"
-      ],
-      "abstract": "Effective differential diagnosis depends on well structured and unambiguous patient case descriptions, since incomplete or ambiguous clinical information readily leads to diagnostic errors and inconsistent reasoning. Large Language Models (LLMs) have recently shown promising capabilities in medical question answering and clinical reasoning; however, even when achieving competitive performance on medical benchmarks, they often rely on pattern recognition learned from training data rather than grounded clinical evidence, and can generate plausible yet unsupported diagnostic conclusions. Their reasoning remains largely opaque, making it difficult for clinicians to assess the evidence and rationale behind a given recommendation. To address this gap, we propose an ontology-guided, multiagent differential diagnosis framework that replicates the iterative reasoning process of physicians. The framework grounds diagnostic inference in a structured, expert-curated medical knowledge base, enabling interpretation of symptoms, clinical findings, or disease relationships, while decomposing diagnosis into explicit, auditable reasoning steps. This ontology-based grounding constrains inference to evidence-backed associations, reducing hallucination and improving diagnostic transparency, traceability, and consistency. The system then identifies the most discriminative missing symptoms and generates targeted follow-up questions to reduce uncertainty through a process that mirrors to clinical inquiry. Together, these components improve the reliability, explainability, and diagnostic accuracy of AI-assisted differential diagnosis. The source code is publicly available.",
-      "pdf_url": "https://arxiv.org/pdf/2610.36325v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.36325v1",
-      "published": "2026-10-26T21:55:26Z",
-      "updated": "2026-10-26T21:55:26Z",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "Patient-specific rubric-based evaluation of large language models across longitudinal cancer care",
-      "authors": [
-        "Wei-Wei Zhang",
-        "Pengkai Wang",
-        "Yan Li",
-        "Zhijie Sang",
-        "Guan-Qun Zhou",
-        "Jun-Yan Li",
-        "Shu-Han Zhou",
-        "Pei-Wen Liu",
-        "Ting-Xi Tang",
-        "Min Tang",
-        "Zhitian Hou",
-        "Jianmin Wu",
-        "Jian Guan",
-        "i Lin",
-        "Hongxia Yang",
-        "Ying Sun"
-      ],
-      "abstract": "Large language models (LLMs) show promise in specialty medicine, yet existing evaluations largely focus on isolated clinical encounters rather than tracking how clinical responsibilities evolve across a longitudinal care pathway. Here we introduce NPC-RubricBench, a phase-aware benchmark for evaluating multistage clinical reasoning across the cancer care continuum, using nasopharyngeal carcinoma as a defined disease context. Curated from longitudinal records of 405 patients across two cancer centers, the benchmark comprises 941 patient-phase units across six sequential care phases and 17,688 patient-specific atomic criteria spanning five evaluation dimensions, with each assessment strictly restricted to decision-time clinical evidence. Evaluating 30 general-purpose and medical LLMs revealed that strong diagnostic performance does not carry over to downstream care. We evaluated 30 general-purpose and medical LLMs, showing that high diagnostic performance did not translate into improved downstream care. Instead, the dominant failure modes reversed across phases. Explicit decision errors dominated anatomical staging at 48.2%, whereas decision omissions dominated initial work-up and post-treatment follow-up at 33.4% and 30.4%, respectively. In the evaluated model set, medically adapted models showed higher omission rates than general-purpose models. Moreover, varying query granularity exposes a critical specification trade-off: broad open-ended requests degrade Decision Quality across all 30 models, while more detailed, checklist-like prompts raise Decision Quality but reduce Evidence Faithfulness and Safety Adherence. Furthermore, NPC-RubricBench demonstrates that static diagnostic benchmarks are insufficient to ensure consistent clinical reliability over time, highlighting the importance of phase-adaptive safeguards in multistage medical AI.",
-      "pdf_url": "https://arxiv.org/pdf/2610.35847v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.35847v1",
-      "published": "2026-10-26T17:56:26Z",
-      "updated": "2026-10-26T17:56:26Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MedJev: Evaluating Zero-Shot System-One Decision Making in Medicine",
-      "authors": [
-        "Simon A. Lee",
-        "Jiahang Sha",
-        "Moonseong Jeong",
-        "Yunbei Pan",
-        "Jeffrey N. Chiang"
-      ],
-      "abstract": "System One decision models such as Jev answer structured questions in a single forward pass without generating text, offering fast and computationally efficient clinical decision support. We evaluate MedJev, an open System One model that runs locally on a laptop, across ten medical benchmarks spanning medical knowledge, diagnosis, and patient level prediction using MIMIC IV and MIMIC IV ED. We compare MedJev against zero shot LLM baselines, published GPT results, and supervised models. MedJev achieves accuracies of 72.5 percent on MedQA, 75.4 percent on USMLE, and 80.1 percent on NEJM, approaching published GPT 4 performance while maintaining well calibrated confidence estimates (ECE 0.028 to 0.063). On patient level tasks, MedJev achieves an AUROC of 0.926 for In Hospital Mortality, exceeding XGBoost (0.902), but underperforms supervised models on operational outcomes such as ED Triage Admission (0.745 vs. 0.809). Patient level predictions also exhibit substantial miscalibration (In Hospital Mortality ECE 0.286). We introduce a lightweight, two parameter recalibration method that adapts predictions to local patient populations using 50 to 200 labeled examples, reducing ECE to 0.007. Our findings establish open System One models as a promising zero shot baseline for medical AI, combining competitive predictive performance with low computational cost and efficient local calibration. We release our code and evaluation harness to support future research.",
-      "pdf_url": "https://arxiv.org/pdf/2610.36006v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.36006v1",
-      "published": "2026-10-26T16:08:29Z",
-      "updated": "2026-10-26T16:08:29Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Beyond Federated Learning: Decentralized Agentic Systems for Self-Evolving Clinical Intelligence",
-      "authors": [
-        "Haoyuan Li",
-        "Mathias Funk",
-        "Aaqib Saeed"
-      ],
-      "abstract": "Clinical expertise is inherently distributed: it resides not in any single dataset or institution but in the accumulated reasoning experiences of thousands of clinicians navigating diverse patient populations, resource constraints, and evolving treatment protocols. Yet current approaches to scaling medical AI, from centralized large language models to federated learning, remain anchored to a data-centric paradigm that treats knowledge as static parameters to be aggregated. In this Perspective, we argue for a fundamental shift from data aggregation to experience aggregation. We propose Decentralized Agentic Systems (DAS), a framework in which distributed AI agents operating across healthcare institutions synthesize collective clinical intelligence by sharing abstracted reasoning trajectories rather than raw data or model parameters. Unlike federated learning, which averages numerical gradients across homogeneous model architectures, DAS exchanges structured records of clinical reasoning, specifically the sequence of observations, hypotheses, tool invocations, and outcome feedback that constitute diagnostic experience. We examine the architectural principles, deployment considerations, governance requirements, and critical open challenges of this framework, laying the groundwork for a collaborative medical AI ecosystem where distributed expertise autonomously adapts to the complexities of longitudinal patient care.",
-      "pdf_url": "https://arxiv.org/pdf/2610.35453v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.35453v1",
-      "published": "2026-10-26T13:50:33Z",
-      "updated": "2026-10-26T13:50:33Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "OneEEG: A Unified Signal-Visual Multimodal Language Model with Task-Aware Mixture of Projectors for Multi-Task EEG Understanding",
-      "authors": [
-        "Jiacheng Zhang",
-        "Xueyi Zhang",
-        "Xin Lu",
-        "Siqi Cai",
-        "Haizhou Li"
-      ],
-      "abstract": "Electroencephalography (EEG) is widely used in clinical assessment, brain-computer interfaces, and cognitive-state analysis, yet EEG modeling remains fragmented across task paradigms. Recent multimodal large language models (MLLMs) provide a promising interface for flexible multimodal reasoning, but their ability to understand EEG inputs remains limited. In this work, we propose OneEEG, a unified EEG-MLLM framework for multi-task EEG understanding. By training on our curated OneEEG-Instruct, a multi-task EEG instruction-tuning dataset, OneEEG jointly models numerical EEG representations and visual EEG representations, and introduces a task-aware Mixture of Projectors (MoP) to align heterogeneous EEG features across different task families with the LLM embedding space. We further establish OneEEG-Bench, a benchmark for evaluating current MLLMs and our method on multi-task EEG understanding. Experiments show that existing MLLMs have limited ability to interpret EEG inputs, while OneEEG achieves stronger performance by integrating numerical and visual EEG representations with task-aware EEG-to-LLM projection. Extensive ablations and analyses further reveal the effects of visual EEG renderings, MoP variants, router behavior, and feature dispersion across EEG tasks.",
-      "pdf_url": "https://arxiv.org/pdf/2610.35355v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.35355v1",
-      "published": "2026-10-26T12:46:40Z",
-      "updated": "2026-10-26T12:46:40Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "Being judged through the record: A Rosenhan-inspired test of psychiatric label sensitivity in large language models",
-      "authors": [
-        "Shaked Rosenblum",
-        "Teddy Lazebnik",
-        "Ziv Ben-Zion"
-      ],
-      "abstract": "The integration of large language models (LLMs) into clinical decision-making raises unresolved questions regarding diagnostic bias. We investigate whether a documented psychiatric history alters LLM recommendations when the current clinical evidence is identical. Using a counterfactual experiment inspired by Rosenhan's 1973 field study, we factorially varied diagnostic-history condition (no prior diagnosis stated vs. prior schizophrenia diagnosis) and current-evidence condition (voices ceased vs. voices persisted) within a clinical vignette. Across five LLMs (GPT-5.6 Sol, Claude Sonnet 5, Gemini 3.6 Flash, Grok 4.6, and Mistral Large 2512), we generated 20,000 model responses across independent queries. When evidence supported discharge, adding a prior schizophrenia diagnosis increased recommendations for continued hospitalization nearly fivefold, from 4.7% to 22.3% (risk difference, 17.5 percentage points; 95% CI, 16.2-18.8). This shift occurred across all five models (risk-difference range, 10.4-34.4 percentage points). In the same condition, reference concordance decreased from 95.3% to 77.7%, while stated decision confidence increased. Across all model-by-evidence contrasts, confidence increases corresponded to Cohen's d values of 0.35-1.09. Signal-detection analyses showed that the prior diagnosis shifted the decision criterion toward hospitalization across all five models and reduced discrimination between the two current-evidence conditions in three of them. When current evidence supported continued hospitalization, the label increased the recommendation for hospitalization from 92.6% to 97.0%.",
-      "pdf_url": "https://arxiv.org/pdf/2610.35326v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.35326v1",
-      "published": "2026-10-26T12:24:24Z",
-      "updated": "2026-10-26T12:24:24Z",
-      "categories": [
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "AskGLP1: A Knowledge Graph LLM Agent for Exploring GLP-1 Experience from Online Patient Narratives",
-      "authors": [
-        "Zhaoqian Xue",
-        "Anay Somani",
-        "Siddhartha Singh",
-        "Junting Mu",
-        "Zhongyin Wang",
-        "Haozheng Liu",
-        "Ayesha Khatun",
-        "Yeaeun Kwon",
-        "Renkai Ma",
-        "Siyuan Ma",
-        "Zhe He",
-        "Danxia Yu",
-        "Lingyao Li"
-      ],
-      "abstract": "GLP-1 medications are increasingly used for weight management, and many people share their experiences online. These narratives show why people take the drugs and what they experience, but they remain unstructured and disconnected from formal pharmacovigilance. We therefore present AskGLP1, a system that transforms online patient narratives into a knowledge graph (KG) and answers questions about medication experiences. Through an LLM-assisted pipeline grounded in the MedDRA terminology, AskGLP1 screens nearly 8.5 million Reddit posts for medication experiences and distills 163,135 of them, with 2,506 WebMD reviews, into a KG of 385,790 drug-side-effect and drug-purpose relations. We find that GLP-1 experiences are source- and drug-specific. Online narratives share the most common gastrointestinal symptoms with FAERS, but they foreground everyday burdens such as fatigue and food aversion, whereas FAERS reports more often include injection-site reactions and selected serious diagnoses such as pancreatitis. We further find that posts report less nausea and vomiting for tirzepatide than for semaglutide, more fatigue for Wegovy than Ozempic and for Zepbound than Mounjaro. Evaluations show that the agent answers with verifiable evidence and declines requests for medical advice. Our findings reveal gaps between what FAERS captures and what people report online, and they call for patient-centered approaches to pharmacovigilance. Code, prompts, and evaluation questions are available at https://github.com/ZhaoqianXue/AskGLP1.",
-      "pdf_url": "https://arxiv.org/pdf/2610.34987v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.34987v1",
-      "published": "2026-10-26T07:59:20Z",
-      "updated": "2026-10-26T07:59:20Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.SI"
-      ]
-    },
-    {
-      "title": "MedAdaptAgent: An Automatic Harness for Adapting Medical Imaging Models to New Sites",
-      "authors": [
-        "Hanxue Gu",
-        "Zhonghao Liu",
-        "Xingrui Gu",
-        "Kang Wang",
-        "Yang Yang"
-      ],
-      "abstract": "Reusing pretrained medical-imaging models offers an alternative to training from scratch. A model trained for the same task may perform poorly at a new hospital because imaging protocols and preprocessing differ. Effective adaptation depends on the model architecture, domain shift, and available labels and compute. Adaptation can improve scores on a small labeled set yet reduce performance on unseen data. We present MedAdaptAgent, an automatic harness that turns a supplied model, target data, and a free-text request into a new-site adaptation workflow. Its LLM-driven Adaptation Planner uses model-site evidence to choose compatible experiments and revise subsequent adjustments. The harness requires evidence of improvement over the pretrained model, then delivers the selected model as a complete, runnable package. Evaluation spans 26 segmentation and classification transfers across architectures and compute settings, with segmentation annotation budgets ranging from zero-shot transfer to few-shot adaptation. With 20 local annotations, mean segmentation Dice rises from 0.483 to 0.774 across 10 transfers, a 60.1% relative gain, with no harmful replacements. Mean classification AUROC rises from 0.810 to 0.837 across 13 transfers, a 3.4% relative gain. Comparing adapted models with the pretrained model reduces harmful classification replacements by 30.8% versus selecting the highest-scoring model on the available labels, using identical candidates. Seven public-model deployments demonstrate adaptation and reproducible package delivery across contrast and modality shifts. A CT-to-MRI study extends the evaluation to four LLM planners, including two open-weight models. We release the code on GitHub.",
-      "pdf_url": "https://arxiv.org/pdf/2610.34884v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.34884v1",
-      "published": "2026-10-26T05:56:00Z",
-      "updated": "2026-10-26T05:56:00Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "ClinVerse: A Realistic Multi-Agent Diagnostic Environment for Training and Evaluating Medical Agents",
-      "authors": [
-        "Sirry Chen",
-        "Fangke Chen",
-        "Xuanwen Ding",
-        "Wei Chen",
-        "Zhongyu Wei"
-      ],
-      "abstract": "Disease diagnosis is a key application of large language model (LLM) agents in healthcare. However, existing medical agents are primarily trained and evaluated with static question-answering data, providing limited opportunities to learn active information acquisition, examination decision-making, and dynamic clinical interaction. To address this limitation, we present ClinVerse, an interactive, real-data-grounded multi-agent environment designed for training and evaluating medical diagnostic agents. Built on ClinPatient, a scalable dataset comprising 150k diagnostic cases derived from real-world electronic health records, ClinVerse supports coordinated interactions among six specialized clinical roles. Specifically, a doctor agent starts from an initial patient complaint, progressively gathers clinical evidence through patient interviews and examination requests, and ultimately produces a diagnosis. For each interaction trajectory, a rule-based scoring framework quantifies information acquisition, examination ordering, and diagnostic accuracy. These trajectory-level scores serve as reward signals for agent training while also enabling scalable evaluation. In experiments, we evaluate various general-purpose and medical-domain models and show that nine self-evolution methods across three categories consistently improve agents' diagnostic capabilities within ClinVerse. We further analyze the interplay among model capability, environment feedback, and self-evolution methods.",
-      "pdf_url": "https://arxiv.org/pdf/2610.34878v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.34878v1",
-      "published": "2026-10-26T05:50:57Z",
-      "updated": "2026-10-26T05:50:57Z",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "DocTalk: Enhancing Medical Knowledge Retrieval via Fine-tuned Large Language Models with Chain-of-Thought Reasoning for Robust Clinical Decision Support",
-      "authors": [
-        "Asad Gohar",
-        "Md Ariful Islam Mozumder",
-        "Moon-Il Joo",
-        "Hee-Cheol Kim"
-      ],
-      "abstract": "Objective: The rapid advancement of large language models (LLMs) in healthcare has opened new possibilities for AI-assisted clinical decision-making; however, safe and effective deployment remains challenging because of hallucination and domain misalignment. This study introduces DocTalk, a doctor-assistive question-answering (QA) system designed to generate concise, chart-grounded responses from de-identified discharge summaries. Methods: We developed a high-fidelity data generation pipeline that produces 500 clinically relevant QA pairs through sentence-level decomposition, chain-of-thought-guided question formulation, and expert review. Six open-source LLMs, including three general-purpose and three biomedical models, were evaluated before and after parameter-efficient instruction tuning using Low-Rank Adaptation (LoRA). The framework integrates prompt engineering, in-context learning, and medically aligned evaluation to support factual and interpretable responses. Results: On DocTalk-QA, instruction tuning produced consistent improvements across lexical, semantic, and clinical fidelity metrics. The best-performing tuned model, Llama-3-Med42-8B, achieved ROUGE-L = 0.40, BERTScore-F1 = 0.76, and UMLS-F1 = 0.49. To examine external generalization beyond the DocTalk-QA dataset, the two best-performing models, Llama-3.1-8B-Instruct and Llama-3-Med42-8B, were evaluated on PubMedQA before and after instruction tuning. Accuracy improved from 0.931 to 0.977 for Llama-3.1-8B-Instruct and from 0.935 to 0.943 for Llama-3-Med42-8B. Conclusion: DocTalk was deployed as a secure web-based platform for interactive EHR querying. These findings suggest that clinically grounded instruction tuning can improve medical QA performance and support practical clinical decision support.",
-      "pdf_url": "https://arxiv.org/pdf/2610.34871v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.34871v1",
-      "published": "2026-10-26T05:35:26Z",
-      "updated": "2026-10-26T05:35:26Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "An Agentic AI Workflow for Liver Lesion Segmentation and Structured Radiology Reporting",
-      "authors": [
-        "Fatma Ahmed Mansour",
-        "Rahatara Ferdousi",
-        "Manar Fathy Elshenawy"
-      ],
-      "abstract": "Despite advances in automated liver lesion segmentation, a gap remains between image-derived predictions and clinically interpretable radiology reports. Bridging this gap requires quantitative measurements that are both reproducible and traceable. We present an evidence-grounded agentic AI framework that connects liver and lesion segmentation with deterministic quantification and structured reporting. TotalSegmentator-based nnU-Net models delineate the liver, Couinaud segments, and lesions, while computational tools extract volumes, dimensions, counts, and anatomical locations. A large language model (LLM) organizes these measurements into a predefined reporting schema, with numerical consistency checks against source measurements. On 51 LiTS cases, the segmentation stage achieved a liver Dice score of 0.947, lesion sensitivity of 75.6%, and positive predictive value of 68.9%. Exploratory screening of 25,494 MERLIN reports identified 10,208 (40.0%) with liver-related abnormalities. By connecting quantitative imaging evidence with agentic report generation, this work takes a step toward human-centered medical AI that prioritizes traceability and clinical relevance.",
-      "pdf_url": "https://arxiv.org/pdf/2610.34599v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.34599v1",
-      "published": "2026-10-25T21:55:31Z",
-      "updated": "2026-10-25T21:55:31Z",
+      "abstract": "Radiological risk stratification and management planning are essential downstream tasks in medical imaging. Automating these tasks is challenging because clinical guideline criteria are distributed across prose, tables, and cross-referenced definitions. We present Guideline-derived Decision Graph (GDGraph), a framework that decouples guideline compilation from case evaluation. During compilation, a large language model partitions guidelines into section-based chunks, extracts local decision subgraphs with linked definitions, and aggregates related branches into an executable decision graph. During inference, a fast System One model answers localized clinical questions while deterministic traversal resolves Boolean logic, turning opaque single-pass predictions into a traceable decision path without task-specific training. Across 347 cases spanning renal cyst, adnexal mass, and thyroid nodule guidelines, GDGraph improves System One accuracy from 57.3% to 90.8%, outperforming retrieval-augmented GPT-4o (80.1%) and graph-guided GPT-4o with chain-of-thought (82.7%) at substantially lower latency and cost. The source code will be available.",
+      "pdf_url": "https://arxiv.org/pdf/2610.40327v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.40327v1",
+      "published": "2026-10-29T15:56:27Z",
+      "updated": "2026-10-29T15:56:27Z",
       "categories": [
         "cs.CV",
-        "cs.LG"
+        "cs.AI"
       ]
     },
     {
-      "title": "Retrospective Comparison of Radiation Oncology Patient Message Responses Generated by Epic and Institutionally Managed LLMs",
+      "title": "EnvOS: Auditing Computer-Use Agents When the World Moves On : Phenomenon-Based Task Construction, Certification, and Evidence-Based Evaluation",
       "authors": [
-        "Meiyun Cao",
-        "Federico Mastroleo",
-        "Shuoyang Wei",
-        "Yuexing Hao",
-        "Srinivas Seetamsetty",
-        "Keldon K. Lin",
-        "Madhurya Reddy",
-        "Yuzhen Ding",
-        "Jason Holmes",
-        "Jonathan E. Moonen",
-        "Shyanne L. Dobbs",
-        "Diego Santos Toesca",
-        "Mark Waddle",
-        "Wei Liu"
+        "Ankush Kadu",
+        "Athira Gopal",
+        "Niharika Singh",
+        "Arpit Jain",
+        "Aswanth Krishnan"
       ],
-      "abstract": "We retrospectively compared Epic-generated draft replies with institutionally managed hybrid GPT-4.1 and Gemini 2.5 Pro responses to 51 selected single-turn radiation oncology messages. Six clinicians, blinded to response source, rated overall quality on a five-point scale and perceived editing effort on a four-point scale. Mixed-effects models accounted for repeated ratings by message and clinician. Adjusted overall-quality means were 2.95 for Epic, 4.27 for hybrid GPT-4.1, and 4.39 for hybrid Gemini 2.5 Pro. Corresponding editing-effort means were 2.38, 1.46, and 1.41, with lower scores indicating less perceived effort. Both hybrid models received more favorable ratings than Epic for both outcomes (all Holm-adjusted P < 0.001), without a statistically significant difference between the hybrid models. These findings support prospective evaluation of clinician-supervised draft generation, though editing time and patient outcomes were not measured, and clinical safety was not established.",
-      "pdf_url": "https://arxiv.org/pdf/2610.34464v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.34464v1",
-      "published": "2026-10-25T17:36:47Z",
-      "updated": "2026-10-25T17:36:47Z",
+      "abstract": "Computer-use agents built on large language models (LLMs) work in software that can change while they act: an appointment moves, a policy is revised, a record is updated. Testing agents under such changes is harder than it looks. When an agent fails, the cause may be the agent, but it may also be a change that did not fire as intended, an update the agent never received, or a grader that scored the episode wrongly. We introduce EnvOS, a framework for building and certifying environments that change mid-task. Before any agent runs, EnvOS checks that each change fires correctly, that the task remains solvable, and that the grader separates correct from incorrect behavior; after each run, separate code re-checks the verdict from archived evidence. We apply it to stale information, where a value the agent has already seen changes before the agent acts on it. In clinic booking, Claude Opus 5 succeeds on 0/16 tasks when nothing extra is shown, 2/16 when reminded to re-check the source, and 15/16 when the updated value is shown; the gain over the reminder holds after correcting for all tests (p = 0.00293). In insurance-claim approval, Opus 5 re-checks on its own and succeeds on 10/10, whereas Claude Sonnet 5 rises from 1/10 to 9/10 when the current policy is shown again, a gain significant in its pre-registered test but not after correcting for all tests. Whether an agent caught a change thus varied with the model and the interface. We also stress-test the grading itself: on corrupted episodes designed blind from the rules, the EnvOS pipeline accepted none of 26 as clean, and on an externally generated set it caught 25 of 39, against 4 for simple log checks. Because every EnvOS environment is generated from a seed and graded by an audited automatic verifier, the same environments are natural candidates for training agents with reinforcement learning from verifiable rewards.",
+      "pdf_url": "https://arxiv.org/pdf/2610.40246v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.40246v1",
+      "published": "2026-10-29T15:17:29Z",
+      "updated": "2026-10-29T15:17:29Z",
       "categories": [
-        "physics.med-ph"
+        "cs.AI",
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Assessing AI Companion Chatbot Safety for Vulnerable Users: A Crisis-Stage Multi-Platform Evaluation",
+      "authors": [
+        "Huanyue Liao",
+        "Seok Min Lim",
+        "Yan Ling Lim",
+        "Shi Min Cheng",
+        "Kellin Pelrine",
+        "Chen Hui Ong"
+      ],
+      "abstract": "AI companion chatbots are increasingly used by vulnerable individuals, including adolescents in suicidal crisis, for emotional support. Existing safety evaluations focus on base models, leaving gaps in product-level assessment, crisis-stage sensitivity, and comparisons between companion apps and general-purpose LLMs. We introduce MIRROR-Eval (Multi-turn Interaction Risk Review: Observing suicidal-crisis Responses), a dataset of 960 annotated 20-turn conversations across eight deployed platform configurations, six clinically grounded personas, and two crisis stages: ideation and explicit planning. An LLM-as-a-Judge pipeline applies an expert-reviewed rubric covering user risk severity, chatbot risk awareness, and intervention behavior. We observe a three-tier harm structure: companion apps (Character.AI and Replika) and Grok 4.3 form a high-harm tier; Gemini 3.1 Pro is mid-range; GPT-5.5 and Claude Sonnet 5 show substantially lower harm. At planning, companion apps show increased glorification and normalisation, advancement toward harmful action, and harmful methods and instructions. Crisis recognition and empathetic language do not ensure safe responses. These findings highlight the need for product-level safety evaluation across crisis stages. Dataset and code: https://huggingface.co/datasets/imda-biztech/MIRROR-Eval. Warning: this paper includes examples that may be offensive or harmful.",
+      "pdf_url": "https://arxiv.org/pdf/2610.39782v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.39782v1",
+      "published": "2026-10-29T10:32:06Z",
+      "updated": "2026-10-29T10:32:06Z",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Evaluating Conversational Explainability in Healthcare: Comparing the Explainability Assistant and a Traditional XAI Dashboard",
+      "authors": [
+        "Eduard Barbu",
+        "Rodion Krjut\u0161kov",
+        "Anneli Uusk\u00fcla"
+      ],
+      "abstract": "Conversational interfaces may make explainable AI (XAI) more accessible to users without machine learning expertise, but their benefits over dashboards remain insufficiently characterised in healthcare. Existing systems have typically been evaluated in isolation, leaving unclear whether conversational interaction improves interpretability beyond the underlying explanation methods.\n  We report a within-subjects user study comparing the Explainability Assistant, an LLM function-calling conversational XAI system, with a traditional dashboard for explaining a heart disease classification model trained on the Cleveland Heart Disease dataset. Both interfaces expose the same Decision Tree classifier and post-hoc explanation methods: SHAP feature attribution, DiCE counterfactuals, and what-if analysis. This design supports comparison of interaction modalities while holding the model and explanation methods constant.\n  Five participants with healthcare backgrounds, from medical students to practising clinicians and public health researchers, completed parallel task blocks on both interfaces; three participated in follow-up interviews. Task accuracy, Likert ratings, free-text questionnaire responses, and interviews revealed complementary strengths and weaknesses rather than a clear preference for either modality. The assistant offered easier entry and patient-specific explanations, while the dashboard supported simultaneous inspection of global and local information. All three interview participants recommended integrating conversational and dashboard elements within a single clinical workflow.",
+      "pdf_url": "https://arxiv.org/pdf/2610.39634v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.39634v1",
+      "published": "2026-10-29T08:57:21Z",
+      "updated": "2026-10-29T08:57:21Z",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "BRIDGE: Learning Brain-Gut Metabolic Evidence for Alzheimer's Disease Diagnosis",
+      "authors": [
+        "Pengli Zhu",
+        "Ruxi Chang",
+        "Tianliang Yao",
+        "Yu Jiang",
+        "Shengyuan Liu",
+        "Yiyang Lin",
+        "Xiaoyi Duan",
+        "Shuang Wu",
+        "Yixuan Yuan",
+        "the Alzheimer's Disease Neuroimaging Initiative"
+      ],
+      "abstract": "Alzheimer's disease (AD) diagnosis may benefit from gut metabolic information associated with brain-gut interactions, yet existing models largely analyze cerebral glucose metabolism alone. Although whole-body fluorodeoxyglucose positron emission tomography (FDG-PET) can provide paired brain-gut observations, routine brain examinations rarely include gut imaging, limiting direct use of this information for diagnosis. In this paper, we present BRIDGE (Brain and Gut Representation Integration via Distribution-Guided Enhancement), a two-stage framework for transferring brain-gut metabolic knowledge to brain-only diagnosis. Specifically, BRIDGE integrates a conditional brain-to-gut latent transport module and a disease-evidence-guided cerebral pathway to capture subject-specific cross-organ correspondence and disease-relevant cerebral representations. For the cerebral pathway, a large language model (LLM) helps organize literature-derived descriptors into human-approved semantic anchors that guide feature learning. Additionally, we introduce a counterfactual-guided residual fusion mechanism, which uses matched and non-matched virtual-gut evidence to supervise a confidence gate and dynamically regulate the contribution of transported cross-organ information. At inference, BRIDGE exploits complementary gut-related context using brain PET alone, without measured gut PET. Extensive experiments across public and private cohorts demonstrate that BRIDGE outperforms brain-only and cross-organ baselines, achieving AUC gains of 6.0% and 5.2% over its brain-only counterpart for CN/MCI and CN/AD diagnosis, respectively. Notably, its ability to transfer complementary brain-gut metabolic context while preserving brain PET as the sole inference input highlights its potential for clinically practical diagnosis. Our code is available at https://github.com/CUHK-AIM-Group/BRIDGE.",
+      "pdf_url": "https://arxiv.org/pdf/2610.39520v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.39520v1",
+      "published": "2026-10-29T07:18:10Z",
+      "updated": "2026-10-29T07:18:10Z",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "title": "Integrating Heterogeneous Echocardiography AI Outputs in Language Space: Learnable Late Fusion with a Supervised LLM",
+      "authors": [
+        "Ryo Takizawa",
+        "Tempei Kabayama",
+        "Chiemi Yamazaki",
+        "Shun Kitamura",
+        "Ryo Matsuoka",
+        "Yuta Ando",
+        "Satoshi Kodera",
+        "Norihiko Takeda"
+      ],
+      "abstract": "View- and target-specific echocardiography AI models capture useful but complementary information and may not achieve sufficient predictive performance in isolation. A learned ensemble is a natural way to combine these outputs, but heterogeneous models typically require each output to be converted into a binary decision, probability, confidence score, or fixed-length feature vector. We developed a supervised large language model (LLM)-based late-fusion module that directly aggregates view-specific predicted finding statements and predicted measurements in language space and learns a case-level fusion function. In patient-level three-fold cross-validation of 859 examinations from 646 patients, the proposed method integrated heterogeneous outputs within a single framework, performed comparably to the best-performing reference strategy evaluated, and outperformed a general-purpose LLM without task-specific training. These results suggest that a supervised LLM can combine multiple upstream models without model-specific output conversion or feature engineering that requires medical knowledge.",
+      "pdf_url": "https://arxiv.org/pdf/2610.39464v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.39464v1",
+      "published": "2026-10-29T06:36:39Z",
+      "updated": "2026-10-29T06:36:39Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "What Makes Medical Examination Items Difficult? Using Large Language Models to Explore Patterns Associated With Empirical Item Difficulty",
+      "authors": [
+        "Xiaomeng Xiong",
+        "Marcus Walker",
+        "Yanlin Jiang"
+      ],
+      "abstract": "Research on medical item difficulty has largely focused on prediction rather than on identifying interpretable patterns associated with empirical difficulty. This study used empirical difficulty labels to guide large language models (LLMs) in inducing difficulty rubrics and examined how rubric guidance affected LLM difficulty judgments. Using training items and their empirical difficulty estimates from the United States Medical Licensing Examination (USMLE) and the Physician Assistant National Certifying Examination (PANCE), Claude Opus 5 induced separate rubrics for absolute and pairwise difficulty judgment. None of the induced rubrics treated surface features, such as stem length, option count, or images, as major sources of difficulty. Several patterns emerged across both examinations, including cue convergence, misleading cues, and option competition, although their specific forms differed. Retrieval of knowledge that could not be derived from the stem was particularly prominent in the PANCE rubrics, whereas the USMLE rubrics placed greater emphasis on integrating multiple clinical cues. We compared commercial and open-weight LLMs on held-out items under unguided and rubric-guided conditions. Rubric guidance changed how models used the difficulty scale but did not consistently improve performance. In absolute judgments, guidance encouraged broader use of the scale and generally improved coarse-grained agreement, without consistently improving rank ordering. In pairwise comparisons, its effects varied across models and examinations, and judgments became more sensitive to presentation order. These findings suggest that the value of label-guided rubric induction may lie more in generating interpretable, testable hypotheses from empirical difficulty data than in reliably improving difficulty judgments.",
+      "pdf_url": "https://arxiv.org/pdf/2610.39373v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.39373v1",
+      "published": "2026-10-29T05:04:10Z",
+      "updated": "2026-10-29T05:04:10Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Latent Decision Flow Rewards for Clinical Guideline Reasoning",
+      "authors": [
+        "Gaurav Bhatt",
+        "Marinka Zitnik"
+      ],
+      "abstract": "Clinical practice guidelines encode evidence-based recommendations as conditional decision flows, which makes them a natural source of process supervision for training reasoning models. Two properties of clinical reasoning make this supervision difficult to use. A decision flow consistent with a guideline does not by itself determine the correct answer for a given patient, which we call the path--answer gap, and several valid decision flows can support the same clinical decision, which we call path multiplicity. Current training approaches address parts of this problem. Answer rewards supervise the final decision, and process rewards computed against a reference flow supervise one valid decision flow per case. Supervised fine-tuning on annotated flows teaches guideline-consistent reasoning but constrains the model to one trajectory per case and can reduce answer accuracy. We introduce GUIDER, a method that jointly optimizes a decision flow controller and a reasoning policy. The controller learns to generate plausible decision flows from guideline-derived supervision, and the policy learns to generate a decision flow and a final answer for each patient case. GUIDER computes the process reward for the policy over several controller-generated flows, which accounts for path multiplicity, and gates this reward on answer correctness, which addresses the path--answer gap. Joint training allows the process supervision to evolve with the policy. On MedGUIDE, GUIDER with Qwen3-14B achieves 82.5 weighted accuracy and 73.5 guideline adherence, 3.3 and 3.1 points above the strongest clinical reinforcement learning baseline. With Qwen3-14B and Gemma4-12B backbones, GUIDER also improves over CRPO, MRPO, and FaithMed on the out-of-domain benchmarks AMEGA-LLM, RealMedQA, and CancerGUIDE.",
+      "pdf_url": "https://arxiv.org/pdf/2610.38709v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.38709v1",
+      "published": "2026-10-28T19:06:23Z",
+      "updated": "2026-10-28T19:06:23Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Benchmarking decision models against generative large language models on medical multiple-choice questions",
+      "authors": [
+        "Oscar Freyer",
+        "Daniel Glauert",
+        "Moritz Hofmann",
+        "Max Ostermann",
+        "Stephen Gilbert",
+        "Jakob Nikolas Kather"
+      ],
+      "abstract": "Medical workflows often require selecting among predefined options. We compared 13 decision models with 15 generative large language model configurations, including different reasoning settings, using 1,273 four-option MedQA questions under text-only conditions. Accuracy ranged from 67.71% to 89.08% for decision models and from 78.32% to 96.86% for generative configurations. Among the tested configurations, Mercury Decide had the lowest mean final-attempt cost (USD 0.0069 per 1,000 questions), while Clef Omni had the shortest median request duration (0.291 seconds). Decision-model probabilities distinguished correct from incorrect answers, but error rates among answers assigned probabilities of at least 0.90 ranged from 1.71% to 12.77%. Answer agreement across three runs ranged from 92.30% to 100%, while probability repeatability varied. Decision models offered resource advantages alongside lower peak accuracy; selecting models for medical workflows requires considering probability quality and repeatability together with accuracy and the resources needed to detect and correct errors.",
+      "pdf_url": "https://arxiv.org/pdf/2610.38448v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.38448v1",
+      "published": "2026-10-28T08:25:35Z",
+      "updated": "2026-10-28T08:25:35Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LLMs as Judges and Examinees for Medical Item Difficulty Prediction",
+      "authors": [
+        "Xiaomeng Xiong",
+        "Marcus Walker",
+        "Yanlin Jiang"
+      ],
+      "abstract": "Predicting medical item difficulty from item text alone remains challenging. Prior work has largely relied on linguistic features or text representations derived from general-purpose and domain-specific language models, but predictive performance has remained modest. This study takes a different approach by using difficulty-related signals that emerge when open-weight large language models (LLMs) interact with test items. Using USMLE and PANCE medical licensure examination items, we examined LLMs in two roles. As judges, the models provided absolute difficulty ratings and pairwise difficulty comparisons. As simulated examinees, they generated response-based signals including correctness, keyed-option probability, response entropy, and the probability margin between the top two options. We then combined the strongest judgment and response signals with baseline item features in downstream prediction models. Pairwise difficulty judgment was the most consistent individual LLM signal across both datasets, while simulated-examinee signals and absolute judgments provided complementary information in some feature combinations. The best configurations reached a Spearman correlation of $\u03c1$ = .447 on USMLE, exceeding the best system in the 2024 BEA shared task ($\u03c1$ = .25), and $\u03c1$ = .494 on PANCE. These results were comparable to direct absolute judgments from the proprietary frontier model Claude Opus 5 ($\u03c1$ = .443 and .488, respectively). Overall, judgment and response signals from open-weight LLMs captured difficulty-related information beyond text representations. Because these models can be deployed locally, the approach offers a practical option for predicting the difficulty of unreleased or high-security test items.",
+      "pdf_url": "https://arxiv.org/pdf/2610.38402v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.38402v1",
+      "published": "2026-10-28T07:46:54Z",
+      "updated": "2026-10-28T07:46:54Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Fu-TCM: a multimodal large language model that learns traditional Chinese medicine diagnostic reasoning",
+      "authors": [
+        "Jiahang Xie",
+        "Tong Jin",
+        "Lingfei Wu",
+        "Yaping You",
+        "Jie Huang",
+        "Yuanchang Jin",
+        "Weikang Gong",
+        "Wei Cheng",
+        "Jia You",
+        "Pan Sun",
+        "Jianfeng Feng",
+        "Hongcheng Guo"
+      ],
+      "abstract": "Large language models (LLMs) are advancing in multimodal understanding and reasoning, accelerating medical model development. Traditional Chinese medicine (TCM) uses evidence from the four examinations to determine disease location and nature, differentiate syndromes and guide treatment. This diagnostic process constitutes a complete chain of reasoning. We present Fu-TCM, a multimodal TCM LLM trained on data retained after cleaning and filtering an initial collection of approximately 7.12 million examples derived from classical texts, textbooks, medical images, clinical cases and publicly available datasets. The model was further optimized using Bianzheng-Grounded Policy Optimization (BGPO), which explicitly targets syndrome differentiation through rewards for response format, intermediate TCM reasoning fields and final syndrome predictions. Fu-TCM-27B led all six benchmarks spanning TCM reasoning, text and vision, achieving a macro-average accuracy of 81.01% and surpassing the strongest reference model with complete results across all six benchmarks by 7.13 percentage points. Its largest margin was 11.90 points on Fu-bianzheng. Case-level analyses further showed a positive association between intermediate-field accuracy and final syndrome-selection accuracy in most evaluated models. These findings suggest that TCM syndrome differentiation may be computationally learnable and that structured reasoning supervision can improve performance across TCM tasks.",
+      "pdf_url": "https://arxiv.org/pdf/2610.38333v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.38333v1",
+      "published": "2026-10-28T06:33:04Z",
+      "updated": "2026-10-28T06:33:04Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Rubricon: Automated Rubric Generation and Refinement for LLM Evaluation and Training",
+      "authors": [
+        "Ulyana Tkachenko",
+        "Hui Wen Goh",
+        "Guram Gogia",
+        "Jonas Mueller"
+      ],
+      "abstract": "Rubrics enable reward assignment on tasks without verifiable answers, but are expensive to manually produce from scratch. We present Rubricon, a pipeline that generates discriminative rubrics without requiring human preference labels, rubric annotation, or generator-model training. Using any LLM, Rubricon samples multiple rubrics, selects the most discriminative candidate, adds criteria to capture overlooked requirements or response flaws, and prunes criteria that are misaligned or shallow. Alongside LLM self-critique and test-time scaling, Rubricon uses observed criterion pass rates on example model responses to guide refinement. Across five professional, consumer, clinical, and general-use LLM benchmarks, Rubricon produces rubrics whose scores of frontier LLM responses exhibit 9% greater alignment with labor-intensive expert-authored rubrics, compared to the best alternative synthetic rubric generation method among RRD, QSRG, OpenRubrics, and agentic generation via harnesses like Codex. On HealthBench, post-training a Qwen3.5-9B model with Rubricon rubrics yields 4.5% better performance than training with rubrics from the strongest alternative synthetic rubric generator, RRD.",
+      "pdf_url": "https://arxiv.org/pdf/2610.38220v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.38220v1",
+      "published": "2026-10-28T03:18:11Z",
+      "updated": "2026-10-28T03:18:11Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Disparity Laundering: Consensus Without Fairness in Clinical Multi-Agent Systems",
+      "authors": [
+        "Xiaoyang Wang",
+        "Tianrui Wang",
+        "Christopher C. Yang"
+      ],
+      "abstract": "Clinical large language models are increasingly fielded as multi-agent teams, on the assumption that deliberation averages out individual error. It does not average out bias. Across a full factorial of five model families and four aggregation topologies on 120 real MIMIC-IV emergency cases under counterfactual demographic swaps, no configuration neutralizes the disparity: all 20 cells commit the direction of their agents' independent answers, giving Black patients more acute triage. Every model has a topology that amplifies its baseline gap, but which one varies by model, so no design is reliably safe or reliably amplifying: the disparity is relocated, never removed. Late-stage fixes fail: fairness instructions and demographic masking leave the gap untouched, and per-agent self-debiasing widens it, because the bias is already encoded in the agents' ordinary clinical numbers. We call this disparity laundering; the audits now applied to clinical AI, per model, per output, per version, can certify the parts but never the committed decision. Interventions close the gap exactly when they make counterfactual versions visible inside the system and pool them, through deliberation, into the committed decision. A diverse-perspective ensemble does both while keeping the team, with no retraining or architectural change: the disparity falls by 67 to 94% where all five perspectives pool at every round, and the one topology that never pools them is the one it cannot reliably repair. Medical multi-agent systems do not filter demographic bias; they launder it into plausible decisions no single-version audit can catch, and the only defense is to make the bias visible.",
+      "pdf_url": "https://arxiv.org/pdf/2610.38215v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.38215v1",
+      "published": "2026-10-28T03:10:28Z",
+      "updated": "2026-10-28T03:10:28Z",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
       ]
     }
   ]

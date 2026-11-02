@@ -1,8 +1,182 @@
 {
-  "generated_at_utc": "2026-11-01T05:27:17.662780Z",
+  "generated_at_utc": "2026-11-02T05:26:11.630592Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Same Question, Different Answers: Auditing Persona-Dependent Variation in Six LLMs on Smoking-Cessation Advice",
+      "authors": [
+        "Artin Yousefi",
+        "Aizierjiang Aiersilan",
+        "Lorien C Abroms",
+        "David A Broniatowski"
+      ],
+      "abstract": "Hundreds of millions of people now ask large language model (LLM) chatbots for health advice, which raises a question that is simple to pose and hard to answer: does everyone get the same advice? We audit six widely deployed LLMs from four providers on smoking cessation, a domain with codified clini- cal guidance and substantial public-health stakes, by putting the same four cessation questions to twelve user personas that differ in life stage, self-described expertise, and smoking history, for a total of 2,880 responses. What the models say depends on who appears to be asking. Every model named FDA-approved prescription cessation medications less often to teen personas than to adult personas, by 32 to 67 percentage points, and in five of six models a persona presenting health- care expertise received fewer facts than a persona presenting none. We then evaluate one deployable intervention: a short system prompt specifying a factual floor, the set of core med- ical facts every user should receive when they are relevant, while leaving tone, vocabulary, and framing free to adapt. The prompt narrows persona differences in every model, but its effect on overall fact coverage varies in both magnitude and direction across models, so a prompt validated on one system cannot be assumed to transfer to another. Two cautions frame these results. Equal mention rates are not always the correct clinical target, because prescription cessation pharmacother- apy is not recommended for minors, so a defensible factual floor must be age-aware rather than uniform. And because our personas vary on several attributes at once, we report scenario- level differences rather than isolated effects of age or expertise. We release all 2,880 responses and the analysis code.",
+      "pdf_url": "https://arxiv.org/pdf/2610.42039v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.42039v1",
+      "published": "2026-10-30T17:03:35Z",
+      "updated": "2026-10-30T17:03:35Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Advancing Clinical Trial Outcome Prediction with Domain-Specific Large Language Models",
+      "authors": [
+        "Burak Bakkar",
+        "Hana Moalla",
+        "Mohamed Salem Jedidi",
+        "Haifa Ben Messaoud",
+        "Nicolas Lopez Carranza"
+      ],
+      "abstract": "Clinical trial failures are a major barrier to efficient drug development, incurring substantial costs and delaying patient access to effective therapies. Structured approaches such as the Hierarchical Interaction Network (HINT) predict trial outcomes by explicitly modelling interactions between drugs, diseases and protocols, but make limited use of the free text in trial registrations. We evaluate two domain-specific language models, BioBERT (108M parameters) and BioMistral (7B parameters), for phase-level outcome prediction on the TOP benchmark (12,477 trials), representing each trial as text built from ten ClinicalTrials.gov fields. We compare fine-tuning (full fine-tuning for BioBERT, low-rank adaptation for BioMistral) with probing, in which the pretrained model is frozen and only a lightweight classifier is trained on its embeddings. On the held-out test set of each phase, all four language-model variants achieved higher ROC-AUC (0.613--0.772) and PR-AUC (0.649--0.901) than the published HINT results, corresponding to relative PR-AUC gains of 10--20\\%. F1 differences were small and mixed, and no model, including HINT, clearly exceeded the F1 of a trivial classifier that predicts success for every trial. Under the configurations tested, probing performed comparably to fine-tuning: fine-tuned models scored highest on ROC-AUC and PR-AUC in Phases I and II, and frozen BioMistral embeddings in Phase III (ROC-AUC 0.772; PR-AUC 0.901), although most differences between variants were below 0.03 and were not tested for significance. These results suggest that pretrained biomedical representations already encode signal relevant to trial outcome, and that probing is a computationally cheaper alternative to fine-tuning for this task.",
+      "pdf_url": "https://arxiv.org/pdf/2610.41710v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.41710v1",
+      "published": "2026-10-30T13:17:00Z",
+      "updated": "2026-10-30T13:17:00Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "A prospective randomized study of patient-centered AI for clinical visit preparation",
+      "authors": [
+        "Xincheng Tan",
+        "Matthew Thompson",
+        "Xiang Ji",
+        "Angelica Willis",
+        "Will Vaughan",
+        "Roma Ruparel",
+        "Michael A. Sanchez",
+        "Sean Chang",
+        "Joseph Xu",
+        "Bhavna Daryani",
+        "Preeti Singh",
+        "Pinal Bavishi",
+        "Kejia Chen",
+        "Fan Zhang",
+        "Priya Gupta",
+        "Ernest Lim",
+        "Christina Chen",
+        "Bob Lou",
+        "Dimitrios Antos",
+        "Zach Wasson",
+        "Ray Luo",
+        "Fadi Yousif",
+        "Florence Thng",
+        "Mark Malhotra",
+        "Joseph Breda",
+        "Daniel McDuff",
+        "Kavi Goel",
+        "Katherine Chou",
+        "Dale R. Webster",
+        "Avinatan Hassidim",
+        "Yossi Matias",
+        "Po-Hsuan Cameron Chen",
+        "Yun Liu",
+        "Mike Schaekermann",
+        "Quang Duong",
+        "Jackie M. Barr"
+      ],
+      "abstract": "Patients often arrive at brief, time-constrained clinical visits unsure of what to expect or ask, and millions of adults now turn to general-purpose AI chatbots to prepare beforehand. Yet whether conversational AI improves visit readiness remains unclear. We designed a large language model (LLM)-based visit preparation agent to guide patients before an appointment by gathering clinical context, setting visit expectations, providing relevant health information, building a prioritized list of questions for their clinician, and generating a summary. In a prospective consented randomized study in the Google Health app, 802 U.S. adults held 866 health-related conversations with the visit preparation agent (standard or concise variant) or a minimally prompted control chatbot built on the same LLM. The visit preparation agent significantly outperformed the control across blinded clinician evaluations and patient self-reports. In clinician reviews of completed sessions (n = 272), the agent achieved a 16.6% higher rate of comprehensive preparation (67.2% vs. 50.6%; P < 0.05) and an 8.5% higher rate of alignment with patients' health context (98.9% vs. 90.4%; P < 0.01), while maintaining high medical safety and appropriateness across all study arms. Patient post-surveys (n = 460) showed 16.8% higher visit preparedness (73.8% vs. 57.0%; P < 0.01), 14.3% higher confidence in knowing what to ask (81.4% vs. 67.1%; P < 0.01), and 12.0% higher overall satisfaction (74.0% vs. 62.0%; P < 0.05). Clinician and participant metrics were not significantly correlated, indicating that expert review and patient self-assessment capture complementary dimensions of patient-facing AI. These findings suggest that LLM chatbots can safely help patients prepare for clinical visits, with greater benefit when following a structured workflow, and motivate future studies on in-visit communication and clinical outcomes.",
+      "pdf_url": "https://arxiv.org/pdf/2610.41437v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.41437v1",
+      "published": "2026-10-30T08:39:59Z",
+      "updated": "2026-10-30T08:39:59Z",
+      "categories": [
+        "cs.HC",
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "RECITE: Revising Eligibility Criteria Incorporating Textual Evidence",
+      "authors": [
+        "Russell Ro",
+        "Reza Abbasi-Asl"
+      ],
+      "abstract": "Overly restrictive eligibility criteria contribute to widespread enrollment failure in clinical trials, yet published recommendations for how specific criteria should be broadened remain disconnected from trial design at scale. We introduce RECITE (Revising Eligibility Criteria Incorporating Textual Evidence), a framework for automated discovery, extraction, and implementation of evidence-based eligibility criteria revisions. RECITE uses protocol amendment documents from ClinicalTrials.gov to construct a dataset of 11,913 curated instances across 5,735 trials, each pairing original criteria with documentary evidence and target revisions. We benchmark fifteen LLM configurations under truncated-to-context-window and retrieval-augmented generation conditions, on a 3,116-instance sample under an LLM-as-judge protocol validated against ten domain experts (judge vs. human quadratic-weighted Cohen's $\u03ba_{qw} = 0.694 \\pm 0.096$). The best open-weight model, Gemma 2 9B, achieves $\u03ba_{qw}$-aligned ordinal score $3.0 \\pm 0.9$ on a 0--4 scale (normalized 0.742) and the best closed-weight model, GPT-4o, reaches $3.0 \\pm 0.8$ (normalized 0.745). Using an agentic literature discovery system, we then identified 44 paper--trial matches across five publications providing trial-design and EC-modification evidence. Our findings suggest that existing clinical knowledge can be operationalized into actionable trial design recommendations.",
+      "pdf_url": "https://arxiv.org/pdf/2610.41368v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.41368v1",
+      "published": "2026-10-30T07:34:50Z",
+      "updated": "2026-10-30T07:34:50Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "PsyInterviewee: Informational Invariance and Relational Adaptivity in Mental Health Interview Simulation",
+      "authors": [
+        "Jiawei Zhang",
+        "Huachuan Qiu",
+        "Ruocheng Guo",
+        "Zijun Shi"
+      ],
+      "abstract": "LLM-based simulated interviewees support interviewer training and the evaluation of mental health interviewing systems. Existing studies have primarily focused on improving human-likeness through richer patient profiles and behavioral modeling. However, human-likeness alone does not establish their reliability. Reliable simulation requires preserving profile-grounded clinical facts (informational invariance) while adapting disclosure and interaction behavior to the interview (relational adaptivity). To this end, we introduce PsyInterviewee, which separates a protected truth channel from a dynamic interaction channel and verifies generated clinical claims against the profile. Specifically, asymmetric write permissions allow dialogue context to update disclosure and behavioral states without authorizing new clinical facts; these states guide what profile-supported information is revealed and how it is expressed. In an automated evaluation of interactions between LLM-based interviewers and interviewees, PsyInterviewee achieves higher scores than four representative baselines on most metrics across both axes, as assessed by two LLM judges. Ablations suggest that the two channels contribute to clinical grounding and response modulation, respectively.",
+      "pdf_url": "https://arxiv.org/pdf/2610.41289v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.41289v1",
+      "published": "2026-10-30T05:50:25Z",
+      "updated": "2026-10-30T05:50:25Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "BABA-Bench: Evaluating Long-Horizon Patient-Advocacy Agents",
+      "authors": [
+        "Shriram Vasudevan",
+        "Videet Mehta",
+        "Connor Sweeney"
+      ],
+      "abstract": "An LLM agent that helps a patient get care must do two things. It must reach the correct outcome, and it must follow the necessary procedure. For example, the agent must get the patient's permission before it shares the patient's records. We introduce BABA-Bench, a benchmark of 47 interactive worlds. We built each world from a de-identified, real patient advocacy case that expert advocates reviewed. In each world, the agent must find hidden information and coordinate insurers, clinics, suppliers, pharmacies, and community organizations. The engine checks each action at the time the agent does it. It checks if the agent has permission, if the agent has evidence for the action, and if the action is prohibited. We evaluated 14 frontier models with three runs on each world, for a total of 1,974 runs. Agents often reached the correct outcome by an invalid route. Of the 921 runs that reached all required outcomes, 254 (28%) did not follow the necessary procedure. Claude Opus 5 reached all required outcomes in 81.6% of its runs, but only 52.5% of its runs passed all checks. When we gave two models a verified route, their pass rates increased from 29.8% to 91.5% and from 44.0% to 97.2%. For these models, the main problem is to find a route, not to execute it.",
+      "pdf_url": "https://arxiv.org/pdf/2610.41076v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.41076v1",
+      "published": "2026-10-29T23:46:24Z",
+      "updated": "2026-10-29T23:46:24Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Can Personal Requirements Become Supervision for Planning?",
+      "authors": [
+        "Junwei Wu",
+        "Runze Yan",
+        "Yuzhang Xie",
+        "Hanqi Luo",
+        "Ziwei Dong",
+        "Jiaying Lu",
+        "Xiao Hu",
+        "Carl Yang"
+      ],
+      "abstract": "Managing multiple chronic conditions through diet requires satisfying disease- and medication-specific requirements jointly across meals and days while preserving established eating habits. These requirements are public in clinical guidelines and drug labels, yet turning them into a feasible plan for one person remains difficult for language-model agents. In our dietitian-approved weekly planning evaluation built from NHANES, thirteen models, from medically fine-tuned 8B models to GPT-6.1 Sol, pass fewer than 3% of complete plans through direct generation. Explicit rules, higher reasoning effort, or model-directed tools leave GPT-6.1 Sol at no more than 8%. We present Noura, which pairs LLM planning with executable personal specifications instantiated from public clinical guidance and individual health and dietary profiles. During planning, the specification grounds foods, optimizes portions, checks the complete multi-day plan, and guides revision. Our key insight is that a specification that rejects a plan can also determine what to learn from it. Noura turns executed plans and contextually credited revisions into supervision for compact models, recovering targets even from trajectories that never achieve complete success. The same specification supplies supervised targets, preferences, and rewards for post-training. On 4,993 held-out participants, Noura-SFT raises Qwen3-14B's complete-plan pass rate from 24.0% to 72.5% within the same execution loop, cuts rule violations by 97.5% with no observed critical failures, and improves dietary quality. The locally hosted 14B planner incurs fewer rule violations than its GPT-6 Luna teacher. A matched comparison shows that executed targets reduce rule violations by 41% over model-written proposals. Across four Qwen, Phi, and Llama backbones, self-training alone reduces rule violations by 41-61% on a 1,249-person population subset.",
+      "pdf_url": "https://arxiv.org/pdf/2610.40992v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.40992v1",
+      "published": "2026-10-29T21:20:21Z",
+      "updated": "2026-10-29T21:20:21Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Nedimo: An Evidence-Grounded Multilingual Pipeline for AI-Generated Sleep Stories",
+      "authors": [
+        "Georgios Makridis",
+        "Stefanos Kampouris"
+      ],
+      "abstract": "Generative audio systems can produce large libraries of personalized bedtime content, but ordinary media objectives (retention, completion, and novelty) are poorly aligned with the goal of supporting a transition toward sleep. Direct evidence for narrated bedtime audio in adults is mixed, and a recent active-controlled trial did not support such audio as a standalone treatment for sleep disturbance. We translate this uncertain evidence into conservative engineering requirements and present a multilingual pipeline for generating and narrating low-arousal sleep stories. The implemented prototype separates deterministic planning from large language model generation, represents content and delivery parameters explicitly, shapes each script through a four-phase attention taper, validates structural and lexical constraints, performs a bounded error-aware retry, and quarantines unresolved outputs. Provider-agnostic text-to-speech synthesis is followed by paragraph-aware joining, two-pass loudness normalization, and a publication gate that re-measures the saved, encoded file against fixed loudness, loudness-range, and true-peak limits. The product data model records stop position, replay, early abandonment, and completion while treating these events as ambiguous behavioral proxies rather than clinical outcomes. We contribute an evidence-to-requirement mapping, a traceable guardrail architecture with explicit acceptance thresholds, technical evaluation criteria, and a prospective protocol for testing sleep-onset effects. No clinical efficacy is claimed; the system is positioned as a relaxation and attentional-support tool whose benefit and possible reliance must be evaluated empirically.",
+      "pdf_url": "https://arxiv.org/pdf/2610.40970v1",
+      "arxiv_url": "https://arxiv.org/abs/2610.40970v1",
+      "published": "2026-10-29T20:58:10Z",
+      "updated": "2026-10-29T20:58:10Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.HC",
+        "cs.SD"
+      ]
+    },
     {
       "title": "Advancing Clinical Genomic Analysis with a Skill-Centred Agent",
       "authors": [
@@ -146,157 +320,6 @@
       "updated": "2026-10-29T07:18:10Z",
       "categories": [
         "cs.CV"
-      ]
-    },
-    {
-      "title": "Integrating Heterogeneous Echocardiography AI Outputs in Language Space: Learnable Late Fusion with a Supervised LLM",
-      "authors": [
-        "Ryo Takizawa",
-        "Tempei Kabayama",
-        "Chiemi Yamazaki",
-        "Shun Kitamura",
-        "Ryo Matsuoka",
-        "Yuta Ando",
-        "Satoshi Kodera",
-        "Norihiko Takeda"
-      ],
-      "abstract": "View- and target-specific echocardiography AI models capture useful but complementary information and may not achieve sufficient predictive performance in isolation. A learned ensemble is a natural way to combine these outputs, but heterogeneous models typically require each output to be converted into a binary decision, probability, confidence score, or fixed-length feature vector. We developed a supervised large language model (LLM)-based late-fusion module that directly aggregates view-specific predicted finding statements and predicted measurements in language space and learns a case-level fusion function. In patient-level three-fold cross-validation of 859 examinations from 646 patients, the proposed method integrated heterogeneous outputs within a single framework, performed comparably to the best-performing reference strategy evaluated, and outperformed a general-purpose LLM without task-specific training. These results suggest that a supervised LLM can combine multiple upstream models without model-specific output conversion or feature engineering that requires medical knowledge.",
-      "pdf_url": "https://arxiv.org/pdf/2610.39464v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.39464v1",
-      "published": "2026-10-29T06:36:39Z",
-      "updated": "2026-10-29T06:36:39Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "What Makes Medical Examination Items Difficult? Using Large Language Models to Explore Patterns Associated With Empirical Item Difficulty",
-      "authors": [
-        "Xiaomeng Xiong",
-        "Marcus Walker",
-        "Yanlin Jiang"
-      ],
-      "abstract": "Research on medical item difficulty has largely focused on prediction rather than on identifying interpretable patterns associated with empirical difficulty. This study used empirical difficulty labels to guide large language models (LLMs) in inducing difficulty rubrics and examined how rubric guidance affected LLM difficulty judgments. Using training items and their empirical difficulty estimates from the United States Medical Licensing Examination (USMLE) and the Physician Assistant National Certifying Examination (PANCE), Claude Opus 5 induced separate rubrics for absolute and pairwise difficulty judgment. None of the induced rubrics treated surface features, such as stem length, option count, or images, as major sources of difficulty. Several patterns emerged across both examinations, including cue convergence, misleading cues, and option competition, although their specific forms differed. Retrieval of knowledge that could not be derived from the stem was particularly prominent in the PANCE rubrics, whereas the USMLE rubrics placed greater emphasis on integrating multiple clinical cues. We compared commercial and open-weight LLMs on held-out items under unguided and rubric-guided conditions. Rubric guidance changed how models used the difficulty scale but did not consistently improve performance. In absolute judgments, guidance encouraged broader use of the scale and generally improved coarse-grained agreement, without consistently improving rank ordering. In pairwise comparisons, its effects varied across models and examinations, and judgments became more sensitive to presentation order. These findings suggest that the value of label-guided rubric induction may lie more in generating interpretable, testable hypotheses from empirical difficulty data than in reliably improving difficulty judgments.",
-      "pdf_url": "https://arxiv.org/pdf/2610.39373v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.39373v1",
-      "published": "2026-10-29T05:04:10Z",
-      "updated": "2026-10-29T05:04:10Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Latent Decision Flow Rewards for Clinical Guideline Reasoning",
-      "authors": [
-        "Gaurav Bhatt",
-        "Marinka Zitnik"
-      ],
-      "abstract": "Clinical practice guidelines encode evidence-based recommendations as conditional decision flows, which makes them a natural source of process supervision for training reasoning models. Two properties of clinical reasoning make this supervision difficult to use. A decision flow consistent with a guideline does not by itself determine the correct answer for a given patient, which we call the path--answer gap, and several valid decision flows can support the same clinical decision, which we call path multiplicity. Current training approaches address parts of this problem. Answer rewards supervise the final decision, and process rewards computed against a reference flow supervise one valid decision flow per case. Supervised fine-tuning on annotated flows teaches guideline-consistent reasoning but constrains the model to one trajectory per case and can reduce answer accuracy. We introduce GUIDER, a method that jointly optimizes a decision flow controller and a reasoning policy. The controller learns to generate plausible decision flows from guideline-derived supervision, and the policy learns to generate a decision flow and a final answer for each patient case. GUIDER computes the process reward for the policy over several controller-generated flows, which accounts for path multiplicity, and gates this reward on answer correctness, which addresses the path--answer gap. Joint training allows the process supervision to evolve with the policy. On MedGUIDE, GUIDER with Qwen3-14B achieves 82.5 weighted accuracy and 73.5 guideline adherence, 3.3 and 3.1 points above the strongest clinical reinforcement learning baseline. With Qwen3-14B and Gemma4-12B backbones, GUIDER also improves over CRPO, MRPO, and FaithMed on the out-of-domain benchmarks AMEGA-LLM, RealMedQA, and CancerGUIDE.",
-      "pdf_url": "https://arxiv.org/pdf/2610.38709v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.38709v1",
-      "published": "2026-10-28T19:06:23Z",
-      "updated": "2026-10-28T19:06:23Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Benchmarking decision models against generative large language models on medical multiple-choice questions",
-      "authors": [
-        "Oscar Freyer",
-        "Daniel Glauert",
-        "Moritz Hofmann",
-        "Max Ostermann",
-        "Stephen Gilbert",
-        "Jakob Nikolas Kather"
-      ],
-      "abstract": "Medical workflows often require selecting among predefined options. We compared 13 decision models with 15 generative large language model configurations, including different reasoning settings, using 1,273 four-option MedQA questions under text-only conditions. Accuracy ranged from 67.71% to 89.08% for decision models and from 78.32% to 96.86% for generative configurations. Among the tested configurations, Mercury Decide had the lowest mean final-attempt cost (USD 0.0069 per 1,000 questions), while Clef Omni had the shortest median request duration (0.291 seconds). Decision-model probabilities distinguished correct from incorrect answers, but error rates among answers assigned probabilities of at least 0.90 ranged from 1.71% to 12.77%. Answer agreement across three runs ranged from 92.30% to 100%, while probability repeatability varied. Decision models offered resource advantages alongside lower peak accuracy; selecting models for medical workflows requires considering probability quality and repeatability together with accuracy and the resources needed to detect and correct errors.",
-      "pdf_url": "https://arxiv.org/pdf/2610.38448v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.38448v1",
-      "published": "2026-10-28T08:25:35Z",
-      "updated": "2026-10-28T08:25:35Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "LLMs as Judges and Examinees for Medical Item Difficulty Prediction",
-      "authors": [
-        "Xiaomeng Xiong",
-        "Marcus Walker",
-        "Yanlin Jiang"
-      ],
-      "abstract": "Predicting medical item difficulty from item text alone remains challenging. Prior work has largely relied on linguistic features or text representations derived from general-purpose and domain-specific language models, but predictive performance has remained modest. This study takes a different approach by using difficulty-related signals that emerge when open-weight large language models (LLMs) interact with test items. Using USMLE and PANCE medical licensure examination items, we examined LLMs in two roles. As judges, the models provided absolute difficulty ratings and pairwise difficulty comparisons. As simulated examinees, they generated response-based signals including correctness, keyed-option probability, response entropy, and the probability margin between the top two options. We then combined the strongest judgment and response signals with baseline item features in downstream prediction models. Pairwise difficulty judgment was the most consistent individual LLM signal across both datasets, while simulated-examinee signals and absolute judgments provided complementary information in some feature combinations. The best configurations reached a Spearman correlation of $\u03c1$ = .447 on USMLE, exceeding the best system in the 2024 BEA shared task ($\u03c1$ = .25), and $\u03c1$ = .494 on PANCE. These results were comparable to direct absolute judgments from the proprietary frontier model Claude Opus 5 ($\u03c1$ = .443 and .488, respectively). Overall, judgment and response signals from open-weight LLMs captured difficulty-related information beyond text representations. Because these models can be deployed locally, the approach offers a practical option for predicting the difficulty of unreleased or high-security test items.",
-      "pdf_url": "https://arxiv.org/pdf/2610.38402v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.38402v1",
-      "published": "2026-10-28T07:46:54Z",
-      "updated": "2026-10-28T07:46:54Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Fu-TCM: a multimodal large language model that learns traditional Chinese medicine diagnostic reasoning",
-      "authors": [
-        "Jiahang Xie",
-        "Tong Jin",
-        "Lingfei Wu",
-        "Yaping You",
-        "Jie Huang",
-        "Yuanchang Jin",
-        "Weikang Gong",
-        "Wei Cheng",
-        "Jia You",
-        "Pan Sun",
-        "Jianfeng Feng",
-        "Hongcheng Guo"
-      ],
-      "abstract": "Large language models (LLMs) are advancing in multimodal understanding and reasoning, accelerating medical model development. Traditional Chinese medicine (TCM) uses evidence from the four examinations to determine disease location and nature, differentiate syndromes and guide treatment. This diagnostic process constitutes a complete chain of reasoning. We present Fu-TCM, a multimodal TCM LLM trained on data retained after cleaning and filtering an initial collection of approximately 7.12 million examples derived from classical texts, textbooks, medical images, clinical cases and publicly available datasets. The model was further optimized using Bianzheng-Grounded Policy Optimization (BGPO), which explicitly targets syndrome differentiation through rewards for response format, intermediate TCM reasoning fields and final syndrome predictions. Fu-TCM-27B led all six benchmarks spanning TCM reasoning, text and vision, achieving a macro-average accuracy of 81.01% and surpassing the strongest reference model with complete results across all six benchmarks by 7.13 percentage points. Its largest margin was 11.90 points on Fu-bianzheng. Case-level analyses further showed a positive association between intermediate-field accuracy and final syndrome-selection accuracy in most evaluated models. These findings suggest that TCM syndrome differentiation may be computationally learnable and that structured reasoning supervision can improve performance across TCM tasks.",
-      "pdf_url": "https://arxiv.org/pdf/2610.38333v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.38333v1",
-      "published": "2026-10-28T06:33:04Z",
-      "updated": "2026-10-28T06:33:04Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "Rubricon: Automated Rubric Generation and Refinement for LLM Evaluation and Training",
-      "authors": [
-        "Ulyana Tkachenko",
-        "Hui Wen Goh",
-        "Guram Gogia",
-        "Jonas Mueller"
-      ],
-      "abstract": "Rubrics enable reward assignment on tasks without verifiable answers, but are expensive to manually produce from scratch. We present Rubricon, a pipeline that generates discriminative rubrics without requiring human preference labels, rubric annotation, or generator-model training. Using any LLM, Rubricon samples multiple rubrics, selects the most discriminative candidate, adds criteria to capture overlooked requirements or response flaws, and prunes criteria that are misaligned or shallow. Alongside LLM self-critique and test-time scaling, Rubricon uses observed criterion pass rates on example model responses to guide refinement. Across five professional, consumer, clinical, and general-use LLM benchmarks, Rubricon produces rubrics whose scores of frontier LLM responses exhibit 9% greater alignment with labor-intensive expert-authored rubrics, compared to the best alternative synthetic rubric generation method among RRD, QSRG, OpenRubrics, and agentic generation via harnesses like Codex. On HealthBench, post-training a Qwen3.5-9B model with Rubricon rubrics yields 4.5% better performance than training with rubrics from the strongest alternative synthetic rubric generator, RRD.",
-      "pdf_url": "https://arxiv.org/pdf/2610.38220v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.38220v1",
-      "published": "2026-10-28T03:18:11Z",
-      "updated": "2026-10-28T03:18:11Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Disparity Laundering: Consensus Without Fairness in Clinical Multi-Agent Systems",
-      "authors": [
-        "Xiaoyang Wang",
-        "Tianrui Wang",
-        "Christopher C. Yang"
-      ],
-      "abstract": "Clinical large language models are increasingly fielded as multi-agent teams, on the assumption that deliberation averages out individual error. It does not average out bias. Across a full factorial of five model families and four aggregation topologies on 120 real MIMIC-IV emergency cases under counterfactual demographic swaps, no configuration neutralizes the disparity: all 20 cells commit the direction of their agents' independent answers, giving Black patients more acute triage. Every model has a topology that amplifies its baseline gap, but which one varies by model, so no design is reliably safe or reliably amplifying: the disparity is relocated, never removed. Late-stage fixes fail: fairness instructions and demographic masking leave the gap untouched, and per-agent self-debiasing widens it, because the bias is already encoded in the agents' ordinary clinical numbers. We call this disparity laundering; the audits now applied to clinical AI, per model, per output, per version, can certify the parts but never the committed decision. Interventions close the gap exactly when they make counterfactual versions visible inside the system and pool them, through deliberation, into the committed decision. A diverse-perspective ensemble does both while keeping the team, with no retraining or architectural change: the disparity falls by 67 to 94% where all five perspectives pool at every round, and the one topology that never pools them is the one it cannot reliably repair. Medical multi-agent systems do not filter demographic bias; they launder it into plausible decisions no single-version audit can catch, and the only defense is to make the bias visible.",
-      "pdf_url": "https://arxiv.org/pdf/2610.38215v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.38215v1",
-      "published": "2026-10-28T03:10:28Z",
-      "updated": "2026-10-28T03:10:28Z",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
       ]
     }
   ]

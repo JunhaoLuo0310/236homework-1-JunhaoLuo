@@ -1,8 +1,40 @@
 {
-  "generated_at_utc": "2026-11-04T05:43:43.194601Z",
+  "generated_at_utc": "2026-11-05T06:01:00.033194Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "VABAR: A Variational Automation Benchmark for Agentic Robotics",
+      "authors": [
+        "Shuangyu Xie",
+        "Kaiyuan Chen",
+        "Uksang Yoo",
+        "Xinyue Zhu",
+        "Meadow Shen",
+        "Jaimyn Drake",
+        "Eugen Solowjow",
+        "Lionel Gulich",
+        "Alexander Millane",
+        "Rafael Cathomen",
+        "Tuur Stuyck",
+        "Sangeeta Subramanian",
+        "Yichao Pan",
+        "Bruce McGowan",
+        "Michael Benedict",
+        "Linxi Fan",
+        "Yuke Zhu",
+        "Spencer Huang",
+        "Ken Goldberg"
+      ],
+      "abstract": "For robots to operate reliably in commercial and industrial applications, they must persistently perform specific tasks with known variations in object shape and pose. We call this Variational Automation (VA) to differentiate these settings from fixed automation. Inspired by recent papers on Agentic Robotics, where pretrained LLM and VLM coding agents combine interpretable robot programming with the open-world adaptability of model free policies, we propose a general set of agentic robotics benchmark design criteria that includes accessibility, repeatability, diversity, relevance to agentic robotics and practical applications, physical realizability, resistance to benchmark saturation, and computational efficiency. We instantiate these principles in six manipulation task classes spanning industrial, medical, and infrastructure applications: tool sorting, tool hanging, gear meshing, syringe packing, cable insertion, and cable routing. We introduce the Variational Automation Benchmark for Agentic Robotics (VABAR), an open, easily replicable, simulation-based manipulation benchmark to systematically evaluating agentic robotics systems. Built fully on open-source tools, VABAR features detailed implementations using the Newton physics engine, standardized task variations, difficulty tiers, success metrics, and a library of 33 generalizable skills with human-authored programmatic reference solutions. We provide initial baseline evaluations using an open agentic manipulation harness, Graph-as-Policy (GaP), and Isaac Lab Arena.",
+      "pdf_url": "https://arxiv.org/pdf/2611.06881v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.06881v1",
+      "published": "2026-11-04T18:38:01Z",
+      "updated": "2026-11-04T18:38:01Z",
+      "categories": [
+        "cs.RO"
+      ]
+    },
     {
       "title": "Knowingly Wrong: Training LLMs Against Their Own Beliefs can Induce Misalignment",
       "authors": [
@@ -271,24 +303,6 @@
       "updated": "2026-11-01T01:42:38Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Capacity Planning for Resource-Constrained Clinical LLM Serving",
-      "authors": [
-        "Yi Tang",
-        "Geoffrey Martin",
-        "Yiye Zhang",
-        "Yifan Peng"
-      ],
-      "abstract": "Deploying large language models (LLMs) under a fixed accelerator budget requires jointly deciding how computational capacity is allocated across model sizes and how incoming requests are routed across that capacity. Although prior work has extensively studied LLM routing and serving efficiency, the relative importance of fleet composition and routing under resource constraints remains less understood. We investigate this question using a controlled four-GPU serving environment with heterogeneous clinical NLP workloads spanning short factual verification, biomedical semantic matching, and long-context clinical summarization. We systematically vary fleet composition, routing policy, and offered load while holding the workload trace and hardware budget fixed. Across 24 configurations, descriptive main-effect shares attribute more variation to fleet composition than to the evaluated routing policies in time to first token, latency, and long-context coverage. All-small fleets provide the best responsiveness and throughput but substantially lower long-context coverage, whereas larger-model capacity improves coverage at the cost of serving efficiency. Heterogeneous fleets provide intermediate operating points but can introduce strong-model bottlenecks when large-model capacity is scarce. In a focused evaluation of this bottleneck, capacity-aware routing reduces mean latency and increases throughput while incurring a small reduction in long-context coverage. Within this measured regime, the results support prioritizing capacity allocation, with routing managing demand within the provisioned capacity.",
-      "pdf_url": "https://arxiv.org/pdf/2611.01152v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.01152v1",
-      "published": "2026-10-31T17:41:35Z",
-      "updated": "2026-10-31T17:41:35Z",
-      "categories": [
-        "cs.AI",
-        "cs.PF"
       ]
     }
   ]

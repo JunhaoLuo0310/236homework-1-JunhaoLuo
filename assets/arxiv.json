@@ -1,8 +1,92 @@
 {
-  "generated_at_utc": "2026-11-05T06:01:00.033194Z",
+  "generated_at_utc": "2026-11-06T05:57:22.263780Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "MedGraph: Maintaining Patient State with Graph Memory for Long-Term Medical Dialogue",
+      "authors": [
+        "Donghua Zhang",
+        "Zizheng Wang",
+        "Ze Dong",
+        "Yiding Feng",
+        "Siyu Qian"
+      ],
+      "abstract": "LLM-based medical assistants that follow a patient across visits need a memory that keeps the patient's clinical state correct as it changes. We examine the errors of five memory systems on longitudinal medical dialogue and find three recurring causes: the retrieved evidence gives an outdated state, includes another person's health facts, or lacks a safety fact the answer depends on. We present MedGraph, a graph memory built for these three cases. Construction extracts dated facts from each session, attributes each fact to the person it describes, and links medication, diagnosis, and measurement records into chains that keep earlier states. Retrieval ranks the patient's chains as units, reads each chain at the time the question asks about, and adds the original dialogue text; a patient profile lists every recorded safety fact with every question. On MedMemoryBench, MedGraph has the highest overall accuracy with both a GPT and a Qwen backbone, 10.5 and 10.4 points above the strongest of five baselines, with efficient memory construction and answering in the GPT setting.",
+      "pdf_url": "https://arxiv.org/pdf/2611.08433v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.08433v1",
+      "published": "2026-11-05T18:27:20Z",
+      "updated": "2026-11-05T18:27:20Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "LLM-Assisted Label Noise Correction for EEG-Based Sleep Stage Classification",
+      "authors": [
+        "Elmira Salari",
+        "Shruti Kshirsagar"
+      ],
+      "abstract": "Automatic sleep stage classification from electroencephalography (EEG) signals is a critical task in clinical sleep medicine. While deep learning models have shown promising results in this domain, their performance is fundamentally constrained by the quality of training labels, which human experts manually annotate and that are subject to inter-rater disagreement and systematic labeling errors. In this paper, we propose a novel LLM-assisted label-noise filtering pipeline that operates exclusively during training to identify and remove unreliable sleep-stage annotations before retraining the classifier. Specifically, TinySleepNet is first trained on the original dataset to extract per-epoch SoftMax confidence scores, then low-confidence epochs are submitted to LLaMA 3.1 along with their EEG spectral features and surrounding sequence context. The LLM evaluates each epoch against AASM sleep-scoring guidelines and assigns a verdict of RELIABLE or SUSPICIOUS. Suspicious epochs are removed from the training set, and TinySleepNet is retrained on the cleaned data. Evaluated on the Sleep-EDF Expanded dataset using 20-fold cross-validation, our method improves overall accuracy from 81.8% to 84.6% and Macro F1-score from 75.6% to 77.4%, with particularly notable gains in REM detection. Crucially, because the LLM operates only during training, the lightweight TinySleepNet architecture (1.3M parameters) is preserved at inference, making the proposed pipeline suitable for real-time, wearable sleep monitoring applications.",
+      "pdf_url": "https://arxiv.org/pdf/2611.08311v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.08311v1",
+      "published": "2026-11-05T17:12:05Z",
+      "updated": "2026-11-05T17:12:05Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Computation, not weight access: large language models as auditors of clinical prediction networks",
+      "authors": [
+        "Zhiyu Liu",
+        "Xinyu Yang"
+      ],
+      "abstract": "Frontier large language models (LLMs) have been reported to read, edit and write the weights of small neural networks, raising the prospect of auditing clinical prediction models from their files alone. Public demonstrations, however, mixed reading raw weights with running code. We separated these conditions in internally pre-specified simulation experiments. Tanh networks of 105 to 38,401 weights were trained on simulated cohorts of patients with subarachnoid haemorrhage, each with a planted relationship or none, and one network was trained on labels that under-recorded deaths in a subgroup. GPT-6 Astra and four other GPT models answered single prompts under a default or an explicit system instruction, either with the weights in the prompt and no tools, or with a calculation-only tool that exposed the weights (white box) or only the network's predictions (black box). Without tools, Astra recovered planted relationships in 353-weight networks but became unreliable at 3,457 weights, and under the default instruction it declined 11 of 12 audit and repair tasks as unidentifiable; the explicit instruction removed these refusals. With the tool, it recovered the planted relationship in all 29 runs on networks of up to 38,401 weights, raised no false alarm in 15 runs on null networks, and found the biased subgroup in 6 of 6 runs. Black-box access performed as well as white-box access, and other GPT-6 models read as accurately. A well-designed script matched the comparator models on the audit and the best LLM repair. For auditing these networks, what mattered was computation and elicitation, not access to the weights.",
+      "pdf_url": "https://arxiv.org/pdf/2611.07847v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.07847v1",
+      "published": "2026-11-05T11:28:04Z",
+      "updated": "2026-11-05T11:28:04Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "When Verification Is Not Agreement: Cross-Agent LLM-to-Dafny Formalization",
+      "authors": [
+        "Priyanath Maji"
+      ],
+      "abstract": "A verified Dafny postcondition certifies that a formula holds, but it does not guarantee that the result was reached through genuine independent reasoning. We introduce a cross-agent formalization protocol where a Specifier model translates clinical trial criteria into a Dafny predicate, and an Implementer model writes an operational method checked against it. A same-model control establishes that even with no capability gap, independent re-extraction from identical text agrees only 59.3% of the time. Evaluating four model configurations on 96 clinical trial documents, we find that agreement is highly sensitive to how model capability is allocated across the two roles: the GPT-4.1-nano/GPT-4.1-mini configuration achieves 53.0% agreement when the stronger model is the Implementer, but only 14.3% when the roles are reversed. The strongest tested configuration, GPT-5.6-luna/GPT-5.4-mini, improves agreement to 34.4% but remains below the same-model baseline and is dominated by direct contradiction (42.7%). We also detect a critical verification artifact in which a weaker Implementer satisfies the postcondition by invoking the Specifier's predicate directly; after structural auditing, corrected agreement falls from 14.3% to 13.2%. Our results show that verification success alone is insufficient evidence of independent cross-agent agreement, and that model capability does not guarantee agreement when formalizing the same source independently.",
+      "pdf_url": "https://arxiv.org/pdf/2611.07073v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.07073v1",
+      "published": "2026-11-04T19:31:51Z",
+      "updated": "2026-11-04T19:31:51Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Reclassification Is All You Missed: Surfacing Variant Reinterpretation Need in Online Health Communities at Population Scale",
+      "authors": [
+        "Kamalakkannan Ravi",
+        "Mengshu Nie",
+        "Annapurna Poduri",
+        "Cong Liu"
+      ],
+      "abstract": "Genetic variants are routinely reclassified in ClinVar after a patient is tested, sometimes from uncertain to pathogenic, yet patient recontact is inconsistent, with no clear duty and responsibility diffused among labs, providers, and patients. Many affected people discuss their results in public online health communities that clinical recontact often does not reach. We built PRISM, an agentic large-language-model pipeline that screens these posts, checks whether the variant was later reclassified, and drafts a disclaimer-bearing outreach message, in a no-contact dry run. Across 3.9 million posts from 32 communities, agent-predicted reinterpretation-relevant discussion is rare (0.288%) but concentrated in specialist genetics communities (6.30% versus 0.10% in general medical-advice communities) and growing fivefold since 2014; PRISM surfaces 123 candidate classification differences, 5 of them from an uncertain submission to pathogenic or likely pathogenic. On a held-out set of 30 real-post drafts, a clinician judged 27 factually grounded and 15 fit to send: factual accuracy is necessary but not sufficient for clinically acceptable outreach. PRISM contributes a population-scale reinterpretation-need map with code and data to be released upon publication.",
+      "pdf_url": "https://arxiv.org/pdf/2611.07054v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.07054v1",
+      "published": "2026-11-04T19:13:45Z",
+      "updated": "2026-11-04T19:13:45Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY",
+        "q-bio.GN"
+      ]
+    },
     {
       "title": "VABAR: A Variational Automation Benchmark for Agentic Robotics",
       "authors": [
@@ -209,100 +293,6 @@
       "categories": [
         "cs.CV",
         "physics.med-ph"
-      ]
-    },
-    {
-      "title": "State-Aware Virtual Patient Simulation for Training Psychiatrists in Challenging Clinical Scenarios",
-      "authors": [
-        "Harsh Mohta",
-        "C Chandrahas Reddy",
-        "Sunhith Reddy Bojja",
-        "Manik Inder Singh Sethi",
-        "Vinesh Gupta",
-        "Raghuram Bharadwaj Diddigi"
-      ],
-      "abstract": "Psychiatrists must be prepared to manage patients exhibiting challenging psychological states, including suicidal ideation, hallucinations, and other high-risk behaviors. However, opportunities to safely practice such interactions are limited. While recent conversational agents can simulate patients, existing approaches largely rely on large language models (LLMs) to determine patient responses, making it difficult to consistently maintain psychological state, adapt to the clinician's responses, and generate clinically plausible challenges that meaningfully test the clinician. We present a state-aware virtual patient simulation pipeline for training psychiatrists in challenging clinical scenarios. The proposed system maintains an evolving patient state throughout the interaction and orchestrates patient behavior rather than leaving response generation entirely to an LLM. At each interaction, a learning-based behavioral strategy selector determines the type and level of challenge appropriate to the current patient and clinician context. The selected strategy, patient state, clinician response, interaction history, and relevant clinical knowledge are then provided as grounded context to an LLM to generate a semantically relevant and psychologically consistent patient response. Following each session, the system analyzes the interaction and provides feedback to the clinician on their communication and management of the virtual patient.",
-      "pdf_url": "https://arxiv.org/pdf/2611.02067v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.02067v1",
-      "published": "2026-11-01T17:10:22Z",
-      "updated": "2026-11-01T17:10:22Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "MedPsy: State-of-the-Art Small Medical Language Models for Efficient Edge Deployment",
-      "authors": [
-        "Davide Vitabile",
-        "Alexandro Buffa",
-        "Akshay Nambiar",
-        "Amril Nazir"
-      ],
-      "abstract": "Medical language models promise expert clinical support, but the strongest open-source LLMs remain too large for private edge-device deployment, while compact medical models still trail substantially on knowledge-intensive and real-world healthcare tasks. Reasoning models that fit edge memory budgets can produce long reasoning traces, increasing sequential decoding, end-to-end latency, energy consumption, and KV-cache memory pressure. We present MedPsy, a family of text-only 1.7B and 4B medical language models designed for edge deployment, targeting this accuracy-generation-efficiency trade-off. Our recipe combines a synthetic medical data pipeline over biology, medicine, and health seeds with chain-of-thought targets from a 235B medical-focused LLM teacher; a four-stage post-training curriculum comprising two SFT stages followed by two RL stages with hard-sample mining; and an edge deployment evaluation spanning multiple GGUF quantization variants and real-device inference on laptop and smartphone hardware. On seven closed-ended medical benchmarks, MedPsy-4B surpasses MedGemma-1.5-4B by 19.34 points and matches MedGemma-27B while being 6.75x smaller; MedPsy-1.7B outperforms MedGemma-1.5-4B by 11.42 points despite being less than half its size. On HealthBench-Hard, MedPsy-4B surpasses MedGemma-27B by 15.33 points, while MedPsy-1.7B surpasses it by 11.66 points despite being ~16x smaller. Beyond accuracy, MedPsy reduces average response length by 1.7x (1.7B) and 3.2x (4B) versus its Qwen3 backbones, while Q4_K_M quantization preserves the aggregate score within 1 point of BF16 with ~69% lower disk footprint. In real-device inference, MedPsy-4B's shorter generations translate into 75% lower median end-to-end latency and estimated energy per answer than its Qwen3 backbone at matched quantization, while peak RAM remains below 5 GB across our tested laptop and smartphone configurations.",
-      "pdf_url": "https://arxiv.org/pdf/2611.02011v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.02011v1",
-      "published": "2026-11-01T15:52:32Z",
-      "updated": "2026-11-01T15:52:32Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "AR-RRG: Anatomy-Guided Retrieval-Driven Radiology Report Generation",
-      "authors": [
-        "Xiang Zhang",
-        "Shijie Song",
-        "Wanqing Zhao",
-        "Wei Zhou",
-        "Rui Cao",
-        "Dekui Wang",
-        "Qiyao Hu",
-        "Xianlin Peng",
-        "Hangzai Luo",
-        "Sheng Zhong",
-        "Jianping Fan"
-      ],
-      "abstract": "Radiology report generation (RRG) streamlines clinical workflows and alleviates the burden of radiologists' documentation. Standard vision-language models capture global visual cues and lack fine-grained alignment between anatomical regions and diagnostic text. Most retrieval-augmented methods retrieve complete historical reports, introducing redundant noise and severe vision-text mismatches that trigger clinically risky hallucinations and missed lesions. In this paper, we introduce AR-RRG, an anatomy-guided retrieval-driven method for the generation of radiology reports. AR-RRG consists of two core modules: the anatomy-aware self-training lesion detection network (ASLDNet) and the retrieval-driven radiology report generation (RRRG). ASLDNet leverages anatomy-aware spatial verification (ASV) and class-adaptive dynamic thresholding (CDT) via self-training, delivering accurate lesion localization to support subsequent generation. As the generative branch of AR-RRG, RRRG eliminates clinical hallucinations through dual-granularity retrieval (DR) and complements missing lesions with a neighborhood consensus (NC) mechanism. A parallel continuous visual perception (PCVP) stream converts radiographs into visual tokens through fixed medical encoding and resampling. Multi-scale text and visual features are fused, followed by LoRA-efficient large language model tuning to generate clinically consistent, visually grounded radiology reports. Extensive evaluations on MS-CXR, MIMIC-CXR, and IU X-Ray demonstrate that AR-RRG consistently outperforms state-of-the-art methods across mainstream metrics. Our code will be made publicly available.",
-      "pdf_url": "https://arxiv.org/pdf/2611.01529v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.01529v1",
-      "published": "2026-11-01T04:00:01Z",
-      "updated": "2026-11-01T04:00:01Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Accounting for Irregular State Transitions through Belief Estimation in Online Medical Consultation",
-      "authors": [
-        "Mingzhe Lu",
-        "Xiangru Chen",
-        "Jian Qin",
-        "Yunpeng Li",
-        "Xihan Gao"
-      ],
-      "abstract": "While online medical consultation broadens access, unprompted patient disclosures and topic shifts frequently disrupt clinician inquiry, leaving clinical states progressively revealed. We characterize these dynamics using both existing evaluation metrics and task-specific interaction metrics designed in this work. Through an empirical study across 16 medical dialogue datasets, we show that authentic online interactions exhibit substantially lower contextual continuity and higher unpredictability than offline and simulated benchmarks. We propose PRISM (Policy Reasoning with Inferred States for Medicine), a framework inspired by partially observable Markov decision processes that decouples latent state estimation from action selection to address drifting dialogue trajectories. Specifically, PRISM factorizes clinical triage into belief estimation, policy optimization, and response realization. By maintaining an evolving posterior belief over consultation states and conditioning action selection on the maximum a posteriori state, PRISM advances clinical goals while accommodating patient-initiated shifts. Extensive evaluations show that PRISM substantially outperforms frontier LLMs and clinical agents, achieving a 22.40 percentage point gain in clinical decision accuracy alongside decisive improvements in response generation, surpassing the strongest baseline by 5.51 points in BERTScore_F1. Furthermore, ablation studies show that providing oracle consultation states consistently boosts response quality across all evaluated baselines by guiding their action reasoning, yielding average gains of 5.58 points in BERTScore_F1.",
-      "pdf_url": "https://arxiv.org/pdf/2611.01474v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.01474v1",
-      "published": "2026-11-01T03:05:59Z",
-      "updated": "2026-11-01T03:05:59Z",
-      "categories": [
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "RAG-TRACE: Tracing Measurement Evidence and Diagnostic Completeness in AI-Generated ECG Reports",
-      "authors": [
-        "Elyas Irankhah",
-        "Shahed Salehzehi",
-        "Parisa Hosseini"
-      ],
-      "abstract": "Purpose: Retrieval-augmented generation (RAG) can introduce electrocardiogram (ECG) criteria that lack patient-specific measurement support. This study evaluates the reliability of retrieved diagnostic criteria in AI-generated ECG reports. Methods: We analyzed 1,083 human-validated PTB-XL patient records using a library of 47 criteria cards, including 33 without numeric verification rules. Language models generated structured reports with and without retrieval. Criterion applicability was evaluated using Marquette 12SL measurements, with independent assessment using Uni-G and comparison against expert-validated diagnostic labels. Results: Keyword retrieval introduced untestable or measurement-disconfirmed criteria in 46.8% of GPT-4.1-mini reports. A deterministic verification rule withdrew 647 criterion applications, including 639 without numeric checks, while preserving 268 of 269 applications independently supported by Uni-G. Restricting retrieval to 14 testable criteria reduced the initial unsupported-criterion rate to 13.8%. Under matched instructions and an identical output schema, retrieval increased unsupported-criterion reports from 17.4% to 31.1%, while hypertrophy recall remained unchanged at 62.6%. Conclusion: These findings identify a fundamental limitation of retrieval-based clinical report generation: retrieved criteria do not necessarily provide valid patient-specific evidence. Measurement-based verification can reduce unsupported criterion applications, but diagnostic validity requires independent assessment.",
-      "pdf_url": "https://arxiv.org/pdf/2611.01409v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.01409v1",
-      "published": "2026-11-01T01:42:38Z",
-      "updated": "2026-11-01T01:42:38Z",
-      "categories": [
-        "cs.CL"
       ]
     }
   ]

@@ -1,8 +1,158 @@
 {
-  "generated_at_utc": "2026-11-08T05:29:23.248495Z",
+  "generated_at_utc": "2026-11-09T05:40:19.617134Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL",
+      "authors": [
+        "Aria Wong",
+        "Joshua Engels",
+        "Neel Nanda"
+      ],
+      "abstract": "Reinforcement learning (RL) rewards are notoriously difficult to design and control, often leading to the model learning unintended behaviors such as reward hacking. One potential solution is to monitor for reward hacking and penalize it when detected; however, training against a monitor could lead to evasive behavior, and our general understanding of how to apply monitors effectively during training is limited. To study how best to use monitors to mitigate reward hacking, we introduce and open source three realistic environments where Qwen3-4B reward hacks: a coding environment hackable via test overwriting, a medical chat environment hackable via sycophancy, and a biography generation environment hackable via hallucination. We first focus on the coding environment, where we find that: (1) models can learn to evade highly accurate monitors by exploiting systemic flaws in probes and LLM judges; (2) monitors that leak more learning signal during RL suppress reward hacking but are more often evaded; and (3) including easier problems in training can decrease reward hacking. We apply our findings to build better reward hacking monitors for the medical chat and biography generation environments that improve upon naive baselines to reduce reward hacking rates across seeds to before-training levels in some interventions. Our results demonstrate that our takeaways translate to new settings and that better monitor intervention designs are possible.",
+      "pdf_url": "https://arxiv.org/pdf/2611.09828v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.09828v1",
+      "published": "2026-11-06T18:14:52Z",
+      "updated": "2026-11-06T18:14:52Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Agentic AI for Healthcare Claim Denial Analysis: A Policy-Grounded Framework for Privacy Preservation",
+      "authors": [
+        "Sofia Campos",
+        "Carlos Martins",
+        "Pedro Pires",
+        "Jo\u00e3o Gama",
+        "Bruno Veloso",
+        "Pedro Santos"
+      ],
+      "abstract": "In the healthcare sector, claim denials impose significant financial and administrative burdens, emphasizing the need for automated and trustworthy decision-support systems. This paper proposes a modular Agentic Artificial Intelligence (AI) framework for healthcare claim denial analysis, integrating specialized agents for denial risk prediction, risk factor identification, diagnosis-procedure-medication code relationship analysis, and counterfactual analysis. The framework integrates predictive analytics, graph-based learning, a Hybrid Contextual Retrieval-Augmented Generation (RAG) pipeline grounded in healthcare policy documents, and a dedicated HIPAA Compliance Agent to support privacy protection. Evaluated on a synthetic healthcare claims dataset, the framework achieved 98% traceability of reported numerical findings, validated 214 of 216 policy citations, and removed all 280 identified sensitive identifiers without modifying the underlying analysis. These findings pave the way for further research into Agentic AI as a framework for explainable, policy-aware, and privacy-preserving healthcare claim denial management.",
+      "pdf_url": "https://arxiv.org/pdf/2611.09423v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.09423v1",
+      "published": "2026-11-06T12:51:18Z",
+      "updated": "2026-11-06T12:51:18Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "RAG-Enhanced LLMs for Interactive Explainability in Clinical Decision Support Systems",
+      "authors": [
+        "Lorenzo Mannocci",
+        "Francesca Naretto",
+        "Lucia Passaro",
+        "Anna Monreale"
+      ],
+      "abstract": "Artificial Intelligence (AI) is increasingly embedded in high-risks decision-making systems across domains such as healthcare, finance, and the judicial system. As reliance on predictive models grows, so does the demand for Explainable AI (XAI) to ensure transparency, trust, and interpretability. However, existing XAI approaches often fail to present explanations in a format accessible to domain experts, limiting their practical utility. Large Language Models (LLMs) have recently emerged as a bridge between complex models and end-users, offering natural language explanations. Yet, their use introduces new risks, including hallucinated outputs and lack of source traceability. To address these challenges, we propose a Clinical Decision Support System (CDSS) that not only combines standard predictive models with XAI techniques but also incorporates a Retrieval-Augmented Generation module as an interactive enhancer. This module grounds explanations in verified medical knowledge, reformulates technical outputs into a human-like format, and enables users-such as clinicians-to actively query the system. By fostering an interactive, human-in-the-loop environment, our approach empowers domain experts to explore model decisions, contextualize explanations, and build trust in AI-assisted diagnostics. The study concludes with preliminary experiments validating the proposed methodology.",
+      "pdf_url": "https://arxiv.org/pdf/2611.09232v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.09232v1",
+      "published": "2026-11-06T09:50:51Z",
+      "updated": "2026-11-06T09:50:51Z",
+      "categories": [
+        "cs.AI",
+        "cs.HC",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "SkinMind: Equipping Agentic RAG with Human-Inspired Graph Probing for Reliable Dermatology AI",
+      "authors": [
+        "Jing Hao",
+        "Weinan Zhou",
+        "Zhihong Lu",
+        "Yaling Shen",
+        "Yiming Xu",
+        "Yefeng Liu",
+        "Siyuan Yan",
+        "Shuaibo Li",
+        "Ming Dai",
+        "Junjun He",
+        "Zuyi Zhu",
+        "Jinjie Gu",
+        "Lijun Wu",
+        "Jian Wang"
+      ],
+      "abstract": "Reliable dermatology AI requires access to verifiable evidence distributed across heterogeneous textual and visual sources. However, conventional retrieval-augmented generation (RAG) typically relies on one-shot retrieval from flat corpora, limiting its ability to adapt retrieval granularity, explore multi-hop relations, and integrate multimodal clinical evidence. We introduce SkinMind, a multimodal agentic RAG framework that equips policy models with human-inspired graph probing for autonomous evidence seeking. SkinMind organizes retrieval as an iterative interaction between an orchestrator and a graph environment. Through eight hierarchical graph-probing tools, the orchestrator progressively identifies relevant entities, inspects node-level information, traverses relations and paths, and retrieves source-text and visual evidence. This progressive-disclosure design allows the model to adaptively determine the retrieval modality, exploration direction, and evidence granularity while constructing a query-specific evidence subgraph. To support autonomous graph probing, we construct SkinMind-KG from a 62M-token corpus of dermatology guidelines and textbooks and 423K images, guided by a dermatologist-informed schema and a conflict-resolution mechanism. The resulting graph contains over 1.0M nodes and 2.0M edges, unifying textual, relational, and visual evidence for retrieval. Across six dermatology VQA benchmarks and two policy-model settings, SkinMind improves the average score over direct answering by 8.70 and 8.89 points with GPT-5.4-mini and Gemini-2.5-Flash, respectively, while consistently outperforming competing RAG methods. Together, SkinMind and SkinMind-KG provide an effective foundation for evidence-grounded multimodal reasoning in dermatology.",
+      "pdf_url": "https://arxiv.org/pdf/2611.08935v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.08935v1",
+      "published": "2026-11-06T03:24:41Z",
+      "updated": "2026-11-06T03:24:41Z",
+      "categories": [
+        "cs.IR"
+      ]
+    },
+    {
+      "title": "MotionDecipher: LLM-Assisted Clinical Interpretation of Human Motion Signals for Efficient Gait Analysis",
+      "authors": [
+        "Mingrui Ma",
+        "Tian Tan",
+        "Jinsi Guo",
+        "Jessica Rose",
+        "Yiwen Dong"
+      ],
+      "abstract": "Clinical gait and motion analysis is widely used to guide targeted interventions for patients with neurological disorders, the outcome of which is typically a report with descriptions of joint movements and forces. Current practices rely on experts' manual effort, which is labor-intensive and time-consuming. Recent advancements in Large Language Models (LLMs) provide opportunities to address this problem, but translating human motion into clinical gait descriptions remains challenging because the quality of the context directly affects LLMs' reasoning capability over continuous motion signals. To tackle this, we introduce MotionDecipher, a novel framework bridging the semantic gap between motion data and clinical interpretations. Specifically, we made 3 key advancements: 1) a Human Motion Tokenizer that converts motion signals into domain-specific tokens for time- and frequency-informed gait interpretation; 2) a Meta Feature Selector that transforms tokens into Structured Representations; and 3) a Hybrid Context Constructor to determine the optimal demonstration-based prompt for In-Context Learning. We evaluated MotionDecipher on data collected at an accredited gait lab from 122 patients and 46 controls. Results show that MotionDecipher achieves 0.91 BERTScore (13% over GPT-5), while expert evaluation ranks MotionDecipher highest in Correctness, Completeness, and Conciseness compared to baselines, highlighting its promise for efficient gait analysis.",
+      "pdf_url": "https://arxiv.org/pdf/2611.08795v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.08795v1",
+      "published": "2026-11-05T23:37:02Z",
+      "updated": "2026-11-05T23:37:02Z",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Remembering Is Not Enough: Evaluating Timing and Omission in Longitudinal AI Mental Health Support",
+      "authors": [
+        "Eli Min",
+        "Mohit Chandra",
+        "Aamogh Sawant",
+        "Mengting Tu",
+        "Freya Lin",
+        "Ridwan Shams Khan",
+        "Reigna El-Yashruti",
+        "Christopher L. Smith",
+        "Mark Kalinich",
+        "John Torous",
+        "Munmun De Choudhury"
+      ],
+      "abstract": "Evaluations of large language models (LLMs) for mental health support commonly focus on the clinical appropriateness of individual responses, potentially overlooking failures that emerge across extended interactions. As AI assistants accumulate memory of users' circumstances and prior disclosures, this raises an accountability question: Do AI chatbots provide appropriate support as users' needs evolve? We investigate by analyzing 14,256 longitudinal simulations grounded in donated chatbot histories from 22 users, examining how a memory-equipped assistant responds to suicidal ideation, self-harm, and anxiety crises across recovery trajectories and communication styles. We introduce the Context-Aware and Readiness-Evaluative (CARE) framework, developed with mental health professionals, to assess the timing and quality of advice, including omissions. Advice was less aligned with users' readiness after a crisis than in matched control stretches of the same conversation, largely because of premature recommendations, which were most common when recovery stalled. Revisiting a crisis reduced premature advice but not lagging advice, and users' communication style changed how often and when the assistant gave recommendations. Although explicitly unproductive advice was rare, the assistant frequently omitted clinician-expected support such as follow-up and planning for next steps. These findings show the limits of single response-level safety evaluation and the need to assess timing, omission, and consistency across users when holding AI systems accountable for longitudinal support.",
+      "pdf_url": "https://arxiv.org/pdf/2611.08721v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.08721v1",
+      "published": "2026-11-05T21:14:16Z",
+      "updated": "2026-11-05T21:14:16Z",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Real-World Adoption, Use, and Governance of an LLM-Based Electronic Health Record Search and Synthesis Platform",
+      "authors": [
+        "Jiunn-Tyng Yeh",
+        "Michael Gao",
+        "Marshall Nichols",
+        "Anika Mohan",
+        "Tareq Aljurf",
+        "Michael Revoir",
+        "Matthew Gardner",
+        "Bradley Hintze",
+        "William Ratliff",
+        "Suresh Balu",
+        "Will Knechtle"
+      ],
+      "abstract": "We evaluated the longitudinal adoption and use of Scout, an electronic health record-integrated large language model platform that provides cited search and synthesis of patient records, during staged deployment across a multi-hospital academic health system. Over 11 months, 2,635 users completed 80,465 tasks. 1,768 clinical users initiated use within the first 29 days of system-wide launch, which included a required training. Daily initiation increased 21.2-fold at launch, from 2.9 to 61.0 users per day. Of the 495 users who initiated use during the launch week, 310 did so in the first two days. Use spanned more than 20 recorded specialty categories, five care-practitioner roles, and 46,485 distinct prompts involving retrieval, synthesis, extraction, evaluation, and drafting, with 752 tasks saved for reuse. Among care practitioners who completed the required course, 77.9% went on to use Scout, with a median of 1.7 days after course completion. The highest-intensity user quintile accounted for 59.0% of tasks and 61.9% of tokens. Exploratory prompt analysis showed use across retrieval, synthesis, extraction, evaluation, and note-drafting. These findings suggest that rapid, broad adoption requires clinician-led task design and evaluation, traceable governance proportional to reach, centralized capacity planning and user support, and training integrated with access.",
+      "pdf_url": "https://arxiv.org/pdf/2611.08672v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.08672v1",
+      "published": "2026-11-05T20:28:48Z",
+      "updated": "2026-11-05T20:28:48Z",
+      "categories": [
+        "cs.CY"
+      ]
+    },
     {
       "title": "MedGraph: Maintaining Patient State with Graph Memory for Long-Term Medical Dialogue",
       "authors": [
@@ -158,141 +308,6 @@
       "updated": "2026-11-03T11:08:51Z",
       "categories": [
         "cs.CL"
-      ]
-    },
-    {
-      "title": "Measure Before You Repair: An Explainable Agent for Blind Restoration of Multi-Artifact 3-D MRI",
-      "authors": [
-        "Necati Sefercioglu",
-        "Mehmet Ozan Unal",
-        "Metin Ertas",
-        "Altan Cakir",
-        "Isa Yildirim"
-      ],
-      "abstract": "A brain MRI scan can carry an unknown mix of artifacts, so restoration has to be blind, yet most deep-learning methods are built to correct one known artifact. We present Dx-Rx, an agent in which a multimodal large language model (MLLM) measures suspected artifacts before it repairs them. To our knowledge, it is the first agent to restore whole 3-D MRI volumes, whereas earlier MRI agents restore 2-D slices. In a loop, it looks at slices of the 3-D volume, calls five diagnostic tools (noise, spike, ghosting, bias field, motion) and four restoration tools in any order it chooses, checks each repair, can return to any earlier version to change the order, and ends with a radiology-style report of its diagnostic reasons, the repairs it applied and their results. We simulated up to five artifacts on 148 whole 3-D T1-weighted volumes, at levels calibrated to radiologists' grades of real scans. An MLLM that only looked at the image, as earlier MRI agents do, removed at most 19.7 % of the artifact error. With the best of five MLLMs, Dx-Rx removed a mean 64.5 %, nearly matching the 64.6 % of the same tools given the ground-truth artifacts, which are never known for a clinical scan. With all five models, it made no volume worse and was on par with or better than an expert rule-based pipeline built from the same tools (62.3 %). Code and demo are public at https://itu-biai.github.io/measure-before-you-repair.",
-      "pdf_url": "https://arxiv.org/pdf/2611.03996v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.03996v1",
-      "published": "2026-11-02T21:37:26Z",
-      "updated": "2026-11-02T21:37:26Z",
-      "categories": [
-        "eess.IV",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "A Guideline-Grounded Multi-Agent Framework for Personalized Exercise Prescription from Clinical and Wearable Data",
-      "authors": [
-        "Xintong Li",
-        "Yufen Lin",
-        "Yuhua Wu",
-        "Fengran Wang",
-        "Minxiao Wang",
-        "Rebecca A. Gary",
-        "Jacob Kariuki",
-        "James Smith",
-        "Sandra A. Billinger",
-        "Canhua Xiao",
-        "Xiao Hu",
-        "Runze Yan"
-      ],
-      "abstract": "Translating population-level exercise guidance into individualized prescriptions requires integrating clinical and wearable data, including diagnoses, medications, functional limitations, and baseline activity, with condition-specific recommendations, a process difficult to scale beyond specialist rehabilitation settings. We developed FITTER, a multi-agent framework that integrates these data with condition-specific guidance to generate personalized FITT-VP prescriptions and applies deterministic safety audit and repair to correct rule-checkable violations. We evaluated FITTER using data from 400 All of Us participants (300 cancer, 100 stroke) against five LLM comparators through computational evaluation, ablation, and structured clinician review. FITTER achieved 98.5% safety-constraint compliance versus 75.8-85.8% for comparators and showed greater quantitative dosing precision and guideline alignment. Cancer-cohort ablation identified safety audit and repair as the largest contributor to safety-constraint compliance. Clinicians reviewed 80 prescriptions across safety, personalization, instruction concreteness, anticipated effectiveness, and clinical acceptability. FITTER provides a clinician-facing approach integrating clinical and wearable data, guidance, and explicit safety constraints.",
-      "pdf_url": "https://arxiv.org/pdf/2611.03983v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.03983v1",
-      "published": "2026-11-02T21:22:18Z",
-      "updated": "2026-11-02T21:22:18Z",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
-      ]
-    },
-    {
-      "title": "Rethinking Next-Visit Diagnosis Prediction Beyond Aggregate Metrics: Retrieval--Memory Multi-Agent Adjudication",
-      "authors": [
-        "Heejoon Koo"
-      ],
-      "abstract": "Next-visit diagnosis prediction forecasts the diagnoses documented at a patient's next encounter, turning retrospective electronic health records into prospective clinical prediction. However, conventional aggregate evaluation obscures its multifaceted nature: distributionally, models must handle variable-size diagnosis sets and long-tailed labels; temporally, they must distinguish persistent, newly recorded, and recurrent diagnoses; and both vary with observed history depth. We introduce an evaluation framework along these dimensions and apply it to rule-based heuristics, LLM-based prompting, retrieval, memory, and multi-agent approaches. This reveals that repeating the last visit outperforms most LLM-based approaches overall despite predicting no new or recurrent diagnoses, and that retrieval and memory exhibit distinct profiles whose relative strengths vary across temporal transitions and backbones. Motivated by this, we propose LONGINUS, a retrieval-memory multi-agent adjudication framework combining evidence retrieved from patient records with structured memory of the patient trajectory. Using cross-view agreement as a reliability heuristic, it preserves shared predictions and adjudicates disagreements without revealing their source. Across MIMIC-III and MIMIC-IV with four LLM backbones, LONGINUS achieves the best transition-specific performance among LLM-based methods in nearly all settings while remaining competitive with them on aggregate metrics.",
-      "pdf_url": "https://arxiv.org/pdf/2611.03826v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.03826v1",
-      "published": "2026-11-02T19:03:08Z",
-      "updated": "2026-11-02T19:03:08Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.IR"
-      ]
-    },
-    {
-      "title": "SurgPace: Complexity-Aware Progressive Distillation for Surgical Multimodal Large Language Models",
-      "authors": [
-        "Zhicheng He",
-        "Xiaohan Xing",
-        "Hongqiu Wang",
-        "Kun Yuan",
-        "Guankun Wang",
-        "Yanheng Li",
-        "Haoxuan Che",
-        "Nassir Navab",
-        "Hongliang Ren",
-        "Long Bai"
-      ],
-      "abstract": "Multimodal large language models (MLLMs) have shown strong potential in robotic surgery for question answering, scene understanding, and grounded assistance, but their high computational cost limits real clinical deployment. Knowledge distillation provides a practical way to build compact surgical MLLMs, yet direct distillation is not well suited to surgical data because surgical samples vary greatly in difficulty, visual ambiguity, and required clinical context, making uniform teacher-student transfer unstable. In addition, the role of supervision changes during training: early stages require stronger teacher guidance for multimodal alignment, while later stages rely more on task supervision for effective optimization. To address these challenges, we propose SurgPace, a complexity-aware continuous curriculum framework for progressive distillation of surgical vision-language models. SurgPace estimates sample complexity using predictive confidence and Lorentz geometric consistency, and uses the fused score to guide a continuous easy-to-hard training process. We further introduce hierarchical representation alignment, which aligns the student with the teacher at the feature, logit, and probability levels, while gradually shifting the training focus from teacher imitation to task supervision. This design separates sample-level curriculum from objective-level scheduling, leading to more stable and effective distillation. We evaluate SurgPace on Surg-396K, a benchmark built from four public surgical datasets and covering five dialogue paradigms. SurgPace consistently outperforms strong MLLM distillation baselines, demonstrating its effectiveness for building compact, memory-efficient surgical MLLMs with faster decoding under controlled benchmarks. Code is available at https://github.com/hezhicheng2002/SurgPace.",
-      "pdf_url": "https://arxiv.org/pdf/2611.03125v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.03125v1",
-      "published": "2026-11-02T13:39:14Z",
-      "updated": "2026-11-02T13:39:14Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Tug of Watts: A study on the Energy - Accuracy Trade-off of Large Language Models on Medical Question Answering Tasks",
-      "authors": [
-        "Viju Sudhi",
-        "Giulio Billi",
-        "Andreea Scrob",
-        "Regina Stodden",
-        "Philipp Cimiano"
-      ],
-      "abstract": "Large Language Models (LLMs) are increasingly used in medical question answering (QA) systems. While recent works aim at incrementally improving the downstream task accuracy, an empirical estimation of the models' energy consumption and the associated carbon footprints is often overlooked. In this study, we demonstrate how practitioners can estimate energy consumption and arrive at reliable emission estimates for medical QA tasks available in the OpenMedical-LLM leaderboard by investigating 13 LLMs from 3 model families ranging from 270M to 14B parameters. We discuss how one can critically interpret energy versus accuracy trade-offs for a set of models for a given task. With this work, we underline that reporting disjoint energy and accuracy metrics alone does not suffice for careful trade-off assessments, but it also demands systematic construction and interpretation of joint trade-off metrics. We envisage such studies aiding practitioners in adopting better and more efficient models for their task and helping them become active participants in building sustainable LLM pipelines.",
-      "pdf_url": "https://arxiv.org/pdf/2611.02889v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.02889v1",
-      "published": "2026-11-02T10:23:57Z",
-      "updated": "2026-11-02T10:23:57Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Benchmark of THReD: Evaluating an LLM Agent and Its Preprocessing Tools for Turning Electronic Health Records into AI-Ready Datasets",
-      "authors": [
-        "Javad Mohammad Alizadeh",
-        "Huanmei Wu"
-      ],
-      "abstract": "LLM agents are increasingly built into data-analysis software, yet little evidence shows how reliably they preprocess clinical data or whether the tools they invoke give correct, reproducible output. We report a benchmark of THReD, a web-based system that turns electronic health record (EHR) extracts into AI-ready datasets through a chat agent whose proposed steps run only after user confirmation. The agent benchmark has 141 tasks (100 templates) in seven categories, including goal-level requests, failure recovery, requests calling for no action, schema variation and prompt injection through the data, on synthetic tables calibrated to a regional health information exchange; success is judged by checks on the produced data. Over 2,550 episodes with Claude Haiku 5.5 in four context configurations, the deployed agent completed 92.7% (95% CI 88.1-96.4) of tasks on its first answer, abstained on every advice request, recovered from every injected fault, and never proposed an action requested by planted text. Without the data profile, completion fell to 58.0%; goal-level requests were hardest (80.6%). Six experiments on real records of two chronic-disease cohorts and on synthetic data at scale validate the tools: 91-92% of inferred patient classes and 99.7-99.8% of inferred vital-sign labels were correct in masked reconstruction; a dictionary builder combining curated dictionaries with LLM suggestions mapped 99.0% of 2,208 raw variants correctly; all 2,176 replays of 128 saved pipelines gave byte-identical files under pinned dependencies; subgroup differences in inference accuracy vanished within facility and lookup key; and the same-day consolidation rule changed 90-day emergency revisit rates by up to 3.2 points without shifting cohort composition by more than one point. Processing time grew roughly linearly to 5.5 million records while the prompt stayed at about 13 thousand tokens.",
-      "pdf_url": "https://arxiv.org/pdf/2611.02484v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.02484v1",
-      "published": "2026-11-02T03:58:54Z",
-      "updated": "2026-11-02T03:58:54Z",
-      "categories": [
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Findings-aware Language-Image Pretraining for CT Volume Interpretation",
-      "authors": [
-        "Takuro Shimaya",
-        "Junya Inoh",
-        "Masahiro Saiko"
-      ],
-      "abstract": "Computed tomography (CT) provides diverse patient information and various clinical tasks, for which numerous deep learning models have been investigated. Recent years have seen the development of vision-language foundation models that can comprehensively extract clinical features, driven by representation learning that combines CT volumes with radiology reports. Existing approaches typically adopt Contrastive Language-Image Pre-training (CLIP)-based representation learning, where pairs from different cases are, in principle, treated as negative pairs such that the volume and report embeddings are pushed apart. In the biomedical imaging, however, treating different cases as negative pairs is not always appropriate, particularly when clinical similarity exists. In this study, we propose a supervised representation learning framework grounded in clinical knowledge from language foundation models, rather than the weak supervision used in CLIP. Specifically, we utilized a large language model to extract abnormal finding phrases from reports. We then explicitly constructed the target features that the image encoder should output, as the semantic representation of the extracted findings using a biomedical text embedding model. Our Findings-aware Language-Image Pre-training (FiLIP) outperformed weakly supervised approaches in multi-label zero-shot finding classification in both in-domain and external-domain evaluations, and also proved effective when fine-tuned for the downstream task of radiology report generation.",
-      "pdf_url": "https://arxiv.org/pdf/2611.02327v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.02327v1",
-      "published": "2026-11-02T00:21:07Z",
-      "updated": "2026-11-02T00:21:07Z",
-      "categories": [
-        "cs.CV",
-        "physics.med-ph"
       ]
     }
   ]

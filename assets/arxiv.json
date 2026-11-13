@@ -1,8 +1,62 @@
 {
-  "generated_at_utc": "2026-11-12T06:43:04.088871Z",
+  "generated_at_utc": "2026-11-13T05:59:22.730484Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Fine-Tuned Small Language Model for Synthetic Clinical Data Generation and Predictive Healthcare Analytics",
+      "authors": [
+        "Mihnea Sebastian Burlacu",
+        "Ionut Anghel",
+        "Tudor Cioara"
+      ],
+      "abstract": "The reduced availability of medical datasets represents an important challenge in the development of predictive models for remote healthcare solutions, especially when the available data are imbalanced or difficult to extend through traditional methods. Small Language Models (SLMs) have become a promising alternative to Large Language Models (LLMs) for addressing these limitations due to their lower computational requirements and adaptability to specialized tasks. However, their performance remains highly dependent on the quality and representativeness of the available training data. In this paper, we propose a method for clinical data augmentation based on a fine-tuned Microsoft Phi-2 model that is used to generate synthetic instances, with the purpose of improving deep learning-based model for predicting remotely monitored vital signs. The Phi-2 model was adapted to the medical domain through supervised fine-tuning on the MedQuad dataset, through a Quantized Low-Rank Adaptation (QLoRA)-based method and by applying few-shot prompting techniques. The resulting model was used afterwards in the augmentation of a small-sized dataset, composed of vital sign values and labels associated with pathological and physiological states. The experimental results demonstrate that fine-tuned SLMs improved the performance on medical domain, achieving higher scores for both lexical (ROUGE) and semantic (BERTScore) evaluation metrics compared to the pretrained model. Moreover, the fine-tuned SLM is effective for generating structured synthetic clinical data. When used for data augmentation, the generated dataset improved the performance of a LSTM predictive model, increasing the classification accuracy from 89.0% to 93.7% and showing consistent improvements in precision, recall, and F1-score.",
+      "pdf_url": "https://arxiv.org/pdf/2611.16460v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.16460v1",
+      "published": "2026-11-12T08:12:17Z",
+      "updated": "2026-11-12T08:12:17Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "TransXplainRRG: A Radiologist-Evaluated LVLM for Chest Radiograph Report Generation",
+      "authors": [
+        "Chayan Mondal",
+        "Duc-Son Pham",
+        "Tele Tan",
+        "Ashu Gupta",
+        "Vincent T. Y. Tiong",
+        "Shreya Ghosh",
+        "Tom Gedeon"
+      ],
+      "abstract": "Recent advancements in Large Vision-Language Models (LVLM) enhance X-ray report generation, but often neglect clinical context, overlook workflow integration, and lack explainability, which hinders clinical adoption due to interpretability and reliability concerns. This paper addresses the dual challenges of performance and expert explainability in automated X-ray report generation for clinical AI applications. Our proposed approach, TransXplainRRG, utilises an off-the-shelf Swin Transformer model along with a transformer-based text encoder that incorporates patient medical history to generate a radiology report. Further, we explore an expert-guided `inside-out' approach and extract only abnormal findings for radiology report refinement. Thus, this study bridges the gap between high-performance automation and interpretability critical for clinical practice by combining state-of-the-art transformer-based vision encoders, text encoders, and LLMs. TransXplainRRG is trained and tested on the large-scale MIMIC-CXR dataset and further evaluated on the unseen IU X-Ray dataset to demonstrate its generalizability and robustness. We employed the GREEN metric as a complementary measure of clinical consistency, achieving scores of 0.327 on MIMIC-CXR and 0.605 on IU X-Ray, both higher than those achieved by MAIRA-2 under the same evaluation setting. It also performed competitively across standard evaluation metrics, frequently matching or surpassing state-of-the-art models. Additionally, we introduce qualitative evaluation metrics developed from radiologists' viewpoints and conduct a preliminary radiologist evaluation on 100 generated reports to assess their clinical relevance. Quantitative and qualitative analyses further demonstrate the potential of our TransXplainRRG framework for reliable and explainable radiology report generation.",
+      "pdf_url": "https://arxiv.org/pdf/2611.16393v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.16393v1",
+      "published": "2026-11-12T07:05:39Z",
+      "updated": "2026-11-12T07:05:39Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Do Large Language Models Show Racial and Sex Bias in Pain Management? A Counterfactual Audit of GPT, Claude, Gemini, Llama, DeepSeek and Qwen",
+      "authors": [
+        "Richard J. Young",
+        "Alice M. Matthews"
+      ],
+      "abstract": "Racial and ethnic minority patients receive less pain treatment than non-Hispanic White patients, and large language models (LLMs) used as medical AI could reproduce that bias. Prior audits tested a few proprietary models, stated race explicitly and rarely measured the models' own response instability. In exploratory, non-preregistered analyses, Study 1 had four open-weight LLMs assess six acute-pain vignettes in every combination of four races and two sexes, with identity stated or cued only by a name (two names per group), comparing each identity with a White male reference on the same case and sampling seed. In Study 2, 24 configurations of 17 models, including OpenAI's GPT-4.1 mini and gpt-oss, Anthropic's Claude Haiku 4.5, Google's Gemini 2.5 Flash, Meta's Llama, DeepSeek and Qwen, with reasoning on and off and at two precisions, answered the same vignettes and the 50 clinician-written Q-Pain cases. In this single-prompt, JSON-constrained task, no difference survived correction in Study 1, none of 1,386 comparisons survived the false discovery rate in Study 2, and every pain-severity difference was equivalent to zero within one point on a 0-10 scale (within a quarter point for 237 of 238 Q-Pain comparisons). Opioid decisions were bounded less precisely (Study 1 could not exclude differences of about 20 percentage points), so they show no detected difference, not proof of none. The few differences surviving correction within a model favoured Black patients. Models differed far more from one another and across their own settings than between patients (the reference patient received the high opioid dose in 6% to 93% of responses), although serving software, provider and prompt format also differed. Fairness audits of clinical AI should use several names per group, pair comparisons on the seed, report the noise floor and test each deployed configuration.",
+      "pdf_url": "https://arxiv.org/pdf/2611.14935v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.14935v1",
+      "published": "2026-11-11T02:35:53Z",
+      "updated": "2026-11-11T02:35:53Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ]
+    },
     {
       "title": "Hx2Dx: From Anamnesis to Diagnosis - A Multimodal Arena for Conversational Clinical Reasoning in LLMs",
       "authors": [
@@ -253,68 +307,6 @@
       "updated": "2026-11-09T06:28:58Z",
       "categories": [
         "cs.LG"
-      ]
-    },
-    {
-      "title": "HiddenPathQA: A Benchmark for Knowledge Graph Question Answering When Questions Hide Their Paths",
-      "authors": [
-        "Sumin Jo",
-        "Edward Choi"
-      ],
-      "abstract": "Knowledge graph question answering (KGQA) systems are typically evaluated on questions whose surface tokens lexically expose the gold KG path. Users, however, may ask questions without knowing the underlying schema: \"Which condition could Andrew have due to family history?\" compresses a 4-hop chain \"Andrew --[father]--> parent --[father]--> grandparent --[medical condition]--> disease --[subclass of]--> hereditary disorder\" into a single phrase (family history) that names none of those relations. We identify this collapse of path-question alignment as a blind spot in existing KGQA evaluation. Three major LLM-KG paradigms, hop-by-hop exploration, plan-then-retrieve, and similarity-based retrieval, implicitly rely on such lexical cues, an assumption rarely tested in practice.\n  We make three contributions. (i) We introduce HiddenPathQA, a manually verified benchmark of 1,055 questions spanning 2-6 hops and multiple domains, constructed so that question wording does not reveal the gold path's relations. (ii) We propose Holistic Path Selection, which compares questions against candidate relation chains in the local subgraph as complete units, replacing irreversible per-hop relation scoring with globally informed chain-level reasoning. We develop two implementations, TieredHolistic and FlatHolistic. (iii) We conduct a pseudoword stress test that replaces entity names with meaningless placeholders to distinguish KG-grounded reasoning from entity-level memorization. Holistic Path Selection outperforms six strong KGQA baselines (ToG, PoG, FiDeLiS, R2-KG, KAPING, and KARPA) by 8.8-17.9 accuracy points across two LLM backbones and both original and pseudoword settings. Its advantage under pseudoword replacement shows that the gains cannot be explained by entity-level memorization alone.",
-      "pdf_url": "https://arxiv.org/pdf/2611.11802v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.11802v1",
-      "published": "2026-11-09T03:01:41Z",
-      "updated": "2026-11-09T03:01:41Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Safeguarding Agentic AI in Radiology Workflows: A Multimodel Evaluation of Rule-based and Large Language Model-based Verification",
-      "authors": [
-        "Semil Eminovic",
-        "Robin Schmidt",
-        "Bogdan Levita",
-        "Maximilian Lindholz",
-        "Tobias Penzkofer",
-        "Jawed Nawabi"
-      ],
-      "abstract": "Purpose: To estimate how often tool-using large language model (LLM) agents record clinically relevant false or unsupported information in simulated radiology documentation and how much safeguards applied before each action reduce these errors.\n  Materials and Methods: In this simulation study (October 2026), 48 synthetic, radiologist-reviewed base scenarios covered finding communication, tumor board preparation and follow-up management. Forty-three also had a misleading-information variant (91 variants). Six LLM agents (Claude Sonnet 5.5, GPT-6.1-Sol, GLM-5.3, MiniMax M3, Gemma-4-31B, Qwen3.8-27B) completed each variant with permissions only, deterministic rules, and rules plus a locally run LLM checker (1638 episodes). The primary outcome was at least one executed high-severity violation per episode. Risk differences were estimated per agent at base-scenario level and, exploratorily, pooled across agents, with analyses of document access and blocks.\n  Results: With permissions only, 7.3%-27.1% of episodes had a high-severity violation (pooled across agents, 19.4%). Pooled, it was 16.7% with rules (-2.8 percentage points; 95% CI: -6.1, 0.5) and 13.2% with rules plus the LLM checker (-6.2; 95% CI: -9.5, -3.0). Adding the LLM checker to rules changed it by -3.5 (95% CI: -6.3, -0.7). No difference between agents was detected (P = .43), and task success did not decrease detectably. In misleading variants, agents opened the altered document in 83% of episodes regardless of error, and 58% of erroneous statements cited it. Most blocked actions (64%-68%) would not have caused a violation and were returned for revision.\n  Conclusion: Layered safeguards reduced but did not prevent high-severity errors. Errors after misleading information reflected misjudged rather than missed information.",
-      "pdf_url": "https://arxiv.org/pdf/2611.11541v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.11541v1",
-      "published": "2026-11-08T18:29:04Z",
-      "updated": "2026-11-08T18:29:04Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.CY"
-      ]
-    },
-    {
-      "title": "Evidence-Grounded Iterative Reasoning for the Diagnosis of Diffuse Cystic Lung Diseases",
-      "authors": [
-        "Haoqing Li",
-        "Jun Shi",
-        "Tou Li",
-        "Xianmeng Chen",
-        "Rui Wang",
-        "Yating Peng",
-        "Qiwei Jia",
-        "Li Gao",
-        "Qianyi Chen",
-        "Hong An",
-        "Ruoyun Ouyang",
-        "Xiaowen Hu"
-      ],
-      "abstract": "Overlapping imaging manifestations complicate the differential diagnosis of Diffuse Cystic Lung Diseases (DCLDs), while limited annotated data constrain supervised model development. Multimodal Large Language Models (MLLMs) can integrate imaging and clinical information, but their diagnostic reasoning remains limited by incomplete volumetric perception and insufficient grounding in disease-specific evidence. We propose DCLDs-EIR, an evidence-grounded iterative reasoning framework coupling diagnostic hypothesis refinement with multimodal evidence acquisition and verification. Multiview renderings of predicted lung and cyst segmentations characterize global cyst distributions and initialize the differential diagnosis. Competing hypotheses guide axial CT inspection to identify local findings that, together with clinical context, inform retrieval from a disease-specific knowledge graph. Accumulated patient observations and retrieved knowledge are jointly assessed for diagnostic support and refutation to revise the diagnostic state. Updated hypotheses and unresolved distinctions guide subsequent inspection, forming a feedback loop between evidence acquisition and hypothesis verification. Multicenter evaluation demonstrates that DCLDs-EIR consistently improves diagnostic accuracy over baselines and enables traceable differential diagnosis through explicit links between diagnostic hypotheses, patient observations, and disease-specific knowledge.",
-      "pdf_url": "https://arxiv.org/pdf/2611.12981v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.12981v1",
-      "published": "2026-11-08T07:48:04Z",
-      "updated": "2026-11-08T07:48:04Z",
-      "categories": [
-        "cs.CV"
       ]
     }
   ]

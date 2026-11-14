@@ -1,8 +1,39 @@
 {
-  "generated_at_utc": "2026-11-13T05:59:22.730484Z",
+  "generated_at_utc": "2026-11-14T05:48:43.077155Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Evaluating Pretrained Language Semantics for Structured EHR Prediction Tasks",
+      "authors": [
+        "Ashvin Gupta",
+        "Brendan Delaney",
+        "Alessandra Russo"
+      ],
+      "abstract": "Structured Electronic Health Records (EHR) models typically treat each clinical concept as a dataset-specific token, discarding the natural-language semantics associated with the event. As a result, relationships between concepts must largely be learned from EHR co-occurrence, without directly exploiting any prior semantic knowledge. We investigate how pretrained causal language models can be adapted for longitudinal EHR prediction by developing tEHR. Here, we represent events with their natural language description and use this text stream to apply EHR-adaptive continued pretraining, followed by task-specific discriminative fine-tuning using LoRA, utilising the LLM as a longitudinal patient-encoder. We evaluate this approach across four prediction tasks on the MIMIC-IV dataset and pancreatic cancer prediction on the CPRD dataset at 1 to 12 month horizons, with tEHR using the Mistral-7B-v0.3 backbone achieving the strongest overall performance. Ablations show that performance declines when clinical descriptions are removed or misaligned, when numerical values are omitted, and when either stage of adaptation is removed, while explicit elapsed-time descriptions provide little additional benefit. Analysis of the learned patient representations further reveals clinically coherent structure associated with distinct patterns of disease risk and clinical history.",
+      "pdf_url": "https://arxiv.org/pdf/2611.17053v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.17053v1",
+      "published": "2026-11-12T16:34:49Z",
+      "updated": "2026-11-12T16:34:49Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Calibration and Conformal Prediction for Medical Question Answering in Arabic and English: Evidence from Two Non-Parallel Benchmarks",
+      "authors": [
+        "Mariya"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly tested on medical exam questions, but accuracy alone does not show when an answer can be trusted. I study the calibration and uncertainty of two open-weight models, Qwen2.5-7B-Instruct and Jais-adapted-7B-chat (both run in 4-bit precision), on 2,816 English multiple-choice questions from MedMCQA and 4,927 Arabic multiple-choice questions from MedAraBench. Accuracy was 0.561 (English) and 0.430 (Arabic) for Qwen, and 0.369 and 0.308 for Jais. Raw option probabilities were overconfident in all four settings (expected calibration error 0.242 to 0.486), and a single temperature parameter removed 82% to 93% of that error. Split conformal prediction reached its nominal coverage in all 24 settings I tested (within 0.006), but the sets were large when accuracy was low: at 90% coverage, temperature-scaled sets contained on average 63% (Qwen, English), 78% (Qwen, Arabic), 86% (Jais, English) and 89% (Jais, Arabic) of the options. The margin between the top two option probabilities separated correct from incorrect answers best for Qwen on English (AUROC 0.734) and worst for Jais on Arabic (0.579). Answering only the 20% most confident questions lowered Qwen's English error from 0.439 to 0.098. Jais showed a strong prior for option C (49% of English and 60% of Arabic predictions). Scoring Latin letters only cut the Arabic share to 29% but left accuracy, raw ECE and AUROC nearly unchanged. Because the two benchmarks differ in subject, level and number of options, I do not attribute differences between languages to language itself. Code is available at https://github.com/Mariyaaleem/arabic-english-medqa-uncertainty.",
+      "pdf_url": "https://arxiv.org/pdf/2611.16821v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.16821v1",
+      "published": "2026-11-12T13:57:23Z",
+      "updated": "2026-11-12T13:57:23Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Fine-Tuned Small Language Model for Synthetic Clinical Data Generation and Predictive Healthcare Analytics",
       "authors": [
@@ -264,49 +295,6 @@
       "categories": [
         "eess.IV",
         "physics.med-ph"
-      ]
-    },
-    {
-      "title": "Weight-Space Programming for Medical Imaging: Do We Still Need Training Data?",
-      "authors": [
-        "Maximilian Lindholz",
-        "Richard Ruppel",
-        "Annette Milnik",
-        "Sebastian Halskov",
-        "Semil Eminovic",
-        "Charlie A. Hamm",
-        "Robin Schmidt",
-        "Anika Knupfer",
-        "Jana Hutter",
-        "Johanna P. M\u00fcller",
-        "Carolina Dominguez Aleixo",
-        "Jawed Nawabi",
-        "Jens Vogel-Claussen",
-        "Tobias Penzkofer"
-      ],
-      "abstract": "Can a large language model (LLM) write the parameters of a medical image classifier from medical knowledge alone, without any training data? Such classifiers normally require labelled images, which are costly and often unavailable. We investigate this question through weight-space programming (WSP), in which an LLM writes or adapts the weights and biases of a neural network directly, without optimisation on training data. Claude Opus 5.5 and GPT-6 Astra each generate the parameters of a small LeNet-style CNN in a single reply, without tool use and without access to any image. We compare these networks against zero-shot MedSigLIP and against the same architecture trained on labels using the Adam optimiser, across 7 classification tasks in four modalities: chest X-ray, breast ultrasound and abdominal CT (all from MedMNIST), and pelvic MRI (SynthUterus). The LLM-written networks perform above chance on all six MedMNIST tasks, with a mean test AUC of 0.719 for Opus and 0.711 for Astra. Both models outperform MedSigLIP on 5 of 6 tasks while using more than 10,000 times fewer parameters. However, the same network trained with Adam on only 256 labelled images achieves a higher AUC on every MedMNIST task (mean AUC 0.828). On SynthUterus, Opus attains an AUC of 0.764, whereas Astra falls below chance (AUC 0.136) owing to a systematic error. These results show that LLMs can write functional medical classifiers, but that they do not yet replace training data. We release the protocol, logs and all generated weights at https://github.com/MaximilianLindholz/weight-space-programming-medical.",
-      "pdf_url": "https://arxiv.org/pdf/2611.12066v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.12066v1",
-      "published": "2026-11-09T08:41:33Z",
-      "updated": "2026-11-09T08:41:33Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Operation-aware Multimodal Clinical Decision Support System for ICU Discharge Risk Assessment",
-      "authors": [
-        "Guoqing Zhang",
-        "Rafik Hadfi",
-        "Takayuki Ito"
-      ],
-      "abstract": "Unplanned 30-day intensive care unit (ICU) readmission is a critical benchmark for evaluating healthcare quality. Most predictive models assume readmission risk depends solely on a patient's individual pathophysiological state, ignoring hospital operational context and resource capacity. In practice, discharge decisions are dynamic trade-offs between patient stability and bed turnover pressures. To address this gap, we develop an Operation-aware Multimodal Clinical Decision Support System (CDSS) for ICU discharge risk assessment. The system combines multi-agent collaborative extraction with self-evolving retrieval-augmented generation (RAG) to eliminate template noise from progress notes, while constructing departmental workload indicators alongside admission flow features, continuous vital signs, and sparse medical codes (ICD/DRG). Addressing severe class imbalance (about 10.5% readmissions) and alarm fatigue, we implement data normalization, class reweighting, and decision-threshold calibration. In 20 independent runs across 20,000 ICU stays from MIMIC-III, empirical findings demonstrate that: vital signs alone have limited predictive capacity under real-world class imbalance (PR-AUC of 0.1387 +/- 0.0086); directly concatenating raw text embeddings degrades decision tree performance (XGBoost and LightGBM PR-AUC drop to 0.3893 and 0.4030); whereas an end-to-end multimodal fine-tuning architecture (Transformer E2E FineTune) utilizing layer-wise parameter freezing and differential learning rates reverses text negative transfer, achieving the highest AUROC of 0.8288 +/- 0.0110, PR-AUC of 0.4373 +/- 0.0310, and F1-Score of 0.4757 +/- 0.0196. Operational indicators supply independent risk signals, laying an engineering foundation for high-utility clinical decision support tools.",
-      "pdf_url": "https://arxiv.org/pdf/2611.11960v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.11960v1",
-      "published": "2026-11-09T06:28:58Z",
-      "updated": "2026-11-09T06:28:58Z",
-      "categories": [
-        "cs.LG"
       ]
     }
   ]

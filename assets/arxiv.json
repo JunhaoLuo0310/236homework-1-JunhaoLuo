@@ -1,8 +1,64 @@
 {
-  "generated_at_utc": "2026-11-15T05:49:28.621761Z",
+  "generated_at_utc": "2026-11-16T05:49:04.692243Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Agentic induction of common data elements and information extraction from sarcoma case report abstracts",
+      "authors": [
+        "Daniel Reichenpfader",
+        "Kwaku Appiagyei",
+        "Manovah Nadarajah",
+        "Ahmed Reda Bahr",
+        "Irina Filchenko",
+        "Fabio Dennst\u00e4dt"
+      ],
+      "abstract": "Common data elements (CDEs) support clinical data comparability but are usually defined manually. We investigated whether large language model agents could derive a CDE schema from sarcoma case report abstracts and apply it at scale. An agent proposed 72,909 candidate CDEs from 24,588 PubMed abstracts; agentic consolidation yielded 1,570 CDEs. We retained 53 supported by at least 50 abstracts and attempted evidence-linked extraction across the corpus. Processing succeeded for all retained CDEs in 79.2% of abstracts, including responses indicating non-mention. Two human reviewers approved 83.0% of retained CDEs for relevance, 67.9% for clarity, and 56.6% for correctness. In 100 sampled abstracts, exact agreement with the value extracted by the LLM was 94.9% among 1,116 pairs with a non-empty answer (abstract-level bootstrap 95% CI, 93.0-96.4%). Errors concentrated in anatomical and temporal fields. These findings support agent-assisted schema drafting followed by expert curation before large-scale extraction.",
+      "pdf_url": "https://arxiv.org/pdf/2611.18506v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.18506v1",
+      "published": "2026-11-13T18:23:11Z",
+      "updated": "2026-11-13T18:23:11Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "NER-D: A cross-domain benchmark for German NER",
+      "authors": [
+        "Marc Brinner",
+        "Philipp Cimiano",
+        "Karolina Hanna Czok",
+        "Regina Stodden",
+        "Viju Sudhi",
+        "Sina Zarrie\u00df"
+      ],
+      "abstract": "We present NER-D, a cross-domain benchmark for German NER comprising 13 datasets spanning 9 domains, including General/Politics, Wikipedia, Legal, Medical, Historical, Financial, Agriculture and Archaeology. We examine the performance of both proprietary LLMs and state-of-the-art small open-source models using normal prompting and further examine the performance gains achievable via in-context learning and LoRA fine-tuning. Our results show that without any sort of optimization a proprietary model (GPT-5.4 mini) outperforms the smaller open-source models on 6 out of 13 datasets, but LoRA fine-tuning enables the smaller models to substantially outperform the proprietary baseline. We further analyze the influence of the domain and the tagset used in each task on the performance achieved in the different evaluation settings. Our benchmark will be available as a resource for the development of future German NER methods on both general and specialized domains.\\footnote{We make our code, data, and models publicly available upon acceptance of this paper.",
+      "pdf_url": "https://arxiv.org/pdf/2611.18257v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.18257v1",
+      "published": "2026-11-13T14:54:21Z",
+      "updated": "2026-11-13T14:54:21Z",
+      "categories": [
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Alignment with Reflect-Reasoning: Learning How To Follow Principles",
+      "authors": [
+        "Henry Bell",
+        "Caroline Zhang",
+        "Dhaval Potdar",
+        "Mohammed Mobasserul Haque",
+        "Brandon Fain"
+      ],
+      "abstract": "The appropriate governing norms and principles for the alignment of Large Language Models (LLMs) often depend on cultural context and deployment application. However, most alignment techniques focus on training models to conform to human preferences or constitutional principles specified at training time and subsequently fixed. In practice, many deployers rely on system prompting to implement contextual norms and guardrails at inference time. Prior work has shown that post-generation reflective reasoning with critique and revision can improve conformance compared to simple system prompting, but such methods are limited to the reasoning abilities inherent in the trained model. We introduce Reflect-Reasoning, a training method that teaches models how to reason about alignment to principles, rather than simply which principles to follow. Across five models, Reflect-Reasoning consistently outperforms both system prompting and explicit prompting strategies for in-context reflective reasoning. These improvements extend and generalize to entirely out-of-distribution domains of medical and financial principles. We additionally demonstrate that Reflect-Reasoning reduces the occurrence of rare but serious principle violations. Finally, we show that Reflect-Reasoning does not erode the safety engineering of a model and is robust against jailbreaking attempts using adversarial constitutions. Overall, our results demonstrate that Reflect-Reasoning is a scalable method for training constitutional alignment as a generalizable reasoning capability, enabling models to adapt to novel principles and produce transparent reasoning traces without additional fine-tuning.",
+      "pdf_url": "https://arxiv.org/pdf/2611.17398v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.17398v1",
+      "published": "2026-11-12T18:31:06Z",
+      "updated": "2026-11-12T18:31:06Z",
+      "categories": [
+        "cs.LG"
+      ]
+    },
     {
       "title": "Evaluating Pretrained Language Semantics for Structured EHR Prediction Tasks",
       "authors": [
@@ -236,65 +292,6 @@
         "cs.CY",
         "cs.CL",
         "cs.HC"
-      ]
-    },
-    {
-      "title": "A local language model layered with rule-based and neural detectors for clinical text de-identification: an open-source toolkit and evaluation",
-      "authors": [
-        "Valentin Burkin"
-      ],
-      "abstract": "Objectives: To measure whether a locally hosted large language model (LLM), stacked with deterministic and clinical named-entity recognition (NER) detectors, finds more protected health information (PHI) than open tools, and at what precision.\n  Materials and Methods: DeidSharp, an open-source .NET toolkit, combines the findings of pluggable detectors (patterns, a clinical NER model, a local 26B mixture-of-experts LLM) and fails closed on any detector error. Configurations fixed on tuning halves were compared, under a prespecified protocol, with deid, Philter, the Stanford/Penn de-identifier, OpenAI Privacy Filter and GLiNER on reporting halves of PhysioNet's nursing notes (889 spans) and semi-synthetic MIMIC-IV-Note discharge summaries (29,023 spans), and on synthetic ASQ-PHI queries, with paired patient-level bootstrap intervals.\n  Results: In the nursing notes, against Stanford/Penn, the recall-first stack found 98.9% of PHI (+2.8, 95% CI 1.4 to 4.4) at 9.3 points lower precision; the precision-first stack, without NER, found 96.5%, matching Stanford/Penn, at 19.6 points higher precision (83.2%). In the discharge summaries, both stacks led Stanford/Penn by more than 20 points (recall-first 95.3%, +21.5, 20.5 to 22.4), almost entirely on generated untyped names; on typed labels all three exceeded 99%. All four prespecified comparisons held. No configuration beat deid significantly on its home corpus; Philter found more discharge-summary spans than the recall-first stack at 23 points lower precision.\n  Discussion: The LLM was the main detector and NER added place names; asked to verify its own findings, the LLM discarded a quarter of true PHI.\n  Conclusion: A local LLM layered with deterministic detectors offers recall-first and precision-first operating points without sending text off-site.",
-      "pdf_url": "https://arxiv.org/pdf/2611.12709v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.12709v1",
-      "published": "2026-11-09T17:02:05Z",
-      "updated": "2026-11-09T17:02:05Z",
-      "categories": [
-        "cs.CL",
-        "cs.CY",
-        "cs.SE"
-      ]
-    },
-    {
-      "title": "TrialDesignBench: Benchmarking Language Models for Phase-I Trial Design Against Clinical Knowledge",
-      "authors": [
-        "Yihan Hank Tang",
-        "Peng Yang",
-        "Jiayi Xin",
-        "Tianqi Shang",
-        "Xuyang Chen",
-        "Ying Yuan",
-        "Yi Lian",
-        "Qi Long"
-      ],
-      "abstract": "AI is used in much of the clinical trial pipeline. However, selecting the statistical design of a trial, a crucial step that determines how drug doses are tested on humans and evaluated, has seen almost no AI progress. LLMs appear to be a natural fit given their strengths in biomedical knowledge and statistical reasoning. Nevertheless, there is currently no appropriate way to evaluate such abilities because recent regulatory and methodological shifts, most notably FDA's Project Optimus, have redefined what constitutes a reasonable design and rendered many previous designs obsolete. To lay the groundwork for AI-assisted trial design, we introduce TrialDesignBench, a benchmark of 617 Phase-I/I-II oncology dose-finding trials, each paired with an expert-validated reference design that is consistent with the latest FDA regulatory initiatives. This reference standard is produced through a formalization of the expert design process. We evaluate five frontier LLMs, none of which matches the reference standard. Our ablation experiments trace this performance gap to two main causes, inference of latent, unrecorded design determinants from trial sources (supplying them raises class-wise balanced accuracy by 0.22) and structured decision-tree reasoning (+0.24). TrialDesignBench offers a reproducible, contemporary-standard objective for evaluating and enhancing AI-assisted trial design.",
-      "pdf_url": "https://arxiv.org/pdf/2611.12640v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.12640v1",
-      "published": "2026-11-09T16:15:57Z",
-      "updated": "2026-11-09T16:15:57Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "stat.AP"
-      ]
-    },
-    {
-      "title": "Next-Generation Segmentation in Radiotherapy: A Narrative Review from Atlas-Based Methods to Agentic Vision-Language Models",
-      "authors": [
-        "Josef A. Buchner",
-        "Richard Osuala",
-        "Ayhan Can Erdur",
-        "Melissa C. Olufs",
-        "Stephanie E. Combs",
-        "Jan C. Peeken"
-      ],
-      "abstract": "Precise segmentation of target volumes and organs at risk is an essential prerequisite for modern, high-precision radiation therapy. However, this task has traditionally been time-consuming and subject to high interobserver variability. Motivated by these limitations, more advanced and novel approaches to automating this task have been developed over the past two decades. This narrative review highlights representative milestones, with a focus on the most recent developments. These approaches include atlas-based label propagation, convolutional architectures, promptable foundation models, and, most recently, vision-language models (VLMs), which integrate clinical text with volumetric segmentation. Each methodological generation has addressed limitations of its predecessor while introducing new ones. A substantial gap remains between research progress and clinical deployment, as routine workflows continue to be dominated by atlas-based and narrow task-specific deep-learning tools, which remain strong baselines in geometric overlap metrics but are highly rigid in terms of application, versatility, portability, and interpretability. As contouring systems further grow in complexity, conventional geometric overlap metrics become insufficient, motivating evaluation paradigms that incorporate surface-based, dosimetric, and prompt-adherence assessment. Emerging agentic architectures that combine large language models, retrieval-augmented generation, and vision-language segmentation modules are leading towards more flexible, guideline-aware, interactive contouring workflows. These systems could automate flexible and interpretable knowledge-based contouring and actively support the clinical reasoning underlying target volume definition.",
-      "pdf_url": "https://arxiv.org/pdf/2611.12085v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.12085v1",
-      "published": "2026-11-09T09:04:38Z",
-      "updated": "2026-11-09T09:04:38Z",
-      "categories": [
-        "eess.IV",
-        "physics.med-ph"
       ]
     }
   ]

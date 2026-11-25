@@ -1,8 +1,157 @@
 {
-  "generated_at_utc": "2026-11-24T09:20:49.929732Z",
+  "generated_at_utc": "2026-11-25T07:54:27.225321Z",
   "search_query": "(\"large language model\" OR LLM OR RAG) AND (biostatistics OR medical OR clinical)",
   "count": 15,
   "papers": [
+    {
+      "title": "Can LLM Judges Catch Unsafe Clinical Actions? A Fault-Injection Study",
+      "authors": [
+        "Neda Ghafouri"
+      ],
+      "abstract": "As clinical AI agents begin to interact with electronic health records (EHRs), large language models (LLMs) are increasingly used to evaluate their actions. But how reliably can these judges recognize clinically dangerous mistakes, especially when an agent appears to have completed its task successfully? We investigate this question using MedAgentBench by introducing controlled clinical errors into verified agent trajectories. The experiments include 416 faulty trajectories, eight error categories, and six open-weight LLM judges. By comparing each faulty trajectory with its correct counterpart, we measure whether judges genuinely recognize errors rather than simply flagging more actions as unsafe. The findings show that access to clinical evidence significantly improves judge reliability. When shown only the final answer, judges cannot distinguish errors that leave it unchanged, while flagging 56% of correct trajectories. With full trajectory information, the ability to distinguish unsafe actions from correct ones reaches a score of 0.75, and providing actual EHR responses improves discrimination by 0.39. Surprisingly, including the agent's reasoning does not improve overall performance and reduces detection of incorrectly reported clinical values by 0.18, which remain the hardest errors to detect. MedGemma performed worse than the general-purpose model and was the only judge to miss potentially dangerous medication overdoses. We also find that the benchmark's original grader accepts all 38 trajectories with an intentionally skipped laboratory check, while combining LLM judges with a rule-based checker informed by the full EHR record detects 97% of injected faults.",
+      "pdf_url": "https://arxiv.org/pdf/2611.33012v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.33012v1",
+      "published": "2026-11-24T17:32:40Z",
+      "updated": "2026-11-24T17:32:40Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "ASCENT: A Benchmark for Evaluating and Advancing Stepwise Diagnostic Reasoning in Large Language Models on Common Clinical Scenarios",
+      "authors": [
+        "Yera Choi",
+        "Yeong Hwa Kim",
+        "Jaedeok Lee",
+        "Taekang Kim",
+        "Sangdoo Yun",
+        "Seong-Eun Moon"
+      ],
+      "abstract": "Large language models (LLMs) excel at medical question answering yet are rarely evaluated on the stepwise diagnostic reasoning that defines real clinical workflows, where impressions are revised as information accumulates. We build Annotated Stepwise Clinical rEasoning for NaturalisTic Diagnosis (ASCENT), a clinician-annotated benchmark and training resource of 3,078 stepwise problems derived from MedQA-USMLE that decomposes each vignette into EMR-aligned steps (Findings, Impression, supporting Rationale), enabling evaluation of intermediate reasoning under incomplete information.\n  Experiments and training with ASCENT revealed insights into how current LLMs handle stepwise diagnostic reasoning. Even strong reasoning models that perform well on MedQA-USMLE leave substantial headroom on ASCENT, and general-purpose frontier models trail further, exposing a persistent gap between fully informed and stepwise diagnosis. Fine-tuning Qwen2.5-7B and 32B on ASCENT yields measurable F1 gains over both pre-trained and HuatuoGPT-o1 CoT-trained baselines, with gains driven primarily by precision. Complementary robustness analyses (counterfactual perturbation, format-vs-content control, judge agreement, and rollout) further show that ASCENT-fine-tuned models rely on the diagnostic content of prior impressions rather than imitating their output format, while error propagation under rollout remains a key challenge for clinical deployment.",
+      "pdf_url": "https://arxiv.org/pdf/2611.32734v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.32734v1",
+      "published": "2026-11-24T14:49:50Z",
+      "updated": "2026-11-24T14:49:50Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Can AI Design a Better nnU-Net? A Hypothesis-Driven Architecture Discovery Loop from Failures to Design Rules",
+      "authors": [
+        "Songtao Jiang",
+        "Yuan Wang",
+        "Fucheng Niu",
+        "Hualiang Wang",
+        "Jian Wu",
+        "Zuozhu Liu"
+      ],
+      "abstract": "Neural architecture search and LLM-driven evolution often reduce evaluation to a scalar fitness score, discarding failures that could explain why designs succeed or fail. We present a hypothesis-driven architecture discovery loop in which LLM agents diagnose structured error patterns, formulate falsifiable hypotheses, test counterfactual controls under a frozen nnU-Net pipeline, and distill validated mechanisms into executable trigger-to-action rules. Across eight search waves, the loop identifies two principles for 3D medical image segmentation. First, reallocating computation from high-resolution decoders to the mid-encoder preserves thin-anatomy boundaries while reducing cost. Second, support-confined region contrast addresses errors between nested anatomical compartments, with anatomy-dependent triggers selecting when the rule applies. These principles produce LeanNeXt (0.78 MACs and 0.92 training-step time relative to nnU-Net; +1.63 Dice points on four-fold KiTS23 cross-validation) and trigger-routed LeanNeXt+. The latter improves all 15 evaluated CT/MRI settings over nnU-Net and exceeds the 3.3 larger ResEnc-M on 12 of 15 benchmarks at 0.30 its parameter count. Relative to random sampling, one-shot LLM generation, and score-selected agent search, the loop shows how failure analysis can yield reusable design rules across modalities.",
+      "pdf_url": "https://arxiv.org/pdf/2611.32384v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.32384v1",
+      "published": "2026-11-24T10:49:50Z",
+      "updated": "2026-11-24T10:49:50Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Refining and Aligning Clinical Reasoning with Health Guidelines via Formal Constraints",
+      "authors": [
+        "Xiaoyang Fan",
+        "Yufan Cai",
+        "Zhe Hou",
+        "Jin Song Dong"
+      ],
+      "abstract": "Clinical reasoning from incomplete or conflicting patient evidence must account for low-probability but high-risk concerns while remaining grounded in health guidelines. We introduce VerClin, an explainable framework that extracts guideline conditions, exclusions, recommendations, and priorities into executable knowledge and represents patient conversations as scoped cases. A deterministic four-valued reasoner produces traceable guideline matches while preserving uncertainty and enforcing exclusions. Multiple specialty agents then screen matched guidelines for case applicability, and a consultation model synthesizes accepted guidance through specialty recommendations and a sentence-preserving formal-constraint channel. We present accepted guidance in ascending order of the sum of its priority and trigger-strength ranks, which can surface high-risk guidance with weaker triggers. VerClin outperforms direct generation and Top-5 RAG on HealthBench Hard and HealthBench Professional. On the LLMEval-Med subset, it outperforms direct generation and ties Top-5 RAG. Component analyses further examine semantic closure, example-guided refinement, specialty screening, and constraint-conditioned delivery.",
+      "pdf_url": "https://arxiv.org/pdf/2611.32247v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.32247v1",
+      "published": "2026-11-24T09:23:56Z",
+      "updated": "2026-11-24T09:23:56Z",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Do Clinician-Scored Examples Help LLMs Code ADOS-2 from Hour-Long Transcripts?",
+      "authors": [
+        "Zeteng Lin",
+        "Yikang Liu",
+        "Bolin Zeng",
+        "Mengyuan Ding",
+        "Xihui Wu",
+        "Kangyou Li",
+        "Chengzhe Fu",
+        "Xin Wang"
+      ],
+      "abstract": "Large language models can apply a written rubric to a transcript, making automated coding of the Autism Diagnostic Observation Schedule (ADOS-2) look within reach. A common way to align such a rater with clinicians is to show it expert-scored examples, but whether correct labels improve agreement is rarely tested. We test this for eight speech-based items of hour-long ADOS-2 Module 3 sessions from 48 children, with one local model and a pre-registered, placebo-controlled design. We compare few-shot scoring, an anchored comparison in which the model only judges a child better, similar or worse than scored anchors and a fixed rule gives the score, post-hoc calibration, protocol-based evidence routing and direct scoring of the full transcript. On 40 held-out children, agreement with clinicians was modest, with quadratic weighted kappa between 0.22 and 0.30. Replacing every example's label with a wrong one changed about a third of the few-shot predictions, more often towards the corrupted labels than chance, but did not lower agreement, 0.25 with correct and 0.23 with wrong labels. A larger second model did the same. The anchored comparison did not improve on few-shot scoring, its cross-child judgements were no more accurate than those implied by absolute scores, and routing did not help. Among the registered, uncalibrated arms, direct scoring of the full transcript agreed best at 0.30. Exploratory follow-up analyses found that the model's graded judgements ranked children better than its final scores, that existing batch calibration raised agreement to 0.46 on the same children, and that in controlled synthetic sessions scoring episodes separately did not beat calibrated whole-transcript scoring. Expert-scored examples do not by themselves calibrate model-based clinical raters, and claims of calibration or added pipeline complexity need corrupted-label controls and strong baselines.",
+      "pdf_url": "https://arxiv.org/pdf/2611.32050v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.32050v1",
+      "published": "2026-11-24T06:33:29Z",
+      "updated": "2026-11-24T06:33:29Z",
+      "categories": [
+        "cs.CY",
+        "cs.CL"
+      ]
+    },
+    {
+      "title": "Beyond \"AI Can Make Mistakes\": How Risk Communication Shapes Trust and Decision Confidence for LLMs in Health Information Seeking",
+      "authors": [
+        "Jiawei Zhou",
+        "Mengting Tu",
+        "Shravika Mittal",
+        "Sowmya Krishna",
+        "Q. Vera Liao",
+        "Munmun De Choudhury"
+      ],
+      "abstract": "Adoption of LLMs for health information has outpaced public understanding, but whether risk communication can work as a corrective remains unknown. In a preregistered experiment (N=500), we compared a standard disclaimer against structured risk communication varying in contextual relevance and mechanistic explanation. Without intervention, users understanding LLMs less reported higher trust and confidence in deciding when to rely. Structured risk communication significantly reduced trust, more so with health-specific framing, but did not improve confidence in reliance decision. Risk disclosure was associated with higher decision confidence among those with stronger AI knowledge, but lower confidence among those less preferring analytical thinking. Effects were also task-dependent: disclosure shifted preferences for medical queries and impairment assistance, while LLMs remained preferred for emotional companionship regardless of exposure. These findings demonstrate that risk communication can narrow trust gaps across AI-literacy levels, but turning disclosure into judgment requires adapting to usage context and users' prior knowledge.",
+      "pdf_url": "https://arxiv.org/pdf/2611.31942v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.31942v1",
+      "published": "2026-11-24T04:47:25Z",
+      "updated": "2026-11-24T04:47:25Z",
+      "categories": [
+        "cs.HC"
+      ]
+    },
+    {
+      "title": "Rethinking Document Indexing for LLM-based Analysis",
+      "authors": [
+        "Donna Pham",
+        "Zhongwei Xu",
+        "Siyuan Dong",
+        "Haotian Gong",
+        "Lin Ma"
+      ],
+      "abstract": "Documents such as clinical records, legal contracts, and scientific papers are increasingly analyzed with large language models (LLMs). The na\u00efve approach of prompting the model with the full text for every question is slow, expensive, prone to hallucination on long inputs, and reuses no work across questions. Retrieval-augmented generation (RAG) systems build reusable state to address this, but they store it as embedded chunks: slicing text into fragments can lose the meaning that spans them, and the resulting index is tied to one embedding model, so it must be rebuilt whenever that model changes. Answering many questions over a large body of data without a full rescan, however, is not a new problem: it is the problem database indexes have been solving for decades, and we argue that this accumulated index design knowledge is waiting to be revisited for LLM access.\n  As a concrete starting point, we propose Periplus, a hierarchical plain-text index inspired by the classic B+ tree. It arranges a document into pages running from general summaries at the root to specific ones at the leaves, so that each level guides the search into the next. But it departs from the B+ tree in three ways suited to LLM access: content lives at every level, the pages are plain text rather than attribute values, and navigation follows the relevance of a page summary to the question rather than a key comparison. The structure itself is discovered per document by the LLM rather than hand-designed in advance. In a preliminary evaluation on narrative and contract corpora, Periplus comes within 0.1--0.9 percentage points of the strongest baseline's accuracy while consuming 70--72\\% fewer total tokens. These early results are encouraging, and they offer only a glimpse of what index design can bring to LLM-based analysis.",
+      "pdf_url": "https://arxiv.org/pdf/2611.31679v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.31679v1",
+      "published": "2026-11-23T23:10:00Z",
+      "updated": "2026-11-23T23:10:00Z",
+      "categories": [
+        "cs.DB"
+      ]
+    },
+    {
+      "title": "A dataset of clinically similar image pairs from citation-linked case reports for medical image retrieval",
+      "authors": [
+        "Guy Shmueli",
+        "Keno K. Bressem",
+        "Tom Hope"
+      ],
+      "abstract": "Retrieving images of patients clinically similar to a given patient can support diagnosis, teaching and research. Training and evaluating retrieval systems requires knowing which images of different patients show the same finding, and existing datasets are small or narrow in scope. We construct PMC-PaIR, a dataset of 86,144 pairs of clinically similar images from 56,013 open-access PubMed Central case reports, which often document rare or challenging presentations. We develop an approach that follows citations, which often link case reports of similar patients. To determine what two linked cases share clinically, it prompts large language models to generate and answer hierarchical questions, from modality to diagnosis and findings, and to match images by caption using the answers. Experts find the pairs highly accurate, and this question-guided approach finds twice as many correct pairs as direct matching. Fine-tuning BiomedCLIP on PMC-PaIR improves retrieval in all modality, anatomy and diagnosis categories tested, for image-only queries and image queries with a short text naming the finding. We release the dataset and the automated pipeline, which can extend PMC-PaIR as new case reports are published.",
+      "pdf_url": "https://arxiv.org/pdf/2611.31465v1",
+      "arxiv_url": "https://arxiv.org/abs/2611.31465v1",
+      "published": "2026-11-23T19:37:18Z",
+      "updated": "2026-11-23T19:37:18Z",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.IR"
+      ]
+    },
     {
       "title": "Triage Accuracy of Jev and Open-Weight System One Decision Models and Their Use for Early Emergency Recognition in Symptom-Assessment Applications",
       "authors": [
@@ -127,167 +276,6 @@
       "updated": "2026-11-22T18:53:26Z",
       "categories": [
         "eess.SP"
-      ]
-    },
-    {
-      "title": "SAE-Audit: Clinical-Trial Prediction via Inference-Time Optimization of Black-Box LLMs Audited by Sparse Autoencoder Evidence",
-      "authors": [
-        "Junbo Shen"
-      ],
-      "abstract": "Clinical trials are costly and often take years to complete, making early outcome prediction valuable for trial planning. Large language models (LLMs) are increasingly used to forecast clinical-trial outcomes, yet their predictions remain unreliable and their rationales may not faithfully reflect the evidence underlying their answers. On tasks such as predicting whether a registered clinical trial will complete or terminate early, frontier LLMs perform only modestly above chance in our experiments. We introduce SAE-Audit, which optimizes a black-box LLM at inference time with evidence obtained from a deployable open model. A frozen sparse autoencoder (SAE) on Llama-3.1-8B-Instruct is converted into a vocabulary of clinical concepts. Sparse probes fitted on past trials determine which concepts are associated with the outcome. For a new protocol, the concepts detected by the probe are written as evidence, each with the direction and strength of its association with the outcome, and the LLM being audited optimizes its answer in the light of this evidence. Without additional training, SAE-Audit raises balanced accuracy of deepseek-v4-flash by 9.6--12.0 points on five clinical-trial prediction tasks and raises GPT-5.6-terra by 8.0 points on trial completion, exceeding other agentic inference-time optimization methods by a large margin. As an auxiliary, SAE probes module within SAE-Audit is itself accurate and auditable, providing natural-language explanations directly derived from verified concept contributions and protocol evidence, without requiring additional LLMs at inference time. SAE-Audit provides verifiable, concept-level evidence for more accurate and auditable clinical-trial prediction. It can also be embedded into biomedical AI agents such as Biomni to optimize their performance.",
-      "pdf_url": "https://arxiv.org/pdf/2611.29368v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.29368v1",
-      "published": "2026-11-22T10:13:45Z",
-      "updated": "2026-11-22T10:13:45Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "CT-Navigator: Towards Interpretable and Generalizable CT Understanding through Agentic Perception and Tool-Invocation",
-      "authors": [
-        "Yibing Fu",
-        "Huidong Xie",
-        "Yihao Niu",
-        "Wei Ji",
-        "Heming Dong",
-        "Ziyue Wang",
-        "Jingyu Chen",
-        "Jun Zhao",
-        "Haoyuan Hu",
-        "Hongming Shan",
-        "Lai Jiang",
-        "Mai Xu",
-        "Yueming Jin"
-      ],
-      "abstract": "Clinical computed tomography (CT) interpretation inherently requires progressive visual exploration, where radiologists navigate from whole scans to individual slices and regions of interest and interact with external tools when necessary. However, existing 3D medical multimodal large language models (MLLMs) typically connect a specialized 3D visual encoder to a language model, without fully leveraging the native 2D visual and agentic capabilities of generalist MLLMs. Trained on large-scale one-hop CT instruction-following data, these models also have limited ability to perform iterative reasoning and explicitly ground their conclusions in visual evidence, limiting their support for traceable CT interpretation. To solve these problems, we propose \\textbf{agentic perception} as an alternative paradigm inspired by radiologists' interpretation workflows. We introduce \\textbf{CT-Navigator}, a framework that harnesses generalist MLLMs' 2D visual and agentic capabilities to progressively ground CT interpretation in explicit, traceable visual evidence through hierarchical visual exploration and radiology tool invocation. To build these capabilities, we curate 8,904 visual chain-of-thought (V-CoT) trajectories for cold-start agentic supervised fine-tuning. We then optimize the policy through reinforcement learning on 33,219 questions, with data selection and dynamic rollout sampling prioritizing informative learning signals. Finally, we introduce CTNavi-Bench, a 3D CT visual question answering benchmark comprising 7,000 questions spanning anatomical regions throughout the human body. CT-Navigator achieves 79.50\\% accuracy on CTNavi-Bench, surpassing the strongest baseline by 17.59\\%, and demonstrates strong generalization across three external CT benchmarks. The code, model, and benchmark will be released on \\href{https://github.com/fyb99/ct_navigator}{GitHub}.",
-      "pdf_url": "https://arxiv.org/pdf/2611.29305v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.29305v1",
-      "published": "2026-11-22T07:57:58Z",
-      "updated": "2026-11-22T07:57:58Z",
-      "categories": [
-        "cs.CV"
-      ]
-    },
-    {
-      "title": "Seeing Is Not Acting: WARD Diagnoses the Evidence-to-State-to-Action Gap in Longitudinal Clinical Agents",
-      "authors": [
-        "Chao Ding",
-        "Yidong Jiang",
-        "Junzhi Ning",
-        "Juncheng Wu",
-        "Yuhan Wang",
-        "Renjie Lu",
-        "Minjia Yuan",
-        "Gaopeng Wang",
-        "Liyang Wang",
-        "Pengcheng Chen",
-        "Dong Yin",
-        "Meiping Wang",
-        "Jinru Ding",
-        "Yuyin Zhou"
-      ],
-      "abstract": "Large language models for longitudinal clinical care must revise their assessments and actions as patient information accumulates. However, benchmarks centered on isolated responses or final task outcomes provide limited insight into intermediate failures in evidence use, state updating, and action selection. We introduce WARD, a benchmark for evaluating how clinical agents translate accumulating evidence into patient-state judgments and timely, safe actions. WARD comprises 4,560 clinical tasks across seven clinical output domains, organized into 240 checkpoints from 40 longitudinal clinical trajectories spanning 95 hospitalizations. Its Longitudinal Track evaluates these tasks under controlled cumulative evidence. Its Interactive Track evaluates end-to-end, tool-mediated clinical management across 271 verifiable evidence items and 141 reference transitions. Across 12 models with scorable checkpoint outputs, evidence recognition consistently outpaces downstream state and action decisions, with linked-evidence nonresponse reaching 74.47--90.90\\%. Models also struggle to retain and update information over time, while in the Interactive Track only 11.46\\% of executed actions advance a reference transition. These results reveal a persistent evidence-to-state-to-action gap and highlight the need for process-level evaluation of longitudinal clinical agents.Code and data: https://github.com/Dingsuper-creator/WARD.",
-      "pdf_url": "https://arxiv.org/pdf/2611.29243v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.29243v1",
-      "published": "2026-11-22T05:30:24Z",
-      "updated": "2026-11-22T05:30:24Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Medical Specialty Prediction from Bangla Patient Narratives: A Comparative Study of ML, DL, Transformers, and LLMs",
-      "authors": [
-        "Tasnin Tabassum Ali",
-        "Faisal Ahmed",
-        "Muhammad Anwarul Azim"
-      ],
-      "abstract": "Timely access to appropriate medical specialists remains a bottleneck in Bangladesh's healthcare system, as patients describe symptoms in informal Bangla rather than clinical terms, leading to ineffective referrals. This paper compares four model families for predicting medical specialties from Bangla patient narratives: six machine learning (ML) models using hybrid TF-IDF features, four deep learning (DL) models using Word2Vec embeddings trained on the corpus, four fine-tuned transformers, and five large language models (LLMs) evaluated zero-shot. From a corpus of 3798 patient records covering 20 specialties, we retained the five with the most records (Medicine, Gynecology, Dermatology, Pediatrics, Gastroenterology) and split the resulting 2730 records 80:20 into training and test sets shared by all families. The best transformer was XLM-RoBERTa (86.26% accuracy, 86.21% macro-F1), the best ML model was SVM (84.98%, 84.92%), the best DL model was Bidirectional GRU (80.77%, 80.83%), and the best LLM was Gemini (90.29%, 90.15%). Holm-corrected paired McNemar tests show SVM significantly outperforming Bi-LSTM (adjusted p = 0.004), whereas the Gemini-versus-Grok gap does not survive correction (adjusted p = 0.104), and neither the strongest transformer versus the weakest LLM (Grok) nor SVM versus the strongest transformer reaches significance. A tuned classical model is thus statistically indistinguishable from the strongest transformer, so accuracy rankings alone should not be read as evidence of one family's superiority. The findings provide a comparative baseline for Bangla medical text classification.",
-      "pdf_url": "https://arxiv.org/pdf/2611.29151v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.29151v1",
-      "published": "2026-11-22T02:18:18Z",
-      "updated": "2026-11-22T02:18:18Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "Synthetic EHR Generators Should Be Audited Like LLMs",
-      "authors": [
-        "Inigo Stibbe",
-        "Padmanabhan Ramnarayan",
-        "A. Aldo Faisal"
-      ],
-      "abstract": "Synthetic electronic health record (EHR) generation is increasingly adopting large autoregressive models, yet privacy evaluation has not kept pace, relying heavily on similarity-based heuristics and aggregate metrics that can obscure patient-specific memorisation. We argue that these models should additionally undergo LLM-style memorisation audits at the level of individual patient records. We support this position by comparing membership-inference evaluations across four prominent autoregressive EHR generators, highlighting inconsistent evaluation practices in patient representations and attack procedures. We evaluate trajectory reconstruction from partial context and introduce randomly assigned patient-level canaries to distinguish memorised associations from clinical generalisation. We examine these methods in a GPT-2-style model deliberately overfit to 1,000 MIMIC-IV patient trajectories, creating a controlled setting in which memorisation should be readily detectable. The model systematically recovers training patients' canaries, and their trajectory reconstruction approaches perfect accuracy with increasing context. Held-out patients show no systematic canary recovery, while reconstruction remains low and improves only marginally with additional context. These experiments establish a positive-control baseline for further evaluation of these methods in realistically trained models.",
-      "pdf_url": "https://arxiv.org/pdf/2611.28804v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.28804v1",
-      "published": "2026-11-21T13:42:49Z",
-      "updated": "2026-11-21T13:42:49Z",
-      "categories": [
-        "cs.LG"
-      ]
-    },
-    {
-      "title": "KMed-31B Technical Report",
-      "authors": [
-        "KMed Team"
-      ],
-      "abstract": "We present KMed-31B, a medical large language model post-trained from an open-weight model for on-premises deployment with limited hardware. Post-training a model for diverse medical tasks remains difficult, because improving one kind of task can lower performance on another. We attribute this to differences between tasks in expected output and available feedback. Medical question answering and diagnosis prediction have reference answers, whereas clinical inquiry has no single correct response and is judged with rubrics. We therefore divide medical training tasks into four categories by these two properties, train one specialist per category with a reward that its feedback supports, and integrate the specialists into a single student with Multi-teacher On-policy Delta Distillation (MOPD$^2$). For clinical inquiry, we build Synthetic Health Dialogue, a simulated corpus of consultations with lay users and clinicians whose patient cases span common clinical presentations in primary care. Relative to its base model, KMed-31B raises HealthBench Hard from 22.95 to 41.87 and HealthBench Professional from 37.92 to 50.20 in non-thinking mode, and from 23.80 to 51.48 and from 41.97 to 59.18 in thinking mode, while its scores on four multiple-choice medical benchmarks are maintained or slightly improved. KMed-31B has the highest unadjusted HealthBench Hard score among the compared models, including proprietary ones, and scores higher on HealthBench Professional than every open-weight model we compare, including models with more than ten times as many total parameters. Applied to another base model, Qwen3.8-27B, the same training recipe also raises both HealthBench scores. We describe the training recipe, data construction, and settings in detail so that institutions requiring on-premises deployment can develop medical models from open-weight foundations.",
-      "pdf_url": "https://arxiv.org/pdf/2611.28719v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.28719v1",
-      "published": "2026-11-21T10:24:49Z",
-      "updated": "2026-11-21T10:24:49Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ]
-    },
-    {
-      "title": "CLASP: Deciding Structure and Claims Before Decoding for Whole-Slide Pathology Report Generation",
-      "authors": [
-        "Ziaullah Khan",
-        "Rashadul Islam Sumon",
-        "Md Ariful Islam Mozumder",
-        "Duc-Son Pham",
-        "Moon-Il Joo",
-        "Hee-Cheol"
-      ],
-      "abstract": "Whole-slide pathology report generation has advanced through stronger slide encoders, retrieved knowledge, and, recently, slide-level multimodal LLMs. However, these generators leave every report-level choice to the decoder: how long the report is, how it is organised, and which findings it states and where. On the standard PathText-BRCA benchmark, we find that these choices dominate n-gram overlap, as reports from the query's hospital selected without learning approach the state of the art, while decoders under-generate and fall back to the most frequent findings. We present CLASP, a decide-then-decode generator that makes these choices explicitly, once per slide. Before decoding, an Exemplar Structure Prior (ESP) takes the sentence plan and length from reports of image-similar cases, a Calibrated Claim Decision (CCD) selects the findings from calibrated slide posteriors, and a Claim-to-Sentence Placement (CSP) assigns each finding to a planned sentence. A Plan-Conditioned Decoder (PCD), refined by structure-anchored sequence training, then writes the report under these decisions. With 35M parameters, CLASP outperforms retrained report generators and slide-level LLMs of up to 7B parameters, matches the strongest published results, and generalises to lung cancer from unseen hospitals. Its decisions change what the reports state, not only their length, transfer to an LLM decoder, and can withhold what H&E cannot show: withholding receptor status leaves 23% fewer contradictions with clinical records than the same network without decisions.",
-      "pdf_url": "https://arxiv.org/pdf/2611.28576v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.28576v1",
-      "published": "2026-11-21T05:16:33Z",
-      "updated": "2026-11-21T05:16:33Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL"
-      ]
-    },
-    {
-      "title": "LesionAgent: Training-Free Agentic Tumor Tracking and Response Assessment in Longitudinal CT",
-      "authors": [
-        "Maximilian Rokuss",
-        "Jeya Maria Jose Valanarasu",
-        "Alejandro Lozano",
-        "Benjamin Hamm",
-        "Yannick Kirchhoff",
-        "Fabian Isensee",
-        "Klaus Maier-Hein"
-      ],
-      "abstract": "Every few months, a cancer patient's CT scans decide whether treatment continues. 3D foundation models can now detect, segment, register and track lesions, yet none of them reads the scans as a radiologist does. A radiologist decides which findings are lesions, which are the same lesion months later and whether a new spot means progression, and checks each decision against the extensive rules of a clinical guideline. We introduce LesionAgent, an LLM agent that performs this read end to end without task-specific training. It operates frozen 3D models as tools, acts in 3D through coordinate-labelled views, remembers every lesion across visits in a registry, verifies every model output it relies on, and leaves every number to a deterministic guideline engine. On four public longitudinal CT datasets, LesionAgent tracks more lesions and measures them more accurately than every automatic baseline, and where the same 3D models chained by fixed rules call progression falsely at 33 of 56 follow-ups, it does so twice. On clinical follow-up CTs, it agrees with the radiologists' response at 20 of 23 follow-ups, including every change in response, and without training on DeepLesion, it retrieves more of its lesions than every tracker trained on it (89.0% vs. 87.4%). Its harness, not its LLM, makes the difference: given the same LLM and 3D models but not the harness, Claude Code reaches a detection F1 of 41% and LesionAgent 78%, and an open-weight LLM that can run inside the hospital rises from 6% to 73%. LesionAgent and a napari reading app for any LLM are available at https://github.com/MIC-DKFZ/LesionAgent.",
-      "pdf_url": "https://arxiv.org/pdf/2611.27876v1",
-      "arxiv_url": "https://arxiv.org/abs/2611.27876v1",
-      "published": "2026-11-20T17:21:36Z",
-      "updated": "2026-11-20T17:21:36Z",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.MA"
       ]
     }
   ]
